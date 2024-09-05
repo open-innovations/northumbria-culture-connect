@@ -9,7 +9,7 @@ import autoDependency from 'https://deno.land/x/oi_lume_utils@v0.4.0/processors/
 
 const site = lume({
     src: './src',
-    location: new URL('https://open-innovations.github.io/northumria-culture-connect/')
+    location: new URL('https://open-innovations.github.io/northumbria-culture-connect/')
 });
 
 site.process(['.html'], (pages) => pages.forEach(autoDependency));
