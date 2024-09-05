@@ -1,0 +1,5 @@
+layout: template/base.vto
+
+metas:
+  site: Northumbria Culture Connect
+  title: "=title"

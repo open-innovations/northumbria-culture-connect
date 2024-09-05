@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} &ndash; {{ metas.site }}</title>
+    <style>
+        /* Put styles inline in _includes/_template/base.vto for the moment */
+        html {
+            font-family: monospace;
+        }
+        body {
+            max-width: 100ch;
+            margin-inline: auto;
+            padding-inline: 1rem;
+        }
+        body > header {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    {{ comp.SiteHeader({ metas, title }) }}
+    {{ content }}
+</body>
+</html>

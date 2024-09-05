@@ -1,0 +1,43 @@
+---
+title: Home
+---
+
+<p>This is a prototype data microsite for the Northumbria Culture Connect project.</p>
+
+{{ comp.oi.map.zoomable({ config: {
+    // Load some GeoJSON
+    geojson: {
+        key: 'LAD24CD',
+        data: geojson.lad.newcastle_upon_tyne,
+    },
+
+    data: [
+        { code: 'E08000021', colour: '#00000033' },
+    ],
+    key: 'code',
+
+    // Set the boundaries of the map
+    bounds: {
+        lat: {
+            min: 54.93,
+            max: 55.09
+        },
+        lon: {
+            min: -1.72,
+            max: -1.49,
+        },
+    },
+
+    // Add some markers
+    markers: markers.organisations,
+
+} }) }}
+
+
+{{# 
+    GeoJSON downloaded from 
+
+    https://geoportal.statistics.gov.uk/datasets/fb6ab0ce776243339e45e33444f431c8_0/explore?filters=eyJMQUQyNE5NIjpbIk5ld2Nhc3RsZSB1cG9uIFR5bmUiXX0%3D&location=55.090518,-1.692029,10.00
+
+    Filtered to just "Newcastle upon Type"
+#}}
