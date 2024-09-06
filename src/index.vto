@@ -4,6 +4,9 @@ title: Home
 
 <p>This is a prototype data microsite for the Northumbria Culture Connect project.</p>
 
+<h2>National Portfolio Organisations</h2>
+<p>Arts Council-funded organisations in the Newcastle-upon-Tyne Local Authority. Data extracted from the <a href="https://www.artscouncil.org.uk/how-we-invest-public-money/2023-26-Investment-Programme/2023-26-investment-programme-data">Arts Council England Investment Programme</a>.</p>
+
 {{ comp.oi.map.zoomable({ config: {
     // Load some GeoJSON
     geojson: {
@@ -29,7 +32,7 @@ title: Home
     },
 
     // Add some markers
-    markers: markers.organisations,
+    markers: markers.newcastle_organisations,
 
 } }) }}
 

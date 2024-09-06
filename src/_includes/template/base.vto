@@ -10,18 +10,36 @@
             font-family: monospace;
         }
         body {
-            max-width: 100ch;
-            margin-inline: auto;
-            padding-inline: 1rem;
+	        margin: 0px;
         }
         body > header {
             font-size: 2rem;
             font-weight: 700;
+            background: #000000;
+            color: #ffffff;
+            padding: 1em;
+        }
+        body p:first-child {
+            padding-top:2em;
+        }
+        h2 {
+            font-size: 1.6rem;
+            padding-top:1em;
+        }
+        .holder {
+            max-width: 100ch;
+            margin-inline: auto;
+        }
+        .oi-zoomable-map { 
+            margin-top:2em;
+            margin-bottom:2em;
         }
     </style>
 </head>
 <body>
     {{ comp.SiteHeader({ metas, title }) }}
-    {{ content }}
+    <div class="holder">
+        {{ content }}
+    </div>
 </body>
 </html>
