@@ -42,6 +42,17 @@ title: Home
 
 } }) }}
 
+{{ comp.oi.table({ config: { 
+	data: "markers.newcastle_organisations",
+	columns: [{
+			name: "Organisation"
+		},{
+			name: "Type"
+		},{
+			name: "Funding Source"
+        }]
+} }) }}
+
 
 {{# 
     GeoJSON downloaded from 

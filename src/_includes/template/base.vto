@@ -22,6 +22,13 @@
         body p:first-child {
             padding-top:2em;
         }
+
+        body > footer { 
+            margin-top:2em; 
+            padding: 2em;
+            background: #000000;
+        }
+
         h2 {
             font-size: 1.6rem;
             padding-top:1em;
@@ -34,6 +41,10 @@
             margin-top:2em;
             margin-bottom:2em;
         }
+
+        .oi-table table * { padding-left: 1em; padding-right: 1em; border-width: thin; border-color: #e0dfdf; border-style: solid;}
+        .oi-table table tr:first-child { background: #000000; color: #ffffff; }
+        .oi-table table tr:first-child th { padding:0.8em; }
     </style>
 </head>
 <body>
@@ -42,4 +53,5 @@
         {{ content }}
     </div>
 </body>
+    {{ comp.SiteFooter() }}
 </html>
