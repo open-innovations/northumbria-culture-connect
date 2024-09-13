@@ -42,17 +42,27 @@ title: Home
 
 } }) }}
 
-{{ comp.oi.table({ config: { 
-	data: "markers.newcastle_organisations",
-	columns: [{
-			name: "Organisation"
-		},{
-			name: "Type"
-		},{
-			name: "Funding Source"
-        }]
-} }) }}
-
+{{ set columns = [
+	"Organisation", 
+    "Arts Council NPO",
+    "Arts Council IPSO",
+    "NECA Funded",
+    "National Lottery Project Grant Funded",
+] }}
+<table>
+    <thead>
+        <tr>
+            {{ for c of columns }}<th>{{ c }}</th>{{ /for }}
+        </tr>
+    </thead>
+    <tbody>
+        {{ for r of markers.newcastle_organisations }}
+        <tr>
+            {{ for i, c of columns }}<td {{ if (i != 0) }} style="text-align:center;"{{ /if }}>{{ r[c] == 'Yes' ? '&#x2714;' : r[c] }}</td>{{ /for }}
+        </tr>
+        {{ /for }}
+    </tbody>
+</table>
 
 {{# 
     GeoJSON downloaded from 
