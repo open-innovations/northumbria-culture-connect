@@ -8,43 +8,59 @@
         /* Put styles inline in _includes/_template/base.vto for the moment */
         html {
             font-family: monospace;
+            height: 100%;
         }
         body {
 	        margin: 0px;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        body > * {
+            flex-grow: 1;
+            padding-inline: 1rem;
         }
         body > header {
+            flex-grow: 0;
             font-size: 2rem;
             font-weight: 700;
             background: #000000;
             color: #ffffff;
-            padding: 1em;
-        }
-        body p:first-child {
-            padding-top:2em;
+            padding-block: 1em;
+            margin-block-end: 2rem;
         }
 
-        body > footer { 
-            margin-top:2em; 
-            padding: 2em;
+        body > footer {
+            flex-grow: 0;
+            margin-top: 2rem;
+            padding: 2rem;
             background: #000000;
         }
 
         h2 {
             font-size: 1.6rem;
-            padding-top:1em;
+            margin-block-start: 1.5em;
         }
         .holder {
             max-width: 100rch;
             margin-inline: auto;
         }
         .oi-zoomable-map { 
-            margin-top:2em;
-            margin-bottom:2em;
+            margin-block: 2rem;
         }
 
-        .oi-table table * { padding-left: 1em; padding-right: 1em; border-width: thin; border-color: #e0dfdf; border-style: solid;}
-        .oi-table table tr:first-child { background: #000000; color: #ffffff; }
-        .oi-table table tr:first-child th { padding:0.8em; }
+        .oi-table table * {
+            padding-inline: 1em;
+            border-width: thin;
+            border-color: #e0dfdf;
+            border-style: solid;
+        }
+        .oi-table table tr:first-child {
+            background: #000000; color: #ffffff;
+        }
+        .oi-table table tr:first-child th {
+            padding:0.8em;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +68,6 @@
     <div class="holder">
         {{ content }}
     </div>
-</body>
     {{ comp.SiteFooter() }}
+</body>
 </html>
