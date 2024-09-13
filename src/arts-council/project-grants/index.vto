@@ -1,0 +1,45 @@
+---
+title: Arts Council Project Grants
+
+data:
+    source: https://www.artscouncil.org.uk/ProjectGrants/project-grants-data
+---
+<h1>{{ title }}</h1>
+<p>
+This page shows regional funding awarded under the 
+Arts Council England adminstered 
+<a href="https://www.artscouncil.org.uk/ProjectGrants">
+    National Lottery Project Grants
+</a>
+</p>
+
+<p>
+    Please note, in the charts below, funding for 2024 covers only a partial year.
+</p>
+
+<h2>Funding per local authority per year</h2>
+
+{{ comp.oi.chart.bar({
+        config: {
+            ...bar_chart_base_config,
+            data: grants_value_by_lad_by_year,
+        }
+}) }}
+
+<h2>Number of grants awarded per local authority per year</h2>
+
+{{ comp.oi.chart.bar({
+        config: {
+            ...bar_chart_base_config,
+            data: grants_count_by_lad_by_year,
+        }
+}) }}
+
+<h2>Average grant award value per local authority per year</h2>
+
+{{ comp.oi.chart.bar({
+        config: {
+            ...bar_chart_base_config,
+            data: grants_average_award_by_lad_by_year,
+        }
+}) }}

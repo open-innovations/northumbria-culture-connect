@@ -1,0 +1,28 @@
+bar_chart_base_config:
+  category: Year
+  stacked: true
+  legend:
+    show: true
+    position: bottom
+  series:
+    - 
+      value: E06000047
+      title: County Durham
+    - 
+      value: E06000057
+      title: Northumberland
+    - 
+      value: E08000021
+      title: Newcastle upon Tyne
+    - 
+      value: E08000022
+      title: North Tyneside
+    - 
+      value: E08000023
+      title: South Tyneside
+    - 
+      value: E08000024
+      title: Sunderland
+    - 
+      value: E08000037
+      title: Gateshead
