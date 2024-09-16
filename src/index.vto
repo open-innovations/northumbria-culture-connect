@@ -2,72 +2,23 @@
 title: Home
 ---
 
-<p>This is a prototype data microsite for the Northumbria Culture Connect project.</p>
+<p>
+    This is a very early state prototype data observatory for the Northumbria Culture Connect project.
+</p>
 
-<h2>National Portfolio Organisations</h2>
-<p>Arts Council-funded organisations in the Newcastle-upon-Tyne Local Authority. Data extracted from the <a href="https://www.artscouncil.org.uk/how-we-invest-public-money/2023-26-Investment-Programme/2023-26-investment-programme-data">Arts Council England Investment Programme</a>.</p>
+<p>
+    It currently shows the result of research into existing open data sources related
+    to the culture sector in the North East of England.
+</p>
 
-{{ comp.oi.map.zoomable({ config: {
-    // Load some GeoJSON
-    geojson: {
-        key: 'LAD24CD',
-        data: geojson.lad.all,
-    },
+<p>
+    The current contents include:
+</p>
 
-    data: [
-        { code: 'E06000047', colour: '#00000011' },
-        { code: 'E06000057', colour: '#00000011' },
-        { code: 'E08000021', colour: '#00000033' },
-        { code: 'E08000022', colour: '#00000011' },
-        { code: 'E08000023', colour: '#00000011' },
-        { code: 'E08000024', colour: '#00000011' },
-        { code: 'E08000037', colour: '#00000011' },
-    ],
-    key: 'code',
-
-    // Set the boundaries of the map
-    bounds: {
-        lat: {
-            min: 54.93,
-            max: 55.09
-        },
-        lon: {
-            min: -1.72,
-            max: -1.49,
-        },
-    },
-
-    // Add some markers
-    markers: markers.newcastle_organisations,
-
-} }) }}
-
-{{ set columns = [
-	"Organisation", 
-    "Arts Council NPO",
-    "Arts Council IPSO",
-    "NECA Funded",
-    "National Lottery Project Grant Funded",
-] }}
-<table>
-    <thead>
-        <tr>
-            {{ for c of columns }}<th>{{ c }}</th>{{ /for }}
-        </tr>
-    </thead>
-    <tbody>
-        {{ for r of markers.newcastle_organisations }}
-        <tr>
-            {{ for i, c of columns }}<td {{ if (i != 0) }} style="text-align:center;"{{ /if }}>{{ r[c] == 'Yes' ? '&#x2714;' : r[c] }}</td>{{ /for }}
-        </tr>
-        {{ /for }}
-    </tbody>
-</table>
-
-{{# 
-    GeoJSON downloaded from 
-
-    https://geoportal.statistics.gov.uk/datasets/fb6ab0ce776243339e45e33444f431c8_0/explore?filters=eyJMQUQyNE5NIjpbIk5ld2Nhc3RsZSB1cG9uIFR5bmUiXX0%3D&location=55.090518,-1.692029,10.00
-
-    Filtered to just "Newcastle upon Type"
-#}}
+<ul>
+{{ for page of search.pages('featured') }}
+    <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+{{ /for }}
+</ul>

@@ -1,0 +1,95 @@
+---
+title: Culture Sector Map
+tags:
+    - featured
+---
+
+<p>
+    This page provides an overview of the cultural landscape in the North East.
+    In the first instance, it is limited to the Newcastle upon Tyne Local Authority area.
+</p>
+
+<p>
+    The organisation list has been extracted from various sources of funding data which
+    are published with an open license.
+</p>
+
+{{#
+<p>
+    Arts Council-funded organisations in the Newcastle-upon-Tyne Local Authority.
+    Data extracted from the <a href="https://www.artscouncil.org.uk/how-we-invest-public-money/2023-26-Investment-Programme/2023-26-investment-programme-data">Arts Council England Investment Programme</a>.
+</p>
+#}}
+
+{{ comp.oi.map.zoomable({ config: {
+    // Load some GeoJSON
+    geojson: {
+        key: 'LAD24CD',
+        data: geojson.lad.all,
+    },
+
+    data: [
+        { code: 'E06000047', colour: '#00000011' },
+        { code: 'E06000057', colour: '#00000011' },
+        { code: 'E08000021', colour: '#00000033' },
+        { code: 'E08000022', colour: '#00000011' },
+        { code: 'E08000023', colour: '#00000011' },
+        { code: 'E08000024', colour: '#00000011' },
+        { code: 'E08000037', colour: '#00000011' },
+    ],
+    key: 'code',
+
+    // Set the boundaries of the map
+    bounds: {
+        lat: {
+            min: 54.93,
+            max: 55.09
+        },
+        lon: {
+            min: -1.72,
+            max: -1.49,
+        },
+    },
+
+    // Add some markers
+    markers: markers.newcastle_organisations,
+
+} }) }}
+
+{{ set columns = [
+    { title: "Organisation" },
+    { title: "Arts Council NPO" },
+    { title: "Arts Council IPSO" },
+    { title: "NECA Funded" },
+    { title: "National Lottery Project Grant Funded", page: "~/arts-council/project-grants/index.vto" },
+] }}
+<table>
+    <thead>
+        <tr>
+            {{ for c of columns }}
+            <th>
+            {{ if c.page }}<a href="{{ c.page |> url }}">{{ /if }}
+            {{ c.title }}
+            {{ if c.page }}</a>{{ /if }}
+            </th>
+            {{ /for }}
+        </tr>
+    </thead>
+    <tbody>
+        {{ for r of markers.newcastle_organisations }}
+        <tr>
+            {{ for i, c of columns }}
+            <td {{ if (i != 0) }} style="text-align:center;"{{ /if }}>{{ r[c.title] == 'Yes' ? '&#x2714;' : r[c.title] }}</td>
+            {{ /for }}
+        </tr>
+        {{ /for }}
+    </tbody>
+</table>
+
+{{# 
+    GeoJSON downloaded from 
+
+    https://geoportal.statistics.gov.uk/datasets/fb6ab0ce776243339e45e33444f431c8_0/explore?filters=eyJMQUQyNE5NIjpbIk5ld2Nhc3RsZSB1cG9uIFR5bmUiXX0%3D&location=55.090518,-1.692029,10.00
+
+    Filtered to just "Newcastle upon Type"
+#}}
