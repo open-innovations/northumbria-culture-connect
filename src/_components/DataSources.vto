@@ -1,0 +1,15 @@
+{{- if sources }}
+<h{{ level || '2' }}>Data Sources</h{{ level || '2' }}>
+<ul>
+{{ for source of sources }}
+<li>
+    <a href="{{ source.url }}">
+        {{ source.title || source.url }}
+    </a>
+    {{ if source.license }}
+        (<a href="source.license.url">{{ source.license.title || source.license.url }}</a>)
+    {{ /if}}
+</li>
+{{ /for }}
+</ul>
+{{ /if -}}

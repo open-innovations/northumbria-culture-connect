@@ -4,7 +4,11 @@ tags:
     - featured
 
 data:
-    source: https://www.artscouncil.org.uk/ProjectGrants/project-grants-data
+    - title: National Lottery Project Grants
+      url: https://www.artscouncil.org.uk/ProjectGrants/project-grants-data
+      license:
+        title: Open Government License
+        url: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 ---
 <h1>{{ title }}</h1>
 <p>
@@ -45,3 +49,5 @@ Arts Council England adminstered
             data: grants_average_award_by_lad_by_year,
         }
 }) }}
+
+{{ comp.DataSources({ sources: data }) }}
