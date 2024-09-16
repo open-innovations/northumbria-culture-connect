@@ -9,11 +9,11 @@ requests = "*"
 ipykernel = "*"
 matplotlib = "*"
 petl = "*"
-bs4 = "*"
 openpyxl = "*"
 fsspec = "*"
 aiohttp = "*"
 pandas = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 

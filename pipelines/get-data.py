@@ -4,14 +4,11 @@ import logging
 from pathlib import Path
 
 import petl as etl
-import requests
-from bs4 import BeautifulSoup
+
+import pipeline_utils.organisations.ace as ace
 
 logging.basicConfig(level=logging.INFO)
 
-request_headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-}
 
 RAW_DATA = (Path(__file__).parent / '../raw').resolve()
 logging.info('Downloading to %s', RAW_DATA)
@@ -20,19 +17,18 @@ logging.info('Downloading to %s', RAW_DATA)
 def main():
     RAW_DATA.mkdir(exist_ok=True, parents=True)
     arts_council_project_grants()
+    arts_council_investment_programme()
 
 
 def arts_council_project_grants():
     logging.info('Downloading Arts Council England National Lottery Project Grants data')
     # Scrape the project page for sources
-    with requests.get('https://www.artscouncil.org.uk/ProjectGrants/project-grants-data', headers=request_headers) as r:
-        soup = BeautifulSoup(r.text, 'html.parser')
-    sources = [f"https://www.artscouncil.org.uk/{a['href']}" for a in soup.find_all('a', href=re.compile(r'^/media'))]
-
+    sources = ace.get_sources('https://www.artscouncil.org.uk/ProjectGrants/project-grants-data', href=re.compile(r'^/media'))
+    
     # Define function to load the data tables
     def load_grants(url):
         d = etl.fromxlsx(
-            etl.RemoteSource(url, client_kwargs={ 'headers': request_headers }),
+            ace.url_source(url),
             sheet=1,
             min_row=3
         )
@@ -41,6 +37,20 @@ def arts_council_project_grants():
     # Get all the data sources and store in raw data director
     etl.cat(*( load_grants(s) for s in sources )).tocsv(RAW_DATA / 'arts-council-project-grants.csv')
 
+
+def arts_council_investment_programme():
+    logging.info('Downloading Arts Council England Investment Programme data')
+    sources = ace.get_sources('https://www.artscouncil.org.uk/how-we-invest-public-money/2023-26-Investment-Programme/2023-26-investment-programme-data', href=re.compile(r'^/media'))
+
+    def load_data(url):
+        d = etl.fromxlsx(
+            ace.url_source(url),
+            sheet=0,
+            min_row=0
+        )
+        return d
+
+    etl.cat(*(load_data(u) for u in sources[0:1])).tocsv(RAW_DATA / 'arts-council-investment-programme.csv')
 
 if __name__ == "__main__":
     main()
