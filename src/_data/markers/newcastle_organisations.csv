@@ -1,16 +1,16 @@
-﻿tooltip,Organisation,latitude,longitude,Arts Council NPO,Arts Council IPSO,NECA Funded,National Lottery Project Grant Funded
-a-n The Artists Information Company,a-n The Artists Information Company,54.971747,-1.6129209,Yes,,,
-Ballet Lorent Limited,Ballet Lorent Limited,54.976855,-1.6858953,Yes,,,Yes
-Company of Others,Company of Others,54.963466,-1.5560566,Yes,,,Yes
-Dance City,Dance City,54.970106,-1.6224653,Yes,,,
-Generator North East,Generator North East,54.969107,-1.6050111,Yes,,,
-Inpress Ltd,Inpress Ltd,54.969824,-1.6101433,,Yes,,
-New Writing North,New Writing North,54.976762,-1.6074983,Yes,,,Yes
-North East Theatre Trust Ltd,North East Theatre Trust Ltd,54.969526,-1.6040542,Yes,,,
-Northern Print,Northern Print,54.974976,-1.5944396,Yes,,,Yes
-Northern Stage (Theatrical Productions) Ltd,Northern Stage (Theatrical Productions) Ltd,54.979354,-1.6141446,Yes,,,
-Open Clasp Theatre Company,Open Clasp Theatre Company,54.968407,-1.6400382,Yes,,,Yes
-"Seven Stories, The National Centre for Children's Books","Seven Stories, The National Centre for Children's Books",54.974924,-1.5923623,Yes,,,
-The NewBridge Project,The NewBridge Project,54.977894,-1.5991754,Yes,,,
-Tyne & Wear Archives & Museums,Tyne & Wear Archives & Museums,54.969079,-1.6245212,Yes,,,Yes
-Unfolding Theatre,Unfolding Theatre,54.974976,-1.5944396,Yes,,,
+organisation,LAD24CD,LAD24NM,IPSO,NPO,Project Grant,latitude,longitude,tooltip
+Ballet Lorent Limited,E08000021,Newcastle upon Tyne,,True,True,54.976855,-1.6858953,Ballet Lorent Limited
+Company of Others,E08000021,Newcastle upon Tyne,,True,True,54.963466,-1.5560566,Company of Others
+Dance City,E08000021,Newcastle upon Tyne,,True,,54.970106,-1.6224653,Dance City
+Generator North East,E08000021,Newcastle upon Tyne,,True,,54.969107,-1.6050111,Generator North East
+Inpress Ltd,E08000021,Newcastle upon Tyne,True,,,54.969824,-1.6101433,Inpress Ltd
+New Writing North,E08000021,Newcastle upon Tyne,,True,True,54.976762,-1.6074983,New Writing North
+North East Theatre Trust Ltd,E08000021,Newcastle upon Tyne,,True,,54.969526,-1.6040542,North East Theatre Trust Ltd
+Northern Print,E08000021,Newcastle upon Tyne,,True,True,54.974976,-1.5944396,Northern Print
+Northern Stage (Theatrical Productions) Ltd,E08000021,Newcastle upon Tyne,,True,,54.979354,-1.6141446,Northern Stage (Theatrical Productions) Ltd
+Open Clasp Theatre Company,E08000021,Newcastle upon Tyne,,True,True,54.968407,-1.6400382,Open Clasp Theatre Company
+"Seven Stories, The National Centre for Children's Books",E08000021,Newcastle upon Tyne,,True,,54.974924,-1.5923623,"Seven Stories, The National Centre for Children's Books"
+The NewBridge Project,E08000021,Newcastle upon Tyne,,True,,54.977894,-1.5991754,The NewBridge Project
+Tyne & Wear Archives & Museums,E08000021,Newcastle upon Tyne,,True,True,54.969079,-1.6245212,Tyne & Wear Archives & Museums
+Unfolding Theatre,E08000021,Newcastle upon Tyne,,True,,54.974976,-1.5944396,Unfolding Theatre
+a-n The Artists Information Company,E08000021,Newcastle upon Tyne,,True,,54.971747,-1.6129209,a-n The Artists Information Company

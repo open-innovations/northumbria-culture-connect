@@ -57,11 +57,11 @@ tags:
 } }) }}
 
 {{ set columns = [
-    { title: "Organisation" },
-    { title: "Arts Council NPO" },
-    { title: "Arts Council IPSO" },
-    { title: "NECA Funded" },
-    { title: "National Lottery Project Grant Funded", page: "~/arts-council/project-grants/index.vto" },
+    { title: "Organisation", key: "organisation" },
+    { title: "Arts Council NPO", key: "NPO" },
+    { title: "Arts Council IPSO", key: "IPSO" },
+    { title: "NECA Funded", key: "NECA" },
+    { title: "National Lottery Project Grant Funded", key: "Project Grant", page: "~/arts-council/project-grants/index.vto" },
 ] }}
 <table>
     <thead>
@@ -76,10 +76,12 @@ tags:
         </tr>
     </thead>
     <tbody>
-        {{ for r of markers.newcastle_organisations }}
+        {{ for r of landscape.newcastle_organisations }}
         <tr>
             {{ for i, c of columns }}
-            <td {{ if (i != 0) }} style="text-align:center;"{{ /if }}>{{ r[c.title] == 'Yes' ? '&#x2714;' : r[c.title] }}</td>
+            <td {{ if (i != 0) }} style="text-align:center;"{{ /if }}>
+            {{ r[c.key] == 'True' ? '&#x2714;' : r[c.key] }}
+            </td>
             {{ /for }}
         </tr>
         {{ /for }}
