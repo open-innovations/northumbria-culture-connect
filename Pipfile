@@ -14,6 +14,7 @@ fsspec = "*"
 aiohttp = "*"
 pandas = "*"
 beautifulsoup4 = "*"
+thefuzz = "*"
 
 [dev-packages]
 
