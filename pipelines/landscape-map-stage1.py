@@ -38,7 +38,7 @@ ace_investment_programme = (
             "Type of organisation\n(NPO/IPSO/Transfer)": 'Source'
             })
     .addfield('Period', '2023/26')
-    .cut('organisation', 'Source', 'Local authority')
+    .cut('organisation', 'Source', 'Local authority', 'Period')
 )
 
 ace_project_grants = (
