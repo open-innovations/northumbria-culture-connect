@@ -1,0 +1,48 @@
+---
+title: Funding by Organisation Characteristics
+tags:
+    - featured
+
+data:
+    - title: Companies House Data Products
+      url: https://www.gov.uk/guidance/companies-house-data-products
+    - title: National Lottery Project Grants
+      url: https://www.artscouncil.org.uk/ProjectGrants/project-grants-data
+    - title: Arts Council Investment Programme
+      url: https://www.artscouncil.org.uk/how-we-invest-public-money/2023-26-Investment-Programme/2023-26-investment-programme-data
+      license:
+        title: Open Government License
+        url: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+---
+<h1>{{ title }}</h1>
+<p>
+This page will explore the funding landscape for organisations of various sizes and characteristics.
+</a>
+</p>
+
+<p>
+    Please note, in the charts below, Arts Council funding covers funding awarded through the Investment Programme 2023-26, and National Lottery Project Grants data covers grants awarded over the period of 2018-2024.
+</p>
+
+<h2>Funding by organisation account category</h2>
+<p>
+    Accounts categories offer an indication of the size and type of organisation. They refer to the type of account filed by an organisation with Companies House. For definitions of account types, <a href="https://find-and-update.company-information.service.gov.uk/guides/accounts/chooser">see the Companies House definitions</a>. 
+</p>
+
+
+{{ comp.oi.chart.bar({
+        config: {
+        "data": grant_by_org_size,
+        "category": "accounts_category",
+        "series": [{
+                "title": "total_funding",
+                "value": "total_funding"
+            }],
+        "axis": {
+            "x": {
+            }
+        }
+    }
+}) }}
+
+{{ comp.DataSources({ sources: data }) }}
