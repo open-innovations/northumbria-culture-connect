@@ -13,12 +13,25 @@ logging.basicConfig(level=logging.INFO)
 RAW_DATA = (Path(__file__).parent / '../raw').resolve()
 logging.info('Downloading to %s', RAW_DATA)
 
+def download_to_file(url, local_file):
+    if not Path(local_file).exists():
+        logging.info(
+            'Downloading %s to %s', url, local_file)
+        with requests.get(url, stream=True) as r:
+            r.raise_for_status()
+            with open(local_file, 'wb') as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+    else:
+        logging.info("%s already exists", local_file)
+
 
 def main():
     RAW_DATA.mkdir(exist_ok=True, parents=True)
     arts_council_project_grants()
     arts_council_investment_programme()
     companies_house_company_lists()
+    download_360_giving()
 
 
 def arts_council_project_grants():
@@ -60,18 +73,14 @@ def arts_council_investment_programme():
 
 
 def companies_house_company_lists():
-    logging.info(
-        'Downloading Companies House lists')
     url = 'https://download.companieshouse.gov.uk/BasicCompanyDataAsOneFile-2024-09-01.zip'
-    with requests.get(url, stream=True) as r:
-        r.raise_for_status()
-        with open(RAW_DATA / 'company-data.zip', 'wb') as f:
-            for chunk in r.iter_content(chunk_size=8192):
-                # If you have chunk encoded response uncomment if
-                # and set chunk_size parameter to None.
-                # if chunk:
-                f.write(chunk)
+    download_to_file(url, RAW_DATA / 'company-data.zip')
 
+
+def download_360_giving():
+    url = 'https://grantnav.threesixtygiving.org/search.csv?recipientRegionName=North+East&recipientTSGType=Organisation&bestCountyName=Newcastle+upon+Tyne'
+    download_to_file(url, RAW_DATA / '360-giving.csv')
+    
 
 if __name__ == "__main__":
     main()
