@@ -1,0 +1,37 @@
+name: Publish dev version
+
+"on":
+  workflow_dispatch: {}
+  push:
+    branches: [ dev ]
+    paths:
+      - 'src/**'
+      - '_config.ts'
+      - 'deno.json'
+      - '.github/workflows/dev-deploy.yml'
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DENO_ENV: dev
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Deploy the site
+        shell: bash
+        run: deno task deploy:dev
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PATH: ${{ secrets.SSH_PATH }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSHPASS: ${{ secrets.SSHPASS }}
