@@ -9,3 +9,30 @@ tags:
 ---
 
 {{ comp.pageTop({ ...page.data }) }}
+
+{{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
+
+<ul class="grid">
+    <li class="block">
+        <p>{{ headlines.number }}</p>
+        <p>Organisations in portfolio</p>
+    </li>
+    <li class="block">
+        <p>{{ parseInt(headlines.funding).toLocaleString('en-GB', { style: "currency", currency: 'GBP', maximumFractionDigits: 0 }) }}</p>
+        <p>Total funding across portfolio</p>
+    </li>
+    <li class="block">
+        <p>{{ parseInt(headlines.average_funding).toLocaleString('en-GB', { style: "currency", currency: 'GBP', maximumFractionDigits: 0 }) }}</p>
+        <p>Average award across portfolio</p>
+    </li>
+</ul>
+
+<h2>To be added</h2>
+<ul>
+<li>Funding / count by Main Discipline</li>
+</ul>
+
+
+<h2>Raw data</h2>
+
+<pre>{{ funding_by_organisation |> filter(x => x.LAD24CD == ons_codes.newcastle) |> JSON.stringify(null, 2) }}</pre>

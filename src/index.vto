@@ -20,7 +20,7 @@ title: Home
 <ul class="grid">
 {{ for page of search.pages('data', 'priority=desc') }}
     <li>
-        <a href="{{ page.url }}">
+        <a class="block" href="{{ page.url }}">
         <h3>{{ page.title }}</h3>
         <p>{{ page.description }}</p>
         </a>
@@ -35,7 +35,7 @@ title: Home
 <ul class="grid">
 {{ for page of search.pages('report', 'priority=desc') }}
     <li>
-        <a href="{{ page.url }}">
+        <a class="block" href="{{ page.url }}">
         <h3>{{ page.title }}</h3>
         <p>{{ page.description }}</p>
         </a>
