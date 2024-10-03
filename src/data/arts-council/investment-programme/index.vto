@@ -10,18 +10,18 @@ description: |
 
 {{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
 
-<ul class="grid">
+<ul class="grid centred">
     <li class="block">
-        <p>{{ headlines.number }}</p>
+        <p class="bang">{{ headlines.number }}</p>
         <p>Organisations in portfolio</p>
     </li>
     <li class="block">
-        <p>{{ parseInt(headlines.funding).toLocaleString('en-GB', { style: "currency", currency: 'GBP', maximumFractionDigits: 0 }) }}</p>
-        <p>Total funding across portfolio</p>
+        <p class="bang">{{ headlines.funding |> displayCurrency }}</p>
+        <p>Total funding</p>
     </li>
     <li class="block">
-        <p>{{ parseInt(headlines.average_funding).toLocaleString('en-GB', { style: "currency", currency: 'GBP', maximumFractionDigits: 0 }) }}</p>
-        <p>Average award across portfolio</p>
+        <p class="bang">{{ headlines.average_funding |> displayCurrency }}</p>
+        <p>Average award</p>
     </li>
 </ul>
 

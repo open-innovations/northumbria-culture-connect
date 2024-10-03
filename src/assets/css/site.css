@@ -84,8 +84,8 @@ td {
         flex-basis: 25vw;
         flex-grow: 1;
         flex-shrink: 0;
-        * {
-            margin-block: 0;
+        & > .block {
+            height: 100%;
         }
     }
     & .block {
@@ -95,17 +95,17 @@ td {
         color: white;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 1rem;
         text-decoration: none;
-        height: 100%;
         box-sizing: border-box;
         &a:hover {
             text-decoration: underline;
         }
+        & * {
+            margin-block: 0;
+        }
     }
-}
-.greedy {
-    flex-grow: 1;
 }
 .tag-cloud {
     list-style: none;
@@ -119,4 +119,14 @@ td {
         padding-block: 0.2rem;
         padding-inline: 0.5rem;
     }
+}
+
+.greedy {
+    flex-grow: 1;
+}
+.centred {
+    text-align: center;
+}
+.bang {
+    font-size: min(3.5em, 10vw);
 }
