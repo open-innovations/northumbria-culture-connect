@@ -11,6 +11,9 @@ import sheets from "lume/plugins/sheets.ts";
 import autoDependency from 'https://deno.land/x/oi_lume_utils@v0.4.0/processors/auto-dependency.ts';
 import oiLumeViz from "https://deno.land/x/oi_lume_viz@v0.16.0/mod.ts";
 
+//PostCSS plugins
+import nesting from "npm:postcss-nesting";
+
 const site = lume({
     src: './src',
     location: new URL('https://open-innovations.github.io/northumbria-culture-connect/')
@@ -18,7 +21,9 @@ const site = lume({
 
 site.process(['.html'], (pages) => pages.forEach(autoDependency));
 site.use(base_path());
-site.use(postcss());
+site.use(postcss({
+    plugins: [nesting()],
+}));
 site.use(metas());
 site.use(oiLumeViz());
 site.use(sheets());

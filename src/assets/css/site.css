@@ -79,7 +79,7 @@ td {
     padding-inline: 0;
     gap: 1rem;
     flex-wrap: wrap;
-    > * {
+    & > * {
         padding-block: 0;
         flex-basis: 25vw;
         flex-grow: 1;
@@ -88,7 +88,7 @@ td {
             margin-block: 0;
         }
     }
-    .block {
+    & .block {
         display: block;
         padding: 1em;
         background: black;
@@ -99,7 +99,7 @@ td {
         text-decoration: none;
         height: 100%;
         box-sizing: border-box;
-        a:hover {
+        &a:hover {
             text-decoration: underline;
         }
     }

@@ -42,6 +42,7 @@
       "npm:markdown-it@14.1.0": "npm:markdown-it@14.1.0",
       "npm:meriyah@4.5.0": "npm:meriyah@4.5.0",
       "npm:postcss-import@16.1.0": "npm:postcss-import@16.1.0_postcss@8.4.41",
+      "npm:postcss-nesting": "npm:postcss-nesting@13.0.0_postcss@8.4.41_postcss-selector-parser@6.1.2",
       "npm:postcss@8.4.41": "npm:postcss@8.4.41"
     },
     "jsr": {
@@ -146,6 +147,18 @@
       }
     },
     "npm": {
+      "@csstools/selector-resolve-nested@2.0.0_postcss-selector-parser@6.1.2": {
+        "integrity": "sha512-oklSrRvOxNeeOW1yARd4WNCs/D09cQjunGZUgSq6vM8GpzFswN+8rBZyJA29YFZhOTQ6GFzxgLDNtVbt9wPZMA==",
+        "dependencies": {
+          "postcss-selector-parser": "postcss-selector-parser@6.1.2"
+        }
+      },
+      "@csstools/selector-specificity@4.0.0_postcss-selector-parser@6.1.2": {
+        "integrity": "sha512-189nelqtPd8++phaHNwYovKZI0FOzH1vQEE3QhHHkNIGrg5fSs9CbYP3RvfEH5geztnIA9Jwq91wyOIwAW5JIQ==",
+        "dependencies": {
+          "postcss-selector-parser": "postcss-selector-parser@6.1.2"
+        }
+      },
       "@js-temporal/polyfill@0.4.4": {
         "integrity": "sha512-2X6bvghJ/JAoZO52lbgyAPFj8uCflhTo2g7nkFzEQdXd/D8rEeD4HtmTEpmtGCva260fcd66YNXBOYdnmHqSOg==",
         "dependencies": {
@@ -206,6 +219,10 @@
       },
       "css-what@6.1.0": {
         "integrity": "sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==",
+        "dependencies": {}
+      },
+      "cssesc@3.0.0": {
+        "integrity": "sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==",
         "dependencies": {}
       },
       "cssom@0.5.0": {
@@ -615,6 +632,22 @@
           "resolve": "resolve@1.22.8"
         }
       },
+      "postcss-nesting@13.0.0_postcss@8.4.41_postcss-selector-parser@6.1.2": {
+        "integrity": "sha512-TCGQOizyqvEkdeTPM+t6NYwJ3EJszYE/8t8ILxw/YoeUvz2rz7aM8XTAmBWh9/DJjfaaabL88fWrsVHSPF2zgA==",
+        "dependencies": {
+          "@csstools/selector-resolve-nested": "@csstools/selector-resolve-nested@2.0.0_postcss-selector-parser@6.1.2",
+          "@csstools/selector-specificity": "@csstools/selector-specificity@4.0.0_postcss-selector-parser@6.1.2",
+          "postcss": "postcss@8.4.41",
+          "postcss-selector-parser": "postcss-selector-parser@6.1.2"
+        }
+      },
+      "postcss-selector-parser@6.1.2": {
+        "integrity": "sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==",
+        "dependencies": {
+          "cssesc": "cssesc@3.0.0",
+          "util-deprecate": "util-deprecate@1.0.2"
+        }
+      },
       "postcss-value-parser@4.2.0": {
         "integrity": "sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==",
         "dependencies": {}
@@ -684,6 +717,10 @@
           "escalade": "escalade@3.2.0",
           "picocolors": "picocolors@1.0.1"
         }
+      },
+      "util-deprecate@1.0.2": {
+        "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+        "dependencies": {}
       }
     }
   },
