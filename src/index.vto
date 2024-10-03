@@ -10,15 +10,19 @@ title: Home
 
 <p>
     This site shows the result of research into open data sources related
-    to the culture sector in the North East of England.
+    to the culture sector across Newcastle upon Tyne City Council.
 </p>
 
 <h2>
-    Data
+    Funding Data
 </h2>
 
+<p>
+    Datasets related to funding of culture across the local authority.
+</p>
+
 <ul class="grid">
-{{ for page of search.pages('data', 'priority=desc') }}
+{{ for page of search.pages('data funding', 'priority=desc') }}
     <li>
         <a class="block" href="{{ page.url }}">
         {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
@@ -28,8 +32,50 @@ title: Home
 </ul>
 
 <h2>
+    Participation Data
+</h2>
+
+<p>
+    Datasets related to participation in culture across the local authority.
+</p>
+
+<ul class="grid">
+{{ for page of search.pages('data participation', 'priority=desc') }}
+    <li>
+        <a class="block" href="{{ page.url }}">
+        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
+        </a>
+    </li>
+{{ /for }}
+</ul>
+
+
+<h2>
+    Data Infrastructure
+</h2>
+
+<p>
+    Data infrastructure relevant to the culture sector across the local authority.
+</p>
+
+<ul class="grid">
+{{ for page of search.pages('data infrastructure', 'priority=desc') }}
+    <li>
+        <a class="block" href="{{ page.url }}">
+        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
+        </a>
+    </li>
+{{ /for }}
+</ul>
+
+
+<h2>
     Reports
 </h2>
+
+<p>
+    Examples of reports and visualisation built using site data.
+</p>
 
 <ul class="grid">
 {{ for page of search.pages('report', 'priority=desc') }}
