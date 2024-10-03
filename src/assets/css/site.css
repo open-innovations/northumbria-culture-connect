@@ -78,6 +78,7 @@ td {
     list-style: none;
     padding-inline: 0;
     gap: 1rem;
+    flex-wrap: wrap;
     > * {
         padding-block: 0;
         flex-basis: 25vw;
