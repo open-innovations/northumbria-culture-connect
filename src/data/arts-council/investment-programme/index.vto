@@ -9,6 +9,17 @@ description: |
 {{ comp.pageTop({ ...page.data }) }}
 
 {{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
+{{ set byDiscipline = Object.values(
+    funding_by_organisation
+        .filter(x => x.LAD24CD == ons_codes.newcastle)
+        .reduce((result, org) => {
+            const discipline = org['Main Discipline'];
+            const thisGroup = result[discipline] || { discipline, funding: 0, count: 0 };
+            thisGroup.funding = thisGroup.funding + org.funding;
+            thisGroup.count += 1;
+            return { ...result, [discipline]: thisGroup };
+        }, {}))
+        .toSorted((a, b) => b.funding - a.funding) }}
 
 <ul class="grid centred">
     <li class="block">
@@ -25,12 +36,42 @@ description: |
     </li>
 </ul>
 
-<h2>To be added</h2>
-<ul>
-<li>Funding / count by Main Discipline</li>
+<h2>Breakdown by discipline</h2>
+
+<ul class="grid centred">
+    {{ for d of byDiscipline }}
+    <li class="block">
+        <p>{{ d.discipline }}</p>
+        <p class="bang">{{ d.funding |> displayCurrency }}</p>
+        <p>shared by {{ d.count }} organisation{{ if d.count > 1 }}s{{ /if }}</p>
+    </li>
+    {{ /for }}
 </ul>
 
+{{ comp.oi.chart.bar({
+    config: {
+        data: byDiscipline,
+        category: 'discipline',
+        series: [
+            { title: 'Funding', value: 'funding' }
+        ]
+    }
+}) }}
 
-<h2>Raw data</h2>
+<h2>Portfolio</h2>
 
-<pre>{{ funding_by_organisation |> filter(x => x.LAD24CD == ons_codes.newcastle) |> JSON.stringify(null, 2) }}</pre>
+<ul class="grid">
+{{ for o of (funding_by_organisation
+    .filter(x => x.LAD24CD == ons_codes.newcastle)
+    .toSorted((a, b) => (a['Main Discipline'] < b['Main Discipline']) ? -1 : 1)
+) }}
+    <li class="block">
+        <h3 class="greedy">{{ o.Recipient }}</h3>
+        <ul class="tag-cloud">
+            <li class="tag">{{ o['Main Discipline'] }}</li>
+            <li class="tag">{{ o.Type }}</li>
+        </ul>
+        {{# <p>{{ o.funding |> displayCurrency }}</p> #}}
+    </li>
+{{ /for }}
+</ul>
