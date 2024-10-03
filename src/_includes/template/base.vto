@@ -74,6 +74,36 @@
             border-color: #e0dfdf;
             border-style: solid;
         }
+        .grid {
+            display: flex;
+            list-style: none;
+            padding-inline: 0;
+            gap: 1rem;
+            > * {
+                padding-block: 0;
+                flex-basis: 25vw;
+                flex-grow: 1;
+                flex-shrink: 0;
+                * {
+                    margin-block: 0;
+                }
+                a {
+                    display: block;
+                    padding: 1em;
+                    background: black;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    text-decoration: none;
+                    height: 100%;
+                    box-sizing: border-box;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
     </style>
 </head>
 <body>

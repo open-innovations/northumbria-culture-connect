@@ -1,18 +1,17 @@
 ---
 title: Culture Sector Map
+description: |
+    This page describes a derived dataset detailing the cultural organisations operating
+    across the Newcastle City Council region.
+    The organisation list has been extracted from various sources of funding data which
+    are published with an open license.
 tags:
-    - featured
+    - derived
+priority: 10
 ---
 
 <p>
-    This page provides an overview of the cultural landscape in the North East.
-    In the first instance, it is limited to organisaions who have had grants awarded 
-    associated with the Newcastle upon Tyne Local Authority area.
-</p>
-
-<p>
-    The organisation list has been extracted from various sources of funding data which
-    are published with an open license.
+    {{ description }}
 </p>
 
 {{#
@@ -56,7 +55,7 @@ tags:
     { title: "Arts Council NPO", key: "NPO" },
     { title: "Arts Council IPSO", key: "IPSO" },
     { title: "NECA Funded", key: "NECA" },
-    { title: "National Lottery Project Grant Funded", key: "Project Grant", page: "~/arts-council/project-grants/index.vto" },
+    { title: "National Lottery Project Grant Funded", key: "Project Grant", page: "~/data/arts-council/project-grants/index.vto" },
 ] }}
 <table>
     <thead>
