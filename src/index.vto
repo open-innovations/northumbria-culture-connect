@@ -21,8 +21,7 @@ title: Home
 {{ for page of search.pages('data', 'priority=desc') }}
     <li>
         <a class="block" href="{{ page.url }}">
-        <h3>{{ page.title }}</h3>
-        <p>{{ page.description }}</p>
+        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
         </a>
     </li>
 {{ /for }}
@@ -36,8 +35,7 @@ title: Home
 {{ for page of search.pages('report', 'priority=desc') }}
     <li>
         <a class="block" href="{{ page.url }}">
-        <h3>{{ page.title }}</h3>
-        <p>{{ page.description }}</p>
+        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
         </a>
     </li>
 {{ /for }}
