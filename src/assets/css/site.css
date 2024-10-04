@@ -55,10 +55,11 @@ h2 {
 .oi-zoomable-map { 
     margin-block: 2rem;
 }
+
 table {
     overflow-x: scroll;
+    border-collapse: collapse;
 }
-
 th {
     background: #000000;
     color: #ffffff;

@@ -3,6 +3,7 @@ import lume from "lume/mod.ts";
 // Lume plugins
 import jsonLoader from "lume/core/loaders/json.ts";
 import base_path from "lume/plugins/base_path.ts";
+import date from 'lume/plugins/date.ts';
 import metas from "lume/plugins/metas.ts";
 import postcss from 'lume/plugins/postcss.ts';
 import sheets from "lume/plugins/sheets.ts";
@@ -21,12 +22,17 @@ const site = lume({
 
 site.process(['.html'], (pages) => pages.forEach(autoDependency));
 site.use(base_path());
+site.use(date());
 site.use(postcss({
     plugins: [nesting()],
 }));
 site.use(metas());
 site.use(oiLumeViz());
-site.use(sheets());
+site.use(sheets({
+    options: {
+        cellDates: true,
+    }
+}));
 
 site.loadData(['.geojson'], jsonLoader);
 

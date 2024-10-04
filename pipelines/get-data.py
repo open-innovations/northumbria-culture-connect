@@ -78,7 +78,7 @@ def companies_house_company_lists():
 
 
 def download_360_giving():
-    url = 'https://grantnav.threesixtygiving.org/search.csv?recipientRegionName=North+East&recipientTSGType=Organisation&bestCountyName=Newcastle+upon+Tyne'
+    url = 'https://grantnav.threesixtygiving.org/search.csv?min_date=01%2F2020&recipientRegionName=North+East&recipientTSGType=Organisation&bestCountyName=Newcastle+upon+Tyne'
     download_to_file(url, RAW_DATA / '360-giving.csv')
     
 

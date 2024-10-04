@@ -8,6 +8,8 @@ DATA = _ROOT / 'data'
 
 REF_DATA = DATA / 'reference'
 
+SITE = _ROOT / 'src'
+
 RAW_DATA.mkdir(exist_ok=True, parents=True)
 DATA.mkdir(exist_ok=True, parents=True)
 REF_DATA.mkdir(exist_ok=True, parents=True)
