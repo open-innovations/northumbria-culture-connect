@@ -5,15 +5,122 @@ tags:
     - open
     - funding
     - participation
+
+data:
+    - title: National Lottery Project Grants
+      url: https://nationallottery.dcms.gov.uk/data
+    - title: Total Income of DCMS-funded cultural organisations
+      url: https://www.gov.uk/government/collections/charitable-giving-indicators
+    - title: Participation Survey 2023–24 annual publication
+      url: https://www.gov.uk/government/statistics/participation-survey-2023-24-annual-publication
 ---
 
 <p>
     This page will provide present data relating to cultural projects and organisations receiving funding from the Department for Culture, Media and Sport.
 </p>
 
-<p>Sources:</p>
-<ul>
-<li><a href="https://nationallottery.dcms.gov.uk/data">National Lottery Grants Data</a></li>
-<li><a href="https://www.gov.uk/government/collections/charitable-giving-indicators">Total Income of DCMS-funded cultural organisations</a></li>
-<li><a href="https://www.gov.uk/government/statistics/participation-survey-2023-24-annual-publication">Participation Survey 2023–24 annual publication</a></li>
+<h2>Participation Survey 2023-24</h2>
+
+<p>The Participation Survey started in October 2021 and is the key evidence source on engagement for DCMS. It is a continuous push-to-web household survey of adults aged 16 and over in England.</p>
+<p>The Participation Survey provides nationally representative estimates of physical and digital engagement with the arts, heritage, museums & galleries, and libraries, as well as engagement with tourism, major events, live sports and digital.</p>
+
+<h2>National Response</h2> 
+
+<h3>Physical attendance of arts events</h3>
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">TBC</p>
+        <p>Physically attended an arts event in the last 12 months</p>
+    </li>
+    <li class="block">
+        <p class="bang">Increase</p>
+        <p>Change between 2022/23 and 2023/24</p>
+    </li>
+    <li class="block">
+        <p class="bang">TBC</p>
+        <p>Response in 2022/23</p>
+    </li>
 </ul>
+
+<h3>Frequency of attendance of arts events</h3>
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">TBC</p>
+        <p>Attended arts events at least once a week</p>
+    </li>
+    <li class="block">
+        <p class="bang">Decrease</p>
+        <p>Change between 2022/23 and 2023/24</p>
+    </li>
+    <li class="block">
+        <p class="bang">TBC</p>
+        <p>Response in 2022/23</p>
+    </li>
+</ul>
+
+<h2>Responses by Local Authority - Newcastle</h2>
+
+
+<h3>Attendance by event type - Percentage of responses (%)</h3>
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: attendance_participation_survey_23_24_newcastle,
+        category: "Description",
+        width: 1000,
+        height:400,
+        series: [
+            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24" }
+        ],
+        axis: {
+            x: {
+                max: 100, 
+            }
+        }
+    }
+}) }}
+
+
+<h3>Engagement with arts events - Percentage of responses (%)</h3>
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: engagement_participation_survey_23_24_newcastle,
+        category: "Description",
+        width: 1000,
+        height:200,
+        series: [
+            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24" }
+        ],
+        axis: {
+            x: {
+                max: 100
+            }
+        }
+    }
+}) }}
+
+
+
+<h3>Participation in arts activities - Percentage of responses (%)</h3>
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: participation_participation_survey_23_24_newcastle,
+        width: 1000,
+        height: 400,
+        category: "Description",
+        series: [
+            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24" }
+        ],
+        axis: {
+            x: {
+                max: 100
+            }
+        }
+    }
+}) }}
+
+{{ comp.DataSources({ sources: data }) }}
+
+

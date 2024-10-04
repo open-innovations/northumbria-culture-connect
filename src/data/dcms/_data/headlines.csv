@@ -1,0 +1,88 @@
+ID,Question,Response Breakdown ,Change between 2022/23 and 2023/24,Percentage of respondents 2023/24,Percentage of respondents 2022/23
+response_1,Engaged with the arts physically (attended an event or participated in an activity in person) in the last 12 months,Any event in rows 18 to 30 or activity in rows 34 to 44,Increase,90,89
+response_2,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],At least once a week,Decrease,59,70
+response_3,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],Less often than once a week but at least once a month,Increase,15,12
+response_4,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],Less often than once a month but at least 3 or 4 times a year,Increase,14,9
+response_5,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],Twice in the last 12 months,Increase,6,4
+response_6,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],Once in the last 12 months,Increase,5,4
+response_7,Number of arts events attended or activities participated in the last 12 months ,,Decrease,10,12
+response_8,Number of arts events attended or activities participated in the last 12 months ,1 event or activity,Decrease,11,14
+response_9,Number of arts events attended or activities participated in the last 12 months ,2 events or activities,Decrease,15,16
+response_10,Number of arts events attended or activities participated in the last 12 months ,3 or more events or activities,Increase,64,58
+response_11,Attended any arts event in the last 12 months,Any event in rows 18 to 30,Increase,77,71
+response_12,Attended an arts event (excluding cinemas) in the last 12 months,"Any event in rows 18 to 30, excluding row 21",Increase,67,60
+response_13,Attended an arts event in the last 12 months,"An exhibition of art, photography or sculptures",Increase,26,20
+response_14,Attended an arts event in the last 12 months,"A theatre play, drama, musical, Pantomime, Ballet or Opera",Increase,39,30
+response_15,Attended an arts event in the last 12 months,"An event connected with books, reading, or writing",Increase,9,7
+response_16,Attended an arts event in the last 12 months,A cinema screening of a film or movie,Increase,55,49
+response_17,Attended an arts event in the last 12 months,"A craft exhibition (not a crafts market; crafts include for example textiles, woodworking)",Increase,10,8
+response_18,Attended an arts event in the last 12 months,"A live music event (for example, pop, jazz, electronic, choral, orchestra or folk)",Increase,39,31
+response_19,Attended an arts event in the last 12 months,"An arts festival and or carnival (for example, a food, craft or other cultural event)",Increase,22,21
+response_20,Attended an arts event in the last 12 months,A street art event,Increase,7,4
+response_21,Attended an arts event in the last 12 months,"A live dance event (for example, contemporary, world, street or urban)",Increase,6,5
+response_22,Attended an arts event in the last 12 months,A fashion show,Increase,1,1
+response_23,Attended an arts event in the last 12 months,A comedy event,Increase,15,11
+response_24,Attended an arts event in the last 12 months,An in-person esports contest or video game competition event [Note 4],,2,0
+response_25,Attended an arts event in the last 12 months,Some other cultural event in England,Decrease,2,3
+response_26,Attended an arts event in the last 12 months,None of these,Decrease,23,29
+response_27,Participated in an any arts activity in the last 12 months,Any activities in rows 34 to 44,Decrease,79,81
+response_28,Participated in arts activities (excluding video games) in the last 12 months,"Any activities in rows 34 to 44, excluding row 40",Increase,78,72
+response_29,Participated in an arts activity in the last 12 months,"Written stories, plays, or poetry",Increase,6,4
+response_30,Participated in an arts activity in the last 12 months,"Read books, graphic novels or magazines",No Change,64,64
+response_31,Participated in an arts activity in the last 12 months,"Written, practiced or performed music",Increase,10,6
+response_32,Participated in an arts activity in the last 12 months,"Painting, drawing, printmaking, calligraphy, colouring",Increase,19,14
+response_33,Participated in an arts activity in the last 12 months,"Crafts (textile, ceramic, sculpting, carving, woodwork)",Increase,19,15
+response_34,Participated in an arts activity in the last 12 months,Choreographed or performed a drama or dance routine,Increase,2,2
+response_35,Participated in an arts activity in the last 12 months,Designed or programmed video games including on a smartphone or tablet,Increase,2,1
+response_36,Participated in an arts activity in the last 12 months,Made films or videos as a hobby including original animations,Increase,4,3
+response_37,Participated in an arts activity in the last 12 months,Photography as a hobby,Increase,17,16
+response_38,Participated in an arts activity in the last 12 months,Read news in a printed newspaper [Note 4],,35,0
+response_39,Participated in an arts activity in the last 12 months,"Other arts, crafts, or creative activities",Decrease,1,4
+response_40,Participated in an arts activity in the last 12 months,None of these,Increase,21,19
+response_41,Engaged with performing arts at least once in the last 12 months,"A theatre play, drama, musical, Pantomime, Ballet or OperaA live dance eventA comedy eventChoreographed or performed a drama or dance routineA live arts event including theatre, visual arts or literatureA pre-recorded arts event including theatre, visual arts or literature",Increase,50,41
+response_42,Been part of a creative activity or consumed content in the last 12 months,Created content,Increase,46,24
+response_43,Been part of a creative activity or consumed content in the last 12 months,Consumed content,Increase,96,75
+response_44,Been part of a creative activity or consumed content in the last 12 months,Other,Decrease,1,4
+response_45,Been part of a creative activity or consumed content in the last 12 months,None of these,Increase,21,19
+response_46,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Mainstream Hollywood Films,,81,0
+response_47,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],British films with mainly a British cast or locations,,27,0
+response_48,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],"Independent films, not backed by a major film studio",,12,0
+response_49,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Films in a foreign language or other World cinema,,9,0
+response_50,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Documentaries,,6,0
+response_51,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Animated films,,22,0
+response_52,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Short films,,2,0
+response_53,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Archive films or classic films from the past,,4,0
+response_54,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],"A live or recorded cultural, arts or sports event such as a play or musical, orchestra or concert",,6,0
+response_55,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Another type of film,,0,0
+response_56,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],None of these,,1,0
+response_57,Methods of payment when adults read a printed newspape [Note 5] [Note 6],Pay a one-time fee or charge,,52,0
+response_58,Methods of payment when adults read a printed newspape [Note 5] [Note 6],Pay a monthly or annual subscription,,14,0
+response_59,Methods of payment when adults read a printed newspape [Note 5] [Note 6],Access content free of charge,,32,0
+response_60,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],The cultural and arts activities on offer do not match my own cultural interests or preference,,13,0
+response_61,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],Cultural and arts activities are too academic for me,,5,0
+response_62,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],"I don't have any artistic, creative or cultural skills",,24,0
+response_63,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],The people who take part in cultural and arts activities are not like me,,6,0
+response_64,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],I don't know enough about what cultural and arts activities there are,,7,0
+response_65,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],I don't think cultural and arts activities are of any value for me or my family,,7,0
+response_66,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],Cultural and arts activities will not help with my career or the careers I want my family to have,,2,0
+response_67,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],"My family, friends or community would not be supportive of me attending cultural or arts activities",,1,0
+response_68,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],I was not encouraged to take part in cultural and arts activities as a child,,6,0
+response_69,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],I used to take part in cultural and arts activities for my health but stopped as I now feel better,,0,0
+response_70,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],I'm just not interested in cultural or arts activities,,47,0
+response_71,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],Some other reason,,2,0
+response_72,Reasons why adults are not interested in cultural or arts activities [Note 5] [Note 6],No reason in particular,,21,0
+response_73,Barriers to engaging with the arts in the last 12 months,I cannot afford it [Note 4] [Note 7],,23,0
+response_74,Barriers to engaging with the arts in the last 12 months,It is not value for money [Note 4] [Note 7],,3,0
+response_75,Barriers to engaging with the arts in the last 12 months,I’m not interested in cultural or arts activities,Decrease,24,30
+response_76,Barriers to engaging with the arts in the last 12 months,I don't have time,Increase,20,17
+response_77,Barriers to engaging with the arts in the last 12 months,I have a health problem or disability,No Change,14,14
+response_78,Barriers to engaging with the arts in the last 12 months,They are difficult to get to,No Change,4,4
+response_79,Barriers to engaging with the arts in the last 12 months,I don't know what is available,Increase,6,4
+response_80,Barriers to engaging with the arts in the last 12 months,I would feel out of place,Increase,4,3
+response_81,Barriers to engaging with the arts in the last 12 months,I don't have anyone to go with,No Change,5,4
+response_82,Barriers to engaging with the arts in the last 12 months,The opening hours are inconvenient,No Change,1,1
+response_83,Barriers to engaging with the arts in the last 12 months,Due to COVID-19 restrictions or concerns,Decrease,3,12
+response_84,Barriers to engaging with the arts in the last 12 months,Some other reason,Decrease,0,1
+response_85,Barriers to engaging with the arts in the last 12 months,No reason in particular,No Change,28,26
+response_86,Engaged with the arts physically and digitally in the last 12 months,Total,Increase,35,27
+response_87,Engaged with the arts physically or digitally in the last 12 months,Total,Increase,91,90
