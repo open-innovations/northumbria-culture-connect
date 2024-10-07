@@ -8,11 +8,36 @@ tags:
 <h1>{{ title }}</h1>
 
 <p>
-    This page will present data extracted from Companies House.
+    This data has been extracted from the companies house dataset by using a short list of SIC codes.
 </p>
 
-<p>Source:<p>
+<p>
+    The list below shows how many companies were matched for each shortlist code. Note that companies may be included twice.
+</p>
 
-<ul><li><a href="https://download.companieshouse.gov.uk/en_output.html">Companies House monthly data extract</li></ul>
+<ul class="grid centred">
+    {{ for c of sic_codes }}
+        <li class="block">
+            <P class="bang">{{ c.count }}</p>
+            <p>{{ c.sic_code }}</p>
+        </li>
+    {{ /for }}
+</ul>
+
+<h2>Geographic distribution of companies</h2>
+
+{{ comp.oi.map.zoomable({
+    config: {
+        geojson: {
+            data: company_locations,
+        },
+    },
+}) }}
+
+<h2>Source</h2>
+
+<ul>
+    <li><a href="https://download.companieshouse.gov.uk/en_output.html">Companies House monthly data extract</li>
+</ul>
 
 
