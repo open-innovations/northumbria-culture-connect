@@ -27,33 +27,35 @@ data:
 <h2>National Response</h2> 
 
 <h3>Physical attendance of arts events</h3>
+<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
 <ul class="grid centred">
     <li class="block">
-        <p class="bang">TBC</p>
+        <p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
         <p>Physically attended an arts event in the last 12 months</p>
     </li>
     <li class="block">
-        <p class="bang">Increase</p>
+        <p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Change between 2022/23 and 2023/24'] }}</p>
         <p>Change between 2022/23 and 2023/24</p>
     </li>
     <li class="block">
-        <p class="bang">TBC</p>
+        <p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2022/23'] }}%</p>
         <p>Response in 2022/23</p>
     </li>
 </ul>
 
 <h3>Frequency of attendance of arts events</h3>
+<p>The most frequent level at which adults attended any arts activity in person.</p>
 <ul class="grid centred">
     <li class="block">
-        <p class="bang">TBC</p>
+        <p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Percentage of respondents 2022/23'] }}%</p>
         <p>Attended arts events at least once a week</p>
     </li>
     <li class="block">
-        <p class="bang">Decrease</p>
+        <p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Change between 2022/23 and 2023/24'] }}</p>
         <p>Change between 2022/23 and 2023/24</p>
     </li>
     <li class="block">
-        <p class="bang">TBC</p>
+        <p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Percentage of respondents 2022/23'] }}%</p>
         <p>Response in 2022/23</p>
     </li>
 </ul>
@@ -106,7 +108,7 @@ data:
 
 {{ comp.oi.chart.bar({
     config: {
-        data: participation_participation_survey_23_24_newcastle,
+        data: participation_survey_23_24_newcastle,
         width: 1000,
         height: 400,
         category: "Description",
