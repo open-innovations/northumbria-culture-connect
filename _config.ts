@@ -4,9 +4,12 @@ import lume from "lume/mod.ts";
 import jsonLoader from "lume/core/loaders/json.ts";
 import base_path from "lume/plugins/base_path.ts";
 import date from 'lume/plugins/date.ts';
+import esbuild from 'lume/plugins/esbuild.ts';
 import metas from "lume/plugins/metas.ts";
 import postcss from 'lume/plugins/postcss.ts';
 import sheets from "lume/plugins/sheets.ts";
+
+// import mermaid from "jsr:@ooker777/lume-mermaid-plugin/";
 
 // OI plugins
 import autoDependency from 'https://deno.land/x/oi_lume_utils@v0.4.0/processors/auto-dependency.ts';
@@ -33,6 +36,13 @@ site.use(sheets({
         cellDates: true,
     }
 }));
+
+site.use(esbuild({
+    extensions: [ '.b.ts' ],
+    // options: {
+    // }
+}));
+// site.use(mermaid());
 
 site.loadData(['.geojson'], jsonLoader);
 
