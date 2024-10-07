@@ -14,7 +14,48 @@ data:
 <h1>{{ title }}</h1>
 
 <p>
-    This page will present data extracted from the Charity Commission website. The data on this page is an extract from the <a href = "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download">Charity Commission Register</a>. It has been filtered by Local Area = 'Newcastle Upon Tyne City (1053)', and Classification = 'Arts/Culture/Heritage/Science (29977)'.
+    This page will present data extracted from the Charity Commission website. The data on this page is an extract from the <a href = "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download">Charity Commission Register</a>. It has been filtered by Local Area = 'Newcastle Upon Tyne City (1053)', and Classification = 'Arts/Culture/Heritage/Science (29977)'. Data is further filtered by lookup against the <a href="https://www.beta.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/listofpostcodesandcorrespondinglocalauthorities">ONS Postcode - Local Authority lookup</a>.
 </p>
 
+<h3>Headlines</h3>
+<p>Overview of charitable organisations in Newcastle Upon Tyne.</p>
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ headlines.find(x => x.headline == 'Total Newcastle LA')['count'] }}</p>
+        <p>Registered charities in Newcastle-upon-Tyne Local Authority</p>
+    </li>
+</ul>
 
+
+<h2>Charity Map - Newcastle Upon Tyne City</h2>
+
+<p>This map shows the registered address of the charities registered through the Charity Commission with a valid postcode.</p>
+
+{{ comp.oi.map.zoomable({ config: {
+    // Load some GeoJSON
+    geojson: {
+        key: 'LAD24CD',
+        data: geojson.lad.E08000021,
+    },
+
+    data: [
+        { code: 'E08000021', colour: '#00000033' },
+    ],
+    key: 'code',
+
+    // Set the boundaries of the map
+    bounds: {
+        lat: {
+            min: 54.93,
+            max: 55.09
+        },
+        lon: {
+            min: -1.65,
+            max: -1.62,
+        },
+    },
+
+    // Add some markers
+    markers: charity_geo,
+
+} }) }}
