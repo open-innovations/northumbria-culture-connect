@@ -1,5 +1,4 @@
 import * as d3 from 'npm:d3@7.9.0';
-import { classifyIdentifier } from "npm:meriyah@4.5.0";
 
 
 function bilink(root) {
@@ -41,7 +40,7 @@ export default function ({ config }: Lume.Data & { config: HierarchicalEdgeBundl
     const tree = d3.cluster().size([2 * Math.PI, radius - padding]);
 
     const root = tree(bilink(
-        d3.hierarchy(data).sort((a, b) => d3.ascending(a.size, b.size) || d3.ascending(a.data.name, b.data.name))
+        d3.hierarchy(data).sort((a, b) => d3.ascending(a.data.links.length, b.data.links.length) || d3.ascending(a.data.name, b.data.name))
     ))
 
     const svg = d3.create("svg")
