@@ -6,8 +6,6 @@ description: |
     and Investment Principles Support Organisation (IPSO) for 2023-26.
 ---
 
-{{ comp.pageTop({ ...page.data }) }}
-
 {{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
 {{ set byDiscipline = Object.values(
     funding_by_organisation
