@@ -55,9 +55,65 @@ notes: |
 
 <h3>Resident Population</h3>
 
-<p>Source:</p>
+{{ comp documentation }}
+This uses data extracted from <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/wardlevelmidyearpopulationestimatesexperimental">Ward-level population estimates (official statistics in development)</a> with only the wards for <code>E08000021</code> saved to <code>population_by_ward_2022.csv</code>. Ward totals for each age category are calculated in the page. The Newcastle total is the sum of the ward totals.
+{{ /comp }}
 
+<p>Mid-2022 population estimates for the city and wards.</p>
+
+{{#
+tooltip:'<strong>{{ _title }}</strong><br/>{{ name }}: {{ Under 18 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'
+#}}
+
+{{
+	set ageBands = [
+		{title:'Under 18',value:'Under 18',min:0,max:17,colour:'#cde594'},
+		{title:'18-24',value:'18-24',min:18,max:24,colour:'#80c6a3'},
+		{title:'25-64',value:'25-64',min:25,max:64,colour:'#1f9eb7'},
+		{title:'65+',value:'65+',min:65,max:200,colour:'#186290'}
+	]
+}}
+
+{{ set populationByArea2022 = Object.values(
+	population_by_ward_2022.reduce((result, row) => {
+		if(!result['E08000021']){ result['E08000021'] = {name:'Newcastle'}; }
+		const area = row['Ward 2023 Code'];
+		const thisGroup = result[area] || { area };
+		thisGroup.name = row['Ward 2023 Name'];
+		for(let b = 0; b < ageBands.length; b++){
+			thisGroup[ageBands[b].value] = 0;
+			for(let y = ageBands[b].min; y <= ageBands[b].max; y++){
+				if('F'+y in row){
+					let t = row['F'+y] + row['M'+y]
+					thisGroup[ageBands[b].value] += t;
+					result['E08000021'][ageBands[b].value] = (result['E08000021'][ageBands[b].value]||0) + t;
+				}
+			}
+		}
+		return { ...result, [area]: thisGroup };
+	}, {})
+) }}
+
+{{ comp.oi.chart.bar({
+	config: {
+		data: populationByArea2022,
+		category: "name",
+		height: 600,
+		stacked: true,
+		percent: true,
+		legend: {
+			show: true,
+			position: "top"
+		},
+		series: ageBands
+	}
+}) }}
+
+
+<p>Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/wardlevelmidyearpopulationestimatesexperimental">Mid 2022 estimates by ward</a></p>
+
+<p>More</p>
 <ul>
-    <li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=31&version=0&anal=1">ONS Population estimates - local authority based by five year age band</a></li>
+	<li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=31&version=0&anal=1">ONS Population estimates - local authority based by five year age band</a></li>
     <li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2023">ONS mid-year population estimates</a></li>
 </ul>
