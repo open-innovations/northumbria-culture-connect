@@ -70,12 +70,13 @@ tags:
         }
     }
 </style>
-{{ comp.RadialDiagram({
+{{ comp.EdgeBundle({
     config: {
-        data: utils.hierarchify(graph),
+        data: graph,
+        idField: 'sic_code',
         width: 450,
         padding: 50,
-        title: ({ data }) => `${ data.name}: ${ data.title }`,
+        label: ({ data }) => data.id.split(/\s+/)[0]
     }
 }) }}
 </div>

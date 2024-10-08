@@ -3,7 +3,7 @@ function initialiseRadialMap(svg: SVGElement) {
     const edges = Array.from(svg.querySelectorAll<SVGPathElement>('.edges path'));
 
     // Rehydrate the nodes and edges
-    edges.forEach(e => e.nodeArray = e.dataset.nodes?.split(',') || []);
+    edges.forEach(e => e.nodeArray = e.dataset.nodes?.split('|') || []);
     nodes.forEach(n => {
         const id = n.dataset.id!;
         n.edges = edges.filter(e => e.nodeArray.includes(id));
