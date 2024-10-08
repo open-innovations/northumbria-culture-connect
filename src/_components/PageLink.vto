@@ -1,0 +1,8 @@
+<li class="block">
+    <a class="greedy" href="{{ page.url }}">
+        {{ comp.PageSummary({ ...page, config }) }}
+    </a>
+    {{# <div> #}}
+    {{ comp.PageTags({ ...page, config })}}
+    {{# </div> #}}
+</li>

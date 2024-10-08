@@ -23,11 +23,7 @@ title: Home
 
 <ul class="grid">
 {{ for page of search.pages('data funding', 'priority=desc') }}
-    <li>
-        <a class="block" href="{{ page.url }}">
-        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-        </a>
-    </li>
+    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
 </ul>
 
@@ -41,11 +37,7 @@ title: Home
 
 <ul class="grid">
 {{ for page of search.pages('data participation', 'priority=desc') }}
-    <li>
-        <a class="block" href="{{ page.url }}">
-        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-        </a>
-    </li>
+    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
 </ul>
 
@@ -60,11 +52,7 @@ title: Home
 
 <ul class="grid">
 {{ for page of search.pages('data infrastructure', 'priority=desc') }}
-    <li>
-        <a class="block" href="{{ page.url }}">
-        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-        </a>
-    </li>
+    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
 </ul>
 
@@ -79,10 +67,6 @@ title: Home
 
 <ul class="grid">
 {{ for page of search.pages('report', 'priority=desc') }}
-    <li>
-        <a class="block" href="{{ page.url }}">
-        {{ comp.PageTop({ ...page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-        </a>
-    </li>
+    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
 </ul>

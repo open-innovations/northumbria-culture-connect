@@ -1,0 +1,12 @@
+---
+layout: ./base.vto
+---
+
+{{ comp.PageSummary({ ...page.data })}}
+{{ comp.PageTags({ tags: related }) }}
+
+<ul class="grid">
+{{ for page of search.pages(tag) }}
+    {{ comp.PageLink({ page, config: { headingLevel: 2 } })}}
+{{ /for }}
+</ul>

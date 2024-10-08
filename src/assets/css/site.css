@@ -91,20 +91,33 @@ td {
     }
     & .block {
         display: block;
-        padding: 1em;
         background: black;
         color: white;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        text-decoration: none;
+        justify-content: flex-start;
         box-sizing: border-box;
-        &a:hover {
+        & > * {
+            padding-inline: 1rem;
+            &:first-child {
+                padding-block-start: 1rem;
+            }
+            &:last-child {
+                padding-block-end: 1rem;
+            }
+        }
+        & > a {
+            color: inherit;
+            text-decoration: none;
+        }
+        & a:hover {
             text-decoration: underline;
         }
         & * {
             margin-block: 0;
+            & + * { 
+                margin-block-start: 1rem;
+            }
         }
     }
 }
@@ -112,13 +125,23 @@ td {
     list-style: none;
     padding-inline: 0;
     display: flex;
-    gap: 0.5rem;
+    gap: 0.9rem 0.5rem;
     flex-wrap: wrap;
+    & > * {
+        margin-block: 0 !important;
+    }
     & .tag {
         border: 1px solid currentColor;
         border-radius: 2rem;
         padding-block: 0.2rem;
         padding-inline: 0.5rem;
+    }
+    & a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 

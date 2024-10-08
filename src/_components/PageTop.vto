@@ -1,9 +1,4 @@
 {{ set _tags = tags.filter(t => !(config?.hideTags || []).includes(t)) }}
 
-<h{{ config?.headingLevel || 1 }}>{{ title }}</h{{ config?.headingLevel || 1 }}>
-<p class="greedy">{{ description }}</p>
-<ul class="tag-cloud">
-{{ for tag of _tags }}
-<li class="tag">{{ tag }}</li>
-{{ /for }}
-</ul>
+{{ comp.PageSummary({ title, description, config }) }}
+{{ comp.PageTags({ tags, config }) }}
