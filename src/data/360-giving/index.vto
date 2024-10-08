@@ -10,6 +10,8 @@ notes: |
     ## TODO
 
     - Limit data to funders / funds related to culture.
+
+    GrantNav query could be something like: arts or culture or theatre or muesum
 ---
 
 <p>
@@ -48,6 +50,46 @@ notes: |
             {{ for p of inclusions.excluded_programmes }}<li>{{ p }}</li>{{ /for }}
         </ul>
     </div></li>
+</ul>
+
+<h2>Headlines</h2>
+
+{{ set funders = by_programme
+    .map(({ "Funding Org:Name": name, Grants: grants, Funding: funding }) => ({ name, grants, funding }))
+    .reduce((a, { name, grants, funding }) => {
+        const current = a[name] || { grants: 0, funding: 0 };
+        current.grants += grants;
+        current.funding += funding;
+        return { ...a, [name]: current };
+    }, {})
+}}
+
+
+<ul class="grid centred">
+<li class="block">
+    <p class="bang">{{ Object.keys(funders).length }}</p>
+    <p>Distinct funders</p>
+</li>
+<li class="block">
+    <p class="bang">{{ Object.values(funders) |> map(x => x.grants) |> reduce((a, c) => a + c, 0) }}</p>
+    <p>Total grants awarded</p>
+</li>
+<li class="block">
+    <p class="bang">{{ Object.values(funders) |> map(x => x.funding) |> reduce((a, c) => a + c, 0) |> displayCurrency }}</p>
+    <p>Total funding awarded</p>
+</li>
+</ul>
+
+<h2>Funder details</h2>
+
+<ul class="grid centred">
+{{ for name, details of Object.entries(funders).toSorted((a, b) => b[1].funding - a[1].funding) }}
+    <li class="block">
+        <p>{{ details[0] }}</p>
+        <p class="bang greedy">{{ details[1].funding |> displayCurrency }}</p>
+        <p>{{ details[1].grants }} grant awards</p>
+    </li>
+{{ /for }}
 </ul>
 
 <h2>Total Funding</h2>
