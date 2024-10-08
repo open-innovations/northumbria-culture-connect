@@ -40,7 +40,7 @@ export default function ({ config }: Lume.Data & { config: HierarchicalEdgeBundl
     const tree = d3.cluster().size([2 * Math.PI, radius - padding]);
 
     const root = tree(bilink(
-        d3.hierarchy(data).sort((a, b) => d3.ascending(a.data.links.length, b.data.links.length) || d3.ascending(a.data.name, b.data.name))
+        d3.hierarchy(data).sort((a, b) => d3.ascending(a.data.name, b.data.name))
     ))
 
     const svg = d3.create("svg")
@@ -82,7 +82,7 @@ export default function ({ config }: Lume.Data & { config: HierarchicalEdgeBundl
         .selectAll()
         .data(root.leaves().flatMap(leaf => leaf.outgoing))
         .join("path")
-        // .style("mix-blend-mode", "multiply")
+        .style("mix-blend-mode", "multiply")
         // TODO make this configurable
         .attr("data-nodes", d => d.map(n => n.data.name))
         .attr("d", ([i, o]) => line(i.path(o)));
