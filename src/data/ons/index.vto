@@ -60,6 +60,8 @@ This uses data extracted from <a href="https://www.ons.gov.uk/peoplepopulationan
 The age bands are defined in the page.
 The ward totals for each age band are calculated in the page.
 The Newcastle total is the sum of the ward totals.
+
+We've used a percentage stacked bar chart because the totals add up to 100% and we want to show multiple aspects per ward simultaneously. For instance, it is really easy to see which wards have higher student populations.
 {{ /comp }}
 
 <p>Mid-2022 population estimates for the city and wards.</p>
@@ -108,10 +110,38 @@ tooltip:'<strong>{{ _title }}</strong><br/>{{ name }}: {{ Under 18 | toLocaleStr
 			show: true,
 			position: "top"
 		},
-		series: ageBands
+		series: ageBands,
+		axis: {
+			x: {
+				grid: {
+					"stroke-dasharray": "6 2",
+					"stroke-width": 1
+				},
+				ticks: [{
+						"value": 20,
+						"label": "20%"
+					},{
+						"value": 40,
+						"label": "40%"
+					},{
+						"value": 60,
+						"label": "60%"
+					},{
+						"value": 80,
+						"label": "80%"
+					},{
+						"value": 100,
+						"label": "100%"
+					}]
+			},
+			y: {
+				grid: {
+					"stroke-width": 0.5
+				}
+			}
+		}
 	}
 }) }}
-
 
 <p>Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/wardlevelmidyearpopulationestimatesexperimental">Mid 2022 estimates by ward</a></p>
 
@@ -120,3 +150,71 @@ tooltip:'<strong>{{ _title }}</strong><br/>{{ name }}: {{ Under 18 | toLocaleStr
 	<li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=31&version=0&anal=1">ONS Population estimates - local authority based by five year age band</a></li>
     <li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2023">ONS mid-year population estimates</a></li>
 </ul>
+
+
+<h3>Indices of multiple deprivation</h3>
+
+{{ comp documentation }}
+These data are <a href="https://communitiesopendata-communities.hub.arcgis.com/datasets/45e05901e0a14cca9ab180975e2e8194_0/explore?filters=eyJMQURubSI6WyJOZXdjYXN0bGUgdXBvbiBUeW5lIl19&location=55.038194%2C-1.531779%2C11.48">a filtered set for Newcastle from CommunitiesOpenData</a>. We've used an SVG map with a slider to allow visitors to change which type of decile is displayed.
+{{ /comp }}
+
+<p>The English Indices of Deprivation 2019 use 39 separate indicators, organised across seven distinct domains of deprivation which can be combined, using appropriate weights, to calculate the Index of Multiple Deprivation 2019.</p>
+
+{{ comp.oi.map.svg({
+	config: {
+		data: IMD_2019,
+		geojson: {
+			key: "lsoa11cd",
+			data: "geojson.IMD_2019"
+		},
+		key: "lsoa11cd",
+		value: "IMD Decile",
+		scale: "Viridis",
+		tooltip: "{{ lsoa11nm }}<table><tr><th>Aspect</th><th>Decile</th></tr><tr><td>Overall</td><td>{{ IMD Decile }}</td></tr><tr><td>Income</td><td>{{ Income Decile }}</td></tr><tr><td>Education</td><td>{{ Education Decile }}</td></tr><tr><td>Employment</td><td>{{ Employment Decile }}</td></tr><tr><td>Health Deprivation and Disability</td><td>{{ Health Deprivation and Disability Decile }}</td></tr><tr><td>Crime</td><td>{{ Crime Decile }}</td></tr><tr><td>Barriers to Housing and Services</td><td>{{ Barriers to Housing and Services Decile }}<tr><td>Living Environment</td><td>{{ Living Environment Decile }}</td></tr><tr><td>Income Deprivation Affecting Children Index</td><td>{{ Income Deprivation Affecting Children Index Decile }}</td></tr><tr><td>Income Deprivation Affecting Older People</td><td>{{ Income Deprivation Affecting Older People Decile }}</td></tr></table>",
+		height: 400,
+		min: 1,
+		max: 10,
+		legend: {
+			position: "top right",
+			items: [{
+				value: 10,
+				label: "10 (least deprived)"
+			},{
+				value: 9,
+				label: "9"
+			},{
+				value: 8,
+				label: "8"
+			},{
+				value: 7,
+				label: "7"
+			},{
+				value: 6,
+				label: "6"
+			},{
+				value: 5,
+				label: "5"
+			},{
+				value: 4,
+				label: "4"
+			},{
+				value: 3,
+				label: "3"
+			},{
+				value: 2,
+				label: "2"
+			},{
+				value: 1,
+				label: "1 (most deprived)"
+			}]
+		},
+		tools: {
+			filter: {
+				label: "lsoa11nm"
+			},
+			slider: {
+				columns: ["IMD Decile","Income Decile","Education Decile","Employment Decile","Health Deprivation and Disability Decile","Crime Decile","Barriers to Housing and Services Decile","Living Environment Decile","Income Deprivation Affecting Children Index Decile","Income Deprivation Affecting Older People Decile"]
+			}
+		},
+	}
+}) }}
