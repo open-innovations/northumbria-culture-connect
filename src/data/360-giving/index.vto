@@ -1,36 +1,60 @@
 ---
 title: 360 Giving
 description: |
-    Presentation of 360 Giving data since January 2020 where the grant recipient is based in Newcastle.
+    Exploration of of 360 Giving data since January 2020 where the grant recipient is based in Newcastle, and filtered by funding organisations and grant programme.
 tags:
     - open
     - funding
-funding_clip: 5000000
+funding_clip: 250000
+notes: |
+    ## TODO
+
+    - Limit data to funders / funds related to culture.
 ---
 
 <p>
-    This page presents summaries from a
+    <a href="https://threesi=xtygiving.org">360 Giving</a> both publishes a standard and maintains a data repository related to grant awards.
+    The full dataset contains very rich data covering many sectors. This page is an initial attempt to filter by cultural organisations.
+    Regrettably, there is no simple way of filtering by culture in the dataset, so this analysis takes the approach of incliding certain funders and programmes, and excluding a list of irrelevant funds from the funders.
+</p>
+
+<p>
+    The raw data is extracted from from a 
     <a href="https://grantnav.threesixtygiving.org/search?min_date=01%2F2020&recipientRegionName=North+East&recipientTSGType=Organisation&bestCountyName=Newcastle+upon+Tyne">filtered search of the 360 Giving GrantNav tool</a>.
 </p>
 
 <p>
-    Please note: this currently includes all funds, not just the culture specific ones.
-    There are also some very large funds related to Levelling Up and COVID which may include culture funding
-    but which may also require separating out from the 'regular' funding.
+    The extracted data is further filtered to include only the following culture-related grant awards.
+    All grants from the listed funders are included: this is not limited to specified funds.
+    The grant programme list is provided to allow for more fine-grained selection of funds where a funder awards both cultural and non-cultural grants.
 </p>
 
-<h2>TODO</h2>
-<ul>
-    <li>Limit 360 Giving data to funders / grant programmes which are culture related</li>
-    <li>Decide on handling of COVID / large govt fund data</li>
+<ul class="grid">
+    <li class="block"><div>
+        <p>INCLUDING award by the following funders</p>
+        <ul>
+            {{ for f of inclusions.funders }}<li>{{ f }}</li>{{ /for }}
+        </ul>
+    </div></li>
+    <li class="block"><div>
+        <p>INCLUDING awards under the following Grant Programmes</p>
+        <ul>
+            {{ for p of inclusions.programmes }}<li>{{ p }}</li>{{ /for }}
+        </ul>
+    </div></li>
+    <li class="block"><div>
+        <p>EXCLUDING awards under the following Grant Programmes</p>
+        <ul>
+            {{ for p of inclusions.excluded_programmes }}<li>{{ p }}</li>{{ /for }}
+        </ul>
+    </div></li>
 </ul>
 
 <h2>Total Funding</h2>
 
-<p>
-    The chart below shows funding per month since January 2020.
-</p>
+<div style="display:flex;flex-wrap:wrap;gap:1rem;">
 
+<div style="flex-basis: 30rem; flex-shrink: 0; flex-grow: 1;">
 {{ comp.oi.chart.line({
     config: {
         data: summary_by_month,
@@ -45,14 +69,23 @@ funding_clip: 5000000
             y: {
                 min: 0,
                 grid: { show: true },
-                tick: { spacing: 50000000 }
+                tick: { spacing: 5000000 }
             },
         }
     }
 }) }}
+</div>
 
-<p>FORMATTING TO BE FIXED</p>
+<div style="flex-basis: 30rem;flex-shrink:1;flex-grow:1;">
+<p>
+    The chart shows funding per month since January 2020.
+</p>
+<p>
+    FORMATTING TO BE FIXED.
+</p>
+</div>
 
+</div>
 
 <h2>Large funds</h2>
 
@@ -77,7 +110,7 @@ funding_clip: 5000000
 <tbody>
 {{ for r of by_programme
     .filter(x => x.Funding >= funding_clip)
-    .toSorted((a, b) => b['Latest Award Date'] - a['Latest Award Date'])
+    .toSorted((a, b) => b['Funding'] - a['Funding'])
 }}
     <tr>
         <td>{{ r['Funding Org:Name'] }}</td>
