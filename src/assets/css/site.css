@@ -162,3 +162,7 @@ details { border-radius: 4px; padding: 0.5em 0.5em 0; position: absolute; right:
 details summary { font-weight: bold; margin: -0.5em -0.5em 0; padding: 0.5em; }
 details[open] { padding: 0.5em; }
 details[open] summary { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: inherit; margin-bottom: 0.5em; }
+
+.oi-legend-inner .oi-legend-items { display: flex; flex-direction: row-reverse; gap: 0.5rem; justify-content: center; }
+.oi-legend-inner .oi-legend-item.oi-series-on { outline: 0; }
+.oi-top .oi-legend { margin-bottom: 0.5rem; }
