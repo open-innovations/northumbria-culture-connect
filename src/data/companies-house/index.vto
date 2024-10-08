@@ -7,12 +7,19 @@ tags:
 ---
 
 <p>
-    This data has been extracted from the companies house dataset by using a short list of SIC codes.
+    This data has been extracted from the companies house dataset by using a short list of SIC codes seeded by analysis of the <a href="/tags/funding">funding data</a>.
 </p>
 
 <p>
-    The list below shows how many companies were matched for each shortlist code. Note that companies may be included twice.
+    The list below shows how many companies were matched for each shortlist code. Note that companies may be included more than once in the counts below, as they could be coded with more than one SIC code.
 </p>
+
+<ul class="grid centred">
+    <li class="block">
+    <p>Total organisations</p>
+    <p class="bang">{{ list.length }}</p>
+    </li>
+</ul>
 
 <ul class="grid centred">
     {{ for c of sic_codes }}

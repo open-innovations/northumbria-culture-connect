@@ -9,10 +9,6 @@
       "count": 93
     },
     {
-      "sic_code": "93290 - Other amusement and recreation activities n.e.c.",
-      "count": 76
-    },
-    {
       "sic_code": "59112 - Video production activities",
       "count": 72
     },
@@ -34,7 +30,7 @@
     },
     {
       "sic_code": "59200 - Sound recording and music publishing activities",
-      "count": 19
+      "count": 17
     },
     {
       "sic_code": "85600 - Educational support services",
@@ -42,15 +38,15 @@
     },
     {
       "sic_code": "85590 - Other education n.e.c.",
-      "count": 14
+      "count": 13
     },
     {
       "sic_code": "74202 - Other specialist photography",
-      "count": 11
+      "count": 10
     },
     {
       "sic_code": "74100 - specialised design activities",
-      "count": 10
+      "count": 9
     },
     {
       "sic_code": "59113 - Television programme production activities",
@@ -62,11 +58,7 @@
     },
     {
       "sic_code": "70229 - Management consultancy activities other than financial management",
-      "count": 7
-    },
-    {
-      "sic_code": "85510 - Sports and recreation education",
-      "count": 7
+      "count": 6
     },
     {
       "sic_code": "91011 - Library activities",
@@ -77,11 +69,7 @@
       "count": 6
     },
     {
-      "sic_code": "91030 - Operation of historical sites and buildings and similar visitor attractions",
-      "count": 5
-    },
-    {
-      "sic_code": "58110 - Book publishing",
+      "sic_code": "88990 - Other social work activities without accommodation n.e.c.",
       "count": 5
     },
     {
@@ -89,11 +77,15 @@
       "count": 5
     },
     {
-      "sic_code": "96090 - Other service activities n.e.c.",
+      "sic_code": "58110 - Book publishing",
       "count": 5
     },
     {
-      "sic_code": "88990 - Other social work activities without accommodation n.e.c.",
+      "sic_code": "85510 - Sports and recreation education",
+      "count": 5
+    },
+    {
+      "sic_code": "91030 - Operation of historical sites and buildings and similar visitor attractions",
       "count": 5
     },
     {
@@ -109,19 +101,7 @@
       "count": 4
     },
     {
-      "sic_code": "73110 - Advertising agencies",
-      "count": 3
-    },
-    {
-      "sic_code": "62020 - Information technology consultancy activities",
-      "count": 3
-    },
-    {
-      "sic_code": "62011 - Ready-made interactive leisure and entertainment software development",
-      "count": 3
-    },
-    {
-      "sic_code": "62012 - Business and domestic software development",
+      "sic_code": "96090 - Other service activities n.e.c.",
       "count": 3
     },
     {
@@ -129,23 +109,11 @@
       "count": 3
     },
     {
-      "sic_code": "96020 - Hairdressing and other beauty treatment",
+      "sic_code": "93290 - Other amusement and recreation activities n.e.c.",
       "count": 3
     },
     {
-      "sic_code": "93110 - Operation of sports facilities",
-      "count": 3
-    },
-    {
-      "sic_code": "86900 - Other human health activities",
-      "count": 3
-    },
-    {
-      "sic_code": "62090 - Other information technology service activities",
-      "count": 3
-    },
-    {
-      "sic_code": "73120 - Media representation services",
+      "sic_code": "62011 - Ready-made interactive leisure and entertainment software development",
       "count": 3
     },
     {
@@ -153,11 +121,15 @@
       "count": 3
     },
     {
-      "sic_code": "58290 - Other software publishing",
+      "sic_code": "62012 - Business and domestic software development",
       "count": 3
     },
     {
-      "sic_code": "47781 - Retail sale in commercial art galleries",
+      "sic_code": "73120 - Media representation services",
+      "count": 3
+    },
+    {
+      "sic_code": "73110 - Advertising agencies",
       "count": 3
     },
     {
@@ -165,31 +137,35 @@
       "count": 3
     },
     {
+      "sic_code": "62020 - Information technology consultancy activities",
+      "count": 3
+    },
+    {
+      "sic_code": "62090 - Other information technology service activities",
+      "count": 3
+    },
+    {
+      "sic_code": "86900 - Other human health activities",
+      "count": 3
+    },
+    {
+      "sic_code": "58290 - Other software publishing",
+      "count": 3
+    },
+    {
       "sic_code": "56302 - Public houses and bars",
       "count": 3
     },
     {
-      "sic_code": "47630 - Retail sale of music and video recordings in specialised stores",
-      "count": 2
+      "sic_code": "47781 - Retail sale in commercial art galleries",
+      "count": 3
     },
     {
-      "sic_code": "47990 - Other retail sale not in stores, stalls or markets",
-      "count": 2
-    },
-    {
-      "sic_code": "46190 - Agents involved in the sale of a variety of goods",
-      "count": 2
+      "sic_code": "96020 - Hairdressing and other beauty treatment",
+      "count": 3
     },
     {
       "sic_code": "20420 - Manufacture of perfumes and toilet preparations",
-      "count": 2
-    },
-    {
-      "sic_code": "98200 - Undifferentiated service-producing activities of private households for own use",
-      "count": 2
-    },
-    {
-      "sic_code": "82990 - Other business support service activities n.e.c.",
       "count": 2
     },
     {
@@ -205,7 +181,15 @@
       "count": 2
     },
     {
-      "sic_code": "88910 - Child day-care activities",
+      "sic_code": "98200 - Undifferentiated service-producing activities of private households for own use",
+      "count": 2
+    },
+    {
+      "sic_code": "82990 - Other business support service activities n.e.c.",
+      "count": 2
+    },
+    {
+      "sic_code": "93110 - Operation of sports facilities",
       "count": 2
     },
     {
@@ -213,11 +197,11 @@
       "count": 2
     },
     {
-      "sic_code": "93130 - Fitness facilities",
+      "sic_code": "47990 - Other retail sale not in stores, stalls or markets",
       "count": 2
     },
     {
-      "sic_code": "47890 - Retail sale via stalls and markets of other goods",
+      "sic_code": "59132 - Video distribution activities",
       "count": 2
     },
     {
@@ -225,12 +209,72 @@
       "count": 2
     },
     {
+      "sic_code": "47890 - Retail sale via stalls and markets of other goods",
+      "count": 2
+    },
+    {
+      "sic_code": "46190 - Agents involved in the sale of a variety of goods",
+      "count": 2
+    },
+    {
+      "sic_code": "47630 - Retail sale of music and video recordings in specialised stores",
+      "count": 2
+    },
+    {
       "sic_code": "58190 - Other publishing activities",
       "count": 2
     },
     {
-      "sic_code": "59132 - Video distribution activities",
-      "count": 2
+      "sic_code": "47190 - Other retail sale in non-specialised stores",
+      "count": 1
+    },
+    {
+      "sic_code": "32990 - Other manufacturing n.e.c.",
+      "count": 1
+    },
+    {
+      "sic_code": "02100 - Silviculture and other forestry activities",
+      "count": 1
+    },
+    {
+      "sic_code": "18129 - Printing n.e.c.",
+      "count": 1
+    },
+    {
+      "sic_code": "16290 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials",
+      "count": 1
+    },
+    {
+      "sic_code": "20411 - Manufacture of soap and detergents",
+      "count": 1
+    },
+    {
+      "sic_code": "23410 - Manufacture of ceramic household and ornamental articles",
+      "count": 1
+    },
+    {
+      "sic_code": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
+      "count": 1
+    },
+    {
+      "sic_code": "32120 - Manufacture of jewellery and related articles",
+      "count": 1
+    },
+    {
+      "sic_code": "01300 - Plant propagation",
+      "count": 1
+    },
+    {
+      "sic_code": "46900 - Non-specialised wholesale trade",
+      "count": 1
+    },
+    {
+      "sic_code": "46450 - Wholesale of perfume and cosmetics",
+      "count": 1
+    },
+    {
+      "sic_code": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
+      "count": 1
     },
     {
       "sic_code": "47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
@@ -249,43 +293,27 @@
       "count": 1
     },
     {
-      "sic_code": "20411 - Manufacture of soap and detergents",
+      "sic_code": "59131 - Motion picture distribution activities",
       "count": 1
     },
     {
-      "sic_code": "18129 - Printing n.e.c.",
+      "sic_code": "56210 - Event catering activities",
       "count": 1
     },
     {
-      "sic_code": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
+      "sic_code": "58142 - Publishing of  consumer and business journals and periodicals",
       "count": 1
     },
     {
-      "sic_code": "23410 - Manufacture of ceramic household and ornamental articles",
+      "sic_code": "56101 - Licensed restaurants",
       "count": 1
     },
     {
-      "sic_code": "02100 - Silviculture and other forestry activities",
+      "sic_code": "56290 - Other food services",
       "count": 1
     },
     {
-      "sic_code": "16290 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials",
-      "count": 1
-    },
-    {
-      "sic_code": "01300 - Plant propagation",
-      "count": 1
-    },
-    {
-      "sic_code": "01490 - Raising of other animals",
-      "count": 1
-    },
-    {
-      "sic_code": "32120 - Manufacture of jewellery and related articles",
-      "count": 1
-    },
-    {
-      "sic_code": "32990 - Other manufacturing n.e.c.",
+      "sic_code": "58210 - Publishing of computer games",
       "count": 1
     },
     {
@@ -297,19 +325,11 @@
       "count": 1
     },
     {
-      "sic_code": "56101 - Licensed restaurants",
+      "sic_code": "71121 - Engineering design activities for industrial process and production",
       "count": 1
     },
     {
-      "sic_code": "56102 - Unlicensed restaurants and cafes",
-      "count": 1
-    },
-    {
-      "sic_code": "56210 - Event catering activities",
-      "count": 1
-    },
-    {
-      "sic_code": "56290 - Other food services",
+      "sic_code": "74201 - Portrait photographic activities",
       "count": 1
     },
     {
@@ -317,51 +337,15 @@
       "count": 1
     },
     {
-      "sic_code": "59131 - Motion picture distribution activities",
-      "count": 1
-    },
-    {
-      "sic_code": "58142 - Publishing of  consumer and business journals and periodicals",
-      "count": 1
-    },
-    {
-      "sic_code": "58210 - Publishing of computer games",
-      "count": 1
-    },
-    {
-      "sic_code": "47190 - Other retail sale in non-specialised stores",
-      "count": 1
-    },
-    {
-      "sic_code": "46900 - Non-specialised wholesale trade",
-      "count": 1
-    },
-    {
-      "sic_code": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
-      "count": 1
-    },
-    {
-      "sic_code": "46450 - Wholesale of perfume and cosmetics",
-      "count": 1
-    },
-    {
-      "sic_code": "82302 - Activities of conference organisers",
-      "count": 1
-    },
-    {
-      "sic_code": "74901 - Environmental consulting activities",
-      "count": 1
-    },
-    {
-      "sic_code": "63120 - Web portals",
-      "count": 1
-    },
-    {
-      "sic_code": "68209 - Other letting and operating of own or leased real estate",
+      "sic_code": "61300 - Satellite telecommunications activities",
       "count": 1
     },
     {
       "sic_code": "68100 - Buying and selling of own real estate",
+      "count": 1
+    },
+    {
+      "sic_code": "63120 - Web portals",
       "count": 1
     },
     {
@@ -373,11 +357,7 @@
       "count": 1
     },
     {
-      "sic_code": "71121 - Engineering design activities for industrial process and production",
-      "count": 1
-    },
-    {
-      "sic_code": "61300 - Satellite telecommunications activities",
+      "sic_code": "82302 - Activities of conference organisers",
       "count": 1
     },
     {
@@ -393,15 +373,11 @@
       "count": 1
     },
     {
-      "sic_code": "78200 - Temporary employment agency activities",
-      "count": 1
-    },
-    {
       "sic_code": "79110 - Travel agency activities",
       "count": 1
     },
     {
-      "sic_code": "78109 - Other activities of employment placement agencies",
+      "sic_code": "78200 - Temporary employment agency activities",
       "count": 1
     },
     {
@@ -409,15 +385,7 @@
       "count": 1
     },
     {
-      "sic_code": "74201 - Portrait photographic activities",
-      "count": 1
-    },
-    {
-      "sic_code": "85320 - Technical and vocational secondary education",
-      "count": 1
-    },
-    {
-      "sic_code": "85200 - Primary education",
+      "sic_code": "74901 - Environmental consulting activities",
       "count": 1
     },
     {
@@ -425,11 +393,23 @@
       "count": 1
     },
     {
+      "sic_code": "88910 - Child day-care activities",
+      "count": 1
+    },
+    {
+      "sic_code": "85200 - Primary education",
+      "count": 1
+    },
+    {
+      "sic_code": "85320 - Technical and vocational secondary education",
+      "count": 1
+    },
+    {
       "sic_code": "85410 - Post-secondary non-tertiary education",
       "count": 1
     },
     {
-      "sic_code": "93199 - Other sports activities",
+      "sic_code": "93130 - Fitness facilities",
       "count": 1
     },
     {
@@ -478,13 +458,13 @@
       "weight": 7
     },
     {
-      "src": "85590 - Other education n.e.c.",
-      "dst": "85600 - Educational support services",
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "90030 - Artistic creation",
       "weight": 6
     },
     {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "90030 - Artistic creation",
+      "src": "85590 - Other education n.e.c.",
+      "dst": "85600 - Educational support services",
       "weight": 6
     },
     {
@@ -499,11 +479,6 @@
     },
     {
       "src": "59112 - Video production activities",
-      "dst": "59113 - Television programme production activities",
-      "weight": 5
-    },
-    {
-      "src": "59112 - Video production activities",
       "dst": "59200 - Sound recording and music publishing activities",
       "weight": 5
     },
@@ -511,6 +486,31 @@
       "src": "90020 - Support activities to performing arts",
       "dst": "90040 - Operation of arts facilities",
       "weight": 5
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "59113 - Television programme production activities",
+      "weight": 5
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "59113 - Television programme production activities",
+      "weight": 4
+    },
+    {
+      "src": "91012 - Archives activities",
+      "dst": "91020 - Museums activities",
+      "weight": 4
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "59120 - Motion picture, video and television programme post-production activities",
+      "weight": 4
+    },
+    {
+      "src": "85510 - Sports and recreation education",
+      "dst": "85520 - Cultural education",
+      "weight": 4
     },
     {
       "src": "59200 - Sound recording and music publishing activities",
@@ -523,53 +523,13 @@
       "weight": 4
     },
     {
-      "src": "91012 - Archives activities",
-      "dst": "91020 - Museums activities",
-      "weight": 4
-    },
-    {
-      "src": "59111 - Motion picture production activities",
-      "dst": "59113 - Television programme production activities",
-      "weight": 4
-    },
-    {
-      "src": "85510 - Sports and recreation education",
-      "dst": "85520 - Cultural education",
-      "weight": 4
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "59120 - Motion picture, video and television programme post-production activities",
-      "weight": 4
-    },
-    {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 3
-    },
-    {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 3
-    },
-    {
       "src": "47781 - Retail sale in commercial art galleries",
       "dst": "90030 - Artistic creation",
       "weight": 3
     },
     {
       "src": "85520 - Cultural education",
-      "dst": "96040 - Physical well-being activities",
-      "weight": 3
-    },
-    {
-      "src": "85520 - Cultural education",
-      "dst": "88990 - Other social work activities without accommodation n.e.c.",
-      "weight": 3
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "74209 - Photographic activities not elsewhere classified",
+      "dst": "90010 - Performing arts",
       "weight": 3
     },
     {
@@ -578,18 +538,23 @@
       "weight": 3
     },
     {
+      "src": "85520 - Cultural education",
+      "dst": "96040 - Physical well-being activities",
+      "weight": 3
+    },
+    {
       "src": "90030 - Artistic creation",
       "dst": "90040 - Operation of arts facilities",
       "weight": 3
     },
     {
-      "src": "85510 - Sports and recreation education",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "90020 - Support activities to performing arts",
       "weight": 3
     },
     {
-      "src": "85520 - Cultural education",
-      "dst": "90010 - Performing arts",
+      "src": "59112 - Video production activities",
+      "dst": "74209 - Photographic activities not elsewhere classified",
       "weight": 3
     },
     {
@@ -598,138 +563,13 @@
       "weight": 3
     },
     {
-      "src": "59112 - Video production activities",
-      "dst": "59132 - Video distribution activities",
-      "weight": 2
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "73110 - Advertising agencies",
-      "weight": 2
-    },
-    {
       "src": "85520 - Cultural education",
-      "dst": "96090 - Other service activities n.e.c.",
-      "weight": 2
+      "dst": "88990 - Other social work activities without accommodation n.e.c.",
+      "weight": 3
     },
     {
       "src": "62090 - Other information technology service activities",
       "dst": "90030 - Artistic creation",
-      "weight": 2
-    },
-    {
-      "src": "85510 - Sports and recreation education",
-      "dst": "85590 - Other education n.e.c.",
-      "weight": 2
-    },
-    {
-      "src": "20420 - Manufacture of perfumes and toilet preparations",
-      "dst": "90030 - Artistic creation",
-      "weight": 2
-    },
-    {
-      "src": "93290 - Other amusement and recreation activities n.e.c.",
-      "dst": "96090 - Other service activities n.e.c.",
-      "weight": 2
-    },
-    {
-      "src": "73120 - Media representation services",
-      "dst": "74202 - Other specialist photography",
-      "weight": 2
-    },
-    {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "85520 - Cultural education",
-      "weight": 2
-    },
-    {
-      "src": "58190 - Other publishing activities",
-      "dst": "59112 - Video production activities",
-      "weight": 2
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "70229 - Management consultancy activities other than financial management",
-      "weight": 2
-    },
-    {
-      "src": "85600 - Educational support services",
-      "dst": "90010 - Performing arts",
-      "weight": 2
-    },
-    {
-      "src": "47890 - Retail sale via stalls and markets of other goods",
-      "dst": "90030 - Artistic creation",
-      "weight": 2
-    },
-    {
-      "src": "58110 - Book publishing",
-      "dst": "59112 - Video production activities",
-      "weight": 2
-    },
-    {
-      "src": "62012 - Business and domestic software development",
-      "dst": "90030 - Artistic creation",
-      "weight": 2
-    },
-    {
-      "src": "90030 - Artistic creation",
-      "dst": "93120 - Activities of sport clubs",
-      "weight": 2
-    },
-    {
-      "src": "90010 - Performing arts",
-      "dst": "93120 - Activities of sport clubs",
-      "weight": 2
-    },
-    {
-      "src": "90030 - Artistic creation",
-      "dst": "94990 - Activities of other membership organizations n.e.c.",
-      "weight": 2
-    },
-    {
-      "src": "85510 - Sports and recreation education",
-      "dst": "88910 - Child day-care activities",
-      "weight": 2
-    },
-    {
-      "src": "70229 - Management consultancy activities other than financial management",
-      "dst": "90030 - Artistic creation",
-      "weight": 2
-    },
-    {
-      "src": "90030 - Artistic creation",
-      "dst": "96020 - Hairdressing and other beauty treatment",
-      "weight": 2
-    },
-    {
-      "src": "47990 - Other retail sale not in stores, stalls or markets",
-      "dst": "90030 - Artistic creation",
-      "weight": 2
-    },
-    {
-      "src": "70210 - Public relations and communications activities",
-      "dst": "70229 - Management consultancy activities other than financial management",
-      "weight": 2
-    },
-    {
-      "src": "56302 - Public houses and bars",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 2
-    },
-    {
-      "src": "56302 - Public houses and bars",
-      "dst": "90010 - Performing arts",
-      "weight": 2
-    },
-    {
-      "src": "59111 - Motion picture production activities",
-      "dst": "74202 - Other specialist photography",
-      "weight": 2
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "70210 - Public relations and communications activities",
       "weight": 2
     },
     {
@@ -738,13 +578,28 @@
       "weight": 2
     },
     {
+      "src": "58190 - Other publishing activities",
+      "dst": "59112 - Video production activities",
+      "weight": 2
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "59112 - Video production activities",
+      "weight": 2
+    },
+    {
       "src": "59112 - Video production activities",
       "dst": "60100 - Radio broadcasting",
       "weight": 2
     },
     {
-      "src": "85520 - Cultural education",
+      "src": "47890 - Retail sale via stalls and markets of other goods",
       "dst": "90030 - Artistic creation",
+      "weight": 2
+    },
+    {
+      "src": "85510 - Sports and recreation education",
+      "dst": "85590 - Other education n.e.c.",
       "weight": 2
     },
     {
@@ -753,18 +608,33 @@
       "weight": 2
     },
     {
-      "src": "90020 - Support activities to performing arts",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "src": "59112 - Video production activities",
+      "dst": "73110 - Advertising agencies",
+      "weight": 2
+    },
+    {
+      "src": "73120 - Media representation services",
+      "dst": "74202 - Other specialist photography",
       "weight": 2
     },
     {
       "src": "59112 - Video production activities",
-      "dst": "63910 - News agency activities",
+      "dst": "59132 - Video distribution activities",
       "weight": 2
     },
     {
-      "src": "88990 - Other social work activities without accommodation n.e.c.",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "src": "70210 - Public relations and communications activities",
+      "dst": "70229 - Management consultancy activities other than financial management",
+      "weight": 2
+    },
+    {
+      "src": "62012 - Business and domestic software development",
+      "dst": "90030 - Artistic creation",
+      "weight": 2
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "96090 - Other service activities n.e.c.",
       "weight": 2
     },
     {
@@ -773,173 +643,108 @@
       "weight": 2
     },
     {
+      "src": "88990 - Other social work activities without accommodation n.e.c.",
+      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "weight": 2
+    },
+    {
+      "src": "90020 - Support activities to performing arts",
+      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "weight": 2
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "70210 - Public relations and communications activities",
+      "weight": 2
+    },
+    {
+      "src": "20420 - Manufacture of perfumes and toilet preparations",
+      "dst": "90030 - Artistic creation",
+      "weight": 2
+    },
+    {
       "src": "74100 - specialised design activities",
       "dst": "74202 - Other specialist photography",
       "weight": 2
     },
     {
-      "src": "74909 - Other professional, scientific and technical activities n.e.c.",
-      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
-      "weight": 1
+      "src": "90030 - Artistic creation",
+      "dst": "94990 - Activities of other membership organizations n.e.c.",
+      "weight": 2
     },
     {
-      "src": "74909 - Other professional, scientific and technical activities n.e.c.",
-      "dst": "85590 - Other education n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "58190 - Other publishing activities",
-      "dst": "59200 - Sound recording and music publishing activities",
-      "weight": 1
-    },
-    {
-      "src": "58190 - Other publishing activities",
-      "dst": "70229 - Management consultancy activities other than financial management",
-      "weight": 1
+      "src": "90030 - Artistic creation",
+      "dst": "96020 - Hairdressing and other beauty treatment",
+      "weight": 2
     },
     {
       "src": "59111 - Motion picture production activities",
-      "dst": "59140 - Motion picture projection activities",
-      "weight": 1
-    },
-    {
-      "src": "32990 - Other manufacturing n.e.c.",
-      "dst": "59200 - Sound recording and music publishing activities",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "74909 - Other professional, scientific and technical activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "20411 - Manufacture of soap and detergents",
-      "dst": "59113 - Television programme production activities",
-      "weight": 1
-    },
-    {
-      "src": "47910 - Retail sale via mail order houses or via Internet",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "47910 - Retail sale via mail order houses or via Internet",
-      "dst": "82990 - Other business support service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "47789 - Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)",
-      "dst": "91020 - Museums activities",
-      "weight": 1
-    },
-    {
-      "src": "47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
-      "dst": "47890 - Retail sale via stalls and markets of other goods",
-      "weight": 1
-    },
-    {
-      "src": "32990 - Other manufacturing n.e.c.",
-      "dst": "90010 - Performing arts",
-      "weight": 1
-    },
-    {
-      "src": "46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods",
-      "dst": "59200 - Sound recording and music publishing activities",
-      "weight": 1
-    },
-    {
-      "src": "47890 - Retail sale via stalls and markets of other goods",
-      "dst": "62090 - Other information technology service activities",
-      "weight": 1
-    },
-    {
-      "src": "47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
-      "dst": "62090 - Other information technology service activities",
-      "weight": 1
-    },
-    {
-      "src": "47650 - Retail sale of games and toys in specialised stores",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "47650 - Retail sale of games and toys in specialised stores",
-      "dst": "47990 - Other retail sale not in stores, stalls or markets",
-      "weight": 1
-    },
-    {
-      "src": "47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "59140 - Motion picture projection activities",
-      "dst": "91012 - Archives activities",
-      "weight": 1
-    },
-    {
-      "src": "56302 - Public houses and bars",
-      "dst": "94990 - Activities of other membership organizations n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "56302 - Public houses and bars",
-      "dst": "90040 - Operation of arts facilities",
-      "weight": 1
-    },
-    {
-      "src": "60100 - Radio broadcasting",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "60100 - Radio broadcasting",
-      "dst": "70229 - Management consultancy activities other than financial management",
-      "weight": 1
-    },
-    {
-      "src": "60100 - Radio broadcasting",
-      "dst": "70210 - Public relations and communications activities",
-      "weight": 1
+      "dst": "74202 - Other specialist photography",
+      "weight": 2
     },
     {
       "src": "59200 - Sound recording and music publishing activities",
-      "dst": "60100 - Radio broadcasting",
-      "weight": 1
+      "dst": "85520 - Cultural education",
+      "weight": 2
     },
     {
-      "src": "58110 - Book publishing",
-      "dst": "60100 - Radio broadcasting",
-      "weight": 1
+      "src": "90010 - Performing arts",
+      "dst": "93120 - Activities of sport clubs",
+      "weight": 2
     },
     {
-      "src": "59111 - Motion picture production activities",
-      "dst": "74909 - Other professional, scientific and technical activities n.e.c.",
-      "weight": 1
+      "src": "90030 - Artistic creation",
+      "dst": "93120 - Activities of sport clubs",
+      "weight": 2
     },
     {
-      "src": "63990 - Other information service activities n.e.c.",
-      "dst": "94990 - Activities of other membership organizations n.e.c.",
-      "weight": 1
+      "src": "47990 - Other retail sale not in stores, stalls or markets",
+      "dst": "90030 - Artistic creation",
+      "weight": 2
     },
     {
-      "src": "63990 - Other information service activities n.e.c.",
+      "src": "59112 - Video production activities",
+      "dst": "70229 - Management consultancy activities other than financial management",
+      "weight": 2
+    },
+    {
+      "src": "56302 - Public houses and bars",
+      "dst": "90010 - Performing arts",
+      "weight": 2
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "90030 - Artistic creation",
+      "weight": 2
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "63910 - News agency activities",
+      "weight": 2
+    },
+    {
+      "src": "56302 - Public houses and bars",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 2
+    },
+    {
+      "src": "70229 - Management consultancy activities other than financial management",
+      "dst": "90030 - Artistic creation",
+      "weight": 2
+    },
+    {
+      "src": "85600 - Educational support services",
+      "dst": "90010 - Performing arts",
+      "weight": 2
+    },
+    {
+      "src": "46450 - Wholesale of perfume and cosmetics",
       "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
-      "src": "63990 - Other information service activities n.e.c.",
-      "dst": "74209 - Photographic activities not elsewhere classified",
-      "weight": 1
-    },
-    {
-      "src": "59113 - Television programme production activities",
-      "dst": "63990 - Other information service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "63990 - Other information service activities n.e.c.",
+      "src": "74909 - Other professional, scientific and technical activities n.e.c.",
+      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
       "weight": 1
     },
     {
@@ -948,8 +753,23 @@
       "weight": 1
     },
     {
-      "src": "90020 - Support activities to performing arts",
-      "dst": "93130 - Fitness facilities",
+      "src": "23410 - Manufacture of ceramic household and ornamental articles",
+      "dst": "74100 - specialised design activities",
+      "weight": 1
+    },
+    {
+      "src": "82990 - Other business support service activities n.e.c.",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "23410 - Manufacture of ceramic household and ornamental articles",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
+      "dst": "58110 - Book publishing",
       "weight": 1
     },
     {
@@ -958,43 +778,18 @@
       "weight": 1
     },
     {
-      "src": "90020 - Support activities to performing arts",
-      "dst": "98200 - Undifferentiated service-producing activities of private households for own use",
+      "src": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
+      "dst": "59112 - Video production activities",
       "weight": 1
     },
     {
-      "src": "90010 - Performing arts",
-      "dst": "98200 - Undifferentiated service-producing activities of private households for own use",
-      "weight": 1
-    },
-    {
-      "src": "20420 - Manufacture of perfumes and toilet preparations",
-      "dst": "47990 - Other retail sale not in stores, stalls or markets",
-      "weight": 1
-    },
-    {
-      "src": "20420 - Manufacture of perfumes and toilet preparations",
-      "dst": "46190 - Agents involved in the sale of a variety of goods",
+      "src": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
+      "dst": "60100 - Radio broadcasting",
       "weight": 1
     },
     {
       "src": "46190 - Agents involved in the sale of a variety of goods",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "47890 - Retail sale via stalls and markets of other goods",
-      "dst": "47990 - Other retail sale not in stores, stalls or markets",
-      "weight": 1
-    },
-    {
-      "src": "20420 - Manufacture of perfumes and toilet preparations",
-      "dst": "47890 - Retail sale via stalls and markets of other goods",
-      "weight": 1
-    },
-    {
-      "src": "93130 - Fitness facilities",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "dst": "46450 - Wholesale of perfume and cosmetics",
       "weight": 1
     },
     {
@@ -1003,293 +798,8 @@
       "weight": 1
     },
     {
-      "src": "88910 - Child day-care activities",
-      "dst": "93130 - Fitness facilities",
-      "weight": 1
-    },
-    {
-      "src": "86900 - Other human health activities",
-      "dst": "93130 - Fitness facilities",
-      "weight": 1
-    },
-    {
-      "src": "85510 - Sports and recreation education",
-      "dst": "93130 - Fitness facilities",
-      "weight": 1
-    },
-    {
-      "src": "88910 - Child day-care activities",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "88910 - Child day-care activities",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "82990 - Other business support service activities n.e.c.",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "71111 - Architectural activities",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "71112 - Urban planning and landscape architectural activities",
-      "weight": 1
-    },
-    {
-      "src": "71112 - Urban planning and landscape architectural activities",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "71112 - Urban planning and landscape architectural activities",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "59111 - Motion picture production activities",
-      "dst": "71121 - Engineering design activities for industrial process and production",
-      "weight": 1
-    },
-    {
-      "src": "71121 - Engineering design activities for industrial process and production",
-      "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "61300 - Satellite telecommunications activities",
-      "weight": 1
-    },
-    {
-      "src": "61300 - Satellite telecommunications activities",
-      "dst": "62090 - Other information technology service activities",
-      "weight": 1
-    },
-    {
-      "src": "16290 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "82301 - Activities of exhibition and fair organisers",
-      "dst": "82302 - Activities of conference organisers",
-      "weight": 1
-    },
-    {
-      "src": "78109 - Other activities of employment placement agencies",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "58142 - Publishing of  consumer and business journals and periodicals",
-      "dst": "73110 - Advertising agencies",
-      "weight": 1
-    },
-    {
-      "src": "58210 - Publishing of computer games",
-      "dst": "59112 - Video production activities",
-      "weight": 1
-    },
-    {
-      "src": "47190 - Other retail sale in non-specialised stores",
-      "dst": "47910 - Retail sale via mail order houses or via Internet",
-      "weight": 1
-    },
-    {
-      "src": "47190 - Other retail sale in non-specialised stores",
-      "dst": "82990 - Other business support service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "47190 - Other retail sale in non-specialised stores",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "46900 - Non-specialised wholesale trade",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "74100 - specialised design activities",
-      "dst": "82301 - Activities of exhibition and fair organisers",
-      "weight": 1
-    },
-    {
-      "src": "79901 - Activities of tourist guides",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "79901 - Activities of tourist guides",
-      "dst": "85600 - Educational support services",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "79120 - Tour operator activities",
-      "weight": 1
-    },
-    {
-      "src": "85320 - Technical and vocational secondary education",
-      "dst": "90040 - Operation of arts facilities",
-      "weight": 1
-    },
-    {
-      "src": "85200 - Primary education",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "86220 - Specialists medical practice activities",
-      "weight": 1
-    },
-    {
-      "src": "86220 - Specialists medical practice activities",
-      "dst": "90010 - Performing arts",
-      "weight": 1
-    },
-    {
-      "src": "86220 - Specialists medical practice activities",
-      "dst": "96090 - Other service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "68100 - Buying and selling of own real estate",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "93199 - Other sports activities",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "85520 - Cultural education",
-      "dst": "94120 - Activities of professional membership organizations",
-      "weight": 1
-    },
-    {
-      "src": "85590 - Other education n.e.c.",
-      "dst": "94120 - Activities of professional membership organizations",
-      "weight": 1
-    },
-    {
-      "src": "90010 - Performing arts",
-      "dst": "98100 - Undifferentiated goods-producing activities of private households for own use",
-      "weight": 1
-    },
-    {
-      "src": "90030 - Artistic creation",
-      "dst": "98100 - Undifferentiated goods-producing activities of private households for own use",
-      "weight": 1
-    },
-    {
-      "src": "59111 - Motion picture production activities",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "68209 - Other letting and operating of own or leased real estate",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "56101 - Licensed restaurants",
-      "dst": "68100 - Buying and selling of own real estate",
-      "weight": 1
-    },
-    {
-      "src": "56290 - Other food services",
-      "dst": "68100 - Buying and selling of own real estate",
-      "weight": 1
-    },
-    {
-      "src": "85410 - Post-secondary non-tertiary education",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "56101 - Licensed restaurants",
-      "dst": "56290 - Other food services",
-      "weight": 1
-    },
-    {
-      "src": "56290 - Other food services",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "60200 - Television programming and broadcasting activities",
-      "weight": 1
-    },
-    {
-      "src": "59111 - Motion picture production activities",
-      "dst": "59131 - Motion picture distribution activities",
-      "weight": 1
-    },
-    {
-      "src": "58142 - Publishing of  consumer and business journals and periodicals",
-      "dst": "59112 - Video production activities",
-      "weight": 1
-    },
-    {
-      "src": "58142 - Publishing of  consumer and business journals and periodicals",
-      "dst": "70210 - Public relations and communications activities",
-      "weight": 1
-    },
-    {
       "src": "20411 - Manufacture of soap and detergents",
       "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "18129 - Printing n.e.c.",
-      "dst": "90040 - Operation of arts facilities",
-      "weight": 1
-    },
-    {
-      "src": "46900 - Non-specialised wholesale trade",
-      "dst": "85600 - Educational support services",
-      "weight": 1
-    },
-    {
-      "src": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
-      "dst": "59112 - Video production activities",
-      "weight": 1
-    },
-    {
-      "src": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
-      "dst": "60100 - Radio broadcasting",
-      "weight": 1
-    },
-    {
-      "src": "23410 - Manufacture of ceramic household and ornamental articles",
-      "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "23410 - Manufacture of ceramic household and ornamental articles",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "02100 - Silviculture and other forestry activities",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "47630 - Retail sale of music and video recordings in specialised stores",
-      "dst": "59112 - Video production activities",
       "weight": 1
     },
     {
@@ -1303,28 +813,18 @@
       "weight": 1
     },
     {
-      "src": "01490 - Raising of other animals",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "src": "46900 - Non-specialised wholesale trade",
+      "dst": "85520 - Cultural education",
       "weight": 1
     },
     {
-      "src": "26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control",
-      "dst": "58110 - Book publishing",
+      "src": "46900 - Non-specialised wholesale trade",
+      "dst": "85600 - Educational support services",
       "weight": 1
     },
     {
-      "src": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
-      "dst": "47630 - Retail sale of music and video recordings in specialised stores",
-      "weight": 1
-    },
-    {
-      "src": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
-      "dst": "59112 - Video production activities",
-      "weight": 1
-    },
-    {
-      "src": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
-      "dst": "59200 - Sound recording and music publishing activities",
+      "src": "90010 - Performing arts",
+      "dst": "98200 - Undifferentiated service-producing activities of private households for own use",
       "weight": 1
     },
     {
@@ -1333,263 +833,153 @@
       "weight": 1
     },
     {
-      "src": "46190 - Agents involved in the sale of a variety of goods",
-      "dst": "46450 - Wholesale of perfume and cosmetics",
+      "src": "90020 - Support activities to performing arts",
+      "dst": "98200 - Undifferentiated service-producing activities of private households for own use",
       "weight": 1
     },
     {
-      "src": "46450 - Wholesale of perfume and cosmetics",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "74100 - specialised design activities",
-      "dst": "82302 - Activities of conference organisers",
-      "weight": 1
-    },
-    {
-      "src": "82302 - Activities of conference organisers",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "56210 - Event catering activities",
-      "dst": "91020 - Museums activities",
-      "weight": 1
-    },
-    {
-      "src": "46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "46180 - Agents specialized in the sale of other particular products",
-      "dst": "47781 - Retail sale in commercial art galleries",
-      "weight": 1
-    },
-    {
-      "src": "46180 - Agents specialized in the sale of other particular products",
-      "dst": "70229 - Management consultancy activities other than financial management",
-      "weight": 1
-    },
-    {
-      "src": "46180 - Agents specialized in the sale of other particular products",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "56101 - Licensed restaurants",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "01490 - Raising of other animals",
-      "dst": "56102 - Unlicensed restaurants and cafes",
-      "weight": 1
-    },
-    {
-      "src": "56102 - Unlicensed restaurants and cafes",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "47789 - Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)",
-      "dst": "56210 - Event catering activities",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "74901 - Environmental consulting activities",
+      "src": "20420 - Manufacture of perfumes and toilet preparations",
+      "dst": "47990 - Other retail sale not in stores, stalls or markets",
       "weight": 1
     },
     {
       "src": "59111 - Motion picture production activities",
+      "dst": "59140 - Motion picture projection activities",
+      "weight": 1
+    },
+    {
+      "src": "59140 - Motion picture projection activities",
       "dst": "91012 - Archives activities",
       "weight": 1
     },
     {
-      "src": "85520 - Cultural education",
-      "dst": "91012 - Archives activities",
+      "src": "20420 - Manufacture of perfumes and toilet preparations",
+      "dst": "47890 - Retail sale via stalls and markets of other goods",
       "weight": 1
     },
     {
-      "src": "90020 - Support activities to performing arts",
-      "dst": "91012 - Archives activities",
+      "src": "47890 - Retail sale via stalls and markets of other goods",
+      "dst": "47990 - Other retail sale not in stores, stalls or markets",
       "weight": 1
     },
     {
-      "src": "90040 - Operation of arts facilities",
-      "dst": "91012 - Archives activities",
+      "src": "47890 - Retail sale via stalls and markets of other goods",
+      "dst": "62090 - Other information technology service activities",
       "weight": 1
     },
     {
-      "src": "85590 - Other education n.e.c.",
-      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "src": "20420 - Manufacture of perfumes and toilet preparations",
+      "dst": "46190 - Agents involved in the sale of a variety of goods",
       "weight": 1
     },
     {
-      "src": "90020 - Support activities to performing arts",
-      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "src": "46190 - Agents involved in the sale of a variety of goods",
+      "dst": "62020 - Information technology consultancy activities",
       "weight": 1
     },
     {
-      "src": "90040 - Operation of arts facilities",
-      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
-      "weight": 1
-    },
-    {
-      "src": "74202 - Other specialist photography",
-      "dst": "74209 - Photographic activities not elsewhere classified",
-      "weight": 1
-    },
-    {
-      "src": "91012 - Archives activities",
-      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
-      "weight": 1
-    },
-    {
-      "src": "58110 - Book publishing",
-      "dst": "59111 - Motion picture production activities",
-      "weight": 1
-    },
-    {
-      "src": "58110 - Book publishing",
-      "dst": "59200 - Sound recording and music publishing activities",
-      "weight": 1
-    },
-    {
-      "src": "59113 - Television programme production activities",
-      "dst": "90010 - Performing arts",
-      "weight": 1
-    },
-    {
-      "src": "59113 - Television programme production activities",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "85520 - Cultural education",
-      "dst": "91020 - Museums activities",
-      "weight": 1
-    },
-    {
-      "src": "90010 - Performing arts",
-      "dst": "91020 - Museums activities",
-      "weight": 1
-    },
-    {
-      "src": "90030 - Artistic creation",
-      "dst": "91020 - Museums activities",
-      "weight": 1
-    },
-    {
-      "src": "91011 - Library activities",
-      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
-      "weight": 1
-    },
-    {
-      "src": "58110 - Book publishing",
-      "dst": "85590 - Other education n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "58110 - Book publishing",
-      "dst": "85600 - Educational support services",
-      "weight": 1
-    },
-    {
-      "src": "58110 - Book publishing",
-      "dst": "90010 - Performing arts",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "96040 - Physical well-being activities",
-      "weight": 1
-    },
-    {
-      "src": "74202 - Other specialist photography",
-      "dst": "96040 - Physical well-being activities",
-      "weight": 1
-    },
-    {
-      "src": "85510 - Sports and recreation education",
-      "dst": "96040 - Physical well-being activities",
-      "weight": 1
-    },
-    {
-      "src": "85590 - Other education n.e.c.",
-      "dst": "96040 - Physical well-being activities",
-      "weight": 1
-    },
-    {
-      "src": "91011 - Library activities",
-      "dst": "91020 - Museums activities",
-      "weight": 1
-    },
-    {
-      "src": "90030 - Artistic creation",
-      "dst": "96040 - Physical well-being activities",
-      "weight": 1
-    },
-    {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "96090 - Other service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "85600 - Educational support services",
-      "dst": "96090 - Other service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "74100 - specialised design activities",
-      "dst": "96090 - Other service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "90010 - Performing arts",
-      "dst": "96090 - Other service activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "74202 - Other specialist photography",
-      "dst": "91011 - Library activities",
-      "weight": 1
-    },
-    {
-      "src": "90010 - Performing arts",
-      "dst": "91011 - Library activities",
-      "weight": 1
-    },
-    {
-      "src": "90030 - Artistic creation",
-      "dst": "91011 - Library activities",
-      "weight": 1
-    },
-    {
-      "src": "90010 - Performing arts",
-      "dst": "96040 - Physical well-being activities",
-      "weight": 1
-    },
-    {
-      "src": "74100 - specialised design activities",
+      "src": "46190 - Agents involved in the sale of a variety of goods",
       "dst": "85520 - Cultural education",
       "weight": 1
     },
     {
-      "src": "74100 - specialised design activities",
-      "dst": "90020 - Support activities to performing arts",
+      "src": "46190 - Agents involved in the sale of a variety of goods",
+      "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
-      "src": "74100 - specialised design activities",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "src": "47630 - Retail sale of music and video recordings in specialised stores",
+      "dst": "59112 - Video production activities",
+      "weight": 1
+    },
+    {
+      "src": "47630 - Retail sale of music and video recordings in specialised stores",
+      "dst": "59200 - Sound recording and music publishing activities",
+      "weight": 1
+    },
+    {
+      "src": "88990 - Other social work activities without accommodation n.e.c.",
+      "dst": "93110 - Operation of sports facilities",
+      "weight": 1
+    },
+    {
+      "src": "58190 - Other publishing activities",
+      "dst": "59200 - Sound recording and music publishing activities",
+      "weight": 1
+    },
+    {
+      "src": "58190 - Other publishing activities",
+      "dst": "70229 - Management consultancy activities other than financial management",
+      "weight": 1
+    },
+    {
+      "src": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "dst": "93110 - Operation of sports facilities",
+      "weight": 1
+    },
+    {
+      "src": "47190 - Other retail sale in non-specialised stores",
+      "dst": "82990 - Other business support service activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "47190 - Other retail sale in non-specialised stores",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "91011 - Library activities",
+      "dst": "93110 - Operation of sports facilities",
+      "weight": 1
+    },
+    {
+      "src": "32990 - Other manufacturing n.e.c.",
+      "dst": "59200 - Sound recording and music publishing activities",
+      "weight": 1
+    },
+    {
+      "src": "32990 - Other manufacturing n.e.c.",
+      "dst": "90010 - Performing arts",
+      "weight": 1
+    },
+    {
+      "src": "02100 - Silviculture and other forestry activities",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "90040 - Operation of arts facilities",
+      "dst": "93110 - Operation of sports facilities",
+      "weight": 1
+    },
+    {
+      "src": "18129 - Printing n.e.c.",
+      "dst": "90040 - Operation of arts facilities",
+      "weight": 1
+    },
+    {
+      "src": "16290 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "20411 - Manufacture of soap and detergents",
+      "dst": "59113 - Television programme production activities",
+      "weight": 1
+    },
+    {
+      "src": "47630 - Retail sale of music and video recordings in specialised stores",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "85510 - Sports and recreation education",
+      "dst": "88910 - Child day-care activities",
+      "weight": 1
+    },
+    {
+      "src": "86220 - Specialists medical practice activities",
+      "dst": "96090 - Other service activities n.e.c.",
       "weight": 1
     },
     {
@@ -1598,13 +988,43 @@
       "weight": 1
     },
     {
-      "src": "46900 - Non-specialised wholesale trade",
-      "dst": "79901 - Activities of tourist guides",
+      "src": "82301 - Activities of exhibition and fair organisers",
+      "dst": "82302 - Activities of conference organisers",
       "weight": 1
     },
     {
-      "src": "59113 - Television programme production activities",
-      "dst": "85600 - Educational support services",
+      "src": "74100 - specialised design activities",
+      "dst": "82301 - Activities of exhibition and fair organisers",
+      "weight": 1
+    },
+    {
+      "src": "82302 - Activities of conference organisers",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "74100 - specialised design activities",
+      "dst": "82302 - Activities of conference organisers",
+      "weight": 1
+    },
+    {
+      "src": "47910 - Retail sale via mail order houses or via Internet",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "71112 - Urban planning and landscape architectural activities",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "71112 - Urban planning and landscape architectural activities",
+      "weight": 1
+    },
+    {
+      "src": "71111 - Architectural activities",
+      "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
@@ -1613,87 +1033,27 @@
       "weight": 1
     },
     {
-      "src": "70229 - Management consultancy activities other than financial management",
-      "dst": "74202 - Other specialist photography",
-      "weight": 1
-    },
-    {
-      "src": "79110 - Travel agency activities",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "62020 - Information technology consultancy activities",
-      "dst": "79110 - Travel agency activities",
-      "weight": 1
-    },
-    {
-      "src": "46190 - Agents involved in the sale of a variety of goods",
-      "dst": "79110 - Travel agency activities",
-      "weight": 1
-    },
-    {
-      "src": "78200 - Temporary employment agency activities",
+      "src": "68100 - Buying and selling of own real estate",
       "dst": "90020 - Support activities to performing arts",
       "weight": 1
     },
     {
-      "src": "78200 - Temporary employment agency activities",
-      "dst": "90010 - Performing arts",
+      "src": "56290 - Other food services",
+      "dst": "68100 - Buying and selling of own real estate",
       "weight": 1
     },
     {
-      "src": "74901 - Environmental consulting activities",
-      "dst": "79120 - Tour operator activities",
+      "src": "56101 - Licensed restaurants",
+      "dst": "68100 - Buying and selling of own real estate",
       "weight": 1
     },
     {
-      "src": "85520 - Cultural education",
-      "dst": "90040 - Operation of arts facilities",
+      "src": "61300 - Satellite telecommunications activities",
+      "dst": "62090 - Other information technology service activities",
       "weight": 1
     },
     {
-      "src": "85520 - Cultural education",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "78109 - Other activities of employment placement agencies",
-      "dst": "85590 - Other education n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "70229 - Management consultancy activities other than financial management",
-      "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "70229 - Management consultancy activities other than financial management",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "70229 - Management consultancy activities other than financial management",
-      "dst": "85590 - Other education n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "70229 - Management consultancy activities other than financial management",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "70229 - Management consultancy activities other than financial management",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "85510 - Sports and recreation education",
-      "dst": "85600 - Educational support services",
-      "weight": 1
-    },
-    {
-      "src": "85510 - Sports and recreation education",
+      "src": "71112 - Urban planning and landscape architectural activities",
       "dst": "90030 - Artistic creation",
       "weight": 1
     },
@@ -1703,38 +1063,68 @@
       "weight": 1
     },
     {
-      "src": "59112 - Video production activities",
-      "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "74990 - Non-trading company",
+      "src": "85600 - Educational support services",
       "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
-      "src": "74990 - Non-trading company",
-      "dst": "94990 - Activities of other membership organizations n.e.c.",
+      "src": "85600 - Educational support services",
+      "dst": "90020 - Support activities to performing arts",
       "weight": 1
     },
     {
-      "src": "59111 - Motion picture production activities",
-      "dst": "74201 - Portrait photographic activities",
+      "src": "85520 - Cultural education",
+      "dst": "90040 - Operation of arts facilities",
       "weight": 1
     },
     {
-      "src": "59112 - Video production activities",
-      "dst": "74201 - Portrait photographic activities",
+      "src": "86220 - Specialists medical practice activities",
+      "dst": "90010 - Performing arts",
       "weight": 1
     },
     {
-      "src": "74201 - Portrait photographic activities",
-      "dst": "74202 - Other specialist photography",
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "86220 - Specialists medical practice activities",
+      "weight": 1
+    },
+    {
+      "src": "90030 - Artistic creation",
+      "dst": "98100 - Undifferentiated goods-producing activities of private households for own use",
+      "weight": 1
+    },
+    {
+      "src": "90010 - Performing arts",
+      "dst": "98100 - Undifferentiated goods-producing activities of private households for own use",
+      "weight": 1
+    },
+    {
+      "src": "88910 - Child day-care activities",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "94120 - Activities of professional membership organizations",
+      "weight": 1
+    },
+    {
+      "src": "90020 - Support activities to performing arts",
+      "dst": "93130 - Fitness facilities",
+      "weight": 1
+    },
+    {
+      "src": "86900 - Other human health activities",
+      "dst": "93130 - Fitness facilities",
+      "weight": 1
+    },
+    {
+      "src": "85410 - Post-secondary non-tertiary education",
+      "dst": "85520 - Cultural education",
       "weight": 1
     },
     {
       "src": "85320 - Technical and vocational secondary education",
-      "dst": "85520 - Cultural education",
+      "dst": "90040 - Operation of arts facilities",
       "weight": 1
     },
     {
@@ -1743,213 +1133,223 @@
       "weight": 1
     },
     {
-      "src": "59111 - Motion picture production activities",
-      "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "47781 - Retail sale in commercial art galleries",
-      "dst": "74990 - Non-trading company",
-      "weight": 1
-    },
-    {
-      "src": "91011 - Library activities",
-      "dst": "93110 - Operation of sports facilities",
-      "weight": 1
-    },
-    {
-      "src": "91030 - Operation of historical sites and buildings and similar visitor attractions",
-      "dst": "93110 - Operation of sports facilities",
-      "weight": 1
-    },
-    {
-      "src": "93110 - Operation of sports facilities",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "85520 - Cultural education",
-      "dst": "86900 - Other human health activities",
-      "weight": 1
-    },
-    {
-      "src": "85590 - Other education n.e.c.",
-      "dst": "86900 - Other human health activities",
-      "weight": 1
-    },
-    {
-      "src": "86900 - Other human health activities",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "86900 - Other human health activities",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "58110 - Book publishing",
+      "src": "85320 - Technical and vocational secondary education",
       "dst": "85520 - Cultural education",
       "weight": 1
     },
     {
-      "src": "62090 - Other information technology service activities",
-      "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "73120 - Media representation services",
-      "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "59113 - Television programme production activities",
-      "dst": "74209 - Photographic activities not elsewhere classified",
-      "weight": 1
-    },
-    {
-      "src": "85600 - Educational support services",
+      "src": "85200 - Primary education",
       "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "62020 - Information technology consultancy activities",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "59111 - Motion picture production activities",
-      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
-      "weight": 1
-    },
-    {
-      "src": "59120 - Motion picture, video and television programme post-production activities",
-      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
-      "weight": 1
-    },
-    {
-      "src": "59112 - Video production activities",
-      "dst": "62090 - Other information technology service activities",
-      "weight": 1
-    },
-    {
-      "src": "47630 - Retail sale of music and video recordings in specialised stores",
-      "dst": "59200 - Sound recording and music publishing activities",
-      "weight": 1
-    },
-    {
-      "src": "47630 - Retail sale of music and video recordings in specialised stores",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "46190 - Agents involved in the sale of a variety of goods",
-      "dst": "62020 - Information technology consultancy activities",
-      "weight": 1
-    },
-    {
-      "src": "46190 - Agents involved in the sale of a variety of goods",
-      "dst": "85520 - Cultural education",
-      "weight": 1
-    },
-    {
-      "src": "85600 - Educational support services",
-      "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
       "src": "85590 - Other education n.e.c.",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "dst": "94120 - Activities of professional membership organizations",
       "weight": 1
     },
     {
-      "src": "74202 - Other specialist photography",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "74202 - Other specialist photography",
-      "dst": "93290 - Other amusement and recreation activities n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "47781 - Retail sale in commercial art galleries",
-      "dst": "94990 - Activities of other membership organizations n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "85520 - Cultural education",
-      "dst": "90020 - Support activities to performing arts",
-      "weight": 1
-    },
-    {
-      "src": "58290 - Other software publishing",
-      "dst": "59111 - Motion picture production activities",
-      "weight": 1
-    },
-    {
-      "src": "58290 - Other software publishing",
+      "src": "58142 - Publishing of  consumer and business journals and periodicals",
       "dst": "59112 - Video production activities",
       "weight": 1
     },
     {
-      "src": "58290 - Other software publishing",
-      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
+      "src": "56210 - Event catering activities",
+      "dst": "91020 - Museums activities",
       "weight": 1
     },
     {
-      "src": "58290 - Other software publishing",
-      "dst": "90030 - Artistic creation",
-      "weight": 1
-    },
-    {
-      "src": "47781 - Retail sale in commercial art galleries",
-      "dst": "58290 - Other software publishing",
-      "weight": 1
-    },
-    {
-      "src": "47781 - Retail sale in commercial art galleries",
-      "dst": "62012 - Business and domestic software development",
-      "weight": 1
-    },
-    {
-      "src": "47781 - Retail sale in commercial art galleries",
-      "dst": "70229 - Management consultancy activities other than financial management",
-      "weight": 1
-    },
-    {
-      "src": "73120 - Media representation services",
-      "dst": "74209 - Photographic activities not elsewhere classified",
-      "weight": 1
-    },
-    {
-      "src": "73110 - Advertising agencies",
-      "dst": "90030 - Artistic creation",
+      "src": "47789 - Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)",
+      "dst": "56210 - Event catering activities",
       "weight": 1
     },
     {
       "src": "59111 - Motion picture production activities",
-      "dst": "62020 - Information technology consultancy activities",
+      "dst": "59131 - Motion picture distribution activities",
+      "weight": 1
+    },
+    {
+      "src": "74909 - Other professional, scientific and technical activities n.e.c.",
+      "dst": "85590 - Other education n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "47910 - Retail sale via mail order houses or via Internet",
+      "dst": "82990 - Other business support service activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "47190 - Other retail sale in non-specialised stores",
+      "dst": "47910 - Retail sale via mail order houses or via Internet",
       "weight": 1
     },
     {
       "src": "59112 - Video production activities",
-      "dst": "62020 - Information technology consultancy activities",
+      "dst": "61300 - Satellite telecommunications activities",
       "weight": 1
     },
     {
-      "src": "59200 - Sound recording and music publishing activities",
-      "dst": "62020 - Information technology consultancy activities",
+      "src": "47650 - Retail sale of games and toys in specialised stores",
+      "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
-      "src": "62020 - Information technology consultancy activities",
-      "dst": "85520 - Cultural education",
+      "src": "47650 - Retail sale of games and toys in specialised stores",
+      "dst": "47990 - Other retail sale not in stores, stalls or markets",
+      "weight": 1
+    },
+    {
+      "src": "47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
+      "dst": "62090 - Other information technology service activities",
+      "weight": 1
+    },
+    {
+      "src": "47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores",
+      "dst": "47890 - Retail sale via stalls and markets of other goods",
+      "weight": 1
+    },
+    {
+      "src": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
+      "dst": "59200 - Sound recording and music publishing activities",
+      "weight": 1
+    },
+    {
+      "src": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
+      "dst": "59112 - Video production activities",
+      "weight": 1
+    },
+    {
+      "src": "46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played",
+      "dst": "47630 - Retail sale of music and video recordings in specialised stores",
+      "weight": 1
+    },
+    {
+      "src": "47789 - Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)",
+      "dst": "91020 - Museums activities",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "60200 - Television programming and broadcasting activities",
+      "weight": 1
+    },
+    {
+      "src": "74201 - Portrait photographic activities",
+      "dst": "74202 - Other specialist photography",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "74201 - Portrait photographic activities",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "74201 - Portrait photographic activities",
+      "weight": 1
+    },
+    {
+      "src": "71121 - Engineering design activities for industrial process and production",
+      "dst": "74100 - specialised design activities",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "71121 - Engineering design activities for industrial process and production",
+      "weight": 1
+    },
+    {
+      "src": "46180 - Agents specialized in the sale of other particular products",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "46180 - Agents specialized in the sale of other particular products",
+      "dst": "70229 - Management consultancy activities other than financial management",
+      "weight": 1
+    },
+    {
+      "src": "58142 - Publishing of  consumer and business journals and periodicals",
+      "dst": "70210 - Public relations and communications activities",
+      "weight": 1
+    },
+    {
+      "src": "46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods",
+      "dst": "59200 - Sound recording and music publishing activities",
+      "weight": 1
+    },
+    {
+      "src": "58210 - Publishing of computer games",
+      "dst": "59112 - Video production activities",
+      "weight": 1
+    },
+    {
+      "src": "56290 - Other food services",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "56101 - Licensed restaurants",
+      "dst": "56290 - Other food services",
+      "weight": 1
+    },
+    {
+      "src": "56101 - Licensed restaurants",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "58142 - Publishing of  consumer and business journals and periodicals",
+      "dst": "73110 - Advertising agencies",
+      "weight": 1
+    },
+    {
+      "src": "46180 - Agents specialized in the sale of other particular products",
+      "dst": "47781 - Retail sale in commercial art galleries",
+      "weight": 1
+    },
+    {
+      "src": "90030 - Artistic creation",
+      "dst": "91011 - Library activities",
+      "weight": 1
+    },
+    {
+      "src": "91011 - Library activities",
+      "dst": "91020 - Museums activities",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "91012 - Archives activities",
+      "weight": 1
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "91012 - Archives activities",
+      "weight": 1
+    },
+    {
+      "src": "90020 - Support activities to performing arts",
+      "dst": "91012 - Archives activities",
+      "weight": 1
+    },
+    {
+      "src": "90040 - Operation of arts facilities",
+      "dst": "91012 - Archives activities",
       "weight": 1
     },
     {
@@ -1963,8 +1363,8 @@
       "weight": 1
     },
     {
-      "src": "62011 - Ready-made interactive leisure and entertainment software development",
-      "dst": "90030 - Artistic creation",
+      "src": "88990 - Other social work activities without accommodation n.e.c.",
+      "dst": "90020 - Support activities to performing arts",
       "weight": 1
     },
     {
@@ -1973,13 +1373,33 @@
       "weight": 1
     },
     {
+      "src": "59112 - Video production activities",
+      "dst": "96040 - Physical well-being activities",
+      "weight": 1
+    },
+    {
+      "src": "74202 - Other specialist photography",
+      "dst": "96040 - Physical well-being activities",
+      "weight": 1
+    },
+    {
+      "src": "85590 - Other education n.e.c.",
+      "dst": "96040 - Physical well-being activities",
+      "weight": 1
+    },
+    {
       "src": "88990 - Other social work activities without accommodation n.e.c.",
       "dst": "96040 - Physical well-being activities",
       "weight": 1
     },
     {
-      "src": "70210 - Public relations and communications activities",
-      "dst": "85520 - Cultural education",
+      "src": "90010 - Performing arts",
+      "dst": "96040 - Physical well-being activities",
+      "weight": 1
+    },
+    {
+      "src": "58290 - Other software publishing",
+      "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
@@ -1989,17 +1409,482 @@
     },
     {
       "src": "70210 - Public relations and communications activities",
-      "dst": "90020 - Support activities to performing arts",
+      "dst": "85520 - Cultural education",
       "weight": 1
     },
     {
-      "src": "70210 - Public relations and communications activities",
+      "src": "91012 - Archives activities",
+      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "weight": 1
+    },
+    {
+      "src": "91011 - Library activities",
+      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "weight": 1
+    },
+    {
+      "src": "90040 - Operation of arts facilities",
+      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "weight": 1
+    },
+    {
+      "src": "90020 - Support activities to performing arts",
+      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "weight": 1
+    },
+    {
+      "src": "85590 - Other education n.e.c.",
+      "dst": "91030 - Operation of historical sites and buildings and similar visitor attractions",
+      "weight": 1
+    },
+    {
+      "src": "90030 - Artistic creation",
+      "dst": "96040 - Physical well-being activities",
+      "weight": 1
+    },
+    {
+      "src": "85510 - Sports and recreation education",
       "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
       "src": "85510 - Sports and recreation education",
-      "dst": "94910 - Activities of religious organizations",
+      "dst": "85600 - Educational support services",
+      "weight": 1
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "90010 - Performing arts",
+      "weight": 1
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "85600 - Educational support services",
+      "weight": 1
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "85590 - Other education n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "59200 - Sound recording and music publishing activities",
+      "weight": 1
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "59111 - Motion picture production activities",
+      "weight": 1
+    },
+    {
+      "src": "85510 - Sports and recreation education",
+      "dst": "96040 - Physical well-being activities",
+      "weight": 1
+    },
+    {
+      "src": "74901 - Environmental consulting activities",
+      "dst": "79120 - Tour operator activities",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "74901 - Environmental consulting activities",
+      "weight": 1
+    },
+    {
+      "src": "74990 - Non-trading company",
+      "dst": "94990 - Activities of other membership organizations n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "74990 - Non-trading company",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "47781 - Retail sale in commercial art galleries",
+      "dst": "74990 - Non-trading company",
+      "weight": 1
+    },
+    {
+      "src": "78200 - Temporary employment agency activities",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "78200 - Temporary employment agency activities",
+      "dst": "90010 - Performing arts",
+      "weight": 1
+    },
+    {
+      "src": "90010 - Performing arts",
+      "dst": "91011 - Library activities",
+      "weight": 1
+    },
+    {
+      "src": "62020 - Information technology consultancy activities",
+      "dst": "79110 - Travel agency activities",
+      "weight": 1
+    },
+    {
+      "src": "46190 - Agents involved in the sale of a variety of goods",
+      "dst": "79110 - Travel agency activities",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "79120 - Tour operator activities",
+      "weight": 1
+    },
+    {
+      "src": "79901 - Activities of tourist guides",
+      "dst": "85600 - Educational support services",
+      "weight": 1
+    },
+    {
+      "src": "79901 - Activities of tourist guides",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "46900 - Non-specialised wholesale trade",
+      "dst": "79901 - Activities of tourist guides",
+      "weight": 1
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "79110 - Travel agency activities",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "74202 - Other specialist photography",
+      "dst": "91011 - Library activities",
+      "weight": 1
+    },
+    {
+      "src": "70229 - Management consultancy activities other than financial management",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "70229 - Management consultancy activities other than financial management",
+      "dst": "85590 - Other education n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "70229 - Management consultancy activities other than financial management",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "70229 - Management consultancy activities other than financial management",
+      "dst": "74202 - Other specialist photography",
+      "weight": 1
+    },
+    {
+      "src": "70229 - Management consultancy activities other than financial management",
+      "dst": "74100 - specialised design activities",
+      "weight": 1
+    },
+    {
+      "src": "90030 - Artistic creation",
+      "dst": "91020 - Museums activities",
+      "weight": 1
+    },
+    {
+      "src": "74202 - Other specialist photography",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "91020 - Museums activities",
+      "weight": 1
+    },
+    {
+      "src": "59113 - Television programme production activities",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "59113 - Television programme production activities",
+      "dst": "90010 - Performing arts",
+      "weight": 1
+    },
+    {
+      "src": "59113 - Television programme production activities",
+      "dst": "85600 - Educational support services",
+      "weight": 1
+    },
+    {
+      "src": "74100 - specialised design activities",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "74100 - specialised design activities",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "74100 - specialised design activities",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "74100 - specialised design activities",
+      "weight": 1
+    },
+    {
+      "src": "90010 - Performing arts",
+      "dst": "91020 - Museums activities",
+      "weight": 1
+    },
+    {
+      "src": "60100 - Radio broadcasting",
+      "dst": "70210 - Public relations and communications activities",
+      "weight": 1
+    },
+    {
+      "src": "60100 - Radio broadcasting",
+      "dst": "70229 - Management consultancy activities other than financial management",
+      "weight": 1
+    },
+    {
+      "src": "60100 - Radio broadcasting",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "62020 - Information technology consultancy activities",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "62020 - Information technology consultancy activities",
+      "weight": 1
+    },
+    {
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "62020 - Information technology consultancy activities",
+      "weight": 1
+    },
+    {
+      "src": "62012 - Business and domestic software development",
+      "dst": "62020 - Information technology consultancy activities",
+      "weight": 1
+    },
+    {
+      "src": "62020 - Information technology consultancy activities",
+      "dst": "85520 - Cultural education",
+      "weight": 1
+    },
+    {
+      "src": "62020 - Information technology consultancy activities",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "62090 - Other information technology service activities",
+      "weight": 1
+    },
+    {
+      "src": "62090 - Other information technology service activities",
+      "dst": "74100 - specialised design activities",
+      "weight": 1
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "86900 - Other human health activities",
+      "weight": 1
+    },
+    {
+      "src": "85590 - Other education n.e.c.",
+      "dst": "86900 - Other human health activities",
+      "weight": 1
+    },
+    {
+      "src": "86900 - Other human health activities",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "86900 - Other human health activities",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "70210 - Public relations and communications activities",
+      "dst": "90020 - Support activities to performing arts",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "74909 - Other professional, scientific and technical activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "74909 - Other professional, scientific and technical activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "63990 - Other information service activities n.e.c.",
+      "dst": "94990 - Activities of other membership organizations n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "63990 - Other information service activities n.e.c.",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "63990 - Other information service activities n.e.c.",
+      "dst": "74209 - Photographic activities not elsewhere classified",
+      "weight": 1
+    },
+    {
+      "src": "59113 - Television programme production activities",
+      "dst": "63990 - Other information service activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "59112 - Video production activities",
+      "dst": "63990 - Other information service activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "58290 - Other software publishing",
+      "dst": "59111 - Motion picture production activities",
+      "weight": 1
+    },
+    {
+      "src": "47781 - Retail sale in commercial art galleries",
+      "dst": "94990 - Activities of other membership organizations n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "47781 - Retail sale in commercial art galleries",
+      "dst": "70229 - Management consultancy activities other than financial management",
+      "weight": 1
+    },
+    {
+      "src": "47781 - Retail sale in commercial art galleries",
+      "dst": "62012 - Business and domestic software development",
+      "weight": 1
+    },
+    {
+      "src": "47781 - Retail sale in commercial art galleries",
+      "dst": "58290 - Other software publishing",
+      "weight": 1
+    },
+    {
+      "src": "56302 - Public houses and bars",
+      "dst": "94990 - Activities of other membership organizations n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "56302 - Public houses and bars",
+      "dst": "90040 - Operation of arts facilities",
+      "weight": 1
+    },
+    {
+      "src": "58290 - Other software publishing",
+      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
+      "weight": 1
+    },
+    {
+      "src": "58290 - Other software publishing",
+      "dst": "59112 - Video production activities",
+      "weight": 1
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "96020 - Hairdressing and other beauty treatment",
+      "weight": 1
+    },
+    {
+      "src": "85510 - Sports and recreation education",
+      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "85520 - Cultural education",
+      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "93290 - Other amusement and recreation activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "90010 - Performing arts",
+      "dst": "94990 - Activities of other membership organizations n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "90010 - Performing arts",
+      "dst": "96090 - Other service activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "85600 - Educational support services",
+      "dst": "96090 - Other service activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "96090 - Other service activities n.e.c.",
+      "weight": 1
+    },
+    {
+      "src": "59200 - Sound recording and music publishing activities",
+      "dst": "60100 - Radio broadcasting",
+      "weight": 1
+    },
+    {
+      "src": "59120 - Motion picture, video and television programme post-production activities",
+      "dst": "74202 - Other specialist photography",
+      "weight": 1
+    },
+    {
+      "src": "59120 - Motion picture, video and television programme post-production activities",
+      "dst": "59200 - Sound recording and music publishing activities",
+      "weight": 1
+    },
+    {
+      "src": "59113 - Television programme production activities",
+      "dst": "59120 - Motion picture, video and television programme post-production activities",
+      "weight": 1
+    },
+    {
+      "src": "59111 - Motion picture production activities",
+      "dst": "59120 - Motion picture, video and television programme post-production activities",
+      "weight": 1
+    },
+    {
+      "src": "94910 - Activities of religious organizations",
+      "dst": "96040 - Physical well-being activities",
       "weight": 1
     },
     {
@@ -2008,12 +1893,62 @@
       "weight": 1
     },
     {
-      "src": "88990 - Other social work activities without accommodation n.e.c.",
-      "dst": "90020 - Support activities to performing arts",
+      "src": "85510 - Sports and recreation education",
+      "dst": "94910 - Activities of religious organizations",
+      "weight": 1
+    },
+    {
+      "src": "70210 - Public relations and communications activities",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "59120 - Motion picture, video and television programme post-production activities",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "58110 - Book publishing",
+      "dst": "60100 - Radio broadcasting",
+      "weight": 1
+    },
+    {
+      "src": "73110 - Advertising agencies",
+      "dst": "90030 - Artistic creation",
+      "weight": 1
+    },
+    {
+      "src": "73110 - Advertising agencies",
+      "dst": "74202 - Other specialist photography",
+      "weight": 1
+    },
+    {
+      "src": "73110 - Advertising agencies",
+      "dst": "74100 - specialised design activities",
+      "weight": 1
+    },
+    {
+      "src": "70210 - Public relations and communications activities",
+      "dst": "73110 - Advertising agencies",
+      "weight": 1
+    },
+    {
+      "src": "59120 - Motion picture, video and television programme post-production activities",
+      "dst": "73110 - Advertising agencies",
+      "weight": 1
+    },
+    {
+      "src": "73120 - Media representation services",
+      "dst": "74209 - Photographic activities not elsewhere classified",
       "weight": 1
     },
     {
       "src": "59111 - Motion picture production activities",
+      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
+      "weight": 1
+    },
+    {
+      "src": "62011 - Ready-made interactive leisure and entertainment software development",
       "dst": "62012 - Business and domestic software development",
       "weight": 1
     },
@@ -2023,83 +1958,38 @@
       "weight": 1
     },
     {
-      "src": "62011 - Ready-made interactive leisure and entertainment software development",
+      "src": "59111 - Motion picture production activities",
       "dst": "62012 - Business and domestic software development",
       "weight": 1
     },
     {
-      "src": "62012 - Business and domestic software development",
-      "dst": "62020 - Information technology consultancy activities",
-      "weight": 1
-    },
-    {
-      "src": "90010 - Performing arts",
-      "dst": "94990 - Activities of other membership organizations n.e.c.",
-      "weight": 1
-    },
-    {
-      "src": "85520 - Cultural education",
-      "dst": "96020 - Hairdressing and other beauty treatment",
-      "weight": 1
-    },
-    {
-      "src": "88990 - Other social work activities without accommodation n.e.c.",
-      "dst": "93110 - Operation of sports facilities",
-      "weight": 1
-    },
-    {
-      "src": "90040 - Operation of arts facilities",
-      "dst": "93110 - Operation of sports facilities",
-      "weight": 1
-    },
-    {
-      "src": "73110 - Advertising agencies",
-      "dst": "74202 - Other specialist photography",
-      "weight": 1
-    },
-    {
-      "src": "59111 - Motion picture production activities",
-      "dst": "59120 - Motion picture, video and television programme post-production activities",
+      "src": "74202 - Other specialist photography",
+      "dst": "74209 - Photographic activities not elsewhere classified",
       "weight": 1
     },
     {
       "src": "59113 - Television programme production activities",
-      "dst": "59120 - Motion picture, video and television programme post-production activities",
+      "dst": "74209 - Photographic activities not elsewhere classified",
       "weight": 1
     },
     {
-      "src": "59120 - Motion picture, video and television programme post-production activities",
-      "dst": "59200 - Sound recording and music publishing activities",
-      "weight": 1
-    },
-    {
-      "src": "59120 - Motion picture, video and television programme post-production activities",
-      "dst": "74202 - Other specialist photography",
-      "weight": 1
-    },
-    {
-      "src": "59120 - Motion picture, video and television programme post-production activities",
+      "src": "62011 - Ready-made interactive leisure and entertainment software development",
       "dst": "90030 - Artistic creation",
       "weight": 1
     },
     {
       "src": "59120 - Motion picture, video and television programme post-production activities",
-      "dst": "73110 - Advertising agencies",
+      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
       "weight": 1
     },
     {
-      "src": "70210 - Public relations and communications activities",
-      "dst": "73110 - Advertising agencies",
+      "src": "59112 - Video production activities",
+      "dst": "62011 - Ready-made interactive leisure and entertainment software development",
       "weight": 1
     },
     {
-      "src": "73110 - Advertising agencies",
+      "src": "73120 - Media representation services",
       "dst": "74100 - specialised design activities",
-      "weight": 1
-    },
-    {
-      "src": "94910 - Activities of religious organizations",
-      "dst": "96040 - Physical well-being activities",
       "weight": 1
     }
   ]
