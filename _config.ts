@@ -22,6 +22,7 @@ const site = lume({
     src: './src',
     location: new URL('https://open-innovations.github.io/northumbria-culture-connect/')
 });
+site.data('LOCAL', site.options.location.hostname === 'localhost');
 
 site.process(['.html'], (pages) => pages.forEach(autoDependency));
 site.use(base_path());

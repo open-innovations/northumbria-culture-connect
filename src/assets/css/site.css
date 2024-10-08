@@ -154,3 +154,11 @@ td {
 .bang {
     font-size: min(3.5em, 10vw);
 }
+
+.warning { color: rgb(95, 82, 7); background-color: rgb(251, 245, 208); filter: drop-shadow(0px 0px 1px rgb(95, 82, 7)); }
+.error { color: #721c24; background-color: #f8d7da; filter: drop-shadow(0 0 1px #f5c6cb)); }
+.info { color: #004085; background-color: #cce5ff; filter: drop-shadow(0 0 1px #b8daff)); }
+details { border-radius: 4px; padding: 0.5em 0.5em 0; float: right; max-width: 80vw; }
+details summary { font-weight: bold; margin: -0.5em -0.5em 0; padding: 0.5em; }
+details[open] { padding: 0.5em; }
+details[open] summary { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: inherit; margin-bottom: 0.5em; }
