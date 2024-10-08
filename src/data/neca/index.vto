@@ -8,3 +8,84 @@ tags:
 <p>
     This page will provide present data relating to cultural programmes that are funded by the North East Combined Authority.
 </p>
+
+<h3>Funding within Newcastle-upon-Tyne</h3>
+<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Number'] }}</p>
+        <p>Number of grants awarded</p>
+    </li>
+    <li class="block">
+        <p class="bang">£{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Total'] }}</p>
+        <p>Total funding amount</p>
+    </li>
+    <li class="block">
+        <p class="bang">£{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Average'] }}</p>
+        <p>Average award amount</p>
+    </li>
+</ul>
+
+<h2>Number of grants awarded by area</h2>
+
+{{> const max_funding_num = Math.ceil(Math.max(...funding_by_area.map(x => x.Number)) ) }}
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: funding_by_area,
+        category: "Area",
+        width: 1000,
+        height:400,
+        series: [
+            { title: "Number", value: "Number" }
+        ],
+        axis: {
+            x: {
+                max: max_funding_num, 
+            }
+        }
+    }
+}) }}
+
+<h2>Total funding awarded by area</h2>
+
+{{> const max_funding_total = Math.ceil(Math.max(...funding_by_area.map(x => x.Total)) / 1e5) * 1e5 }}
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: funding_by_area,
+        category: "Area",
+        width: 1000,
+        height:400,
+        series: [
+            { title: "Total", value: "Total" }
+        ],
+        axis: {
+            x: {
+                max: max_funding_total, 
+            }
+        }
+    }
+}) }}
+
+<h2>Average award amount by area</h2>
+
+{{> const max_funding_ave = Math.ceil(Math.max(...funding_by_area.map(x => x.Average)) / 1e5) * 1e5 }}
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: funding_by_area,
+        category: "Area",
+        width: 1000,
+        height:400,
+        series: [
+            { title: "Average", value: "Average" }
+        ],
+        axis: {
+            x: {
+                max: max_funding_ave, 
+            }
+        }
+    }
+}) }}
+
