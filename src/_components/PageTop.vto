@@ -1,4 +1,2 @@
-{{ set _tags = tags.filter(t => !(config?.hideTags || []).includes(t)) }}
-
 {{ comp.PageSummary({ title, description, config }) }}
 {{ comp.PageTags({ tags, config }) }}
