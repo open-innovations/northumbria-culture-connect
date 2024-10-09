@@ -19,25 +19,8 @@ notes: |
 	{{ notes |> md }}
 {{ /comp }}
 
-<h3>Employment</h3>
-
-<p>Sources:</p>
-<ul>
-<li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=17&version=0&anal=5">ONS annual population survey</a></li>
-</ul>
-
-
-<h3>Unemployment</h3>
-
-<p>Sources:</p>
-<ul>
-<li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=17&version=0&anal=5">ONS annual population survey</a></li>
-</ul>
-
-
 
 <h3>Economic Activity</h3>
-
 
 {{ set economicActivity = Object.values(NM_17_5.reduce((o, row) => {
 	const date = row['DATE'].toISOString().substr(0,10);
@@ -70,17 +53,17 @@ notes: |
 			position: "top"
 		},
 		series: [{
-			title: "Employed",
+			title: "Employed (16-64)",
 			x: "year",
 			y: "Employment rate - aged 16-64",
 			tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%"
 		},{
-			title: "Unemployed",
+			title: "Unemployed (16+)",
 			x: "year",
 			y: "Unemployment rate - aged 16+",
 			tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%"
 		},{
-			title: "Economically inactive",
+			title: "Economically inactive (16-64)",
 			x: "year",
 			y: "% who are economically inactive - aged 16-64",
 			tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%"
@@ -114,8 +97,38 @@ notes: |
 
 <h3>Benefit Claimants</h3>
 
+<p>Proportion of people who are claiming benefits.</p>
+
+{{ set benefitsData = [
+	{Title:'Newcastle',Value:CC01[4]['Proportion of people'],Post:'%',Footnote:'August 2024'},
+	{Title:'England',Value:CC01[2]['Proportion of people'],Post:'%',Footnote:'August 2024'}
+] }}
+
+{{ comp.oi.dashboard({
+	config: {
+		title: "Title",
+		value: "Value",
+		note: "Footnote",
+		data: benefitsData,
+		width: "30%",
+		units: {
+			prefix: "Pre",
+			postfix: "Post",
+		},
+		panels:[
+			{name:"Newcastle"},
+			{name:"England"}
+		]
+	}
+}) }}
+
+<p class="warning">Note from ONS: Under certain circumstances, some people are able to claim both contribution-based Jobseeker’s Allowance and Universal Credit at the same time. We do not currently have timely enough information to identify these individuals prior to producing the Claimant Count. Consequently, there has been a small amount of double counting. Information from DWP suggests this double counting increased at the start of the pandemic and has stabilised at approximately 1.0 to 1.5% of the Claimant Count. We will monitor this rate and provide further updates if the rate shifts outside of these boundaries.</p>
+
 <p>Sources:</p>
-<ul><li><a href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/outofworkbenefits/methodologies/claimantcount">Claimant Counts</a></li></ul>
+<ul>
+	<li><a href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/datasets/claimantcountbyunitaryandlocalauthorityexperimental/current">CC01 Regional labour market: Claimant Count by unitary and local authority (official statistics in development)</a></li>
+	<li><a href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/outofworkbenefits/methodologies/claimantcount">Claimant Counts</a></li>
+</ul>
 
 
 
