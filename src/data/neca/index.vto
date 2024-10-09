@@ -5,12 +5,7 @@ tags:
     - funding
 ---
 
-<p>
-    This page will provide present data relating to cultural programmes that are funded by the North East Combined Authority.
-</p>
-
 <h3>Funding within Newcastle-upon-Tyne</h3>
-<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
 <ul class="grid centred">
     <li class="block">
         <p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Number'] }}</p>
@@ -89,3 +84,97 @@ tags:
     }
 }) }}
 
+<h2>Funded Project Outputs</h2>
+<p>Outputs of projects that were funded by NECA.</p>
+
+<h3>Events</h3>
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Numbers of attendees participating in a cultural tourism event')['actual'] }}</p>
+        <p>Numbers of attendees at a cultural tourism event</p>
+    </li>
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Number of cultural / tourism events taking place')['actual'] }}</p>
+        <p>Number of cultural / tourism events taking place</p>
+    </li>
+</ul>
+
+<h3>Support</h3>
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Total participants supported')['actual'] }}</p>
+        <p>Total participants supported</p>
+    </li>
+</ul>
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Disabled or deaf participants receiving support or an intervention')['actual'] }}</p>
+        <p>Disabled participants receiving support</p>
+    </li>
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Participants over 50 years of age receiving support or an intervention')['actual'] }}</p>
+        <p>Participants over 50 years of age receiving support</p>
+    </li>
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Participants (below 25 years of age) who are unemployed or inactive receiving support or an intervention')['actual'] }}</p>
+        <p>Participants under 25 years of age who are unemployed receiving support</p>
+    </li>
+        <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Unemployed (including long term unemployed) participants receiving support or an intervention')['actual'] }}</p>
+        <p>Unemployed participants receiving support or an intervention</p>
+    </li>
+</ul>
+
+<h3>Employment</h3>
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Direct Jobs Created')['actual'] }}</p>
+        <p>Direct Jobs Created</p>
+    </li>
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Indirect Jobs Created')['actual'] }}</p>
+        <p>Indirect Jobs Created</p>
+    </li>
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Number of apprenticeship/ traineeship opportunities achieved')['actual'] }}</p>
+        <p>Apprenticeship/ traineeship opportunities</p>
+    </li>
+</ul>
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Participants gaining their first level 3 and above qualification')['actual'] }}</p>
+        <p>Participants gaining their first Level 3 Qualification</p>
+    </li>
+</ul>
+
+<ul class="grid centred">
+        <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Economically inactive participants not in education or training receiving support or an intervention')['actual'] }}</p>
+        <p>Economically inactive participants receiving support</p>
+    </li>
+        <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Economically Inactive participants engaged in job-searching upon leaving')['actual'] }}</p>
+        <p>Economically inactive participants now engaging in job-searching</p>
+    </li>
+            <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Employed, including self-employed receiving support or an intervention')['actual'] }}</p>
+        <p>Employed, including self-employed receiving support or an intervention</p>
+    </li>
+</ul>
+
+<h3>Business Support</h3>
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Number of enterprises receiving support')['actual'] }}</p>
+        <p>Number of enterprises receiving support</p>
+    </li>
+        <li class="block">
+        <p class="bang">{{ project_outputs.find(x => x.category == 'Number of enterprises receiving financial support other than grants')['actual'] }}</p>
+        <p>Number of enterprises receiving financial support other than grants</p>
+    </li>
+</ul>
