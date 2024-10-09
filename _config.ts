@@ -13,7 +13,7 @@ import sheets from "lume/plugins/sheets.ts";
 
 // OI plugins
 import autoDependency from 'https://deno.land/x/oi_lume_utils@v0.4.0/processors/auto-dependency.ts';
-import oiLumeViz from "https://deno.land/x/oi_lume_viz@v0.16.0/mod.ts";
+import oiLumeViz from "https://deno.land/x/oi_lume_viz@v0.16.2/mod.ts";
 
 //PostCSS plugins
 import nesting from "npm:postcss-nesting";
