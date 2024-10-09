@@ -85,7 +85,39 @@ notes: |
 	return { ...o, [year]: thisGroup };
 }, {})); }}
 
+
 <p class="warning">This section uses data from ASHE and is based on a sample of employee jobs taken from HM Revenue & Customs PAYE records. Information on earnings and hours is obtained in confidence from employers. ASHE does not cover the self-employed nor does it cover employees not paid during the reference period.</p>
+
+{{ set payData = [
+	{Title:'Annual gross pay - median',Value:AHSE[AHSE.length-1]['Pay'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
+	{Title:'Annual gross pay - full time',Value:AHSE[AHSE.length-1]['Pay FT'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
+	{Title:'Annual gross pay - part time',Value:AHSE[AHSE.length-1]['Pay PT'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
+	{Title:'% change in median pay',Value:AHSE[AHSE.length-1]['Pay change'],Post:'%',Footnote:(AHSE[AHSE.length-1].year-1)+'-'+AHSE[AHSE.length-1].year},
+	{Title:'% change in full time pay',Value:AHSE[AHSE.length-1]['Pay FT change'],Post:'%',Footnote:(AHSE[AHSE.length-1].year-1)+'-'+AHSE[AHSE.length-1].year},
+	{Title:'% change in part time pay',Value:AHSE[AHSE.length-1]['Pay PT change'],Post:'%',Footnote:(AHSE[AHSE.length-1].year-1)+'-'+AHSE[AHSE.length-1].year}
+] }}
+
+{{ comp.oi.dashboard({
+	config: {
+		title: "Title",
+		value: "Value",
+		note: "Footnote",
+		data: payData,
+		width: "30%",
+		units: {
+			prefix: "Pre",
+			postfix: "Post",
+		},
+		panels:[
+			{name:"Annual gross pay - median","compact-format":false},
+			{name:"Annual gross pay - full time","compact-format":false},
+			{name:"Annual gross pay - part time","compact-format":false},
+			{name:"% change in median pay","precision":0.1,"compact-format":false},
+			{name:"% change in full time pay","precision":0.1,"compact-format":false},
+			{name:"% change in part time pay","precision":0.1,"compact-format":false}
+		]
+	}
+}) }}
 
 <p>Below is a graph of gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence.</p>
 
