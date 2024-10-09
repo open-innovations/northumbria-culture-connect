@@ -34,10 +34,14 @@ notes: |
 <li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=17&version=0&anal=5">ONS annual population survey</a></li>
 </ul>
 
+
+
 <h3>Economic Activity</h3>
 
 <p>Sources:</p>
 <ul><li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=17&version=0&anal=5">ONS annual population survey</a></li></ul>
+
+
 
 
 <h3>Benefit Claimants</h3>
@@ -45,15 +49,142 @@ notes: |
 <p>Sources:</p>
 <ul><li><a href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/outofworkbenefits/methodologies/claimantcount">Claimant Counts</a></li></ul>
 
+
+
+
+
+
 <h3>Income</h3>
 
-<p>Sources:</p>
+{{ set AHSE = Object.values(NM_30_1.reduce((o, row) => {
+	const year = row['DATE'];
+	const thisGroup = o[year] || { year };
+	if(row.GEOGRAPHY_CODE=="E08000021" && row.PAY_NAME=="Annual pay - gross" && row.MEASURES_NAME=="Value"){
+		let y1 = year - 1;
+		if(row.ITEM_NAME=="Median"){
+			if(row.SEX_NAME=="Total"){
+				o[year]['Pay'] = row.OBS_VALUE;
+				if(y1 in o && typeof o[year]['Pay change']==="undefined" && typeof o[year]['Pay']==="number" && typeof o[y1]['Pay']==="number"){
+					o[year]['Pay change'] = parseFloat((100*(o[year]['Pay'] - o[y1]['Pay'])/o[y1]['Pay']).toFixed(1));
+				}
+			}
+			if(row.SEX_NAME=="Full Time Workers"){
+				o[year]['Pay FT'] = row.OBS_VALUE;
+				if(y1 in o && typeof o[year]['Pay FT change']==="undefined" && typeof o[year]['Pay FT']==="number" && typeof o[y1]['Pay FT']==="number"){
+					o[year]['Pay FT change'] = parseFloat((100*(o[year]['Pay FT'] - o[y1]['Pay FT'])/o[y1]['Pay FT']).toFixed(1));
+				}
+			}
+			if(row.SEX_NAME=="Part Time Workers"){
+				o[year]['Pay PT'] = row.OBS_VALUE;
+				if(y1 in o && typeof o[year]['Pay PT change']==="undefined" && typeof o[year]['Pay PT']==="number" && typeof o[y1]['Pay PT']==="number"){
+					o[year]['Pay PT change'] = parseFloat((100*(o[year]['Pay PT'] - o[y1]['Pay PT'])/o[y1]['Pay PT']).toFixed(1));
+				}
+			}
+		}
+	}
+	return { ...o, [year]: thisGroup };
+}, {})); }}
 
+<p class="warning">This section uses data from ASHE and is based on a sample of employee jobs taken from HM Revenue & Customs PAYE records. Information on earnings and hours is obtained in confidence from employers. ASHE does not cover the self-employed nor does it cover employees not paid during the reference period.</p>
+
+<p>Below is a graph of gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence.</p>
+
+{{ comp.oi.chart.line({
+	config: {
+		data: AHSE,
+		height: 400,
+		legend: {
+			show: true,
+			position: "top"
+		},
+		series: [{
+			title: "Median",
+			x: "year",
+			y: "Pay",
+			colour: '#000000',
+			tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay | toLocaleString() }}"
+		},{
+			title: "Full time",
+			x: "year",
+			y: "Pay FT",
+			colour: '#206095',
+			tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay FT | toLocaleString() }}"
+		},{
+			title: "Part time",
+			x: "year",
+			y: "Pay PT",
+			colour: '#27A0CC',
+			tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay PT | toLocaleString() }}"
+		}],
+		axis: {
+			x: {
+				grid: { show: true },
+				tick: { spacing: 2 }
+			},
+			y: {
+				title: { label: "Pay (£)" },
+				min: 0,
+				grid: { show: true },
+				tick: { spacing: 5000 }
+			}
+		}
+	}
+}) }}
+
+<p>Percentage growth in gross annual earnings.</p>
+{{ comp.oi.chart.line({
+	config: {
+		data: AHSE,
+		height: 400,
+		legend: {
+			show: true,
+			position: "top"
+		},
+		series: [{
+			title: "Median",
+			x: "year",
+			y: "Pay change",
+			colour: '#000000',
+			tooltip: "{{ _title }}<br />{{ year }}: {{ Pay change }}%"
+		},{
+			title: "Full time",
+			x: "year",
+			y: "Pay FT change",
+			colour: '#206095',
+			tooltip: "{{ _title }}<br />{{ year }}: {{ Pay FT change }}%"
+		},{
+			title: "Part time",
+			x: "year",
+			y: "Pay PT change",
+			colour: '#27A0CC',
+			tooltip: "{{ _title }}<br />{{ year }}: {{ Pay PT change }}%"
+		}],
+		axis: {
+			x: {
+				grid: { show: true },
+				tick: { spacing: 2 }
+			},
+			y: {
+				title: { label: "% growth in gross annual pay" },
+				min: -10,
+				max: 25,
+				grid: { show: true }
+			}
+		}
+	}
+}) }}
+
+<p>Sources:</p>
 <ul>
-<li><a href="">Earnings and hours worked by local authority</a></li>
+<li><a href="https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1.data.csv?geography=1778385143&date=2010-latest&sex=1...9&item=1...3&pay=7,9&measures=20100,20701&select=DATE,GEOGRAPHY_CODE,SEX_NAME,PAY_NAME,ITEM_NAME,MEASURES_NAME,OBS_VALUE,OBS_STATUS,OBS_CONF">NOMIS ASHE resident analysis (CSV)</a></li>
+<li><a href="https://www.nomisweb.co.uk/api/v01/dataset/NM_99_1.data.csv?geography=1778385143&date=2010-latest&sex=1...9&item=1...3&pay=7,9&measures=20100,20701&select=DATE,GEOGRAPHY_CODE,SEX_NAME,PAY_NAME,ITEM_NAME,MEASURES_NAME,OBS_VALUE,OBS_STATUS,OBS_CONF">NOMIS ASHE workplace analysis (CSV)</a></li>
 </ul>
 
-<h3>Resident Population</h3>
+
+
+
+
+<h3>Population distribution</h3>
 
 {{ comp documentation }}
 This uses data extracted from <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/wardlevelmidyearpopulationestimatesexperimental">Ward-level population estimates (official statistics in development)</a> with only the wards for <code>E08000021</code> saved to <code>population_by_ward_2022.csv</code>. 
@@ -66,16 +197,12 @@ We've used a percentage stacked bar chart because the totals add up to 100% and 
 
 <p>Mid-2022 population estimates for the city and wards.</p>
 
-{{#
-tooltip:'<strong>{{ _title }}</strong><br/>{{ name }}: {{ Under 18 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'
-#}}
-
 {{
 	set ageBands = [
-		{title:'Under 18',value:'Under 18',min:0,max:17,colour:'#cde594'},
-		{title:'18-24',value:'18-24',min:18,max:24,colour:'#80c6a3'},
-		{title:'25-64',value:'25-64',min:25,max:64,colour:'#1f9eb7'},
-		{title:'65+',value:'65+',min:65,max:200,colour:'#186290'}
+		{title:'Under 18',value:'Under 18',min:0,max:17,colour:'#cde594',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ Under 18 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
+		{title:'18-24',value:'18-24',min:18,max:24,colour:'#80c6a3',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 18-24 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
+		{title:'25-64',value:'25-64',min:25,max:64,colour:'#1f9eb7',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 25-64 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
+		{title:'65+',value:'65+',min:65,max:200,colour:'#186290',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 65+ | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'}
 	]
 }}
 
