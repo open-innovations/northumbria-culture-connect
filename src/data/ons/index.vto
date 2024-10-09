@@ -54,6 +54,9 @@ notes: |
 
 
 
+{{ comp documentation }}
+I used NM_30 because this includes all residents. If we wanted workplaces in Newcastle we could use the <a href="https://www.nomisweb.co.uk/api/v01/dataset/NM_99_1.data.csv?geography=1778385143&date=2010-latest&sex=1...9&item=1...3&pay=7,9&measures=20100,20701&select=DATE,GEOGRAPHY_CODE,SEX_NAME,PAY_NAME,ITEM_NAME,MEASURES_NAME,OBS_VALUE,OBS_STATUS,OBS_CONF">NM_99 dataset</a>.
+{{ /comp }}
 <h3>Income</h3>
 
 {{ set AHSE = Object.values(NM_30_1.reduce((o, row) => {
@@ -89,12 +92,12 @@ notes: |
 <p class="warning">This section uses data from ASHE and is based on a sample of employee jobs taken from HM Revenue & Customs PAYE records. Information on earnings and hours is obtained in confidence from employers. ASHE does not cover the self-employed nor does it cover employees not paid during the reference period.</p>
 
 {{ set payData = [
-	{Title:'Annual gross pay - median',Value:AHSE[AHSE.length-1]['Pay'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
-	{Title:'Annual gross pay - full time',Value:AHSE[AHSE.length-1]['Pay FT'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
-	{Title:'Annual gross pay - part time',Value:AHSE[AHSE.length-1]['Pay PT'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
-	{Title:'% change in median pay',Value:AHSE[AHSE.length-1]['Pay change'],Post:'%',Footnote:(AHSE[AHSE.length-1].year-1)+'-'+AHSE[AHSE.length-1].year},
-	{Title:'% change in full time pay',Value:AHSE[AHSE.length-1]['Pay FT change'],Post:'%',Footnote:(AHSE[AHSE.length-1].year-1)+'-'+AHSE[AHSE.length-1].year},
-	{Title:'% change in part time pay',Value:AHSE[AHSE.length-1]['Pay PT change'],Post:'%',Footnote:(AHSE[AHSE.length-1].year-1)+'-'+AHSE[AHSE.length-1].year}
+	{Title:'Annual change',Value:AHSE[AHSE.length-1]['Pay'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
+	{Title:'Annual change - full time',Value:AHSE[AHSE.length-1]['Pay FT'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
+	{Title:'Annual change - part time',Value:AHSE[AHSE.length-1]['Pay PT'],Pre:'£',Footnote:AHSE[AHSE.length-1].year},
+	{Title:'Annual percentage change',Value:AHSE[AHSE.length-1]['Pay change'],Post:'%',Footnote:'Comparison of '+(AHSE[AHSE.length-1].year-1)+' and '+AHSE[AHSE.length-1].year},
+	{Title:'Annual percentage change - full time',Value:AHSE[AHSE.length-1]['Pay FT change'],Post:'%',Footnote:'Comparison of '+(AHSE[AHSE.length-1].year-1)+' and '+AHSE[AHSE.length-1].year},
+	{Title:'Annual percentage change - part time',Value:AHSE[AHSE.length-1]['Pay PT change'],Post:'%',Footnote:'Comparison of '+(AHSE[AHSE.length-1].year-1)+' and '+AHSE[AHSE.length-1].year}
 ] }}
 
 {{ comp.oi.dashboard({
@@ -109,12 +112,12 @@ notes: |
 			postfix: "Post",
 		},
 		panels:[
-			{name:"Annual gross pay - median","compact-format":false},
-			{name:"Annual gross pay - full time","compact-format":false},
-			{name:"Annual gross pay - part time","compact-format":false},
-			{name:"% change in median pay","precision":0.1,"compact-format":false},
-			{name:"% change in full time pay","precision":0.1,"compact-format":false},
-			{name:"% change in part time pay","precision":0.1,"compact-format":false}
+			{name:"Annual change","compact-format":false},
+			{name:"Annual change - full time","compact-format":false},
+			{name:"Annual change - part time","compact-format":false},
+			{name:"Annual percentage change","precision":0.1,"compact-format":false},
+			{name:"Annual percentage change - full time","precision":0.1,"compact-format":false},
+			{name:"Annual percentage change - part time","precision":0.1,"compact-format":false}
 		]
 	}
 }) }}
@@ -209,7 +212,6 @@ notes: |
 <p>Sources:</p>
 <ul>
 <li><a href="https://www.nomisweb.co.uk/api/v01/dataset/NM_30_1.data.csv?geography=1778385143&date=2010-latest&sex=1...9&item=1...3&pay=7,9&measures=20100,20701&select=DATE,GEOGRAPHY_CODE,SEX_NAME,PAY_NAME,ITEM_NAME,MEASURES_NAME,OBS_VALUE,OBS_STATUS,OBS_CONF">NOMIS ASHE resident analysis (CSV)</a></li>
-<li><a href="https://www.nomisweb.co.uk/api/v01/dataset/NM_99_1.data.csv?geography=1778385143&date=2010-latest&sex=1...9&item=1...3&pay=7,9&measures=20100,20701&select=DATE,GEOGRAPHY_CODE,SEX_NAME,PAY_NAME,ITEM_NAME,MEASURES_NAME,OBS_VALUE,OBS_STATUS,OBS_CONF">NOMIS ASHE workplace analysis (CSV)</a></li>
 </ul>
 
 
