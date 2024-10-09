@@ -1,5 +1,6 @@
 bar_chart_base_config:
   category: Year
+  height: 400
   stacked: true
   # legend:
   #   show: true
