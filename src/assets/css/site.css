@@ -175,3 +175,9 @@ details[open] summary { border-bottom-width: 1px; border-bottom-style: solid; bo
 .oi-dashboard-inner .panel { flex-basis: max(20rem,var(--auto-dashboard-min-size)); flex-grow: 1; flex-shrink: 0; padding: 1rem; text-align: center; display: flex; flex-direction: column; justify-content: flex-start; background: black; color: white; }
 .oi-dashboard-inner .panel h3 { margin-top: 0; }
 .bignum { font-size: min(3.5em, 10vw); }
+
+.edge-bundle-tooltip {
+    background: #ffffffa0;
+    padding: 1rem;
+    text-align: center;
+}

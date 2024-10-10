@@ -10,10 +10,32 @@ function initialiseRadialMap(svg: SVGElement) {
         n.linkedNodes = n.edges.map(e => e.nodeArray).flat().filter(x => x != id).map(id => nodes.find(n => n.dataset.id === id));
     })
 
-    const tooltip = document.createElement('div');
-    tooltip.classList.add('tooltip');
-    // tooltip.hidden = true;
-    svg.parentNode!.append(tooltip);
+    const width = svg.viewBox.baseVal.width / 2;
+
+    const tooltipContainer = document.createElementNS('http://www.w3.org/2000/svg',"foreignObject");
+    tooltipContainer.setAttribute('x', -(width / 2));
+    tooltipContainer.setAttribute('y', -(width / 2));
+    tooltipContainer.setAttribute('width', width);
+    tooltipContainer.setAttribute('height', width);
+
+    const tooltip = document.createElement('aside');
+    tooltip.classList.add('edge-bundle-tooltip');
+    // tooltip.style.background = '#ffffffa0';
+    // tooltip.style.padding = '1rem';
+    // tooltip.style.textAlign = 'center';
+    tooltip.hidden = true;
+    
+    const tooltipOuter = document.createElement('div');
+    tooltipOuter.style.height = '100%';
+    tooltipOuter.style.boxSizing = 'border-box';
+    tooltipOuter.style.display = 'flex';
+    tooltipOuter.style.alignItems = 'center';
+    tooltipOuter.style.justifyContent = 'center';
+
+    tooltipOuter.append(tooltip);
+    tooltipContainer.append(tooltipOuter);
+    svg.append(tooltipContainer);
+
     let mouseoutTimer: number | undefined = undefined;
     let toggled = false;
     function activate(node) {
@@ -30,13 +52,17 @@ function initialiseRadialMap(svg: SVGElement) {
             e.parentNode.appendChild(e);
         });
         node.linkedNodes.forEach(n => n.classList.add('linked'));
+        tooltip.hidden = false;
     };
     function deactivate(node) {
         if (toggled) return;
         node.classList.remove('selected');
         node.edges.forEach(e => e.classList.remove('selected'));
         node.linkedNodes.forEach(n => n.classList.remove('linked'));
-        mouseoutTimer = setTimeout(() => tooltip.innerHTML = '', 1000);
+        mouseoutTimer = setTimeout(() => {
+            tooltip.hidden = true;
+            tooltip.innerHTML = '';
+        }, 250);
     }
     nodes.forEach(n => {
         n.addEventListener('mouseover', function () { activate(this) });
