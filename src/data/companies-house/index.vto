@@ -73,10 +73,9 @@ tags:
 {{ comp.EdgeBundle({
     config: {
         data: graph,
-        idField: 'sic_code',
         width: 450,
         padding: 50,
-        label: ({ data }) => data.id.split(/\s+/)[0]
+        title: (n) => `${n.data.id}: ${n.data.name} (${n.data.group})`
     }
 }) }}
 </div>

@@ -38,8 +38,6 @@ function hierarchify(graph: GraphData, options: { idField?: string; groupField?:
     const nodeById = new Map(nodes.map(node => [node.id, node]));
 
     for (const node of nodes) {
-        // TODO Remove this once group set
-        node.group = 'UNGROUPED';
         let group = groupById.get(node.group);
         if (!group) groupById.set(node.group, group = { id: node.group, children: [] });
         group.children.push(node);
