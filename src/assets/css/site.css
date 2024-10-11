@@ -15,11 +15,9 @@ body {
     flex-direction: column;
 }
 body > * {
-    flex-grow: 1;
     padding-inline: 1rem;
 }
 body > header {
-    flex-grow: 0;
     font-size: 2rem;
     font-weight: 700;
     background: #000000;
@@ -32,7 +30,6 @@ body > header {
 }
 
 body > footer {
-    flex-grow: 0;
     margin-top: 2rem;
     padding: 2rem;
     color: white;
@@ -147,6 +144,7 @@ td {
 }
 .grid .block .tag { filter: invert(1); }
 
+/* Utility to make the tagged object grow in a flex layout */
 .greedy {
     flex-grow: 1;
 }
