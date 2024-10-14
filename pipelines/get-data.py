@@ -31,6 +31,7 @@ def main():
     arts_council_project_grants()
     arts_council_investment_programme()
     companies_house_company_lists()
+    charity_commission_lists()
     download_360_giving()
 
 
@@ -75,6 +76,11 @@ def arts_council_investment_programme():
 def companies_house_company_lists():
     url = 'https://download.companieshouse.gov.uk/BasicCompanyDataAsOneFile-2024-09-01.zip'
     download_to_file(url, RAW_DATA / 'company-data.zip')
+
+
+def charity_commission_lists():
+    url = 'https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity.zip'
+    download_to_file(url, RAW_DATA / 'charity-data.zip')
 
 
 def download_360_giving():
