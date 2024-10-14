@@ -79,8 +79,8 @@ def companies_house_company_lists():
 
 
 def charity_commission_lists():
-    url = 'https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity.zip'
-    download_to_file(url, RAW_DATA / 'charity-data.zip')
+    download_to_file('https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity.zip', RAW_DATA / 'charity-data.zip')
+    download_to_file('https://ccewuksprdoneregsadata1.blob.core.windows.net/data/txt/publicextract.charity_area_of_operation.zip', RAW_DATA / 'charity-area-data.zip')
 
 
 def download_360_giving():
