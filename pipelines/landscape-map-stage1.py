@@ -66,6 +66,8 @@ data = etl.cat(
     'Local authority', la_names
 ).selectnotin(
     'organisation', ['-']
+).convert(
+    'organisation', lambda x: x.strip()
 ).aggregate(
     ('organisation', 'Local authority', 'Source'),
     len,
