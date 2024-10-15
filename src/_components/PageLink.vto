@@ -1,6 +1,8 @@
 <li class="block">
-    <a class="greedy" href="{{ page.url }}">
+    <a class="greedy" style="display: flex; flex-direction:column;" href="{{ page.url }}">
         {{ comp.PageSummary({ ...page, config }) }}
+        <p class="centred tag">Visit page &rarr;</p> 
     </a>
+    <hr>
     {{ comp.PageTags({ ...page, config })}}
 </li>

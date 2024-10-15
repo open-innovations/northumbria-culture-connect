@@ -87,6 +87,7 @@ td {
         }
     }
     & .block {
+        --spacing: 1rem;
         display: block;
         background: black;
         color: white;
@@ -95,12 +96,12 @@ td {
         justify-content: flex-start;
         box-sizing: border-box;
         & > * {
-            padding-inline: 1rem;
+            padding-inline: var(--spacing);
             &:first-child {
-                padding-block-start: 1rem;
+                padding-block-start: var(--spacing);
             }
             &:last-child {
-                padding-block-end: 1rem;
+                padding-block-end: var(--spacing);
             }
         }
         & > a {
@@ -113,8 +114,14 @@ td {
         & * {
             margin-block: 0;
             & + * { 
-                margin-block-start: 1rem;
+                margin-block-start: var(--spacing);
             }
+        }
+        & .tag {
+            filter: invert(1);
+        }
+        & hr {
+            margin-inline: var(--spacing);
         }
     }
 }
@@ -127,14 +134,7 @@ td {
     & > * {
         margin-block: 0 !important;
     }
-    & .tag {
-        border-radius: 2rem;
-        padding-block: 0.2rem;
-        padding-inline: 0.5rem;
-    }
     & a {
-        color: white;
-        background: black;
         text-decoration: none;
         line-height: 1.5em;
         &:hover {
@@ -142,7 +142,14 @@ td {
         }
     }
 }
-.grid .block .tag { filter: invert(1); }
+.tag {
+    color: white;
+    background: black;
+    border-radius: 2rem;
+    padding-block: 0.2rem;
+    padding-inline: 0.5rem;
+}
+
 
 /* Utility to make the tagged object grow in a flex layout */
 .greedy {
@@ -153,6 +160,10 @@ td {
 }
 .bang {
     font-size: min(3.5em, 10vw);
+}
+
+hr {
+    margin-inline: 0;
 }
 
 .padded { padding: 1rem; }
