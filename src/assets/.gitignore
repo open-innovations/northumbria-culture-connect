@@ -1,0 +1,4 @@
+/fonts/ttf/
+/fonts/webfonts/*
+!/fonts/webfonts/hanken-grotesk-latin-400-*
+!/fonts/webfonts/hanken-grotesk-latin-700-*

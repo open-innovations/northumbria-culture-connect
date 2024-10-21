@@ -1,0 +1,7 @@
+scripts:
+  getFonts:
+    cmd: scripts/getFonts.ts hanken-grotesk
+    allow:
+      net: [api.fontsource.org, r2.fontsource.org]
+      read: [.]
+      write: [src/assets]

@@ -55,4 +55,6 @@ site.filter('displayCurrency', (x: string) => parseInt(x)
         maximumFractionDigits: 0
     }));
 
+site.copy('assets/fonts/webfonts/');
+
 export default site;

@@ -1,7 +1,8 @@
+@import 'css/fonts.css';
+
 /* Update core styles here */
 :root {
     --holder-width: unset;
-    --site-font: monospace;
 }
 
 html {
