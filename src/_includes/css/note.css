@@ -1,0 +1,28 @@
+details {
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+  position: absolute;
+  right: 0;
+  z-index: 10000;
+  margin-inline: 1rem;
+  max-width: 300px;
+
+  & summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+  }
+
+  &[open] {
+    padding: 0.5em;
+
+    & summary {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: inherit;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+

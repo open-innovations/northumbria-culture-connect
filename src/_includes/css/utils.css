@@ -1,0 +1,39 @@
+/* Utility to make the tagged object grow in a flex layout */
+.greedy {
+  flex-grow: 1;
+}
+
+.centred {
+  text-align: center;
+}
+
+.bang,
+.bignum {
+  font-size: min(3.5em, 10vw);
+}
+
+.padded {
+  padding: 1rem;
+}
+
+.warning {
+  color: rgb(95, 82, 7);
+  background-color: rgb(251, 245, 208);
+  border-color: rgb(95, 82, 7);
+  filter: drop-shadow(0px 0px 1px rgb(95, 82, 7));
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #721c24;
+  filter: drop-shadow(0 0 1px #f5c6cb);
+}
+
+.info {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #004085;
+  filter: drop-shadow(0 0 1px #b8daff);
+}
+

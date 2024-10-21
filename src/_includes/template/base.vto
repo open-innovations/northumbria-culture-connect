@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} &ndash; {{ metas.site }}</title>
+    <link rel="stylesheet" href="/components.css">
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
     {{ comp.SiteHeader({ metas, title }) }}
-    <div class="holder greedy">
+    <div class="greedy">
         {{ content }}
     </div>
     {{ comp.SiteFooter() }}

@@ -1,0 +1,65 @@
+.oi-zoomable-map {
+  margin-block: 2rem;
+}
+
+.oi-top > .oi-legend .oi-legend-inner .oi-legend-items {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.oi-top > .oi-legend .oi-legend-inner .oi-legend-item.oi-series-on {
+  outline: 0;
+}
+
+.oi-legend-inner {
+  & .oi-legend-item {
+    display: flex !important;
+    gap: 0.5em;
+  }
+}
+
+.oi-top > .oi-legend {
+  margin-bottom: 0.5rem;
+}
+
+.oi-slider-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oi-slider-inner input {
+  width: 400px;
+  max-width: 90vw;
+}
+
+.oi-dashboard-inner {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.oi-dashboard-inner .panel {
+  flex-basis: max(20rem, var(--auto-dashboard-min-size));
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: black;
+  color: white;
+}
+
+.oi-dashboard-inner .panel h3 {
+  margin-top: 0;
+}
+
+.edge-bundle-tooltip {
+    background: #ffffffa0;
+    padding: 1rem;
+    text-align: center;
+}
