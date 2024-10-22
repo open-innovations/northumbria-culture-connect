@@ -1,8 +1,7 @@
-/* Import prototype css - this will be removed when all migrated. */
-@import 'css/prototype.css';
-
 /* Import auto-generated components css file */
 @import 'css/_components.css';
+
+@import 'css/base.css';
 
 @import 'css/fonts.css';
 
@@ -10,6 +9,7 @@
 
 @import 'css/oi-viz.css';
 
+@import 'css/table.css';
 @import 'css/grid.css';
 @import 'css/tag.css';
 

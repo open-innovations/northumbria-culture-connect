@@ -1,0 +1,18 @@
+table {
+    overflow-x: scroll;
+    border-collapse: collapse;
+}
+th {
+    background: #000000;
+    color: #ffffff;
+    padding:0.8em;
+    a {
+        color: inherit;
+    }
+}
+td {
+    padding-inline: 1em;
+    border-width: thin;
+    border-color: #e0dfdf;
+    border-style: solid;
+}
