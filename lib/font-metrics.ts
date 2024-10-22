@@ -14,8 +14,9 @@ const calculatorFactory = async (
 };
 
 export async function metricsBuilder(fontFile: string) {
+  const calculator = await calculatorFactory(fontFile);
   return {
     "font-size": fontSize,
-    widths: characters.map(await calculatorFactory(fontFile)),
+    widths: characters.map(calculator),
   };
 }

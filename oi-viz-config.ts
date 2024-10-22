@@ -3,7 +3,7 @@ import { metricsBuilder } from './lib/font-metrics.ts';
 export default {
 	"componentNamespace": 'oi',
 	"font": {
-		"family": '"Hanken Grotesk", sans-serif',
+		"family": 'Hanken Grotesk, sans-serif',
 		"weight": 'normal',
 		"size": 16,
 		"fonts": {
