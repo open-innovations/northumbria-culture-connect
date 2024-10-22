@@ -21,7 +21,10 @@ import nesting from "npm:postcss-nesting";
 
 const site = lume({
     src: './src',
-    location: new URL('https://open-innovations.github.io/northumbria-culture-connect/')
+    location: new URL('https://open-innovations.github.io/northumbria-culture-connect/'),
+    components: {
+        cssFile: '_includes/css/_components.css'
+    }
 });
 site.data('LOCAL', site.options.location.hostname === 'localhost');
 

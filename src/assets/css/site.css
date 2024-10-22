@@ -1,4 +1,9 @@
+/* Import prototype css - this will be removed when all migrated. */
 @import 'css/prototype.css';
+
+/* Import auto-generated components css file */
+@import 'css/_components.css';
+
 @import 'css/fonts.css';
 
 @import 'css/utils.css';

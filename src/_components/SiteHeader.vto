@@ -1,5 +1,23 @@
-<div class="warning padded">This is a work-in-progress advanced prototype. Only wireframe styling is applied. Comments on the data, or organisation of the site, are welcome.</div>
-<header>
+---
+css: |
+    .site-header {
+        font-size: 2rem;
+        font-weight: 700;
+        background: #000000;
+        color: #ffffff;
+        padding-block: 1em;
+        margin-block-end: 2rem;
+        & a {
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+---
+
+<header class="site-header">
     <div class="holder">
     <a href="/">{{ metas.site }}</a>
     </div>

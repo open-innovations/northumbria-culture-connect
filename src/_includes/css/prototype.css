@@ -16,27 +16,6 @@ body {
 body > * {
     padding-inline: 1rem;
 }
-body > header {
-    font-size: 2rem;
-    font-weight: 700;
-    background: #000000;
-    color: #ffffff;
-    padding-block: 1em;
-    margin-block-end: 2rem;
-    & a {
-        color: inherit;
-    }
-}
-
-body > footer {
-    margin-top: 2rem;
-    padding: 2rem;
-    color: white;
-    background: #000000;
-    a {
-        color: inherit;
-    }
-}
 
 h2 {
     font-size: 1.6rem;
