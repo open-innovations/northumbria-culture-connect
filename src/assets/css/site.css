@@ -9,8 +9,10 @@
 
 @import 'css/oi-viz.css';
 
+@import 'css/tag.css';
+
 @import 'css/table.css';
 @import 'css/grid.css';
-@import 'css/tag.css';
+@import 'css/block.css';
 
 @import 'css/note.css';

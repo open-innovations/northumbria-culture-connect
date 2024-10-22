@@ -1,8 +1,10 @@
 <li class="block">
-    <a class="greedy" style="display: flex; flex-direction:column;" href="{{ page.url }}">
+    <div class="greedy" style="display:flex;flex-direction:column;">
         {{ comp.PageSummary({ ...page, config }) }}
-        <p class="centred tag">Visit page &rarr;</p> 
-    </a>
+    </div>
+    <div style="display:flex;justify-content:center;">
+        {{ comp.CallToAction({ link: page.url, text: "Explore the data &rarr;" }) }}
+    </div>
     <hr>
     {{ comp.PageTags({ ...page, config })}}
 </li>

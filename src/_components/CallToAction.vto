@@ -1,0 +1,16 @@
+---
+css: |
+    .call-to-action {
+        color: var(--cta-foreground, white);
+        background: var(--cta-background, black);
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-block: 0.8rem;
+        padding-inline: 1.5rem;
+        text-decoration: none;
+        &::hover {
+            text-decoration: underline;
+        }
+    }
+---
+<a class="call-to-action" href="{{ link }}">{{ text }}</a>

@@ -1,0 +1,11 @@
+---
+css: |
+    .tag {
+        color: var(--tag-background, white);
+        background: var(--tag-foreground, black);
+        border-radius: 2rem;
+        padding-block: 0.2rem;
+        padding-inline: 0.7rem;
+    }
+---
+<a class="tag" href="{{ search.page(`tag="${tag}"`).url }}">{{ tag }}</a>
