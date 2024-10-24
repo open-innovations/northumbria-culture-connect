@@ -1,0 +1,17 @@
+---
+css: |
+    .comp-vertical-masonry {
+        column-count: 6;
+        column-width: 20rem;
+        column-gap: 1rem;
+        & > * {
+            margin-block-end: 1rem;
+            /* Not supported in Firefox! */
+            break-inside: avoid-column;
+        }
+    }
+---
+{{# https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/ #}}
+<{{ tag || 'div' }} class="comp-vertical-masonry">
+{{ content }}
+</{{ tag || 'div' }}>

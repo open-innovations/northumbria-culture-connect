@@ -1,4 +1,4 @@
-<li class="block">
+<{{ tag || 'section' }}><div class="block">
     <div class="greedy" style="display:flex;flex-direction:column;">
         {{ comp.PageSummary({ ...page, config }) }}
     </div>
@@ -7,4 +7,4 @@
     </div>
     <hr>
     {{ comp.PageTags({ ...page, config })}}
-</li>
+</div></{{ tag || 'section' }}>

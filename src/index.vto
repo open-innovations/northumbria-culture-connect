@@ -24,11 +24,11 @@ layout: template/base.vto
     Datasets related to funding of culture across the local authority.
 </p>
 
-<ul class="grid">
+{{ comp UniformGrid }}
 {{ for page of search.pages('data funding', 'priority=desc') }}
     {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
-</ul>
+{{ /comp }}
 
 <h2>
     Participation Data
@@ -38,11 +38,11 @@ layout: template/base.vto
     Datasets related to participation in culture across the local authority.
 </p>
 
-<ul class="grid">
+{{ comp UniformGrid }}
 {{ for page of search.pages('data participation', 'priority=desc') }}
     {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
-</ul>
+{{ /comp }}
 
 
 <h2>
@@ -53,11 +53,11 @@ layout: template/base.vto
     Data infrastructure relevant to the culture sector across the local authority.
 </p>
 
-<ul class="grid">
+{{ comp UniformGrid }}
 {{ for page of search.pages('data infrastructure', 'priority=desc') }}
     {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
-</ul>
+{{ /comp }}
 
 
 <h2>
@@ -68,8 +68,8 @@ layout: template/base.vto
     Examples of reports and visualisation built using site data.
 </p>
 
-<ul class="grid">
+{{ comp UniformGrid }}
 {{ for page of search.pages('report', 'priority=desc') }}
     {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
-</ul>
+{{ /comp }}
