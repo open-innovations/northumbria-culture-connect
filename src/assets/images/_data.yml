@@ -1,0 +1,4 @@
+transformImages:
+  - resize: [, 100]
+    matches: logo-
+    format: [webp, png]

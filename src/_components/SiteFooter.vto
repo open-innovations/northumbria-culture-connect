@@ -1,19 +1,46 @@
 ---
 css: |
-    body > footer {
+    .site-footer {
         margin-top: 2rem;
-        padding: 2rem;
+        padding: 1rem;
         color: white;
         background: #000000;
         a {
             color: inherit;
         }
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 2rem;
+            & > * {
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: unset;
+            }
+            & > .spacer {
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+            & img {
+                height: 2.5rem;
+            }
+        }
     }
 ---
 <footer class="site-footer">
-    <ul class="grid">
-        <li>
+    <div class="footer-row">
+        <span><a href="about:blank"><img srcset="/assets/images/logo-neca-white.webp, /assets/images/logo-neca-white.png" src="/assets/images/logo-neca-white.png"></a> </span>
+        <span><a href="about:blank"><img src="/assets/images/logo-nu-white.svg"></a> </span>
+        <span><a href="about:blank"><img src="/assets/images/logo-creative-communities-white.svg"></a> </span>
+        <span><a href="about:blank"><img src="/assets/images/logo-ahrc-white.svg"></a> </span>
+        <span class="spacer"></span>
+        <span>&copy; North East Combined Authority 2024</span>
+    </div>
+
+    <nav class="footer-row">
+        <div>
             <a href="https://github.com/open-innovations/northumbria-culture-connect">GitHub repository</a>
-        </li>
+        </div>
     </ul>
 </footer>
