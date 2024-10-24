@@ -1,7 +1,7 @@
 ---
 css: |
     .site-header {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         background: #000000;
         color: #ffffff;
@@ -14,11 +14,16 @@ css: |
                 text-decoration: underline;
             }
         }
+        /* Because it's a big sea, geddit? */
+        & .pacific {
+            display: inline-block;
+            font-size: 1.6em;
+        }
     }
 ---
 
 <header class="site-header">
     <div class="holder">
-    <a href="/">{{ metas.site }}</a>
+    <a href="/"><span class="pacific">C</span>ulture <span class="pacific">C</span>onnect</a>
     </div>
 </header>
