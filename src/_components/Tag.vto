@@ -1,11 +1,18 @@
 ---
 css: |
     .tag {
-        color: var(--tag-background, white);
-        background: var(--tag-foreground, black);
+        color: var(--tag-background, black);
+        background: var(--tag-foreground, white);
+        border: 1px solid var(--tag-border, black);
         border-radius: 2rem;
         padding-block: 0.2rem;
         padding-inline: 0.7rem;
+        transition-property: color, text-decoration;
+        transition-duration: 0.3s;
+        &:hover {
+            color: var(--tag-foreground, white);
+            background: var(--tag-background, black);
+        }
     }
 ---
 <a class="tag" href="{{ search.page(`tag="${tag}"`).url }}">{{ tag }}</a>
