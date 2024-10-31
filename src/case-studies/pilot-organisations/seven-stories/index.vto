@@ -1,0 +1,110 @@
+---
+title: Seven Stories
+
+tags:
+    - work-in-progress
+    - pilot-organisations
+
+description: |
+    Visualising data collected through an initial phase of NCC Case Studies Research, piloting a data collection scheme with cultural organisations in the Newcastle region.
+---
+<h2>Organisation Overview</h2>
+
+{{ set sevenStoriesData = org_list.find(org => org.Organisation === "Seven Stories") }}
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang"style="font-size: 2.5rem;">{{ sevenStoriesData['Type of organisation'] }}</p>
+        <p>Type of organisation</p>
+    </li>
+    <li class="block">
+        <p class="bang"style="font-size: 2.5rem;">{{ sevenStoriesData['Postcode'] }}</p>
+        <p>Postcode</p>
+    </li>
+    <li class="block">
+        <p class="bang"style="font-size: 2.5rem;">{{ sevenStoriesData['Number of employees'] }}</p>
+        <p>Number of employees</p>
+    </li>
+</ul>
+
+<h2>Sources of Income</h2>
+<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: seven_stories_income,
+        height: 275, 
+        width: 1000,
+		stacked: true, 
+		min: 0, 
+		max: 100,
+        category: 'source',
+        series: [
+            { title: 'Funding Source', value: 'percentage' }
+        ],
+        axis: {
+		    x: {
+			    tick: {
+				    spacing: 10
+			}
+		}
+	}
+    }
+}) }}
+
+<h2>Participation</h2
+<p>The charts below explore the number of people engaging with this organisation's activities over the course of a year, between September 2023 and September 2024.</p>
+
+<h3>Total Footfall<h3>
+
+{{ comp.oi.chart.line({
+    config: {
+        data: seven_stories_participation,
+        height: 400, 
+        width: 800,
+        series: [
+            { title: 'Footfall', x: 'Date', y: 'Footfall' }
+        ],
+        axis: {
+            x: {
+                grid: { show: true },
+                tick: { spacing: 1 }
+            },
+            y: {
+                min: 0,
+                grid: { show: true },
+                tick: { spacing: 10000 }
+            },
+        }
+    }
+}) }}
+
+<h3>Participation by Programme</h3>
+
+{{ comp.oi.chart.line({
+    config: {
+        data: seven_stories_participation,
+        height: 400, 
+        width: 800,
+        series: [
+            { title: 'Afternoon Tea', x: 'Date', y: 'Afternoon Tea' },
+            { title: 'Film Screening', x: 'Date', y: 'Film Screening' },
+            { title: 'Learning & Community', x: 'Date', y: 'Learning & Community' },
+            { title: 'Performance', x: 'Date', y: 'Performance' },
+            { title: 'Storytime', x: 'Date', y: 'Storytime' },
+            { title: 'Workshop/Event', x: 'Date', y: 'Workshop/Event' },
+        ],
+        axis: {
+            x: {
+                grid: { show: true },
+                tick: { spacing: 1 }
+            },
+            y: {
+                min: 0,
+                grid: { show: true },
+                tick: { spacing: 200 }
+            },
+        }
+    }
+}) }}

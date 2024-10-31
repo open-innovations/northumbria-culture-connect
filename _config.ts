@@ -55,6 +55,8 @@ site.use(esbuild({
 
 site.loadData(['.geojson'], jsonLoader);
 
+site.filter("toLocaleString", (value) => parseFloat(value).toLocaleString());
+
 site.filter('displayCurrency', (x: string) => parseInt(x)
     .toLocaleString('en-GB', {
         style: "currency",

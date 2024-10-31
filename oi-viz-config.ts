@@ -15,5 +15,9 @@ export default {
 	},
 	"map": {
 		"tileLayer": 'CartoDB.Positron'
+	},
+	"colour": {
+		"series": 
+			[ '#33A38C','#8F3E8D','#00478A','#005837','#F25C29', '#ED1163'],
 	}
 };

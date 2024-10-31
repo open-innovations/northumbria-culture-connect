@@ -1,0 +1,109 @@
+---
+title: Centre for Life
+
+tags:
+    - work-in-progress
+    - pilot-organisations
+
+description: |
+    Visualising data collected through an initial phase of NCC Case Studies Research, piloting a data collection scheme with cultural organisations in the Newcastle region.
+---
+
+<h2>Organisation Overview</h2>
+
+{{ set centreForLifeData = org_list.find(org => org.Organisation === "Centre For Life") }}
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang"style="font-size: 2.5rem;">{{ centreForLifeData['Type of organisation'] }}</p>
+        <p>Type of organisation</p>
+    </li>
+    <li class="block">
+        <p class="bang"style="font-size: 2.5rem;">{{ centreForLifeData['Postcode'] }}</p>
+        <p>Postcode</p>
+    </li>
+    <li class="block">
+        <p class="bang" style="font-size: 2.5rem;">{{ centreForLifeData['Number of employees'] }}</p>
+        <p>Number of employees</p>
+    </li>
+</ul>
+
+<h2>Sources of Income</h2>
+<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: centre_for_life_income,
+        height: 275, 
+        width: 1000,
+		stacked: true, 
+		min: 0, 
+		max: 100,
+        category: 'source',
+        series: [
+            { title: 'Funding Source', value: 'percentage' }
+        ],
+        axis: {
+		    x: {
+			    tick: {
+				    spacing: 10
+			}
+		}
+	}
+    }
+}) }}
+
+<h2>Participation</h2>
+<p>The charts below explore the number of people engaging with this organisation's activities over the course of a year, between September 2023 and September 2024.</p>
+
+<h3>Science Centre General Admission</h3>
+
+{{ comp.oi.chart.line({
+    config: {
+        data: centre_for_life_participation,
+        height: 400, 
+        width: 800,
+        series: [
+            { title: 'Science Centre General Admission', x: 'Date', y: 'Science Centre General Admission' }
+        ],
+        axis: {
+            x: {
+                grid: { show: true },
+                tick: { spacing: 1 }
+            },
+            y: {
+                min: 0,
+                grid: { show: true },
+                tick: { spacing: 10000 }
+            },
+        }
+    }
+}) }}
+
+<h3>School Engagement</h3>
+
+{{ comp.oi.chart.line({
+    config: {
+        data: centre_for_life_participation,
+        height: 400, 
+        width: 800,
+        series: [
+            { title: 'Schools - KS4 and Post 16 Workshop', x: 'Date', y: 'Schools - KS4 and Post 16 Workshop' },
+            { title: 'Schools - Outreach', x: 'Date', y: 'Schools - Outreach' },
+            { title: 'Schools - Science Centre Only (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre Only (KS1 - KS3)' },
+            { title: 'Schools - Science Centre and Workshop (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre and Workshop (KS1 - KS3)' },
+            { title: 'Schools - Workshop Only (KS1 - KS3)', x: 'Date', y: 'Schools - Workshop Only (KS1 - KS3)' },
+        ],
+        axis: {
+            x: {
+                grid: { show: true },
+                tick: { spacing: 1 }
+            },
+            y: {
+                min: 0,
+                grid: { show: true },
+                tick: { spacing: 200 }
+            },
+        }
+    }
+}) }}
