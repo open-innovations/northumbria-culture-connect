@@ -42,7 +42,10 @@ description: |
 		max: 100,
         category: 'source',
         series: [
-            { title: 'Funding Source', value: 'percentage' }
+        { 
+            title: 'Funding Source', 
+            value: 'percentage'
+        }
         ],
         axis: {
 		    x: {
@@ -65,7 +68,13 @@ description: |
         height: 400, 
         width: 800,
         series: [
-            { title: 'Science Centre General Admission', x: 'Date', y: 'Science Centre General Admission' }
+            { title: 'Science Centre General Admission', 
+            x: 'Date', 
+            y: 'Science Centre General Admission' ,
+            line: {
+                curvature: 0.5
+            }
+            }
         ],
         axis: {
             x: {
@@ -89,11 +98,11 @@ description: |
         height: 400, 
         width: 800,
         series: [
-            { title: 'Schools - KS4 and Post 16 Workshop', x: 'Date', y: 'Schools - KS4 and Post 16 Workshop' },
-            { title: 'Schools - Outreach', x: 'Date', y: 'Schools - Outreach' },
-            { title: 'Schools - Science Centre Only (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre Only (KS1 - KS3)' },
-            { title: 'Schools - Science Centre and Workshop (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre and Workshop (KS1 - KS3)' },
-            { title: 'Schools - Workshop Only (KS1 - KS3)', x: 'Date', y: 'Schools - Workshop Only (KS1 - KS3)' },
+            { title: 'Schools - KS4 and Post 16 Workshop', x: 'Date', y: 'Schools - KS4 and Post 16 Workshop', line: { curvature: 0.5 } },
+            { title: 'Schools - Outreach', x: 'Date', y: 'Schools - Outreach' , line: { curvature: 0.5 } },
+            { title: 'Schools - Science Centre Only (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre Only (KS1 - KS3)', line: { curvature: 0.5 }  },
+            { title: 'Schools - Science Centre and Workshop (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre and Workshop (KS1 - KS3)' , line: { curvature: 0.5 } },
+            { title: 'Schools - Workshop Only (KS1 - KS3)', x: 'Date', y: 'Schools - Workshop Only (KS1 - KS3)' , line: { curvature: 0.5 } },
         ],
         axis: {
             x: {
@@ -117,8 +126,8 @@ description: |
         height: 400, 
         width: 800,
         series: [
-            { title: 'Adult Event - Planetarium', x: 'Date', y: 'Adult Event - Planetarium' },
-            { title: 'Adult Event - Speakeasy', x: 'Date', y: 'Adult Event - Speakeasy' },
+            { title: 'Adult Event - Planetarium', x: 'Date', y: 'Adult Event - Planetarium', line: { curvature: 0.5 }  },
+            { title: 'Adult Event - Speakeasy', x: 'Date', y: 'Adult Event - Speakeasy', line: { curvature: 0.5 }  },
         ],
         axis: {
             x: {
@@ -136,14 +145,15 @@ description: |
 
 <h3>Exhibitions & Workshops</h3>
 
-{{ comp.oi.chart.line({
+{{ 
+    comp.oi.chart.line({
     config: {
         data: centre_for_life_participation,
         height: 400, 
         width: 800,
         series: [
-            { title: 'Ice Rink', x: 'Date', y: 'Ice Rink' },
-            { title: 'Santa Experience', x: 'Date', y: 'Santa Experience' },
+            { title: 'Ice Rink', x: 'Date', y: 'Ice Rink', line: { curvature: 0.5 }  },
+            { title: 'Santa Experience', x: 'Date', y: 'Santa Experience', line: { curvature: 0.5 }  },
         ],
         axis: {
             x: {
@@ -157,4 +167,5 @@ description: |
             },
         }
     }
-}) }}
+}) 
+}}

@@ -20,6 +20,8 @@ layout: template/base.vto
     Case Studies
 </h2>
 
+<p>A collection of datasets emerging from the Culture Connect Case Studies Research.</p>
+
 {{ comp UniformGrid }}
 {{ for page of search.pages('case-studies', 'priority=desc') }}
     {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
