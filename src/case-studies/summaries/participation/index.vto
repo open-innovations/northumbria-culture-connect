@@ -12,7 +12,7 @@ description: |
 
 <h2>Building a Taxonomy of Cultural Engagement</h2>
 
-<h3>What are the activities being offered by the sector?</h3>
+<h3>What are the activities being offered?</h3>
 
 
 <p>This page presents a taxonomy of cultural activities delivered by the pilot organisations, so that summaries and comparisons can be made across the sector.</p>
@@ -28,6 +28,15 @@ description: |
         <p class='bang'style='font-size:1.5rem;'>Event / Workshop</p>
     </li>
 </ul>
+
+
+<h2>Participation & Engagement</h2>
+
+<h3>Who are cultural organisations engaging with?</h3>
+
+<p>Below is a breakdown of the groups that organisations are targeting and engaging with. These groupings will enable other organisations across the sector to build and improve on their existing data collection on Participation & Engagement.</p>
+
+
 <ul class="grid centred">
     <li class="block">
         <p class='bang'style='font-size:1.5rem;'>Schools & Young People</p>
@@ -37,45 +46,6 @@ description: |
     </li>
     <li class="block">
         <p class='bang'style='font-size:1.5rem;'>General Admission & Footfall</p>
-    </li>
-</ul>
-
-<h3>Category Mapping</h3>
-
-<p>We are beginning to map the data received through these Case Studies into a shared taxonomy of cultural engagement, that can be used to draw comparisons and perform analysis across the sector.</p>
-
-
-<div style="display: flex; justify-content:center;">
-{{ comp.oi.table({
-    "config": {
-	"data": groupings,
-	"columns": [{
-			"name": "Category",
-			"mergerows": true
-		},{
-			"name": "Location",
-			"mergerows": true
-		},{
-			"name": "Activity"
-		}]
-    }
-}) }} 
-</div>
-
-
-<h2>Participation & Engagement</h2>
-
-<h3>Who are cultural organisations engaging with?</h3>
-
-<p>Below we have broken down the groups and demographics that cultural organisations are engaging with. This will enable other organisations across the sector to build and improve on their existing data collection on Participation & Engagement.</p>
-
-
-<ul class="grid centred">
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>Schools & Young People</p>
-    </li>
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>Community Engagement</p>
     </li>
 </ul>
 
@@ -90,7 +60,39 @@ description: |
         <p>Disadvantaged Communities</p>
         <p>Young People who are NEET</p>
     </li>
+    <li class="">
+        <p>All age groups</p>
+    </li>
 </ul>
+
+<h3>Category Mapping</h3>
+
+<p>We are beginning to map the data received through these Case Studies into a shared taxonomy of cultural engagement, that can be used to draw comparisons and perform analysis across the sector.</p>
+
+
+<div style="display: flex; justify-content:center;">
+{{ comp.oi.table({
+    "config": {
+	"data": groupings,
+	"columns": [{
+			"name": "Activity",
+			"mergerows": true
+		},{
+			"name": "Organisation",
+			"mergerows": true
+		},{
+			"name": "Engagement",
+            "mergerows": true
+		},{
+			"name": "Participation",
+            "mergerows": true
+		}]
+    }
+}) }} 
+</div>
+
+
+
 
 
 
