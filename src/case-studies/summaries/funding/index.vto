@@ -20,7 +20,7 @@ description: |
 
 {{ comp.oi.chart.bar({
 	config: {
-		data: percentage_income,
+		data: percentage_income.sort((a, b) => b['Earned income'] - a['Earned income']),
 		category: "Organisation",
 		width: 1000, 
 		height: 300,
@@ -31,11 +31,11 @@ description: |
 			position: "top"
 		},
 		series: [
-		{ title: 'Corporate sponsorships', value: 'Corporate sponsorships'},
 		{ title: 'Earned income', value: 'Earned income'},
+		{ title: 'Corporate sponsorships', value: 'Corporate sponsorships'},
 		{ title: 'Individual donations', value: 'Individual donations'},
+		{ title: 'Trusts and foundations', value: 'Trusts and foundations'},
 		{ title: 'Public funding', value: 'Public funding'},
-		{ title: 'Trusts and foundations', value: 'Trusts and foundations'}
 		],
 		axis: {
 			x: {
