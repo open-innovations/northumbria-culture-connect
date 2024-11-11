@@ -9,4 +9,52 @@ description: |
     A Case Study with the Northern Stage.
 ---
 
-<h2>TBC</h2>
+<h2>Organisation Overview</h2>
+
+{{ set northernStageData = org_list.find(org => org.Organisation === "Northern Stage") }}
+
+<ul class="grid centred">
+    <li class="block">
+        <p class="bang"style="font-size: 2.5rem;">{{ northernStageData['Type of organisation'] }}</p>
+        <p>Type of organisation</p>
+    </li>
+    <li class="block">
+        <p class="bang"style="font-size: 2.5rem;">{{ northernStageData['Postcode'] }}</p>
+        <p>Postcode</p>
+    </li>
+    <li class="block">
+        <p class="bang" style="font-size: 2.5rem;">{{ northernStageData['Number of employees'] }}</p>
+        <p>Number of employees</p>
+    </li>
+</ul>
+
+<h2>Sources of Income</h2>
+<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+
+{{ comp.oi.chart.bar({
+    config: {
+        data: northern_stage_income,
+        height: 275, 
+        width: 1000,
+		stacked: true, 
+		min: 0, 
+		max: 100,
+        category: 'source',
+        series: [
+        { 
+            title: 'Funding Source', 
+            value: 'percentage'
+        }
+        ],
+        axis: {
+		    x: {
+			    tick: {
+				    spacing: 10
+			}
+		}
+	}
+    }
+}) }}
+
+<h2>Participation</h2>
+<p>TBC</p>

@@ -1,8 +1,8 @@
-Activity,Organisation,Engagement,Participation
+Activity,Location,Engagement,Participation
 Film Screening,Seven Stories,Performance,General Admission
 Performance,TWAM,Performance,General Admission
-Adult Event - Planetarium, Centre for Life, Exhibition, Adults
-Adult Event - Speakeasy, Centre for Life, Event / Workshops, Adults
+Adult Event - Planetarium,Centre for Life,Exhibition,Adults
+Adult Event - Speakeasy,Centre for Life,Event / Workshops,Adults
 Formal Learning,TWAM,Exhibition,Children
 Storytime,Seven Stories,Event / Workshops,Children
 Formal Learning,TWAM,School Engagement / Young People,Children
@@ -13,8 +13,8 @@ Afternoon Tea,Seven Stories,Event / Workshops,Children
 Santa Experience,Centre for Life,Event / Workshops,Children
 Schools - Outreach,Centre for Life,School Engagement / Young People,Children
 Home Educator Day,Centre for Life,School Engagement / Young People,Children
-Storytime,Seven Stories,Other / Uncategorised,Children
-Learning & Community,Seven Stories,Community Engagement,Children,Disadvantaged Communities
+Storytime,Seven Stories,Other / Uncategorised,Children 
+Learning & Community,Seven Stories,Community Engagement,"Children,Disadvantaged Communities"
 Community programmes,TWAM,Community Engagement,Disadvantaged Communities
 Ice Rink,Centre for Life,Event / Workshops,General Admission
 Workshop/ Event,Seven Stories,Event / Workshops,General Admission
