@@ -1,0 +1,33 @@
+<div>
+<h3>{{ title }}</h3>
+{{ comp.oi.chart.line({ config: {
+    data: data,
+    series: [
+        {
+            title: 'National (England)',
+            x: 'time_period',
+            y: metric,
+            where: '"geo_code"="E92000001"'
+        },
+        {
+            title: 'Regional (North East)',
+            x: 'time_period', 
+            y: metric,
+            where: '"geo_code"="E12000001"'
+        },
+        {
+            title: 'Local authority (Newcastle upon Tyne)',
+            x: 'time_period', 
+            y: metric,
+            where: '"geo_code"="E08000021"'
+        }
+    ],
+    axis: {
+        x: {},
+        y: {
+            min: 0,
+            max: 100,
+        }
+    }
+}}) }}
+</div>

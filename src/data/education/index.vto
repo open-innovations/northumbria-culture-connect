@@ -1,0 +1,24 @@
+---
+title: Education data
+description: |
+    Data about education outcomes for Newcastle.
+tags:
+    - open
+    - data
+    - infrastructure
+    - education
+draft: true
+---
+
+<section class="grid">
+{{ comp.ResultsChart({
+    data: ks2_reading,
+    title: 'Percentage meeting expected standards in reading',
+    metric: 'pt_read_met_expected_standard',
+}) }}
+{{ comp.ResultsChart({
+    data: ks2_reading,
+    title: 'Percentage meeting expected standards in grammar, punctuation and spelling',
+    metric: 'pt_gps_met_expected_standard',
+}) }}
+</section>

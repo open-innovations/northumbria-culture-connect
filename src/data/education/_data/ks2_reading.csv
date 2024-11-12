@@ -1,0 +1,28 @@
+time_period,geo_code,geo_name,pt_read_met_higher_standard,pt_read_met_expected_standard,pt_gps_met_expected_standard
+201516,E92000001,England,19,66,73
+201617,E92000001,England,25,72,77
+201718,E92000001,England,28,76,78
+201819,E92000001,England,27,74,79
+201920,E92000001,England,,,
+202021,E92000001,England,,,
+202122,E92000001,England,28,75,73
+202223,E92000001,England,29,73,73
+202324,E92000001,England,28,74,72
+201516,E12000001,North East,19,68,74
+201617,E12000001,North East,24,74,79
+201718,E12000001,North East,29,78,80
+201819,E12000001,North East,26,75,79
+201920,E12000001,North East,,,
+202021,E12000001,North East,,,
+202122,E12000001,North East,27,75,72
+202223,E12000001,North East,28,74,73
+202324,E12000001,North East,27,74,72
+201516,E08000021,Newcastle upon Tyne,20,68,73
+201617,E08000021,Newcastle upon Tyne,24,72,78
+201718,E08000021,Newcastle upon Tyne,30,78,81
+201819,E08000021,Newcastle upon Tyne,27,73,78
+201920,E08000021,Newcastle upon Tyne,,,
+202021,E08000021,Newcastle upon Tyne,,,
+202122,E08000021,Newcastle upon Tyne,29,74,73
+202223,E08000021,Newcastle upon Tyne,29,74,74
+202324,E08000021,Newcastle upon Tyne,27,74,72

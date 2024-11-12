@@ -15,7 +15,7 @@ import transformImages from 'lume/plugins/transform_images.ts';
 
 // OI plugins
 import autoDependency from 'https://deno.land/x/oi_lume_utils@v0.4.0/processors/auto-dependency.ts';
-import oiLumeViz from "https://deno.land/x/oi_lume_viz@v0.16.2/mod.ts";
+import oiLumeViz from "https://deno.land/x/oi_lume_viz@v0.16.5/mod.ts";
 import oiVizConfig from "./oi-viz-config.ts"; // Get our OI Lume Viz config
 
 //PostCSS plugins
