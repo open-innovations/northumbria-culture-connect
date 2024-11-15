@@ -1,0 +1,7 @@
+{{ set pages = search.pages(searchTerm) }}
+
+{{ comp UniformGrid }}
+{{ for page of pages }}
+{{ comp.PageLink({ page, config: { headingLevel: 3 } })}}
+{{ /for }}
+{{ /comp }}
