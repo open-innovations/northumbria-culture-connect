@@ -16,48 +16,12 @@ description: |
 
 {{ set centreForLifeData = org_list.find(org => org.Organisation === "Centre For Life") }}
 
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang"style="font-size: 2.5rem;">{{ centreForLifeData['Type of organisation'] }}</p>
-        <p>Type of organisation</p>
-    </li>
-    <li class="block">
-        <p class="bang"style="font-size: 2.5rem;">{{ centreForLifeData['Postcode'] }}</p>
-        <p>Postcode</p>
-    </li>
-    <li class="block">
-        <p class="bang" style="font-size: 2.5rem;">{{ centreForLifeData['Number of employees'] }}</p>
-        <p>Number of employees</p>
-    </li>
-</ul>
+{{ comp.OrgCard({ orgData: centreForLifeData })}}
 
 <h2>Sources of Income</h2>
 <p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
 
-{{ comp.oi.chart.bar({
-    config: {
-        data: centre_for_life_income,
-        height: 275, 
-        width: 1000,
-		stacked: true, 
-		min: 0, 
-		max: 100,
-        category: 'source',
-        series: [
-        { 
-            title: 'Funding Source', 
-            value: 'percentage'
-        }
-        ],
-        axis: {
-		    x: {
-			    tick: {
-				    spacing: 10
-			}
-		}
-	}
-    }
-}) }}
+{{ comp.OrgIncome({ incomeData: centre_for_life_income}) }}
 
 <h2>Participation</h2>
 <p>The charts below explore the number of people engaging with this organisation's activities over the course of a year, between September 2023 and September 2024.</p>

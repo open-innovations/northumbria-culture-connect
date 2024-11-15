@@ -1,0 +1,21 @@
+{{ comp.oi.chart.bar({
+    config: {
+        data: incomeData,
+        height: 275, 
+        width: 1000,
+		stacked: true, 
+		min: 0, 
+		max: 100,
+        category: 'source',
+        series: [
+            { title: 'Funding Source', value: 'percentage' }
+        ],
+        axis: {
+		    x: {
+			    tick: {
+				    spacing: 10
+			}
+		}
+	}
+    }
+}) }}
