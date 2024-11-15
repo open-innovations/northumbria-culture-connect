@@ -17,11 +17,11 @@ layout: template/base.vto
 
 <p>A collection of datasets emerging from the Culture Connect Case Studies Research.</p>
 
-{{ comp UniformGrid }}
-{{ for page of search.pages('case-studies', 'priority=desc') }}
-    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-{{ /for }}
-{{ /comp }}
+{{ comp.DynamicGridList({
+    searchTerm: 'case-studies',
+    searchSort: 'priority=desc',
+    headingLevel: 3,
+})}}
 
 <h2>
     Funding Data
@@ -31,11 +31,12 @@ layout: template/base.vto
     Datasets related to funding of culture across the local authority.
 </p>
 
-{{ comp UniformGrid }}
-{{ for page of search.pages('data funding', 'priority=desc') }}
-    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-{{ /for }}
-{{ /comp }}
+{{ comp.DynamicGridList({
+    searchTerm: 'data funding',
+    searchSort: 'priority=desc',
+    headingLevel: 3,
+    hideTags: ['data'],
+})}}
 
 <h2>
     Participation Data
@@ -45,12 +46,12 @@ layout: template/base.vto
     Datasets related to participation in culture across the local authority.
 </p>
 
-{{ comp UniformGrid }}
-{{ for page of search.pages('data participation', 'priority=desc') }}
-    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-{{ /for }}
-{{ /comp }}
-
+{{ comp.DynamicGridList({
+    searchTerm: 'data participation',
+    searchSort: 'priority=desc',
+    headingLevel: 3,
+    hideTags: ['data'],
+})}}
 
 <h2>
     Data Infrastructure
@@ -60,12 +61,12 @@ layout: template/base.vto
     Data infrastructure relevant to the culture sector across the local authority.
 </p>
 
-{{ comp UniformGrid }}
-{{ for page of search.pages('data infrastructure', 'priority=desc') }}
-    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-{{ /for }}
-{{ /comp }}
-
+{{ comp.DynamicGridList({
+    searchTerm: 'data infrastructure',
+    searchSort: 'priority=desc',
+    headingLevel: 3,
+    hideTags: ['data'],
+})}}
 
 <h2>
     Reports
@@ -75,9 +76,8 @@ layout: template/base.vto
     Examples of reports and visualisation built using site data.
 </p>
 
-{{ comp UniformGrid }}
-{{ for page of search.pages('report', 'priority=desc') }}
-    {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
-{{ /for }}
-{{ /comp }}
-
+{{ comp.DynamicGridList({
+    searchTerm: 'report',
+    searchSort: 'priority=desc',
+    headingLevel: 3,
+})}}

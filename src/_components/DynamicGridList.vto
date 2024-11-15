@@ -2,6 +2,6 @@
 
 {{ comp UniformGrid }}
 {{ for page of pages }}
-{{ comp.PageLink({ page, config: { headingLevel: headingLevel || 3 } })}}
+{{ comp.PageLink({ page, config: { headingLevel: headingLevel || 3, hideTags } })}}
 {{ /for }}
 {{ /comp }}
