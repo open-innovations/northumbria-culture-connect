@@ -8,6 +8,7 @@ import esbuild from 'lume/plugins/esbuild.ts';
 import metas from "lume/plugins/metas.ts";
 import postcss from 'lume/plugins/postcss.ts';
 import sheets from "lume/plugins/sheets.ts";
+import sitemap from "lume/plugins/sitemap.ts";
 import svgo from 'lume/plugins/svgo.ts';
 import transformImages from 'lume/plugins/transform_images.ts';
 
@@ -36,7 +37,11 @@ site.use(date());
 site.use(postcss({
     plugins: [nesting()],
 }));
+
+// SEO plugins
 site.use(metas());
+site.use(sitemap());
+
 site.use(transformImages());
 site.use(svgo());
 site.use(oiLumeViz(oiVizConfig));
