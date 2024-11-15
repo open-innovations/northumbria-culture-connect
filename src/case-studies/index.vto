@@ -20,7 +20,7 @@ description: |
 <h2>Organisations</h2>
 
 {{ comp UniformGrid }}
-{{ for page of search.pages('pilot-organisations', 'priority=desc') }}
+{{ for page of search.pages('case-study', 'priority=desc') }}
     {{ comp.PageLink({ page, config: { headingLevel: 3, hideTags: ['data'] } }) }}
 {{ /for }}
 {{ /comp }}
