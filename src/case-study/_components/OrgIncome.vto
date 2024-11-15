@@ -1,21 +1,21 @@
-{{ comp.oi.chart.bar({
+{{>
+    const total = incomeData.reduce((sum, { amount }) => sum + amount, 0);
+    const waffleData = incomeData.reduce((res, { source, amount }) => ({ ...res, [source]: amount }), {});
+    const series = incomeData.map(({ source }) => ({}));
+}}
+{{ comp.oi.chart.waffle({
     config: {
-        data: incomeData,
-        height: 275, 
+        data: [ waffleData ],
         width: 1000,
-		stacked: true, 
-		min: 0, 
-		max: 100,
-        category: 'source',
+        size: [20, 5],
+        total: total,
         series: [
-            { title: 'Funding Source', value: 'percentage' }
+            { value: 'Earned income', colour: '#8F3E8D' },
+            { value: 'Individual donations', colour: '#33A38C' },
+            { value: 'Corporate sponsorships', colour: '#00478A' },
+            { value: 'Trusts and foundations', colour: '#005837' },
+            { value: 'Public funding', colour: '#F25C29' },
         ],
-        axis: {
-		    x: {
-			    tick: {
-				    spacing: 10
-			}
-		}
-	}
+        legend: { show: true },
     }
 }) }}
