@@ -1,7 +1,7 @@
-{{ set pages = search.pages(searchTerm) }}
+{{ set pages = search.pages(searchTerm, searchSort || "title") }}
 
 {{ comp UniformGrid }}
 {{ for page of pages }}
-{{ comp.PageLink({ page, config: { headingLevel: 3 } })}}
+{{ comp.PageLink({ page, config: { headingLevel: headingLevel || 3 } })}}
 {{ /for }}
 {{ /comp }}
