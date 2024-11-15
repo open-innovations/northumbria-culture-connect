@@ -1,0 +1,12 @@
+---
+title: Tag index
+layout: template/base.vto
+tags:
+    - tags-index
+description: |
+    The pages in the Observatory are tagged. Explore pages sharing common tags.
+---
+
+{{ description |> md }}
+
+{{ comp.PageTags({ tags: search.values('tags') }) }}

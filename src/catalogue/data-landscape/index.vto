@@ -1,7 +1,10 @@
 ---
 title: Data Landscape
-url: /
 layout: template/base.vto
+tags:
+    - data-landscape
+description: |
+    The data landscape collects sources of open and shared data about the 
 ---
 <h1>Data Landscape</h1>
 <p>
@@ -10,18 +13,6 @@ layout: template/base.vto
 </p>
 <p>Note: This is a prototype tool and is under active development. If there are any data sources missing that you think should be presented on this page, please let us know. 
 </p>
-
-<h2>
-    Case Studies
-</h2>
-
-<p>A collection of datasets emerging from the Culture Connect Case Studies Research.</p>
-
-{{ comp.DynamicGridList({
-    searchTerm: 'case-studies',
-    searchSort: 'priority=desc',
-    headingLevel: 3,
-})}}
 
 <h2>
     Funding Data

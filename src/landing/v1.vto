@@ -1,3 +1,8 @@
+---
+url: /
+---
+{{ description |> md }}
+
 <section>
     
     <h2>Headline metrics</h2>
@@ -28,4 +33,9 @@
     <h2>Case Studies</h2>
     
     {{ comp.DynamicGridList({ searchTerm: 'case-study' }) }}
+</section>
+
+<section>
+    <h2>Explore further</h2>
+    {{ comp.DynamicGridList({ searchTerm: 'data-landscape|tags-index' }) }}
 </section>
