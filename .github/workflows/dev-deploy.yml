@@ -16,12 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DENO_ENV: dev
-      DENO_DIR: $RUNNER_TEMP${{ runner.os == 'Windows' && '\\' || '/'  }}deno_cache
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Setup environment
+        run: |
+          echo "DENO_DIR=$RUNNER_TEMP${{ runner.os == 'Windows' && '\\' || '/'  }}deno_cache" >> $GITHUB_ENV
 
       - name: Setup deno
         uses: denoland/setup-deno@v1
