@@ -2,6 +2,7 @@ import lume from "lume/mod.ts";
 
 // Lume plugins
 import jsonLoader from "lume/core/loaders/json.ts";
+import textLoader from "lume/core/loaders/text.ts";
 import base_path from "lume/plugins/base_path.ts";
 import date from 'lume/plugins/date.ts';
 import esbuild from 'lume/plugins/esbuild.ts';
@@ -59,6 +60,7 @@ site.use(esbuild({
 // site.use(mermaid());
 
 site.loadData(['.geojson'], jsonLoader);
+site.loadData(['.text', '.txt', '.md'], textLoader);
 
 site.filter("toLocaleString", (value) => parseFloat(value).toLocaleString());
 

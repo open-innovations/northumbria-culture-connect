@@ -38,3 +38,7 @@
   filter: drop-shadow(0 0 1px #b8daff);
 }
 
+.emphasise-first > *:first-child {
+  font-size: 1.2em;
+  font-weight: 700;
+}
