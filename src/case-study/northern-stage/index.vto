@@ -23,31 +23,12 @@ tags:
 
 <h2>Participation</h2>
 
-{{ 
-    comp.oi.chart.line({
-    config: {
-        data: northern_stage_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Child / Under 21', x: 'Date', y: 'Child / Under 21', line: { curvature: 0.5 }  },
-            { title: 'School', x: 'Date', y: 'School', line: { curvature: 0.5 }  },
-            { title: 'All other', x: 'Date', y: 'All other', line: { curvature: 0.5 }  },
-            { title: 'Participation', x: 'Date', y: 'Participation', line: { curvature: 0.5 }  },
+{{ comp.LineChart( {
+    data: northern_stage_participation,
+    series: [
+            { title: 'Child / Under 21', x: 'decimal_year', y: 'Child / Under 21', line: { curvature: 0.5 }  },
+            { title: 'School', x: 'decimal_year', y: 'School', line: { curvature: 0.5 }  },
+            { title: 'All other', x: 'decimal_year', y: 'All other', line: { curvature: 0.5 }  },
+            { title: 'Participation', x: 'decimal_year', y: 'Participation', line: { curvature: 0.5 }  },
         ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 1000 }
-            },
-        }
-    }
-}) 
-}}
+} ) }}

@@ -26,56 +26,23 @@ tags:
 
 <h3>Total Footfall<h3>
 
-{{ comp.oi.chart.line({
-    config: {
-        data: twam_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Total footfall', x: 'Date', y: 'Total footfall', line: { curvature: 0.5 }}
-        ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 10000 }
-            },
-        }
-    }
-}) }}
+{{ comp.LineChart( {
+    data: twam_participation,
+    series: [
+            { title: 'Total footfall', x: 'decimal_year', y: 'Total footfall', line: { curvature: 0.5 }}
+    ],
+} ) }}
 
 
 <h3>Participation by Programme<h3>
 
-{{ comp.oi.chart.line({
-    config: {
-        data: twam_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Community programmes', x: 'Date', y: 'Community programmes', line: { curvature: 0.5 } },
-            { title: 'Formal learning', x: 'Date', y: 'Formal learning', line: { curvature: 0.5 } },
-            { title: 'Informal learning', x: 'Date', y: 'Informal learning', line: { curvature: 0.5 } }
-        ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 5000 }
-            },
-        }
-    }
-}) }}
+{{ comp.LineChart( {
+    data: twam_participation,
+    series: [
+            { title: 'Community programmes', x: 'decimal_year', y: 'Community programmes', line: { curvature: 0.5 } },
+            { title: 'Formal learning', x: 'decimal_year', y: 'Formal learning', line: { curvature: 0.5 } },
+            { title: 'Informal learning', x: 'decimal_year', y: 'Informal learning', line: { curvature: 0.5 } }
+    ],
+} ) }}
+
 

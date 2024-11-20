@@ -28,118 +28,51 @@ description: |
 
 <h3>Science Centre General Admission</h3>
 
-{{ comp.oi.chart.line({
-    config: {
-        data: centre_for_life_participation,
-        height: 400, 
-        width: 800,
-        series: [
+{{ comp.LineChart( {
+    data: centre_for_life_participation,
+    series: [
             { title: 'Science Centre General Admission', 
-            x: 'Date', 
+            x: 'decimal_year', 
             y: 'Science Centre General Admission' ,
             line: {
                 curvature: 0.5
             }
             }
         ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 10000 }
-            },
-        }
-    }
-}) }}
+} ) }}
 
 <h3>School Engagement</h3>
 
-{{ comp.oi.chart.line({
-    config: {
-        data: centre_for_life_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Schools - KS4 and Post 16 Workshop', x: 'Date', y: 'Schools - KS4 and Post 16 Workshop', line: { curvature: 0.5 } },
-            { title: 'Schools - Outreach', x: 'Date', y: 'Schools - Outreach' , line: { curvature: 0.5 } },
-            { title: 'Schools - Science Centre Only (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre Only (KS1 - KS3)', line: { curvature: 0.5 }  },
-            { title: 'Schools - Science Centre and Workshop (KS1 - KS3)', x: 'Date', y: 'Schools - Science Centre and Workshop (KS1 - KS3)' , line: { curvature: 0.5 } },
-            { title: 'Schools - Workshop Only (KS1 - KS3)', x: 'Date', y: 'Schools - Workshop Only (KS1 - KS3)' , line: { curvature: 0.5 } },
+
+{{ comp.LineChart( {
+    data: centre_for_life_participation,
+    series: [
+            { title: 'Schools - KS4 and Post 16 Workshop', x: 'decimal_year', y: 'Schools - KS4 and Post 16 Workshop', line: { curvature: 0.5 } },
+            { title: 'Schools - Outreach', x: 'decimal_year', y: 'Schools - Outreach' , line: { curvature: 0.5 } },
+            { title: 'Schools - Science Centre Only (KS1 - KS3)', x: 'decimal_year', y: 'Schools - Science Centre Only (KS1 - KS3)', line: { curvature: 0.5 }  },
+            { title: 'Schools - Science Centre and Workshop (KS1 - KS3)', x: 'decimal_year', y: 'Schools - Science Centre and Workshop (KS1 - KS3)' , line: { curvature: 0.5 } },
+            { title: 'Schools - Workshop Only (KS1 - KS3)', x: 'decimal_year', y: 'Schools - Workshop Only (KS1 - KS3)' , line: { curvature: 0.5 } },
         ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 200 }
-            },
-        }
-    }
-}) }}
+} ) }}
+
 
 <h3>Adult Events</h3>
 
-{{ comp.oi.chart.line({
-    config: {
-        data: centre_for_life_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Adult Event - Planetarium', x: 'Date', y: 'Adult Event - Planetarium', line: { curvature: 0.5 }  },
-            { title: 'Adult Event - Speakeasy', x: 'Date', y: 'Adult Event - Speakeasy', line: { curvature: 0.5 }  },
+{{ comp.LineChart( {
+    data: centre_for_life_participation,
+    series: [
+            { title: 'Adult Event - Planetarium', x: 'decimal_year', y: 'Adult Event - Planetarium', line: { curvature: 0.5 }  },
+            { title: 'Adult Event - Speakeasy', x: 'decimal_year', y: 'Adult Event - Speakeasy', line: { curvature: 0.5 }  },
         ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 200 }
-            },
-        }
-    }
-}) }}
+} ) }}
 
 <h3>Exhibitions & Workshops</h3>
 
-{{ 
-    comp.oi.chart.line({
-    config: {
-        data: centre_for_life_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Ice Rink', x: 'Date', y: 'Ice Rink', line: { curvature: 0.5 }  },
-            { title: 'Santa Experience', x: 'Date', y: 'Santa Experience', line: { curvature: 0.5 }  },
+{{ comp.LineChart( {
+    data: centre_for_life_participation,
+    series: [
+            { title: 'Ice Rink', x: 'decimal_year', y: 'Ice Rink', line: { curvature: 0.5 }  },
+            { title: 'Santa Experience', x: 'decimal_year', y: 'Santa Experience', line: { curvature: 0.5 }  },
         ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 1000 }
-            },
-        }
-    }
-}) 
-}}
+} ) }}
+

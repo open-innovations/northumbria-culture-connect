@@ -1,0 +1,37 @@
+
+{{ comp.oi.chart.line({
+    config: {
+        data: data,
+        width: 900,
+        height: 400,
+        columns: [
+            {
+                name: "decimal_year",
+                template: `{{ Date | strptime("%Y-%m-%d") | decimalYear() }}`
+            },
+        ],
+        series: series,
+        axis: {
+            x: {
+                ticks: [
+                    { value: 2023.0, label: 'Jan 2023' },
+                    { value: 2023.16, label: 'Mar 2023' },
+                    { value: 2023.33, label: 'May 2023' },
+                    { value: 2023.5, label: 'Jul 2023' },
+                    { value: 2023.66, label: 'Sep 2023' },
+                    { value: 2023.83, label: 'Nov 2023' },
+                    { value: 2024.0, label: 'Jan 2024' },
+                    { value: 2024.16, label: 'Mar 2024' },
+                    { value: 2024.33, label: 'May 2024' },
+                    { value: 2024.5, label: 'Jul 2024' },
+                    { value: 2024.66, label: 'Sep 2024' },
+                    { value: 2024.83, label: 'Nov 2024' },
+                ],
+            },
+            y: {
+                grid: { show: true, 'stroke-width': 0.5 },        
+                min: 0,
+            },
+        },
+    }
+}) }}

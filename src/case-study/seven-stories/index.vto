@@ -25,57 +25,23 @@ description: |
 
 <h3>Total Footfall<h3>
 
-{{ comp.oi.chart.line({
-    config: {
-        data: seven_stories_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Footfall', x: 'Date', y: 'Footfall', line: { curvature: 0.5 } }
-        ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 10000 }
-            },
-        }
-    }
-}) }}
+{{ comp.LineChart( {
+    data: seven_stories_participation,
+    series: [
+            { title: 'Footfall', x: 'decimal_year', y: 'Footfall', line: { curvature: 0.5 } }
+    ],
+} ) }}
 
 <h3>Participation by Programme</h3>
 
-{{ comp.oi.chart.line({
-    config: {
-        data: seven_stories_participation,
-        height: 400, 
-        width: 800,
-        series: [
-            { title: 'Afternoon Tea', x: 'Date', y: 'Afternoon Tea', line: { curvature: 0.5 } },
-            { title: 'Film Screening', x: 'Date', y: 'Film Screening', line: { curvature: 0.5 }},
-            { title: 'Learning & Community', x: 'Date', y: 'Learning & Community', line: { curvature: 0.5 } },
-            { title: 'Performance', x: 'Date', y: 'Performance', line: { curvature: 0.5 } },
-            { title: 'Storytime', x: 'Date', y: 'Storytime', line: { curvature: 0.5 } },
-            { title: 'Workshop/Event', x: 'Date', y: 'Workshop/Event' , line: { curvature: 0.5 }},
-        ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 },
-                min: 0,
-                max: 12
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                tick: { spacing: 200 }
-            },
-        }
-    }
-}) }}
+{{ comp.LineChart( {
+    data: seven_stories_participation,
+    series: [
+            { title: 'Afternoon Tea', x: 'decimal_year', y: 'Afternoon Tea', line: { curvature: 0.5 } },
+            { title: 'Film Screening', x: 'decimal_year', y: 'Film Screening', line: { curvature: 0.5 }},
+            { title: 'Learning & Community', x: 'decimal_year', y: 'Learning & Community', line: { curvature: 0.5 } },
+            { title: 'Performance', x: 'decimal_year', y: 'Performance', line: { curvature: 0.5 } },
+            { title: 'Storytime', x: 'decimal_year', y: 'Storytime', line: { curvature: 0.5 } },
+            { title: 'Workshop/Event', x: 'decimal_year', y: 'Workshop/Event' , line: { curvature: 0.5 }},
+    ],
+} ) }}
