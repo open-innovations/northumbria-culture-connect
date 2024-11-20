@@ -55,7 +55,7 @@ Benefits of using Companies House data include:
    to identify organisations working the sector who do not appear
    in the funding streams being used.
 
-TKTKTK The process for building the organisation reference table
+The process for building the organisation reference table
 
 ## Create the combined list
 
