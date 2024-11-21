@@ -16,10 +16,10 @@ url: /
                 headline: "Open datasets",
                 number: search.pages('open data').length,
             }) }}
+            {{ set totalFunding = 1234567 |> displayCurrency }}
             {{ comp.Headline({
                 headline: "Total funding",
-                // TODO allow currency formatter
-                number: 1234567
+                number: totalFunding
             }) }}
         </ul>
     
