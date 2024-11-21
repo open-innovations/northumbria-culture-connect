@@ -1,90 +1,93 @@
 ---
-title: Participation & Engagement
+title: Taxonomy of Cultural Engagement
 
 tags:
     - work-in-progress
-    - summaries
 
 description: |
-        Data collected through Culture Connect Case Studies Research on participation and engagement in the cultural sector.
+    Data collected through Culture Connect Case Studies Research on participation and engagement in the cultural sector.
 ---
 
+{{ include "./_partials/overview.md" |> md}}
 
-<h2>Building a Taxonomy of Cultural Engagement</h2>
+<h2>What are the types of activities being offered?</h2>
 
-<h3>What are the activities being offered?</h3>
-
-
-<p>This page presents a taxonomy of cultural activities delivered by the pilot organisations, so that summaries and comparisons can be made across the sector.</p>
+<p>
+    The first dimension to consider is the category of activity that is being offered by the
+    organisation. This is useful as it helps with aggregating information about cultural
+    activities across the geographic area, and potentially underpinning future developments
+    such as impact models.
+</p>
 
 <ul class="grid centred">
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>Performance</p>
-    </li>
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>Exhibition</p>
-    </li>
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>Event / Workshop</p>
-    </li>
+    {{# Edit these in ./_data/taxonomy.yml #}}
+    {{ for ac of taxonomy.activity_category }}
+        <li class="block">
+            <p class='bang'style='font-size:1.5rem;'>{{ ac.name }}</p>
+        </li>
+    {{ /for }}
+</ul>
+
+<h2>Who are cultural organisations engaging with?</h2>
+
+<p>
+    Below is a breakdown of the groups that organisations are targeting and engaging with.
+    These groupings will enable other organisations across the sector to build and improve
+    on their existing data collection on Participation & Engagement.
+</p>
+
+<ul class="grid centred">
+    {{# Edit these in ./_data/taxonomy.yml #}}
+    {{ for a of taxonomy.audience }}
+        <li class="block">
+            <p class='bang' style='font-size:1.5rem;'>{{ a.name }}</p>
+            {{ if a.children }}
+            <ul class="grid centred">
+            {{ for c of a.children }}
+                <li>{{ c.name }}</li>
+            {{ /for }}
+            </ul>
+            {{ /if }}
+        </li>
+    {{ /for }}
 </ul>
 
 
-<h2>Participation & Engagement</h2>
+<h2>Category Mapping</h2>
 
-<h3>Who are cultural organisations engaging with?</h3>
-
-<p>Below is a breakdown of the groups that organisations are targeting and engaging with. These groupings will enable other organisations across the sector to build and improve on their existing data collection on Participation & Engagement.</p>
-
-
-<ul class="grid centred">
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>Schools & Young People</p>
-    </li>
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>Community Engagement</p>
-    </li>
-    <li class="block">
-        <p class='bang'style='font-size:1.5rem;'>General Admission & Footfall</p>
-    </li>
-</ul>
-
-<ul class="grid centred">
-    <li class="">
-        <p>Pre-school Children</p>
-        <p>Key Stage 1 - 3</p>
-        <p>Key Stage 4 & GCSE</p>
-        <p>College / Sixth Form & A Level</p>
-    </li>
-    <li class="">
-        <p>Disadvantaged Communities</p>
-        <p>Young People who are NEET</p>
-    </li>
-    <li class="">
-        <p>All age groups</p>
-    </li>
-</ul>
-
-<h3>Category Mapping</h3>
-
-<p>We are beginning to map the data received through these Case Studies into a shared taxonomy of cultural engagement, that can be used to draw comparisons and perform analysis across the sector.</p>
+<p>
+    We are beginning to map the data received through these Case Studies into a shared taxonomy
+    of cultural engagement, that can be used to draw comparisons and perform analysis across
+    the sector.
+</p>
 
 
 <div style="display: flex; justify-content:center;">
+
 {{ comp.oi.table({
     "config": {
-	"data": groupings,
+	"data": groupings.toSorted((a, b) => {
+                if (a.Organisation < b.Organisation) return -1;
+                if (a.Organisation > b.Organisation) return 1;
+                if (a.Audience < b.Audience ) return -1;
+                if (a.Audience > b.Audience ) return 1;
+                if (a['Activity category'] < b['Activity category'] ) return -1;
+                if (a['Activity category'] > b['Activity category'] ) return 1;
+                if (a.Activity < b.Activity ) return -1;
+                if (a.Activity > b.Activity ) return 1;
+                return 0;
+            }),
 	"columns": [{
-			"name": "Activity",
-			"mergerows": true
-		},{
 			"name": "Organisation",
 			"mergerows": true
 		},{
-			"name": "Engagement",
+			"name": "Activity",
+			"mergerows": true
+		},{
+			"name": "Activity category",
             "mergerows": true
 		},{
-			"name": "Participation",
+			"name": "Audience",
             "mergerows": true
 		}]
     }
@@ -92,7 +95,14 @@ description: |
 </div>
 
 
-
+{{> console.log(
+        groupings.toSorted((a, b) => {
+            if (a.Organisation < b.Organisation) {
+                return -1;
+            }
+        })
+    )
+}}
 
 
 
