@@ -10,6 +10,7 @@ activity_category:
 audience:
   - name: General admission
   - name: Adults
+  - name: Children
   - name: Families
   - name: Seniors
   - name: Schools & young people
