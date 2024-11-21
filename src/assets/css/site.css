@@ -1,6 +1,8 @@
 /* Import auto-generated components css file */
 @import 'css/_components.css';
 
+@import 'css/colours.css';
+
 @import 'css/base.css';
 
 @import 'css/fonts.css';

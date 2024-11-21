@@ -1,60 +1,55 @@
 ---
 url: /
 ---
-<section class="emphasise-first">
-{{ description |> md }}
+{{ comp Hero }}{{ content_block.hero |> md }}{{ /comp }}
 
-{{ content_block.site_introduction |> md }}
-</section>
-
-<section>
+<main class="padded">
+    <section>
+        {{ content_block.headlines |> md }}
     
-    <h2>Headline metrics</h2>
-
-    {{ content_block.headlines |> md }}
-
-    <ul class="grid centred">
-        {{ comp.Headline({
-            headline: "Pilot organisations",
-            number: search.pages('pilot-organisations').length,
-        }) }}
-        {{ comp.Headline({
-            headline: "Open datasets",
-            number: search.pages('open data').length,
-        }) }}
-        {{ comp.Headline({
-            headline: "Total funding",
-            // TODO allow currency formatter
-            number: 1234567
-        }) }}
-    </ul>
-
-</section>
-
-
-<hr>
-
-<section>
-    <h2>Insights</h2>
+        <ul class="grid centred">
+            {{ comp.Headline({
+                headline: "Pilot organisations",
+                number: search.pages('pilot-organisations').length,
+            }) }}
+            {{ comp.Headline({
+                headline: "Open datasets",
+                number: search.pages('open data').length,
+            }) }}
+            {{ comp.Headline({
+                headline: "Total funding",
+                // TODO allow currency formatter
+                number: 1234567
+            }) }}
+        </ul>
     
-    {{ content_block.insights |> md }}
-
-    {{ comp.DynamicGridList({ searchTerm: 'insight' }) }}
-
-</section>
-
-<hr>
-
-<section>
-    <h2>Case Studies</h2>
-
-    {{ content_block.case_studies |> md }}
-
-    {{ comp.DynamicGridList({ searchTerm: 'case-study' }) }}
-</section>
-
-<section>
-    <h2>Explore further</h2>
-    {{# Add further URLs after separated by '|' characters #}}
-    {{ comp.DynamicGridList({ searchTerm: 'url=/tags/|/data-landscape/' }) }}
-</section>
+    </section>
+    
+    
+    <hr>
+    
+    <section>
+        <h2>Insights</h2>
+    
+        {{ content_block.insights |> md }}
+    
+        {{ comp.DynamicGridList({ searchTerm: 'insight' }) }}
+    
+    </section>
+    
+    <hr>
+    
+    <section>
+        <h2>Case Studies</h2>
+    
+        {{ content_block.case_studies |> md }}
+    
+        {{ comp.DynamicGridList({ searchTerm: 'case-study' }) }}
+    </section>
+    
+    <section>
+        <h2>Explore further</h2>
+        {{# Add further URLs after separated by '|' characters #}}
+        {{ comp.DynamicGridList({ searchTerm: 'url=/tags/|/data-landscape/' }) }}
+    </section>
+</main>

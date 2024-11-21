@@ -1,0 +1,16 @@
+---
+css: |
+    .comp-hero {
+        display: block;
+        color: black;
+        background-color: var(--colour-blue-25);
+        padding-block: 3rem;
+        padding-inline: 1.5rem;
+        & > * {
+            max-width: 80rem;
+        }
+    }
+---
+<section class="comp-hero">
+{{ content }}
+</section>
