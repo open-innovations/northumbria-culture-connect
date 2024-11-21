@@ -1,5 +1,10 @@
 :root { 
     --col-offwhite: #f8f8f8;
 
+    --colour-purple-25: #e3cfe2;
     --colour-blue-25: #bfd1e2;
+    --colour-teal-25: #cce7e2;
+    --colour-green-25: #bfd5cd;
+    --colour-orange-25: #fcd6c9;
+    --colour-pink-25: #f8c2d6;
 }

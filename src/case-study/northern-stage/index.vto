@@ -13,16 +13,9 @@ link: https://northernstage.co.uk/
 logo: /assets/images/case-study/northern-stage.svg
 ---
 
-<h2>Organisation Overview</h2>
-
 {{ set northernStageData = org_list.find(org => org.Organisation === "Northern Stage") }}
 
-{{ comp.OrgCard({ orgData: northernStageData })}}
-
-<h2>Sources of Income</h2>
-<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
-
-{{ comp.OrgIncome({ incomeData: northern_stage_income })}}
+{{ comp.OrgCard({ orgData: northernStageData, incomeData: northern_stage_income })}}
 
 <h2>Participation</h2>
 

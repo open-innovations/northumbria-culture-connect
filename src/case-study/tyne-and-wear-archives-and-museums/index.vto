@@ -13,16 +13,9 @@ link: https://www.twmuseums.org.uk/
 logo: /assets/images/case-study/logo-twam@2x.png
 ---
 
-<h2>Organisation Overview</h2>
-
 {{ set twamData = org_list.find(org => org.Organisation === "Twam") }}
 
-{{ comp.OrgCard({ orgData: twamData })}}
-
-<h2>Sources of Income</h2>
-<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
-
-{{ comp.OrgIncome({ incomeData: twam_income })}}
+{{ comp.OrgCard({ orgData: twamData, incomeData: twam_income })}}
 
 <h2>Participation</h2>
 <p>The charts below explore the number of people engaging with this organisation's activities over the course of a year, between September 2023 and September 2024.</p>

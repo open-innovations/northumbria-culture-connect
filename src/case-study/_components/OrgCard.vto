@@ -1,14 +1,40 @@
-<ul class="grid centred">
+---
+css: |
+    .comp-org-card {
+        padding: 1em;
+        background: var(--colour-teal-25);
+        box-sizing: border-box;
+        & .info-row {
+            display: flex;
+            gap: 1em;
+        }
+        & ul > * {
+            flex-basis: unset;
+        }
+    }
+---
+<aside class="comp-org-card">
+<h2>Organisation information</h2>
+<div class="info-row">
+<ul class="grid">
     <li class="block">
-        <p class="bang"style="font-size: 2.5rem;">{{ orgData['Type of organisation'] }}</p>
         <p>Type of organisation</p>
+        <p class="bang">{{ orgData['Type of organisation'] }}</p>
     </li>
     <li class="block">
-        <p class="bang"style="font-size: 2.5rem;">{{ orgData['Postcode'] }}</p>
         <p>Postcode</p>
+        <p class="bang"style="font-size: 2.5rem;">{{ orgData['Postcode'] }}</p>
     </li>
     <li class="block">
-        <p class="bang"style="font-size: 2.5rem;">{{ orgData['Number of employees'] }}</p>
         <p>Number of employees</p>
+        <p class="bang"style="font-size: 2.5rem;">{{ orgData['Number of employees'] }}</p>
     </li>
 </ul>
+
+<div>
+    <p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+
+    {{ comp.OrgIncome({ incomeData }) }}
+</div>
+</div>
+</aside>
