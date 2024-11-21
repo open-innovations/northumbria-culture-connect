@@ -1,4 +1,4 @@
-# Placing data about culture in the hands of those than can use it
+# Placing data about culture in the hands of those that can use it
 
 (DRAFT CONTENT)
 
