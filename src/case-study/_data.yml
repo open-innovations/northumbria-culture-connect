@@ -2,3 +2,5 @@ tags:
   - case-study
 description: |
   (DRAFT) Description of the case study.
+
+layout: template/case-study.vto

@@ -1,0 +1,5 @@
+Once upon a time in 2005, an idea was born on the banks of the Tyne for a magical place which would protect and celebrate children’s books and all that goes into creating them. Today, we’re a unique asset to the North East of England, and an integral part of the nation’s literary heritage that can be accessed for free, here in the heart of Newcastle upon Tyne.
+
+Our bustling seven-storey building attracts 75,000+ families every year, and has became a cultural hub within the Ouseburn Valley.
+
+We believe we have a special responsibility to put stories at the heart of every single childhood regardless of circumstance, background or reading ability. Extensive research has proven that nurturing reading for pleasure will have life-long benefits for a child. Seven Stories works across the North-East of England with schools and communities to promote and sustain reading for pleasure initiatives, improving literacy and oracy skills for children, young people and their families.

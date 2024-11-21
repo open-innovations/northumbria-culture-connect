@@ -1,0 +1,29 @@
+---
+layout: template/base.vto
+---
+
+{{ comp Hero }}
+    <div class="grid" style="align-items: center;">
+        <div>
+        <h1>{{ title }}</h1>
+        {{ if content_block?.about }}
+        <div class="emphasise-first">
+            {{ content_block.about |> md }}
+        </div>
+        </div>
+        {{ /if }}
+        <div style="flex-grow: 0; flex-basis: unset;">
+        <img src="{{ logo }}" inline/>
+        </div>
+    </div>
+    <div style="margin-top: 1rem;">
+        {{ comp.CallToAction({ link, text: `Visit ${ title } website &rarr;` }) }}
+    <div>
+
+{{ /comp }}
+
+<main class="padded">
+{{ description |> md }}
+{{ comp.PageTags({ tags }) }}
+{{ content }}
+</main>
