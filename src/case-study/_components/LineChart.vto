@@ -9,8 +9,15 @@
                 name: "decimal_year",
                 template: `{{ Date | strptime("%Y-%m-%d") | decimalYear() }}`
             },
+            {
+                name: "pretty_date",
+                template: `{{ Date | strptime("%Y-%m-%d") | strftime("${prettyDate || '%d %b %y'}") }}`
+            }
         ],
-        series: series,
+        series: series.map(s => ({
+            tooltip: seriesTooltip || "<b>{{ _title }}</b>\n{{ pretty_date }}: {{ _y }}",
+            ...s,
+        })),
         axis: {
             x: {
                 ticks: [

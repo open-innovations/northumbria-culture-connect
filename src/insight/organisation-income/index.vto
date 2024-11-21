@@ -15,7 +15,8 @@ description: |
 
 {{ comp.oi.chart.bar({
 	config: {
-		data: percentage_income.sort((a, b) => b['Earned income'] - a['Earned income']),
+		data: percentage_income
+            .sort((a, b) => b['Earned income'] - a['Earned income']),
 		category: "Organisation",
 		width: 1000, 
 		height: 300,

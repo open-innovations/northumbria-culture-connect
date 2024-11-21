@@ -1,7 +1,13 @@
 {{>
-    const total = incomeData.reduce((sum, { amount }) => sum + amount, 0);
-    const waffleData = incomeData.reduce((res, { source, amount }) => ({ ...res, [source]: amount }), {});
-    const series = incomeData.map(({ source }) => ({}));
+    const total = incomeData.reduce((sum, { percentage }) => sum + (percentage || 0), 0); 
+    const waffleData = incomeData.reduce((res, { source, percentage }) => ({
+        ...res,
+        [source]: parseFloat((percentage || 0).toFixed(2)) 
+    }), {});
+    const series = incomeData.map(({ source, percentage }) => ({
+        source,
+        percentage: parseFloat((percentage || 0).toFixed(2)) 
+    }));
 }}
 {{ comp.oi.chart.waffle({
     config: {
