@@ -73,4 +73,17 @@ site.filter('displayCurrency', (x: string) => parseInt(x)
 
 site.copy('assets/fonts/webfonts/');
 
+site.process(['.html'], (pages) => {
+    for (const page of pages) {
+        const svgs = page.document?.querySelectorAll<SVGElement>('.oi-waffle-chart svg');
+        for (const svg of svgs) {
+            // Remove all inline styles!
+            svg.removeAttribute('style');
+            svg.removeAttribute('width');
+            svg.removeAttribute('height');
+        }
+        page.content;
+    }
+}) 
+
 export default site;
