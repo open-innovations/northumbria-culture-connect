@@ -4,8 +4,13 @@ activity_category:
   - name: Workshop
   - name: Event
     comment: Vague?
+  - name: Outreach
+    description: Conducting activities in a setting close to the audience (e.g. Schools, Communities)
+  - name: Community Engagement
+    comment: Is this not just an event with a specific audience, or is this meant to be event in school?
   - name: School Engagement
     comment: Is this not just an event with a specific audience, or is this meant to be event in school?
+  - name: Other
 
 audience:
   - name: General admission
@@ -13,13 +18,13 @@ audience:
   - name: Children
   - name: Families
   - name: Seniors
-  - name: Schools & young people
+  - name: Schools
     children:
       - name: Pre-school
       - name: Key Stage 1 - 3
-      - name: Key Stage 4 & GCSE
-      - name: College / Sixth Form & A Level
-  - name: Named communities
+      - name: Key Stage 4
+      - name: Post-16
+  - name: Communities
     children:
       - name: Disadvantaged communities
       - name: Young people who are NEET

@@ -61,22 +61,42 @@ description: |
     the sector.
 </p>
 
+<style>
+    .invalid {
+        color: red;
+    }
+</style>
+
 
 <div style="display: flex; justify-content:center;">
+
+{{> function markInvalid(valid) {
+    return (value) => valid.includes(value) ? value : `<span class="invalid">${value}</span>`
+}
+    const validCategories = taxonomy.activity_category.map(c => c.name);
+    const validAudience = taxonomy.audience.map(c => ([c.name, ...((c.children || []).map(s => `${c.name} / ${s.name}`)) ])).flat();
+}}
 
 {{ comp.oi.table({
     "config": {
 	"data": groupings.toSorted((a, b) => {
                 if (a.Organisation < b.Organisation) return -1;
                 if (a.Organisation > b.Organisation) return 1;
-                if (a.Audience < b.Audience ) return -1;
-                if (a.Audience > b.Audience ) return 1;
-                if (a['Activity category'] < b['Activity category'] ) return -1;
-                if (a['Activity category'] > b['Activity category'] ) return 1;
                 if (a.Activity < b.Activity ) return -1;
                 if (a.Activity > b.Activity ) return 1;
+                if (a['Activity category'] < b['Activity category'] ) return -1;
+                if (a['Activity category'] > b['Activity category'] ) return 1;
+                if (a.Audience < b.Audience ) return -1;
+                if (a.Audience > b.Audience ) return 1;
                 return 0;
-            }),
+            })
+            .map(r => ({
+                ...r,
+                ['Activity category']: r['Activity category']
+                    .split(/\s*,\s*/).map(markInvalid(validCategories)).join(', '),
+                Audience: r.Audience
+                    .split(/\s*,\s*/).map(markInvalid(validAudience)).join(', '),
+            })),
 	"columns": [{
 			"name": "Organisation",
 			"mergerows": true
@@ -85,10 +105,10 @@ description: |
 			"mergerows": true
 		},{
 			"name": "Activity category",
-            "mergerows": true
+            "mergerows": false
 		},{
 			"name": "Audience",
-            "mergerows": true
+            "mergerows": false
 		}]
     }
 }) }} 

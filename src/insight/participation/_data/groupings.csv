@@ -1,23 +1,23 @@
 Activity,Organisation,Activity category,Audience
-Film Screening,Seven Stories,Performance,General Admission
-Performance,TWAM,Performance,General Admission
+Film Screening,Seven Stories,Performance,General admission
+Performance,TWAM,Performance,General admission
 Adult Event - Planetarium,Centre for Life,Exhibition,Adults
 Adult Event - Speakeasy,Centre for Life,Event,Adults
 Formal Learning,TWAM,Exhibition,Children
 Storytime,Seven Stories,Event,Children
-Formal Learning,TWAM,School Engagement / Young People,Schools
-Informal Learning,TWAM,School Engagement / Young People,Schools
-Learning & Community - School Workshops (TBC),Seven Stories,School Engagement / Young People,Schools
+Formal Learning,TWAM,School Engagement,Schools
+Informal Learning,TWAM,School Engagement,Schools
+Learning & Community - School Workshops (TBC),Seven Stories,School Engagement,Schools
 Santa Experience,Centre for Life,Other,Children
 Afternoon Tea,Seven Stories,Event,Children
 Santa Experience,Centre for Life,Event,Children
-Schools - Outreach,Centre for Life,School Engagement / Young People,Children
-Home Educator Day,Centre for Life,School Engagement / Young People,Children
-Storytime,Seven Stories,Other / Uncategorised,"Children "
-Learning & Community,Seven Stories,Community Engagement,"Children,Disadvantaged Communities"
-Community programmes,TWAM,Community Engagement,Disadvantaged Communities
-Ice Rink,Centre for Life,Workshop,General Admission
-Workshop/ Event,Seven Stories,Event / Workshops,General Admission
+Schools - Outreach,Centre for Life,Outreach,Children
+Home Educator Day,Centre for Life,School Engagement,Children
+Storytime,Seven Stories,Other,Children
+Learning & Community,Seven Stories,Community Engagement,"Children,Communities / Disadvantaged communities"
+Community programmes,TWAM,Community Engagement,Communities / Disadvantaged communities
+Ice Rink,Centre for Life,Workshop,General admission
+Workshop/ Event,Seven Stories,"Event,Workshop",General admission
 Schools - KS4 and Post 16 Workshop,Centre for Life,Workshop,"Schools / Key Stage 4,Schools / Post-16"
 Schools - Science Centre Only (KS1 - KS3),Centre for Life,Other,Schools / Key Stage 1 - 3
 Schools - Science Centre and Workshop (KS1 - KS3),Centre for Life,"Other,Workshop",Schools / Key Stage 1 - 3
