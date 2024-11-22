@@ -9,8 +9,16 @@
   justify-content: center;
 }
 
-.oi-top > .oi-legend .oi-legend-inner .oi-legend-item.oi-series-on {
+.oi-top > .oi-legend .oi-legend-inner .oi-legend-item {
   outline: 0;
+  &:focus {
+    outline: auto;
+  }
+}
+
+.skip-link {
+  padding: 0.5em 1em;
+  background-color: var(--colour-purple-25);
 }
 
 .oi-legend-inner {
