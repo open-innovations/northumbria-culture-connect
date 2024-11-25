@@ -42,3 +42,14 @@
   font-size: 1.2em;
   font-weight: 700;
 }
+
+.comp-headline {
+  &.placeholder {
+    color: red;
+    border: 5px dashed red;
+    &::after {
+      content: "PLACEHOLDER CONTENT";
+      font-size: 0.7em;
+    }
+  }
+}

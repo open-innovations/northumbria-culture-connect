@@ -19,7 +19,8 @@ url: /
             {{ set totalFunding = 1234567 |> displayCurrency }}
             {{ comp.Headline({
                 headline: "Total funding",
-                number: totalFunding
+                number: totalFunding,
+                extraClasses: "placeholder",
             }) }}
         </ul>
     
