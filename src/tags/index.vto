@@ -4,8 +4,18 @@ layout: template/base.vto
 description: |
     The pages in the Observatory are tagged. Explore pages sharing common tags.
 ---
-
+<main>
+{{ comp Hero }}
+<h1>{{ title }}</h1>
 {{ description |> md }}
+{{ /comp }}
 
-{{# Display tag cloud for all generated tag pages #}}
-{{ comp.PageTags({ tags: search.pages('tag!=undefined', 'tag').map(x => x.tag) }) }}
+<section class="padded">
+    <p>
+        The following list contains all the defined tags. Click on a tag to explore.
+    </p>
+    {{# Display tag cloud for all generated tag pages #}}
+    {{ comp.PageTags({ tags: search.pages('tag!=undefined', 'tag').map(x => x.tag) }) }}
+</section>
+
+</main>
