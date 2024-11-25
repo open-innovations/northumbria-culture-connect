@@ -5,6 +5,8 @@
     <div style="display:flex;justify-content:center;">
         {{ comp.CallToAction({ link: page.url, text: "Explore the data &rarr;" }) }}
     </div>
+    {{ if config.withTags }}
     <hr>
     {{ comp.PageTags({ ...page, config })}}
+    {{ /if }}
 </div></{{ tag || 'section' }}>

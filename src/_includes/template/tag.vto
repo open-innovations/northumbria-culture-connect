@@ -8,7 +8,7 @@ layout: ./base.vto
     
     {{ comp UniformGrid }}
     {{ for page of search.pages(`"${tag}"`, "title") }}
-        {{ comp.PageLink({ page, config: { headingLevel: 2 } })}}
+        {{ comp.PageLink({ page, config: { headingLevel: 2, withTags: true } })}}
     {{ /for }}
     {{ /comp }}
 </main>
