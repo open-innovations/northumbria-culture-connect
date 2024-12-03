@@ -86,4 +86,6 @@ site.process(['.html'], (pages) => {
     }
 }) 
 
+site.remoteFile('assets/js/zoomable.js', import.meta.resolve('./patches/zoomable.js'));
+
 export default site;
