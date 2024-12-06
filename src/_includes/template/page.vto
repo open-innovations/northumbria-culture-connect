@@ -2,7 +2,10 @@
 layout: ./base.vto
 ---
 
+{{ comp Hero }}
+    {{ comp.PageTop({ ...page.data }) }}
+{{ /comp }}
+
 <main class="padded">
-{{ comp.PageTop({ ...page.data }) }}
 {{ content }}
 </main>
