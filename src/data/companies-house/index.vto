@@ -50,13 +50,38 @@ tags:
 
 <h2>Geographic distribution of companies</h2>
 
-{{ comp.oi.map.zoomable({
+{{
+    comp.CultureLandscape({
+        centre: [54.980, -1.613],
+        data: list,
+        boundaries: geojson.lad.E08000021,
+        layers: [
+            { code: "90030 - Artistic creation" },
+            { code: "90040 - Operation of arts facilities" },
+            { code: "90010 - Performing arts" },
+            { code: "91012 - Archives activities" },
+            { code: "91011 - Library activities" },
+            { code: "91030 - Operation of historical sites and buildings and similar visitor attractions" },
+            { code: "91020 - Museums activities" },
+            { code: "99999 - Other organisation", colour: "#aaaaaa" },
+        ]
+    })
+}}
+
+{{# {{ comp.oi.map.zoomable({
     config: {
         geojson: {
             data: company_locations,
         },
+        columns: [
+            {
+                name: 'tooltip',
+                template: "{{ registered_name }}",
+            }
+        ],
+        tooltip: 'tooltip',
     },
-}) }}
+}) }} #}}
 
 <h2>SIC Codes</h2>
 
