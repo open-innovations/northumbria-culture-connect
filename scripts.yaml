@@ -5,3 +5,9 @@ scripts:
       net: [api.fontsource.org, r2.fontsource.org]
       read: [.]
       write: [src/assets]
+  dependencies:
+    cmd: scripts/getLeaflet.ts
+    allow:
+      net: [leafletjs-cdn.s3.amazonaws.com:443]
+      read: [.]
+      write: [src/assets]

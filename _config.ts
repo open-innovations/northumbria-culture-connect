@@ -72,6 +72,7 @@ site.filter('displayCurrency', (x: string) => parseInt(x)
     }));
 
 site.copy('assets/fonts/webfonts/');
+site.copy('assets/vendor/');
 
 site.process(['.html'], (pages) => {
     for (const page of pages) {
