@@ -1,0 +1,14 @@
+---
+css: |
+    .text-block {
+        display: block;
+        padding-block: 1rem;
+        padding-inline: 1rem;
+        & > * {
+            max-width: 75rem;
+        }
+    }
+---
+<section class="text-block">
+{{ content }}
+</section>
