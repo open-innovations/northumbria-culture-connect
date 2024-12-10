@@ -3,10 +3,8 @@ import { ZipReaderStream } from "jsr:@zip-js/zip-js@2.7.52";
 import { resolve } from "jsr:@std/path@1.0.6";
 import { ensureDir, ensureFile } from "jsr:@std/fs@1.0.4";
 
-const leafletPackage = 'https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/v1.9.4/leaflet.zip'
-
-async function downloadLeaflet(destination = "src/assets/vendor/leaflet") {
-    const response = await fetch(leafletPackage);
+async function downloadZip(url: URL | Request | string, destination = "src/assets/vendor/leaflet") {
+    const response = await fetch(url);
 
     // Create a ZipReaderStream to extract the file
     const zipStream = response.body!.pipeThrough(new ZipReaderStream());
@@ -32,7 +30,7 @@ async function downloadLeaflet(destination = "src/assets/vendor/leaflet") {
 }
 
 async function main() {
-    await downloadLeaflet();
+    await downloadZip('https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/v1.9.4/leaflet.zip');
 }
   
 if (import.meta.main) await main();
