@@ -3,10 +3,14 @@
 1,90010 - Performing arts,93
 2,59112 - Video production activities,72
 3,90020 - Support activities to performing arts,64
-4,59111 - Motion picture production activities,52
-5,85520 - Cultural education,49
-6,90040 - Operation of arts facilities,29
-13,91020 - Museums activities,8
-15,91011 - Library activities,6
-21,91030 - Operation of historical sites and buildings and similar visitor attractions,5
-51,59140 - Motion picture projection activities,2
+4,58190 - Other publishing activities,52
+5,59111 - Motion picture production activities,52
+6,85520 - Cultural education,49
+7,90040 - Operation of arts facilities,29
+8,58110 - Book publishing,22
+15,91020 - Museums activities,8
+17,91012 - Archives activities,7
+18,91011 - Library activities,6
+23,91030 - Operation of historical sites and buildings and similar visitor attractions,5
+30,"78101 - Motion picture, television and other theatrical casting activities",4
+55,59140 - Motion picture projection activities,2

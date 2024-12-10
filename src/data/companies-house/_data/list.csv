@@ -1,184 +1,153 @@
 registered_name,company_number,postcode,sic_code,lat,long
-PEOPLE'S THEATRE ARTS GROUP LIMITED,00242886,NE6 5QF,['90010 - Performing arts' '90030 - Artistic creation'],54.990445,-1.584953
-INSTITUTE OF AMATEUR CINEMATOGRAPHERS LIMITED(THE),00269085,NE3 2DT,"['63990 - Other information service activities n.e.c.'
- '90030 - Artistic creation'
- '94990 - Activities of other membership organizations n.e.c.']",55.023848,-1.620913
+PEOPLE'S THEATRE ARTS GROUP LIMITED,00242886,NE6 5QF,"['90010 - Performing arts', '90030 - Artistic creation']",54.990445,-1.584953
+INSTITUTE OF AMATEUR CINEMATOGRAPHERS LIMITED(THE),00269085,NE3 2DT,"['63990 - Other information service activities n.e.c.', '90030 - Artistic creation', '94990 - Activities of other membership organizations n.e.c.']",55.023848,-1.620913
 NEWCASTLE PEOPLE'S THEATRE ARTS TRUST LIMITED,00393739,NE6 5QF,['90040 - Operation of arts facilities'],54.990445,-1.584953
-MAWSON & WAREHAM (MUSIC) LIMITED,00957980,NE1 5BP,"['58190 - Other publishing activities'
- '59112 - Video production activities'
- '59200 - Sound recording and music publishing activities']",54.973132,-1.613142
+MAWSON & WAREHAM (MUSIC) LIMITED,00957980,NE1 5BP,"['58190 - Other publishing activities', '59112 - Video production activities', '59200 - Sound recording and music publishing activities']",54.973132,-1.613142
 TYNESIDE CINEMA,01113101,NE1 6QG,['59140 - Motion picture projection activities'],54.973801,-1.611761
-NEWCASTLE THEATRE ROYAL TRUST LIMITED,01217427,NE1 6BR,"['90020 - Support activities to performing arts'
- '90040 - Operation of arts facilities']",54.972706,-1.612021
+NEWCASTLE THEATRE ROYAL TRUST LIMITED,01217427,NE1 6BR,"['90020 - Support activities to performing arts', '90040 - Operation of arts facilities']",54.972706,-1.612021
 JAZZ NORTH-EAST LIMITED,01357300,NE7 7AN,['90020 - Support activities to performing arts'],54.998678,-1.59331
 TYNE AND WEAR BUILDING PRESERVATION TRUST LIMITED,01444058,NE3 3LS,['91030 - Operation of historical sites and buildings and similar visitor attractions'],55.010031,-1.622138
+AN:ARTISTS INFORMATION COMPANY,01626331,NE1 1EW,['58190 - Other publishing activities'],54.97181,-1.612827
 AWAY WITH THE FOG LIMITED,01645465,NE1 2PQ,['90030 - Artistic creation'],54.974814,-1.592361
-NORTH EAST THEATRE TRUST LIMITED,01697756,NE1 3DQ,['90030 - Artistic creation' '90040 - Operation of arts facilities'],54.96966,-1.604285
+NORTH EAST THEATRE TRUST LIMITED,01697756,NE1 3DQ,"['90030 - Artistic creation', '90040 - Operation of arts facilities']",54.96966,-1.604285
+KENSINGTON WEST PRODUCTIONS LIMITED,01844574,NE1 1RJ,['58110 - Book publishing'],54.969652,-1.612301
 LIVE THEATRE CO. LIMITED,01981484,NE1 3DQ,['90030 - Artistic creation'],54.96966,-1.604285
 EQUAL ARTS LTD.,01992359,NE1 8AX,['90040 - Operation of arts facilities'],54.974992,-1.610437
-NORTHERN STAGE (THEATRICAL PRODUCTIONS) LIMITED,02187213,NE1 7RH,['90010 - Performing arts' '90040 - Operation of arts facilities'],54.979335,-1.614082
-ALPHA COMMUNICATION LIMITED,02187790,NE4 5TF,"['58142 - Publishing of  consumer and business journals and periodicals'
- '59112 - Video production activities'
- '70210 - Public relations and communications activities'
- '73110 - Advertising agencies']",54.972382,-1.623428
+A M C D (PUBLISHERS) LIMITED,02049025,NE3 4XE,['58110 - Book publishing'],55.000977,-1.63526
+NORTHERN STAGE (THEATRICAL PRODUCTIONS) LIMITED,02187213,NE1 7RH,"['90010 - Performing arts', '90040 - Operation of arts facilities']",54.979335,-1.614082
+ALPHA COMMUNICATION LIMITED,02187790,NE4 5TF,"['58142 - Publishing of  consumer and business journals and periodicals', '59112 - Video production activities', '70210 - Public relations and communications activities', '73110 - Advertising agencies']",54.972382,-1.623428
 NEWCASTLE ARTS CENTRE TRUST LIMITED,02383592,NE1 1SG,['90040 - Operation of arts facilities'],54.970002,-1.617999
 DANCE NORTH,02490618,NE1 4BR,['90040 - Operation of arts facilities'],54.970186,-1.622246
 D6 CULTURE LTD,02632544,NE1 4XF,['90030 - Artistic creation'],54.971291,-1.619905
-FIRST ACT THEATRE,02742066,NE13 9AR,['90010 - Performing arts' '90030 - Artistic creation'],55.02368,-1.655091
+FIRST ACT THEATRE,02742066,NE13 9AR,"['90010 - Performing arts', '90030 - Artistic creation']",55.02368,-1.655091
 BRUVVERS THEATRE COMPANY,02837215,NE1 2PQ,['90010 - Performing arts'],54.974814,-1.592361
 TYNESIDE IRISH CULTURAL SOCIETY LIMITED,02892258,NE1 4SG,['90030 - Artistic creation'],54.973938,-1.618133
-NORTHERN PRINT STUDIO LIMITED,02899117,NE1 2NP,['18129 - Printing n.e.c.' '90040 - Operation of arts facilities'],54.974867,-1.594657
+NORTHERN PRINT STUDIO LIMITED,02899117,NE1 2NP,"['18129 - Printing n.e.c.', '90040 - Operation of arts facilities']",54.974867,-1.594657
 BOULEVARD MEDIA LIMITED,02933813,NE3 3HR,['90030 - Artistic creation'],55.012664,-1.634169
 LOCUS +,02939638,NE1 5UD,['90020 - Support activities to performing arts'],54.971137,-1.618832
-NORTH EAST MUSIC CO-OPERATIVE LIMITED,03079979,NE3 2DT,['85520 - Cultural education' '85590 - Other education n.e.c.'],55.023848,-1.620913
+NORTH EAST MUSIC CO-OPERATIVE LIMITED,03079979,NE3 2DT,"['85520 - Cultural education', '85590 - Other education n.e.c.']",55.023848,-1.620913
 LIVE TRADING LIMITED,03100229,NE1 3DQ,['90040 - Operation of arts facilities'],54.96966,-1.604285
-VINE SOLUTIONS LIMITED,03131148,NE5 1NB,"['59200 - Sound recording and music publishing activities'
- '62012 - Business and domestic software development'
- '62020 - Information technology consultancy activities'
- '90030 - Artistic creation']",55.00311,-1.695524
+VINE SOLUTIONS LIMITED,03131148,NE5 1NB,"['59200 - Sound recording and music publishing activities', '62012 - Business and domestic software development', '62020 - Information technology consultancy activities', '90030 - Artistic creation']",55.00311,-1.695524
 NEW WRITING NORTH,03166037,NE1 8ST,['90020 - Support activities to performing arts'],54.976634,-1.60745
-"SEVEN STORIES, THE NATIONAL CENTRE FOR CHILDREN’S BOOKS LIMITED",03209411,NE1 2PQ,"['85520 - Cultural education' '91012 - Archives activities'
- '91020 - Museums activities']",54.974814,-1.592361
-INTERNATIONAL CENTRE FOR LIFE TRUST,03225820,NE1 4EP,"['74909 - Other professional, scientific and technical activities n.e.c.'
- '85590 - Other education n.e.c.'
- '91030 - Operation of historical sites and buildings and similar visitor attractions']",54.967662,-1.620548
-NORTH NEWS & PICTURES LIMITED,03263624,NE6 1TZ,['59112 - Video production activities' '63910 - News agency activities'],54.96625,-1.573782
-JAY TV LIMITED,03368347,NE1 3DX,"['59112 - Video production activities'
- '74202 - Other specialist photography'
- '96040 - Physical well-being activities']",54.970984,-1.599307
+"SEVEN STORIES, THE NATIONAL CENTRE FOR CHILDREN’S BOOKS LIMITED",03209411,NE1 2PQ,"['85520 - Cultural education', '91012 - Archives activities', '91020 - Museums activities']",54.974814,-1.592361
+INTERNATIONAL CENTRE FOR LIFE TRUST,03225820,NE1 4EP,"['74909 - Other professional, scientific and technical activities n.e.c.', '85590 - Other education n.e.c.', '91030 - Operation of historical sites and buildings and similar visitor attractions']",54.967662,-1.620548
+NORTH NEWS & PICTURES LIMITED,03263624,NE6 1TZ,"['59112 - Video production activities', '63910 - News agency activities']",54.96625,-1.573782
+JAY TV LIMITED,03368347,NE1 3DX,"['59112 - Video production activities', '74202 - Other specialist photography', '96040 - Physical well-being activities']",54.970984,-1.599307
+MSLEXIA PUBLICATIONS LIMITED,03374941,NE1 4JE,['58190 - Other publishing activities'],54.972816,-1.621424
+JANET PLATER MANAGEMENT LIMITED,03417954,NE1 1LF,"['78101 - Motion picture, television and other theatrical casting activities']",54.969796,-1.610328
 NEWCASTLE UPON TYNE CHAMBER MUSIC SOCIETY LIMITED,03433055,NE2 1HE,['90010 - Performing arts'],54.986768,-1.589758
 PRIBRO INTERNATIONAL LIMITED,03482236,NE3 3HR,['59111 - Motion picture production activities'],55.012664,-1.634169
 NORTHERN ROOTS,03539586,NE1 6BX,['90040 - Operation of arts facilities'],54.972398,-1.611337
 YIPP FILMS LIMITED,03549317,NE2 1JR,['90030 - Artistic creation'],54.987872,-1.600045
-TRINITY YOUTH ASSOCIATION,03557279,NE3 3LS,"['85510 - Sports and recreation education'
- '88910 - Child day-care activities' '90030 - Artistic creation']",55.010031,-1.622138
-GENERATOR NORTH EAST LIMITED,03670235,NE1 3DE,"['82990 - Other business support service activities n.e.c.'
- '90020 - Support activities to performing arts']",54.969265,-1.604554
+TRINITY YOUTH ASSOCIATION,03557279,NE3 3LS,"['85510 - Sports and recreation education', '88910 - Child day-care activities', '90030 - Artistic creation']",55.010031,-1.622138
+ANKETELL TRAINING LIMITED,03661827,NE3 1UT,['58190 - Other publishing activities'],55.009076,-1.618519
+GENERATOR NORTH EAST LIMITED,03670235,NE1 3DE,"['82990 - Other business support service activities n.e.c.', '90020 - Support activities to performing arts']",54.969265,-1.604554
 PINBALL FILMS LIMITED,03739500,NE1 4XF,['59111 - Motion picture production activities'],54.971291,-1.619905
-TAYLOR FREDERICKS LIMITED,03812484,NE1 1RN,"['70229 - Management consultancy activities other than financial management'
- '74100 - specialised design activities'
- '74202 - Other specialist photography' '90030 - Artistic creation']",54.968147,-1.611144
-NOSTALGIA STEEL BAND AND CARNIVAL CLUB LIMITED,03816660,NE3 3AT,['85520 - Cultural education' '90010 - Performing arts'],55.006555,-1.649734
-TYNE THEATRE AND OPERA HOUSE PRESERVATION TRUST,03874271,NE1 4AG,"['90020 - Support activities to performing arts'
- '90040 - Operation of arts facilities' '91012 - Archives activities'
- '91030 - Operation of historical sites and buildings and similar visitor attractions']",54.970588,-1.621539
+TAYLOR FREDERICKS LIMITED,03812484,NE1 1RN,"['70229 - Management consultancy activities other than financial management', '74100 - specialised design activities', '74202 - Other specialist photography', '90030 - Artistic creation']",54.968147,-1.611144
+NOSTALGIA STEEL BAND AND CARNIVAL CLUB LIMITED,03816660,NE3 3AT,"['85520 - Cultural education', '90010 - Performing arts']",55.006555,-1.649734
+TYNE THEATRE AND OPERA HOUSE PRESERVATION TRUST,03874271,NE1 4AG,"['90020 - Support activities to performing arts', '90040 - Operation of arts facilities', '91012 - Archives activities', '91030 - Operation of historical sites and buildings and similar visitor attractions']",54.970588,-1.621539
+THE CRACK LIMITED,03949330,NE6 5PH,['58190 - Other publishing activities'],54.979187,-1.587929
 LAURA JOHNSTON LIGHTWORKS LTD,03972743,NE1 2PQ,['90030 - Artistic creation'],54.974814,-1.592361
-GALLIVANTING PICTURES LIMITED,04141934,NE3 3HR,"['59111 - Motion picture production activities'
- '59112 - Video production activities' '90030 - Artistic creation']",55.012664,-1.634169
+GALLIVANTING PICTURES LIMITED,04141934,NE3 3HR,"['59111 - Motion picture production activities', '59112 - Video production activities', '90030 - Artistic creation']",55.012664,-1.634169
 SEVEN STORIES TRADING LIMITED,04177830,NE1 2PQ,['91020 - Museums activities'],54.974814,-1.592361
+CAMBRIDGE SCHOLARS PUBLISHING LTD,04333775,NE6 2PA,['58110 - Book publishing'],54.974422,-1.556686
 MARK HUGHES LIMITED,04373073,NE3 3LS,['90030 - Artistic creation'],55.010031,-1.622138
-FLOODED CELLAR PRODUCTIONS LIMITED,04398705,NE6 5NX,"['59112 - Video production activities'
- '59113 - Television programme production activities'
- '63990 - Other information service activities n.e.c.'
- '74209 - Photographic activities not elsewhere classified']",54.981271,-1.582564
-CLOAK PRODUCTIONS LIMITED,04464234,NE2 1TJ,"['59112 - Video production activities'
- '59113 - Television programme production activities']",54.984767,-1.603998
+MICHAEL WARD DESIGN LIMITED,04381279,NE1 5DZ,['58190 - Other publishing activities'],54.969146,-1.620116
+FLOODED CELLAR PRODUCTIONS LIMITED,04398705,NE6 5NX,"['59112 - Video production activities', '59113 - Television programme production activities', '63990 - Other information service activities n.e.c.', '74209 - Photographic activities not elsewhere classified']",54.981271,-1.582564
+CLOAK PRODUCTIONS LIMITED,04464234,NE2 1TJ,"['59112 - Video production activities', '59113 - Television programme production activities']",54.984767,-1.603998
+INPRESS LIMITED,04537051,NE1 1LF,['58190 - Other publishing activities'],54.969796,-1.610328
 BASEHQ LIMITED,04576281,NE4 7HX,['90020 - Support activities to performing arts'],54.962003,-1.635781
-FRAMEWERK LTD,04638941,NE5 1NB,"['59111 - Motion picture production activities'
- '59112 - Video production activities']",55.00311,-1.695524
+FRAMEWERK LTD,04638941,NE5 1NB,"['59111 - Motion picture production activities', '59112 - Video production activities']",55.00311,-1.695524
 DEJAVU VIDEO LIMITED,04640061,NE1 4XN,['59111 - Motion picture production activities'],54.971804,-1.619388
 GIBBER THEATRE LIMITED,04663289,NE3 1HN,['90020 - Support activities to performing arts'],55.008496,-1.620588
 LOCUS + PUBLISHING LIMITED,04858278,NE1 5UD,['91011 - Library activities'],54.971137,-1.618832
 BRIDGE + TUNNEL PRODUCTIONS,04880685,NE1 1EW,['59111 - Motion picture production activities'],54.97181,-1.612827
 TRICIA MCKENZIE KNITWEAR DESIGNER LTD,04925339,NE3 3BS,['90030 - Artistic creation'],55.004068,-1.644269
+EXHIBITION RESOURCE LIMITED,04940645,NE3 2SG,['58190 - Other publishing activities'],55.013358,-1.6726
 REDBRAND MDH LIMITED,05078110,NE5 1SQ,['59112 - Video production activities'],55.000156,-1.707442
+K & T ASSOCIATES LIMITED,05082781,NE15 8TA,"['58190 - Other publishing activities', '61900 - Other telecommunications activities']",54.985504,-1.716909
 BALLET LORENT LIMITED,05093450,NE15 6TT,['90010 - Performing arts'],54.976737,-1.686097
+ROUND SUN LIMITED,05105951,NE15 9RX,['58190 - Other publishing activities'],54.99543,-1.743489
 OPEN CLASP THEATRE COMPANY,05137687,NE4 6SQ,['90010 - Performing arts'],54.968611,-1.639318
 NEURO-SONIC LTD,05315081,NE6 5XH,['90020 - Support activities to performing arts'],54.985541,-1.58041
-ANGELMOON ENTERPRISES LIMITED,05328234,NE3 5RS,"['32990 - Other manufacturing n.e.c.'
- '59200 - Sound recording and music publishing activities'
- '90010 - Performing arts']",55.026326,-1.632121
+ANGELMOON ENTERPRISES LIMITED,05328234,NE3 5RS,"['32990 - Other manufacturing n.e.c.', '59200 - Sound recording and music publishing activities', '90010 - Performing arts']",55.026326,-1.632121
 THE GUILD OF LILLIANS,05485468,NE2 1HP,['90010 - Performing arts'],54.986458,-1.590964
+MYRMIDON BOOKS LIMITED,05498285,NE1 3DY,['58190 - Other publishing activities'],54.97132,-1.597491
+NORTH EAST PUBLISHING LIMITED,05512843,NE6 5QB,['58190 - Other publishing activities'],54.987308,-1.581876
 PUPPETSHIP COMMUNITY INTEREST COMPANY,05686370,NE1 2PQ,['90030 - Artistic creation'],54.974814,-1.592361
+ATV NETWORK LIMITED,05691952,NE3 3YF,"['58190 - Other publishing activities', '59113 - Television programme production activities']",55.00505,-1.664381
 NETWORK ARTISTS LTD,05898491,NE4 8SH,['90030 - Artistic creation'],54.971804,-1.652692
 MEERKAT FILM PRODUCTIONS LTD,05902439,NE6 5NT,['59111 - Motion picture production activities'],54.980785,-1.582225
 BLUE KANGAROO DESIGN LIMITED,05931200,NE1 1PG,['90030 - Artistic creation'],54.970488,-1.609809
-HAWKFEST LIMITED,06008999,NE15 7LU,"['90010 - Performing arts' '90020 - Support activities to performing arts'
- '90030 - Artistic creation']",54.98624,-1.70534
+HAWKFEST LIMITED,06008999,NE15 7LU,"['90010 - Performing arts', '90020 - Support activities to performing arts', '90030 - Artistic creation']",54.98624,-1.70534
+ASSURANCE PUBLICATIONS LIMITED,06090123,NE5 2QJ,['58190 - Other publishing activities'],54.986744,-1.664065
 THE LITERARY & PHILOSOPHICAL SOCIETY OF NEWCASTLE UPON TYNE,06220953,NE1 1SE,['91011 - Library activities'],54.969197,-1.613461
-SKIMSTONE ARTS,06261728,NE2 1AL,"['90010 - Performing arts' '90030 - Artistic creation'
- '90040 - Operation of arts facilities']",54.978039,-1.599283
+SKIMSTONE ARTS,06261728,NE2 1AL,"['90010 - Performing arts', '90030 - Artistic creation', '90040 - Operation of arts facilities']",54.978039,-1.599283
 JOHNNY GENIUS LIMITED,06298082,NE4 7YL,['90030 - Artistic creation'],54.961211,-1.644612
 THE HEART OF THE CITY PARTNERSHIP,06373460,NE2 1TJ,['91030 - Operation of historical sites and buildings and similar visitor attractions'],54.984767,-1.603998
-4MEDIAS LTD,06438912,NE6 5XS,"['59111 - Motion picture production activities'
- '59112 - Video production activities'
- '74909 - Other professional, scientific and technical activities n.e.c.']",54.9841,-1.579346
-SA PERFORMING ARTS CENTRE LIMITED,06519709,NE6 1ED,"['85320 - Technical and vocational secondary education'
- '85520 - Cultural education' '90010 - Performing arts'
- '90040 - Operation of arts facilities']",54.977175,-1.5752
+4MEDIAS LTD,06438912,NE6 5XS,"['59111 - Motion picture production activities', '59112 - Video production activities', '74909 - Other professional, scientific and technical activities n.e.c.']",54.9841,-1.579346
+SA PERFORMING ARTS CENTRE LIMITED,06519709,NE6 1ED,"['85320 - Technical and vocational secondary education', '85520 - Cultural education', '90010 - Performing arts', '90040 - Operation of arts facilities']",54.977175,-1.5752
 NORTHERN CULTURAL PROJECTS (NCP) COMMUNITY INTEREST COMPANY,06532913,NE6 1EG,['90030 - Artistic creation'],54.974845,-1.577069
 LIBERDADE COMMUNITY DEVELOPMENT TRUST,06548122,NE3 3HD,['90010 - Performing arts'],55.01106,-1.630352
 S D WALLACE LOCAL CREW LIMITED,06669942,NE7 7LN,['90020 - Support activities to performing arts'],54.996192,-1.570686
 SPIRITI LTD,06680533,NE3 2HN,['90030 - Artistic creation'],55.015954,-1.622645
-VITA NOVA FILMS LTD,06714378,NE1 1JF,"['59111 - Motion picture production activities'
- '59112 - Video production activities']",54.969968,-1.613654
+VITA NOVA FILMS LTD,06714378,NE1 1JF,"['59111 - Motion picture production activities', '59112 - Video production activities']",54.969968,-1.613654
 WUNDERBAR FESTIVAL C.I.C.,06735572,NE2 1AL,['90030 - Artistic creation'],54.978039,-1.599283
 UNFOLDING THEATRE,06764666,NE1 2NP,['90010 - Performing arts'],54.974867,-1.594657
-DIFFERENT TAKE LIMITED,06779559,NE3 5TB,"['59112 - Video production activities'
- '59113 - Television programme production activities']",55.027208,-1.620881
+DIFFERENT TAKE LIMITED,06779559,NE3 5TB,"['59112 - Video production activities', '59113 - Television programme production activities']",55.027208,-1.620881
 NEWCASTLE PANTO LIMITED,06782210,NE3 3PF,['90010 - Performing arts'],55.011201,-1.623642
 SHUDDER FILMS LIMITED,06785295,NE1 4BB,['59111 - Motion picture production activities'],54.96677,-1.621965
 BRIDGE + TUNNEL FILMS LTD,06790595,NE1 1EW,['90030 - Artistic creation'],54.97181,-1.612827
 GU PUBLISHING LIMITED,06862830,NE1 6UF,['90030 - Artistic creation'],54.97297,-1.608298
-DAY DOT PRODUCTIONS LTD,06872444,NE6 5YD,"['59111 - Motion picture production activities'
- '59112 - Video production activities']",54.983249,-1.577558
+DAY DOT PRODUCTIONS LTD,06872444,NE6 5YD,"['59111 - Motion picture production activities', '59112 - Video production activities']",54.983249,-1.577558
 MANGO STUDIO PRODUCTIONS LTD,06999563,NE6 2DW,['59112 - Video production activities'],54.974638,-1.579602
 ALEX BUTLER MUSIC LIMITED,07021710,NE2 1QP,['90030 - Artistic creation'],54.982028,-1.602461
+ELLIE COOPER LTD,07022664,NE3 2AX,['58110 - Book publishing'],55.020935,-1.644307
+PANTHEON MACROECONOMICS LTD.,07076751,NE1 1PG,['58190 - Other publishing activities'],54.970488,-1.609809
 THE EXCHANGE NORTH TYNESIDE LIMITED,07113978,NE1 4JE,['90030 - Artistic creation'],54.972816,-1.621424
-AURAL X-OTIKA LIMITED,07139251,NE4 5AY,"['59112 - Video production activities'
- '59120 - Motion picture, video and television programme post-production activities'
- '59200 - Sound recording and music publishing activities'
- '90030 - Artistic creation']",54.97869,-1.632134
+AURAL X-OTIKA LIMITED,07139251,NE4 5AY,"['59112 - Video production activities', '59120 - Motion picture, video and television programme post-production activities', '59200 - Sound recording and music publishing activities', '90030 - Artistic creation']",54.97869,-1.632134
 BAMBOO MEDIA PRODUCTIONS LIMITED,07207645,NE1 2DF,['59112 - Video production activities'],54.971956,-1.589578
-AMBER FILM & PHOTOGRAPHY COLLECTIVE CIC,07218282,NE1 3JE,"['59111 - Motion picture production activities'
- '59140 - Motion picture projection activities'
- '91012 - Archives activities']",54.96919,-1.608416
+AMBER FILM & PHOTOGRAPHY COLLECTIVE CIC,07218282,NE1 3JE,"['59111 - Motion picture production activities', '59140 - Motion picture projection activities', '91012 - Archives activities']",54.96919,-1.608416
 TONY SAINT LTD,07311913,NE2 1TJ,['90030 - Artistic creation'],54.984767,-1.603998
-TYNE & WEAR ARCHIVES & MUSEUMS DEVELOPMENT TRUST,07334262,NE1 4JA,['91012 - Archives activities' '91020 - Museums activities'],54.969142,-1.624755
-ARCUS STUDIOS LTD,07350999,NE2 1AN,"['59111 - Motion picture production activities'
- '59112 - Video production activities']",54.976097,-1.597019
+TYNE & WEAR ARCHIVES & MUSEUMS DEVELOPMENT TRUST,07334262,NE1 4JA,"['91012 - Archives activities', '91020 - Museums activities']",54.969142,-1.624755
+ARCUS STUDIOS LTD,07350999,NE2 1AN,"['59111 - Motion picture production activities', '59112 - Video production activities']",54.976097,-1.597019
 THE NORTHUMBRIAN PIPERS' SOCIETY,07471625,NE1 4BF,['90010 - Performing arts'],54.974093,-1.618757
-SUMMERHILL TRUST LTD,07476591,NE4 6EH,"['88990 - Other social work activities without accommodation n.e.c.'
- '90040 - Operation of arts facilities'
- '93110 - Operation of sports facilities']",54.970647,-1.628802
+SUMMERHILL TRUST LTD,07476591,NE4 6EH,"['88990 - Other social work activities without accommodation n.e.c.', '90040 - Operation of arts facilities', '93110 - Operation of sports facilities']",54.970647,-1.628802
+EVA IBBOTSON ESTATES LTD,07487988,NE1 4AD,['58190 - Other publishing activities'],54.966348,-1.622716
 RED OLIVE ART LIMITED,07489456,NE1 2PQ,['90030 - Artistic creation'],54.974814,-1.592361
+TIMEC 1306 LIMITED,07516395,NE6 2PA,['58110 - Book publishing'],54.974422,-1.556686
 NICE GUY EDDIE LIMITED,07550799,NE6 5JA,['59112 - Video production activities'],54.98292,-1.58389
 TRYLIFE LIMITED,07551642,NE6 5JA,['59112 - Video production activities'],54.98292,-1.58389
 PREFAB 77 LIMITED,07559525,NE3 1UL,['90030 - Artistic creation'],55.008697,-1.615161
 UK LANGUAGE PROJECT LTD.,07613774,NE1 3NG,['85520 - Cultural education'],54.968366,-1.612141
 LITTLE BIG MOUTH THEATRE COMMUNITY INTEREST COMPANY,07669706,NE6 5LU,['90020 - Support activities to performing arts'],54.987447,-1.57553
 BEACON FILMS CIC,07740648,NE6 1PB,['90030 - Artistic creation'],54.977498,-1.575507
+NE14.TV LTD,07781207,NE6 1LH,"['78101 - Motion picture, television and other theatrical casting activities']",54.974253,-1.591008
+JESMOND LOCAL LTD,07860798,NE7 7BY,['58190 - Other publishing activities'],54.996204,-1.5926
 MIKE GIBLIN ILLUSTRATION LIMITED,07862651,NE4 7YL,['90030 - Artistic creation'],54.961211,-1.644612
 BLENDED! EVENTS LIMITED,07934482,NE6 3QG,['90010 - Performing arts'],54.974923,-1.541432
-AUTISM LIVE FOREVER C.I.C.,08002223,NE1 8AF,"['59200 - Sound recording and music publishing activities'
- '88990 - Other social work activities without accommodation n.e.c.'
- '90020 - Support activities to performing arts'
- '93290 - Other amusement and recreation activities n.e.c.']",54.975264,-1.608885
+FOCAL POINT SCHOOLS LTD,07990512,NE3 2JA,['58190 - Other publishing activities'],55.017448,-1.626353
+AUTISM LIVE FOREVER C.I.C.,08002223,NE1 8AF,"['59200 - Sound recording and music publishing activities', '88990 - Other social work activities without accommodation n.e.c.', '90020 - Support activities to performing arts', '93290 - Other amusement and recreation activities n.e.c.']",54.975264,-1.608885
 SHAKIRUL ALAM PICTURES LIMITED,08166020,NE6 5RB,['59111 - Motion picture production activities'],54.99115,-1.580679
-DIM SUM DIGITAL LTD,08177425,NE7 7LX,"['58190 - Other publishing activities'
- '59112 - Video production activities'
- '70229 - Management consultancy activities other than financial management']",55.007932,-1.595405
+DIM SUM DIGITAL LTD,08177425,NE7 7LX,"['58190 - Other publishing activities', '59112 - Video production activities', '70229 - Management consultancy activities other than financial management']",55.007932,-1.595405
 HOOK PICTURES LTD,08232842,NE4 9DD,['59111 - Motion picture production activities'],54.983025,-1.648361
-STEELBAND MUSIC LTD,08273076,NE3 3AT,"['85200 - Primary education'
- '90020 - Support activities to performing arts']",55.006555,-1.649734
+BASKETMEDIA365 LIMITED,08255986,NE15 7LD,['58190 - Other publishing activities'],54.984376,-1.707385
+STEELBAND MUSIC LTD,08273076,NE3 3AT,"['85200 - Primary education', '90020 - Support activities to performing arts']",55.006555,-1.649734
 WINE FRIENDLY LIMITED,08306046,NE1 4JE,['85520 - Cultural education'],54.972816,-1.621424
 FULL BLOWN METALS LTD,08412958,NE2 1AN,['90030 - Artistic creation'],54.976097,-1.597019
 ESSENTIAL DJS LIMITED,08419464,NE4 7YL,['90020 - Support activities to performing arts'],54.961211,-1.644612
 FRIENDS OF JESMOND LIBRARY,08430250,NE2 2DL,['91011 - Library activities'],54.993462,-1.605726
 LORD RICHARD MACLEOD LTD,08451089,NE1 5JE,['90030 - Artistic creation'],54.970856,-1.615895
-SNCG ECOSCAPES LTD,08456355,NE5 4HR,"['01300 - Plant propagation'
- '02100 - Silviculture and other forestry activities'
- '85520 - Cultural education']",55.007773,-1.687952
+SNCG ECOSCAPES LTD,08456355,NE5 4HR,"['01300 - Plant propagation', '02100 - Silviculture and other forestry activities', '85520 - Cultural education']",55.007773,-1.687952
 CLEAR AND LOUD LIMITED,08457400,NE1 6UF,['90020 - Support activities to performing arts'],54.97297,-1.608298
-ACTIVE NORTHUMBERLAND,08484436,NE2 1TJ,"['91011 - Library activities'
- '91030 - Operation of historical sites and buildings and similar visitor attractions'
- '93110 - Operation of sports facilities']",54.984767,-1.603998
-DESIGN F LIMITED,08528138,NE4 7YL,['74100 - specialised design activities' '90030 - Artistic creation'],54.961211,-1.644612
+ACTIVE NORTHUMBERLAND,08484436,NE2 1TJ,"['91011 - Library activities', '91030 - Operation of historical sites and buildings and similar visitor attractions', '93110 - Operation of sports facilities']",54.984767,-1.603998
+DESIGN F LIMITED,08528138,NE4 7YL,"['74100 - specialised design activities', '90030 - Artistic creation']",54.961211,-1.644612
 CURIOUS MONKEY LTD,08550041,NE4 9PQ,['90010 - Performing arts'],54.974124,-1.647733
-BOXKITE LTD,08608446,NE6 5RJ,['58110 - Book publishing' '59111 - Motion picture production activities'],54.989259,-1.584825
+BOXKITE LTD,08608446,NE6 5RJ,"['58110 - Book publishing', '59111 - Motion picture production activities']",54.989259,-1.584825
 YES FRIENDS LIMITED,08712153,NE3 3LS,['90010 - Performing arts'],55.010031,-1.622138
 GIG FOOT TOURING LTD,08842872,NE4 9EH,['90020 - Support activities to performing arts'],54.985877,-1.649649
-CAP-A-PIE ENGAGEMENTS,08938843,NE2 1AN,['90010 - Performing arts' '90020 - Support activities to performing arts'],54.976097,-1.597019
+HOW TO LIVE LIMITED,08909102,NE4 5NL,['58190 - Other publishing activities'],54.974446,-1.64025
+CAP-A-PIE ENGAGEMENTS,08938843,NE2 1AN,"['90010 - Performing arts', '90020 - Support activities to performing arts']",54.976097,-1.597019
 COBALT TOO C.I.C.,08966471,NE2 1AP,['90040 - Operation of arts facilities'],54.97651,-1.596189
 LIVEWORKS (NEWCASTLE UPON TYNE) LTD,08981067,NE1 3DQ,['90040 - Operation of arts facilities'],54.96966,-1.604285
 BREEZE CREATIVES COMMUNITY INTEREST COMPANY,09040279,NE15 6TT,['90040 - Operation of arts facilities'],54.976737,-1.686097
@@ -186,28 +155,25 @@ ALISONPRODUCTIONSERVICES LTD,09076584,NE5 1UH,['59112 - Video production activit
 CHRIS CHATTERTON ILLUSTRATION LTD,09096430,NE3 3LS,['90030 - Artistic creation'],55.010031,-1.622138
 MICRO FILM LTD,09108153,NE1 5UD,['59111 - Motion picture production activities'],54.971137,-1.618832
 NORTH EAST ARABIC LANGUAGE ACADEMY LTD,09109585,NE4 9PN,['85520 - Cultural education'],54.974443,-1.648389
-PEEP LTD,09133336,NE7 7LN,"['59112 - Video production activities'
- '73120 - Media representation services'
- '74202 - Other specialist photography'
- '74209 - Photographic activities not elsewhere classified']",54.996192,-1.570686
+PEEP LTD,09133336,NE7 7LN,"['59112 - Video production activities', '73120 - Media representation services', '74202 - Other specialist photography', '74209 - Photographic activities not elsewhere classified']",54.996192,-1.570686
 PAUL TAYLOR SOUND AND LIGHTING LTD,09135343,NE5 3NH,['90020 - Support activities to performing arts'],54.990179,-1.664755
 DAYMON BRITTON LIMITED,09173067,NE6 1AS,['59112 - Video production activities'],54.969536,-1.582716
 VOICECRAFT STUDIO LTD,09203153,NE1 1JF,['90010 - Performing arts'],54.969968,-1.613654
 CHARLOTTE GARDINER LTD,09252062,NE2 2AJ,['90010 - Performing arts'],54.988957,-1.604863
 NORTHERN STAGE ENTERPRISES LIMITED,09261522,NE1 7RH,['90020 - Support activities to performing arts'],54.979335,-1.614082
+JAY JOHNSTONE AND CO LIMITED,09290308,NE3 4XE,['58190 - Other publishing activities'],55.000977,-1.63526
 COMEDY SUPPORT ACT UK LTD,09295341,NE3 4HH,['90020 - Support activities to performing arts'],55.005318,-1.626622
 CTA PRODUCTIONS LIMITED,09295944,NE3 5AA,['59112 - Video production activities'],55.024319,-1.625085
 TYNE THEATRE & OPERA HOUSE LIMITED,09330825,NE1 4AG,['90040 - Operation of arts facilities'],54.970588,-1.621539
 LEIGHTON DESIGN & SCULPTING LIMITED,09364641,NE6 3NT,['90030 - Artistic creation'],54.968227,-1.546085
-NORTHSTAR AUDIO VISUAL LIMITED,09388956,NE3 5TS,"['90020 - Support activities to performing arts'
- '98200 - Undifferentiated service-producing activities of private households for own use']",55.02717,-1.628703
+NORTHSTAR AUDIO VISUAL LIMITED,09388956,NE3 5TS,"['90020 - Support activities to performing arts', '98200 - Undifferentiated service-producing activities of private households for own use']",55.02717,-1.628703
 DIGITALFIRE LTD,09436747,NE3 1DX,['59112 - Video production activities'],55.006597,-1.624828
 ELIOT SMITH COMPANY LIMITED,09442391,NE2 1DJ,['90010 - Performing arts'],54.980341,-1.600665
 MOJO RISIN' PUBLISHING LIMITED,09463181,NE1 5UD,['90030 - Artistic creation'],54.971137,-1.618832
 JAZZ CO-OP,09487859,NE2 3LN,['90020 - Support activities to performing arts'],54.996493,-1.612011
 FIRST AV LIMITED,09534810,NE4 7YL,['59112 - Video production activities'],54.961211,-1.644612
-JACKDAW MEDIA LIMITED,09535122,NE7 7LX,"['59112 - Video production activities'
- '59132 - Video distribution activities']",55.007932,-1.595405
+JACKDAW MEDIA LIMITED,09535122,NE7 7LX,"['59112 - Video production activities', '59132 - Video distribution activities']",55.007932,-1.595405
+BEESTON AND DANIEL LTD,09559096,NE3 2YR,['58190 - Other publishing activities'],55.01726,-1.657101
 THE TRIAL PRODUCTION LTD,09609738,NE4 9DD,['59111 - Motion picture production activities'],54.983025,-1.648361
 ALMUSTASHARA SATELLITE TELEVISION CHANNEL LTD,09665374,NE5 5HP,['90030 - Artistic creation'],54.999603,-1.694378
 THE PERSIAN SPIRIT COMPANY LTD,09669829,NE1 1EW,['59111 - Motion picture production activities'],54.97181,-1.612827
@@ -216,9 +182,8 @@ SUZIE WINSOR LIMITED,09738635,NE3 1DP,['90030 - Artistic creation'],55.009793,-1
 10FOOTBALLS LIMITED,09766050,NE4 7YD,['90030 - Artistic creation'],54.960913,-1.640882
 CHALK COLLECTIVE C.I.C.,09778916,NE2 1BB,['90040 - Operation of arts facilities'],54.9794,-1.595971
 LEGACY ENTERTAINMENT GROUP LTD,09800156,NE5 5NR,['90010 - Performing arts'],54.997423,-1.70679
-MAGNETIC NORTH EAST CIC,09901500,NE1 4BF,"['90010 - Performing arts' '90020 - Support activities to performing arts'
- '90030 - Artistic creation']",54.974093,-1.618757
-FACTORY 35 LIMITED,09910494,NE1 2DF,['74202 - Other specialist photography' '91011 - Library activities'],54.971956,-1.589578
+MAGNETIC NORTH EAST CIC,09901500,NE1 4BF,"['90010 - Performing arts', '90020 - Support activities to performing arts', '90030 - Artistic creation']",54.974093,-1.618757
+FACTORY 35 LIMITED,09910494,NE1 2DF,"['74202 - Other specialist photography', '91011 - Library activities']",54.971956,-1.589578
 NORTH EAST THEATRE TRUST PRODUCTIONS LIMITED,09937841,NE1 3DQ,['90020 - Support activities to performing arts'],54.96966,-1.604285
 RD AGENCY LTD,09948619,NE3 1DL,['90020 - Support activities to performing arts'],55.008162,-1.622124
 MDM AGENCY LTD,09948629,NE3 1DL,['90020 - Support activities to performing arts'],55.008162,-1.622124
@@ -230,104 +195,87 @@ NICE SWAN ACADEMY LTD,10032876,NE1 3NG,['90010 - Performing arts'],54.968366,-1.
 GATECRASH FILM LIMITED,10078780,NE2 3DH,['59111 - Motion picture production activities'],54.991936,-1.609179
 CLOCKWORK DREAMS LIMITED,10080057,NE5 2ET,['59112 - Video production activities'],54.980767,-1.676865
 SEVENTHREE PRODUCTIONS LIMITED,10124805,NE1 2EQ,['59112 - Video production activities'],54.970792,-1.606447
-HAND OF LTD,10156422,NE1 3XP,"['85520 - Cultural education'
- '90020 - Support activities to performing arts']",54.969416,-1.606786
+HAND OF LTD,10156422,NE1 3XP,"['85520 - Cultural education', '90020 - Support activities to performing arts']",54.969416,-1.606786
 BIRDVIEW AERIAL LTD,10195448,NE3 2RZ,['59112 - Video production activities'],55.012197,-1.675346
+TECHTO LIMITED,10195502,NE3 2EJ,['58190 - Other publishing activities'],55.023491,-1.627486
 TALES FROM THE LODGE LIMITED,10267343,NE4 9DD,['59111 - Motion picture production activities'],54.983025,-1.648361
-DEADWOOD STUDIO LIMITED,10321925,NE3 1HN,"['16290 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials'
- '90030 - Artistic creation']",55.008496,-1.620588
+DEADWOOD STUDIO LIMITED,10321925,NE3 1HN,"['16290 - Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials', '90030 - Artistic creation']",55.008496,-1.620588
 GVO MEDIA LTD.,10354360,NE4 9QX,['90020 - Support activities to performing arts'],54.977583,-1.655955
 DAVISON MEDIA LIMITED,10368709,NE3 3PF,['59111 - Motion picture production activities'],55.011201,-1.623642
 THE CLUNY (NEWCASTLE) EVENTS LIMITED,10432439,NE1 2PQ,['90010 - Performing arts'],54.974814,-1.592361
 GOLDFINCH FINANCE LIMITED,10510413,NE2 3DH,['59111 - Motion picture production activities'],54.991936,-1.609179
-TYNE VALLEY FOLK TRAIN CIC,10518384,NE3 1NJ,['90010 - Performing arts' '90020 - Support activities to performing arts'],55.004828,-1.610977
-DAVISON CREATIVE LTD,10531760,NE5 1EL,['71111 - Architectural activities' '90030 - Artistic creation'],54.995192,-1.721311
+TYNE VALLEY FOLK TRAIN CIC,10518384,NE3 1NJ,"['90010 - Performing arts', '90020 - Support activities to performing arts']",55.004828,-1.610977
+DAVISON CREATIVE LTD,10531760,NE5 1EL,"['71111 - Architectural activities', '90030 - Artistic creation']",54.995192,-1.721311
 LAURA MARY ART LIMITED,10545100,NE3 5SY,['90030 - Artistic creation'],55.027593,-1.620377
-THE NEWBRIDGE PROJECT,10582100,NE2 1AL,['90030 - Artistic creation' '90040 - Operation of arts facilities'],54.978039,-1.599283
+I2CONTENT LIMITED,10567461,NE2 1SQ,['58190 - Other publishing activities'],54.981972,-1.603869
+I2DIGITAL LIMITED,10567462,NE2 1SQ,['58190 - Other publishing activities'],54.981972,-1.603869
+THE NEWBRIDGE PROJECT,10582100,NE2 1AL,"['90030 - Artistic creation', '90040 - Operation of arts facilities']",54.978039,-1.599283
 FERTILE GROUND DANCE LTD,10599285,NE1 4BR,['90010 - Performing arts'],54.970186,-1.622246
-GEORDIE LIMITED,10606170,NE3 1RX,"['73110 - Advertising agencies' '74100 - specialised design activities'
- '90030 - Artistic creation']",55.007688,-1.605899
-THE COMMON ROOM OF THE GREAT NORTH LIMITED,10609517,NE1 1SE,['91012 - Archives activities' '91020 - Museums activities'],54.969197,-1.613461
-INDSAY LIMITED,10723156,NE2 2HD,"['26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control'
- '58110 - Book publishing' '59112 - Video production activities'
- '60100 - Radio broadcasting']",54.993924,-1.598656
-AIBA CONSULTANCY LTD,10759453,NE5 3LD,"['70210 - Public relations and communications activities'
- '70229 - Management consultancy activities other than financial management'
- '85520 - Cultural education' '85590 - Other education n.e.c.']",54.992456,-1.662892
+GEORDIE LIMITED,10606170,NE3 1RX,"['73110 - Advertising agencies', '74100 - specialised design activities', '90030 - Artistic creation']",55.007688,-1.605899
+THE COMMON ROOM OF THE GREAT NORTH LIMITED,10609517,NE1 1SE,"['91012 - Archives activities', '91020 - Museums activities']",54.969197,-1.613461
+I2E-COMMS LTD,10672414,NE2 1SQ,['58190 - Other publishing activities'],54.981972,-1.603869
+INDSAY LIMITED,10723156,NE2 2HD,"['26511 - Manufacture of electronic measuring, testing etc. equipment, not for industrial process control', '58110 - Book publishing', '59112 - Video production activities', '60100 - Radio broadcasting']",54.993924,-1.598656
+AIBA CONSULTANCY LTD,10759453,NE5 3LD,"['70210 - Public relations and communications activities', '70229 - Management consultancy activities other than financial management', '85520 - Cultural education', '85590 - Other education n.e.c.']",54.992456,-1.662892
 ABSOLUTE MAKEUP LTD,10761046,NE7 7RE,['90030 - Artistic creation'],55.002951,-1.586732
 TIKU THE FILM LTD,10805664,NE1 1EW,['59111 - Motion picture production activities'],54.97181,-1.612827
-NORTHUMBRIA STUDENTS' UNION,10807853,NE1 8SB,"['56302 - Public houses and bars' '90010 - Performing arts'
- '94990 - Activities of other membership organizations n.e.c.']",54.979822,-1.608828
+NORTHUMBRIA STUDENTS' UNION,10807853,NE1 8SB,"['56302 - Public houses and bars', '90010 - Performing arts', '94990 - Activities of other membership organizations n.e.c.']",54.979822,-1.608828
+I2MEDIA GROUP LIMITED,10807900,NE2 1SQ,['58190 - Other publishing activities'],54.981972,-1.603869
 PRODCOMPANY SERVICES LTD,10813276,NE1 1PG,['59112 - Video production activities'],54.970488,-1.609809
+VIOLA LEVY LTD,10833394,NE4 7YL,['58190 - Other publishing activities'],54.961211,-1.644612
 THE CLUNY 2 LIMITED,10856603,NE1 2PQ,['90010 - Performing arts'],54.974814,-1.592361
+JENNIFER TATE COPYWRITING LIMITED,10928942,NE3 1TY,['58190 - Other publishing activities'],55.00816,-1.618856
 MOTH STUDIOS LTD,10930972,NE3 2AX,['90030 - Artistic creation'],55.020935,-1.644307
-TWAM ENTERPRISES LTD,10940488,NE1 4JA,"['47789 - Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)'
- '56210 - Event catering activities' '91020 - Museums activities']",54.969142,-1.624755
+TWAM ENTERPRISES LTD,10940488,NE1 4JA,"['47789 - Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)', '56210 - Event catering activities', '91020 - Museums activities']",54.969142,-1.624755
 STUDIO LP CREATIVE LIMITED,10944820,NE3 4YB,['90030 - Artistic creation'],54.996511,-1.627297
-HAVING A PARTY LIMITED,10944917,NE1 3NG,"['47190 - Other retail sale in non-specialised stores'
- '47910 - Retail sale via mail order houses or via Internet'
- '82990 - Other business support service activities n.e.c.'
- '90030 - Artistic creation']",54.968366,-1.612141
-CULTAHOLIC VENTURES LIMITED,10949403,NE2 1BP,['59112 - Video production activities' '63910 - News agency activities'],54.975861,-1.596225
+HAVING A PARTY LIMITED,10944917,NE1 3NG,"['47190 - Other retail sale in non-specialised stores', '47910 - Retail sale via mail order houses or via Internet', '82990 - Other business support service activities n.e.c.', '90030 - Artistic creation']",54.968366,-1.612141
+CULTAHOLIC VENTURES LIMITED,10949403,NE2 1BP,"['59112 - Video production activities', '63910 - News agency activities']",54.975861,-1.596225
 TURPENTYNE LTD,10951538,NE3 4XN,['85520 - Cultural education'],55.002601,-1.634636
 KIRSTAL HOLDINGS LIMITED,10962314,NE2 3DH,['59111 - Motion picture production activities'],54.991936,-1.609179
+BANG ON BOOKS LTD,10975558,NE1 3PG,['58110 - Book publishing'],54.965775,-1.620441
 NEWCASTLE INTERNATIONAL ACADEMY LIMITED,11016078,NE1 4HZ,['85520 - Cultural education'],54.970172,-1.624196
 NORTHUMBERLAND ORCHESTRA CONCERT PRODUCTIONS LTD,11031846,NE2 2PL,['90010 - Performing arts'],54.992468,-1.601328
 CANNY CRAFTY LTD,11033137,NE3 1DU,['90030 - Artistic creation'],55.006298,-1.624439
 ALL GRAPHICS LIMITED,11068912,NE13 9DB,['90030 - Artistic creation'],55.028898,-1.64785
+ICR PUBLICATIONS LTD,11103162,NE4 6UL,"['58110 - Book publishing', '58141 - Publishing of learned journals', '58190 - Other publishing activities', '69202 - Bookkeeping activities']",54.972661,-1.642028
 HUMBLE ANGEL RECORDS LIMITED,11128988,NE7 7LX,['90010 - Performing arts'],55.007932,-1.595405
+YOUR AMAZING CONTENT LTD,11130279,NE7 7GN,"['58190 - Other publishing activities', '63990 - Other information service activities n.e.c.']",54.999632,-1.560191
 DANCE FUSION EXTREME CIC,11175079,NE15 7SW,['90010 - Performing arts'],54.979127,-1.699658
 ALPHABETTI TRADING LIMITED,11214355,NE1 4HP,['90020 - Support activities to performing arts'],54.969103,-1.623631
 EDGE OF NOWHERE LTD,11257393,NE4 7YA,['90030 - Artistic creation'],54.962685,-1.647801
 HEART AND SOUL TELEVISION & FILM LIMITED,11259727,NE4 7YL,['59112 - Video production activities'],54.961211,-1.644612
 CLOSE GRIPS LIMITED,11292179,NE3 5NP,['59111 - Motion picture production activities'],55.0277,-1.625741
-THE FEWER THINGS LTD,11300169,NE1 3NG,['85520 - Cultural education' '85600 - Educational support services'],54.968366,-1.612141
-MEDIA BORNE LIMITED,11314248,NE4 7YL,"['59111 - Motion picture production activities'
- '59112 - Video production activities'
- '74202 - Other specialist photography']",54.961211,-1.644612
+THE FEWER THINGS LTD,11300169,NE1 3NG,"['85520 - Cultural education', '85600 - Educational support services']",54.968366,-1.612141
+MEDIA BORNE LIMITED,11314248,NE4 7YL,"['59111 - Motion picture production activities', '59112 - Video production activities', '74202 - Other specialist photography']",54.961211,-1.644612
 GYGG LIMITED,11340944,NE6 5XH,['90020 - Support activities to performing arts'],54.985541,-1.58041
 TAKETH BLACK LTD,11371905,NE7 7RN,['90030 - Artistic creation'],54.993244,-1.578094
 MARSHALL89 LTD,11372557,NE1 8AP,['59112 - Video production activities'],54.974302,-1.608645
 WHICH WITCH LTD,11402901,NE1 1EW,['90030 - Artistic creation'],54.97181,-1.612827
 PLOXEL LIMITED,11415771,NE1 2DF,['90020 - Support activities to performing arts'],54.971956,-1.589578
-OVERLAY COUTURE LIMITED,11446782,NE4 6NQ,"['32120 - Manufacture of jewellery and related articles'
- '90030 - Artistic creation']",54.972807,-1.633047
+OVERLAY COUTURE LIMITED,11446782,NE4 6NQ,"['32120 - Manufacture of jewellery and related articles', '90030 - Artistic creation']",54.972807,-1.633047
 INSIGHT OUT ENTERTAINMENT LIMITED,11485379,NE6 1LH,['90020 - Support activities to performing arts'],54.974253,-1.591008
-PR MARKETING SOLUTIONS LIMITED,11485631,NE1 3PZ,"['90010 - Performing arts' '90030 - Artistic creation'
- '93120 - Activities of sport clubs']",54.967727,-1.624078
+PR MARKETING SOLUTIONS LIMITED,11485631,NE1 3PZ,"['90010 - Performing arts', '90030 - Artistic creation', '93120 - Activities of sport clubs']",54.967727,-1.624078
 SWEET SERENITY LIMITED,11490584,NE15 6LF,['90030 - Artistic creation'],54.975155,-1.671848
-MUSLIM BROTHERS AND SISTERS ASSOCIATION CENTER LTD,11543185,NE5 3AS,['85520 - Cultural education' '85600 - Educational support services'],54.990626,-1.65414
-TATWOOD PUPPETS LTD,11547347,NE4 6AS,['90010 - Performing arts' '90030 - Artistic creation'],54.970579,-1.62446
-NORTH EAST WILDS CIC,11559289,NE3 1QL,"['85520 - Cultural education'
- '88990 - Other social work activities without accommodation n.e.c.'
- '96040 - Physical well-being activities']",55.004245,-1.603571
+EURYDICE GAMES LTD,11497914,NE3 1PU,['58190 - Other publishing activities'],55.003339,-1.606207
+BUSINESS WORKS INTERNATIONAL LTD,11537680,NE3 3LS,['58190 - Other publishing activities'],55.010031,-1.622138
+MUSLIM BROTHERS AND SISTERS ASSOCIATION CENTER LTD,11543185,NE5 3AS,"['85520 - Cultural education', '85600 - Educational support services']",54.990626,-1.65414
+TATWOOD PUPPETS LTD,11547347,NE4 6AS,"['90010 - Performing arts', '90030 - Artistic creation']",54.970579,-1.62446
+NORTH EAST WILDS CIC,11559289,NE3 1QL,"['85520 - Cultural education', '88990 - Other social work activities without accommodation n.e.c.', '96040 - Physical well-being activities']",55.004245,-1.603571
 ALEC GORDON PRODUCTIONS LIMITED,11605961,NE2 2RN,['90010 - Performing arts'],54.991545,-1.596711
-CODENAME MUSIC LTD.,11636052,NE1 3DY,"['59200 - Sound recording and music publishing activities'
- '90030 - Artistic creation']",54.97132,-1.597491
-NM MEDIA GROUP LTD,11685256,NE13 9EX,"['59112 - Video production activities'
- '74202 - Other specialist photography']",55.034135,-1.663964
+CODENAME MUSIC LTD.,11636052,NE1 3DY,"['59200 - Sound recording and music publishing activities', '90030 - Artistic creation']",54.97132,-1.597491
+NM MEDIA GROUP LTD,11685256,NE13 9EX,"['59112 - Video production activities', '74202 - Other specialist photography']",55.034135,-1.663964
 GATESHEAD STADIUM PANTO LTD,11695186,NE3 3PF,['90010 - Performing arts'],55.011201,-1.623642
 TRANSNATIONAL FILMS LTD,11697007,NE5 2QP,['59112 - Video production activities'],54.983959,-1.667276
-ROMA ACCESS NEWCASTLE UPON TYNE ASSOCIATION C.I.C.,11699887,NE15 6UN,"['85510 - Sports and recreation education' '85520 - Cultural education'
- '85590 - Other education n.e.c.'
- '88990 - Other social work activities without accommodation n.e.c.']",54.974191,-1.677636
-ODDITY STUDIOS LIMITED,11753666,NE6 2HL,"['90030 - Artistic creation'
- '96020 - Hairdressing and other beauty treatment']",54.970149,-1.581302
+ROMA ACCESS NEWCASTLE UPON TYNE ASSOCIATION C.I.C.,11699887,NE15 6UN,"['85510 - Sports and recreation education', '85520 - Cultural education', '85590 - Other education n.e.c.', '88990 - Other social work activities without accommodation n.e.c.']",54.974191,-1.677636
+ODDITY STUDIOS LIMITED,11753666,NE6 2HL,"['90030 - Artistic creation', '96020 - Hairdressing and other beauty treatment']",54.970149,-1.581302
+PAJINATION LTD,11759057,NE13 9EP,['58190 - Other publishing activities'],55.032739,-1.640821
+QUAYSIDE PRODUCTIONS LTD,11764041,NE3 2FD,"['78101 - Motion picture, television and other theatrical casting activities']",55.010151,-1.677379
 RORY KAUFHOLD LIMITED,11772522,NE6 5QR,['59112 - Video production activities'],54.989607,-1.578992
-C'EST L'ADORE LIMITED,11777892,NE6 5NN,"['59200 - Sound recording and music publishing activities'
- '90010 - Performing arts']",54.979506,-1.584082
-ORIGINAL GALLERY LTD,11802520,NE6 4SR,"['90030 - Artistic creation'
- '96020 - Hairdressing and other beauty treatment']",54.988895,-1.545899
-HUSH ENTERTAINMENTS LTD,11808904,NE4 5NS,"['46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods'
- '59200 - Sound recording and music publishing activities'
- '90020 - Support activities to performing arts'
- '90030 - Artistic creation']",54.976515,-1.640856
-CHINA LONG LTD.,11818966,NE6 5DR,"['46190 - Agents involved in the sale of a variety of goods'
- '62020 - Information technology consultancy activities'
- '79110 - Travel agency activities' '85520 - Cultural education']",54.986393,-1.571978
-LYONS ART LIMITED,11855133,NE5 3EH,['74100 - specialised design activities' '90030 - Artistic creation'],54.997016,-1.664308
-WATERFALL NEWCASTLE LTD,11867611,NE3 1NZ,"['59112 - Video production activities'
- '74202 - Other specialist photography']",55.004061,-1.598868
+C'EST L'ADORE LIMITED,11777892,NE6 5NN,"['59200 - Sound recording and music publishing activities', '90010 - Performing arts']",54.979506,-1.584082
+ORIGINAL GALLERY LTD,11802520,NE6 4SR,"['90030 - Artistic creation', '96020 - Hairdressing and other beauty treatment']",54.988895,-1.545899
+HUSH ENTERTAINMENTS LTD,11808904,NE4 5NS,"['46160 - Agents involved in the sale of textiles, clothing, fur, footwear and leather goods', '59200 - Sound recording and music publishing activities', '90020 - Support activities to performing arts', '90030 - Artistic creation']",54.976515,-1.640856
+CHINA LONG LTD.,11818966,NE6 5DR,"['46190 - Agents involved in the sale of a variety of goods', '62020 - Information technology consultancy activities', '79110 - Travel agency activities', '85520 - Cultural education']",54.986393,-1.571978
+LYONS ART LIMITED,11855133,NE5 3EH,"['74100 - specialised design activities', '90030 - Artistic creation']",54.997016,-1.664308
+WATERFALL NEWCASTLE LTD,11867611,NE3 1NZ,"['59112 - Video production activities', '74202 - Other specialist photography']",55.004061,-1.598868
 VOICES OF VIRTUE GOSPEL CHOIR,11882573,NE6 2AR,['90010 - Performing arts'],54.971286,-1.580087
 NE14.TV PRODUCTIONS COMMUNITY INTEREST COMPANY,11916023,NE6 1LH,['90010 - Performing arts'],54.974253,-1.591008
 POWEREDBYREC. LIMITED,11953745,NE2 1LA,['90010 - Performing arts'],54.9871,-1.594724
@@ -335,298 +283,204 @@ CREATIVE SPACES NORTH EAST C.I.C.,11959787,NE3 3QH,['90030 - Artistic creation']
 NORTHERN DESIGN HAPPENS LIMITED,12061961,NE1 2NP,['85520 - Cultural education'],54.974867,-1.594657
 SHACKVILLE LTD,12090291,NE1 4XF,['59111 - Motion picture production activities'],54.971291,-1.619905
 FIRESTONE VIDEO LTD,12096765,NE4 7YL,['59112 - Video production activities'],54.961211,-1.644612
-EXHIBITIONS BY TWAM LIMITED,12106351,NE1 4JA,['91012 - Archives activities' '91020 - Museums activities'],54.969142,-1.624755
+EXHIBITIONS BY TWAM LIMITED,12106351,NE1 4JA,"['91012 - Archives activities', '91020 - Museums activities']",54.969142,-1.624755
 MAYDIA LIMITED,12114215,NE5 2LH,['90020 - Support activities to performing arts'],54.997777,-1.686811
 JOSHUA M KERR LTD,12125851,NE6 3AB,['59112 - Video production activities'],54.975232,-1.552162
-AK CREATIVE CONSULTANCY LIMITED,12178347,NE1 2BE,"['59112 - Video production activities' '60100 - Radio broadcasting'
- '70210 - Public relations and communications activities'
- '70229 - Management consultancy activities other than financial management']",54.972432,-1.592135
+AK CREATIVE CONSULTANCY LIMITED,12178347,NE1 2BE,"['59112 - Video production activities', '60100 - Radio broadcasting', '70210 - Public relations and communications activities', '70229 - Management consultancy activities other than financial management']",54.972432,-1.592135
+LESIMO LTD,12186710,NE1 8ST,"['58190 - Other publishing activities', '63990 - Other information service activities n.e.c.', '85590 - Other education n.e.c.']",54.976634,-1.60745
 SLUGTOWN CIC,12206765,NE2 1XU,['90040 - Operation of arts facilities'],54.976998,-1.600666
 GO KELTIE LTD,12271908,NE5 1NB,['90030 - Artistic creation'],55.00311,-1.695524
-ORIGAMI AGENCY LTD.,12278671,NE1 2SW,"['59112 - Video production activities'
- '59120 - Motion picture, video and television programme post-production activities'
- '73110 - Advertising agencies' '74202 - Other specialist photography']",54.974639,-1.601207
-SISTER SHACK CIC,12282082,NE15 6TT,"['70210 - Public relations and communications activities'
- '90020 - Support activities to performing arts'
- '90030 - Artistic creation']",54.976737,-1.686097
+ORIGAMI AGENCY LTD.,12278671,NE1 2SW,"['59112 - Video production activities', '59120 - Motion picture, video and television programme post-production activities', '73110 - Advertising agencies', '74202 - Other specialist photography']",54.974639,-1.601207
+SISTER SHACK CIC,12282082,NE15 6TT,"['70210 - Public relations and communications activities', '90020 - Support activities to performing arts', '90030 - Artistic creation']",54.976737,-1.686097
+CRAIG ASTLEY PROJECTS LIMITED,12297106,NE15 7NL,['91012 - Archives activities'],54.979046,-1.671582
 SUNSET STUDIOS LIMITED,12301884,NE3 3LS,['90040 - Operation of arts facilities'],55.010031,-1.622138
-PROSVITALEO LTD,12336455,NE6 5LW,"['85520 - Cultural education' '85590 - Other education n.e.c.'
- '94120 - Activities of professional membership organizations']",54.988014,-1.575617
-NORTHERN GOOSE LIMITED,12348763,NE1 8ST,"['59112 - Video production activities'
- '74209 - Photographic activities not elsewhere classified']",54.976634,-1.60745
+PROSVITALEO LTD,12336455,NE6 5LW,"['85520 - Cultural education', '85590 - Other education n.e.c.', '94120 - Activities of professional membership organizations']",54.988014,-1.575617
+NORTHERN GOOSE LIMITED,12348763,NE1 8ST,"['59112 - Video production activities', '74209 - Photographic activities not elsewhere classified']",54.976634,-1.60745
 TELEVISION OUTSIDE BROADCAST SOUND SERVICES LTD,12372414,NE3 4PH,['90030 - Artistic creation'],55.003531,-1.632939
+WOODENBOX PUBLISHING LIMITED,12421087,NE15 7BB,['58110 - Book publishing'],54.977201,-1.680596
 SOUNDTRACKS LTD,12421092,NE4 7YL,['90030 - Artistic creation'],54.961211,-1.644612
-NORTH EAST SIKH SERVICE C.I.C.,12423676,NE6 3AB,"['85520 - Cultural education'
- '94910 - Activities of religious organizations']",54.975232,-1.552162
-3SIXTY TOUR MANAGEMENT LTD,12459092,NE15 8DE,"['70229 - Management consultancy activities other than financial management'
- '90020 - Support activities to performing arts']",54.97697,-1.714235
-ENCHANTED ISLES LIMITED,12479508,NE2 1JQ,"['59111 - Motion picture production activities'
- '59131 - Motion picture distribution activities']",54.988025,-1.603652
+NORTH EAST SIKH SERVICE C.I.C.,12423676,NE6 3AB,"['85520 - Cultural education', '94910 - Activities of religious organizations']",54.975232,-1.552162
+3SIXTY TOUR MANAGEMENT LTD,12459092,NE15 8DE,"['70229 - Management consultancy activities other than financial management', '90020 - Support activities to performing arts']",54.97697,-1.714235
+ENCHANTED ISLES LIMITED,12479508,NE2 1JQ,"['59111 - Motion picture production activities', '59131 - Motion picture distribution activities']",54.988025,-1.603652
 COASTAL DECORATIVE GLASS SUPPLIES LTD,12499997,NE3 3PF,['90030 - Artistic creation'],55.011201,-1.623642
 EMBRA AGAIN PRODUCTIONS LTD,12511740,NE2 1DJ,['90030 - Artistic creation'],54.980341,-1.600665
 LD TALENT LTD,12535775,NE3 1DL,['90020 - Support activities to performing arts'],55.008162,-1.622124
-CREATIVE HERITAGE STUDIOS CIC,12603546,NE15 6TT,"['23410 - Manufacture of ceramic household and ornamental articles'
- '74100 - specialised design activities' '85520 - Cultural education']",54.976737,-1.686097
+CREATIVE HERITAGE STUDIOS CIC,12603546,NE15 6TT,"['23410 - Manufacture of ceramic household and ornamental articles', '74100 - specialised design activities', '85520 - Cultural education']",54.976737,-1.686097
+PING PONG TALES LIMITED,12606051,NE15 7AQ,['58190 - Other publishing activities'],54.981331,-1.683577
 ROBIN REZA LTD,12645168,NE3 2XH,['90030 - Artistic creation'],55.02035,-1.66319
-WRITE UP AND RISE LTD,12647780,NE3 5QU,"['85410 - Post-secondary non-tertiary education'
- '85520 - Cultural education']",55.027005,-1.616112
+WRITE UP AND RISE LTD,12647780,NE3 5QU,"['85410 - Post-secondary non-tertiary education', '85520 - Cultural education']",55.027005,-1.616112
 GEORDIE PANTO LTD,12657809,NE3 3PF,['90010 - Performing arts'],55.011201,-1.623642
-ARCUS IMMERSIVE LTD,12678769,NE2 1AN,"['58290 - Other software publishing'
- '59111 - Motion picture production activities'
- '62011 - Ready-made interactive leisure and entertainment software development'
- '62012 - Business and domestic software development']",54.976097,-1.597019
-PALLADIO EDUCATION LTD,12707871,NE6 5LB,['85520 - Cultural education' '85600 - Educational support services'],54.987598,-1.580123
-GLASSWORKS PRODUCTION LTD,12735643,NE1 2NP,"['59200 - Sound recording and music publishing activities'
- '85520 - Cultural education']",54.974867,-1.594657
-FULL FORGE LIMITED,12750122,NE1 5JE,"['59112 - Video production activities'
- '59120 - Motion picture, video and television programme post-production activities'
- '62011 - Ready-made interactive leisure and entertainment software development']",54.970856,-1.615895
+ROWAN MEDIA GROUP LIMITED,12671789,NE1 3NG,"['58110 - Book publishing', '58142 - Publishing of  consumer and business journals and periodicals', '62011 - Ready-made interactive leisure and entertainment software development', '73110 - Advertising agencies']",54.968366,-1.612141
+ARCUS IMMERSIVE LTD,12678769,NE2 1AN,"['58290 - Other software publishing', '59111 - Motion picture production activities', '62011 - Ready-made interactive leisure and entertainment software development', '62012 - Business and domestic software development']",54.976097,-1.597019
+DCR MEDIA LTD,12698299,NE15 8RY,"['58190 - Other publishing activities', '63120 - Web portals']",54.977026,-1.711282
+PALLADIO EDUCATION LTD,12707871,NE6 5LB,"['85520 - Cultural education', '85600 - Educational support services']",54.987598,-1.580123
+GLASSWORKS PRODUCTION LTD,12735643,NE1 2NP,"['59200 - Sound recording and music publishing activities', '85520 - Cultural education']",54.974867,-1.594657
+FULL FORGE LIMITED,12750122,NE1 5JE,"['59112 - Video production activities', '59120 - Motion picture, video and television programme post-production activities', '62011 - Ready-made interactive leisure and entertainment software development']",54.970856,-1.615895
 STAGE2STAGE PRODUCTIONS LIMITED,12786235,NE5 3ER,['90010 - Performing arts'],54.996453,-1.662015
 NORD FILMS LTD,12801904,NE6 5LR,['59112 - Video production activities'],54.986864,-1.578317
 FEKA LIMITED,12823993,NE6 1XQ,['59112 - Video production activities'],54.978265,-1.581608
-NRTHRN BABY RECORDS LTD,12847858,NE1 3AJ,"['59200 - Sound recording and music publishing activities'
- '90020 - Support activities to performing arts']",54.965713,-1.617943
+NRTHRN BABY RECORDS LTD,12847858,NE1 3AJ,"['59200 - Sound recording and music publishing activities', '90020 - Support activities to performing arts']",54.965713,-1.617943
 BRASH THEATRE COMPANY LTD,12874160,NE6 5NN,['90010 - Performing arts'],54.979506,-1.584082
-NEWCASTLE QURAN SCHOOL LIMITED,12889999,NE2 4AD,['85520 - Cultural education' '85600 - Educational support services'],54.9829,-1.62158
+NEWCASTLE QURAN SCHOOL LIMITED,12889999,NE2 4AD,"['85520 - Cultural education', '85600 - Educational support services']",54.9829,-1.62158
+VALPARAISO ARTS LTD,12924755,NE6 2HL,"['58110 - Book publishing', '58190 - Other publishing activities']",54.970149,-1.581302
 CERINA DESIGN LTD,12960900,NE2 1PD,['90040 - Operation of arts facilities'],54.982699,-1.592877
-STORYMADE LIMITED,13030318,NE15 8TL,"['59111 - Motion picture production activities'
- '59113 - Television programme production activities']",54.986978,-1.713273
-LION AND LILAC,13115524,NE5 1AW,"['90010 - Performing arts' '90020 - Support activities to performing arts'
- '90030 - Artistic creation']",55.010761,-1.716465
+STORYMADE LIMITED,13030318,NE15 8TL,"['59111 - Motion picture production activities', '59113 - Television programme production activities']",54.986978,-1.713273
+LION AND LILAC,13115524,NE5 1AW,"['90010 - Performing arts', '90020 - Support activities to performing arts', '90030 - Artistic creation']",55.010761,-1.716465
 TDOTD PRODUCTIONS LIMITED,13120183,NE2 3DH,['59111 - Motion picture production activities'],54.991936,-1.609179
 TML VALEX LTD,13187790,NE2 1TJ,['90030 - Artistic creation'],54.984767,-1.603998
-TRAINING VISION (TRAIVIS) LTD,13219370,NE1 1JF,"['85520 - Cultural education' '85590 - Other education n.e.c.'
- '85600 - Educational support services']",54.969968,-1.613654
+TRAINING VISION (TRAIVIS) LTD,13219370,NE1 1JF,"['85520 - Cultural education', '85590 - Other education n.e.c.', '85600 - Educational support services']",54.969968,-1.613654
 MUSICAL BUDS CIC,13221035,NE3 5RG,['85520 - Cultural education'],55.027119,-1.638746
 HOVERSQUAD LTD,13248422,NE6 5LR,['59112 - Video production activities'],54.986864,-1.578317
-WILD INTRIGUE CIC,13256408,NE1 3NG,"['59112 - Video production activities'
- '74901 - Environmental consulting activities'
- '79120 - Tour operator activities']",54.968366,-1.612141
+WILD INTRIGUE CIC,13256408,NE1 3NG,"['59112 - Video production activities', '74901 - Environmental consulting activities', '79120 - Tour operator activities']",54.968366,-1.612141
 ROMA RIGHT PATH PROJECT CIC,13267342,NE4 7RW,['85520 - Cultural education'],54.965879,-1.636934
 UNLOCK MUSIC CIC,13277858,NE3 3QH,['90030 - Artistic creation'],55.004558,-1.652144
-PELICAN THEATRE LTD,13308820,NE1 4BR,['90010 - Performing arts' '90030 - Artistic creation'],54.970186,-1.622246
+PELICAN THEATRE LTD,13308820,NE1 4BR,"['90010 - Performing arts', '90030 - Artistic creation']",54.970186,-1.622246
 ZONE 9 ENTERTAINMENT LTD,13312826,NE6 4YW,['90010 - Performing arts'],54.984672,-1.544179
 THE LUBBER FIEND C.I.C.,13314395,NE1 3PZ,['90040 - Operation of arts facilities'],54.967727,-1.624078
 456 LIVE LTD,13320647,NE6 1QU,['90020 - Support activities to performing arts'],54.972665,-1.584009
-URBAN MIND CIC,13399707,NE4 5LJ,['86900 - Other human health activities' '90030 - Artistic creation'],54.978238,-1.637185
+MOOD 2 LTD,13352051,NE5 2EU,"['58110 - Book publishing', '96090 - Other service activities n.e.c.']",54.983794,-1.672809
+FAITHFUL PUBLICATIONS LTD,13368941,NE4 7YL,"['58130 - Publishing of newspapers', '58190 - Other publishing activities']",54.961211,-1.644612
+OWEN HOPKINS LTD,13393894,NE6 5AJ,['58190 - Other publishing activities'],54.98137,-1.585094
+URBAN MIND CIC,13399707,NE4 5LJ,"['86900 - Other human health activities', '90030 - Artistic creation']",54.978238,-1.637185
 HIGH BRIDGE CIC,13420914,NE1 1EW,['90040 - Operation of arts facilities'],54.97181,-1.612827
 NICE SWAN LTD,13438754,NE1 3NG,['90010 - Performing arts'],54.968366,-1.612141
 DIALOGUE FOSTERS CIC,13453283,NE4 9AW,['85520 - Cultural education'],54.978499,-1.649541
 CASSINI FILMS LTD,13454070,NE3 1AL,['59112 - Video production activities'],55.006197,-1.614653
-KEMA KAY LIMITED,13497870,NE2 1AL,"['59113 - Television programme production activities'
- '85600 - Educational support services' '90010 - Performing arts']",54.978039,-1.599283
-LISSOMS ERA LTD,13543497,NE2 2AZ,"['47630 - Retail sale of music and video recordings in specialised stores'
- '90030 - Artistic creation']",54.98556,-1.604912
-MATTHEW LORENZO PRODUCTIONS LIMITED,13546039,NE4 7YA,"['59111 - Motion picture production activities'
- '59113 - Television programme production activities']",54.962685,-1.647801
+KEMA KAY LIMITED,13497870,NE2 1AL,"['59113 - Television programme production activities', '85600 - Educational support services', '90010 - Performing arts']",54.978039,-1.599283
+LISSOMS ERA LTD,13543497,NE2 2AZ,"['47630 - Retail sale of music and video recordings in specialised stores', '90030 - Artistic creation']",54.98556,-1.604912
+MATTHEW LORENZO PRODUCTIONS LIMITED,13546039,NE4 7YA,"['59111 - Motion picture production activities', '59113 - Television programme production activities']",54.962685,-1.647801
 SFN EVENTS LTD,13584268,NE2 1AN,['90020 - Support activities to performing arts'],54.976097,-1.597019
 CADE MEDIA LIMITED,13609135,NE1 6UF,['59112 - Video production activities'],54.97297,-1.608298
 BIGSWINGINGOVARIES LIMITED,13621430,NE2 1BD,['90030 - Artistic creation'],54.979831,-1.598404
 A STONE'S THROW FESTIVAL LTD,13621909,NE1 5DW,['90010 - Performing arts'],54.969645,-1.618643
-ANDY SMYTHE LTD,13625052,NE6 5LR,"['20411 - Manufacture of soap and detergents'
- '59113 - Television programme production activities'
- '90030 - Artistic creation']",54.986864,-1.578317
-THE NEWCASTLE REVIEW LTD,13625482,NE5 1AW,"['85600 - Educational support services' '90010 - Performing arts'
- '90020 - Support activities to performing arts'
- '90030 - Artistic creation']",55.010761,-1.716465
-EVENTFUL PRODUCTION SERVICES LTD,13679594,NE13 9FJ,"['74100 - specialised design activities'
- '82301 - Activities of exhibition and fair organisers'
- '82302 - Activities of conference organisers'
- '90020 - Support activities to performing arts']",55.035163,-1.65571
+ANDY SMYTHE LTD,13625052,NE6 5LR,"['20411 - Manufacture of soap and detergents', '59113 - Television programme production activities', '90030 - Artistic creation']",54.986864,-1.578317
+THE NEWCASTLE REVIEW LTD,13625482,NE5 1AW,"['85600 - Educational support services', '90010 - Performing arts', '90020 - Support activities to performing arts', '90030 - Artistic creation']",55.010761,-1.716465
+IJESPORTS LIMITED,13636333,NE2 2JX,['58190 - Other publishing activities'],54.988295,-1.594696
+EVENTFUL PRODUCTION SERVICES LTD,13679594,NE13 9FJ,"['74100 - specialised design activities', '82301 - Activities of exhibition and fair organisers', '82302 - Activities of conference organisers', '90020 - Support activities to performing arts']",55.035163,-1.65571
 NEWCASTLE FILM STUDIO LTD,13684598,NE2 3DH,['59111 - Motion picture production activities'],54.991936,-1.609179
-BOHO ARTS LIMITED,13709751,NE6 5SP,"['90010 - Performing arts' '90020 - Support activities to performing arts'
- '90040 - Operation of arts facilities']",54.989189,-1.572479
+BOHO ARTS LIMITED,13709751,NE6 5SP,"['90010 - Performing arts', '90020 - Support activities to performing arts', '90040 - Operation of arts facilities']",54.989189,-1.572479
 SHS EVENT CONSULTANCY LTD,13735341,NE2 1AN,['90020 - Support activities to performing arts'],54.976097,-1.597019
 INCOMMON CIC,13762486,NE15 8DP,['90030 - Artistic creation'],54.977984,-1.71365
 LONEGENIUS COMMUNITY INTEREST COMPANY,13766986,NE6 5DA,['90030 - Artistic creation'],54.985156,-1.575601
 SHY BAIRNS COLLECTIVE LTD.,13779204,NE2 1AP,['90010 - Performing arts'],54.97651,-1.596189
 OCTOBER ENDS LTD,13799585,NE6 5DR,['90010 - Performing arts'],54.986393,-1.571978
-ACADEMY OF EXCELLENCE - INTERNATIONAL LTD,13802868,NE1 5JE,"['85520 - Cultural education' '85590 - Other education n.e.c.'
- '85600 - Educational support services']",54.970856,-1.615895
-MUSECOLOGY LTD.,13806170,NE6 1LG,"['59200 - Sound recording and music publishing activities'
- '71112 - Urban planning and landscape architectural activities'
- '85520 - Cultural education' '90030 - Artistic creation']",54.972954,-1.589505
-TINY DRAGON PRODUCTIONS,13816200,NE1 1LE,['90010 - Performing arts' '90030 - Artistic creation'],54.969789,-1.610315
-STRANGE QUARK LTD,13826379,NE3 1EH,"['62090 - Other information technology service activities'
- '74100 - specialised design activities' '90030 - Artistic creation']",55.009605,-1.624096
-CAVIAR STUDIOS LTD,13835848,NE1 3PA,"['59112 - Video production activities'
- '59132 - Video distribution activities']",54.965466,-1.616477
+ACADEMY OF EXCELLENCE - INTERNATIONAL LTD,13802868,NE1 5JE,"['85520 - Cultural education', '85590 - Other education n.e.c.', '85600 - Educational support services']",54.970856,-1.615895
+MUSECOLOGY LTD.,13806170,NE6 1LG,"['59200 - Sound recording and music publishing activities', '71112 - Urban planning and landscape architectural activities', '85520 - Cultural education', '90030 - Artistic creation']",54.972954,-1.589505
+THANDEE-JAMES LTD,13814088,NE1 3NG,"['47910 - Retail sale via mail order houses or via Internet', '58110 - Book publishing', '70229 - Management consultancy activities other than financial management', '73110 - Advertising agencies']",54.968366,-1.612141
+TINY DRAGON PRODUCTIONS,13816200,NE1 1LE,"['90010 - Performing arts', '90030 - Artistic creation']",54.969789,-1.610315
+STRANGE QUARK LTD,13826379,NE3 1EH,"['62090 - Other information technology service activities', '74100 - specialised design activities', '90030 - Artistic creation']",55.009605,-1.624096
+INNIT STUDIOS LTD,13826697,NE4 5LQ,['58190 - Other publishing activities'],54.978414,-1.638855
+CAVIAR STUDIOS LTD,13835848,NE1 3PA,"['59112 - Video production activities', '59132 - Video distribution activities']",54.965466,-1.616477
+PORTFOLIO NORTH (NEWCASTLE) LIMITED,13837749,NE1 6JQ,['58190 - Other publishing activities'],54.97335,-1.611825
 ANNA ROBINSON LTD,13840816,NE3 4DE,['90020 - Support activities to performing arts'],55.003298,-1.621466
 LILI FILM (2022) LIMITED,13856647,NE4 7YD,['59111 - Motion picture production activities'],54.960913,-1.640882
 FUNK NIGHTS LTD,13893231,NE6 5NS,['90010 - Performing arts'],54.980002,-1.58453
-SISTER SOUNDS LTD,13951415,NE15 6TT,"['59200 - Sound recording and music publishing activities'
- '60100 - Radio broadcasting' '90030 - Artistic creation']",54.976737,-1.686097
+SISTER SOUNDS LTD,13951415,NE15 6TT,"['59200 - Sound recording and music publishing activities', '60100 - Radio broadcasting', '90030 - Artistic creation']",54.976737,-1.686097
 BUTTERY TOAST LTD,13979127,NE6 5RD,['90010 - Performing arts'],54.990946,-1.581572
 HOWARD LEE LIMITED,13983990,NE4 7YL,['90030 - Artistic creation'],54.961211,-1.644612
 THE BUBBLE WHISPERER LTD,14006502,NE6 5YB,['90010 - Performing arts'],54.983753,-1.577662
-AAC ENTERPRISE LTD,14007221,NE2 2AW,"['59200 - Sound recording and music publishing activities'
- '86220 - Specialists medical practice activities'
- '90010 - Performing arts' '96090 - Other service activities n.e.c.']",54.989216,-1.596826
+AAC ENTERPRISE LTD,14007221,NE2 2AW,"['59200 - Sound recording and music publishing activities', '86220 - Specialists medical practice activities', '90010 - Performing arts', '96090 - Other service activities n.e.c.']",54.989216,-1.596826
 STUPOR FILMS LTD,14035720,NE6 5HX,['59111 - Motion picture production activities'],54.983016,-1.580248
-INCLUSION HAIR NETWORK CIC,14064796,NE1 2PL,"['85520 - Cultural education'
- '96020 - Hairdressing and other beauty treatment']",54.974474,-1.592054
+INCLUSION HAIR NETWORK CIC,14064796,NE1 2PL,"['85520 - Cultural education', '96020 - Hairdressing and other beauty treatment']",54.974474,-1.592054
+AUGMENTED READING TECHNOLOGIES (ART) LTD,14073115,NE1 1LF,"['58190 - Other publishing activities', '62012 - Business and domestic software development']",54.969796,-1.610328
 ECOFLIX MEDIA LIMITED,14085892,NE5 1NB,['59111 - Motion picture production activities'],55.00311,-1.695524
 LIL BILL LTD,14130417,NE3 2HR,['90010 - Performing arts'],55.015085,-1.626422
 MATTHEW LORENZO PRODUCTIONS (HURST) LTD,14150451,NE4 7YA,['59111 - Motion picture production activities'],54.962685,-1.647801
-THE GREAT ARTCO LTD,14157790,NE15 7SF,"['47781 - Retail sale in commercial art galleries'
- '74990 - Non-trading company' '90030 - Artistic creation'
- '94990 - Activities of other membership organizations n.e.c.']",54.985702,-1.701969
+THE GREAT ARTCO LTD,14157790,NE15 7SF,"['47781 - Retail sale in commercial art galleries', '74990 - Non-trading company', '90030 - Artistic creation', '94990 - Activities of other membership organizations n.e.c.']",54.985702,-1.701969
 MALTINGS PICTURES LTD,14216110,NE1 4ST,['59111 - Motion picture production activities'],54.975219,-1.622324
-WAZOBIA AFRICA LTD,14303536,NE6 1DN,"['56101 - Licensed restaurants' '56290 - Other food services'
- '68100 - Buying and selling of own real estate'
- '90020 - Support activities to performing arts']",54.977214,-1.581199
+WAZOBIA AFRICA LTD,14303536,NE6 1DN,"['56101 - Licensed restaurants', '56290 - Other food services', '68100 - Buying and selling of own real estate', '90020 - Support activities to performing arts']",54.977214,-1.581199
 L&A ELEMENTS LIMITED,14304442,NE1 8JW,['90010 - Performing arts'],54.977053,-1.612087
-SUDANESE YOUTH LTD,14307137,NE4 6UL,"['85520 - Cultural education' '85600 - Educational support services'
- '94910 - Activities of religious organizations'
- '96090 - Other service activities n.e.c.']",54.972661,-1.642028
+SUDANESE YOUTH LTD,14307137,NE4 6UL,"['85520 - Cultural education', '85600 - Educational support services', '94910 - Activities of religious organizations', '96090 - Other service activities n.e.c.']",54.972661,-1.642028
 STEVEN DUNN 44 LTD,14319784,NE3 1NR,['90030 - Artistic creation'],55.001111,-1.617672
 TEXTEUR ART LTD,14342128,NE3 3UB,['90030 - Artistic creation'],55.006288,-1.629412
 DANCE EVENTS (WE) LTD,14364046,NE2 1AN,['90020 - Support activities to performing arts'],54.976097,-1.597019
 TALES IN SOMBRE TONES CIC,14404257,NE6 2RR,['90030 - Artistic creation'],54.976597,-1.569379
+CULTURED. NORTH EAST LIMITED,14404980,NE6 5AE,['58190 - Other publishing activities'],54.981547,-1.584233
 MERYEM CARSON LTD,14405351,NE13 9BD,['90010 - Performing arts'],55.029521,-1.646466
 EMERALD GALLERY LTD,14435790,NE1 4BP,['91020 - Museums activities'],54.970041,-1.621685
-DURHAM MUSLIMS COMMUNITY LTD,14486676,NE4 6UL,['85520 - Cultural education' '85600 - Educational support services'],54.972661,-1.642028
-HEBEI INTERNATIONAL SCHOOL PARTNERSHIP LIMITED,14497419,NE3 3PF,"['85520 - Cultural education' '85590 - Other education n.e.c.'
- '85600 - Educational support services']",55.011201,-1.623642
-NEWCASTLE DRUM TUITION LTD,14506807,NE7 7GP,['85520 - Cultural education' '90010 - Performing arts'],55.000841,-1.561413
-ART PSYCHE LTD,14509158,NE15 6TT,"['20420 - Manufacture of perfumes and toilet preparations'
- '47890 - Retail sale via stalls and markets of other goods'
- '47990 - Other retail sale not in stores, stalls or markets'
- '90030 - Artistic creation']",54.976737,-1.686097
-NORTH STAR CO-DESIGN CIC,14519925,NE2 4LR,['85520 - Cultural education' '90030 - Artistic creation'],54.982994,-1.631907
-BEAM STORY LAB CIC,14522541,NE3 5DS,['59112 - Video production activities' '90030 - Artistic creation'],55.012073,-1.608749
-NADANTA LIVE LTD,14527501,NE6 1LH,['58290 - Other software publishing' '59112 - Video production activities'],54.974253,-1.591008
-SOLIDARITY FARM CIC,14547069,NE7 7PR,"['85520 - Cultural education' '85590 - Other education n.e.c.'
- '96040 - Physical well-being activities']",55.000072,-1.57771
-CHARM QUARK LTD,14562675,NE3 1EH,"['46180 - Agents specialized in the sale of other particular products'
- '47781 - Retail sale in commercial art galleries'
- '70229 - Management consultancy activities other than financial management'
- '90030 - Artistic creation']",55.009605,-1.624096
+DURHAM MUSLIMS COMMUNITY LTD,14486676,NE4 6UL,"['85520 - Cultural education', '85600 - Educational support services']",54.972661,-1.642028
+HEBEI INTERNATIONAL SCHOOL PARTNERSHIP LIMITED,14497419,NE3 3PF,"['85520 - Cultural education', '85590 - Other education n.e.c.', '85600 - Educational support services']",55.011201,-1.623642
+NEWCASTLE DRUM TUITION LTD,14506807,NE7 7GP,"['85520 - Cultural education', '90010 - Performing arts']",55.000841,-1.561413
+ART PSYCHE LTD,14509158,NE15 6TT,"['20420 - Manufacture of perfumes and toilet preparations', '47890 - Retail sale via stalls and markets of other goods', '47990 - Other retail sale not in stores, stalls or markets', '90030 - Artistic creation']",54.976737,-1.686097
+NORTH STAR CO-DESIGN CIC,14519925,NE2 4LR,"['85520 - Cultural education', '90030 - Artistic creation']",54.982994,-1.631907
+BEAM STORY LAB CIC,14522541,NE3 5DS,"['59112 - Video production activities', '90030 - Artistic creation']",55.012073,-1.608749
+NADANTA LIVE LTD,14527501,NE6 1LH,"['58290 - Other software publishing', '59112 - Video production activities']",54.974253,-1.591008
+SOLIDARITY FARM CIC,14547069,NE7 7PR,"['85520 - Cultural education', '85590 - Other education n.e.c.', '96040 - Physical well-being activities']",55.000072,-1.57771
+CHARM QUARK LTD,14562675,NE3 1EH,"['46180 - Agents specialized in the sale of other particular products', '47781 - Retail sale in commercial art galleries', '70229 - Management consultancy activities other than financial management', '90030 - Artistic creation']",55.009605,-1.624096
 CØH VISUALS LIMITED,14570087,NE4 9TS,['59112 - Video production activities'],54.98596,-1.656508
-HONEYBIRD STUDIOS LIMITED,14621835,NE1 3NG,"['59111 - Motion picture production activities'
- '59112 - Video production activities'
- '59113 - Television programme production activities']",54.968366,-1.612141
-BRAVA ENTERTAINMENT COMPANY LTD,14631099,NE1 5JE,"['90010 - Performing arts' '90020 - Support activities to performing arts'
- '90040 - Operation of arts facilities']",54.970856,-1.615895
-NEWCASTLE FRINGE FESTIVAL LTD,14653142,NE4 9NU,['90010 - Performing arts' '90020 - Support activities to performing arts'],54.979461,-1.649798
+HONEYBIRD STUDIOS LIMITED,14621835,NE1 3NG,"['59111 - Motion picture production activities', '59112 - Video production activities', '59113 - Television programme production activities']",54.968366,-1.612141
+BRAVA ENTERTAINMENT COMPANY LTD,14631099,NE1 5JE,"['90010 - Performing arts', '90020 - Support activities to performing arts', '90040 - Operation of arts facilities']",54.970856,-1.615895
+NEWCASTLE FRINGE FESTIVAL LTD,14653142,NE4 9NU,"['90010 - Performing arts', '90020 - Support activities to performing arts']",54.979461,-1.649798
+NEWCASTLE MEAD LTD,14657323,NE7 7JD,"['47910 - Retail sale via mail order houses or via Internet', '58110 - Book publishing', '82990 - Other business support service activities n.e.c.', '85590 - Other education n.e.c.']",54.996534,-1.58625
 FLAT M FILMS LTD,14675187,NE4 7DX,['59111 - Motion picture production activities'],54.963851,-1.634035
-JUMPKAT LTD,14682141,NE6 5XR,"['58210 - Publishing of computer games'
- '59112 - Video production activities']",54.98449,-1.580421
+JUMPKAT LTD,14682141,NE6 5XR,"['58210 - Publishing of computer games', '59112 - Video production activities']",54.98449,-1.580421
 QUINN MASSEY PRODUCTIONS LIMITED,14687118,NE3 1AR,['59111 - Motion picture production activities'],55.006962,-1.612066
-TAPYARD STUDIOS LIMITED,14697969,NE6 2HL,"['56302 - Public houses and bars'
- '90020 - Support activities to performing arts']",54.970149,-1.581302
-YE UNION LTD,14717229,NE13 9DS,"['46900 - Non-specialised wholesale trade'
- '79901 - Activities of tourist guides' '85520 - Cultural education'
- '85600 - Educational support services']",55.027729,-1.657933
+TAPYARD STUDIOS LIMITED,14697969,NE6 2HL,"['56302 - Public houses and bars', '90020 - Support activities to performing arts']",54.970149,-1.581302
+HOMEPORTFOLIO HQ LIMITED,14708415,NE15 9FW,['58190 - Other publishing activities'],54.998722,-1.764194
+YE UNION LTD,14717229,NE13 9DS,"['46900 - Non-specialised wholesale trade', '79901 - Activities of tourist guides', '85520 - Cultural education', '85600 - Educational support services']",55.027729,-1.657933
 CODENAME FILMS LTD,14717928,NE1 3DY,['59111 - Motion picture production activities'],54.97132,-1.597491
-THRIVE DRIVE INITIATIVE CIC,14740902,NE4 8XS,"['85520 - Cultural education' '85590 - Other education n.e.c.'
- '86900 - Other human health activities']",54.969932,-1.661175
-DIFFRACTIVE STUDIO LTD,14748076,NE2 1AN,"['20420 - Manufacture of perfumes and toilet preparations'
- '46190 - Agents involved in the sale of a variety of goods'
- '46450 - Wholesale of perfume and cosmetics' '90030 - Artistic creation']",54.976097,-1.597019
-MCLEVIT PRODUCTION LIMITED,14750700,NE3 2XA,"['59112 - Video production activities'
- '59200 - Sound recording and music publishing activities']",55.015916,-1.671375
+THRIVE DRIVE INITIATIVE CIC,14740902,NE4 8XS,"['85520 - Cultural education', '85590 - Other education n.e.c.', '86900 - Other human health activities']",54.969932,-1.661175
+DIFFRACTIVE STUDIO LTD,14748076,NE2 1AN,"['20420 - Manufacture of perfumes and toilet preparations', '46190 - Agents involved in the sale of a variety of goods', '46450 - Wholesale of perfume and cosmetics', '90030 - Artistic creation']",54.976097,-1.597019
+MCLEVIT PRODUCTION LIMITED,14750700,NE3 2XA,"['59112 - Video production activities', '59200 - Sound recording and music publishing activities']",55.015916,-1.671375
 MARISAM EVENTS LTD,14770287,NE1 5DW,['90010 - Performing arts'],54.969645,-1.618643
-MOVE EASY NORTH EAST CIC,14774808,NE6 5NS,"['90010 - Performing arts' '90030 - Artistic creation'
- '96040 - Physical well-being activities']",54.980002,-1.58453
-HOLY TRINITY ROMANIAN CHURCH NEWCASTLE C.I.C.,14826191,NE15 6UN,"['85510 - Sports and recreation education' '85520 - Cultural education'
- '94910 - Activities of religious organizations'
- '96040 - Physical well-being activities']",54.974191,-1.677636
-GEMS NURSERY LTD,14827210,NE15 6NJ,"['58110 - Book publishing' '85520 - Cultural education'
- '85590 - Other education n.e.c.' '85600 - Educational support services']",54.970659,-1.671585
+MOVE EASY NORTH EAST CIC,14774808,NE6 5NS,"['90010 - Performing arts', '90030 - Artistic creation', '96040 - Physical well-being activities']",54.980002,-1.58453
+HOLY TRINITY ROMANIAN CHURCH NEWCASTLE C.I.C.,14826191,NE15 6UN,"['85510 - Sports and recreation education', '85520 - Cultural education', '94910 - Activities of religious organizations', '96040 - Physical well-being activities']",54.974191,-1.677636
+GEMS NURSERY LTD,14827210,NE15 6NJ,"['58110 - Book publishing', '85520 - Cultural education', '85590 - Other education n.e.c.', '85600 - Educational support services']",54.970659,-1.671585
 AFRONORTHEAST LIMITED,14853799,NE2 4LS,['90020 - Support activities to performing arts'],54.983553,-1.63026
-COHERENT 360 LTD,14855495,NE4 8SA,"['59111 - Motion picture production activities'
- '59112 - Video production activities'
- '62020 - Information technology consultancy activities']",54.970721,-1.647828
-NEWCASTLE CIRCUS ARTS CIC,14867617,NE4 9UA,"['86900 - Other human health activities'
- '90020 - Support activities to performing arts'
- '93130 - Fitness facilities']",54.984985,-1.651797
-LAZY LORIS FLOWERS LTD,14876246,NE3 2AX,"['47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores'
- '47890 - Retail sale via stalls and markets of other goods'
- '62090 - Other information technology service activities'
- '90030 - Artistic creation']",55.020935,-1.644307
+COHERENT 360 LTD,14855495,NE4 8SA,"['59111 - Motion picture production activities', '59112 - Video production activities', '62020 - Information technology consultancy activities']",54.970721,-1.647828
+NEWCASTLE CIRCUS ARTS CIC,14867617,NE4 9UA,"['86900 - Other human health activities', '90020 - Support activities to performing arts', '93130 - Fitness facilities']",54.984985,-1.651797
+LAZY LORIS FLOWERS LTD,14876246,NE3 2AX,"['47760 - Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores', '47890 - Retail sale via stalls and markets of other goods', '62090 - Other information technology service activities', '90030 - Artistic creation']",55.020935,-1.644307
 MOVERE OPUS PICTURES LIMITED,14900021,NE2 1TJ,['59111 - Motion picture production activities'],54.984767,-1.603998
-INDIGO PUZZLES LIMITED,14904645,NE3 1SQ,"['47650 - Retail sale of games and toys in specialised stores'
- '47990 - Other retail sale not in stores, stalls or markets'
- '90030 - Artistic creation']",55.008932,-1.601712
-LITTLE BUILDINGS BOOKINGS LTD,14913876,NE1 2PW,"['56302 - Public houses and bars' '90010 - Performing arts'
- '90020 - Support activities to performing arts'
- '90040 - Operation of arts facilities']",54.974942,-1.595096
-AFROSPHERE FILMS LTD,14929761,NE5 4BW,"['59112 - Video production activities'
- '73120 - Media representation services'
- '74100 - specialised design activities'
- '74202 - Other specialist photography']",55.008973,-1.682752
+INDIGO PUZZLES LIMITED,14904645,NE3 1SQ,"['47650 - Retail sale of games and toys in specialised stores', '47990 - Other retail sale not in stores, stalls or markets', '90030 - Artistic creation']",55.008932,-1.601712
+LITTLE BUILDINGS BOOKINGS LTD,14913876,NE1 2PW,"['56302 - Public houses and bars', '90010 - Performing arts', '90020 - Support activities to performing arts', '90040 - Operation of arts facilities']",54.974942,-1.595096
+BENIDORM AND BEYOND LTD,14920841,NE1 2DF,['58190 - Other publishing activities'],54.971956,-1.589578
+AFROSPHERE FILMS LTD,14929761,NE5 4BW,"['59112 - Video production activities', '73120 - Media representation services', '74100 - specialised design activities', '74202 - Other specialist photography']",55.008973,-1.682752
 BYKER GRAVE LTD,14960889,NE6 5DD,['90020 - Support activities to performing arts'],54.985791,-1.572031
 FOREVER A FAIRYTALE PARTY PRODUCTIONS LTD,14992287,NE5 2PB,['90010 - Performing arts'],54.99385,-1.708473
 WB1 FILMS LTD,15006809,NE7 7LX,['59111 - Motion picture production activities'],55.007932,-1.595405
-AMELIA BEDELIA LTD,15024883,NE2 2AA,"['90010 - Performing arts' '90030 - Artistic creation'
- '91011 - Library activities' '91020 - Museums activities']",54.983426,-1.604275
-ALL WAYS GOOD COMPANY LTD,15063180,NE6 5BA,"['90010 - Performing arts' '90030 - Artistic creation'
- '93120 - Activities of sport clubs']",54.98063,-1.592226
-VODLOZA KONCEPT LTD,15085755,NE3 3AG,"['59111 - Motion picture production activities'
- '59112 - Video production activities'
- '74201 - Portrait photographic activities'
- '74202 - Other specialist photography']",55.009911,-1.648876
+AMELIA BEDELIA LTD,15024883,NE2 2AA,"['90010 - Performing arts', '90030 - Artistic creation', '91011 - Library activities', '91020 - Museums activities']",54.983426,-1.604275
+ALL WAYS GOOD COMPANY LTD,15063180,NE6 5BA,"['90010 - Performing arts', '90030 - Artistic creation', '93120 - Activities of sport clubs']",54.98063,-1.592226
+VODLOZA KONCEPT LTD,15085755,NE3 3AG,"['59111 - Motion picture production activities', '59112 - Video production activities', '74201 - Portrait photographic activities', '74202 - Other specialist photography']",55.009911,-1.648876
 URBAN PARK MARKET LTD,15088244,NE3 1NR,['90030 - Artistic creation'],55.001111,-1.617672
 MR7TRADE LTD,15094879,NE4 8HE,['59112 - Video production activities'],54.96677,-1.65511
-ACADEMY OF EXCELLENCE INNOVATION LTD,15107613,NE1 5JE,"['85520 - Cultural education' '85590 - Other education n.e.c.'
- '85600 - Educational support services']",54.970856,-1.615895
-CHOKEPOINT CREATIVE LTD,15143916,NE15 6PR,"['62011 - Ready-made interactive leisure and entertainment software development'
- '90030 - Artistic creation']",54.976343,-1.659215
+ACADEMY OF EXCELLENCE INNOVATION LTD,15107613,NE1 5JE,"['85520 - Cultural education', '85590 - Other education n.e.c.', '85600 - Educational support services']",54.970856,-1.615895
+CHOKEPOINT CREATIVE LTD,15143916,NE15 6PR,"['62011 - Ready-made interactive leisure and entertainment software development', '90030 - Artistic creation']",54.976343,-1.659215
 SPACE OUSEBURN LTD,15161146,NE6 1LH,['90030 - Artistic creation'],54.974253,-1.591008
-SO-CINEMATIC LTD,15161960,NE3 4LD,"['59111 - Motion picture production activities'
- '59112 - Video production activities'
- '59113 - Television programme production activities'
- '59120 - Motion picture, video and television programme post-production activities']",55.003845,-1.648038
+SO-CINEMATIC LTD,15161960,NE3 4LD,"['59111 - Motion picture production activities', '59112 - Video production activities', '59113 - Television programme production activities', '59120 - Motion picture, video and television programme post-production activities']",55.003845,-1.648038
 QBICART LTD,15208776,NE6 5NQ,['90030 - Artistic creation'],54.980275,-1.58298
-SOME GIRLS COMPANY LTD,15215592,NE4 5EU,"['90020 - Support activities to performing arts'
- '90030 - Artistic creation']",54.976312,-1.633046
+SOME GIRLS COMPANY LTD,15215592,NE4 5EU,"['90020 - Support activities to performing arts', '90030 - Artistic creation']",54.976312,-1.633046
+TURTLÉAR LTD,15220069,NE3 3SE,"['78101 - Motion picture, television and other theatrical casting activities']",55.008736,-1.659159
 EDO CULTURAL VALUE AND HERITAGE ACADEMY LTD,15229596,NE5 2YP,['85520 - Cultural education'],54.992954,-1.694725
+STARLIGHT PRINT LTD,15250108,NE6 2HL,"['18129 - Printing n.e.c.', '58190 - Other publishing activities']",54.970149,-1.581302
 CANTABILE TOUCH LTD,15274939,NE1 4XE,['90010 - Performing arts'],54.970661,-1.619521
 THE AI EFFECT LTD,15278376,NE4 7YA,['59112 - Video production activities'],54.962685,-1.647801
-IHDY LIMITED,15279690,NE4 5PE,"['59200 - Sound recording and music publishing activities'
- '90010 - Performing arts']",54.978756,-1.641977
-VOLT ART LIMITED,15282499,NE2 3DN,"['47781 - Retail sale in commercial art galleries'
- '58290 - Other software publishing'
- '62012 - Business and domestic software development'
- '90030 - Artistic creation']",54.99338,-1.611087
+IHDY LIMITED,15279690,NE4 5PE,"['59200 - Sound recording and music publishing activities', '90010 - Performing arts']",54.978756,-1.641977
+VOLT ART LIMITED,15282499,NE2 3DN,"['47781 - Retail sale in commercial art galleries', '58290 - Other software publishing', '62012 - Business and domestic software development', '90030 - Artistic creation']",54.99338,-1.611087
 TOMI GROUP ENTERTAINMENT LTD,15286621,NE6 2QX,['90010 - Performing arts'],54.974168,-1.561016
 KOSHYK CIC,15296769,NE4 7RW,['85520 - Cultural education'],54.965879,-1.636934
-DEEP SPACE MEDIA LIMITED,15301654,NE4 7YA,"['59112 - Video production activities'
- '73120 - Media representation services']",54.962685,-1.647801
+DEEP SPACE MEDIA LIMITED,15301654,NE4 7YA,"['59112 - Video production activities', '73120 - Media representation services']",54.962685,-1.647801
 HOUSE54 STUDIOS LTD,15324177,NE3 1DX,['59111 - Motion picture production activities'],55.006597,-1.624828
 THE PROHIBITION ACT SOCIETY COMMUNITY INTEREST COMPANY,15339632,NE1 5DW,['90020 - Support activities to performing arts'],54.969645,-1.618643
-DARUL HIKMAH ACADEMY LTD,15347013,NE4 6PA,"['85510 - Sports and recreation education' '85520 - Cultural education'
- '85590 - Other education n.e.c.' '85600 - Educational support services']",54.973156,-1.638418
-ROMA/GYPSY HOLOCAUST MEMORIAL CENTRE - NEWCASTLE UPON TYNE C.I.C.,15348328,NE5 2UU,"['85510 - Sports and recreation education' '85520 - Cultural education'
- '88990 - Other social work activities without accommodation n.e.c.'
- '93290 - Other amusement and recreation activities n.e.c.']",54.987495,-1.686047
-NB MEDIA SERVICES LIMITED,15350435,NE15 8AE,"['59112 - Video production activities'
- '60200 - Television programming and broadcasting activities']",54.979114,-1.708845
-BRIGGS STAR COMMUNICATIONS LTD,15375208,NE15 8AE,"['59112 - Video production activities'
- '61300 - Satellite telecommunications activities'
- '62090 - Other information technology service activities']",54.979114,-1.708845
-OJEMBA ENTERTAINMENT LIMITED,15438365,NE1 3NG,"['90020 - Support activities to performing arts'
- '93290 - Other amusement and recreation activities n.e.c.']",54.968366,-1.612141
+DARUL HIKMAH ACADEMY LTD,15347013,NE4 6PA,"['85510 - Sports and recreation education', '85520 - Cultural education', '85590 - Other education n.e.c.', '85600 - Educational support services']",54.973156,-1.638418
+ROMA/GYPSY HOLOCAUST MEMORIAL CENTRE - NEWCASTLE UPON TYNE C.I.C.,15348328,NE5 2UU,"['85510 - Sports and recreation education', '85520 - Cultural education', '88990 - Other social work activities without accommodation n.e.c.', '93290 - Other amusement and recreation activities n.e.c.']",54.987495,-1.686047
+NB MEDIA SERVICES LIMITED,15350435,NE15 8AE,"['59112 - Video production activities', '60200 - Television programming and broadcasting activities']",54.979114,-1.708845
+BRIGGS STAR COMMUNICATIONS LTD,15375208,NE15 8AE,"['59112 - Video production activities', '61300 - Satellite telecommunications activities', '62090 - Other information technology service activities']",54.979114,-1.708845
+AIW LIMITED,15386510,NE2 2JH,"['58190 - Other publishing activities', '63120 - Web portals']",54.988305,-1.597806
+OJEMBA ENTERTAINMENT LIMITED,15438365,NE1 3NG,"['90020 - Support activities to performing arts', '93290 - Other amusement and recreation activities n.e.c.']",54.968366,-1.612141
 CHR EVENTS LTD,15443090,NE3 2FD,['90010 - Performing arts'],55.010151,-1.677379
-PSSCARNATION LTD,15460899,NE6 5XJ,['90010 - Performing arts' '90020 - Support activities to performing arts'],54.985612,-1.578032
+PSSCARNATION LTD,15460899,NE6 5XJ,"['90010 - Performing arts', '90020 - Support activities to performing arts']",54.985612,-1.578032
+NE1 MEDIA LTD,15486807,NE2 4PB,['58190 - Other publishing activities'],54.984283,-1.630785
+MOTOWORLD ONLINE LIMITED,15508868,NE3 3BD,['58190 - Other publishing activities'],55.007225,-1.645273
+PREMIUM EDUCATIONAL CONSULTING LTD,15515738,NE15 8BB,"['58110 - Book publishing', '74300 - Translation and interpretation activities', '74909 - Other professional, scientific and technical activities n.e.c.', '85600 - Educational support services']",54.981406,-1.716704
 APODINI CREATIONS LIMITED,15543832,NE15 8HF,['90030 - Artistic creation'],54.983913,-1.736672
-ORBITAL FX LTD,15558624,NE1 2DF,"['59111 - Motion picture production activities'
- '71121 - Engineering design activities for industrial process and production'
- '74100 - specialised design activities']",54.971956,-1.589578
+ORBITAL FX LTD,15558624,NE1 2DF,"['59111 - Motion picture production activities', '71121 - Engineering design activities for industrial process and production', '74100 - specialised design activities']",54.971956,-1.589578
 GEORDIE GRIPS LIMITED,15568696,NE6 5AQ,['59111 - Motion picture production activities'],54.980593,-1.589352
-THE PHANTOM VAULT LTD,15569582,NE15 7HB,"['46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played'
- '47630 - Retail sale of music and video recordings in specialised stores'
- '59112 - Video production activities'
- '59200 - Sound recording and music publishing activities']",54.977386,-1.693234
+THE PHANTOM VAULT LTD,15569582,NE15 7HB,"['46431 - Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played', '47630 - Retail sale of music and video recordings in specialised stores', '59112 - Video production activities', '59200 - Sound recording and music publishing activities']",54.977386,-1.693234
 AG MUSIC LTD,15587826,NE7 7YA,['90010 - Performing arts'],54.996422,-1.590581
 CAVIAR PRODUCTIONS LTD,15593210,NE1 3PA,['59112 - Video production activities'],54.965466,-1.616477
 MEMORIES TO MASTERPIECE LTD,15633662,NE1 3RF,['90030 - Artistic creation'],54.967671,-1.611054
-MEGAS UNION GLOBAL LTD,15640597,NE13 9EJ,"['58110 - Book publishing' '59112 - Video production activities'
- '59200 - Sound recording and music publishing activities']",55.029574,-1.662094
-THE ISLAMIC CENTRE LTD,15652088,NE1 5JE,"['85520 - Cultural education'
- '94910 - Activities of religious organizations'
- '96090 - Other service activities n.e.c.']",54.970856,-1.615895
+MEGAS UNION GLOBAL LTD,15640597,NE13 9EJ,"['58110 - Book publishing', '59112 - Video production activities', '59200 - Sound recording and music publishing activities']",55.029574,-1.662094
+THE ISLAMIC CENTRE LTD,15652088,NE1 5JE,"['85520 - Cultural education', '94910 - Activities of religious organizations', '96090 - Other service activities n.e.c.']",54.970856,-1.615895
 LDPC LTD,15668576,NE1 1UN,['90010 - Performing arts'],54.971132,-1.614505
 YEEHAW LTD,15674846,NE1 1RN,['90010 - Performing arts'],54.968147,-1.611144
 FINE ART AND CRAFTS LIMITED,15676716,NE4 9QD,['90030 - Artistic creation'],54.977999,-1.657092
@@ -642,13 +496,13 @@ PIGMENT PRESS LTD,15730611,NE6 2HL,['90040 - Operation of arts facilities'],54.9
 ARBF LIMITED,15734119,NE13 9GB,['90010 - Performing arts'],55.031585,-1.654053
 FULLY LOADED PICTURES LIMITED,15754560,NE4 6UL,['59111 - Motion picture production activities'],54.972661,-1.642028
 LJ DANCE & PERFORMING ARTS ACADEMY LTD,15796232,NE6 2HL,['90010 - Performing arts'],54.970149,-1.581302
-DANCE ARTISTS NORTH EAST CIC,15852918,NE6 5BT,"['78200 - Temporary employment agency activities'
- '90010 - Performing arts' '90020 - Support activities to performing arts']",54.984078,-1.575753
-SJJG LTD,15874953,NE3 3PF,['58110 - Book publishing' '90010 - Performing arts'],55.011201,-1.623642
+MORDEN TOWER BOOK ROOM LTD,15850892,NE3 4AN,['58110 - Book publishing'],54.999216,-1.62066
+DANCE ARTISTS NORTH EAST CIC,15852918,NE6 5BT,"['78200 - Temporary employment agency activities', '90010 - Performing arts', '90020 - Support activities to performing arts']",54.984078,-1.575753
+OSIRIS PRESS LIMITED,15865633,NE15 9EN,['58110 - Book publishing'],54.996259,-1.75355
+GLITCH BOOKS LIMITED,15867294,NE15 9EN,['58110 - Book publishing'],54.996259,-1.75355
+SJJG LTD,15874953,NE3 3PF,"['58110 - Book publishing', '90010 - Performing arts']",55.011201,-1.623642
 HARVEY DUCKMAN LTD,15879932,NE1 1JF,['90030 - Artistic creation'],54.969968,-1.613654
-BUNNY RWLK LTD,15881018,NE1 5UD,"['90010 - Performing arts' '90030 - Artistic creation'
- '98100 - Undifferentiated goods-producing activities of private households for own use'
- '98200 - Undifferentiated service-producing activities of private households for own use']",54.971137,-1.618832
-AVERIA AGENCY UK LTD,15888622,NE3 1YQ,['63120 - Web portals' '90030 - Artistic creation'],55.002906,-1.608369
+BUNNY RWLK LTD,15881018,NE1 5UD,"['90010 - Performing arts', '90030 - Artistic creation', '98100 - Undifferentiated goods-producing activities of private households for own use', '98200 - Undifferentiated service-producing activities of private households for own use']",54.971137,-1.618832
+AVERIA AGENCY UK LTD,15888622,NE3 1YQ,"['63120 - Web portals', '90030 - Artistic creation']",55.002906,-1.608369
 GEORDIE VISION LTD,15906324,NE6 2HL,['59112 - Video production activities'],54.970149,-1.581302
 PROG ON THE TYNE LIMITED,15918124,NE2 2PQ,['90020 - Support activities to performing arts'],54.990131,-1.601023
