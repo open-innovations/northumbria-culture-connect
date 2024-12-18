@@ -20,7 +20,9 @@ logo: /assets/images/case-study/logo-twam@2x.png
 <h2>Participation</h2>
 <p>The charts below explore the number of people engaging with this organisation's activities over the course of a year, between September 2023 and September 2024.</p>
 
-<h3>Total Footfall<h3>
+<h3>Total Footfall</h3>
+
+<p>This data represents the total number of visitors to Tyne & Wear Archives & Museums.</p>
 
 {{ comp.LineChart( {
     data: twam_participation,
@@ -30,7 +32,9 @@ logo: /assets/images/case-study/logo-twam@2x.png
 } ) }}
 
 
-<h3>Participation by Programme<h3>
+<h3>Participation by Programme</h3>
+
+<p>The chart below gives an overview of the programmes offered by TWAM, and the number of people that have engaged with these programmes throughout 2024.</p>
 
 {{ comp.LineChart( {
     data: twam_participation,
@@ -40,5 +44,35 @@ logo: /assets/images/case-study/logo-twam@2x.png
             { title: 'Informal learning', x: 'decimal_year', y: 'Informal learning', line: { curvature: 0.5 } }
     ],
 } ) }}
+
+
+<h1 style = "padding-top:2em;">Case Study: Health and Wellbeing Heritage Programme Evaluation</h1>
+
+<p>Tyne & Wear Archives & Museums provide a number of community engagement programmes...</p>
+
+<p>We are working with them to evaluate their Heritage Programmes, and to share some of the impact they have had on communities in Newcastle.</p>
+
+<h3>Participation via the Health & Wellbeing Heritage Programme</h3>
+
+<p>The chart below shows the number of people that have participated in Mental Health & Wellbeing Programmes delivered by TWAM. <strong>NOTE:</strong> This includes ward visits that took place in Gateshead.</p>
+
+{{ comp.LineChart( {
+    data: community_groups_participation,
+    series: [
+            { title: 'Participants', x: 'date_decimal', y: 'participants_over_19', line: { curvature: 0.5 } },
+    ],
+} ) }}
+
+<h2>Evaluation Framework</h2>
+
+<p><strong>Main goals:</strong>The 5 ways to wellbeing are achieved for the participants taking part.</p>
+
+<p>Participants will demonstrate this by:<ul>
+    <li><strong>1. Connect with other people:</strong> Connecting with other people in the group sessions, sharing stories and listening to their stories and contributions.</li>
+    <li><strong>2. Be physically active:</strong> Walking around the museums/galleries as part of the visits programmed into the project, supporting physical activity and leaving the ward environment.</li>
+    <li><strong>3. Learn new skills:</strong> Learning something new about history, heritage and identity through the sessions and the resources provided.</li>
+    <li><strong>4. Give to others:</strong> Supporting other members of the group in the sessions and visits, assisting the worker in the sessions with the handling objects and session planning.</li>
+    <li><strong>5. Pay attention to the present moment:</strong> Attending the sessions, focusing on the activities and recognising what has been enjoyable in that session.</li>
+</ul></p>
 
 

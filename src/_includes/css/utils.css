@@ -17,6 +17,10 @@
   padding: 1rem;
 }
 
+.padded-top { 
+  padding-top: 2em;
+}
+
 .warning {
   color: rgb(95, 82, 7);
   background-color: rgb(251, 245, 208);
