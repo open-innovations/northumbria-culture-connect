@@ -23,6 +23,8 @@ logo: /assets/images/case-study/centre-for-life.svg
 
 <h3>Science Centre General Admission</h3>
 
+
+
 {{ comp.LineChart( {
     data: centre_for_life_participation,
     series: [
@@ -71,3 +73,186 @@ logo: /assets/images/case-study/centre-for-life.svg
         ],
 } ) }}
 
+
+<h2>Case Study: Insights from Audience Satisfaction Surveys</h2>
+
+
+<h3>Online Surveys</h3>
+<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>626 people</strong> completed the survey online.
+</p>
+{{ comp.oi.chart.bar({
+    config: {
+        data: satisfaction_scores.online_percentage_score,
+        category: "score",
+        width: 1200,
+        height:400,
+        series: [
+            { title: "Wow Zone", value: "wow_zone", tooltip: "Wow Zone<br>{{ score }}: {{ wow_zone }}%" },
+            { title: "Space Zone", value: "space_zone", tooltip: "Space Zone<br>{{ score }}: {{ space_zone }}%" },
+            { title: "Brain Zone", value: "brain_zone", tooltip: "Brain Zone<br>{{ score }}: {{ brain_zone }}%" },
+            { title: "Hello World", value: "hello_world", tooltip: "Hello World<br>{{ score }}: {{ hello_world }}%" },
+            { title: "Experiment Zone", value: "experiment_zone", tooltip: "Experiment Zone<br>{{ score }}: {{ experiment_zone }}%" },
+            { title: "Science Now", value: "science_now", tooltip: "Science Now<br>{{ score }}: {{ science_now }}%" },
+            { title: "Making Studio", value: "making_studio", tooltip: "Making Studio<br>{{ score }}: {{ making_studio }}%" },
+            { title: "Live Science Show", value: "live_science_show", tooltip: "Live Science Show<br>{{ score }}: {{ live_science_show }}%" },
+            { title: "Planetarium Shows", value: "planetarium_shows", tooltip: "Planetarium Shows<br>{{ score }}: {{ planetarium_shows }}%" },
+            { title: "Play Zone (under 7s)", value: "play_zone", tooltip: "Play Zone (under 7s)<br>{{ score }}: {{ play_zone }}%" },
+        ],
+        "axis": {
+		    "x": {
+                "grid": {
+                    "stroke-dasharray": "6 2",
+                    "stroke-width": 1
+                },
+                "ticks": [{
+                        "value": 10,
+                        "label": "10%"
+                    },{
+                        "value": 20,
+                        "label": "20%"
+                    },{
+                        "value": 30,
+                        "label": "30%"
+                    },{
+                        "value": 40,
+                        "label": "40%"
+                    },{
+                        "value": 50,
+                        "label": "50%"
+                    },{
+                        "value": 60,
+                        "label": "60%"
+                    },{
+                        "value": 70,
+                        "label": "70%"
+                    },{
+                        "value": 80,
+                        "label": "80%"
+                    },{
+                        "value": 90,
+                        "label": "90%"
+                    },{
+                        "value": 100,
+                        "label": "100%"
+                    }]
+            }
+		},
+    }
+}) }}
+
+<h3>Face to Face Surveys</h3>
+<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>594 people</strong> completed the survey in person at the centre.
+</p>
+{{ comp.oi.chart.bar({
+    config: {
+        data: satisfaction_scores.f2f_percentage_total,
+        category: "score",
+        width: 1200,
+        height:600,
+        series: [
+            { title: "Wow Zone", value: "wow_zone", tooltip: "Wow Zone<br>{{ score }}: {{ wow_zone }}%" },
+            { title: "Space Zone", value: "space_zone", tooltip: "Space Zone<br>{{ score }}: {{ space_zone }}%" },
+            { title: "Brain Zone", value: "brain_zone", tooltip: "Brain Zone<br>{{ score }}: {{ brain_zone }}%" },
+            { title: "Hello World", value: "hello_world", tooltip: "Hello World<br>{{ score }}: {{ hello_world }}%" },
+            { title: "Experiment Zone", value: "experiment_zone", tooltip: "Experiment Zone<br>{{ score }}: {{ experiment_zone }}%" },
+            { title: "Science Now", value: "science_now", tooltip: "Science Now<br>{{ score }}: {{ science_now }}%" },
+            { title: "Making Studio", value: "making_studio", tooltip: "Making Studio<br>{{ score }}: {{ making_studio }}%" },
+            { title: "Live Science Show", value: "live_science_show", tooltip: "Live Science Show<br>{{ score }}: {{ live_science_show }}%" },
+            { title: "Planetarium Shows", value: "planetarium_shows", tooltip: "Planetarium Shows<br>{{ score }}: {{ planetarium_shows }}%" },
+            { title: "Play Zone (under 7s)", value: "play_zone", tooltip: "Play Zone (under 7s)<br>{{ score }}: {{ play_zone }}%" },
+        ],
+        "axis": {
+		    "x": {
+                "grid": {
+                    "stroke-dasharray": "6 2",
+                    "stroke-width": 1
+                },
+                "ticks": [{
+                        "value": 10,
+                        "label": "10%"
+                    },{
+                        "value": 20,
+                        "label": "20%"
+                    },{
+                        "value": 30,
+                        "label": "30%"
+                    },{
+                        "value": 40,
+                        "label": "40%"
+                    },{
+                        "value": 50,
+                        "label": "50%"
+                    },{
+                        "value": 60,
+                        "label": "60%"
+                    },{
+                        "value": 70,
+                        "label": "70%"
+                    },{
+                        "value": 80,
+                        "label": "80%"
+                    },{
+                        "value": 90,
+                        "label": "90%"
+                    },{
+                        "value": 100,
+                        "label": "100%"
+                    }]
+            }
+		},
+    }
+}) }}
+
+<h3>Tablet Surveys</h3>
+<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>77 people</strong> completed the survey using a tablet in the centre.
+</p>
+{{ comp.oi.chart.bar({
+    config: {
+        data: satisfaction_scores.tablet_percentage_total,
+        category: "score",
+        width: 1200,
+        height:200,
+        series: [
+            { title: "Score", value: "count", tooltip: "{{ score }}: {{ count }}%" },
+        ],
+        "axis": {
+		    "x": {
+                "grid": {
+                    "stroke-dasharray": "6 2",
+                    "stroke-width": 1
+                },
+                "ticks": [{
+                        "value": 10,
+                        "label": "10%"
+                    },{
+                        "value": 20,
+                        "label": "20%"
+                    },{
+                        "value": 30,
+                        "label": "30%"
+                    },{
+                        "value": 40,
+                        "label": "40%"
+                    },{
+                        "value": 50,
+                        "label": "50%"
+                    },{
+                        "value": 60,
+                        "label": "60%"
+                    },{
+                        "value": 70,
+                        "label": "70%"
+                    },{
+                        "value": 80,
+                        "label": "80%"
+                    },{
+                        "value": 90,
+                        "label": "90%"
+                    },{
+                        "value": 100,
+                        "label": "100%"
+                    }]
+            }
+		},
+    }
+}) }}
