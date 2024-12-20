@@ -1,6 +1,11 @@
-score,wow_zone,space_zone,brain_zone,hello_world,experiment_zone,science_now,making_studio,live_science_show,planetarium_shows,play_zone
-Very satisfied,95.4,93.43,92.86,92.86,93.58,88.16,98.23,98.15,98.07,93.72
-Somewhat satisfied,2.19,5.63,5.61,4.76,4.28,7.89,1.41,1.23,1.61,4.1
-Neither satisfied nor dissatisfied,0.0,0.7,0.26,1.9,0.53,2.63,0.0,0.62,0.0,1.09
-Somewhat dissatisfied,1.09,0.0,0.51,0.0,1.07,0.66,0.35,0.0,0.32,0.82
-Very dissatisfied,1.31,0.23,0.77,0.48,0.53,0.66,0.0,0.0,0.0,0.27
+exhibit,Very satisfied,Somewhat satisfied,Neither satisfied nor dissatisfied,Somewhat dissatisfied,Very dissatisfied
+Wow Zone,95.4,2.19,0.0,1.09,1.31
+Space Zone,93.43,5.63,0.7,0.0,0.23
+Brain Zone,92.86,5.61,0.26,0.51,0.77
+Hello World,92.86,4.76,1.9,0.0,0.48
+Experiment Zone,93.58,4.28,0.53,1.07,0.53
+Science Now,88.16,7.89,2.63,0.66,0.66
+Making Studio,98.23,1.41,0.0,0.35,0.0
+Life Science Show,98.15,1.23,0.62,0.0,0.0
+Planetarium Show,98.07,1.61,0.0,0.32,0.0
+Play Zone,93.72,4.1,1.09,0.82,0.27

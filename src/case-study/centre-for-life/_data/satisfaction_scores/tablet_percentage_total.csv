@@ -1,6 +1,2 @@
-score,count
-Very satisfied,55.74
-Somewhat satisfied,26.23
-Neither satisfied nor dissatisfied,8.2
-Somewhat dissatisfied,1.64
-Very dissatisfied,8.2
+exhibit,Very satisfied,Somewhat satisfied,Neither satisfied nor dissatisfied,Somewhat dissatisfied,Very dissatisfied
+All Exhibits,55.74,26.23,8.2,1.64,8.2
