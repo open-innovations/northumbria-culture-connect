@@ -1,12 +1,11 @@
-<{{ tag || 'section' }}><div class="block">
+<{{ tag || 'section' }}{{ if style }} class="{{ style }}"{{ /if }}><div class="block padded">
     <div class="greedy" style="display:flex;flex-direction:column;">
         {{ comp.PageSummary({ ...page, config }) }}
     </div>
-    <div style="display:flex;justify-content:center;">
+    <div>
         {{ comp.CallToAction({ link: page.url, text: "Explore the data &rarr;" }) }}
     </div>
     {{ if config.withTags }}
-    <hr>
     {{ comp.PageTags({ ...page, config })}}
     {{ /if }}
 </div></{{ tag || 'section' }}>

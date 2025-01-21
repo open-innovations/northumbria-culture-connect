@@ -10,7 +10,7 @@ breadcrumbs:
 <p>PLACEHOLDER PAGE FOR CASE STUDIES.</p>
 
 {{ for p of search.pages('case-study', 'title') }}
-{{ comp.PageLink({ page: p, config: { headingLevel: 2, withTags: true } }) }}
+{{ comp.PageLink({ page: p, config: { headingLevel: 2, withTags: true }, style: "case-study" }) }}
 {{ /for }}
 
 </div>

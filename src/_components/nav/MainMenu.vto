@@ -1,8 +1,8 @@
 ---
 css: |
     [data-comp=nav-main-menu] {
-        color: white;
-        background: black;
+        color: var(--menu-fg);
+        background: var(--menu-bg);
         margin: 0;
         ul {
             display: flex;
@@ -17,13 +17,17 @@ css: |
             text-decoration: none;
             display: inline-block;
             padding: calc(var(--spacing-normal)*1.5) var(--spacing-large);
+            border-bottom: 4px solid var(--menu-bg);
             &:hover {
-                background: var(--col-white);
-                color: var(--col-black);
+                border-color: var(--menu-fg);
+                background: var(--menu-fg);
+                color: var(--menu-bg);
             }
             &[href="about:blank"] {
                 background: var(--col-darkgrey);
+                border-color: var(--col-darkgrey);
             }
+            &.current { border-color: var(--menu-fg); }
         }
     }
 ---
@@ -34,7 +38,7 @@ css: |
 		{{#- Will include the url for the source page, or the direct URL, defaulting to about:blank -#}}
 		<li><a href="{{
 			i.url || "about:blank"
-		}}">{{ i.title }}</a></li>
+		}}"{{ if i.url == url }} class="current"{{ /if }}>{{ i.title }}</a></li>
 		{{ /for }}
 		</ul>
 	</div>

@@ -9,7 +9,7 @@
 <body>
     {{ comp.SiteBanner() }}
     {{ comp.SiteHeader({ metas, title }) }}
-    {{ comp.nav.MainMenu() }}
+    {{ comp.nav.MainMenu({ url }) }}
     {{ comp.nav.Breadcrumb({ breadcrumbs, title, url }) }}
     <div class="greedy">
         {{ content }}
