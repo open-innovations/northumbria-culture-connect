@@ -2,28 +2,27 @@
 layout: template/base.vto
 ---
 
-{{ comp Hero }}
+{{ comp Hero {style: "case-study"} }}
     <div class="grid" style="align-items: center;">
-        <div>
-        <h1>{{ title }}</h1>
-        {{ if content_block?.about }}
-        <div class="emphasise-first">
-            {{ content_block.about |> md }}
+        <div{{ if content_block?.about }} class="emphasise-first-para"{{ /if }}>
+			<h1>{{ title }}</h1>
+			{{ if content_block?.about }}
+			{{ content_block.about |> md }}
+			{{ /if }}
+			<p>{{ comp.CallToAction({ link, text: `Visit ${ title } website &rarr;` }) }}</p>
+
         </div>
-        </div>
-        {{ /if }}
         <div style="flex-grow: 0; flex-basis: unset;">
-        <img src="{{ logo }}" inline/>
+			<img src="{{ logo }}" inline/>
         </div>
     </div>
-    <div style="margin-top: 1rem;">
-        {{ comp.CallToAction({ link, text: `Visit ${ title } website &rarr;` }) }}
-    <div>
 
 {{ /comp }}
 
-<main class="padded">
-{{ description |> md }}
-{{ comp.PageTags({ tags }) }}
-{{ content }}
+<main>
+	<div class="holder padded">
+	{{ description |> md }}
+	{{ comp.PageTags({ tags }) }}
+	{{ content }}
+	</div>
 </main>

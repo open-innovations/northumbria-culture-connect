@@ -1,15 +1,17 @@
 ---
 url: /
 ---
-{{ comp Hero }}{{ include "./_partials/hero.md" |> md }}{{ /comp }}
 
-<main class="padded">
-    <section>
+{{ comp Hero {style: "comp-hero-front"} }}{{ include "./_partials/hero.md" |> md }}{{ /comp }}
+
+<main>
+    <section class="holder padded">
         {{ include "./_partials/headlines.md" |> md }}
     
         <ul class="grid centred">
             {{ comp.Headline({
                 headline: "Pilot organisations",
+				class: funding,
                 number: search.pages('pilot-organisation').length,
             }) }}
             {{ comp.Headline({
@@ -29,7 +31,7 @@ url: /
     
     <hr>
     
-    <section>
+    <section class="holder padded">
         <h2>Insights</h2>
     
         {{ include "./_partials/insights.md" |> md }}
@@ -40,7 +42,7 @@ url: /
     
     <hr>
     
-    <section>
+    <section class="holder padded">
         <h2>Case Studies</h2>
     
         {{ include "./_partials/case_studies.md" |> md }}
@@ -48,7 +50,9 @@ url: /
         {{ comp.DynamicGridList({ searchTerm: 'case-study' }) }}
     </section>
     
-    <section>
+    <hr>
+
+    <section class="holder padded">
         <h2>Explore further</h2>
         {{# Add further URLs after separated by '|' characters #}}
         {{ comp.DynamicGridList({ searchTerm: 'url=/tags/|/data-landscape/|/about/' }) }}

@@ -12,6 +12,4 @@ goal; [case studies](/tag/case-studies/) exploring best practice in data
 collection, sharing and interpretation; and [data sources](/tag/data/)
 showcasing the raw data that is available.
 
-A note about geographic scope: the Data Observatory pilot is limited to
-Newcastle City Council area for the pilot phase, but we aspire to broaden this
-out as the project to build the Observatory progresses.
+<p class="small">A note about geographic scope: the Data Observatory pilot is limited to Newcastle City Council area for the pilot phase, but we aspire to broaden this out as the project to build the Observatory progresses.</p>

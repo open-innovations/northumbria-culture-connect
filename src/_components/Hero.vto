@@ -3,14 +3,62 @@ css: |
     .comp-hero {
         display: block;
         color: black;
-        background-color: var(--colour-blue-25);
-        padding-block: 3rem;
-        padding-inline: 1.5rem;
-        & > * {
-            max-width: 80rem;
+        .small {
+          font-size: 1rem;
+          line-height: 1.3125em;
         }
+        > div > * + * { padding-bottom: 1rem; }
+        > div > h1 + * { padding-top: var(--padding); }
+        p a { color: inherit; }
+    }
+    .comp-hero-front {
+        background-color: var(--colour-teal-100);
+        color: var(--col-white);
+        .padded {
+          padding-block: 0;
+        }
+        > div > * {
+          width: var(--page-width);
+          margin: auto;
+          max-width: 100%;
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+        h1 {
+          color: var(--col-black);
+          padding-block: 3rem;
+          line-height: 1em;
+          position: relative;
+          font-size: 2.5rem;
+        }
+        h1, h1:before, h1:after {
+          background-color: var(--col-white);
+        }
+        h1:before, h1:after {
+          content: "";
+          width: 1000px;
+          display: block;
+          height: 100%;
+          position: absolute;
+          top: 0;
+        }
+        h1:before {
+          left: 0;
+          transform: translate3d(-100%,0,0);
+        }
+        h1:after {
+          right: 0;
+          transform: translate3d(100%,0,0);
+        }
+        .small {
+          font-size: 1rem;
+          line-height: 1.3125em;
+        }
+        > div > *:last-child { padding-bottom: var(--padding); }
     }
 ---
-<section class="comp-hero">
-{{ content }}
+<section class="comp-hero{{ if style }} {{ style }}{{ /if }}">
+	<div class="holder {{ if compact }}padded-inline{{ else }}padded{{ /if }}">
+	{{ content }}
+	</div>
 </section>

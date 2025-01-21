@@ -6,8 +6,11 @@ breadcrumbs:
     url: /
 ---
 
+<div class="holder padded">
 <p>PLACEHOLDER PAGE FOR CASE STUDIES.</p>
 
 {{ for p of search.pages('case-study', 'title') }}
 {{ comp.PageLink({ page: p, config: { headingLevel: 2, withTags: true } }) }}
 {{ /for }}
+
+</div>

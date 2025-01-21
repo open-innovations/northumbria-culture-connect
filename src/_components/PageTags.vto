@@ -1,6 +1,8 @@
 {{ set _tags = tags.filter(t => !(config?.hideTags || []).includes(t)) }}
+{{ if _tags.length > 0 }}
 <ul class="tag-cloud">
 {{ for tag of _tags }}
 <li>{{ comp.Tag({ tag }) }}</li>
 {{ /for }}
 </ul>
+{{ else }}

@@ -1,6 +1,23 @@
 /* Utility to make the tagged object grow in a flex layout */
+:root {
+	--padding: 2rem;
+	--spacing-baseline: 4px;
+	--spacing-factor-tiny: 1;
+	--spacing-tiny: calc(var(--spacing-baseline) * var(--spacing-factor-tiny));
+	--spacing-factor-small: 2;
+	--spacing-small: calc(var(--spacing-baseline) * var(--spacing-factor-small));
+	--spacing-factor-normal: 4;
+	--spacing-normal: calc(var(--spacing-baseline) * var(--spacing-factor-normal));
+	--spacing-factor-large: 8;
+	--spacing-large: calc(var(--spacing-baseline) * var(--spacing-factor-large));
+	--spacing-factor-huge: 16;
+	--spacing-huge: calc(var(--spacing-baseline) * var(--spacing-factor-huge));
+}
+
+aside.warning { text-align: center; }
 .greedy {
-  flex-grow: 1;
+	flex-grow: 1;
+	overflow: hidden;
 }
 
 .centred {
@@ -13,12 +30,26 @@
   font-weight: bold;
 }
 
-.padded {
-  padding: 1rem;
+.holder {
+  width: var(--page-width);
+  margin: auto;
+  max-width: 100%;
+}
+.holder > * {
+	margin-bottom: 1rem;
+}
+.holder > *:last-child {
+	margin-bottom: 0;
 }
 
-.padded-top { 
-  padding-top: 2em;
+.padded {
+	padding: var(--padding);
+}
+.padded-inline {
+	padding-inline: var(--padding);
+}
+.padded-block {
+	padding-block: var(--padding);
 }
 
 .warning {
@@ -42,7 +73,7 @@
   filter: drop-shadow(0 0 1px #b8daff);
 }
 
-.emphasise-first > *:first-child {
+.emphasise-first-para > h1 + p {
   font-size: 1.2em;
   font-weight: 700;
 }

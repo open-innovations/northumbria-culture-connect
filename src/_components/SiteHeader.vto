@@ -3,29 +3,26 @@ css: |
     .site-header {
         font-size: 2.5rem;
         font-weight: 700;
-        background: #000000;
-        color: #ffffff;
-        padding-block: 1em;
-        padding-inline: 1rem;
+        line-height: 1em;
+        background: var(--col-white);
+        color: var(--col-black);
         & a {
             color: inherit;
-            color: #dddddd;
+            color: var(--col-primary-black);
             text-decoration: none;
             &:hover {
                 color: inherit;
-                /* text-decoration: underline; */
-                /* border-bottom: 5px solid white; */
             }
         }
         /* Because it's a big sea, geddit? */
         & .pacific {
-            font-size: 1.6em;
+            font-size: 4rem;
         }
     }
 ---
 
 <header class="site-header">
-    <div class="holder">
-    <a href="/"><span class="pacific">C</span>ulture <span class="pacific">C</span>onnect</a>
+    <div class="holder padded">
+		<a href="/"><span class="pacific">C</span>ulture <span class="pacific">C</span>onnect</a>
     </div>
 </header>

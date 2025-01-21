@@ -2,8 +2,6 @@
 css: |
     [data-comp=nav-breadcrumb] {
         margin: 0;
-        padding-block: 2rem;
-        padding-inline: 1.5rem;
         ul {
             --gap: 0.5rem;
             padding: 0;
@@ -12,7 +10,7 @@ css: |
             gap: var(--gap);
         }
         li:not(:last-child):after {
-            content: "\\";
+            content: "\>";
             padding-inline-start: var(--gap);
         }
         a {
@@ -27,18 +25,20 @@ css: |
 ---
 {{ if breadcrumbs.length > 0 -}}
 <nav data-comp="nav-breadcrumb">
-<ul>
-{{ for c of breadcrumbs }}
-<li>
-{{ if c.url !== url -}}
-<a href="{{ c.url }}">{{ c.title }}</a>
-{{- else -}}
-{{ c.title }}
-{{- /if }}</li>
-{{ /for }}
-<li>
-    {{ title }}
-</li>
-</ul>
+	<div class="holder padded">
+		<ul>
+		{{ for c of breadcrumbs }}
+		<li>
+		{{ if c.url !== url -}}
+		<a href="{{ c.url }}">{{ c.title }}</a>
+		{{- else -}}
+		{{ c.title }}
+		{{- /if }}</li>
+		{{ /for }}
+		<li>
+			{{ title }}
+		</li>
+		</ul>
+	</div>
 </nav>
 {{- /if }}

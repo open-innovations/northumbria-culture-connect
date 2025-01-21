@@ -3,8 +3,6 @@ css: |
     [data-comp=nav-main-menu] {
         color: white;
         background: black;
-        padding-inline: 1.5rem;
-        padding-block: 1rem;
         margin: 0;
         ul {
             display: flex;
@@ -12,29 +10,32 @@ css: |
             margin: 0;
             padding: 0;
             flex-wrap: nowrap;
-            gap: 2em;
+            gap: 0em;
         }
         a {
             color: inherit;
             text-decoration: none;
+            display: inline-block;
+            padding: calc(var(--spacing-normal)*1.5) var(--spacing-large);
             &:hover {
-                text-decoration: underline;
+                background: var(--col-white);
+                color: var(--col-black);
             }
             &[href="about:blank"] {
-                border-inline: 10px solid red;
-                border-radius: 10px;
-                padding-inline: 0.2em;
+                background: var(--col-darkgrey);
             }
         }
     }
 ---
 <nav data-comp="nav-main-menu">
-<ul>
-{{ for i of mainMenu }}
-{{#- Will include the url for the source page, or the direct URL, defaulting to about:blank -#}}
-<li><a href="{{
-    i.url || "about:blank"
-}}">{{ i.title }}</a></li>
-{{ /for }}
-</ul>
+	<div class="holder">
+		<ul>
+		{{ for i of mainMenu }}
+		{{#- Will include the url for the source page, or the direct URL, defaulting to about:blank -#}}
+		<li><a href="{{
+			i.url || "about:blank"
+		}}">{{ i.title }}</a></li>
+		{{ /for }}
+		</ul>
+	</div>
 </nav>
