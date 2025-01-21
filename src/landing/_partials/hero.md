@@ -1,7 +1,5 @@
 # Placing data about culture in the hands of those that can use it
 
-(DRAFT CONTENT)
-
 The Culture Connect Data Observatory collects sources of data relating to
 culture into a single online resource. This can be used by anyone with an
 interest in culture, whether artists, producers, evaluators, policy makers or
