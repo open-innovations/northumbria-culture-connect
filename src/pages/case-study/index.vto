@@ -1,0 +1,13 @@
+---
+title: Case studies
+url: /case-study/
+breadcrumbs:
+  - title: Home
+    url: /
+---
+
+<p>PLACEHOLDER PAGE FOR CASE STUDIES.</p>
+
+{{ for p of search.pages('case-study', 'title') }}
+{{ comp.PageLink({ page: p, config: { headingLevel: 2, withTags: true } }) }}
+{{ /for }}

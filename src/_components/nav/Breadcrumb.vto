@@ -1,0 +1,44 @@
+---
+css: |
+    [data-comp=nav-breadcrumb] {
+        margin: 0;
+        padding-block: 2rem;
+        padding-inline: 1.5rem;
+        ul {
+            --gap: 0.5rem;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: var(--gap);
+        }
+        li:not(:last-child):after {
+            content: "\\";
+            padding-inline-start: var(--gap);
+        }
+        a {
+            font-weight: bold;
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+---
+{{ if breadcrumbs.length > 0 -}}
+<nav data-comp="nav-breadcrumb">
+<ul>
+{{ for c of breadcrumbs }}
+<li>
+{{ if c.url !== url -}}
+<a href="{{ c.url }}">{{ c.title }}</a>
+{{- else -}}
+{{ c.title }}
+{{- /if }}</li>
+{{ /for }}
+<li>
+    {{ title }}
+</li>
+</ul>
+</nav>
+{{- /if }}

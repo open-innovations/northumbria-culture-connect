@@ -3,3 +3,6 @@ layout: template/page.vto
 metas:
   site: Culture Connect
   title: "=title"
+
+mergedKeys:
+  breadcrumbs: array
