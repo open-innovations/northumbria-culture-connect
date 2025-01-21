@@ -9,6 +9,7 @@
 <body>
     {{ comp.SiteBanner() }}
     {{ comp.SiteHeader({ metas, title }) }}
+    {{ comp.nav.MainMenu() }}
     <div class="greedy">
         {{ content }}
     </div>
