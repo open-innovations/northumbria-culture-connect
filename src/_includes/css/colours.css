@@ -1,6 +1,6 @@
 :root {
 	--col-white: #ffffff;
-    --col-offwhite: #f8f8f8;
+	--col-offwhite: #f8f8f8;
 	--col-darkgrey: #231f20;
 	--col-primary-black: #231F20;
 	--col-black: #000000;
@@ -8,21 +8,21 @@
 	--menu-bg: #000000;
 	--menu-fg: #ffffff;
 
-    --colour-purple-25: #e3cfe2;
-    --colour-blue-25: #bfd1e2;
-    --colour-teal-100: #33A38C;
-    --colour-teal-75: #66baa9;
-    --colour-teal-50: #99d1c5;
-    --colour-teal-25: #cce7e2;
+	--colour-purple-25: #e3cfe2;
+	--colour-blue-25: #bfd1e2;
+	--colour-teal-100: #33A38C;
+	--colour-teal-75: #66baa9;
+	--colour-teal-50: #99d1c5;
+	--colour-teal-25: #cce7e2;
 	--colour-green-100: #005837;
 	--colour-green-75: #408269;
-    --colour-green-50: #7fab9b;
-    --colour-green-25: #bfd5cd;
+	--colour-green-50: #7fab9b;
+	--colour-green-25: #bfd5cd;
 	--colour-orange-100: #f25c29;
 	--colour-orange-75: #f5855f;
 	--colour-orange-50: #f8ad94;
-    --colour-orange-25: #fcd6c9;
-    --colour-pink-25: #f8c2d6;
+	--colour-orange-25: #fcd6c9;
+	--colour-pink-25: #f8c2d6;
 	--cta-background: #000000;
 	--cta-foreground: #ffffff;
 

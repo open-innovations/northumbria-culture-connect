@@ -14,7 +14,7 @@
 	--spacing-huge: calc(var(--spacing-baseline) * var(--spacing-factor-huge));
 }
 
-aside.warning { text-align: center; }
+aside.warning { text-align: center; position: relative; z-index: 1; }
 .greedy {
 	flex-grow: 1;
 	overflow: hidden;

@@ -1,11 +1,10 @@
 ---
 css: |
+    header { position: relative; background: var(--col-white); color: var(--col-black); }
     .site-header {
         font-size: 2.5rem;
         font-weight: 700;
         line-height: 1em;
-        background: var(--col-white);
-        color: var(--col-black);
         & a {
             color: inherit;
             color: var(--col-primary-black);
@@ -21,8 +20,9 @@ css: |
     }
 ---
 
-<header class="site-header">
-    <div class="holder padded">
+<header>
+	<div class="holder padded site-header">
 		<a href="/"><span class="pacific">C</span>ulture <span class="pacific">C</span>onnect</a>
-    </div>
+	</div>
+	{{ comp.nav.MainMenu({ url }) }}
 </header>

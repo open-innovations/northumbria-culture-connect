@@ -8,8 +8,7 @@
 </head>
 <body>
     {{ comp.SiteBanner() }}
-    {{ comp.SiteHeader({ metas, title }) }}
-    {{ comp.nav.MainMenu({ url }) }}
+    {{ comp.SiteHeader({ metas, title, url }) }}
     {{ comp.nav.Breadcrumb({ breadcrumbs, title, url }) }}
     <div class="greedy">
         {{ content }}

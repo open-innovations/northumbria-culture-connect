@@ -1,5 +1,6 @@
 ---
 css: |
+    .hamburger { display: none; }
     [data-comp=nav-main-menu] {
         color: var(--menu-fg);
         background: var(--menu-bg);
@@ -31,7 +32,77 @@ css: |
             &.current { border-color: var(--menu-fg); }
         }
     }
+    @media only screen and (max-width: 1452px) {
+        [data-comp=nav-main-menu] a { padding: var(--spacing-normal); }
+        [data-comp=nav-main-menu] ul { margin-left: var(--spacing-normal); }
+    }
+    @media only screen and (max-width: 1024px) {
+        header { border-bottom: 1px solid var(--col-darkgrey); }
+        .site-header a { margin-left: 3rem; }
+        .hamburger { display: block; }
+        label.hamburger::after {
+          position: absolute;
+          padding: 0.2em;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          content: "\2261";
+          font-size: 32px;
+          text-align: center;
+          line-height: 1.3em;
+        }
+        .nv { display: none; }
+        .hamburger {
+          position: absolute;
+          left: calc(1.5*var(--spacing-normal));
+          top: 2em;
+          width: 3em;
+          height: 3em;
+          font-size: 1em;
+          margin: 0;
+          cursor: pointer;
+          transition: left 0.3s ease-in;
+        }
+        input.hamburger { opacity: 0.01; }
+        nav[data-comp=nav-main-menu] {
+          position: fixed;
+          left: -90%;
+          top: 0;
+          width: 90%;
+          height: 100%;
+          background: var(--menu-fg);
+          z-index: 1000;
+          padding-top: 4em;
+          transition: left 0.3s ease-in;
+          overflow-y: auto;
+        }
+        nav[data-comp=nav-main-menu] ul {
+          display: block;
+          margin: 0;
+        }
+        nav[data-comp=nav-main-menu] li a {
+          border: 0;
+          width: 100%;
+          color: black;
+          &:hover {
+            border-color: var(--menu-bg);
+            background: var(--menu-bg);
+            color: var(--menu-fg);
+          }
+        }
+        nav[data-comp=nav-main-menu] a[href="about:blank"] { background: var(--col-offwhite); }
+        input.hamburger:checked, input.hamburger:checked + .hamburger { position: fixed; z-index: 1001; top: var(--spacing-normal); left: calc(90% - 3em - var(--spacing-normal)); }
+        input.hamburger:checked + label { position: absolute; }
+        input.hamburger:checked + label::after { content: "×"; padding: 0; }
+        input.hamburger:checked + label + nav[data-comp=nav-main-menu] {
+          left: 0;
+          box-shadow: 3px 0px 1em rgba(0,0,0,0.5);
+        }
+    }
 ---
+<input type="checkbox" id="hamburger" class="hamburger">
+<label for="hamburger" class="hamburger"><span class="nv">Toggle menu (if not visible)</span></label>
 <nav data-comp="nav-main-menu">
 	<div class="holder">
 		<ul>
