@@ -12,6 +12,7 @@ import sheets from "lume/plugins/sheets.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import svgo from 'lume/plugins/svgo.ts';
 import transformImages from 'lume/plugins/transform_images.ts';
+import inline from "lume/plugins/inline.ts";
 
 // import mermaid from "jsr:@ooker777/lume-mermaid-plugin/";
 
@@ -42,6 +43,11 @@ site.use(postcss({
 // SEO plugins
 site.use(metas());
 site.use(sitemap());
+
+// Inline images
+site.use(inline({
+  copyAttributes: ["title", /^data-/, "style"], // Copy the "title" and all data-* attributes
+}));
 
 site.use(transformImages());
 site.use(svgo());
