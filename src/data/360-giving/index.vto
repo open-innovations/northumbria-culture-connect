@@ -15,6 +15,7 @@ notes: |
     GrantNav query could be something like: arts or culture or theatre or muesum
 ---
 
+<div class="holder padded">
 <p>
     <a href="https://threesi=xtygiving.org">360 Giving</a> both publishes a standard and maintains a data repository related to grant awards.
     The full dataset contains very rich data covering many sectors. This page is an initial attempt to filter by cultural organisations.
@@ -33,19 +34,19 @@ notes: |
 </p>
 
 <ul class="grid">
-    <li class="block"><div>
+    <li class="block bg-offwhite"><div>
         <p>INCLUDING award by the following funders</p>
         <ul>
             {{ for f of inclusions.funders }}<li>{{ f }}</li>{{ /for }}
         </ul>
     </div></li>
-    <li class="block"><div>
+    <li class="block bg-offwhite"><div>
         <p>INCLUDING awards under the following Grant Programmes</p>
         <ul>
             {{ for p of inclusions.programmes }}<li>{{ p }}</li>{{ /for }}
         </ul>
     </div></li>
-    <li class="block"><div>
+    <li class="block bg-offwhite"><div>
         <p>EXCLUDING awards under the following Grant Programmes</p>
         <ul>
             {{ for p of inclusions.excluded_programmes }}<li>{{ p }}</li>{{ /for }}
@@ -67,15 +68,15 @@ notes: |
 
 
 <ul class="grid centred">
-<li class="block">
+<li class="block bg-offwhite">
     <p class="bang">{{ Object.keys(funders).length }}</p>
     <p>Distinct funders</p>
 </li>
-<li class="block">
+<li class="block bg-offwhite">
     <p class="bang">{{ Object.values(funders) |> map(x => x.grants) |> reduce((a, c) => a + c, 0) }}</p>
     <p>Total grants awarded</p>
 </li>
-<li class="block">
+<li class="block bg-offwhite">
     <p class="bang">{{ Object.values(funders) |> map(x => x.funding) |> reduce((a, c) => a + c, 0) |> displayCurrency }}</p>
     <p>Total funding awarded</p>
 </li>
@@ -85,7 +86,7 @@ notes: |
 
 <ul class="grid centred">
 {{ for name, details of Object.entries(funders).toSorted((a, b) => b[1].funding - a[1].funding) }}
-    <li class="block">
+    <li class="block bg-offwhite">
         <p>{{ details[0] }}</p>
         <p class="bang greedy">{{ details[1].funding |> displayCurrency }}</p>
         <p>{{ details[1].grants }} grant awards</p>
@@ -166,3 +167,4 @@ notes: |
 {{ /for }}
 </tbody>
 </table>
+</div>

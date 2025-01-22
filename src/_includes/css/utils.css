@@ -89,3 +89,5 @@ aside.warning { text-align: center; position: relative; z-index: 1; }
     }
   }
 }
+
+header + .greedy > .comp-hero:not(.comp-hero-front) .holder h1 { margin-top: var(--padding); }

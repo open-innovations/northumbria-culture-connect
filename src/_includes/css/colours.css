@@ -34,7 +34,6 @@
 	--colour-blue-75: #4075a7;
 	--colour-blue-50: #7fa3c4;
 	--colour-blue-25: #bfd1e2;
-
 }
 .bg-teal-100 { background: var(--colour-teal-100); color: #ffffff; --cta-foreground: #ffffff; --cta-background: transparent; }
 .bg-teal-75 { background: var(--colour-teal-75); color: #ffffff; --cta-foreground: #ffffff; --cta-background: transparent; }
