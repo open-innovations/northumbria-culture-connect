@@ -12,17 +12,20 @@ url: /
             {{ comp.Headline({
                 headline: "Pilot organisations",
 				extraClasses: "bg-orange-100",
+				link: "/case-study/",
                 number: search.pages('pilot-organisation').length,
             }) }}
             {{ comp.Headline({
                 headline: "Open datasets",
-                number: search.pages('open data').length,
+                number: search.pages('open').length,
+				link: "/data/",
                 extraClasses: "bg-pink-100",
             }) }}
             {{ set totalFunding = 1234567 |> displayCurrency }}
             {{ comp.Headline({
                 headline: "Total funding",
                 number: totalFunding,
+				link: "/insight/funding/",
                 extraClasses: "funding",
             }) }}
         </ul>

@@ -1,4 +1,5 @@
 <li class="comp-headline block{{ if extraClasses }} {{ extraClasses }}{{ /if }}">
     <h{{ headingLevel || 3 }} class="heading">{{ headline }}</h{{ headingLevel || 3 }}>
     <p class="bang" style="font-size: 2.5rem;">{{ number }}</p>
+	{{ if link }}<p class="more"><a href="{{ link }}" aria-label="Find out more about {{ headline }}">Find out more</a></p>{{ /if }}
 </li>
