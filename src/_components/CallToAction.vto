@@ -3,7 +3,10 @@ css: |
     .call-to-action {
         display: inline-block;
         color: var(--cta-foreground, white)!important;
-        background: var(--cta-background, black);
+        border-color: var(--cta-foreground, white)!important;
+        background: var(--cta-background, black)!important;
+        border: 1px solid;
+        border-radius: 8px;
         font-size: 1.2rem;
         font-weight: bold;
         padding-block: 0.8rem;

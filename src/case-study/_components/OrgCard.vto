@@ -16,21 +16,21 @@ css: |
 	<div class="info-row">
 		<ul class="grid">
 			<li class="block bg-teal-100">
-				<p class="heading">Type of organisation</p>
+				<h{{ headingLevel || 3 }} class="heading">Type of organisation</h{{ headingLevel || 3 }}>
 				<p class="bang">{{ orgData['Type of organisation'] }}</p>
 			</li>
 			<li class="block bg-green-100">
-				<p class="heading">Postcode</p>
+				<h{{ headingLevel || 3 }} class="heading">Postcode</h{{ headingLevel || 3 }}>
 				<p class="bang"style="font-size: 2.5rem;">{{ orgData['Postcode'] }}</p>
 			</li>
 			<li class="block bg-blue-100">
-				<p class="heading">Number of employees</p>
+				<h{{ headingLevel || 3 }} class="heading">Number of employees</h{{ headingLevel || 3 }}>
 				<p class="bang"style="font-size: 2.5rem;">{{ orgData['Number of employees'] }}</p>
 			</li>
 		</ul>
 
 		<div class="block bg-grey">
-			<p class="heading">Total funding</p>
+			<h{{ headingLevel || 3 }} class="heading">Total funding</h{{ headingLevel || 3 }}>
 			<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
 
 			{{ comp.OrgIncome({ incomeData }) }}

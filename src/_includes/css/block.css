@@ -2,7 +2,7 @@
 	--spacing: 1rem;
 	padding: 1rem;
 	display: block;
-	border-radius: 8px;
+	border-radius: 16px;
 	box-shadow: 0 1px 24px var(--block-shadow-colour, rgba(35,31,32,.15));
 	/*  background: var(--block-background, unset);
 	color: var(--block-foreground, unset);
