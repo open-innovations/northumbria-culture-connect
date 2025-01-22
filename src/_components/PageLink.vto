@@ -1,3 +1,9 @@
+---
+css: |
+  .case-study .block h2 + p { margin-top: 1rem; }
+  .case-study .block > * { margin-top: 1rem; }
+  .case-study .block > *:first-child { margin-top: 0; }
+---
 <{{ tag || 'section' }}{{ if style }} class="{{ style }}"{{ /if }}><div class="block padded">
     <div class="greedy" style="display:flex;flex-direction:column;">
         {{ comp.PageSummary({ ...page, config }) }}
