@@ -110,7 +110,7 @@ css: |
 		{{#- Will include the url for the source page, or the direct URL, defaulting to about:blank -#}}
 		<li><a href="{{
 			i.url || "about:blank"
-		}}"{{ if i.url == url }} class="current"{{ /if }}>{{ i.title }}</a></li>
+		}}"{{ if url==i.url || (i.url != "/" && url.match("^"+i.url)) }} class="current"{{ /if }}>{{ i.title }}</a></li>
 		{{ /for }}
 		</ul>
 	</div>
