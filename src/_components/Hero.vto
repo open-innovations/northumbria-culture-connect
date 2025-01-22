@@ -12,8 +12,6 @@ css: |
         p a { color: inherit; }
     }
     .comp-hero-front {
-        background-color: var(--colour-teal-100);
-        color: var(--col-white);
         .padded {
           padding-block: 0;
         }
@@ -55,6 +53,9 @@ css: |
           line-height: 1.3125em;
         }
         > div > *:last-child { padding-bottom: var(--padding); }
+        & ul li { display: inline-block; line-height: 0; }
+        & ul li a {  }
+        & ul li + li { margin-left: 1rem; padding-left: 1rem; border-left: 1px solid var(--col-darkgrey); }
     }
 ---
 <section class="comp-hero{{ if style }} {{ style }}{{ /if }}">

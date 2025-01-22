@@ -25,7 +25,12 @@
     --colour-pink-25: #f8c2d6;
 	--cta-background: #000000;
 	--cta-foreground: #ffffff;
+
 }
+.bg-teal-100 { background: var(--colour-teal-100); color: #ffffff; }
+.bg-teal-75 { background: var(--colour-teal-75); color: #ffffff; }
+.bg-teal-50 { background: var(--colour-teal-50); color: #ffffff; }
+.bg-teal-25 { background: var(--colour-teal-25); color: #000000; }
 .funding {
 	background: var(--colour-green-100);
 	color: white;

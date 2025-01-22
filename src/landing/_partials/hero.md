@@ -1,5 +1,9 @@
 # Placing data about culture in the hands of those that can use it
 
+
+* [![Northumbria University](/assets/images/logo-nu.svg)](https://www.northumbria.ac.uk/)
+* [![North East Combined Authority](/assets/images/logo-neca.svg)](https://www.northeast-ca.gov.uk/)
+
 The Culture Connect Data Observatory collects sources of data relating to
 culture into a single online resource. This can be used by anyone with an
 interest in culture, whether artists, producers, evaluators, policy makers or

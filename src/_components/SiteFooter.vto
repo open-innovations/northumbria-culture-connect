@@ -15,9 +15,13 @@ css: |
     h1,h2,h3 { margin-top: 0; }
     & .footer-about {
       background: var(--col-offwhite);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
     }
     & .footer-image {
       background: var(--col-placeholder);
+      min-height: 272px;
     }
     & .footer-row {
       display: flex;
@@ -32,19 +36,17 @@ css: |
         text-align: right;
         flex-grow: 1;
       }
-      & img {
-        max-height: 4rem;
-      }
     }
     & .logo-list {
       display: flex;
       gap: 1rem;
       & img {
-      
+        width: auto;
       }
     }
     & .credit {
       text-wrap: balance;
+      & p { margin-top: 0; }
     }
   }
   
@@ -58,13 +60,31 @@ css: |
       }
       & .logo-list {
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        & img { height: auto; }
       }
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    footer .footer-about {
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 640px) {
+    footer .logo-list {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    footer .logo-list {
+      grid-template-columns: 100%;
     }
   }
 ---
 <footer>
 	<div class="holder padded">
-		<div class="footer-about grid-2">
+		<div class="footer-about">
 			<div class="padded">
 				<h2>About Culture Connect</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
