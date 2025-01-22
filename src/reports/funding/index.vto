@@ -33,12 +33,29 @@ data:
 		config: {
 			data: grant_by_org_size,
 			category: "accounts_category",
+			columns: [{
+				name: "Tooltip",
+				template: "Funding<br />{{ accounts_category }}: £{{ total_funding | toLocaleString() }}"
+			}],
 			series: [
-				{ title: "Total funding", value: "total_funding" }
+				{ title: "Total funding", value: "total_funding", tooltip: "Tooltip" }
 			],
 			axis: {
 				x: {
-					max: max_funding
+					max: max_funding,					
+					ticks: [{
+						value: 1500000,
+						label: "£1.5M"
+					},{
+						value: 1000000,
+						label: "£1M"
+					},{
+						value: 500000,
+						label: "£500k"
+					},{
+						value: 0,
+						label: "0"
+					}]
 				}
 			}
 		}
