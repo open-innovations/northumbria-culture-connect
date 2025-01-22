@@ -33,6 +33,9 @@
 .oi-top > .oi-legend {
   margin-bottom: 0.5rem;
 }
+.oi-waffle-chart .oi-legend .oi-legend-label { color: white; }
+.oi-waffle-chart .oi-legend-inner .oi-legend-icon { height: 2em; }
+.oi-waffle-chart .oi-legend .item-mark, .oi-waffle-chart .series path:not(.marker-group) { outline: 1px solid white; }
 
 .oi-slider-inner {
   display: flex;
