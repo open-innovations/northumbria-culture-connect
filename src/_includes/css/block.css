@@ -26,6 +26,9 @@
 	}
 	& .heading {
 		margin-bottom: 1rem;
+		font-size: 1em;
+		font-weight: 400;
+		text-align: left;
 	}
 }
   

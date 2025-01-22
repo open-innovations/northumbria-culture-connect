@@ -8,21 +8,22 @@ url: /
     <section class="holder padded">
         {{ include "./_partials/headlines.md" |> md }}
     
-        <ul class="grid centred">
+        <ul class="grid">
             {{ comp.Headline({
                 headline: "Pilot organisations",
-				class: funding,
+				extraClasses: "bg-orange-100",
                 number: search.pages('pilot-organisation').length,
             }) }}
             {{ comp.Headline({
                 headline: "Open datasets",
                 number: search.pages('open data').length,
+                extraClasses: "bg-pink-100",
             }) }}
             {{ set totalFunding = 1234567 |> displayCurrency }}
             {{ comp.Headline({
                 headline: "Total funding",
                 number: totalFunding,
-                extraClasses: "placeholder",
+                extraClasses: "funding",
             }) }}
         </ul>
     

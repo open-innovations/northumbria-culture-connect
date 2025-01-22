@@ -42,11 +42,11 @@
 .bg-teal-75 { background: var(--colour-teal-75); color: #ffffff; }
 .bg-teal-50 { background: var(--colour-teal-50); color: #ffffff; }
 .bg-teal-25 { background: var(--colour-teal-25); color: #000000; }
-.bg-green-100 { background: var(--colour-green-100); color: #ffffff; }
+.bg-green-100, .funding { background: var(--colour-green-100); color: #ffffff; }
 .bg-green-75 { background: var(--colour-green-75); color: #ffffff; }
 .bg-green-50 { background: var(--colour-green-50); color: #ffffff; }
 .bg-green-25 { background: var(--colour-green-25); color: #000000; }
-.bg-orange-100 { background: var(--colour-orange-100); color: #ffffff; }
+.bg-orange-100, .case-study { background: var(--colour-orange-100); color: #ffffff; }
 .bg-orange-75 { background: var(--colour-orange-75); color: #ffffff; }
 .bg-orange-50 { background: var(--colour-orange-50); color: #ffffff; }
 .bg-orange-25 { background: var(--colour-orange-25); color: #000000; }
@@ -60,11 +60,3 @@
 .bg-blue-25 { background: var(--colour-blue-25); color: #000000; }
 .bg-offwhite { background: var(--col-offwhite); color: var(--col-darkgrey); }
 .bg-grey { background: var(--col-grey); color: var(--col-black); }
-.funding {
-	background: var(--colour-green-100);
-	color: white;
-}
-.case-study {
-	background: var(--colour-orange-100);
-	color: black;
-}
