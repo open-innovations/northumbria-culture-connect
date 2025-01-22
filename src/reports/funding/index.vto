@@ -1,5 +1,5 @@
 ---
-title: Funding by Organisation Characteristics
+title: Funding by organisation characteristics
 
 description: |
     Report showcasing the utility of the cultural landscape dataset for aggregating
@@ -17,35 +17,32 @@ data:
         url: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 ---
 
-<p>
-This page will explore the funding landscape for organisations of various sizes and characteristics.
-</a>
-</p>
 
-<p>
-    Please note, in the charts below, Arts Council funding covers funding awarded through the Investment Programme 2023-26, and National Lottery Project Grants data covers grants awarded over the period of 2018-2024.
-</p>
+<div class="holder padded">
 
-<h2>Funding by organisation account category</h2>
-<p>
-    Accounts categories offer an indication of the size and type of organisation. They refer to the type of account filed by an organisation with Companies House. For definitions of account types, <a href="https://find-and-update.company-information.service.gov.uk/guides/accounts/chooser">see the Companies House definitions</a>. 
-</p>
+	<p>This page will explore the funding landscape for organisations of various sizes and characteristics.</p>
 
-{{> const max_funding = Math.ceil(Math.max(...grant_by_org_size.map(x => x.total_funding)) / 1e5) * 1e5 }}
+	<p>Please note, in the charts below, Arts Council funding covers funding awarded through the Investment Programme 2023-26, and National Lottery Project Grants data covers grants awarded over the period of 2018-2024.</p>
 
-{{ comp.oi.chart.bar({
-    config: {
-        data: grant_by_org_size,
-        category: "accounts_category",
-        series: [
-            { title: "Total funding", value: "total_funding" }
-        ],
-        axis: {
-            x: {
-                max: max_funding
-            }
-        }
-    }
-}) }}
+	<h2>Funding by organisation account category</h2>
+	<p>Accounts categories offer an indication of the size and type of organisation. They refer to the type of account filed by an organisation with Companies House. For definitions of account types, <a href="https://find-and-update.company-information.service.gov.uk/guides/accounts/chooser">see the Companies House definitions</a>.</p>
 
-{{ comp.DataSources({ sources: data }) }}
+	{{> const max_funding = Math.ceil(Math.max(...grant_by_org_size.map(x => x.total_funding)) / 1e5) * 1e5 }}
+
+	{{ comp.oi.chart.bar({
+		config: {
+			data: grant_by_org_size,
+			category: "accounts_category",
+			series: [
+				{ title: "Total funding", value: "total_funding" }
+			],
+			axis: {
+				x: {
+					max: max_funding
+				}
+			}
+		}
+	}) }}
+
+	{{ comp.DataSources({ sources: data }) }}
+</div>
