@@ -1,10 +1,10 @@
 ---
 css: |
-  .case-study .block h2 + p { margin-top: 1rem; }
-  .case-study .block > * { margin-top: 1rem; }
-  .case-study .block > *:first-child { margin-top: 0; }
+  .block.case-study h2 + p { margin-top: 1rem; }
+  .block.case-study > * { margin-top: 1rem; }
+  .block.case-study > *:first-child { margin-top: 0; }
 ---
-<{{ tag || 'section' }}{{ if style }} class="{{ style }}"{{ /if }}><div class="block padded">
+<{{ tag || 'section' }}><div class="block padded {{ if style }}{{ style }}{{ else }}bg-offwhite{{ /if }}">
     <div class="greedy" style="display:flex;flex-direction:column;">
         {{ comp.PageSummary({ ...page, config }) }}
     </div>

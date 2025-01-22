@@ -58,6 +58,6 @@
 .bg-blue-25 { background: var(--colour-blue-25); color: #000000; --cta-foreground: #000000; --cta-background: transparent; }
 
 .bg-white { background: var(--col-white); color: var(--col-darkgrey); --cta-foreground: #000000; --cta-background: transparent; }
-.bg-offwhite { background: var(--col-offwhite); color: var(--col-darkgrey); --cta-foreground: #000000; --cta-background: transparent; }
+.bg-offwhite { background: var(--col-offwhite); color: var(--col-darkgrey); --cta-foreground: #ffffff; --cta-background: #000000; }
 .bg-grey { background: var(--col-grey); color: var(--col-black); --cta-foreground: #000000; --cta-background: transparent; }
 .bg-black { background: var(--col-black); color: var(--col-white); --cta-foreground: #ffffff; --cta-background: transparent; }
