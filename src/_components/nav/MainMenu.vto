@@ -21,13 +21,13 @@ css: |
             padding: calc(var(--spacing-normal)*1.5) var(--spacing-large);
             border-bottom: 4px solid var(--menu-bg);
             &:hover {
-                border-color: var(--menu-fg);
-                background: var(--menu-fg);
-                color: var(--menu-bg);
+                border-color: var(--menu-fg)!important;
+                background: var(--menu-fg)!important;
+                color: var(--menu-bg)!important;
             }
             &[href="about:blank"] {
-                background: var(--col-darkgrey);
-                border-color: var(--col-darkgrey);
+                background: var(--menu-off);
+                border-color: var(--menu-off);
             }
             &.current { border-color: var(--menu-fg); }
         }
@@ -37,7 +37,7 @@ css: |
         [data-comp=nav-main-menu] ul { margin-left: var(--spacing-normal); }
     }
     @media only screen and (max-width: 1024px) {
-        header { border-bottom: 1px solid var(--col-darkgrey); }
+        header { border-bottom: 1px solid var(--menu-off); }
         .site-header a { margin-left: 3rem; }
         .hamburger { display: block; }
         label.hamburger::after {
