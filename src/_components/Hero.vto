@@ -7,8 +7,8 @@ css: |
           font-size: 1rem;
           line-height: 1.3125em;
         }
-        > div > * + * { margin-bottom: 1rem; }
-        > div > h1 + * { margin-top: var(--padding); }
+        > div > * + * { padding-bottom: 1rem; }
+        > div > h1 + * { padding-top: 0; }
         p a { color: inherit; }
     }
     .comp-hero-front {
@@ -22,6 +22,7 @@ css: |
           font-size: 1.5rem;
           line-height: 2rem;
         }
+        > div > h1 + * { padding-top: var(--padding); }
         h1 {
           color: var(--col-black);
           padding-block: 3rem;
