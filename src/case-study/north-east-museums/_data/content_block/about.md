@@ -1,4 +1,4 @@
-Tyne & Wear Archives & Museums is a regional museum, art gallery and archives service. 
+North East Museums is a regional museum, art gallery and archives service. 
 
 We manage nine museums and galleries across Tyneside and the Archives for Tyne and Wear, attracting around 1 million visits a year. We run these venues and services on behalf of the local authorities of Gateshead, Newcastle, North and South Tyneside, and Newcastle University. 
 
