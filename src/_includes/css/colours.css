@@ -1,6 +1,7 @@
 :root {
 	--col-white: #ffffff;
 	--col-offwhite: #f8f8f8;
+	--col-grey: #e2e2e2;
 	--col-darkgrey: #231f20;
 	--col-primary-black: #231F20;
 	--col-black: #000000;
@@ -9,8 +10,6 @@
 	--menu-fg: #ffffff;
 	--menu-off: #423f40;
 
-	--colour-purple-25: #e3cfe2;
-	--colour-blue-25: #bfd1e2;
 	--colour-teal-100: #33A38C;
 	--colour-teal-75: #66baa9;
 	--colour-teal-50: #99d1c5;
@@ -23,7 +22,18 @@
 	--colour-orange-75: #f5855f;
 	--colour-orange-50: #f8ad94;
 	--colour-orange-25: #fcd6c9;
+	--colour-pink-100: #ed1163;
+	--colour-pink-75: #f24d8a;
+	--colour-pink-50: #f688b1;
 	--colour-pink-25: #f8c2d6;
+	--colour-purple-100: #8f3e8d;
+	--colour-purple-75: #ab6eaa;
+	--colour-purple-50: #c79ec6;
+	--colour-purple-25: #e3cfe2;
+	--colour-blue-100: #00478a;
+	--colour-blue-75: #4075a7;
+	--colour-blue-50: #7fa3c4;
+	--colour-blue-25: #bfd1e2;
 	--cta-background: #000000;
 	--cta-foreground: #ffffff;
 
@@ -32,6 +42,24 @@
 .bg-teal-75 { background: var(--colour-teal-75); color: #ffffff; }
 .bg-teal-50 { background: var(--colour-teal-50); color: #ffffff; }
 .bg-teal-25 { background: var(--colour-teal-25); color: #000000; }
+.bg-green-100 { background: var(--colour-green-100); color: #ffffff; }
+.bg-green-75 { background: var(--colour-green-75); color: #ffffff; }
+.bg-green-50 { background: var(--colour-green-50); color: #ffffff; }
+.bg-green-25 { background: var(--colour-green-25); color: #000000; }
+.bg-orange-100 { background: var(--colour-orange-100); color: #ffffff; }
+.bg-orange-75 { background: var(--colour-orange-75); color: #ffffff; }
+.bg-orange-50 { background: var(--colour-orange-50); color: #ffffff; }
+.bg-orange-25 { background: var(--colour-orange-25); color: #000000; }
+.bg-pink-100 { background: var(--colour-pink-100); color: #ffffff; }
+.bg-pink-75 { background: var(--colour-pink-75); color: #ffffff; }
+.bg-pink-50 { background: var(--colour-pink-50); color: #ffffff; }
+.bg-pink-25 { background: var(--colour-pink-25); color: #000000; }
+.bg-blue-100 { background: var(--colour-blue-100); color: #ffffff; }
+.bg-blue-75 { background: var(--colour-blue-75); color: #ffffff; }
+.bg-blue-50 { background: var(--colour-blue-50); color: #ffffff; }
+.bg-blue-25 { background: var(--colour-blue-25); color: #000000; }
+.bg-offwhite { background: var(--col-offwhite); color: var(--col-darkgrey); }
+.bg-grey { background: var(--col-grey); color: var(--col-black); }
 .funding {
 	background: var(--colour-green-100);
 	color: white;

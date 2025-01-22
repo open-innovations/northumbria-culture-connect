@@ -26,8 +26,9 @@ aside.warning { text-align: center; position: relative; z-index: 1; }
 
 .bang,
 .bignum {
-  font-size: min(3.5em, 10vw);
+  font-size: min(2.5em, 10vw);
   font-weight: bold;
+  line-height: 1em;
 }
 
 .holder {

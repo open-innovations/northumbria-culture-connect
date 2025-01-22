@@ -15,7 +15,9 @@
     outline: auto;
   }
 }
-
+.oi-legend-label {
+  text-align: left;
+}
 .skip-link {
   padding: 0.5em 1em;
   background-color: var(--colour-purple-25);
@@ -24,7 +26,7 @@
 .oi-legend-inner {
   & .oi-legend-item {
     display: flex !important;
-    gap: 0.5em;
+    gap: 0.25em;
   }
 }
 

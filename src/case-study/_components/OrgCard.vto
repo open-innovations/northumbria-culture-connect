@@ -1,8 +1,6 @@
 ---
 css: |
     .comp-org-card {
-        padding: 1em;
-        background: var(--colour-teal-25);
         box-sizing: border-box;
         & .info-row {
             display: flex;
@@ -14,27 +12,28 @@ css: |
     }
 ---
 <aside class="comp-org-card">
-<h2>Organisation information</h2>
-<div class="info-row">
-<ul class="grid">
-    <li class="block">
-        <p>Type of organisation</p>
-        <p class="bang">{{ orgData['Type of organisation'] }}</p>
-    </li>
-    <li class="block">
-        <p>Postcode</p>
-        <p class="bang"style="font-size: 2.5rem;">{{ orgData['Postcode'] }}</p>
-    </li>
-    <li class="block">
-        <p>Number of employees</p>
-        <p class="bang"style="font-size: 2.5rem;">{{ orgData['Number of employees'] }}</p>
-    </li>
-</ul>
+	<h2>Key metrics</h2>
+	<div class="info-row">
+		<ul class="grid">
+			<li class="block bg-teal-100">
+				<p class="heading">Type of organisation</p>
+				<p class="bang">{{ orgData['Type of organisation'] }}</p>
+			</li>
+			<li class="block bg-green-100">
+				<p class="heading">Postcode</p>
+				<p class="bang"style="font-size: 2.5rem;">{{ orgData['Postcode'] }}</p>
+			</li>
+			<li class="block bg-blue-100">
+				<p class="heading">Number of employees</p>
+				<p class="bang"style="font-size: 2.5rem;">{{ orgData['Number of employees'] }}</p>
+			</li>
+		</ul>
 
-<div>
-    <p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+		<div class="block bg-grey">
+			<p class="heading">Total funding</p>
+			<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
 
-    {{ comp.OrgIncome({ incomeData }) }}
-</div>
-</div>
+			{{ comp.OrgIncome({ incomeData }) }}
+		</div>
+	</div>
 </aside>
