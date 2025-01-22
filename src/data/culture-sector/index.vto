@@ -47,33 +47,35 @@ priority: 10
 
 } }) }}
 
-<div class="grid">
-<table>
-    <thead>
-        <tr>
-            <th>Organisation</th>
-            <th>Company number</th>
-            <th>Charity number</th>
-            <th style="writing-mode: vertical-lr;">Arts Council NPO</th>
-            <th style="writing-mode: vertical-lr;">Arts Council IPSO</th>
-            <th style="writing-mode: vertical-lr;">NECA</th>
-            <th style="writing-mode: vertical-lr;"><a href="{{ "~/data/arts-council/project-grants/index.vto" |> url }}">National Lottery Project Grant</a></th>
-        </tr>
-    </thead>
-    <tbody>
-        {{ for r of landscape.newcastle_organisations }}
-        <tr class="centred">
-            <td>{{ r.organisation }}</td>
-            <td>{{ r.company_number }}</td>
-            <td>{{ r.registered_charity_number }}</td>
-            <td>{{ comp.Tick({ value: r.NPO }) }}</td>
-            <td>{{ comp.Tick({ value: r.IPSO }) }}</td>
-            <td>{{ comp.Tick({ value: r.NECA }) }}</td>
-            <td>{{ comp.Tick({ value: r['Project Grant'] }) }}</td>
-        </tr>
-        {{ /for }}
-    </tbody>
-</table>
+<div class="holder padded">
+	<div class="grid">
+	<table>
+		<thead>
+			<tr>
+				<th>Organisation</th>
+				<th>Company number</th>
+				<th>Charity number</th>
+				<th style="writing-mode: vertical-lr;">Arts Council NPO</th>
+				<th style="writing-mode: vertical-lr;">Arts Council IPSO</th>
+				<th style="writing-mode: vertical-lr;">NECA</th>
+				<th style="writing-mode: vertical-lr;"><a href="{{ "~/data/arts-council/project-grants/index.vto" |> url }}">National Lottery Project Grant</a></th>
+			</tr>
+		</thead>
+		<tbody>
+			{{ for r of landscape.newcastle_organisations }}
+			<tr class="centred">
+				<td>{{ r.organisation }}</td>
+				<td>{{ r.company_number }}</td>
+				<td>{{ r.registered_charity_number }}</td>
+				<td>{{ comp.Tick({ value: r.NPO }) }}</td>
+				<td>{{ comp.Tick({ value: r.IPSO }) }}</td>
+				<td>{{ comp.Tick({ value: r.NECA }) }}</td>
+				<td>{{ comp.Tick({ value: r['Project Grant'] }) }}</td>
+			</tr>
+			{{ /for }}
+		</tbody>
+	</table>
+	</div>
 </div>
 
 {{# 
