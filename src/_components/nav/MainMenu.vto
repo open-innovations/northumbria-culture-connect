@@ -211,6 +211,9 @@ function menuItem(el){
 		this.btn.addEventListener("mouseover", function(event){
 			clearTimeout(_obj.timer);
 		});
+		this.btn.addEventListener("mouseover", function(event){
+			if(typeof _obj.open==="function") _obj.timer = setTimeout(function(ev){ _obj.open(false); }, 1000);
+		});
 		this.open = function(state){
 			clearTimeout(_obj.timer);
 			var s = (state ? "true":"false");
