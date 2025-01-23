@@ -194,13 +194,13 @@ css: |
         </ul>
     </nav>
 </div>
-<div id="log" class="warning padded"><h3>Temporary debugging log</h3></div>
+<!--<div id="log" class="warning padded"><h3>Temporary debugging log</h3></div>-->
 <!-- Accessible menus https://www.w3.org/WAI/tutorials/menus/flyout/ -->
 <script>
 var menuItems = document.querySelectorAll('li.has-submenu');
 var timer1;
 function log(txt){
-	document.getElementById('log').innerHTML += '<div>'+txt+'</div>';
+//	document.getElementById('log').innerHTML += '<div>'+txt+'</div>';
 }
 function subMenuOpen(el,state){
 	clearTimeout(timer1);
