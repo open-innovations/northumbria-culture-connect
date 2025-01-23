@@ -194,46 +194,45 @@ css: |
 </div>
 <!-- Accessible menus https://www.w3.org/WAI/tutorials/menus/flyout/ -->
 <script>
-var menuItems = document.querySelectorAll('li.has-submenu');
-var timer1;
-function subMenuOpen(el,state){
-	clearTimeout(timer1);
-	var s = (state ? "true":"false");
-	el.parentNode.querySelector('a').setAttribute('aria-expanded',s);
-	el.parentNode.querySelector('button').setAttribute('aria-expanded',s);
-}
-
-menuItems.forEach((el,i)=>{
-	var activatingA = el.querySelector('a');
-	var btn = document.createElement('button');
-	btn.innerHTML = '<span><span class="visuallyhidden">show submenu for “' + activatingA.text.replace(/^ | $/,"") + '”</span></span>';
-	activatingA.after(btn);
+function menuItem(el){
+	var _obj = this;
+	this.timer;
+	this.a = el.querySelector('a');
 	var subLinks = el.querySelectorAll('ul li a');
+	if(subLinks.length > 1){
+		this.btn = document.createElement('button');
+		this.btn.innerHTML = '<span><span class="visuallyhidden">show submenu for “' + _obj.a.text.replace(/^ | $/,"") + '”</span></span>';
+		this.a.after(this.btn);
+		this.btn.addEventListener("click", function(event){
+			var state = _obj.btn.getAttribute('aria-expanded')||"false";
+			_obj.open(state=="true" ? false : true);
+			event.preventDefault();
+		});
+		this.btn.addEventListener("mouseover", function(event){
+			clearTimeout(_obj.timer);
+		});
+		this.open = function(state){
+			clearTimeout(_obj.timer);
+			var s = (state ? "true":"false");
+			_obj.a.setAttribute('aria-expanded',s);
+			_obj.btn.setAttribute('aria-expanded',s);
+		}
+	}
 	subLinks.forEach((element) => {
-		if(element == activatingA){
+		if(element == _obj.a){
 			element.addEventListener("mouseout", function(event){
-				timer1 = setTimeout(function(ev){
-					subMenuOpen(event.originalTarget,false);
-				}, 1000);
+				if(typeof _obj.open==="function") _obj.timer = setTimeout(function(ev){ _obj.open(false); }, 1000);
 			});
 		}else{
 			element.addEventListener("mouseover", function(event){
-				if(timer1) clearTimeout(timer1);
+				clearTimeout(_obj.timer);
 			});
 			element.addEventListener("mouseout", function(event){
-				timer1 = setTimeout(function(ev){
-					subMenuOpen(activatingA,false);
-				}, 1000);
+				if(typeof _obj.open==="function") _obj.timer = setTimeout(function(ev){ _obj.open(false); }, 1000);
 			});
 		}
 	});
-	btn.addEventListener("click", function(event){
-		var state = btn.getAttribute('aria-expanded')||"false";
-		subMenuOpen(this,state=="true" ? false : true);
-		event.preventDefault();
-	});
-	btn.addEventListener("hover", function(event){
-		if(timer1) clearTimeout(timer1);
-	});
-});
+	return this;
+}
+document.querySelectorAll('li.has-submenu').forEach((el,i)=>{ var li = new menuItem(el); });
 </script>
