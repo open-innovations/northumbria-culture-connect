@@ -210,8 +210,9 @@ function subMenuOpen(el,state){
 	el.parentNode.querySelector('button').setAttribute('aria-expanded',s);
 }
 
-Array.prototype.forEach.call(menuItems, function(el, i){
+menuItems.forEach((el,i)=>{
 	var activatingA = el.querySelector('a');
+	log('add submenu '+activatingA.text);
 	var btn = '<button><span><span class="visuallyhidden">show submenu for “' + activatingA.text.replace(/^ | $/,"") + '”</span></span></button>';
 	activatingA.insertAdjacentHTML('afterend', btn);
 	var subLinks = el.querySelectorAll('ul li a');
