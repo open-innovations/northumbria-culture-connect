@@ -213,8 +213,9 @@ function subMenuOpen(el,state){
 menuItems.forEach((el,i)=>{
 	var activatingA = el.querySelector('a');
 	log('add submenu '+activatingA.text);
-	var btn = '<button><span><span class="visuallyhidden">show submenu for “' + activatingA.text.replace(/^ | $/,"") + '”</span></span></button>';
-	activatingA.insertAdjacentHTML('afterend', btn);
+	var btn = document.createElement('button');
+	btn.innerHTML = '<span><span class="visuallyhidden">show submenu for “' + activatingA.text.replace(/^ | $/,"") + '”</span></span>';
+	activatingA.after(btn);
 	var subLinks = el.querySelectorAll('ul li a');
 	subLinks.forEach((element) => {
 		if(element == activatingA){
@@ -230,7 +231,8 @@ menuItems.forEach((el,i)=>{
 			});
 		}
 	});
-	el.querySelector('button').addEventListener("click", function(event){
+	btn.addEventListener("click", function(event){
+		log('button click');
 		var state = event.originalTarget.getAttribute('aria-expanded')||"false";
 		subMenuOpen(this,state=="true" ? false : true);
 		event.preventDefault();
