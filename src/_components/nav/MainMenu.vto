@@ -53,7 +53,7 @@ css: |
         height: 100%;
         margin: 0;
     }
-    [data-comp="nav-main-menu"] > ul > li button:focus {
+    [data-comp="nav-main-menu"] > ul > li button:hover, [data-comp="nav-main-menu"] > ul > li button:focus {
         background: var(--menu-fg);
     }
     [data-comp="nav-main-menu"] > ul > li button > span {
@@ -71,7 +71,7 @@ css: |
         transform: rotate(135deg);
         margin-top: 0.25rem;
     }
-    [data-comp="nav-main-menu"] > ul > li button:focus > span {
+    [data-comp="nav-main-menu"] > ul > li button:hover > span, [data-comp="nav-main-menu"] > ul > li button:focus > span {
         border-color: var(--menu-bg);
     }
     [data-comp="nav-main-menu"] > ul > li > ul {
@@ -194,13 +194,18 @@ css: |
         </ul>
     </nav>
 </div>
+<div id="log" class="warning padded"><h3>Temporary debugging log</h3></div>
 <!-- Accessible menus https://www.w3.org/WAI/tutorials/menus/flyout/ -->
 <script>
 var menuItems = document.querySelectorAll('li.has-submenu');
-var timer1, timer2;
+var timer1;
+function log(txt){
+	document.getElementById('log').innerHTML += '<div>'+txt+'</div>';
+}
 function subMenuOpen(el,state){
+	clearTimeout(timer1);
 	var s = (state ? "true":"false");
-	console.log('subMenuOpen',state);
+	log('subMenuOpen '+state);
 	el.parentNode.querySelector('a').setAttribute('aria-expanded',s);
 	el.parentNode.querySelector('button').setAttribute('aria-expanded',s);
 }
@@ -224,7 +229,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 			});
 		}
 	});
-	el.querySelector('button').addEventListener("click",  function(event){
+	el.querySelector('button').addEventListener("click", function(event){
 		var state = event.originalTarget.getAttribute('aria-expanded')||"false";
 		subMenuOpen(this,state=="true" ? false : true);
 		event.preventDefault();
