@@ -192,48 +192,48 @@ css: |
         </ul>
     </nav>
 </div>
-<!--<div id="log" class="warning padded"><h3>Temporary debugging log</h3></div>-->
 <!-- Accessible menus https://www.w3.org/WAI/tutorials/menus/flyout/ -->
 <script>
 var menuItems = document.querySelectorAll('li.has-submenu');
 var timer1;
-function log(txt){
-//	document.getElementById('log').innerHTML += '<div>'+txt+'</div>';
-}
 function subMenuOpen(el,state){
 	clearTimeout(timer1);
 	var s = (state ? "true":"false");
-	log('subMenuOpen '+state);
 	el.parentNode.querySelector('a').setAttribute('aria-expanded',s);
 	el.parentNode.querySelector('button').setAttribute('aria-expanded',s);
 }
 
 menuItems.forEach((el,i)=>{
 	var activatingA = el.querySelector('a');
-	log('add submenu '+activatingA.text);
 	var btn = document.createElement('button');
 	btn.innerHTML = '<span><span class="visuallyhidden">show submenu for “' + activatingA.text.replace(/^ | $/,"") + '”</span></span>';
 	activatingA.after(btn);
 	var subLinks = el.querySelectorAll('ul li a');
 	subLinks.forEach((element) => {
 		if(element == activatingA){
-			element.addEventListener("mouseover", function(event){
-				subMenuOpen(event.originalTarget,true);
-				clearTimeout(timer1);
-			});
-
 			element.addEventListener("mouseout", function(event){
 				timer1 = setTimeout(function(ev){
 					subMenuOpen(event.originalTarget,false);
 				}, 1000);
 			});
+		}else{
+			element.addEventListener("mouseover", function(event){
+				if(timer1) clearTimeout(timer1);
+			});
+			element.addEventListener("mouseout", function(event){
+				timer1 = setTimeout(function(ev){
+					subMenuOpen(activatingA,false);
+				}, 1000);
+			});
 		}
 	});
 	btn.addEventListener("click", function(event){
-		log('button click '+state);
 		var state = btn.getAttribute('aria-expanded')||"false";
 		subMenuOpen(this,state=="true" ? false : true);
 		event.preventDefault();
+	});
+	btn.addEventListener("hover", function(event){
+		if(timer1) clearTimeout(timer1);
 	});
 });
 </script>
