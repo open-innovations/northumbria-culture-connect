@@ -30,4 +30,19 @@ section > * + * {
 	margin-top: 1rem;
 }
 h1 + *, h2 + *, p + * { margin-top: 1rem; }
+p + p { margin-top: 1.5rem; }
 * > *:last-child { margin-bottom: 0; }
+p { max-width: 80em; }
+.visuallyhidden {
+border: 0;
+	clip: rect(0 0 0 0);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}

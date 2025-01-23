@@ -1,14 +1,25 @@
 - title: Home
   url: /
+- title: Data
+  subMenu:
+    - title: Funding
+      url: /reports/funding/
+    - title: Engagement
+      url: /engagement/
+    - title: Data maturity
+      url: /insight/data-maturity
+    - title: Taxonomy
+      url: /tags/
+    - title: Organisation income
+      url: /insight/organisation-income/
 - title: Case studies
   url: /case-study/
-- title: Cultural data & research
-  url: 
-- title: Funding
-  url: /reports/funding/
-- title: Engagement
-  url: /engagement/
 - title: Impact & outcomes
   url: /insight/impact/
 - title: About
   url: /about/
+  subMenu:
+    - title: Our mission
+    - title: Our team
+    - title: Partner organisations
+    - title: Contact us

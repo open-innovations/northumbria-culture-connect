@@ -7,7 +7,7 @@ css: |
           font-size: 1rem;
           line-height: 1.3125em;
         }
-        > div > * + * { padding-bottom: 1rem; }
+        > div > * + * { padding-bottom: 1.5rem; }
         > div > h1 + * { padding-top: 0; }
         p a { color: inherit; }
     }
@@ -17,8 +17,9 @@ css: |
         }
         > div > * {
           width: var(--page-width);
-          margin: auto;
-          max-width: 100%;
+          margin-block: auto;
+          margin-inline: unset;
+          max-width: min(80em,100%);
           font-size: 1.5rem;
           line-height: 2rem;
         }
