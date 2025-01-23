@@ -232,8 +232,8 @@ menuItems.forEach((el,i)=>{
 		}
 	});
 	btn.addEventListener("click", function(event){
-		log('button click');
 		var state = event.originalTarget.getAttribute('aria-expanded')||"false";
+		log('button click '+state);
 		subMenuOpen(this,state=="true" ? false : true);
 		event.preventDefault();
 	});

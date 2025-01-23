@@ -4,25 +4,24 @@ css: |
     .site-header {
         font-size: 2.5rem;
         font-weight: 700;
-        line-height: 1em;
+        line-height: 0em;
         & a {
+            display: inline-block;
+            padding: var(--padding);
             color: inherit;
             color: var(--col-primary-black);
             text-decoration: none;
             &:hover {
                 color: inherit;
             }
-        }
-        /* Because it's a big sea, geddit? */
-        & .pacific {
-            font-size: 4rem;
+            img { height: 56px; width: 185px; }
         }
     }
 ---
 
 <header>
-	<div class="holder padded site-header">
-        <a href="/"><img src="/assets/images/logo-culture-connect.svg" alt="Culture Connect logo" width="250px;"> </a>
+	<div class="holder site-header">
+        <a href="/"><img src="/assets/images/logo-culture-connect.svg" alt="Culture Connect logo"> </a>
 	</div>
 	{{ comp.nav.MainMenu({ url }) }}
 </header>
