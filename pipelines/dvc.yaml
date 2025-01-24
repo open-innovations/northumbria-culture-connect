@@ -1,0 +1,14 @@
+vars:
+  - ROOT: ..
+stages:
+  get-data:
+    cmd: python get-data.py
+    deps:
+      - get-data.py
+    outs:
+      - ${ROOT}/raw/arts-council-investment-programme.csv:
+          persist: true
+          cache: false
+      - ${ROOT}/raw/arts-council-project-grants.csv:
+          persist: true
+          cache: false

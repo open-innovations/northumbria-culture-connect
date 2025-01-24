@@ -1,0 +1,17 @@
+vars:
+  - ROOT: ../..
+  - LUME_DIR: ../../src/insight/culture-landscape/pipelines
+
+stages:
+  stage-1:
+    desc: Build longlist of organisations that appear in funding data
+    cmd: jupyter nbconvert stage-1.ipynb --to markdown --output-dir ${LUME_DIR}
+    deps:
+      - stage-1.ipynb
+      - config.py
+      - ${ROOT}/raw/arts-council-investment-programme.csv
+      - ${ROOT}/raw/arts-council-project-grants.csv
+    outs:
+      - ${ROOT}/raw/culture-landscape/funded-organisations.csv:
+          persist: true
+          cache: false

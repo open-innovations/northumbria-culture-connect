@@ -1,0 +1,50 @@
+schema: '2.0'
+stages:
+  one:
+    cmd: jupyter nbconvert stage-1.ipynb --to markdown --output-dir ../../src/insight/culture-landscape/pipelines
+    deps:
+    - path: ../../raw/arts-council-investment-programme.csv
+      hash: md5
+      md5: ff7b2b09f0222bacddb380da7b7d8024
+      size: 134382
+    - path: ../../raw/arts-council-project-grants.csv
+      hash: md5
+      md5: e16afeedaf4d4ab5c460fc3e8988c496
+      size: 3034384
+    - path: config.py
+      hash: md5
+      md5: c9a12355d1e6df792c6748af04a5f9f1
+      size: 251
+    - path: stage-1.ipynb
+      hash: md5
+      md5: b5177323487b50bae18e084a8f5453f0
+      size: 4398
+    outs:
+    - path: ../../raw/culture-landscape/funded-organisations.csv
+      hash: md5
+      md5: 2911dc3e9b2d629853b3fc457aae23db
+      size: 27544
+  stage-1:
+    cmd: jupyter nbconvert stage-1.ipynb --to markdown --output-dir ../../src/insight/culture-landscape/pipelines
+    deps:
+    - path: ../../raw/arts-council-investment-programme.csv
+      hash: md5
+      md5: 94029bd4c4fac2b2a140244d32312e22
+      size: 134381
+    - path: ../../raw/arts-council-project-grants.csv
+      hash: md5
+      md5: 7d8cf76255dfd096ae1d1e4b9938c458
+      size: 3127400
+    - path: config.py
+      hash: md5
+      md5: c9a12355d1e6df792c6748af04a5f9f1
+      size: 251
+    - path: stage-1.ipynb
+      hash: md5
+      md5: 8104ce52177aa49d49afdd82057e3948
+      size: 4398
+    outs:
+    - path: ../../raw/culture-landscape/funded-organisations.csv
+      hash: md5
+      md5: 2911dc3e9b2d629853b3fc457aae23db
+      size: 27544
