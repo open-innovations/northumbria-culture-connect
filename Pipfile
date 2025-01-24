@@ -17,6 +17,7 @@ beautifulsoup4 = "*"
 thefuzz = "*"
 nltk = "*"
 duckdb = "*"
+dvc = "*"
 
 [dev-packages]
 
