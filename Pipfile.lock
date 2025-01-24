@@ -1454,7 +1454,7 @@
                 "sha256:e9e82dcb3f2ebbc8cb5ce1102d5f1c5ed236bf8a11730fb45ba82e2841ec21df",
                 "sha256:ed6906f61834d687738d25988ae117683705636936cc605be0bb208b23df4d8f"
             ],
-            "markers": "python_version >= '3.12'",
+            "markers": "python_version >= '3.10'",
             "version": "==2.2.2"
         },
         "omegaconf": {
@@ -2594,11 +2594,11 @@
         },
         "semver": {
             "hashes": [
-                "sha256:6253adb39c70f6e51afed2fa7152bcd414c411286088fb4b9effb133885ab4cc",
-                "sha256:b1ea4686fe70b981f85359eda33199d60c53964284e0cfb4977d243e37cf4bf4"
+                "sha256:9c824d87ba7f7ab4a1890799cec8596f15c1241cb473404ea1cb0c55e4b04746",
+                "sha256:afc7d8c584a5ed0a11033af086e8af226a9c0b206f313e0301f8dd7b6b589602"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==3.0.2"
+            "version": "==3.0.4"
         },
         "setuptools": {
             "hashes": [

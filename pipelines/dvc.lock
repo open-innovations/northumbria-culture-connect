@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  get-data:
+    cmd: python get-data.py
+    deps:
+    - path: get-data.py
+      hash: md5
+      md5: 9a41a8f1bb77a780106b96e05b8d6090
+      size: 3110
+    outs:
+    - path: ../raw/arts-council-investment-programme.csv
+      hash: md5
+      md5: 94029bd4c4fac2b2a140244d32312e22
+      size: 134381
+    - path: ../raw/arts-council-project-grants.csv
+      hash: md5
+      md5: 7d8cf76255dfd096ae1d1e4b9938c458
+      size: 3127400
