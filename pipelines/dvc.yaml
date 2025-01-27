@@ -12,3 +12,18 @@ stages:
       - ${ROOT}/raw/arts-council-project-grants.csv:
           persist: true
           cache: false
+      - ${ROOT}/raw/company-data.zip:
+          persist: true
+          cache: false
+
+  load-data:
+    cmd: papermill load-data.ipynb - | jupyter nbconvert --stdin --stdout --to markdown
+    deps:
+      - load-data.ipynb
+      - ${ROOT}/raw/company-data.zip
+      - ${ROOT}/raw/charity-data.zip
+      - ${ROOT}/raw/charity-area-data.zip
+    outs:
+      - ${ROOT}/raw/company-data.db:
+          persist: true
+          cache: false
