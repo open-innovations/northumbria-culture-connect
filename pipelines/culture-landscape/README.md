@@ -44,3 +44,19 @@ map.
 
 To achieve this without significant manual intervention requires a reference
 set.
+
+### Stage 2
+
+During stage 2, the list of funded organisations is matched against both
+companies house data and the data from the charity commission.
+
+The matching algorithm is as follows:
+
+1. Attempt a direct match of company name against the reference set
+2. Using this list, determine spelling mistakes in the list of funded
+   organisations to enable corrections. This is done by fuzzy matching the list
+   of raw organisations onto itself, excluding any direct matches.
+3. Attempt a full fuzzy match of the corrected list of unmatched entries with
+   the reference list.
+
+This is currently only implemented in full for Companies House data. 
