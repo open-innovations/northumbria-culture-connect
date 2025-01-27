@@ -18,6 +18,7 @@ thefuzz = "*"
 nltk = "*"
 duckdb = "*"
 dvc = "*"
+papermill = "*"
 
 [dev-packages]
 

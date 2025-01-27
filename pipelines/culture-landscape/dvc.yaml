@@ -1,11 +1,12 @@
 vars:
   - ROOT: ../..
+  - WORKING: ../../raw/culture-landscape
   - LUME_DIR: ../../src/insight/culture-landscape/pipelines
 
 stages:
   stage-1:
     desc: Build longlist of organisations that appear in funding data
-    cmd: jupyter nbconvert stage-1.ipynb --to markdown --output-dir ${LUME_DIR}
+    cmd: papermill stage-1.ipynb | jupyter nbconvert --stdin --to markdown --output stage-1 --output-dir ${LUME_DIR}
     deps:
       - stage-1.ipynb
       - config.py
@@ -13,5 +14,29 @@ stages:
       - ${ROOT}/raw/arts-council-project-grants.csv
     outs:
       - ${ROOT}/raw/culture-landscape/funded-organisations.csv:
+          persist: true
+          cache: false
+
+  stage-2:
+    desc: Attempt to match companies to Companies House and Charity Commission data
+    cmd: papermill stage-2.ipynb | jupyter nbconvert --stdin --to markdown --output stage-2 --output-dir ${LUME_DIR}
+    deps:
+      - stage-2.ipynb
+      - ${ROOT}/raw/culture-landscape/funded-organisations.csv
+      - ${ROOT}/raw/company-data.db
+    outs:
+      - ${WORKING}/2-charity-match-direct.csv:
+          persist: true
+          cache: false
+      - ${WORKING}/2-company-corrections.csv:
+          persist: true
+          cache: false
+      - ${WORKING}/2-company-match-direct.csv:
+          persist: true
+          cache: false
+      - ${WORKING}/2-company-match-fuzzy.csv:
+          persist: true
+          cache: false
+      - ${WORKING}/2-sic-codes.csv:
           persist: true
           cache: false

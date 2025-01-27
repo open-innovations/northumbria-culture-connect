@@ -25,7 +25,8 @@ stages:
       md5: 2911dc3e9b2d629853b3fc457aae23db
       size: 27544
   stage-1:
-    cmd: jupyter nbconvert stage-1.ipynb --to markdown --output-dir ../../src/insight/culture-landscape/pipelines
+    cmd: papermill stage-1.ipynb | jupyter nbconvert --stdin --to markdown --output
+      stage-1 --output-dir ../../src/insight/culture-landscape/pipelines
     deps:
     - path: ../../raw/arts-council-investment-programme.csv
       hash: md5
@@ -46,5 +47,42 @@ stages:
     outs:
     - path: ../../raw/culture-landscape/funded-organisations.csv
       hash: md5
-      md5: 2911dc3e9b2d629853b3fc457aae23db
-      size: 27544
+      md5: 5a2cb7c8a9037c4e5e9bac074e2215ed
+      size: 27940
+  stage-2:
+    cmd: papermill stage-2.ipynb | jupyter nbconvert --stdin --to markdown --output
+      stage-2 --output-dir ../../src/insight/culture-landscape/pipelines
+    deps:
+    - path: ../../raw/company-data.db
+      hash: md5
+      md5: 1f58d39677e60037f346095708e8a058
+      size: 615264256
+    - path: ../../raw/culture-landscape/funded-organisations.csv
+      hash: md5
+      md5: 5a2cb7c8a9037c4e5e9bac074e2215ed
+      size: 27940
+    - path: stage-2.ipynb
+      hash: md5
+      md5: b897a5a0fa642683698c6bf5ee076f0f
+      size: 13207
+    outs:
+    - path: ../../raw/culture-landscape/2-charity-match-direct.csv
+      hash: md5
+      md5: 93393c000e76bc4c8e51d69af1954399
+      size: 627
+    - path: ../../raw/culture-landscape/2-company-corrections.csv
+      hash: md5
+      md5: dd7c0e9afa11890bf5c5303d9caf8ccf
+      size: 156
+    - path: ../../raw/culture-landscape/2-company-match-direct.csv
+      hash: md5
+      md5: bd4c4841ba3e0c0294c3d3ddfb322891
+      size: 2484
+    - path: ../../raw/culture-landscape/2-company-match-fuzzy.csv
+      hash: md5
+      md5: da6a5f283594c889c483f652e5f4f483
+      size: 2964
+    - path: ../../raw/culture-landscape/2-sic-codes.csv
+      hash: md5
+      md5: 1c9e391da39779acd2735fb702561063
+      size: 748

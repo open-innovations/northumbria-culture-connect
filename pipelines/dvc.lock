@@ -16,3 +16,31 @@ stages:
       hash: md5
       md5: 7d8cf76255dfd096ae1d1e4b9938c458
       size: 3127400
+    - path: ../raw/company-data.zip
+      hash: md5
+      md5: 473006274c4f91111062161b68ff4aee
+      size: 486510044
+  load-data:
+    cmd: papermill load-data.ipynb - | jupyter nbconvert --stdin --stdout --to markdown
+    deps:
+    - path: ../raw/charity-area-data.zip
+      hash: md5
+      md5: f6693e334bd247868502cd30e967147a
+      size: 4232474
+    - path: ../raw/charity-data.zip
+      hash: md5
+      md5: bfc9793ab66de3750a20e416c6604225
+      size: 42793919
+    - path: ../raw/company-data.zip
+      hash: md5
+      md5: 473006274c4f91111062161b68ff4aee
+      size: 486510044
+    - path: load-data.ipynb
+      hash: md5
+      md5: 22837e498633ff1763ad3c7eeb680f1d
+      size: 5648
+    outs:
+    - path: ../raw/company-data.db
+      hash: md5
+      md5: 1f58d39677e60037f346095708e8a058
+      size: 615264256
