@@ -1,25 +1,37 @@
 - title: Home
   url: /
-- title: Data
-  subMenu:
-    - title: Funding
-      url: /reports/funding/
-    - title: Engagement
-      url: /engagement/
-    - title: Data maturity
-      url: /insight/data-maturity
-    - title: Taxonomy
-      url: /tags/
-    - title: Organisation income
-      url: /insight/organisation-income/
-- title: Case studies
-  url: /case-study/
-- title: Impact & outcomes
-  url: /insight/impact/
 - title: About
   url: /about/
   subMenu:
     - title: Our mission
-    - title: Our team
+    # - title: Our team
     - title: Partner organisations
-    - title: Contact us
+    # - title: Contact us
+- title: Case studies
+  url: /case-study/
+- title: Regional
+  url: /regional/
+  subMenu:
+    - title: Culture sector
+      url: /data/companies-house/
+    - title: Official statistics
+      url: /data/ons/
+- title: Insight
+  url: /tag/insight/
+  subMenu:
+    - title: Funding
+      url: /insight/funding/
+    - title: Engagement
+      url: /insight/engagement/
+    - title: Participation
+      url: /insight/participation/
+    - title: Tag index
+      url: /tags/
+    # - title: Organisation income
+    #   url: /insight/organisation-income/
+- title: Data landscape
+  url: /data-landscape/
+- title: Resources
+  url: /resources/
+    # - title: Data maturity
+    #   url: /insight/data-maturity/
