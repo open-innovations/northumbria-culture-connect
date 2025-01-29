@@ -1,21 +1,7 @@
 - title: Home
   url: /
-- title: About
-  url: /about/
-  subMenu:
-    - title: Our mission
-    # - title: Our team
-    - title: Partner organisations
-    # - title: Contact us
 - title: Case studies
   url: /case-study/
-- title: Regional
-  url: /regional/
-  subMenu:
-    - title: Culture sector
-      url: /data/companies-house/
-    - title: Official statistics
-      url: /data/ons/
 - title: Insight
   url: /tag/insight/
   subMenu:
@@ -29,9 +15,26 @@
       url: /tags/
     # - title: Organisation income
     #   url: /insight/organisation-income/
-- title: Data landscape
+- title: Regional
+  url: /regional/
+  subMenu:
+    - title: Culture sector
+      url: /data/companies-house/
+    - title: Official statistics
+      url: /data/ons/
+- title: Data
   url: /data-landscape/
-- title: Resources
-  url: /resources/
-    # - title: Data maturity
-    #   url: /insight/data-maturity/
+- title: Tools
+  url: /tools/
+  subMenu:
+    - title: Resources
+      url: /tools/resources/
+    - title: Data maturity
+      url: /tools/data-maturity/
+- title: About
+  url: /about/
+  subMenu:
+    - title: Our mission
+    # - title: Our team
+    - title: Partner organisations
+    # - title: Contact us
