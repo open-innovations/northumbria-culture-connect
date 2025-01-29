@@ -97,7 +97,7 @@ site.remoteFile('assets/js/zoomable.js', import.meta.resolve('./patches/zoomable
 
 // Check missing links in menu
 site.process(['.html'], (pages) => {
-    const urls = pages.map(p => p.data.url);
+    const urls = pages.map(p => p.data.url).map(u => site.url(u));
     for (const page of pages) {
         const links = page.document?.querySelectorAll<HTMLAnchorElement>('[data-comp="nav-main-menu"] a');
         for (const link of links!) {
