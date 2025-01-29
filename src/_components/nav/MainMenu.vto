@@ -89,7 +89,13 @@ css: |
         display: block;
         border-right: 4px solid var(--menu-bg);
     }
+    [data-comp=nav-main-menu] .home-link {
+        display: none;
+    }
     @media only screen and (max-width: 1260px) {
+        [data-comp=nav-main-menu] .home-link {
+            display: unset;
+        }
         [data-comp="nav-main-menu"] a { padding: var(--spacing-normal); }
         [data-comp="nav-main-menu"] > ul { margin-left: var(--spacing-normal); }
         header { border-bottom: 1px solid var(--menu-off); }
@@ -170,6 +176,7 @@ css: |
 <div class="nav-main-outer">
     <nav data-comp="nav-main-menu" class="holder">
         <ul>
+        <li class="home-link"><a href="/">Home</a></li>
         {{ for i of mainMenu }}
         {{#- Will include the url for the source page, or the direct URL, defaulting to about:blank -#}}
         <li{{ if i.subMenu }} class="has-submenu"{{ /if }}>
