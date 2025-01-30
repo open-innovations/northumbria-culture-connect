@@ -1,16 +1,7 @@
----
-title: Taxonomy of Cultural Engagement
 
-tags:
-    - work-in-progress
+{{ include "./taxonomy-overview.md" |> md}}
 
-description: |
-    Data collected through Culture Connect Case Studies Research on participation and engagement in the cultural sector.
----
-
-{{ include "./_partials/overview.md" |> md}}
-
-<h2>What are the types of activities being offered?</h2>
+<h3>What are the types of activities being offered?</h3>
 
 <p>
     The first dimension to consider is the category of activity that is being offered by the
@@ -19,16 +10,14 @@ description: |
     such as impact models.
 </p>
 
-<ul class="grid centred">
+<ul class="normal-list">
     {{# Edit these in ./_data/taxonomy.yml #}}
     {{ for ac of taxonomy.activity_category }}
-        <li class="block">
-            <p class='bang'style='font-size:1.5rem;'>{{ ac.name }}</p>
-        </li>
+        <li>{{ ac.name }}</li>
     {{ /for }}
 </ul>
 
-<h2>Who are cultural organisations engaging with?</h2>
+<h3>Who are cultural organisations engaging with?</h3>
 
 <p>
     Below is a breakdown of the groups that organisations are targeting and engaging with.
@@ -36,13 +25,13 @@ description: |
     on their existing data collection on Participation & Engagement.
 </p>
 
-<ul class="grid centred">
+<ul class="normal-list">
     {{# Edit these in ./_data/taxonomy.yml #}}
     {{ for a of taxonomy.audience }}
-        <li class="block">
-            <p class='bang' style='font-size:1.5rem;'>{{ a.name }}</p>
+        <li>
+            {{ a.name }}
             {{ if a.children }}
-            <ul class="grid centred">
+            <ul class="normal-list">
             {{ for c of a.children }}
                 <li>{{ c.name }}</li>
             {{ /for }}
@@ -53,7 +42,7 @@ description: |
 </ul>
 
 
-<h2>Category Mapping</h2>
+<h3>Category Mapping</h3>
 
 <p>
     We are beginning to map the data received through these Case Studies into a shared taxonomy
