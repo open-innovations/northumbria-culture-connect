@@ -12,6 +12,7 @@
 - title: Regional
   url: /tag/regional/
   subMenu:
+    - title: Organisation catalogue
     - title: Culture sector
       url: /data/companies-house/
     - title: Official statistics
@@ -27,8 +28,3 @@
       url: /tools/tag-index/
 - title: About
   url: /about/
-  subMenu:
-    - title: Our mission
-    # - title: Our team
-    - title: Partner organisations
-    # - title: Contact us
