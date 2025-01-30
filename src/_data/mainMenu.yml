@@ -11,8 +11,6 @@
       url: /insight/engagement/
     - title: Participation
       url: /insight/participation/
-    - title: Tag index
-      url: /tags/
     # - title: Organisation income
     #   url: /insight/organisation-income/
 - title: Regional
@@ -31,6 +29,8 @@
       url: /tools/resources/
     - title: Data maturity
       url: /tools/data-maturity/
+    - title: Tag index
+      url: /tools/tag-index/
 - title: About
   url: /about/
   subMenu:
