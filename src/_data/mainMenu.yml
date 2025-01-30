@@ -27,8 +27,6 @@
   subMenu:
     - title: Resources
       url: /tools/resources/
-    - title: Data maturity
-      url: /tools/data-maturity/
     - title: Tag index
       url: /tools/tag-index/
 - title: About
