@@ -14,7 +14,7 @@
     # - title: Organisation income
     #   url: /insight/organisation-income/
 - title: Regional
-  url: /regional/
+  url: /tag/regional/
   subMenu:
     - title: Culture sector
       url: /data/companies-house/
@@ -23,7 +23,7 @@
 - title: Data
   url: /data/
 - title: Tools
-  url: /tools/
+  url: /tag/tools/
   subMenu:
     - title: Resources
       url: /tools/resources/
