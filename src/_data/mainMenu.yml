@@ -9,10 +9,6 @@
       url: /insight/funding/
     - title: Engagement
       url: /insight/engagement/
-    - title: Participation
-      url: /insight/participation/
-    # - title: Organisation income
-    #   url: /insight/organisation-income/
 - title: Regional
   url: /tag/regional/
   subMenu:
