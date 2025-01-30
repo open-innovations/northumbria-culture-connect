@@ -23,7 +23,7 @@
     - title: Official statistics
       url: /data/ons/
 - title: Data
-  url: /data-landscape/
+  url: /data/
 - title: Tools
   url: /tools/
   subMenu:

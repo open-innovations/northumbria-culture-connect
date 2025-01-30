@@ -1,0 +1,79 @@
+---
+title: Data
+description: |
+  Catalogue of data sources used in the Data Observatory.
+  This page was created as a review of the Data Landscape for culture in Newcastle.
+layout: template/page.vto
+url: /data/
+oldUrl:
+ - /data-landscape/
+---
+
+<div class="holder padded">
+	<p>
+		The sources on this page are the outcome of research into cultural datasets currently published and openly accessible, with a focus on Funding and Participation. By bringing together datasets across these key areas, we aim to highlight gaps in the data and identify where more information is needed to accurately represent cultural organisations in Newcastle and the individuals who engage with them.
+	</p>
+	
+	<h2>
+		Funding Data
+	</h2>
+	
+	<p>
+		Datasets related to funding of culture across the local authority.
+	</p>
+	
+	{{ comp.DynamicGridList({
+		searchTerm: 'data funding',
+		searchSort: 'priority=desc',
+		headingLevel: 3,
+		hideTags: ['data'],
+		withTags: true,
+	})}}
+	
+	<h2>
+		Participation Data
+	</h2>
+	
+	<p>
+		Datasets related to participation in culture across the local authority.
+	</p>
+	
+	{{ comp.DynamicGridList({
+		searchTerm: 'data participation',
+		searchSort: 'priority=desc',
+		headingLevel: 3,
+		hideTags: ['data'],
+		withTags: true,
+	})}}
+	
+	<h2>
+		Data Infrastructure
+	</h2>
+	
+	<p>
+		Data infrastructure relevant to the culture sector across the local authority.
+	</p>
+	
+	{{ comp.DynamicGridList({
+		searchTerm: 'data infrastructure',
+		searchSort: 'priority=desc',
+		headingLevel: 3,
+		hideTags: ['data'],
+		withTags: true,
+	})}}
+	
+	<h2>
+		Reports
+	</h2>
+	
+	<p>
+		Examples of reports and visualisation built using site data.
+	</p>
+	
+	{{ comp.DynamicGridList({
+		searchTerm: 'report',
+		searchSort: 'priority=desc',
+		headingLevel: 3,
+		withTags: true,
+	})}}
+</div>

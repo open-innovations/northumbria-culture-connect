@@ -13,6 +13,7 @@ import sitemap from "lume/plugins/sitemap.ts";
 import svgo from 'lume/plugins/svgo.ts';
 import transformImages from 'lume/plugins/transform_images.ts';
 import inline from "lume/plugins/inline.ts";
+import redirects from "lume/plugins/redirects.ts"
 
 // import mermaid from "jsr:@ooker777/lume-mermaid-plugin/";
 
@@ -43,6 +44,7 @@ site.use(postcss({
 // SEO plugins
 site.use(metas());
 site.use(sitemap());
+site.use(redirects());
 
 // Inline images
 site.use(inline({
