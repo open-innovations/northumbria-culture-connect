@@ -1,0 +1,41 @@
+<h2>Funding by organisation account category</h2>
+
+<p>Accounts categories offer an indication of the size and type of organisation. They refer to the type of account filed by an organisation with Companies House. For definitions of account types, <a href="https://find-and-update.company-information.service.gov.uk/guides/accounts/chooser">see the Companies House definitions</a>.</p>
+
+{{> const max_funding = Math.ceil(Math.max(...grant_by_org_size.map(x => x.total_funding)) / 1e5) * 1e5 }}
+
+{{ comp.oi.chart.bar({
+	config: {
+		data: grant_by_org_size,
+		category: "accounts_category",
+		columns: [{
+			name: "Tooltip",
+			template: "Funding<br />{{ accounts_category }}: £{{ total_funding | toLocaleString() }}"
+		}],
+		series: [
+			{ title: "Total funding", value: "total_funding", tooltip: "Tooltip" }
+		],
+		axis: {
+			x: {
+				max: max_funding,					
+				ticks: [{
+					value: 1500000,
+					label: "£1.5M"
+				},{
+					value: 1000000,
+					label: "£1M"
+				},{
+					value: 500000,
+					label: "£500k"
+				},{
+					value: 0,
+					label: "0"
+				}]
+			}
+		}
+	}
+}) }}
+
+<p>Please note, in the charts above, Arts Council funding covers funding awarded through the Investment Programme 2023-26, and National Lottery Project Grants data covers grants awarded over the period of 2018-2024.</p>
+
+

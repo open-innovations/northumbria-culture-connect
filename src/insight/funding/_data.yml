@@ -1,0 +1,10 @@
+sources:
+    - title: Companies House Data Products
+      url: https://www.gov.uk/guidance/companies-house-data-products
+    - title: National Lottery Project Grants
+      url: https://www.artscouncil.org.uk/ProjectGrants/project-grants-data
+    - title: Arts Council Investment Programme
+      url: https://www.artscouncil.org.uk/how-we-invest-public-money/2023-26-Investment-Programme/2023-26-investment-programme-data
+      license:
+        title: Open Government License
+        url: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
