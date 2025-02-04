@@ -59,4 +59,14 @@ The matching algorithm is as follows:
 3. Attempt a full fuzzy match of the corrected list of unmatched entries with
    the reference list.
 
-This is currently only implemented in full for Companies House data. 
+This is currently only implemented in full for Companies House data.
+
+### Stage 3
+
+Stage 3 creates the output file, combining the corrected names of the matched
+companies with the list of companies and charity names.
+This creates a list of funded organisations derived from the funding sources.
+
+# Known issues to fix
+
+- Shortlist contains individual names. These should be surpressed in the final list.

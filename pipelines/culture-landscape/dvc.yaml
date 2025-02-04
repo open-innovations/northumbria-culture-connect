@@ -2,6 +2,7 @@ vars:
   - ROOT: ../..
   - WORKING: ../../raw/culture-landscape
   - LUME_DIR: ../../src/insight/culture-landscape/pipelines
+  - DATA: ../../data
 
 stages:
   stage-1:
@@ -22,7 +23,7 @@ stages:
     cmd: papermill stage-2.ipynb | jupyter nbconvert --stdin --to markdown --output stage-2 --output-dir ${LUME_DIR}
     deps:
       - stage-2.ipynb
-      - ${ROOT}/raw/culture-landscape/funded-organisations.csv
+      - ${WORKING}/funded-organisations.csv
       - ${ROOT}/raw/company-data.db
     outs:
       - ${WORKING}/2-charity-match-direct.csv:
@@ -38,5 +39,21 @@ stages:
           persist: true
           cache: false
       - ${WORKING}/2-sic-codes.csv:
+          persist: true
+          cache: false
+
+  stage-3:
+    desc: Attempt to match companies to Companies House and Charity Commission data
+    cmd: papermill stage-3.ipynb | jupyter nbconvert --stdin --to markdown --output stage-3 --output-dir ${LUME_DIR}
+    deps:
+      - stage-3.ipynb
+      - ${WORKING}/funded-organisations.csv
+      - ${WORKING}/2-charity-match-direct.csv
+      - ${WORKING}/2-company-corrections.csv
+      - ${WORKING}/2-company-match-direct.csv
+      - ${WORKING}/2-company-match-fuzzy.csv
+      - ${ROOT}/raw/company-data.db
+    outs:
+      - ${DATA}/culture_landscape.csv:
           persist: true
           cache: false
