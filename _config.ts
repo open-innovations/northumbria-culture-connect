@@ -110,7 +110,14 @@ site.process(['.html'], (pages) => {
         }
         page.content;
     }
+});
 
-})
+// Provision data files
+[
+    [import.meta.resolve('./data/culture_landscape.csv'), 'regional/culture-sector/data/culture_landscape.csv'],
+].forEach(([source, target]) => {
+    site.remoteFile(target, source);
+    site.copy(target);
+});
 
 export default site;

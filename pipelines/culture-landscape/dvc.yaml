@@ -1,7 +1,7 @@
 vars:
   - ROOT: ../..
   - WORKING: ../../raw/culture-landscape
-  - LUME_DIR: ../../src/insight/culture-landscape/pipelines
+  - LUME_DIR: ../../src/regional/culture-sector/pipelines
   - DATA: ../../data
 
 stages:
@@ -43,7 +43,7 @@ stages:
           cache: false
 
   stage-3:
-    desc: Attempt to match companies to Companies House and Charity Commission data
+    desc: Create combined version of data from matches and SIC codes
     cmd: papermill stage-3.ipynb | jupyter nbconvert --stdin --to markdown --output stage-3 --output-dir ${LUME_DIR}
     deps:
       - stage-3.ipynb

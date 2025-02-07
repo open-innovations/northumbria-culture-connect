@@ -26,7 +26,7 @@ stages:
       size: 27544
   stage-1:
     cmd: papermill stage-1.ipynb | jupyter nbconvert --stdin --to markdown --output
-      stage-1 --output-dir ../../src/insight/culture-landscape/pipelines
+      stage-1 --output-dir ../../src/regional/culture-sector/pipelines
     deps:
     - path: ../../raw/arts-council-investment-programme.csv
       hash: md5
@@ -38,8 +38,8 @@ stages:
       size: 3127400
     - path: config.py
       hash: md5
-      md5: c9a12355d1e6df792c6748af04a5f9f1
-      size: 251
+      md5: fba05f4aef73d8c92e58a99ae84a6bf8
+      size: 357
     - path: stage-1.ipynb
       hash: md5
       md5: 8104ce52177aa49d49afdd82057e3948
@@ -51,7 +51,7 @@ stages:
       size: 27940
   stage-2:
     cmd: papermill stage-2.ipynb | jupyter nbconvert --stdin --to markdown --output
-      stage-2 --output-dir ../../src/insight/culture-landscape/pipelines
+      stage-2 --output-dir ../../src/regional/culture-sector/pipelines
     deps:
     - path: ../../raw/company-data.db
       hash: md5
@@ -88,7 +88,7 @@ stages:
       size: 748
   stage-3:
     cmd: papermill stage-3.ipynb | jupyter nbconvert --stdin --to markdown --output
-      stage-3 --output-dir ../../src/insight/culture-landscape/pipelines
+      stage-3 --output-dir ../../src/regional/culture-sector/pipelines
     deps:
     - path: ../../raw/company-data.db
       hash: md5
@@ -116,10 +116,10 @@ stages:
       size: 27940
     - path: stage-3.ipynb
       hash: md5
-      md5: e87f54b33e6e851de00efe94beab05bd
-      size: 21520
+      md5: 0b21573f955f6e5c476cd679def0759e
+      size: 13608
     outs:
     - path: ../../data/culture_landscape.csv
       hash: md5
-      md5: 1aeb4da9b5b3453dbbeb589da479f31c
-      size: 73355
+      md5: a8ca2c9c21e870e24e7a94e455ee6fa5
+      size: 220574
