@@ -95,4 +95,12 @@ site.process(['.html'], (pages) => {
 
 site.remoteFile('assets/js/zoomable.js', import.meta.resolve('./patches/zoomable.js'));
 
+// Provision data files
+[
+    [import.meta.resolve('./data/culture_landscape.csv'), 'regional/culture-sector/data/culture_landscape.csv'],
+].forEach(([source, target]) => {
+    site.remoteFile(target, source);
+    site.copy(target);
+})
+
 export default site;
