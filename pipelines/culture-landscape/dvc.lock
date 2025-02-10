@@ -123,3 +123,24 @@ stages:
       hash: md5
       md5: 5a3234191ec8fe3bca2729eaff55335a
       size: 220803
+  prepare:
+    cmd: papermill stage-4-prepare.ipynb | jupyter nbconvert --stdin --to markdown
+      --output stage-4-prepare --output-dir ../../src/regional/culture-sector/pipelines
+    deps:
+    - path: ../../data/culture_landscape.csv
+      hash: md5
+      md5: 5a3234191ec8fe3bca2729eaff55335a
+      size: 220803
+    outs:
+    - path: ../../src/regional/culture-sector/_data/list.csv
+      hash: md5
+      md5: 9022027865a240903cd31b137df3abfc
+      size: 134244
+    - path: ../../src/regional/culture-sector/_data/sic_code_count.json
+      hash: md5
+      md5: 10cb0d05b6151c03533999c64e73b657
+      size: 6563
+    - path: ../../src/regional/culture-sector/_data/summary.json
+      hash: md5
+      md5: 4168e6d2930e8851f4506c6d5133518e
+      size: 252

@@ -420,6 +420,7 @@ landscape = (
     .cutout('lat', 'long')
     .convert('organisation', lambda x, r: x or r.registered_name, pass_row=True)
     .cutout('registered_name')
+    .convert('sic_code', list)
     .sort('organisation')
 )
 ```
@@ -706,6 +707,42 @@ Finally, write the CSV file
 ```python
 landscape.tocsv(DATA / 'culture_landscape.csv')
 ```
+
+
+```python
+landscape.cut('sic_code').selectnotnone('sic_code')
+```
+
+
+
+
+<table class='petl'>
+<thead>
+<tr>
+<th>sic_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>['90030 - Artistic creation']</td>
+</tr>
+<tr>
+<td>['70229 - Management consultancy activities other than financial management', '90020 - Support activities to performing arts']</td>
+</tr>
+<tr>
+<td>['90020 - Support activities to performing arts']</td>
+</tr>
+<tr>
+<td>['59111 - Motion picture production activities', '59112 - Video production activities', '74909 - Other professional, scientific and technical activities n.e.c.']</td>
+</tr>
+<tr>
+<td>['58110 - Book publishing']</td>
+</tr>
+</tbody>
+</table>
+<p><strong>...</strong></p>
+
+
 
 
 ```python

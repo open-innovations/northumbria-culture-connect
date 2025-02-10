@@ -2,6 +2,7 @@ vars:
   - ROOT: ../..
   - WORKING: ../../raw/culture-landscape
   - LUME_DIR: ../../src/regional/culture-sector/pipelines
+  - LUME_DATA: ../../src/regional/culture-sector/_data
   - DATA: ../../data
 
 stages:
@@ -55,5 +56,21 @@ stages:
       - ${ROOT}/raw/company-data.db
     outs:
       - ${DATA}/culture_landscape.csv:
+          persist: true
+          cache: false
+
+  prepare:
+    desc: Prepare the data for visualisation
+    cmd: papermill stage-4-prepare.ipynb | jupyter nbconvert --stdin --to markdown --output stage-4-prepare --output-dir ${LUME_DIR}
+    deps:
+      - ${DATA}/culture_landscape.csv
+    outs:
+      - ${LUME_DATA}/list.csv:
+          persist: true
+          cache: false
+      - ${LUME_DATA}/sic_code_count.json:
+          persist: true
+          cache: false
+      - ${LUME_DATA}/summary.json:
           persist: true
           cache: false
