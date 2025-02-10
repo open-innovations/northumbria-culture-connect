@@ -1,11 +1,17 @@
 ---
 title: Culture sector
-
+description: |
+    This page describes a derived dataset detailing the cultural organisations operating across the Newcastle City Council region. The organisation list has been extracted from various sources of funding data which are published with an open license.
 tags:
     - regional
-
+    - data
+    - infrastructure
+    - derived
+oldUrl:
+ - /data/culture-sector/
 ---
 
+<h2 class="holder padded">Sector Map</h2>
 
 {{
     comp.CultureSectorMap({
@@ -25,7 +31,12 @@ tags:
     })
 }}
 
+<section class="holder padded">
+<h2>Funded Organisations</h2>
 
+{{ include './_partials/FundedOrganisationTable.vto' }}
+
+</section>
 
 <script src="https://grist-static.com/csv-viewer.js"></script>
 
