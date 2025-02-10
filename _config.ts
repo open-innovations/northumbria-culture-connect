@@ -13,12 +13,13 @@ import sitemap from "lume/plugins/sitemap.ts";
 import svgo from 'lume/plugins/svgo.ts';
 import transformImages from 'lume/plugins/transform_images.ts';
 import inline from "lume/plugins/inline.ts";
+import redirects from "lume/plugins/redirects.ts"
 
 // import mermaid from "jsr:@ooker777/lume-mermaid-plugin/";
 
 // OI plugins
 import autoDependency from 'https://deno.land/x/oi_lume_utils@v0.4.0/processors/auto-dependency.ts';
-import oiLumeViz from "https://deno.land/x/oi_lume_viz@v0.16.6/mod.ts";
+import oiLumeViz from "https://deno.land/x/oi_lume_viz@v0.16.7/mod.ts";
 import oiVizConfig from "./oi-viz-config.ts"; // Get our OI Lume Viz config
 
 //PostCSS plugins
@@ -43,6 +44,7 @@ site.use(postcss({
 // SEO plugins
 site.use(metas());
 site.use(sitemap());
+site.use(redirects());
 
 // Inline images
 site.use(inline({
@@ -94,6 +96,21 @@ site.process(['.html'], (pages) => {
 }) 
 
 site.remoteFile('assets/js/zoomable.js', import.meta.resolve('./patches/zoomable.js'));
+
+// Check missing links in menu
+site.process(['.html'], (pages) => {
+    const urls = pages.map(p => p.data.url).map(u => site.url(u));
+    for (const page of pages) {
+        const links = page.document?.querySelectorAll<HTMLAnchorElement>('[data-comp="nav-main-menu"] a');
+        for (const link of links!) {
+            const href = link.getAttribute("href");
+            if (!urls.includes(href)) {
+                link.classList.add('missing');
+            }
+        }
+        page.content;
+    }
+});
 
 // Provision data files
 [
