@@ -24,121 +24,88 @@ tags:
     - infrastructure
 ---
 
-<p>
-    This data has been extracted from the companies house dataset by using a short list of SIC codes seeded by analysis of the <a href="/tags/funding">funding data</a>.
-</p>
-
-<p>
-    The list below shows how many companies were matched for each shortlist code. Note that companies may be included more than once in the counts below, as they could be coded with more than one SIC code.
-</p>
-
-<ul class="grid centred">
-    <li class="block">
-    <p>Total organisations</p>
-    <p class="bang">{{ list.length }}</p>
-    </li>
-</ul>
-
-<ul class="grid centred">
-    {{ for c of sic_codes }}
+<div class="padded holder">
+    <p>
+        This data has been extracted from the companies house dataset by using a short list of SIC codes seeded by analysis of the <a href="/tags/funding">funding data</a>.
+    </p>
+    
+    <p>
+        The list below shows how many companies were matched for each shortlist code. Note that companies may be included more than once in the counts below, as they could be coded with more than one SIC code.
+    </p>
+    
+    <ul class="grid centred">
         <li class="block">
-            <P class="bang">{{ c.count }}</p>
-            <p>{{ c.sic_code }}</p>
+        <p>Total organisations</p>
+        <p class="bang">{{ list.length }}</p>
         </li>
+    </ul>
+    
+    <ul class="grid centred">
+        {{ for c of sic_codes }}
+            <li class="block">
+                <P class="bang">{{ c.count }}</p>
+                <p>{{ c.sic_code }}</p>
+            </li>
+        {{ /for }}
+    </ul>
+    
+    <h2>SIC Codes</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; align-items: center;">
+    <div style="flex-basis: 20rem; flex-grow: 1;">
+    <p>
+        This diagram shows clustering of the SIC codes related to cultural organisations in Newcastle.
+    </p>
+    <p>
+        Hover over the codes to reveal links and names of the codes.
+    </p>
+    </div>
+    <div style="flex-basis: 40rem; flex-grow: 1;">
+    <style>
+        .radial {
+            .nodes {
+                .selected {
+                    fill: red;
+                    font-weight: bold;
+                }
+                .linked {
+                    fill: green;
+                    font-weight: bold;
+                }
+            }
+    
+            .edges .selected {
+                stroke: black;
+            }
+        }
+    </style>
+    {{ comp.EdgeBundle({
+        config: {
+            data: graph,
+            width: 450,
+            padding: 40,
+            title: (n) => `${n.data.id}: ${n.data.name} (${n.data.group})`
+        }
+    }) }}
+    </div>
+    </div>
+    {{# <pre>
+      <code class="language-mermaid">
+    graph LR
+    {{ for n of graph.nodes.filter(n => (graph.edges.map(x => x.src).includes(n.sic_code) || graph.edges.map(x => x.dst).includes(n.sic_code))) -}}
+        n{{ n.sic_code.split(/\s+/)[0] }}["{{ n.sic_code }}"]
+    {{ /for -}}
+    {{ for n of graph.edges -}}
+        n{{ n.src.split(/\s+/)[0] }} --- n{{ n.dst.split(/\s+/)[0] }}
     {{ /for }}
-</ul>
-
-<h2>Geographic distribution of companies</h2>
-
-{{
-    comp.CultureLandscape({
-        centre: [54.980, -1.613],
-        data: list,
-        boundaries: geojson.lad.E08000021,
-        layers: [
-            { code: "90030 - Artistic creation" },
-            { code: "90040 - Operation of arts facilities" },
-            { code: "90010 - Performing arts" },
-            { code: "91012 - Archives activities" },
-            { code: "91011 - Library activities" },
-            { code: "91030 - Operation of historical sites and buildings and similar visitor attractions" },
-            { code: "91020 - Museums activities" },
-            { code: "99999 - Other organisation", colour: "#aaaaaa" },
-        ]
-    })
-}}
-
-{{# {{ comp.oi.map.zoomable({
-    config: {
-        geojson: {
-            data: company_locations,
-        },
-        columns: [
-            {
-                name: 'tooltip',
-                template: "{{ registered_name }}",
-            }
-        ],
-        tooltip: 'tooltip',
-    },
-}) }} #}}
-
-<h2>SIC Codes</h2>
-
-<div style="display: flex; flex-wrap: wrap; align-items: center;">
-<div style="flex-basis: 20rem; flex-grow: 1;">
-<p>
-    This diagram shows clustering of the SIC codes related to cultural organisations in Newcastle.
-</p>
-<p>
-    Hover over the codes to reveal links and names of the codes.
-</p>
+      </code>
+    </pre> #}}
+    
+    <h2>Source</h2>
+    
+    <ul>
+        <li><a href="https://download.companieshouse.gov.uk/en_output.html">Companies House monthly data extract</a></li>
+    </ul>
+    
+    {{ include './_partials/process.md' |> md }}
 </div>
-<div style="flex-basis: 40rem; flex-grow: 1;"> 
-<style>
-    .radial {
-        .nodes {
-            .selected {
-                fill: red;
-                font-weight: bold;
-            }
-            .linked {
-                fill: green;
-                font-weight: bold;
-            }
-        }
-
-        .edges .selected {
-            stroke: black;
-        }
-    }
-</style>
-{{ comp.EdgeBundle({
-    config: {
-        data: graph,
-        width: 450,
-        padding: 40,
-        title: (n) => `${n.data.id}: ${n.data.name} (${n.data.group})`
-    }
-}) }}
-</div>
-</div>
-{{# <pre>
-  <code class="language-mermaid">
-graph LR
-{{ for n of graph.nodes.filter(n => (graph.edges.map(x => x.src).includes(n.sic_code) || graph.edges.map(x => x.dst).includes(n.sic_code))) -}}
-    n{{ n.sic_code.split(/\s+/)[0] }}["{{ n.sic_code }}"]
-{{ /for -}}
-{{ for n of graph.edges -}}
-    n{{ n.src.split(/\s+/)[0] }} --- n{{ n.dst.split(/\s+/)[0] }}
-{{ /for }}
-  </code>
-</pre> #}}
-
-<h2>Source</h2>
-
-<ul>
-    <li><a href="https://download.companieshouse.gov.uk/en_output.html">Companies House monthly data extract</a></li>
-</ul>
-
-{{ include './_partials/process.md' |> md }}
