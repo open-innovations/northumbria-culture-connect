@@ -110,7 +110,7 @@ site.process(['.html'], (pages) => {
         }
         page.content;
     }
-});
+})
 
 // Provision data files
 [
@@ -118,6 +118,6 @@ site.process(['.html'], (pages) => {
 ].forEach(([source, target]) => {
     site.remoteFile(target, source);
     site.copy(target);
-})
+});
 
 export default site;
