@@ -14,7 +14,7 @@
   subMenu:
     - title: Organisation catalogue
     - title: Culture sector
-      url: /data/companies-house/
+      url: /regional/culture-sector/
     - title: Official statistics
       url: /regional/official-statistics/
 - title: Data
