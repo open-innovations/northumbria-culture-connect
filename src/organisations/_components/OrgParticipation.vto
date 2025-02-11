@@ -1,0 +1,21 @@
+{{>
+    const defaults = series.reduce((a, c) => ({ ...a, [c]: null, }), {});
+}}
+
+{{ comp.oi.chart.Bar({
+    config: {
+        data: participation.map(x => ({ ...defaults, ...x })),
+        category: 'pretty_date',
+        columns: [{
+            name: "pretty_date",
+            template: `{{ Date | strptime("%Y-%m-%d") | strftime("${prettyDate || '%b %Y'}") }}`
+        }],
+        stacked: true,
+        series: series.map(s => ({ value: s, title: s })),
+        legend: {
+            show: true,
+
+        }
+    }
+})}}
+
