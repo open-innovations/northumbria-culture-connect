@@ -4,24 +4,30 @@
         ...res,
         [source]: parseFloat((percentage || 0).toFixed(2)) 
     }), {});
-    const series = income.map(({ source, percentage }) => ({
-        source,
-        percentage: parseFloat((percentage || 0).toFixed(2)) 
-    }));
+    const colours = {
+            'Earned income': '#8F3E8D',
+            'Individual donations': '#33A38C',
+            'Corporate sponsorships': '#00478A',
+            'Trusts and foundations': '#005837',
+            'Public funding': '#F25C29',
+    }
+    const series = income
+        .filter(x => x.percentage > 0.5)
+        .map(({ source, percentage }) => ({
+            value: source,
+            percentage: parseFloat((percentage || 0).toFixed(1)),
+            colour: colours[source],
+            tooltip: `${ source }: {{ ${source} }}%`
+        }));
 }}
+
 {{ comp.oi.chart.waffle({
     config: {
         data: [ waffleData ],
         size: [12, 6],
         width: 540,
         total: total,
-        series: [
-            { value: 'Earned income', colour: '#8F3E8D', tooltip:"Earned income: £{{ Earned income }}M" },
-            { value: 'Individual donations', colour: '#33A38C', tooltip:"Earned income: £{{ Individual donations }}M" },
-            { value: 'Corporate sponsorships', colour: '#00478A', tooltip:"Corporate sponsorships: £{{ Corporate sponsorships }}M" },
-            { value: 'Trusts and foundations', colour: '#005837', tooltip:"Trusts and foundations: £{{ Trusts and foundations }}M" },
-            { value: 'Public funding', colour: '#F25C29', tooltip:"Public funding: £{{ Public funding }}M" },
-        ],
+        series: series,
         legend: { show: true },
     }
 }) }}
