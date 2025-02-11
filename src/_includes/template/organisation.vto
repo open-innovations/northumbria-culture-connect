@@ -6,8 +6,12 @@ layout: template/base.vto
     <header class="padded holder" style="display: flex;">
     <div style="flex-grow:1;">
     <h1>{{ title }}</h1>
-    <p><a href="{{ link }}">Homepage</a></p>
+    <p>
+        <a href="{{ link }}">Homepage</a>
+    </p>
+
     {{ comp.OrgData({ ...profile }) }}
+
     </div>
     <div>
     <img src="{{ logo }}" inline/>
@@ -15,6 +19,12 @@ layout: template/base.vto
     </header>
 
     <section class="padded holder">
+    <p>
+    Case studies:
+    {{ for cs of search.pages(`case-study organisation_profile="${url}"`) }}
+        <a href="{{ cs.url }}">{{ cs.title }}</a>
+    {{ /for }}
+    </p>
     </section>
 
     <section class="padded holder">
