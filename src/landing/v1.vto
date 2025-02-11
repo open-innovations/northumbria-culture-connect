@@ -47,7 +47,11 @@ url: /
     
         {{ include "./_partials/insights.md" |> md }}
     
-        {{ comp.DynamicGridList({ searchTerm: 'insight' }) }}
+        {{ comp AutoGrid }}
+        {{ for p of search.pages('insight', 'title') }}
+            {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+        {{ /for }}
+        {{ /comp }}
     
     </section>
 </main>

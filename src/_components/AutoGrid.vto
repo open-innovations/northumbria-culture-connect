@@ -1,0 +1,15 @@
+---
+css: |
+    [data-comp=auto-grid] {
+        display: flex;
+        gap: 1rem;
+        & > * {
+            flex-basis: 10rem;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+    }
+---
+<div data-comp='auto-grid'>
+    {{ content }}
+</div>
