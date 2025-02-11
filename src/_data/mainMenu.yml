@@ -1,23 +1,24 @@
 # - title: Home
 #   url: /
+- title: About
+  url: /about/
 - title: Case studies
   url: /case-study/
-- title: Insight
+- title: Data insights
   url: /tag/insight/
   subMenu:
     - title: Funding
       url: /insight/funding/
     - title: Engagement
       url: /insight/engagement/
-- title: Regional
+- title: Regional data
   url: /tag/regional/
   subMenu:
-    - title: Organisation catalogue
     - title: Culture sector
       url: /regional/culture-sector/
     - title: Official statistics
       url: /regional/official-statistics/
-- title: Data
+- title: Data sources
   url: /data/
 - title: Tools
   url: /tag/tools/
@@ -26,5 +27,4 @@
       url: /tools/resources/
     - title: Tag index
       url: /tools/tag-index/
-- title: About
-  url: /about/
+- title: Pilot organisations
