@@ -1,0 +1,29 @@
+---
+css: |
+    [data-comp=work-in-progress] {
+        background: black;
+        color: yellow;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 0.5rem;
+        text-align: center;
+        text-wrap: balance;
+        margin-block-end: 1em;
+        & .alert {
+            font-size: 2em;
+        }
+        & > * {
+            margin-block: 0;
+        }
+    }
+---
+<aside data-comp='work-in-progress'>
+    <p class="alert">Work in progress</p>
+    <p>
+        This page is likely to change significantly in the near future.
+        While feedback is welcomed, it might be against an outdated version of the page.
+    </p>
+</aside>
