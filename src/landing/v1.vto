@@ -36,22 +36,22 @@ url: /
     <hr>
     
     <section class="holder padded">
-        <h2>Insights</h2>
-    
-        {{ include "./_partials/insights.md" |> md }}
-    
-        {{ comp.DynamicGridList({ searchTerm: 'insight' }) }}
-    
-    </section>
-    
-    <hr>
-    
-    <section class="holder padded">
         <h2>Case studies</h2>
     
         {{ include "./_partials/case_studies.md" |> md }}
     
         {{ comp.DynamicGridList({ searchTerm: 'case-study' }) }}
+    </section>
+
+    <hr>
+
+    <section class="holder padded">
+        <h2>Data Insights</h2>
+    
+        {{ include "./_partials/insights.md" |> md }}
+    
+        {{ comp.DynamicGridList({ searchTerm: 'insight' }) }}
+    
     </section>
     
     <hr>
