@@ -23,6 +23,12 @@
   background-color: var(--colour-purple-25);
 }
 
+.oi-chart {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
 .oi-legend-inner {
   & .oi-legend-item {
     display: flex !important;
@@ -33,8 +39,6 @@
 .oi-top > .oi-legend {
   margin-bottom: 0.5rem;
 }
-.oi-waffle-chart .oi-legend .oi-legend-label { color: white; }
-.oi-waffle-chart .oi-legend-inner .oi-legend-icon { height: 1.25rem; }
 .oi-waffle-chart .oi-legend .item-mark, .oi-waffle-chart .series path:not(.marker-group) { outline: 1px solid white; }
 .oi-top > .oi-legend .oi-legend-inner .oi-legend-items { flex-wrap: wrap; row-gap: 0.1rem; }
 .oi-legend-inner .oi-legend-item { padding: 0 0.25rem; }

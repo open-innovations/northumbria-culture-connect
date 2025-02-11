@@ -14,6 +14,21 @@ layout: template/base.vto
     <section class="padded holder">
     <h2>Data profile</h2>
 
+    {{ comp ColourBlock }}
+        <h3>Total funding</h3>
+        
+        <div style="font-size:2.5em;font-weight:bold;">&pound;{{ income |> map(x => x.amount) |> reduce((a, c) => a + c, 0) |> toLocaleString }}</div>
+
+        <p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+        {{ comp WidthLimit }}
+        {{ comp.OrgIncome({ income }) }}
+        <p style="font-size:0.7rem;">The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+        {{ /comp }}
+
+        {{# TODO add tabs for alternate views of data Waffle / Bar / Table #}}
+    {{ /comp }}
+
+    {{# TODO add breakdown by funding source #}}
     </section>
     <hr>
     <section class="padded holder">
