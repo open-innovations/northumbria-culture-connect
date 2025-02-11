@@ -3,12 +3,18 @@ layout: template/base.vto
 ---
 
 <main>
-    <header class="padded holder">
+    <header class="padded holder" style="display: flex;">
+    <div style="flex-grow:1;">
     <h1>{{ title }}</h1>
+    <p><a href="{{ link }}">Homepage</a></p>
+    {{ comp.OrgData({ ...profile }) }}
+    </div>
+    <div>
+    <img src="{{ logo }}" inline/>
+    </div>
     </header>
 
     <section class="padded holder">
-    {{ comp.OrgData({ ...orgData }) }}
     </section>
 
     <section class="padded holder">

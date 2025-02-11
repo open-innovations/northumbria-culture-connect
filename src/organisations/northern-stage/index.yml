@@ -1,0 +1,20 @@
+title: Northern Stage
+
+link: https://northernstage.co.uk/
+logo: /assets/images/case-study/northern-stage.svg
+
+profile:
+  number_of_employees:
+  # NEED TO CONFIRM THESE
+  # 33 contracted / 61 casual
+    full_time: 33
+    part_time: 61
+  postcode: NE1 7RH
+  type_of_organisation: Theatre
+
+series:
+  participation:
+    - All other
+    - School
+    - Child / Under 21
+    - Participation

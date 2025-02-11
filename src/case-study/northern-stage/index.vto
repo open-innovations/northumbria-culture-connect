@@ -13,19 +13,3 @@ tags:
 link: https://northernstage.co.uk/
 logo: /assets/images/case-study/northern-stage.svg
 ---
-
-{{ set northernStageData = org_list.find(org => org.Organisation === "Northern Stage") }}
-
-{{ comp.OrgCard({ orgData: northernStageData, incomeData: northern_stage_income })}}
-
-<h2>Participation</h2>
-
-{{ comp.LineChart( {
-    data: northern_stage_participation,
-    series: [
-            { title: 'Child / Under 21', x: 'decimal_year', y: 'Child / Under 21', line: { curvature: 0.5 }  },
-            { title: 'School', x: 'decimal_year', y: 'School', line: { curvature: 0.5 }  },
-            { title: 'All other', x: 'decimal_year', y: 'All other', line: { curvature: 0.5 }  },
-            { title: 'Participation', x: 'decimal_year', y: 'Participation', line: { curvature: 0.5 }  },
-        ],
-} ) }}

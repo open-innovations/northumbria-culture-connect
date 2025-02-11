@@ -1,0 +1,18 @@
+title: North East Museums
+
+link: https://www.northeastmuseums.org.uk/
+logo: /assets/images/case-study/logo-north-east-museums-padded.svg
+
+profile:
+  number_of_employees:
+    full_time: 276
+    part_time: null
+  postcode: NE1 4JA
+  type_of_organisation: Museum service
+
+series:
+  participation:
+    - Total footfall
+    - Community programmes
+    - Formal learning
+    - Informal learning

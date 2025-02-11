@@ -14,39 +14,6 @@ link: https://www.northeastmuseums.org.uk/
 logo: /assets/images/case-study/logo-north-east-museums-padded.svg
 ---
 
-{{ set twamData = org_list.find(org => org.Organisation === "North East Museums") }}
-
-{{ comp.OrgCard({ orgData: twamData, incomeData: twam_income })}}
-
-<h2>Participation</h2>
-<p>The charts below explore the number of people engaging with this organisation's activities over the course of a year, between September 2023 and September 2024.</p>
-
-<h3>Total Footfall</h3>
-
-<p>This data represents the total number of visitors to North East Museums.</p>
-
-{{ comp.LineChart( {
-    data: twam_participation,
-    series: [
-            { title: 'Total footfall', x: 'decimal_year', y: 'Total footfall', line: { curvature: 0.5 }}
-    ],
-} ) }}
-
-
-<h3>Participation by Programme</h3>
-
-<p>The chart below gives an overview of the programmes offered by North East Museums, and the number of people that have engaged with these programmes throughout 2024.</p>
-
-{{ comp.LineChart( {
-    data: twam_participation,
-    series: [
-            { title: 'Community programmes', x: 'decimal_year', y: 'Community programmes', line: { curvature: 0.5 } },
-            { title: 'Formal learning', x: 'decimal_year', y: 'Formal learning', line: { curvature: 0.5 } },
-            { title: 'Informal learning', x: 'decimal_year', y: 'Informal learning', line: { curvature: 0.5 } }
-    ],
-} ) }}
-
-
 <h1 style = "padding-top:2em;">Case Study: Health and Wellbeing Heritage Programme Evaluation</h1>
 
 <p>North East Museums provide a number of community engagement programmes...</p>

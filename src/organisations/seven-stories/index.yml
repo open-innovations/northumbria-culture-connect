@@ -1,0 +1,22 @@
+title: Seven Stories The National Centre for Children's Books
+
+link: https://sevenstories.org.uk/
+logo: /assets/images/case-study/seven-stories.svg
+
+profile:
+  number_of_employees:
+  # NEED TO CONFIRM THESE
+    full_time: 25
+    part_time: 53
+  postcode: NE1 2PQ
+  type_of_organisation: Museum
+
+series:
+  participation:
+    - Footfall
+    - Afternoon Tea
+    - Film Screening
+    - Learning & Community
+    - Performance
+    - Storytime
+    - Workshop/Event
