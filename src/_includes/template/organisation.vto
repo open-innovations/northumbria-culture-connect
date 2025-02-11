@@ -2,4 +2,22 @@
 layout: template/base.vto
 ---
 
-ORGANISATION PAGE
+<main>
+    <header class="padded holder">
+    <h1>{{ title }}</h1>
+    </header>
+
+    <section class="padded holder">
+    {{ comp.OrgData({ ...orgData }) }}
+    </section>
+
+    <section class="padded holder">
+    <h2>Data profile</h2>
+
+    </section>
+    <hr>
+    <section class="padded holder">
+    <h2>Location</h2>
+
+    </section>
+</main>

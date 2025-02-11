@@ -1,0 +1,33 @@
+---
+css: |
+    [data-comp="block-org-data"] {
+        display: flex;
+        gap: 2rem;
+        & .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        & li {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+---
+<ul data-comp="block-org-data">
+    <li>
+        <span>Organisation Type</span>
+        <span class="value">{{ type_of_organisation }}</span>
+    </li>
+    <li>
+        <span>Postcode</span>
+        <span class="value">{{ postcode }}</span>
+    </li>
+    <li>
+        <span>Full-time employees</span>
+        <span class="value">{{ number_of_employees.full_time }}</span>
+    </li>
+    <li>
+        <span>Part-time employees</span>
+        <span class="value">{{ number_of_employees.part_time }}</span>
+    </li>
+</ul>

@@ -21,7 +21,7 @@ h2 { font-size: 1.6rem; }
 h3 { font-size: 1.45rem; }
 hr {
 	border: 0;
-	border-top: 2px solid var(--col-primary-black);
+	border-top: 1px solid var(--col-primary-black);
 	width: calc(var(--page-width) - var(--padding)*2);
 	margin: auto;
 	max-width: 100%;
