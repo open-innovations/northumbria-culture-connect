@@ -5,12 +5,9 @@ breadcrumbs:
   - title: Home
     url: /
 ---
-
-<div class="holder padded">
-<p>PLACEHOLDER PAGE FOR CASE STUDIES.</p>
-
-{{ for p of search.pages('case-study', 'title') }}
-{{ comp.PageLink({ page: p, config: { headingLevel: 2, withTags: true }, style: "case-study" }) }}
-{{ /for }}
-
-</div>
+<section class="holder padded">
+  CASE STUDY INTRODUCTION
+</section>
+<section style="display:flex;flex-direction:column;gap:1rem;">
+    {{ comp.CaseStudyLinkList() }}
+</section>

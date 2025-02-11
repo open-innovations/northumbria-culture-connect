@@ -38,9 +38,7 @@ url: /
     <section style="display:flex;flex-direction:column;gap:1rem;">
         <h2 class="holder padded">Case studies</h2>
 
-        {{ for caseStudy of search.pages('case-study', 'order') }}
-            {{ comp.CaseStudyLink({ page: caseStudy }) }}
-        {{ /for }}
+        {{ comp.CaseStudyLinkList() }}
     </section>
     <hr>
 

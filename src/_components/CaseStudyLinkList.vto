@@ -1,0 +1,3 @@
+{{ for caseStudy of search.pages('case-study', 'order') }}
+{{ comp.CaseStudyLink({ page: caseStudy }) }}
+{{ /for }}
