@@ -1,0 +1,10 @@
+tags:
+  - organisation
+
+layout: template/organisation.vto
+
+breadcrumbs:
+  - title: Home
+    url: /
+  - title: Pilot organisations
+    url: /organisations/

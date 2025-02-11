@@ -1,0 +1,21 @@
+---
+title: Organisation index
+layout: template/base.vto
+tags:
+    - index
+---
+
+<main>
+<section class="holder padded">
+
+<p>
+This page shows profiles for the {{ metas.site }} pilot organisations.
+</p>
+
+{{ comp UniformGrid }}
+{{ for l of search.pages('organisation !index', 'title') }}
+    {{ comp.PageLink({ page: l, config: { headingLevel: 2, withTags: true } })}}
+{{ /for }}
+{{ /comp }}
+</section>
+</main>

@@ -28,12 +28,13 @@ css: |
 	<div class="holder padded">
 		<ul>
 		{{ for c of breadcrumbs }}
-		<li>
 		{{ if c.url !== url -}}
+		<li>
 		<a href="{{ c.url }}">{{ c.title }}</a>
-		{{- else -}}
-		{{ c.title }}
-		{{- /if }}</li>
+		{{# {{- else -}}
+		{{ c.title }} #}}
+        </li>
+		{{- /if }}
 		{{ /for }}
 		<li>
 			{{ title }}
