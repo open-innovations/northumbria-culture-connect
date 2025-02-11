@@ -3,10 +3,10 @@ css: |
     .comp-uniform-grid {
         display: grid;
         gap: 1em;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(var(--grid-size, 20rem), 1fr));
     }
 ---
 {{# https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ #}}
-<{{ tag || 'div' }}  class="comp-uniform-grid">
+<{{ tag || 'div' }} class="comp-uniform-grid">
 {{ content }}
 </{{ tag || 'div' }}>

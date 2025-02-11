@@ -1,17 +1,34 @@
 ---
 css: |
+  [data-comp=page-link] {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1.1875rem;
+    font-weight: bold;
+    gap: 1em;
+    & .title {
+        font-size: 2em;
+    }
+    & a {
+        color: currentColor;
+    }
+    & .expand {
+        flex-grow: 1;
+    }
+  }
   .block.case-study h2 + p { margin-top: 1rem; }
   .block.case-study > * { margin-top: 1rem; }
   .block.case-study > *:first-child { margin-top: 0; }
 ---
-<{{ tag || 'section' }}><div class="block padded {{ if style }}{{ style }}{{ else }}bg-offwhite{{ /if }}">
-    <div class="greedy" style="display:flex;flex-direction:column;">
-        {{ comp.PageSummary({ ...page, config }) }}
+<{{ tag || 'div' }} data-comp="page-link" class="{{ style || page.colour_style || 'bg-offwhite' }}">
+    <div class="expand">
+    <p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
+    {{ page.description |> md }}
     </div>
-    <div>
-        {{ comp.CallToAction({ link: page.url, text: "Explore the data &rarr;" }) }}
+    {{ if config?.withTags }}
+    <div> 
+        {{ comp.PageTags({ ...page, config })}}
     </div>
-    {{ if config.withTags }}
-    {{ comp.PageTags({ ...page, config })}}
     {{ /if }}
-</div></{{ tag || 'section' }}>
+</{{ tag || 'div' }}>

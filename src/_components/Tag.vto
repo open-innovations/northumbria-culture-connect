@@ -2,18 +2,18 @@
 css: |
     .tag {
         display: inline-block;
-        color: var(--cta-text, white)!important;
-        border-color: var(--cta-border, black)!important;
-        background: var(--cta-bg, black)!important;
+        color: var(--cta-text, black);
+        border-color: var(--cta-text, black);
+        background: var(--cta-bg, white);
         border: 1px solid;
         border-radius: 2rem;
         padding-block: 0.2rem;
-        padding-inline: 0.7rem;
+        padding-inline: 1rem;
         transition-property: color, text-decoration;
         transition-duration: 0.3s;
         &:hover {
-            color: var(--tag-foreground, white);
-            background: var(--tag-background, black);
+            color: var(--cta-bg, white);
+            background: var(--cta-text, black);
         }
     }
 ---
