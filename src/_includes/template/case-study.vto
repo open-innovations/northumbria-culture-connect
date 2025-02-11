@@ -9,7 +9,12 @@ layout: template/base.vto
 			{{ if content_block?.about }}
 			{{ content_block.about |> md }}
 			{{ /if }}
-			<p>{{ comp.CallToAction({ link, text: `Visit ${ title } website &rarr;` }) }}</p>
+			<p>
+			{{ comp.CallToAction({ link, text: `Visit ${ title } website &rarr;` }) }}
+			{{ if organisation_profile }}
+				{{ comp.CallToAction({ link: organisation_profile, text: 'Organisation profile' })}}
+			{{ /if }}		
+			</p>
 
         </div>
         <div style="flex-grow: 0; flex-basis: unset;">
