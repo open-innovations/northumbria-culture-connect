@@ -35,14 +35,13 @@ url: /
     
     <hr>
     
-    <section class="holder padded">
-        <h2>Case studies</h2>
-    
-        {{ include "./_partials/case_studies.md" |> md }}
-    
-        {{ comp.DynamicGridList({ searchTerm: 'case-study' }) }}
-    </section>
+    <section style="display:flex;flex-direction:column;gap:1rem;">
+        <h2 class="holder padded">Case studies</h2>
 
+        {{ for caseStudy of search.pages('case-study', 'order') }}
+            {{ comp.CaseStudyLink({ page: caseStudy }) }}
+        {{ /for }}
+    </section>
     <hr>
 
     <section class="holder padded">

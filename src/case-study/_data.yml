@@ -10,3 +10,6 @@ breadcrumbs:
     url: /
   - title: Case studies
     url: /case-study/
+
+# TODO Set featured image in the frontmatter of each page
+featured_image: https://placehold.co/600x400
