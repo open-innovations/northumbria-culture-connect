@@ -1,0 +1,1 @@
+The postcode polygons are © Wikipedia contributors, the data is available under the Creative Commons Attribution ShareAlike 3.0 Unported License.
