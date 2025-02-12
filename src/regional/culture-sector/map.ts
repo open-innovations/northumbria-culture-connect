@@ -15,13 +15,22 @@ export function initialiseMap({
 
     baseMap.addTo(map);
 
-    const layerControl = L.control.layers().addTo(map);
+	const layerControl = L.control.layers().addTo(map);
 
-    const boundaryLayer = L.geoJSON(boundaries);
+	const boundaryLayer = L.geoJSON(boundaries,{
+		style: function (feature) {
+			return {'color':'var(--col-darkgrey)','fill':false};
+		}
+	});
     boundaryLayer.addTo(map);
 
     const bounds = L.latLngBounds(); 
     bounds.extend(boundaryLayer.getBounds());
+
+	const icons = {
+		'funded': {'class':'bg-green-100','icon':L.divIcon({'html':'<div class="sector-icon bg-green-100">£</div>'})},
+		'matched': {'class':'bg-green-25','icon':L.divIcon({'html':'<div class="sector-icon bg-green-25">+</div>'})}
+	}
 
     const orgs = data
         .filter(o => o.latitude && o.longitude)
@@ -30,19 +39,20 @@ export function initialiseMap({
             sic_code: JSON.parse(o.sic_code) || [],
         }));
 
-    const popupTemplate = (props, extraRows = () => '') => `<div class='cs-popup'>
-        <p style="font-weight: bold; font-size: 1.5em;">${props.organisation}</p>
-        <table>
-        <tr><td>Postcode</td><td>${ props.pcds && `${ props.pcds }` || '' }</td></tr>
-        <tr><td>Company number</td><td>
-            <!-- <a href="${ props.uri }"> -->
-            ${ props.company_number }
-            <!-- </a> -->
-        </td></tr>
-        <tr><td>SIC code</td><td>${ props.sic_code.join('<br>') }</td></tr>
-        ${ extraRows(props) }
-        </table>
-    </div>`;
+    const popupTemplate = (props, extraRows = () => '') => {
+		let cls = '';
+		if(props.group) cls = ' '+props.group;
+		var html = '<div class="cs-popup'+(cls||'')+'">';
+		html += '<h3>' + props.organisation + '</h3>';
+        html += '<table>';
+        if(props.pcds) html += '<tr><td>Postcode</td><td>'+(props.pcds && props.pcds || '')+'</td></tr>';
+        if(props.company_number) html += '<tr><td>Company number</td><td>'+props.company_number+'</td></tr>';
+        if(props.sic_code) html += '<tr><td>SIC code</td><td>' + props.sic_code.join("<br>") + '</td></tr>';
+        html += extraRows(props);
+        html += '</table>';
+		html += '</div>';
+		return html;
+	}
 
     const popupFragFunded = (props) => (props.funded === 'True') ? `
         <tr><td>Funding type</td><td>${ [
@@ -55,41 +65,33 @@ export function initialiseMap({
     ` : '';
 
     const funded = L.featureGroup()
-        .bindPopup((l) => `<div class='cs-popup'>
-            ${ popupTemplate(l.options.props, popupFragFunded) }
-        </div>`)
+		.bindPopup((l) => popupTemplate(l.options.props, popupFragFunded),{'className':icons.funded.class,'minWidth':350});
 
     const matchedCompany = L.featureGroup()
-        .bindPopup((l) => `<div class='cs-popup'>
-            ${ popupTemplate(l.options.props) }
-        </div>`)
+		.bindPopup((l) => popupTemplate(l.options.props),{'className':icons.matched.class,'minWidth':350});
 
     const others = L.featureGroup()
-        .bindPopup((l) => `<div class='cs-popup'>
-            ${ popupTemplate(l.options.props) }
-        </div>`);
+		.bindPopup((l) => popupTemplate(l.options.props));
 
     for (const o of orgs) {
-        const marker = L.circleMarker([o.latitude, o.longitude], {
-            props: { ...o },
-            color: '#777',
-        });
         if (o.funded === 'True') {
-            marker.setStyle(({ color: 'green' }))
-            funded.addLayer(marker);
+			o.group = "funded";
+			const marker = L.marker([o.latitude, o.longitude], {icon: icons['funded'].icon, props: { ...o }});
+			funded.addLayer(marker);
             continue;
-        }
-        if (o.company_match === 'True') {
-            marker.setStyle(({ color: 'red' }))
-            matchedCompany.addLayer(marker);
+        } else if (o.company_match === 'True') {
+			o.group = "matched";
+			const marker = L.marker([o.latitude, o.longitude], {icon: icons['matched'].icon, props: { ...o }});
+	        matchedCompany.addLayer(marker);
             continue;
-        }
-
-        others.addLayer(marker);
+        } else {
+			o.group = "other";
+	        others.addLayer(marker);
+		}
     }
-    layerControl.addOverlay(funded, 'Funded organisations');
 
-    layerControl.addOverlay(matchedCompany, 'Matched companies');
+    layerControl.addOverlay(funded, icons.funded.icon.options.html+'Funded organisations');
+    layerControl.addOverlay(matchedCompany, icons.matched.icon.options.html+'Matched companies');
 
     matchedCompany.addTo(map);
     funded.addTo(map);
@@ -102,4 +104,18 @@ export function initialiseMap({
     L.control.scale().addTo(map);
 
     map.flyToBounds(bounds);
+
+
+	map.on("popupopen", function (e) {
+		console.log(e.popup,e.popup._container);
+		let el = e.popup._container;
+		let colour = "";
+		if(el) colour = window.getComputedStyle(el)['backgroundColor'];
+		console.log(colour);
+		el.querySelector(".leaflet-popup-tip").style['backgroundColor'] = colour;
+		/*
+		var style = "background-color:"+colour+"!important;color:"+OI.contrastColour(colour)+"!important;";
+		el.querySelector(".leaflet-popup-content-wrapper").setAttribute("style",style);
+		el.querySelector(".leaflet-popup-close-button").setAttribute("style",style);*/
+	});
 }
