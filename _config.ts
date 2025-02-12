@@ -61,7 +61,7 @@ site.use(sheets({
 }));
 
 site.use(esbuild({
-    extensions: [ '.b.ts' ],
+    extensions: [ '.ts' ],
     // options: {
     // }
 }));
