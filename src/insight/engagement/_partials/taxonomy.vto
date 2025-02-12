@@ -104,18 +104,11 @@
 </div>
 
 
-{{> console.log(
+{{# {{> console.log(
         groupings.toSorted((a, b) => {
             if (a.Organisation < b.Organisation) {
                 return -1;
             }
         })
     )
-}}
-
-
-
-
-
-
-
+}} #}}
