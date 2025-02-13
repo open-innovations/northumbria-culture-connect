@@ -1,0 +1,16 @@
+---
+title: Regional data
+description: |
+    The regional data pages provide a background for research into the culture sector.
+    By presenting existing open or novel derived datasets, we can shine a light
+    onto an aspect of the landscape in which the cultural organisations operate.
+tags:
+    - index
+---
+<section class="padded holder">
+{{ comp AutoGrid }}
+{{ for p of search.pages('regional !index !pipeline', 'title') }}
+    {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+{{ /for }}
+{{ /comp }}
+</section>

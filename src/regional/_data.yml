@@ -1,0 +1,10 @@
+breadcrumbs:
+  - title: Home
+    url: /
+  - title: Regional data
+    url: /regional/
+
+tags:
+  - regional
+
+colour_style: bg-pink-100

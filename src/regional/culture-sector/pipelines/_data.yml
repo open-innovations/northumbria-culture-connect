@@ -1,1 +1,3 @@
 layout: template/page.vto
+tags:
+  - pipeline
