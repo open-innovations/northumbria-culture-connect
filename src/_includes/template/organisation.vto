@@ -36,24 +36,24 @@ layout: template/base.vto
 			{{ comp Headline }}&pound;{{ income |> map(x => x.amount) |> reduce((a, c) => a + c, 0) |> toLocaleString }}{{ /comp }}
 
 			{{ comp documentation }}These tabs are placeholders to show how to make them. Make sure to create content for the visualisations that are actually needed.{{ /comp }}
-			{{ comp layout.panelSelector.set { label: 'Choose the visualisation layer', position: "top" } }}
+			{{ comp PanelSelector.set { label: 'Choose the visualisation layer', position: "top" } }}
 
-				{{ comp layout.panelSelector.panel { id: "funding-waffle", title: "Waffle", icon: 'waffle', classes: "doublepadded" } }}
+				{{ comp PanelSelector.panel { id: "funding-waffle", title: "Waffle", icon: 'waffle', classes: "doublepadded" } }}
 					<p>This chart presents this organisation's main funding sources, as a percentage of total reported income.</p>
 					{{ comp WidthLimit }}
 						{{ comp.OrgIncome({ income }) }}
 					{{ /comp }}
 				{{ /comp }}
 
-				{{ comp layout.panelSelector.panel { id: "funding-line", title: "Line", icon: 'line', classes: "doublepadded" } }}
+				{{ comp PanelSelector.panel { id: "funding-line", title: "Line", icon: 'line', classes: "doublepadded" } }}
 					{{ comp Warning }}Content needed here{{ /comp }}
 				{{ /comp }}
 
-				{{ comp layout.panelSelector.panel { id: "funding-bar", title: "Bar", icon: 'bar', classes: "doublepadded" } }}
+				{{ comp PanelSelector.panel { id: "funding-bar", title: "Bar", icon: 'bar', classes: "doublepadded" } }}
 					{{ comp Warning }}Content needed here{{ /comp }}
 				{{ /comp }}
 
-				{{ comp layout.panelSelector.panel { id: "funding-table", title: "Table", icon: 'table', classes: "doublepadded" } }}
+				{{ comp PanelSelector.panel { id: "funding-table", title: "Table", icon: 'table', classes: "doublepadded" } }}
 					{{ comp Warning }}Content needed here{{ /comp }}
 				{{ /comp }}
 			{{ /comp }}
