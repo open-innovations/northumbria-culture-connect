@@ -15,9 +15,6 @@ notes: |
 ---
 
 <div class="holder padded">
-<p>
-    This page will presents an economic overview of Newcastle over key areas: Employment & Unemployment, Economic Activity & Inactivity, Unemployment Benefit Claimant Counts, Income, Population.
-</p>
 
 {{ comp documentation }}
 	{{ notes |> md }}
@@ -25,7 +22,7 @@ notes: |
 
 
 <h3>Economic Activity</h3>
-
+<p>Proportion of people who are Employed, Unemployed, or Economically inactive.</p>
 {{ set economicActivity = Object.values(NM_17_5.reduce((o, row) => {
 	const date = row['DATE'].toISOString().substr(0,10);
 	const thisGroup = o[date] || { date };
@@ -80,7 +77,7 @@ notes: |
 				tick: { spacing: 2 }
 			},
 			y: {
-				title: { label: "%" },
+				title: { label: "Proportion of population (%)" },
 				min: 0,
 				max: 100,
 				grid: { show: true },
@@ -255,7 +252,7 @@ I used NM_30 because this includes all residents. If we wanted workplaces in New
 	}
 }) }}
 
-<p>Below is a graph of gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence.</p>
+<p>Gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence.</p>
 
 {{ comp.oi.chart.line({
 	config: {
@@ -333,7 +330,7 @@ I used NM_30 because this includes all residents. If we wanted workplaces in New
 				tick: { spacing: 2 }
 			},
 			y: {
-				title: { label: "% growth in gross annual pay" },
+				title: { label: "Growth in gross annual pay (%)" },
 				min: -10,
 				max: 25,
 				grid: { show: true }
@@ -439,7 +436,7 @@ We've used a percentage stacked bar chart because the totals add up to 100% and 
 
 <p>Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/wardlevelmidyearpopulationestimatesexperimental">Mid 2022 estimates by ward</a></p>
 
-<p>More</p>
+{{# <p>More</p> Guessing this isn't needed anymore #}}
 <ul>
 	<li><a href="https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=31&version=0&anal=1">ONS Population estimates - local authority based by five year age band</a></li>
     <li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2023">ONS mid-year population estimates</a></li>
