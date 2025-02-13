@@ -1,20 +1,21 @@
 ---
 css: |
-    header { position: relative; background: var(--col-white); color: var(--col-black); }
+    [data-comp=SiteHeader] { position: relative; background: var(--col-white); color: var(--col-black); }
     .site-header {
         font-size: 2.5rem;
         font-weight: 700;
         line-height: 0em;
+        padding-block: 1rem;
         & a {
             display: inline-block;
-            padding: var(--padding) 0;
+            padding: 0;
             color: inherit;
             color: var(--col-primary-black);
             text-decoration: none;
             &:hover {
                 color: inherit;
             }
-            img { height: 56px; width: 185px; }
+            img { height: 4.25rem; /* 68px */ }
         }
     }
     @media only screen and (max-width: 1484px) {
@@ -22,7 +23,7 @@ css: |
     }
 ---
 
-<header>
+<header data-comp="SiteHeader">
 	<div class="holder site-header">
         <a href="/"><img src="/assets/images/logo-culture-connect.svg" alt="Culture Connect logo"> </a>
 	</div>
