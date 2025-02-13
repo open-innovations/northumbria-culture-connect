@@ -3,74 +3,87 @@ layout: template/base.vto
 ---
 
 <main>
-    <header class="padded holder" style="display: flex;">
-    <div style="flex-grow:1;">
-    <h1>{{ title }}</h1>
-    <p>
-        <a href="{{ link }}">Homepage</a>
-    </p>
+	<header class="padded holder" style="display: flex;">
+		<div style="flex-grow:1;">
+			<h1>{{ title }}</h1>
+			<p>
+				<a href="{{ link }}">Homepage</a>
+			</p>
 
-    {{ comp.OrgData({ ...profile }) }}
+			{{ comp.OrgData({ ...profile }) }}
 
-    </div>
-    <div>
-    <img src="{{ logo }}" inline/>
-    </div>
-    </header>
+		</div>
+		<div>
+			<img src="{{ logo }}" inline/>
+		</div>
+	</header>
 
-    <section class="padded holder">
-    <p>
-    Case studies:
-    {{ for cs of search.pages(`case-study organisation_profile="${url}"`) }}
-        <a href="{{ cs.url }}">{{ cs.title }}</a>
-    {{ /for }}
-    </p>
-    </section>
+	<section class="padded holder">
+		<p>
+		Case studies:
+		{{ for cs of search.pages(`case-study organisation_profile="${url}"`) }}
+			<a href="{{ cs.url }}">{{ cs.title }}</a>
+		{{ /for }}
+		</p>
+	</section>
 
-    <section class="padded holder">
-    <h2>Data profile</h2>
+	<section class="padded holder">
+		<h2>Data profile</h2>
 
-    {{ comp ColourBlock { classes: 'bg-green-100' } }}
-        <h3>Total funding</h3>
-        
-        {{ comp Headline }}&pound;{{ income |> map(x => x.amount) |> reduce((a, c) => a + c, 0) |> toLocaleString }}{{ /comp }}
-
-        <p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
-
-        {{ comp WidthLimit }}
-        {{ comp.OrgIncome({ income }) }}
-        <p style="font-size:0.7rem;">The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
-        {{ /comp }}
-
-        {{# TODO add tabs for alternate views of data Waffle / Bar / Table #}}
-    {{ /comp }}
-
-    {{# TODO add breakdown by funding source #}}
-
-    {{ comp ColourBlock { classes: 'bg-blue-100' }}}
-        <h3>Participation</h3>
+		{{ comp ColourBlock { classes: 'bg-green-100' } }}
+			<h3>Total funding</h3>
+			
+			{{ comp Headline }}&pound;{{ income |> map(x => x.amount) |> reduce((a, c) => a + c, 0) |> toLocaleString }}{{ /comp }}
 
 
-        {{ comp Headline }}
-        {{ participation
-            |> map(x => Object.values({ ...x, Date: undefined, 'Date label': undefined }))
-            |> flat
-            |> reduce((a, c) => a + (c || 0), 0)
-            |> toLocaleString }} annual visitors
-        {{ /comp }}
+			{{ comp layout.panelSelector.set { label: 'Choose the visualisation layer', position: "bottom" } }}
 
-        <p>This data represents the total number of visitors to {{ title }}.</p>
+				{{ comp layout.panelSelector.panel { id: "funding-line", title: "Line", icon: 'line', classes: "doublepadded" } }}
+					<p>The chart below presents this organisation's main funding sources, as a percentage of total reported income.</p>
+					{{ comp WidthLimit }}
+						{{ comp.OrgIncome({ income }) }}
+					{{ /comp }}
+				{{ /comp }}
 
-        {{ comp WidthLimit }}
-        {{ comp.OrgParticipation({ participation, series: series.participation }) }}
+				{{ comp layout.panelSelector.panel { id: "funding-bar", title: "Bar", icon: 'bar', classes: "doublepadded" } }}
+					{{ comp Warning }}Content needed here{{ /comp }}
+				{{ /comp }}
 
-        {{ /comp }}
+				{{ comp layout.panelSelector.panel { id: "funding-table", title: "Table", icon: 'table', classes: "doublepadded" } }}
+					{{ comp Warning }}Content needed here{{ /comp }}
+				{{ /comp }}
+			{{ /comp }}
+			{{# TODO add tabs for alternate views of data Waffle / Bar / Table #}}
+		{{ /comp }}
 
-    {{ /comp }}
-    </section>
-    <hr>
-    <section class="padded holder">
-    <h2>Location</h2>
+		{{# TODO add breakdown by funding source #}}
 
-    </section>
+		{{ comp ColourBlock { classes: 'bg-blue-100' }}}
+			<h3>Participation</h3>
+
+
+			{{ comp Headline }}
+				{{ participation
+					|> map(x => Object.values({ ...x, Date: undefined, 'Date label': undefined }))
+					|> flat
+					|> reduce((a, c) => a + (c || 0), 0)
+					|> toLocaleString }} annual visitors
+			{{ /comp }}
+
+			<p>This data represents the total number of visitors to {{ title }}.</p>
+
+			{{ comp WidthLimit }}
+				{{ comp.OrgParticipation({ participation, series: series.participation }) }}
+
+			{{ /comp }}
+
+		{{ /comp }}
+	</section>
+
+	<hr>
+
+	<section class="padded holder">
+		<h2>Location</h2>
+
+	</section>
 </main>
