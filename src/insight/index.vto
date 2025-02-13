@@ -1,0 +1,14 @@
+---
+title: Data insights
+description: |
+    The data insights bring together analysis around a specific topic.
+tags:
+    - index
+---
+<section class="padded holder">
+{{ comp AutoGrid }}
+{{ for p of search.pages('insight !index', 'title') }}
+    {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+{{ /for }}
+{{ /comp }}
+</section>

@@ -1,2 +1,8 @@
 tags:
   - insight
+
+breadcrumbs:
+  - title: Home
+    url: /
+  - title: Data insights
+    url: /insight/

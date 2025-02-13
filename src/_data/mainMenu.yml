@@ -5,7 +5,7 @@
 - title: Case studies
   url: /case-study/
 - title: Data insights
-  url: /tag/insight/
+  url: /insight/
   subMenu:
     - title: Funding
       url: /insight/funding/
