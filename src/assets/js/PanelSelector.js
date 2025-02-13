@@ -17,11 +17,11 @@ OI.ready(function(){
 	// Add default CSS
 	var styles = document.createElement('style');
 	styles.innerHTML = `
-		panelSelector { margin-bottom: 1em; }
+		panelSelector { display: block; }
+		panelSelector + *, * + panelSelector { margin-top: 1em; }
 		panelSelector [role="tablist"] {
 			display: inline-block;
 			margin: 0;
-			margin-top: 0.5em;
 			padding: 0;
 			list-style: none;
 		}
@@ -48,6 +48,10 @@ OI.ready(function(){
 			color: var(--col-white);
 		}
 		panelSelector [role="tabpanel"] {
+			display: block;
+		}
+		panelSelector [role="tabpanel"][hidden=true] {
+			display: none;
 		}
 		panelSelector [role=tab] .icon {
 			float: right;
