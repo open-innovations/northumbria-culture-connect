@@ -73,15 +73,30 @@ export function initialiseMap({
     const others = L.featureGroup()
 		.bindPopup((l) => popupTemplate(l.options.props));
 
+	// Find out how many times coordinates are repeated
+	let coords = {};
     for (const o of orgs) {
+		let c = o.latitude.toFixed(4)+o.longitude.toFixed(4);
+		o.coord = c;
+		if(!(c in coords)) coords[c] = 0;
+		coords[c]++;
+	}
+
+    for (const o of orgs) {
+		
+		// Remove one from the counter
+		coords[o.coord]--;
+		// Find the offset position for the coords[o.coord] position
+		let c = squareSpiral(o.latitude,o.longitude,coords[o.coord],0.00008);
+		
         if (o.funded === 'True') {
 			o.group = "funded";
-			const marker = L.marker([o.latitude, o.longitude], {icon: icons['funded'].icon, props: { ...o }});
+			const marker = L.marker([c.lat, c.lon], {icon: icons['funded'].icon, props: { ...o }});
 			funded.addLayer(marker);
             continue;
         } else if (o.company_match === 'True') {
 			o.group = "matched";
-			const marker = L.marker([o.latitude, o.longitude], {icon: icons['matched'].icon, props: { ...o }});
+			const marker = L.marker([c.lat, c.lon], {icon: icons['matched'].icon, props: { ...o }});
 	        matchedCompany.addLayer(marker);
             continue;
         } else {
@@ -107,15 +122,39 @@ export function initialiseMap({
 
 
 	map.on("popupopen", function (e) {
-		console.log(e.popup,e.popup._container);
 		let el = e.popup._container;
 		let colour = "";
 		if(el) colour = window.getComputedStyle(el)['backgroundColor'];
-		console.log(colour);
 		el.querySelector(".leaflet-popup-tip").style['backgroundColor'] = colour;
-		/*
-		var style = "background-color:"+colour+"!important;color:"+OI.contrastColour(colour)+"!important;";
-		el.querySelector(".leaflet-popup-content-wrapper").setAttribute("style",style);
-		el.querySelector(".leaflet-popup-close-button").setAttribute("style",style);*/
 	});
+
+	// Spiral outwards in a square grid from lat,lon
+	function squareSpiral(lat,lon,n,separation){
+		var offsets = [
+			[0,0],
+			[1,0],
+			[1,1],
+			[0,1],
+			[-1,1],
+			[-1,0],
+			[-1,-1],
+			[0,-1],
+			[1,-1],
+			[2,-1],
+			[2,0],
+			[2,1],
+			[2,2],
+			[1,2],
+			[0,2],
+			[-1,2],
+			[-2,2],
+			[-2,1],
+			[-2,0],
+			[-2,-1]
+		];
+		var x,y,i = Math.min(n,offsets.length);
+		x = lon + offsets[i][0]*separation/Math.cos(lat*Math.PI/180);
+		y = lat - offsets[i][1]*separation;
+		return {'lat':y,'lon':x};
+	}
 }
