@@ -46,7 +46,6 @@ url: /
         <h2>Data Insights</h2>
     
         {{ search.data('/insight/').description }}
-        {{ include "./_partials/insights.md" |> md }}
     
         {{ comp AutoGrid }}
         {{ for p of search.pages('insight !index', 'title') }}
