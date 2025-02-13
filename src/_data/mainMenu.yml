@@ -21,7 +21,7 @@
 - title: Data sources
   url: /data/
 - title: Tools
-  url: /tag/tools/
+  url: /tools/
   subMenu:
     - title: Resources
       url: /tools/resources/

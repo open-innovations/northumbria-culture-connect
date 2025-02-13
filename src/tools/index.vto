@@ -1,0 +1,14 @@
+---
+title: Tools
+description: |
+    A collection of useful tools and resources for working with data and this site.
+tags:
+    - index
+---
+<section class="padded holder">
+{{ comp AutoGrid }}
+{{ for p of search.pages('tools !index', 'title') }}
+    {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+{{ /for }}
+{{ /comp }}
+</section>
