@@ -1,17 +1,12 @@
 ---
 css: |
-    [data-comp=nav-breadcrumb] {
+    [data-comp=nav-Breadcrumb] {
         margin: 0;
         ul {
-            --gap: 0.5rem;
             padding: 0;
             list-style: none;
             display: flex;
-            gap: var(--gap);
-        }
-        li:not(:last-child):after {
-            content: "\\";
-            padding-inline-start: var(--gap);
+            flex-wrap: wrap;
         }
         a {
             font-weight: bold;
@@ -24,15 +19,13 @@ css: |
     }
 ---
 {{ if breadcrumbs.length > 0 -}}
-<nav data-comp="nav-breadcrumb">
+<nav data-comp="nav-Breadcrumb">
 	<div class="holder padded">
 		<ul>
 		{{ for c of breadcrumbs }}
 		{{ if c.url !== url -}}
 		<li>
-		<a href="{{ c.url }}">{{ c.title }}</a>
-		{{# {{- else -}}
-		{{ c.title }} #}}
+		<span><a href="{{ c.url }}">{{ c.title }}</a>&nbsp;\&nbsp;</span>
         </li>
 		{{- /if }}
 		{{ /for }}
