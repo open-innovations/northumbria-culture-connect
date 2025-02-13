@@ -1,31 +1,16 @@
-# - title: Home
-#   url: /
-- title: About
-  url: /about/
-- title: Case studies
-  url: /case-study/
-- title: Data insights
-  url: /insight/
+- url: /about/
+- url: /case-study/
+- url: /insight/
   subMenu:
-    - title: Funding
-      url: /insight/funding/
-    - title: Engagement
-      url: /insight/engagement/
-- title: Regional data
-  url: /regional/
+    - url: /insight/funding/
+    - url: /insight/engagement/
+- url: /regional/
   subMenu:
-    - title: Culture sector
-      url: /regional/culture-sector/
-    - title: Official statistics
-      url: /regional/official-statistics/
-- title: Data sources
-  url: /data/
-- title: Tools
-  url: /tools/
+    - url: /regional/culture-sector/
+    - url: /regional/official-statistics/
+- url: /data/
+- url: /tools/
   subMenu:
-    - title: Resources
-      url: /tools/resources/
-    - title: Tag index
-      url: /tools/tag-index/
-- title: Pilot organisations
-  url: /organisations/
+    - url: /tools/resources/
+    - url: /tools/tag-index/
+- url: /organisations/

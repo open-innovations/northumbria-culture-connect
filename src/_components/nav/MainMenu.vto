@@ -181,14 +181,14 @@ css: |
         {{#- Will include the url for the source page, or the direct URL, defaulting to about:blank -#}}
         <li{{ if i.subMenu }} class="has-submenu"{{ /if }}>
             <a href="{{ i.url || "about:blank" }}"{{ if url==i.url || (i.url != "/" && url.match("^"+i.url)) }} class="current"{{ /if }}{{ if i.subMenu }} aria-expanded="false"{{ /if }}>
-            {{ i.title }}
+            {{ i.title || search.page(`url="${i.url}"`).title }}
             </a>
 			{{ if i.subMenu }}
             <ul>
             {{ for j of i.subMenu }}
             <li>
                 <a href="{{ j.url || "about:blank" }}"{{ if url==j.url || (j.url != "/" && url.match("^"+j.url)) }} class="current"{{ /if }}>
-                {{ j.title }}
+                {{ j.title || search.page(`url="${j.url}"`).title}}
                 </a>
             </li>
             {{ /for }}
