@@ -1,0 +1,34 @@
+---
+css: |
+    [data-comp=Metadata] {
+        ul {
+            list-style: initial;
+            padding-inline-start: 2em;
+        }
+    }
+---
+{{ if downloaded || processed || sources || pipelines }}
+<aside data-comp="Metadata" class="padded holder bg-grey">
+    <h2>Data source overview</h2>
+    <p>
+        {{ if downloaded }}Retrieved on {{ downloaded |> date('NCC_DATETIME') }}.{{ /if }}
+        {{ if processed }}Processed on {{ processed |> date('NCC_DATETIME') }}.{{ /if }}
+    </p>
+    {{ if sources }}
+    <h3>Sources</h3>
+    <ul>
+    {{ for source of sources }}
+        <li><a href={{ source.url }}>{{ source.title }}</a></li>
+    {{ /for }}
+    </ul>
+    {{ /if }}
+    {{ if pipelines }}
+    <h3>Pipelines</h3>
+    <ul>
+        {{ for pipeline of pipelines }}
+            <li><a href="{{ pipeline }}">{{ search.page(`url="${pipeline}"`).title }}</a></li>
+        {{ /for }}
+    </ul>
+    {{ /if }}
+</aside>
+{{ /if }}

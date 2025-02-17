@@ -4,8 +4,15 @@ description: |
     Visualisation of data from the Arts Council England
     Investment Programme covering National Portfolio Organisation (NPO)
     and Investment Principles Support Organisation (IPSO) for 2023-26.
+metadata:
+    sources:
+        - url: https://www.artscouncil.org.uk/how-we-invest-public-money/2023-26-Investment-Programme/2023-26-investment-programme-data
+          title: "2023-26 Investment Programme: Data"
+    pipelines:
+        - /pipelines/arts-council/
 ---
 
+<div class="holder padded">
 {{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
 {{ set byDiscipline = Object.values(
     funding_by_organisation
@@ -75,3 +82,5 @@ description: |
     </li>
 {{ /for }}
 </ul>
+
+</div>

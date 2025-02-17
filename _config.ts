@@ -36,7 +36,11 @@ site.data('LOCAL', site.options.location.hostname === 'localhost');
 
 site.process(['.html'], (pages) => pages.forEach(autoDependency));
 site.use(base_path());
-site.use(date());
+site.use(date({
+    formats: {
+        "NCC_DATETIME": "PPP' at 'HH:MM b",
+    },
+}));
 site.use(postcss({
     plugins: [nesting()],
 }));
