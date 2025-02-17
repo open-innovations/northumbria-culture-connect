@@ -93,8 +93,8 @@ site.process(['.html'], (pages) => {
         for (const svg of svgs) {
             // Remove all inline styles!
             svg.removeAttribute('style');
-            svg.removeAttribute('width');
-            svg.removeAttribute('height');
+//             svg.removeAttribute('width');
+//             svg.removeAttribute('height');
         }
         page.content;
     }
