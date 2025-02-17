@@ -14,14 +14,9 @@ css: |
         {{ if downloaded }}Retrieved on {{ downloaded |> date('NCC_DATETIME') }}.{{ /if }}
         {{ if processed }}Processed on {{ processed |> date('NCC_DATETIME') }}.{{ /if }}
     </p>
-    {{ if sources }}
-    <h3>Sources</h3>
-    <ul>
-    {{ for source of sources }}
-        <li><a href={{ source.url }}>{{ source.title }}</a></li>
-    {{ /for }}
-    </ul>
-    {{ /if }}
+
+    {{ if sources }}{{ comp.DataSources({ sources }) }}{{ /if }}
+
     {{ if pipelines }}
     <h3>Pipelines</h3>
     <ul>

@@ -4,14 +4,15 @@ description: |
     Visualisation of data related to Arts Council England administered
     National Lottery Project Grants
 
-data:
-    - title: National Lottery Project Grants
-      url: https://www.artscouncil.org.uk/ProjectGrants/project-grants-data
-      license:
-        title: Open Government License
-        url: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+metadata:
+    sources:
+        - title: National Lottery Project Grants
+          url: https://www.artscouncil.org.uk/ProjectGrants/project-grants-data
+          license:
+            title: Open Government License
+            url: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 ---
-
+<div class="holder padded">
 <p>
 This page shows regional funding awarded under the 
 Arts Council England adminstered 
@@ -50,4 +51,4 @@ Data is limited to Newcastle City Council.
         }
 }) }}
 
-{{ comp.DataSources({ sources: data }) }}
+</div>
