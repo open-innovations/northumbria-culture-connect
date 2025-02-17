@@ -104,3 +104,17 @@ header + .greedy > .comp-hero:not(.comp-hero-front) .holder h1 { margin-top: var
     padding-inline-start: 2rem;
   }
 }
+
+a[href="about:blank"] {
+  color: red;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    background: red;
+    vertical-align: middle;
+    margin-inline-end: 0.1rem;
+  }
+}
