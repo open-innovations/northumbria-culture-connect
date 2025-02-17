@@ -1,2 +1,2 @@
 <h{{ config?.headingLevel || 1 }}>{{ title }}</h{{ config?.headingLevel || 1 }}>
-{{ if description }}<p class="greedy">{{ description }}</p>{{ endif }}
+{{ if description }}<p class="greedy">{{ description |> md }}</p>{{ endif }}

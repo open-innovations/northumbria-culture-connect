@@ -1,8 +1,8 @@
 ---
 title: Arts Council Investment Programme
 description: |
-    Visualisation of data from the Arts Council England
-    Investment Programme covering National Portfolio Organisation (NPO)
+    Summary of published open data about the Arts Council Investment Programme for
+    Newcastle-based organisations. This covers National Portfolio Organisation (NPO)
     and Investment Principles Support Organisation (IPSO) for 2023-26.
 metadata:
     sources:
@@ -12,7 +12,6 @@ metadata:
         - /pipelines/arts-council/
 ---
 
-<div class="holder padded">
 {{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
 {{ set byDiscipline = Object.values(
     funding_by_organisation
@@ -25,6 +24,12 @@ metadata:
             return { ...result, [discipline]: thisGroup };
         }, {}))
         .toSorted((a, b) => b.funding - a.funding) }}
+
+<div class="holder padded">
+
+<p>
+    Headline figures for Arts Council Investment Programme for organisations based in Newcastle City Council.
+</p>
 
 <ul class="grid centred">
     <li class="block">
@@ -41,8 +46,13 @@ metadata:
     </li>
 </ul>
 
-<h2>Breakdown by discipline</h2>
+<section class="undo-reset">
+{{ include './_partials/overview.md' |> md }}
+</section>
 
+<h2>Allocation by discipline</h2>
+
+{{#
 <ul class="grid centred">
     {{ for d of byDiscipline }}
     <li class="block">
@@ -52,35 +62,61 @@ metadata:
     </li>
     {{ /for }}
 </ul>
+#}}
 
-{{ comp.oi.chart.bar({
+{{>
+    const waffleData = byDiscipline.reduce((a, c) => ({ ...a, [c.discipline]: 100 * c.funding / headlines.funding }), {});
+    const colours = {
+            'Museums': '#8F3E8D',
+            'Theatre': '#33A38C',
+            'Dance': '#00478A',
+            'Literature': '#005837',
+            'Visual arts': '#F25C29',
+    };
+    const waffleSeries = byDiscipline.map(d => ({
+        value: d.discipline,
+        colour: colours[d.discipline],
+        tooltip: `${ d.discipline } &pound;${ d.funding.toLocaleString() } (Shared by ${ d.count } organisation${ d.count > 1 ? "s" : "" })`,
+    }));
+}}
+
+{{ comp.oi.chart.waffle({
     config: {
-        data: byDiscipline,
-        height: 800, 
-        width: 1200,
-        category: 'discipline',
-        series: [
-            { title: 'Funding', value: 'funding' }
-        ]
+        data: [waffleData],
+        series: waffleSeries,
+        size: [25, 4],
+        legend: {
+            show: true,
+            position: 'top',
+        }
     }
-}) }}
+})}}
 
-<h2>Portfolio</h2>
+<h2>Funded organisations</h2>
 
-<ul class="grid">
+<p>
+    Newcastle-based organisations funded through the Arts Council Investment Programme are listed below.
+</p>
+
+<table class="holder">
+<thead>
+    <tr>
+        <th>Organisation</th>
+        <th>Discipline</th>
+        <th>NPO / IPSO</th>
+    </tr>
+</thead>
 {{ for o of (funding_by_organisation
     .filter(x => x.LAD24CD == ons_codes.newcastle)
-    .toSorted((a, b) => (a['Main Discipline'] < b['Main Discipline']) ? -1 : 1)
+    .toSorted((a, b) => (a.Recipient.toLowerCase() < b.Recipient.toLowerCase()) ? -1 : 1)
 ) }}
-    <li class="block">
-        <h3 class="greedy">{{ o.Recipient }}</h3>
-        <ul class="tag-cloud">
-            <li class="tag">{{ o['Main Discipline'] }}</li>
-            <li class="tag">{{ o.Type }}</li>
-        </ul>
+    <tr>
+        <td>{{ o.Recipient }}</td>
+        <td>{{ o['Main Discipline'] }}</td>
+        <td>{{ o.Type }}</td>
         {{# <p>{{ o.funding |> displayCurrency }}</p> #}}
-    </li>
+    </tr>
 {{ /for }}
-</ul>
+</table>
 
 </div>

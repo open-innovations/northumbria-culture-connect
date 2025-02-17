@@ -7,6 +7,8 @@ css: |
     }
 ---
 
-<div data-comp="width-limit">
+<div data-comp="width-limit"
+    {{- if maxWidth }} style="max-width: {{ maxWidth }}"{{ /if -}}
+>
 {{ content }}
 </div>
