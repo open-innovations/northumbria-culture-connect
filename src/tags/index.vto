@@ -1,11 +1,12 @@
 ---
 title: Tag index
-layout: template/base.vto
+layout: template/page.vto
 url: /tools/tag-index/
 oldUrl:
 	- /tags/
 tags:
-	- tools
+    - tools
+    - index
 description: |
     The pages in the Observatory are tagged. Explore pages sharing common tags.
 breadcrumbs:
@@ -13,18 +14,13 @@ breadcrumbs:
    url: /
  - title: Tools
    url: /tools/
+colour_style: bg-grey
+hideTags: true
 ---
-<main>
-	{{ comp Hero }}
-		<h1>{{ title }}</h1>
-		{{ description |> md }}
-	{{ /comp }}
-
-	<section class="holder padded">
-		<p>
-			The following list contains all the defined tags. Click on a tag to explore.
-		</p>
-		{{# Display tag cloud for all generated tag pages #}}
-		{{ comp.PageTags({ tags: search.pages('tag!=undefined', 'tag').map(x => x.tag) }) }}
-	</section>
-</main>
+<section class="holder padded">
+	<p>
+		The following list contains all the defined tags. Click on a tag to explore.
+	</p>
+	{{# Display tag cloud for all generated tag pages #}}
+	{{ comp.PageTags({ tags: search.pages('tag!=undefined', 'tag').map(x => x.tag) }) }}
+</section>
