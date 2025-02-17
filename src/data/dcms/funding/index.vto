@@ -23,18 +23,34 @@ data:
         category: 'organisation',
         stacked: 'true', 
         width: 1000,
-        height:700,
+        height: 700,
         legend: {
             show: true, 
             position: 'top'
         },
         series: [
-            { title: "Gift-in-Aid Received 2022/23", value: "gift_in_aid" },
-            { title: "Total income generated 2022/23", value: "total_income"}
+            { title: "Gift-in-Aid Received 2022/23", value: "gift_in_aid", tooltip: "<strong>Gift-in-Aid Received 2022/23<br /></strong>{{ organisation }}: £{{ gift_in_aid | toLocaleString() }}" },
+            { title: "Total income generated 2022/23", value: "total_income", tooltip: "<strong>Total income generated 2022/23<br /></strong>{{ organisation }}: £{{ total_income | toLocaleString() }}"}
         ],
         axis: {
             x: {
-                max: 200000000
+                max: 200000000,
+                ticks: [{
+                    value: 50000000,
+                    label: "£50M"
+                    },
+                    {
+                    value: 100000000,
+                    label: "£100M"
+                    },
+                    {
+                    value: 150000000,
+                    label: "£150M"
+                    },
+                    {
+                    value: 200000000,
+                    label: "£200M"
+                    }]
             }
         }
     }
@@ -56,12 +72,32 @@ data:
             position: 'top'
         },
         series: [
-            { title: "Gift-in-Aid Received 2022/23", value: "gift_in_aid" },
-            { title: "Total income generated 2022/23", value: "total_income"}
+            { title: "Gift-in-Aid Received 2022/23", value: "gift_in_aid", tooltip: "<strong>Gift-in-Aid Received 2022/23<br /></strong>{{ organisation }}: £{{ gift_in_aid | toLocaleString() }}" },
+            { title: "Total income generated 2022/23", value: "total_income", tooltip: "<strong>Total income generated 2022/23<br /></strong>{{ organisation }}: £{{ total_income | toLocaleString() }}" }
         ],
         axis: {
             x: {
-                max: max_funding_ace
+                max: 2500000000,
+                ticks: [{
+                    value: 500000000,
+                    label: "£0.5B"
+                    },
+                    {
+                    value: 1000000000,
+                    label: "£1B"
+                    },
+                    {
+                    value: 1500000000,
+                    label: "£1.5B"
+                    },
+                    {
+                    value: 2000000000,
+                    label: "£2B"
+                    },
+                    {
+                    value: 2500000000,
+                    label: "£2.5B"
+                    }]
             }
         }
     }
