@@ -3,7 +3,7 @@ layout: ./base.vto
 ---
 
 <main>
-{{ comp Hero {compact: true, style: 'undo-reset' } }}
+{{ comp Hero {compact: false, style: `undo-reset ${ colour_style || "" }` } }}
     {{ comp.PageTop({ ...page.data }) }}
 {{ /comp }}
 
