@@ -5,8 +5,8 @@ stages:
     deps:
     - path: get-data.py
       hash: md5
-      md5: 9a41a8f1bb77a780106b96e05b8d6090
-      size: 3110
+      md5: 4655f8507a3bc1071bd4ec67b092bda0
+      size: 3464
     outs:
     - path: ../raw/arts-council-investment-programme.csv
       hash: md5
@@ -44,3 +44,45 @@ stages:
       hash: md5
       md5: 1f58d39677e60037f346095708e8a058
       size: 615264256
+  arts-council:
+    cmd: "papermill arts-council.ipynb - | jupyter nbconvert --stdin --to markdown
+      --output index --output-dir ../src//pipelines/arts-council\n"
+    deps:
+    - path: ../raw/arts-council-investment-programme.csv
+      hash: md5
+      md5: 94029bd4c4fac2b2a140244d32312e22
+      size: 134381
+    - path: ../raw/arts-council-project-grants.csv
+      hash: md5
+      md5: 7d8cf76255dfd096ae1d1e4b9938c458
+      size: 3127400
+    - path: arts-council.ipynb
+      hash: md5
+      md5: cf4cc872cd6be5af619a0f625bf31fe0
+      size: 7178
+    outs:
+    - path: ../src//data/arts-council/investment-programme/_data/funding_by_organisation.csv
+      hash: md5
+      md5: 6118a80cefbd6b21b5c101c37a4f5408
+      size: 2581
+    - path: ../src//data/arts-council/investment-programme/_data/investment_by_lad.csv
+      hash: md5
+      md5: a6368ebcdaf2fb1428506f1275c797fb
+      size: 236
+    - path: 
+        ../src//data/arts-council/project-grants/_data/grants_average_award_by_lad_by_year.csv
+      hash: md5
+      md5: bac54e3cb9d61e269d3ed413817d7aed
+      size: 414
+    - path: ../src//data/arts-council/project-grants/_data/grants_by_recipient.csv
+      hash: md5
+      md5: 7d8701a276a7680d4ba2b50f42d1a788
+      size: 5983
+    - path: ../src//data/arts-council/project-grants/_data/grants_count_by_lad_by_year.csv
+      hash: md5
+      md5: 3e2f31cee978fcef6652e5d105974f93
+      size: 254
+    - path: ../src//data/arts-council/project-grants/_data/grants_value_by_lad_by_year.csv
+      hash: md5
+      md5: 75ea9774f16214d304d3a6b4325c516e
+      size: 565

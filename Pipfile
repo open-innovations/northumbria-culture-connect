@@ -19,6 +19,7 @@ nltk = "*"
 duckdb = "*"
 dvc = "*"
 papermill = "*"
+nbconvert = "*"
 
 [dev-packages]
 

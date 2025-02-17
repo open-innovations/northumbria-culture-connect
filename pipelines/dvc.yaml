@@ -1,5 +1,6 @@
 vars:
   - ROOT: ..
+  - SRC: ../src/
 stages:
   get-data:
     cmd: python get-data.py
@@ -25,5 +26,32 @@ stages:
       - ${ROOT}/raw/charity-area-data.zip
     outs:
       - ${ROOT}/raw/company-data.db:
+          persist: true
+          cache: false
+
+  arts-council:
+    cmd: |
+      papermill arts-council.ipynb - | jupyter nbconvert --stdin --to markdown --output index --output-dir ${SRC}/pipelines/arts-council
+    deps:
+      - arts-council.ipynb
+      - ${ROOT}/raw/arts-council-investment-programme.csv
+      - ${ROOT}/raw/arts-council-project-grants.csv
+    outs:
+      - ${SRC}/data/arts-council/investment-programme/_data/funding_by_organisation.csv:
+          persist: true
+          cache: false
+      - ${SRC}/data/arts-council/investment-programme/_data/investment_by_lad.csv:
+          persist: true
+          cache: false
+      - ${SRC}/data/arts-council/project-grants/_data/grants_by_recipient.csv:
+          persist: true
+          cache: false
+      - ${SRC}/data/arts-council/project-grants/_data/grants_value_by_lad_by_year.csv:
+          persist: true
+          cache: false
+      - ${SRC}/data/arts-council/project-grants/_data/grants_count_by_lad_by_year.csv:
+          persist: true
+          cache: false
+      - ${SRC}/data/arts-council/project-grants/_data/grants_average_award_by_lad_by_year.csv:
           persist: true
           cache: false

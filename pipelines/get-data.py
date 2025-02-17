@@ -2,9 +2,11 @@ import logging
 import re
 from pathlib import Path
 from urllib.parse import urlparse, urlunparse
+from datetime import datetime
 
 import petl as etl
 import pipeline_utils.organisations.ace as ace
+from pipeline_utils.filesystem.paths import SITE
 import requests
 
 logging.basicConfig(level=logging.INFO)
@@ -55,6 +57,9 @@ def arts_council_project_grants():
     etl.cat(*(load_grants(s) for s in sources)
             ).tocsv(RAW_DATA / 'arts-council-project-grants.csv')
 
+    with open(SITE / 'data/arts-council/project-grants/_data/downloaded.yml', 'w') as f:
+        f.write(datetime.now().isoformat())
+
 
 def arts_council_investment_programme():
     logging.info('Downloading Arts Council England Investment Programme data')
@@ -71,6 +76,10 @@ def arts_council_investment_programme():
 
     etl.cat(*(load_data(u) for u in sources[0:1])).tocsv(
         RAW_DATA / 'arts-council-investment-programme.csv')
+
+    with open(SITE / 'data/arts-council/investment-programme/_data/downloaded.yml', 'w') as f:
+        f.write(datetime.now().isoformat())
+
 
 
 def companies_house_company_lists():
