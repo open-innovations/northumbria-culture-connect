@@ -1,5 +1,5 @@
 {{ comp.PageSummary({ title, description, config }) }}
 
-{{ extended_description |> md }}
+{{ if extended_description }}{{ extended_description |> md }}{{ /if }}
 
-{{ comp.PageTags({ tags, config }) }}
+{{ if !hideTags }}{{ comp.PageTags({ tags, config }) }}{{ /if }}

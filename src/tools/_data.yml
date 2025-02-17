@@ -5,3 +5,6 @@ breadcrumbs:
    url: /
  - title: Tools
    url: /tools/
+
+colour_scale: bg-teal-100
+hideTags: true

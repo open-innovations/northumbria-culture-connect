@@ -6,3 +6,6 @@ breadcrumbs:
     url: /
   - title: Data insights
     url: /insight/
+
+colour_style: bg-grey
+hideTags: true

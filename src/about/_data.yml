@@ -7,3 +7,7 @@ extended_description: |
     * make informed decisions about funding
     * highlight barriers to success in the cultural sector
     * inform policy making so it accurately represents areas of growth and need
+
+hideAbout: true
+
+colour_style: bg-teal-100

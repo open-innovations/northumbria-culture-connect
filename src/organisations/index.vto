@@ -1,16 +1,16 @@
 ---
 title: Pilot organisations
-layout: template/base.vto
+description: |
+    Profiles of organisations which have submitted data to the Data Observatory.
+layout: template/page.vto
 tags:
     - index
+colour_style: bg-grey
+hideTags: true
 ---
 
 <main>
 <section class="holder padded">
-
-<p>
-This page shows profiles for the {{ metas.site }} pilot organisations.
-</p>
 
 {{ comp UniformGrid }}
 {{ for l of search.pages('organisation !index', 'title') }}
