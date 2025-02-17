@@ -11,6 +11,8 @@ metadata:
           license:
             title: Open Government License
             url: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+    pipelines:
+        - /pipelines/arts-council/
 ---
 <div class="holder padded">
 <p>
@@ -21,15 +23,37 @@ Data is limited to Newcastle City Council.
 </p>
 
 <p>
-    Please note, in the charts below, funding for 2024 covers only a partial year.
+    Please note, in the charts below, funding for the most recent year will be a year-to-date.
 </p>
 
+<section>
+    {{ include "./_partials/overview.md" |> md }}
+</section>
+
 <h2>Funding per year</h2>
+
+{{>
+    const getMax = (x) => +Math.max(
+        ...x
+            .map(({ Year, E08000021, ...values }) => +Object.values([E08000021]))
+            .flat()
+            .map(x => x + 1)
+        ).toLocaleString(undefined, {
+            maximumSignificantDigits: 1,
+            roundingMode: "ceil",
+            useGrouping: false,
+        });
+}}
 
 {{ comp.oi.chart.bar({
         config: {
             ...bar_chart_base_config,
             data: grants_value_by_lad_by_year,
+            axis: {
+                x: {
+                    max: getMax(grants_value_by_lad_by_year),
+                }
+            }
         }
 }) }}
 
@@ -39,6 +63,11 @@ Data is limited to Newcastle City Council.
         config: {
             ...bar_chart_base_config,
             data: grants_count_by_lad_by_year,
+            axis: {
+                x: {
+                    max: getMax(grants_count_by_lad_by_year),
+                }
+            }
         }
 }) }}
 
@@ -48,6 +77,11 @@ Data is limited to Newcastle City Council.
         config: {
             ...bar_chart_base_config,
             data: grants_average_award_by_lad_by_year,
+            axis: {
+                x: {
+                    max: getMax(grants_average_award_by_lad_by_year),
+                }
+            }
         }
 }) }}
 
