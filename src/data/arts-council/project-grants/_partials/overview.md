@@ -7,3 +7,5 @@ The set of Excel spreadsheets is downloaded and combined into a single dataset f
 The processing selects only recipients based in Newcastle upon Tyne Local Authority.
 The number and value of awards is aggregated by Year and Local Authority,
 and an average award value is calculated for each aggregation.
+
+**NB** in the charts presented below, funding for the most recent year is for the the year-to-date.
