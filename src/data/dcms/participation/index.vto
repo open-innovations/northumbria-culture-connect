@@ -66,13 +66,25 @@ metadata:
         data: attendance_participation_survey_23_24_newcastle,
         category: "Description",
         width: 1000,
-        height:400,
+        height: 400,
         series: [
-            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24" }
+            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
         ],
         axis: {
             x: {
-                max: 100, 
+                max: 60,
+                ticks: [{
+                    value: 0,
+                    label: '0%'},
+                    {
+                    value: 20,
+                    label: '20%'},
+                    {
+                    value: 40,
+                    label: '40%'},
+                    {
+                    value: 60,
+                    label: '60%'}] 
             }
         }
     }
@@ -86,13 +98,31 @@ metadata:
         data: engagement_participation_survey_23_24_newcastle,
         category: "Description",
         width: 1000,
-        height:200,
+        height: 200,
         series: [
-            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24" }
+            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
         ],
         axis: {
             x: {
-                max: 100
+                max: 100,
+                ticks: [{
+                    value: 0,
+                    label: '0%'},
+                    {
+                    value: 20,
+                    label: '20%'},
+                    {
+                    value: 40,
+                    label: '40%'},
+                    {
+                    value: 60,
+                    label: '60%'},
+                    {
+                    value: 80,
+                    label: '80%'},
+                    {
+                    value: 100,
+                    label: '100%'}]
             }
         }
     }
@@ -109,11 +139,23 @@ metadata:
         height: 400,
         category: "Description",
         series: [
-            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24" }
+            { title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
         ],
         axis: {
             x: {
-                max: 100
+                max: 60,
+                ticks: [{
+                    value: 0,
+                    label: '0%'},
+                    {
+                    value: 20,
+                    label: '20%'},
+                    {
+                    value: 40,
+                    label: '40%'},
+                    {
+                    value: 60,
+                    label: '60%'}],
             }
         }
     }
