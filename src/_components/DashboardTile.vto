@@ -1,0 +1,6 @@
+---
+---
+
+<li class="block {{ if colour }}bg-{{ colour }}-100{{ else }}bg-grey{{ /if }}"{{ if rows || cols }} style="{{ if rows }}grid-row-end: span {{ rows }};{{ /if }}{{ if cols }}grid-column-end: span {{ cols }};{{ /if }}"{{ /if }}>
+	{{ content }}
+</li>

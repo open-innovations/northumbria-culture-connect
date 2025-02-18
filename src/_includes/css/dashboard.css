@@ -1,0 +1,35 @@
+.dashboard {
+	/*
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	grid-template-rows: masonry;
+	*/
+	display: flex;
+	list-style: none;
+	padding-inline: 0;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+.dashboard > * {
+	flex-basis: 20rem;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.dashboard .tile {
+	border-radius: 8px;
+	padding: 1rem;
+}
+.dashboard .block {
+	& .heading {
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+	}
+	& .bang {
+		margin-bottom: 0;
+		margin-top: 0;
+		font-weight: bold;
+	}
+	& .size { float: right; }
+}
