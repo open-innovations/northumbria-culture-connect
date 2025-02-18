@@ -50,19 +50,34 @@ site.use(metas());
 site.use(sitemap());
 site.use(redirects());
 
-// Inline images
-site.use(inline({
-  copyAttributes: ["title", /^data-/, "style"], // Copy the "title" and all data-* attributes
-}));
-
 site.use(transformImages());
-site.use(svgo());
+site.use(svgo({
+    options: {
+        plugins: [
+            {
+                name: "removeAttrs",
+                params: {
+                    attrs: [
+                        "svg:width:*",
+                        // "svg:height:*",
+                        // "svg:fill:*",
+                    ]
+                }
+            }
+        ]
+    }
+}));
 site.use(oiLumeViz(oiVizConfig));
 site.use(sheets({
     options: {
         cellDates: true,
     }
 }));
+
+// Inline images
+site.use(inline({
+    copyAttributes: ["title", /^data-/, "style"], // Copy the "title" and all data-* attributes
+  }));
 
 site.use(esbuild({
     extensions: [ '.ts' ],

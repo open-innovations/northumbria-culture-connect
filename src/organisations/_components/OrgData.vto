@@ -2,6 +2,7 @@
 css: |
     [data-comp="block-org-data"] {
         display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
         & .value {
             font-size: 1.5rem;
@@ -22,12 +23,16 @@ css: |
         <span>Postcode</span>
         <span class="value">{{ postcode }}</span>
     </li>
+    {{ if number_of_employees.full_time }}
     <li>
         <span>Full-time employees</span>
         <span class="value">{{ number_of_employees.full_time }}</span>
     </li>
+    {{ /if -}}
+    {{ if number_of_employees.part_time }}
     <li>
         <span>Part-time employees</span>
         <span class="value">{{ number_of_employees.part_time }}</span>
     </li>
+    {{ /if }}
 </ul>
