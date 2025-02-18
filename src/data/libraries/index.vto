@@ -104,6 +104,12 @@ metadata:
 	<p>
 		Newcastle Libraries locations.
 	</p>
+
+{{
+	set libraryMarkers = markers.library_buildings;
+	libraryMarkers.forEach(e => { e.tooltip = "<strong>"+e.Library+"</strong><br />"+e.Type+"<br />Computers: "+e['No of PCs']; });
+}}
+
 	{{ comp.oi.map.zoomable({ config: {
 		// Load some GeoJSON
 		geojson: {
@@ -129,7 +135,7 @@ metadata:
 		},
 
 		// Add some markers
-		markers: markers.library_buildings,
+		markers: libraryMarkers,
 
 } }) }}
 {{ /comp }}
