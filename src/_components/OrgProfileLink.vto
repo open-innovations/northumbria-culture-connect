@@ -1,0 +1,36 @@
+---
+css: |
+  [data-comp=OrgProfileLink] {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.1875rem;
+    font-weight: bold;
+    & .title {
+        font-size: 2em;
+    }
+    & .org-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    & a {
+        color: currentColor;
+    }
+  }
+---
+<{{ tag || 'div' }} data-comp="OrgProfileLink" class="{{ style || page.colour_style || 'bg-offwhite' }}">
+    <div>
+    <p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
+    </div>
+    <div class="org-info">
+        <div class="greedy">
+            {{ page.description |> md }}
+        </div>
+        <div>
+            <img src="{{ page.logo }}" inline/>
+        </div>
+    </div>
+</{{ tag || 'div' }}>

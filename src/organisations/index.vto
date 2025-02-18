@@ -13,8 +13,8 @@ hideTags: true
 <section class="holder padded" style="--grid-size: 30rem;">
 
 {{ comp UniformGrid }}
-{{ for l of search.pages('organisation !index', 'title') }}
-    {{ comp.PageLink({ page: l, config: { headingLevel: 2, withTags: true } })}}
+{{ for org of search.pages('organisation !index', 'title') }}
+    {{ comp.OrgProfileLink({ page: org, config: { headingLevel: 2 } })}}
 {{ /for }}
 {{ /comp }}
 </section>
