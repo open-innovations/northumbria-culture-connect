@@ -80,7 +80,7 @@ css: |
         top: 100%;
         background: var(--menu-bg);
         width: 240px;
-        z-index: 1000;
+        z-index: 10000;
     }
     [data-comp="nav-main-menu"] > ul > li > a:hover > ul, [data-comp="nav-main-menu"] .has-submenu button[aria-expanded=true] + ul {
         display: block;
@@ -133,7 +133,7 @@ css: |
           width: 90%;
           height: 100%;
           background: var(--menu-fg);
-          z-index: 1000;
+          z-index: 10000;
           padding-top: 4em;
           transition: left 0.3s ease-in;
           overflow-y: auto;
@@ -158,7 +158,7 @@ css: |
           border-bottom: 0;
           display: block;
         }
-        input.hamburger:checked, input.hamburger:checked + .hamburger { position: fixed; z-index: 1001; top: var(--spacing-normal); left: calc(90% - 3em - var(--spacing-normal)); }
+        input.hamburger:checked, input.hamburger:checked + .hamburger { position: fixed; z-index: 10001; top: var(--spacing-normal); left: calc(90% - 3em - var(--spacing-normal)); }
         input.hamburger:checked + label { position: absolute; }
         input.hamburger:checked + label::after { content: "×"; padding: 0; }
         input.hamburger:checked + label + .nav-main-outer {
