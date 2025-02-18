@@ -15,178 +15,188 @@ notes: |
     GrantNav query could be something like: arts or culture or theatre or muesum
 ---
 
-<div class="holder padded">
-<p>
-    <a href="https://threesi=xtygiving.org">360 Giving</a> both publishes a standard and maintains a data repository related to grant awards.
-    The full dataset contains very rich data covering many sectors. This page is an initial attempt to filter by cultural organisations.
-    Regrettably, there is no simple way of filtering by culture in the dataset, so this analysis takes the approach of incliding certain funders and programmes, and excluding a list of irrelevant funds from the funders.
-</p>
+{{ comp Section }}
+	<p>
+		<a href="https://threesi=xtygiving.org">360 Giving</a> both publishes a standard and maintains a data repository related to grant awards.
+		The full dataset contains very rich data covering many sectors. This page is an initial attempt to filter by cultural organisations.
+		Regrettably, there is no simple way of filtering by culture in the dataset, so this analysis takes the approach of incliding certain funders and programmes, and excluding a list of irrelevant funds from the funders.
+	</p>
 
-<p>
-    The raw data is extracted from from a 
-    <a href="https://grantnav.threesixtygiving.org/search?min_date=01%2F2020&recipientRegionName=North+East&recipientTSGType=Organisation&bestCountyName=Newcastle+upon+Tyne">filtered search of the 360 Giving GrantNav tool</a>.
-</p>
+	<p>
+		The raw data is extracted from from a 
+		<a href="https://grantnav.threesixtygiving.org/search?min_date=01%2F2020&recipientRegionName=North+East&recipientTSGType=Organisation&bestCountyName=Newcastle+upon+Tyne">filtered search of the 360 Giving GrantNav tool</a>.
+	</p>
 
-<p>
-    The extracted data is further filtered to include only the following culture-related grant awards.
-    All grants from the listed funders are included: this is not limited to specified funds.
-    The grant programme list is provided to allow for more fine-grained selection of funds where a funder awards both cultural and non-cultural grants.
-</p>
+	<p>
+		The extracted data is further filtered to include only the following culture-related grant awards.
+		All grants from the listed funders are included: this is not limited to specified funds.
+		The grant programme list is provided to allow for more fine-grained selection of funds where a funder awards both cultural and non-cultural grants.
+	</p>
 
-<ul class="grid">
-    <li class="block bg-offwhite"><div>
-        <p>INCLUDING award by the following funders</p>
-        <ul>
-            {{ for f of inclusions.funders }}<li>{{ f }}</li>{{ /for }}
-        </ul>
-    </div></li>
-    <li class="block bg-offwhite"><div>
-        <p>INCLUDING awards under the following Grant Programmes</p>
-        <ul>
-            {{ for p of inclusions.programmes }}<li>{{ p }}</li>{{ /for }}
-        </ul>
-    </div></li>
-    <li class="block bg-offwhite"><div>
-        <p>EXCLUDING awards under the following Grant Programmes</p>
-        <ul>
-            {{ for p of inclusions.excluded_programmes }}<li>{{ p }}</li>{{ /for }}
-        </ul>
-    </div></li>
-</ul>
+	<ul class="grid">
+		<li class="block bg-offwhite"><div>
+			<p>INCLUDING award by the following funders</p>
+			<ul>
+				{{ for f of inclusions.funders }}<li>{{ f }}</li>{{ /for }}
+			</ul>
+		</div></li>
+		<li class="block bg-offwhite"><div>
+			<p>INCLUDING awards under the following Grant Programmes</p>
+			<ul>
+				{{ for p of inclusions.programmes }}<li>{{ p }}</li>{{ /for }}
+			</ul>
+		</div></li>
+		<li class="block bg-offwhite"><div>
+			<p>EXCLUDING awards under the following Grant Programmes</p>
+			<ul>
+				{{ for p of inclusions.excluded_programmes }}<li>{{ p }}</li>{{ /for }}
+			</ul>
+		</div></li>
+	</ul>
+{{ /comp }}
 
-<h2>Headlines</h2>
+{{ comp Section }}
+	<h2>Headlines</h2>
 
-{{ set funders = by_programme
-    .map(({ "Funding Org:Name": name, Grants: grants, Funding: funding }) => ({ name, grants, funding }))
-    .reduce((a, { name, grants, funding }) => {
-        const current = a[name] || { grants: 0, funding: 0 };
-        current.grants += grants;
-        current.funding += funding;
-        return { ...a, [name]: current };
-    }, {})
-}}
+	{{ set funders = by_programme
+		.map(({ "Funding Org:Name": name, Grants: grants, Funding: funding }) => ({ name, grants, funding }))
+		.reduce((a, { name, grants, funding }) => {
+			const current = a[name] || { grants: 0, funding: 0 };
+			current.grants += grants;
+			current.funding += funding;
+			return { ...a, [name]: current };
+		}, {})
+	}}
 
 
-<ul class="grid centred">
-<li class="block bg-offwhite">
-    <p class="bang">{{ Object.keys(funders).length }}</p>
-    <p>Distinct funders</p>
-</li>
-<li class="block bg-offwhite">
-    <p class="bang">{{ Object.values(funders) |> map(x => x.grants) |> reduce((a, c) => a + c, 0) }}</p>
-    <p>Total grants awarded</p>
-</li>
-<li class="block bg-offwhite">
-    <p class="bang">{{ Object.values(funders) |> map(x => x.funding) |> reduce((a, c) => a + c, 0) |> displayCurrency }}</p>
-    <p>Total funding awarded</p>
-</li>
-</ul>
+	<ul class="grid centred">
+	<li class="block bg-offwhite">
+		<p class="bang">{{ Object.keys(funders).length }}</p>
+		<p>Distinct funders</p>
+	</li>
+	<li class="block bg-offwhite">
+		<p class="bang">{{ Object.values(funders) |> map(x => x.grants) |> reduce((a, c) => a + c, 0) }}</p>
+		<p>Total grants awarded</p>
+	</li>
+	<li class="block bg-offwhite">
+		<p class="bang">{{ Object.values(funders) |> map(x => x.funding) |> reduce((a, c) => a + c, 0) |> displayCurrency }}</p>
+		<p>Total funding awarded</p>
+	</li>
+	</ul>
+{{ /comp }}
 
-<h2>Funder details</h2>
 
-<ul class="grid centred">
-{{ for name, details of Object.entries(funders).toSorted((a, b) => b[1].funding - a[1].funding) }}
-    <li class="block bg-offwhite">
-        <p>{{ details[0] }}</p>
-        <p class="bang greedy">{{ details[1].funding |> displayCurrency }}</p>
-        <p>{{ details[1].grants }} grant awards</p>
-    </li>
-{{ /for }}
-</ul>
+{{ comp Section }}
 
-<h2>Total Funding</h2>
+	<h2>Funder details</h2>
 
-<div style="display:flex;flex-wrap:wrap;gap:1rem;">
+	<ul class="grid centred">
+	{{ for name, details of Object.entries(funders).toSorted((a, b) => b[1].funding - a[1].funding) }}
+		<li class="block bg-offwhite">
+			<p>{{ details[0] }}</p>
+			<p class="bang greedy">{{ details[1].funding |> displayCurrency }}</p>
+			<p>{{ details[1].grants }} grant awards</p>
+		</li>
+	{{ /for }}
+	</ul>
+{{ /comp }}
 
-<div style="flex-basis: 30rem; flex-shrink: 0; flex-grow: 1;">
-{{ comp.oi.chart.line({
-    config: {
-        data: summary_by_month,
-        columns: [{
-            name: 'nice_date',
-            template:  "{{Award Date | strptime('%Y-%m-%d') | strftime('%e %B %Y')}}"
-            },
-            {
-            name: 'decimal_date',
-            template:  "{{Award Date | strptime('%Y-%m-%d') | decimalYear() }}"
-            }],
-        series: [
-            { title: 'Funding by month', x: 'decimal_date', y: 'Amount Awarded', tooltip: "<strong>Funding by month</strong><br /> {{ nice_date }}: £{{ Amount Awarded | toLocaleString() }}" }
-        ],
-        axis: {
-            x: {
-                grid: { show: true },
-                tick: { spacing: 1 }
-            },
-            y: {
-                min: 0,
-                grid: { show: true },
-                ticks: [{
-                    label: '£5M',
-                    value: 5000000},
-                    {
-                    label: '£10M',
-                    value: 10000000},
-                    {
-                    label: '£15M',
-                    value: 15000000},
-                    {
-                    label: '£20M',
-                    value: 20000000},
-                    {
-                    label: '£25M',
-                    value: 25000000 }]
-            },
-        }
-    }
-}) }}
-</div>
+{{ comp Section }}
+	<h2>Total Funding</h2>
 
-<div style="flex-basis: 30rem;flex-shrink:1;flex-grow:1;">
-<p>
-    The chart shows funding per month since January 2020.
-</p>
-<p>
-    FORMATTING TO BE FIXED.
-</p>
-</div>
+	<div style="display:flex;flex-wrap:wrap;gap:1rem;">
 
-</div>
+		<div style="flex-basis: 30rem; flex-shrink: 0; flex-grow: 1;">
+		{{ comp.oi.chart.line({
+			config: {
+				data: summary_by_month,
+				columns: [{
+					name: 'nice_date',
+					template:  "{{Award Date | strptime('%Y-%m-%d') | strftime('%e %B %Y')}}"
+					},
+					{
+					name: 'decimal_date',
+					template:  "{{Award Date | strptime('%Y-%m-%d') | decimalYear() }}"
+					}],
+				series: [
+					{ title: 'Funding by month', x: 'decimal_date', y: 'Amount Awarded', tooltip: "<strong>Funding by month</strong><br /> {{ nice_date }}: £{{ Amount Awarded | toLocaleString() }}" }
+				],
+				axis: {
+					x: {
+						grid: { show: true },
+						tick: { spacing: 1 }
+					},
+					y: {
+						min: 0,
+						grid: { show: true },
+						ticks: [{
+							label: '£5M',
+							value: 5000000},
+							{
+							label: '£10M',
+							value: 10000000},
+							{
+							label: '£15M',
+							value: 15000000},
+							{
+							label: '£20M',
+							value: 20000000},
+							{
+							label: '£25M',
+							value: 25000000 }]
+					},
+				}
+			}
+		}) }}
+		</div>
 
-<h2>Large funds</h2>
+		<div style="flex-basis: 30rem;flex-shrink:1;flex-grow:1;">
+			<p>
+				The chart shows funding per month since January 2020.
+			</p>
+			<p>
+				FORMATTING TO BE FIXED.
+			</p>
+		</div>
 
-<p>
-    This table shows grant programmes or funders (where grant programme not specified)
-    with a fund size greater or equal to {{ funding_clip |> displayCurrency }},
-    sorted by most recent.
-</p>
+	</div>
+{{ /comp }}
 
-<table>
-<thead>
-<tr>
-    <th>Funding Organisation</th>
-    <th>Grant Programme</th>
-    <th>Grants</th>
-    <th>Total Funding</th>
-    <th>Average Award</th>
-    <th>Date Range</th>
-</tr>
-</thead>
+{{ comp Section }}
+	<h2>Large funds</h2>
 
-<tbody>
-{{ for r of by_programme
-    .filter(x => x.Funding >= funding_clip)
-    .toSorted((a, b) => b['Funding'] - a['Funding'])
-}}
-    <tr>
-        <td>{{ r['Funding Org:Name'] }}</td>
-        <td>{{ r['Grant Programme:Title'] }}</td>
-        <td class="centred">{{ r['Grants'] }}</td>
-        <td class="centred">{{ r['Funding'] |> displayCurrency }}</td>
-        <td class="centred">{{ r['Average Grant'] |> displayCurrency }}</td>
-        <td class="centred">{{ r['Earliest Award Date'] |> date('HUMAN_DATE') }} to {{ r['Latest Award Date'] |> date('HUMAN_DATE') }}</td>
-    </tr>
-{{ /for }}
-</tbody>
-</table>
-</div>
+	<p>
+		This table shows grant programmes or funders (where grant programme not specified)
+		with a fund size greater or equal to {{ funding_clip |> displayCurrency }},
+		sorted by most recent.
+	</p>
+
+	<table>
+	<thead>
+	<tr>
+		<th>Funding Organisation</th>
+		<th>Grant Programme</th>
+		<th>Grants</th>
+		<th>Total Funding</th>
+		<th>Average Award</th>
+		<th>Date Range</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	{{ for r of by_programme
+		.filter(x => x.Funding >= funding_clip)
+		.toSorted((a, b) => b['Funding'] - a['Funding'])
+	}}
+		<tr>
+			<td>{{ r['Funding Org:Name'] }}</td>
+			<td>{{ r['Grant Programme:Title'] }}</td>
+			<td class="centred">{{ r['Grants'] }}</td>
+			<td class="centred">{{ r['Funding'] |> displayCurrency }}</td>
+			<td class="centred">{{ r['Average Grant'] |> displayCurrency }}</td>
+			<td class="centred">{{ r['Earliest Award Date'] |> date('HUMAN_DATE') }} to {{ r['Latest Award Date'] |> date('HUMAN_DATE') }}</td>
+		</tr>
+	{{ /for }}
+	</tbody>
+	</table>
+{{ /comp }}

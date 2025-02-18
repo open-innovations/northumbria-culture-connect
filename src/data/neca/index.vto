@@ -5,202 +5,213 @@ tags:
     - funding
 ---
 
-<h3>Funding within Newcastle-upon-Tyne</h3>
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ (funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Number']).toLocaleString() }}</p>
-        <p>Number of grants awarded</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Total'] |> displayCurrency  }}</p>
-        <p>Total funding amount</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Average'] |> displayCurrency  }}</p>
-        <p>Average award amount</p>
-    </li>
-</ul>
+{{ comp Section }}
+	<h3>Funding within Newcastle-upon-Tyne</h3>
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ (funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Number']).toLocaleString() }}</p>
+			<p>Number of grants awarded</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Total'] |> displayCurrency  }}</p>
+			<p>Total funding amount</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Average'] |> displayCurrency  }}</p>
+			<p>Average award amount</p>
+		</li>
+	</ul>
+{{ /comp }}
 
-<h2>Number of grants awarded by area</h2>
 
-{{> const max_funding_num = Math.ceil(Math.max(...funding_by_area.map(x => x.Number)) ) }}
+{{ comp Section }}
+	<h2>Number of grants awarded by area</h2>
 
-{{ comp.oi.chart.bar({
-    config: {
-        data: funding_by_area,
-        category: "Area",
-        width: 1000,
-        height:400,
-        series: [
-            { title: "Number of grants", value: "Number", tooltip: "<strong>Number of grants<br /></strong>{{ Area }}: {{ Number | toLocaleString() }}" }
-        ],
-        axis: {
-            x: {
-                max: max_funding_num, 
-            }
-        }
-    }
-}) }}
+	{{> const max_funding_num = Math.ceil(Math.max(...funding_by_area.map(x => x.Number)) ) }}
 
-<h2>Total funding awarded by area</h2>
+	{{ comp.oi.chart.bar({
+		config: {
+			data: funding_by_area,
+			category: "Area",
+			width: 1000,
+			height:400,
+			series: [
+				{ title: "Number of grants", value: "Number", tooltip: "<strong>Number of grants<br /></strong>{{ Area }}: {{ Number | toLocaleString() }}" }
+			],
+			axis: {
+				x: {
+					max: max_funding_num, 
+				}
+			}
+		}
+	}) }}
+{{ /comp }}
 
-{{> const max_funding_total = Math.ceil(Math.max(...funding_by_area.map(x => x.Total)) / 1e5) * 1e5 }}
+{{ comp Section }}
+	<h2>Total funding awarded by area</h2>
 
-{{ comp.oi.chart.bar({
-    config: {
-        data: funding_by_area,
-        category: "Area",
-        width: 1000,
-        height: 400,
-        series: [
-            { title: "Total", value: "Total", tooltip: "<strong>Total funding awarded<br /></strong>{{ Area }}: £{{ Total | toLocaleString() }}" }
-        ],
-        axis: {
-            x: {
-                max: max_funding_total,
-                ticks: [{
-                    value: 1000000,
-                    label: '£1M'},
-                    {
-                    value: 2000000,
-                    label: '£2M'},
-                    {
-                    value: 3000000,
-                    label: '£3M'},
-                    {
-                    value: 4000000,
-                    label: '£4M'}
-                    ] 
-            }
-        }
-    }
-}) }}
+	{{> const max_funding_total = Math.ceil(Math.max(...funding_by_area.map(x => x.Total)) / 1e5) * 1e5 }}
 
-<h2>Average award amount by area</h2>
+	{{ comp.oi.chart.bar({
+		config: {
+			data: funding_by_area,
+			category: "Area",
+			width: 1000,
+			height: 400,
+			series: [
+				{ title: "Total", value: "Total", tooltip: "<strong>Total funding awarded<br /></strong>{{ Area }}: £{{ Total | toLocaleString() }}" }
+			],
+			axis: {
+				x: {
+					max: max_funding_total,
+					ticks: [{
+						value: 1000000,
+						label: '£1M'},
+						{
+						value: 2000000,
+						label: '£2M'},
+						{
+						value: 3000000,
+						label: '£3M'},
+						{
+						value: 4000000,
+						label: '£4M'}
+						] 
+				}
+			}
+		}
+	}) }}
+{{ /comp }}
 
-{{> const max_funding_ave = Math.ceil(Math.max(...funding_by_area.map(x => x.Average)) / 1e5) * 1e5 }}
+{{ comp Section }}
+	<h2>Average award amount by area</h2>
 
-{{ comp.oi.chart.bar({
-    config: {
-        data: funding_by_area,
-        category: "Area",
-        width: 1000,
-        height:400,
-        series: [
-            { title: "Average", value: "Average", tooltip: "<strong>Average amount awarded<br /></strong>{{ Area }}: £{{ Average | toLocaleString() }}" }
-        ],
-        axis: {
-            x: {
-                max: max_funding_ave,
-                ticks: [{
-                    value: 200000,
-                    label: '£200k'},
-                    {
-                    value: 400000,
-                    label: '£400k'},
-                    {
-                    value: 600000,
-                    label: '£600k'},
-                    {
-                    value: 800000,
-                    label: '£800k'}
-                    ] 
-            }
-        }
-    }
-}) }}
+	{{> const max_funding_ave = Math.ceil(Math.max(...funding_by_area.map(x => x.Average)) / 1e5) * 1e5 }}
 
-<h2>Funded Project Outputs</h2>
-<p>Outputs of projects that were funded by NECA.</p>
+	{{ comp.oi.chart.bar({
+		config: {
+			data: funding_by_area,
+			category: "Area",
+			width: 1000,
+			height:400,
+			series: [
+				{ title: "Average", value: "Average", tooltip: "<strong>Average amount awarded<br /></strong>{{ Area }}: £{{ Average | toLocaleString() }}" }
+			],
+			axis: {
+				x: {
+					max: max_funding_ave,
+					ticks: [{
+						value: 200000,
+						label: '£200k'},
+						{
+						value: 400000,
+						label: '£400k'},
+						{
+						value: 600000,
+						label: '£600k'},
+						{
+						value: 800000,
+						label: '£800k'}
+						] 
+				}
+			}
+		}
+	}) }}
+{{ /comp }}
 
-<h3>Events</h3>
+{{ comp Section }}
+	<h2>Funded Project Outputs</h2>
+	<p>Outputs of projects that were funded by NECA.</p>
 
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Numbers of attendees participating in a cultural tourism event')['actual']).toLocaleString() }}</p>
-        <p>Numbers of attendees at a cultural tourism event</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Number of cultural / tourism events taking place')['actual']).toLocaleString() }}</p>
-        <p>Number of cultural / tourism events taking place</p>
-    </li>
-</ul>
+	<h3>Events</h3>
 
-<h3>Support</h3>
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Numbers of attendees participating in a cultural tourism event')['actual']).toLocaleString() }}</p>
+			<p>Numbers of attendees at a cultural tourism event</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of cultural / tourism events taking place')['actual']).toLocaleString() }}</p>
+			<p>Number of cultural / tourism events taking place</p>
+		</li>
+	</ul>
 
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Total participants supported')['actual']).toLocaleString() }}</p>
-        <p>Total participants supported</p>
-    </li>
-</ul>
+	<h3>Support</h3>
 
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Disabled or deaf participants receiving support or an intervention')['actual']).toLocaleString() }}</p>
-        <p>Disabled participants receiving support</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Participants over 50 years of age receiving support or an intervention')['actual']).toLocaleString() }}</p>
-        <p>Participants over 50 years of age receiving support</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Participants (below 25 years of age) who are unemployed or inactive receiving support or an intervention')['actual']).toLocaleString() }}</p>
-        <p>Participants under 25 years of age who are unemployed receiving support</p>
-    </li>
-        <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Unemployed (including long term unemployed) participants receiving support or an intervention')['actual']).toLocaleString() }}</p>
-        <p>Unemployed participants receiving support or an intervention</p>
-    </li>
-</ul>
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Total participants supported')['actual']).toLocaleString() }}</p>
+			<p>Total participants supported</p>
+		</li>
+	</ul>
 
-<h3>Employment</h3>
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Direct Jobs Created')['actual']).toLocaleString() }}</p>
-        <p>Direct Jobs Created</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Indirect Jobs Created')['actual']).toLocaleString() }}</p>
-        <p>Indirect Jobs Created</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Number of apprenticeship/ traineeship opportunities achieved')['actual']).toLocaleString() }}</p>
-        <p>Apprenticeship/ traineeship opportunities</p>
-    </li>
-</ul>
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Disabled or deaf participants receiving support or an intervention')['actual']).toLocaleString() }}</p>
+			<p>Disabled participants receiving support</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Participants over 50 years of age receiving support or an intervention')['actual']).toLocaleString() }}</p>
+			<p>Participants over 50 years of age receiving support</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Participants (below 25 years of age) who are unemployed or inactive receiving support or an intervention')['actual']).toLocaleString() }}</p>
+			<p>Participants under 25 years of age who are unemployed receiving support</p>
+		</li>
+			<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Unemployed (including long term unemployed) participants receiving support or an intervention')['actual']).toLocaleString() }}</p>
+			<p>Unemployed participants receiving support or an intervention</p>
+		</li>
+	</ul>
 
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Participants gaining their first level 3 and above qualification')['actual']).toLocaleString() }}</p>
-        <p>Participants gaining their first Level 3 Qualification</p>
-    </li>
-</ul>
+	<h3>Employment</h3>
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Direct Jobs Created')['actual']).toLocaleString() }}</p>
+			<p>Direct Jobs Created</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Indirect Jobs Created')['actual']).toLocaleString() }}</p>
+			<p>Indirect Jobs Created</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of apprenticeship/ traineeship opportunities achieved')['actual']).toLocaleString() }}</p>
+			<p>Apprenticeship/ traineeship opportunities</p>
+		</li>
+	</ul>
 
-<ul class="grid centred">
-        <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Economically inactive participants not in education or training receiving support or an intervention')['actual']).toLocaleString() }}</p>
-        <p>Economically inactive participants receiving support</p>
-    </li>
-        <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Economically Inactive participants engaged in job-searching upon leaving')['actual']).toLocaleString() }}</p>
-        <p>Economically inactive participants now engaging in job-searching</p>
-    </li>
-            <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Employed, including self-employed receiving support or an intervention')['actual']).toLocaleString() }}</p>
-        <p>Employed, including self-employed receiving support or an intervention</p>
-    </li>
-</ul>
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Participants gaining their first level 3 and above qualification')['actual']).toLocaleString() }}</p>
+			<p>Participants gaining their first Level 3 Qualification</p>
+		</li>
+	</ul>
 
-<h3>Business Support</h3>
+	<ul class="grid centred">
+			<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Economically inactive participants not in education or training receiving support or an intervention')['actual']).toLocaleString() }}</p>
+			<p>Economically inactive participants receiving support</p>
+		</li>
+			<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Economically Inactive participants engaged in job-searching upon leaving')['actual']).toLocaleString() }}</p>
+			<p>Economically inactive participants now engaging in job-searching</p>
+		</li>
+				<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Employed, including self-employed receiving support or an intervention')['actual']).toLocaleString() }}</p>
+			<p>Employed, including self-employed receiving support or an intervention</p>
+		</li>
+	</ul>
 
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Number of enterprises receiving support')['actual']).toLocaleString() }}</p>
-        <p>Number of enterprises receiving support</p>
-    </li>
-        <li class="block">
-        <p class="bang">{{ (project_outputs.find(x => x.category == 'Number of enterprises receiving financial support other than grants')['actual']).toLocaleString() }}</p>
-        <p>Number of enterprises receiving financial support other than grants</p>
-    </li>
-</ul>
+	<h3>Business Support</h3>
+
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of enterprises receiving support')['actual']).toLocaleString() }}</p>
+			<p>Number of enterprises receiving support</p>
+		</li>
+			<li class="block">
+			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of enterprises receiving financial support other than grants')['actual']).toLocaleString() }}</p>
+			<p>Number of enterprises receiving financial support other than grants</p>
+		</li>
+	</ul>
+{{ /comp }}

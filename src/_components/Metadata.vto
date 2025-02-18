@@ -8,22 +8,24 @@ css: |
     }
 ---
 {{ if downloaded || processed || sources || pipelines }}
-<aside data-comp="Metadata" class="padded holder bg-grey">
-    <h2>Data source overview</h2>
-    <p>
-        {{ if downloaded }}Retrieved on {{ downloaded |> date('NCC_DATETIME') }}.{{ /if }}
-        {{ if processed }}Processed on {{ processed |> date('NCC_DATETIME') }}.{{ /if }}
-    </p>
+<aside data-comp="Metadata" class="padded holder">
+	<div class="padded bg-grey">
+		<h2>Data source overview</h2>
+		<p>
+			{{ if downloaded }}Retrieved on {{ downloaded |> date('NCC_DATETIME') }}.{{ /if }}
+			{{ if processed }}Processed on {{ processed |> date('NCC_DATETIME') }}.{{ /if }}
+		</p>
 
-    {{ if sources }}{{ comp.DataSources({ sources }) }}{{ /if }}
+		{{ if sources }}{{ comp.DataSources({ sources }) }}{{ /if }}
 
-    {{ if pipelines }}
-    <h3>Pipelines</h3>
-    <ul>
-        {{ for pipeline of pipelines }}
-            <li><a href="{{ pipeline }}">{{ search.page(`url="${pipeline}"`).title }}</a></li>
-        {{ /for }}
-    </ul>
-    {{ /if }}
+		{{ if pipelines }}
+		<h3>Pipelines</h3>
+		<ul>
+			{{ for pipeline of pipelines }}
+				<li><a href="{{ pipeline }}">{{ search.page(`url="${pipeline}"`).title }}</a></li>
+			{{ /for }}
+		</ul>
+		{{ /if }}
+	</div>
 </aside>
 {{ /if }}
