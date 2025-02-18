@@ -80,17 +80,19 @@ metadata:
     }));
 }}
 
+{{ comp WidthLimit { maxWidth: '600px' }}}
 {{ comp.oi.chart.waffle({
     config: {
         data: [waffleData],
         series: waffleSeries,
-        size: [25, 4],
+        size: [10, 10],
         legend: {
             show: true,
             position: 'top',
         }
     }
 })}}
+{{ /comp }}
 
 <h2>Funded organisations</h2>
 

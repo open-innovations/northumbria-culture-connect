@@ -23,7 +23,7 @@
   background-color: var(--colour-purple-25);
 }
 
-.oi-chart {
+[data-comp=colour-block] .oi-chart {
   background: white;
   padding: 1rem;
   border-radius: 0.5rem;
