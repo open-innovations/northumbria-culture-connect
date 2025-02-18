@@ -28,7 +28,7 @@ metadata:
 	<h3>Physical attendance of arts events</h3>
 	<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
 	{{ comp Dashboard { className:'centred'} }}
-		{{ comp DashboardTile {} }}
+		{{ comp DashboardTile {width:'600px'} }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
 			<p>Physically attended an arts event in the last 12 months</p>
 		{{ /comp }}
@@ -47,15 +47,15 @@ metadata:
 
 
 	{{ comp Dashboard { className:'centred'} }}
-		{{ comp DashboardTile {cols:2} }}
+		{{ comp DashboardTile {} }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Percentage of respondents 2023/24'] }}%</p>
 			<p>Attended arts events at least once a week</p>
 		{{ /comp }}
-		{{ comp DashboardTile {cols:2,colour:'blue'} }}
+		{{ comp DashboardTile {colour:'blue'} }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Change between 2022/23 and 2023/24'] }}</p>
 			<p>Change between 2022/23 and 2023/24</p>
 		{{ /comp }}
-		{{ comp DashboardTile {cols:2,colour:'blue'} }}
+		{{ comp DashboardTile {colour:'blue'} }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Percentage of respondents 2022/23'] }}%</p>
 			<p>Response in 2022/23</p>
 		{{ /comp }}
