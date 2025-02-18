@@ -28,7 +28,7 @@ metadata:
 	<h3>Physical attendance of arts events</h3>
 	<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
 	{{ comp Dashboard { className:'centred'} }}
-		{{ comp DashboardTile {width:'600px'} }}
+		{{ comp DashboardTile {} }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
 			<p>Physically attended an arts event in the last 12 months</p>
 		{{ /comp }}

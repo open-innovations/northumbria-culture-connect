@@ -15,6 +15,7 @@
 	flex-basis: 20rem;
 	flex-grow: 1;
 	flex-shrink: 0;
+	max-width: 100%;
 }
 
 .dashboard .tile {

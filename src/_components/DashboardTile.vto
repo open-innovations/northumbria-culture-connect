@@ -1,6 +1,10 @@
 ---
 ---
-
+{{#
+	A dashboard tile can have: 
+	 * colour - the colour to use for the panel background (constructs e.g. bg-colour-100)
+	 * width - the minimum width of the panel (actually sets the flex-basis)	
+#}}
 <li class="block {{ if colour }}bg-{{ colour }}-100{{ else }}bg-grey{{ /if }}"{{ if width }} style="{{ if width }}flex-basis: {{ width }};{{ /if }}"{{ /if }}>
 	{{ content }}
 </li>
