@@ -7,8 +7,12 @@ tags:
     - work-in-progress
 metadata:
     sources:
-        - title: CSV Monthly Visits
+        - title: CSV library locations
+          url: https://datamillnorth.org/download/vq68d/a433cc16-aa77-4325-a17c-7bc79eb07fc7/libraries_ncc-libraries-current_csv.csv
+        - title: CSV monthly visits
           url: https://datamillnorth.org/download/e1d1d/6rk/2008-onwards-monthly-visits.csv
+        - title: CSV monthly library loans
+          url: https://datamillnorth.org/download/e6qw9/ch6/2008-onwards-monthly-issues-by-branch.csv
 ---
 
 {{ comp Section }}
@@ -18,6 +22,81 @@ metadata:
 	<p>
 		The sections below will explore some of this data, visualising trends in library usage in the Newcastle region.
 	</p>
+{{ /comp }}
+
+
+{{ comp Section }}
+
+	{{ comp.oi.chart.line({
+		config: {
+			data: monthly_visits,
+			height: 400,
+			legend: {
+				show: true,
+				position: "top"
+			},
+			columns: [{
+				name: "decimal_year",
+				template: '{{ Date | strptime("%Y-%m") | decimalYear() }}'
+			}],
+			series: [{
+				title: "Total",
+				x: "decimal_year",
+				y: "Total",
+				tooltip: 'Visits<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
+			}],
+			axis: {
+				x: {
+					min: 2008,
+					max: 2025,
+					grid: { show: true },
+					tick: { spacing: 2 }
+				},
+				y: {
+					title: { label: "Total number of visits" },
+					min: 0,
+					grid: { show: true },
+					tick: { spacing: 25000 }
+				}
+			}
+		}
+	}) }}
+
+	{{ comp.oi.chart.line({
+		config: {
+			data: monthly_issues_by_branch,
+			height: 400,
+			legend: {
+				show: true,
+				position: "top"
+			},
+			columns: [{
+				name: "decimal_year",
+				template: '{{ Date | strptime("%Y-%m") | decimalYear() }}'
+			}],
+			series: [{
+				title: "Total",
+				x: "decimal_year",
+				y: "Total",
+				tooltip: 'Visits<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
+			}],
+			axis: {
+				x: {
+					min: 2008,
+					max: 2025,
+					grid: { show: true },
+					tick: { spacing: 2 }
+				},
+				y: {
+					title: { label: "Total number of issues" },
+					min: 0,
+					grid: { show: true },
+					tick: { spacing: 25000 }
+				}
+			}
+		}
+	}) }}
+
 {{ /comp }}
 
 {{ comp Section }}
