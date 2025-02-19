@@ -16,6 +16,8 @@ css: |
                 text-decoration: underline;
             }
         }
+        li span::after { content: "\005C"; margin: 0 1rem; }
+        li:last-child span::after { display: none; }
     }
 ---
 {{ if breadcrumbs.length > 0 -}}
@@ -25,7 +27,7 @@ css: |
 		{{ for c of breadcrumbs }}
 		{{ if c.url !== url -}}
 		<li>
-		<span><a href="{{ c.url }}">{{ c.title }}</a>&nbsp;\&nbsp;</span>
+		<span><a href="{{ c.url }}">{{ c.title }}</a></span>
         </li>
 		{{- /if }}
 		{{ /for }}
