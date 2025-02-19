@@ -101,6 +101,7 @@ site.filter('displayCurrency', (x: string) => parseInt(x)
 site.copy('assets/fonts/webfonts/');
 site.copy('assets/vendor/');
 site.copy('assets/js/');
+site.copy('assets/images/favicon.png');
 
 site.process(['.html'], (pages) => {
     for (const page of pages) {
