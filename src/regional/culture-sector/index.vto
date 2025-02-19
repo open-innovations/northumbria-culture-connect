@@ -10,29 +10,24 @@ oldUrl:
  - /data/culture-sector/
 ---
 
-<section class="holder padded">
-<h2>Sector Map</h2>
+{{ comp Section }}
 
-{{
-    comp.CultureSectorMap({
-        centre: [54.980, -1.613],
-        data: list,
-        boundaries: geojson.lad.E08000021,
-    })
-}}
-</section>
+	<h2>Sector Map</h2>
 
-<section class="holder padded">
-<h2>Funded Organisations</h2>
+	{{
+		comp.CultureSectorMap({
+			centre: [54.980, -1.613],
+			data: list,
+			boundaries: geojson.lad.E08000021,
+		})
+	}}
+{{ /comp }}
 
-{{ include './_partials/FundedOrganisationTable.vto' }}
+{{ comp Section }}
+	<h2>Funded Organisations</h2>
 
-</section>
+	{{ include './_partials/FundedOrganisationTable.vto' }}
 
-<script src="https://grist-static.com/csv-viewer.js"></script>
+{{ /comp }}
 
-<div class="holder padded">
-
-<button data-grist-csv-open="{{ url }}data/culture_landscape.csv">View CSV</button>
-
-</div>
+{{ comp.CSVOptions({file:"data/culture_landscape.csv"}) }}
