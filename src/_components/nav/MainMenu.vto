@@ -43,7 +43,7 @@ css: |
     [data-comp="nav-main-menu"] > ul > li > a {
         display: inline-block;
         height: 100%;
-        border-bottom: 4px solid var(--menu-bg);
+        /*border-bottom: 4px solid var(--menu-bg);*/
     }
     [data-comp="nav-main-menu"] > ul > li button {
         background: transparent;
@@ -74,8 +74,10 @@ css: |
     [data-comp="nav-main-menu"] > ul > li button:hover > span, [data-comp="nav-main-menu"] > ul > li button:focus > span {
         border-color: var(--menu-bg);
     }
-    [data-comp="nav-main-menu"] > ul > li > ul {
+    [data-comp="nav-main-menu"] > ul > li > button + ul {
         display: none;
+    }
+    [data-comp="nav-main-menu"] > ul > li > ul {
         position: absolute;
         top: 100%;
         background: var(--menu-bg);
@@ -87,7 +89,7 @@ css: |
     }
     [data-comp="nav-main-menu"] > ul > li > ul a {
         display: block;
-        border-right: 4px solid var(--menu-bg);
+        /*border-right: 4px solid var(--menu-bg);*/
     }
     [data-comp=nav-main-menu] .home-link {
         display: none;
@@ -98,7 +100,7 @@ css: |
         }
         [data-comp="nav-main-menu"] a { padding: var(--spacing-normal); }
         [data-comp="nav-main-menu"] > ul { margin-left: var(--spacing-normal); }
-        body > header { border-bottom: 1px solid var(--menu-off); }
+        /*body > header { border-bottom: 1px solid var(--menu-off); }*/
         .site-header a { margin-left: 3rem; }
         .hamburger { display: block; }
         label.hamburger::after {
