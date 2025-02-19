@@ -23,14 +23,54 @@ metadata:
 
 	<p>The Participation Survey started in October 2021 and is the key evidence source on engagement for DCMS. It is a continuous push-to-web household survey of adults aged 16 and over in England.</p>
 	<p>The Participation Survey provides nationally representative estimates of physical and digital engagement with the arts, heritage, museums & galleries, and libraries, as well as engagement with tourism, major events, live sports and digital.</p>
+	<div class='warning padded'>
+		<p>
+			In 2023/24, DCMS partnered with ACE to boost the Participation Survey to be able to produce meaningful estimates at Local 
+			Authority level. The most relevant difference to the data shown on this page is that the number of respondents for the survey 
+			has increased by around a factor of 10 from 2022/23 to 2023/24, and therefore should be taken into consideration when interpreting the findings.
+		</p>
+	</div>
 {{ /comp }}
+
+
 
 {{ comp Section }}
 	<h2>National Response</h2> 
 
 	<h3>Physical attendance of arts events</h3>
 	<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
-	{{ comp Dashboard { className:'centred'} }}
+	{{ set physical_attendance_data = headlines.filter(x => x.ID == 'response_1') }}
+	{{ comp.oi.table({ 
+		config: {
+			data: physical_attendance_data,
+			columns: [
+				{ name: 'Question' },
+				{ name: 'Percentage of respondents 2022/23' },
+				{ name: 'Percentage of respondents 2023/24' },
+				{ name: 'Change between 2022/23 and 2023/24' }
+				],
+			width: '100%'
+			}
+		})}}
+	
+	<h3>Frequency of attendance of arts events</h3>
+	<p>The most frequent level at which adults attended any arts activity in person.</p>
+
+	{{ set freq_data = headlines.filter(x => x.ID == 'response_2' || x.ID == 'response_3' || x.ID == 'response_4' || x.ID == 'response_5' || x.ID == 'response_6') }}
+	{{ set freq_data = freq_data.map(({ ["Response Breakdown "]: Frequency, ...rest }) => ({...rest, Frequency})) }}
+	{{ comp.oi.table({ 
+		config: {
+			data: freq_data,
+			columns: [
+				{ name: 'Frequency' },
+				{ name: 'Percentage of respondents 2022/23' },
+				{ name: 'Percentage of respondents 2023/24' },
+				{ name: 'Change between 2022/23 and 2023/24' }
+				],
+			width: '100%'
+			}
+		})}}
+	{{# {{ comp Dashboard { className:'centred'} }}
 		{{ comp DashboardTile {} }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
 			<p>Physically attended an arts event in the last 12 months</p>
@@ -43,9 +83,9 @@ metadata:
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2022/23'] }}%</p>
 			<p>Response in 2022/23</p>
 		{{ /comp }}
-	{{ /comp }}
+	{{ /comp }} #}}
 
-	<h3>Frequency of attendance of arts events</h3>
+	{{# <h3>Frequency of attendance of arts events</h3>
 	<p>The most frequent level at which adults attended any arts activity in person.</p>
 
 
@@ -62,7 +102,7 @@ metadata:
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Percentage of respondents 2022/23'] }}%</p>
 			<p>Response in 2022/23</p>
 		{{ /comp }}
-	{{ /comp }}
+	{{ /comp }} #}}
 
 {{ /comp }}
 
