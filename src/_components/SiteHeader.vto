@@ -15,7 +15,7 @@ css: |
             &:hover {
                 color: inherit;
             }
-            img { height: 4.25rem; /* 68px */; aspect-ratio: 364 / 68; }
+            img { height: 4.25rem; width: 22.8125rem; }
         }
     }
     @media only screen and (max-width: 1484px) {
@@ -25,7 +25,7 @@ css: |
 
 <header data-comp="SiteHeader">
 	<div class="holder site-header">
-        <a href="/"><img src="/assets/images/logo-culture-connect.svg" alt="Culture Connect logo"> </a>
+        <a href="/"><img src="/assets/images/logo-culture-connect.svg" alt="Culture Connect logo" inline></a>
 	</div>
 	{{ comp.nav.MainMenu({ url }) }}
 </header>
