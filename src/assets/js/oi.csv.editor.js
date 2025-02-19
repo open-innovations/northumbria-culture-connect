@@ -14,20 +14,40 @@
 	}
 
 	OI.CSVEditor = function(lnk){
-		var n,v,raw,msg,_url,el,loading,table,_obj;
+		var n,v,raw,msg,_url,el,loading,table,_obj,opts = {},_open = false;
 
-		n = "CSVEditor";
+		n = "OI CSVEditor";
 		v = "0.2";
 		msg = new OI.logger(n+' v'+v,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 		msg.info('Init',lnk);
 		_obj = this;
 
+		// Get relevant attributes
+		var attr = lnk.getAttributeNames();
+		attr.forEach(e => {
+			if(e.indexOf('data-oi-csv-')==0) opts[e.substr(12)] = lnk.getAttribute(e);
+		});
+
 		if(lnk.tagName=="A") _url = lnk.getAttribute('href');
+		var _original = lnk.innerHTML;
 
 		// Add a note after
 		this.open = function(){
-			console.log('Open CSV',this,lnk,this._url);
+			_open = true;
+			msg.info('Open CSV');
 			this.loadData();
+			if(opts.collapse) lnk.innerHTML = opts.collapse;
+			if(el) el.style.display = "";
+		};
+		this.close = function(){
+			_open = false;
+			msg.info('Close CSV');
+			lnk.innerHTML = _original;
+			if(el) el.style.display = "none";
+		};
+		this.toggle = function(){
+			if(_open) this.close();
+			else this.open();
 		};
 
 		this.loadData = function(){
@@ -58,15 +78,16 @@
 		};
 
 		this.processData = function(){
+			if(opts.target && document.getElementById(opts.target)){
+				el = document.getElementById(opts.target);
+			}
 			if(!el){
 				el = document.createElement('div');
-				el.classList.add('result');
 				lnk.after(el);
 			}
+			el.classList.add('result');
 			el.innerHTML = 'Got data from '+_url+' <pre>'+raw+'</pre>';
 			this.buildOutput(raw);
-	//		this.buildOutput(txt);
-	//		this.toggleOpenDialog();
 			return this;
 		};
 
@@ -74,18 +95,13 @@
 			this.data = CSV2JSON(csv);
 			msg.info('Build output',this.data);
 
-//			var el = document.getElementById('msg-start-edit');
-//			if(el) el.innerHTML = '';
-
 			// Reshape the data
 			var data = new Array(this.data.length);
 			for(r = 0; r < this.data.length; r++) data[r] = this.data[r].cols;
 
-console.log(data);
 			// Update the table
 			this.updateData(data,this.data[0].order);
 
-//			document.getElementById('geography-add').disabled = false;
 			return this;
 		};
 
@@ -100,8 +116,6 @@ console.log(data);
 			this.data = data;
 
 			html = '';
-
-			console.log('here');
 
 			if(this.data.length > 0){
 				th = '<th class="row"></th>';
@@ -135,9 +149,9 @@ console.log(data);
 			}else{
 				msg.log('No data loaded.');
 			}
-			//this.findEmptyRows();
-			//this.update();
-			if(typeof opts.load==="function") opts.load.call(this);
+
+			if(typeof opts==="object" && "load" in opts && typeof opts.load==="function") opts.load.call(this);
+
 			return this;
 		};
 
@@ -145,53 +159,17 @@ console.log(data);
 	}
 
 	if(!OI.logger){
-		// Version 1.5
+		// Console version 1.5
 		OI.logger = function(title,attr){
 			if(!attr) attr = {};
 			title = title||"OI Logger";
 			var ms = {};
 			this.logging = (location.search.indexOf('debug=true') >= 0);
 			if(console && typeof console.log==="function"){
-				this.log = function(){ if(this.logging){ console.log.apply(null,getParam(arguments)); updatePage('log',arguments); } };
-				this.info = function(){ console.info.apply(null,getParam(arguments)); updatePage('info',arguments); };
-				this.warn = function(){ console.warn.apply(null,getParam(arguments)); updatePage('warning',arguments); };
-				this.error = function(){ console.error.apply(null,getParam(arguments)); updatePage('error',arguments); };
-			}
-			this.remove = function(id){
-				var el = attr.el.querySelector('#'+id);
-				if(ms[id]) clearTimeout(ms[id]);
-				if(el) el.remove();
-			};
-			function updatePage(){
-				if(attr.el){
-					var id, el, visible = false;
-					var cls = arguments[0];
-					var txt = Array.prototype.shift.apply(arguments[1]);
-					var opt = arguments[1]||{};
-					if(opt.length > 0) opt = opt[opt.length-1];
-					if(attr.visible.includes(cls)) visible = true;
-					if(visible){
-						id = "default";
-						if(opt.id) id = opt.id;
-						el = document.getElementById(id);
-						if(!el){
-							el = document.createElement('div');
-							el.classList.add('message',cls);
-							el.setAttribute('id',id);
-						}
-						if(attr.class) el.classList.add(...attr.class.split(/ /));
-						el.innerHTML = '<div class="message-inner">'+txt.replace(/\%c/g,"")+'</div>';
-						el.style.display = (txt ? '' : 'none');
-						attr.el.prepend(el);
-						var cls = document.createElement('div');
-						cls.setAttribute('tabindex',0);
-						cls.classList.add('close');
-						cls.innerHTML = '&times;';
-						cls.addEventListener('click',function(e){ clearTimeout(ms[id]); el.remove(); });
-						el.appendChild(cls);
-						ms[id] = setTimeout(function(){ el.remove(); },(typeof opt.fade==="number" ? opt.fade : (typeof attr.fade==="number" ? attr.fade : 10000)));
-					}
-				}
+				this.log = function(){ if(this.logging){ console.log.apply(null,getParam(arguments)); } };
+				this.info = function(){ console.info.apply(null,getParam(arguments)); };
+				this.warn = function(){ console.warn.apply(null,getParam(arguments)); };
+				this.error = function(){ console.error.apply(null,getParam(arguments)); };
 			}
 			function getParam(){
 				var a = Array.prototype.slice.call(arguments[0], 0);

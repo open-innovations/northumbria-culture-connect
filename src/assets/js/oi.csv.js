@@ -24,7 +24,7 @@
 
 	// Create a list of DOM elements that have the 'data-oi-csv' attribute
 	function List(){
-		this.version = "0.1";
+		this.version = "0.2";
 		var _obj = this;
 		this.list = [];
 		this.get = function(){
@@ -43,6 +43,7 @@
 		var todo = [];
 		// Process a particular list item
 		this.load = function(i){
+			//console.log('load',i)
 			if(this.list[i].editor){
 				this.list[i].editor.open();
 				return this;
@@ -53,7 +54,7 @@
 				this.process();
 			}else{
 				if(!loading){
-					console.info('Loading script from %c'+editor+'%c','font-style:italic;color:#2254F4;','');
+					console.info('%cOI CSV v'+this.version+'%c: Loading script from %c'+editor+'%c','font-weight:bold','','font-style:italic;color:#2254F4;','');
 					// We haven't started loading the main script
 					loading = true;
 					var script = document.createElement('script');
@@ -95,7 +96,7 @@
 		};
 		el.addEventListener('click',function(e){
 			e.preventDefault();
-			if(_processed) _obj.editor.open();
+			if(_processed) _obj.editor.toggle();
 			else props.list.load(props.item);
 		})
 		return this;
