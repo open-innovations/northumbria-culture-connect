@@ -17,10 +17,11 @@ breadcrumbs:
 colour_style: bg-grey
 hideTags: true
 ---
-<section class="holder padded">
+
+{{ comp Section }}
 	<p>
 		The following list contains all the defined tags. Click on a tag to explore.
 	</p>
 	{{# Display tag cloud for all generated tag pages #}}
 	{{ comp.PageTags({ tags: search.pages('tag!=undefined', 'tag').map(x => x.tag) }) }}
-</section>
+{{ /comp }}

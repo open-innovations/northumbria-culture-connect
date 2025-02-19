@@ -10,12 +10,11 @@ hideTags: true
 ---
 
 <main>
-<section class="holder padded" style="--grid-size: 30rem;">
-
-{{ comp UniformGrid }}
-{{ for org of search.pages('organisation !index', 'title') }}
-    {{ comp.OrgProfileLink({ page: org, config: { headingLevel: 2 } })}}
-{{ /for }}
+{{ comp Section {style:"--grid-size: 30rem;"} }}
+	{{ comp UniformGrid }}
+	{{ for org of search.pages('organisation !index', 'title') }}
+		{{ comp.OrgProfileLink({ page: org, config: { headingLevel: 2 } })}}
+	{{ /for }}
+	{{ /comp }}
 {{ /comp }}
-</section>
 </main>
