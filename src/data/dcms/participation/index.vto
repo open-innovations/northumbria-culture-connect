@@ -39,8 +39,8 @@ metadata:
 		{{ comp DashboardTile {colour:'blue'} }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2022/23'] }}%</p>
 			<p>Response in 2022/23</p>
-		</li>
-	</ul>
+		{{ /comp }}
+	{{ /comp }}
 
 	<h3>Frequency of attendance of arts events</h3>
 	<p>The most frequent level at which adults attended any arts activity in person.</p>
