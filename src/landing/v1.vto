@@ -37,14 +37,15 @@ url: /
     <hr>
     #}}
     
-    <section style="display:flex;flex-direction:column;gap:1rem;">
-        <h2 class="holder padded">Case studies</h2>
+	{{# This section is created manually so that the case study backgrounds can take up the full width #}}
+    <section style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+        <h2 class="holder padded" style="padding-bottom:0">Case studies</h2>
 
         {{ comp.CaseStudyLinkList() }}
     </section>
-    <hr>
 
-    <section class="holder padded">
+
+	{{ comp Section }}
         <h2>Data Insights</h2>
     
         {{ search.data('/insight/').description }}
@@ -55,5 +56,6 @@ url: /
         {{ /for }}
         {{ /comp }}
     
-    </section>
+    {{ /comp }}
+
 </main>

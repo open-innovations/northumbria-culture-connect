@@ -18,7 +18,9 @@ hideTags: true
 colour_style: bg-grey
 ---
 
-<div class="holder padded" style="--grid-size: 30rem;">
+<div style="--grid-size: 30rem;">
+
+{{ comp Section }}
 	<p>
 		The sources on this page are the outcome of research into cultural datasets currently published and openly accessible, with a focus on Funding and Participation. By bringing together datasets across these key areas, we aim to highlight gaps in the data and identify where more information is needed to accurately represent cultural organisations in Newcastle and the individuals who engage with them.
 	</p>
@@ -38,7 +40,10 @@ colour_style: bg-grey
 		hideTags: ['data'],
 		withTags: true,
 	})}}
-	
+
+{{ /comp }}
+
+{{ comp Section }}
 	<h2>
 		Participation Data
 	</h2>
@@ -54,7 +59,10 @@ colour_style: bg-grey
 		hideTags: ['data'],
 		withTags: true,
 	})}}
-	
+{{ /comp }}
+
+{{ comp Section }}
+
 	<h2>
 		Data Infrastructure
 	</h2>
@@ -70,4 +78,6 @@ colour_style: bg-grey
 		hideTags: ['data'],
 		withTags: true,
 	})}}
+{{ /comp }}
+
 </div>

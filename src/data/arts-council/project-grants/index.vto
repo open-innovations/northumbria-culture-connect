@@ -14,12 +14,7 @@ metadata:
     pipelines:
         - /pipelines/arts-council/
 ---
-<div class="holder padded">
-<section>
-    {{ include "./_partials/overview.md" |> md }}
-</section>
 
-<h2>Funding per year</h2>
 
 {{>
     const getMax = (x) => +Math.max(
@@ -34,80 +29,92 @@ metadata:
         });
 }}
 
-{{ comp.oi.chart.bar({
-        config: {
-            category: 'Year',
-            height: 400,
-            stacked: true,
-            series: [{ title: "Newcastle upon Tyne", value: "E08000021", tooltip: "<strong>{{ Year }}</strong><br />Funding per year: £{{ E08000021 | toLocaleString() }}"}],
-            data: grants_value_by_lad_by_year,
-            axis: {
-                x: {
-                    max: getMax(grants_value_by_lad_by_year),
-                    ticks: [{
-                    value: 500000,
-                    label: "£0.5M"
-                    },{
-                    value: 1000000,
-                    label: "£1M"
-                    },
-                    {
-                    value: 1500000,
-                    label: "£1.5M"
-                    },
-                    {
-                    value: 2000000,
-                    label: "£2M"
-                    }]
-                }
-            }
-        }
-}) }}
 
-<h2>Number of grants awarded per year</h2>
+{{ comp Section }}
+    {{ include "./_partials/overview.md" |> md }}
+{{ /comp }}
 
-{{ comp.oi.chart.bar({
-        config: {
-            category: 'Year',
-            height: 400,
-            stacked: true,
-            series: [{ title: "Newcastle upon Tyne", value: "E08000021", tooltip: "<strong>{{ Year }}</strong><br />Grants awarded per year: {{ E08000021 | toLocaleString() }}"}],
-            data: grants_count_by_lad_by_year,
-            axis: {
-                x: {
-                    max: getMax(grants_count_by_lad_by_year),
-                }
-            }
-        }
-}) }}
+{{ comp Section }}
+	<h2>Funding per year</h2>
+	{{ comp.oi.chart.bar({
+			config: {
+				category: 'Year',
+				height: 400,
+				stacked: true,
+				series: [{ title: "Newcastle upon Tyne", value: "E08000021", tooltip: "<strong>{{ Year }}</strong><br />Funding per year: £{{ E08000021 | toLocaleString() }}"}],
+				data: grants_value_by_lad_by_year,
+				axis: {
+					x: {
+						max: getMax(grants_value_by_lad_by_year),
+						ticks: [{
+						value: 500000,
+						label: "£0.5M"
+						},{
+						value: 1000000,
+						label: "£1M"
+						},
+						{
+						value: 1500000,
+						label: "£1.5M"
+						},
+						{
+						value: 2000000,
+						label: "£2M"
+						}]
+					}
+				}
+			}
+	}) }}
+{{ /comp }}
 
-<h2>Average grant award value per year</h2>
+{{ comp Section }}
 
-{{ comp.oi.chart.bar({
-        config: {
-            category: 'Year',
-            height: 400,
-            stacked: true,
-            series: [{ title: "Newcastle upon Tyne", value: "E08000021", tooltip: "<strong>{{ Year }}</strong><br />Average grant award value per year: £{{ E08000021 | toLocaleString() }}"}],
-            data: grants_average_award_by_lad_by_year,
-            axis: {
-                x: {
-                    max: getMax(grants_average_award_by_lad_by_year),
-                    ticks: [{
-                    value: 20000,
-                    label: "£20k"
-                    },
-                    {
-                    value: 40000,
-                    label: "£40k"
-                    },
-                    {
-                    value: 60000,
-                    label: "£60k"
-                    }]
-                }
-            }
-        }
-}) }}
+	<h2>Number of grants awarded per year</h2>
 
-</div>
+	{{ comp.oi.chart.bar({
+			config: {
+				category: 'Year',
+				height: 400,
+				stacked: true,
+				series: [{ title: "Newcastle upon Tyne", value: "E08000021", tooltip: "<strong>{{ Year }}</strong><br />Grants awarded per year: {{ E08000021 | toLocaleString() }}"}],
+				data: grants_count_by_lad_by_year,
+				axis: {
+					x: {
+						max: getMax(grants_count_by_lad_by_year),
+					}
+				}
+			}
+	}) }}
+{{ /comp }}
+
+{{ comp Section }}
+
+	<h2>Average grant award value per year</h2>
+
+	{{ comp.oi.chart.bar({
+			config: {
+				category: 'Year',
+				height: 400,
+				stacked: true,
+				series: [{ title: "Newcastle upon Tyne", value: "E08000021", tooltip: "<strong>{{ Year }}</strong><br />Average grant award value per year: £{{ E08000021 | toLocaleString() }}"}],
+				data: grants_average_award_by_lad_by_year,
+				axis: {
+					x: {
+						max: getMax(grants_average_award_by_lad_by_year),
+						ticks: [{
+						value: 20000,
+						label: "£20k"
+						},
+						{
+						value: 40000,
+						label: "£40k"
+						},
+						{
+						value: 60000,
+						label: "£60k"
+						}]
+					}
+				}
+			}
+	}) }}
+{{ /comp }}

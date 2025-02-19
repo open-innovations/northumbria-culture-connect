@@ -105,10 +105,10 @@ metadata:
 		Newcastle Libraries locations.
 	</p>
 
-{{
-	set libraryMarkers = markers.library_buildings;
-	libraryMarkers.forEach(e => { e.tooltip = "<strong>"+e.Library+"</strong><br />"+e.Type+"<br />Computers: "+e['No of PCs']; });
-}}
+	{{
+		set libraryMarkers = markers.library_buildings;
+		libraryMarkers.forEach(e => { e.tooltip = "<strong>"+e.Library+"</strong><br />"+e.Type+"<br />Computers: "+e['No of PCs']; });
+	}}
 
 	{{ comp.oi.map.zoomable({ config: {
 		// Load some GeoJSON

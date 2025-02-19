@@ -12,113 +12,120 @@ metadata:
         - /pipelines/arts-council/
 ---
 
-{{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
-{{ set byDiscipline = Object.values(
-    funding_by_organisation
-        .filter(x => x.LAD24CD == ons_codes.newcastle)
-        .reduce((result, org) => {
-            const discipline = org['Main Discipline'];
-            const thisGroup = result[discipline] || { discipline, funding: 0, count: 0 };
-            thisGroup.funding = thisGroup.funding + org.funding;
-            thisGroup.count += 1;
-            return { ...result, [discipline]: thisGroup };
-        }, {}))
-        .toSorted((a, b) => b.funding - a.funding) }}
 
-<div class="holder padded">
+{{ comp Section }}
+	{{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
+	{{ set byDiscipline = Object.values(
+		funding_by_organisation
+			.filter(x => x.LAD24CD == ons_codes.newcastle)
+			.reduce((result, org) => {
+				const discipline = org['Main Discipline'];
+				const thisGroup = result[discipline] || { discipline, funding: 0, count: 0 };
+				thisGroup.funding = thisGroup.funding + org.funding;
+				thisGroup.count += 1;
+				return { ...result, [discipline]: thisGroup };
+			}, {}))
+			.toSorted((a, b) => b.funding - a.funding) }}
 
-<p>
-    Headline figures for Arts Council Investment Programme for organisations based in Newcastle City Council.
-</p>
+	<p>
+		Headline figures for Arts Council Investment Programme for organisations based in Newcastle City Council.
+	</p>
 
-<ul class="grid centred">
-    <li class="block">
-        <p class="bang">{{ headlines.number }}</p>
-        <p>Organisations in portfolio</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ headlines.funding |> displayCurrency }}</p>
-        <p>Total funding</p>
-    </li>
-    <li class="block">
-        <p class="bang">{{ headlines.average_funding |> displayCurrency }}</p>
-        <p>Average award</p>
-    </li>
-</ul>
-
-<section class="undo-reset">
-{{ include './_partials/overview.md' |> md }}
-</section>
-
-<h2>Allocation by discipline</h2>
-
-{{#
-<ul class="grid centred">
-    {{ for d of byDiscipline }}
-    <li class="block">
-        <p>{{ d.discipline }}</p>
-        <p class="bang">{{ d.funding |> displayCurrency }}</p>
-        <p>shared by {{ d.count }} organisation{{ if d.count > 1 }}s{{ /if }}</p>
-    </li>
-    {{ /for }}
-</ul>
-#}}
-
-{{>
-    const waffleData = byDiscipline.reduce((a, c) => ({ ...a, [c.discipline]: 100 * c.funding / headlines.funding }), {});
-    const colours = {
-            'Museums': '#8F3E8D',
-            'Theatre': '#33A38C',
-            'Dance': '#00478A',
-            'Literature': '#005837',
-            'Visual arts': '#F25C29',
-    };
-    const waffleSeries = byDiscipline.map(d => ({
-        value: d.discipline,
-        colour: colours[d.discipline],
-        tooltip: `${ d.discipline } &pound;${ d.funding.toLocaleString() } (Shared by ${ d.count } organisation${ d.count > 1 ? "s" : "" })`,
-    }));
-}}
-
-{{ comp WidthLimit { maxWidth: '600px' }}}
-{{ comp.oi.chart.waffle({
-    config: {
-        data: [waffleData],
-        series: waffleSeries,
-        size: [10, 10],
-        legend: {
-            show: true,
-            position: 'top',
-        }
-    }
-})}}
+	<ul class="grid centred">
+		<li class="block">
+			<p class="bang">{{ headlines.number }}</p>
+			<p>Organisations in portfolio</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ headlines.funding |> displayCurrency }}</p>
+			<p>Total funding</p>
+		</li>
+		<li class="block">
+			<p class="bang">{{ headlines.average_funding |> displayCurrency }}</p>
+			<p>Average award</p>
+		</li>
+	</ul>
 {{ /comp }}
 
-<h2>Funded organisations</h2>
+{{ comp Section }}
+	{{ include './_partials/overview.md' |> md }}
+{{ /comp }}
 
-<p>
-    Newcastle-based organisations funded through the Arts Council Investment Programme are listed below.
-</p>
+{{ comp Section }}
+	<h2>Allocation by discipline</h2>
 
-<table class="holder">
-<thead>
-    <tr>
-        <th>Organisation</th>
-        <th>Discipline</th>
-        <th>NPO / IPSO</th>
-    </tr>
-</thead>
-{{ for o of (funding_by_organisation
-    .filter(x => x.LAD24CD == ons_codes.newcastle)
-    .toSorted((a, b) => (a.Recipient.toLowerCase() < b.Recipient.toLowerCase()) ? -1 : 1)
-) }}
-    <tr>
-        <td>{{ o.Recipient }}</td>
-        <td>{{ o['Main Discipline'] }}</td>
-        <td>{{ o.Type }}</td>
-        {{# <p>{{ o.funding |> displayCurrency }}</p> #}}
-    </tr>
-{{ /for }}
-</table>
+	{{#
+	<ul class="grid centred">
+		{{ for d of byDiscipline }}
+		<li class="block">
+			<p>{{ d.discipline }}</p>
+			<p class="bang">{{ d.funding |> displayCurrency }}</p>
+			<p>shared by {{ d.count }} organisation{{ if d.count > 1 }}s{{ /if }}</p>
+		</li>
+		{{ /for }}
+	</ul>
+	#}}
 
-</div>
+	{{>
+		const waffleData = byDiscipline.reduce((a, c) => ({ ...a, [c.discipline]: 100 * c.funding / headlines.funding }), {});
+		const colours = {
+				'Museums': '#8F3E8D',
+				'Theatre': '#33A38C',
+				'Dance': '#00478A',
+				'Literature': '#005837',
+				'Visual arts': '#F25C29',
+		};
+		const waffleSeries = byDiscipline.map(d => ({
+			value: d.discipline,
+			colour: colours[d.discipline],
+			tooltip: `${ d.discipline } &pound;${ d.funding.toLocaleString() } (Shared by ${ d.count } organisation${ d.count > 1 ? "s" : "" })`,
+		}));
+	}}
+
+	{{ comp WidthLimit { maxWidth: '600px' }}}
+	{{ comp.oi.chart.waffle({
+		config: {
+			data: [waffleData],
+			series: waffleSeries,
+			size: [10, 10],
+			legend: {
+				show: true,
+				position: 'top',
+			}
+		}
+	})}}
+	{{ /comp }}
+
+
+{{ /comp }}
+
+{{ comp Section }}
+
+	<h2>Funded organisations</h2>
+
+	<p>
+		Newcastle-based organisations funded through the Arts Council Investment Programme are listed below.
+	</p>
+
+	<table class="holder">
+	<thead>
+		<tr>
+			<th>Organisation</th>
+			<th>Discipline</th>
+			<th>NPO / IPSO</th>
+		</tr>
+	</thead>
+	{{ for o of (funding_by_organisation
+		.filter(x => x.LAD24CD == ons_codes.newcastle)
+		.toSorted((a, b) => (a.Recipient.toLowerCase() < b.Recipient.toLowerCase()) ? -1 : 1)
+	) }}
+		<tr>
+			<td>{{ o.Recipient }}</td>
+			<td>{{ o['Main Discipline'] }}</td>
+			<td>{{ o.Type }}</td>
+			{{# <p>{{ o.funding |> displayCurrency }}</p> #}}
+		</tr>
+	{{ /for }}
+	</table>
+
+{{ /comp }}
