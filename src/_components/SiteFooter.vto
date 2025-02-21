@@ -84,14 +84,16 @@ css: |
 ---
 <footer>
 	<div class="holder padded">
-    {{ if !hideAbout }}<div class="footer-about">
+    {{ if !hideAbout }}
+    <div class="footer-about">
       <div class="padded undo-reset">
         <h2>About Culture Connect</h2>
         {{ search.data('about').extended_description |> md }}
         <p><a href="/about/">Find out more</a></p>
       </div>
       <div class="footer-image"></div>
-    </div>{{ /if }}
+    </div>
+    {{ /if }}
 		<div class="footer-row">
 			<div class="logo-list">
 				<a href="https://www.northeast-ca.gov.uk/"><img src="/assets/images/logo-neca.svg" alt="North East Combined Authority"></a>
@@ -99,6 +101,7 @@ css: |
 				<a href="https://creativecommunities.uk/"><img src="/assets/images/logo-creative-communities.svg" alt="Creative Communities"></a>
 				<a href="https://www.ukri.org/councils/ahrc/"><img src="/assets/images/logo-ahrc.svg" alt="Arts and Humanities Research Council"></a>
 			</div>	
+    </div>
 			<div class="credit">
 				{{# <span>&copy; North East Combined Authority 2024</span> #}}
 				{{ comp.License() }}
