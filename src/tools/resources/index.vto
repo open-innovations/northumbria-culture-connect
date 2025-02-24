@@ -5,5 +5,17 @@ description:
 ---
 
 {{ comp Section }}
-    {{ include './_partials/data-maturity.vto' }}
+{{ comp VerticalMasonry }}
+{{ for resource of
+        Object.values(resources)
+        .toSorted((a, b) => {
+            if (a.priority === b.priority) {
+                return a.title < b.title ? -1 : 1
+            }
+            return (b.priority || 0) - (a.priority || 0);
+        })
+    }}
+    {{ comp.PageLink({ page: resource }) }}
+{{ /for }}
+{{ /comp }}
 {{ /comp }}
