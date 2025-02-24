@@ -1,6 +1,50 @@
 <h2>Funding sources</h2>
-{{# TODO Add breakdown of cross-regional funding drawing in data from ACE Project Grants, ACE NPO/IPSO, 360 Giving, NECA, NCC.
-#}}
+
 <p>
-    Will include data from ACE Project Grants, ACE NPO/IPSO, 360 Giving, NECA, NCC.
+    Newcastle-based cultural organisations receive funding from a wide variety of sources.
+    This is a list of funding sources that are available in the Data Observatory.
+    You can click through to explore the data further.
 </p>
+
+{{#
+    TODO Add breakdown of cross-regional funding drawing in data from ACE Project Grants, ACE NPO/IPSO, 360 Giving, NECA, NCC.
+#}}
+
+{{>
+    const pg_raw = search.data('data/arts-council/project-grants');
+
+    const project_grants = {
+        year: pg_raw.grants_value_by_lad_by_year.at(-1).Year,
+        funding: pg_raw.grants_value_by_lad_by_year.at(-1).E08000021,
+        number: pg_raw.grants_count_by_lad_by_year.at(-1).E08000021,
+    };
+
+    const investmentProgramme = search.data('data/arts-council/investment-programme').investment_by_lad.find(x => x.LAD24CD === 'E08000021' );
+    console.log(investmentProgramme);
+}}
+
+{{ comp AutoGrid }}
+    {{ comp FundingLink {
+            funding: (investmentProgramme.funding / 1e6).toPrecision(2),
+            suffix: ' million',
+            title: "Arts Council England Investment Programme",
+            url: '/data/arts-council/investment-programme/',
+        } }}
+        <p>
+            {{ investmentProgramme.number }} Newcastle-based organisations are funded under the Arts Council England Investment Programme.
+            This has seen investment of £{{ investmentProgramme.funding |> toLocaleString }} in the current programme.
+        </p>
+    {{ /comp }}
+
+    {{ comp FundingLink {
+            funding: (project_grants.funding / 1e6).toPrecision(2),
+            suffix: ' million',
+            title: "National Lottery Project Grants",
+            url: '/data/arts-council/project-grants/',
+        } }}
+        <p>
+            In {{ project_grants.year }}, {{ project_grants.number }} National Lottery project grants totalling
+            £{{ project_grants.funding |> toLocaleString }} were awarded to Newcastle organisations.
+        </p>
+    {{ /comp }}
+{{ /comp }}

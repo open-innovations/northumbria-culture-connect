@@ -1,0 +1,17 @@
+---
+css: |
+    [data-comp=FundingLink] {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-size: 1.1875rem;
+        & .bignum {
+            flex-grow: 1;
+        }
+    }
+---
+<div data-comp="FundingLink" class="block centred bg-green-75">
+    <h3><a href="{{ url }}">{{ title }}</a></h3>
+    <div class="bignum">£{{ funding |> toLocaleString }}{{ suffix || '' }}</div>
+    {{ content }}
+</div>
