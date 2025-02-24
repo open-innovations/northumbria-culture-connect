@@ -9,12 +9,15 @@ colour_style: bg-grey
 hideTags: true
 ---
 
-<main>
 {{ comp Section {style:"--grid-size: 30rem;"} }}
+	<p>
+		The purpose of this section of the Data Observatory is to present profiles for cultural organisations across Newcastle.
+		While at present this shows a similar set of organisations as the in-depth <a href="/case-study/">case studies pages</a>,
+		in a more fully populated Data Observatory, this would be a much longer list than the case studies.
+	</p>
 	{{ comp UniformGrid }}
 	{{ for org of search.pages('organisation !index', 'title') }}
 		{{ comp.OrgProfileLink({ page: org, config: { headingLevel: 2 } })}}
 	{{ /for }}
 	{{ /comp }}
 {{ /comp }}
-</main>
