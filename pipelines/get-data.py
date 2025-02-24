@@ -1,11 +1,11 @@
 import logging
 import re
 from pathlib import Path
-from urllib.parse import urlparse, urlunparse
-from datetime import datetime
+from urllib.parse import urlparse, urlunparse, urlencode
 
 import petl as etl
 import pipeline_utils.organisations.ace as ace
+from pipeline_utils.datestamp import save_datestamp
 from pipeline_utils.filesystem.paths import SITE
 import requests
 
@@ -15,8 +15,8 @@ logging.basicConfig(level=logging.INFO)
 RAW_DATA = (Path(__file__).parent / '../raw').resolve()
 logging.info('Downloading to %s', RAW_DATA)
 
-def download_to_file(url, local_file):
-    if not Path(local_file).exists():
+def download_to_file(url, local_file, force = False):
+    if not Path(local_file).exists() or force:
         logging.info(
             'Downloading %s to %s', url, local_file)
         with requests.get(url, stream=True) as r:
@@ -57,8 +57,7 @@ def arts_council_project_grants():
     etl.cat(*(load_grants(s) for s in sources)
             ).tocsv(RAW_DATA / 'arts-council-project-grants.csv')
 
-    with open(SITE / 'data/arts-council/project-grants/_data/downloaded.yml', 'w') as f:
-        f.write(datetime.now().isoformat())
+    save_datestamp(SITE / 'data/arts-council/project-grants/_data/downloaded.yml')
 
 
 def arts_council_investment_programme():
@@ -77,8 +76,7 @@ def arts_council_investment_programme():
     etl.cat(*(load_data(u) for u in sources[0:1])).tocsv(
         RAW_DATA / 'arts-council-investment-programme.csv')
 
-    with open(SITE / 'data/arts-council/investment-programme/_data/downloaded.yml', 'w') as f:
-        f.write(datetime.now().isoformat())
+    save_datestamp(SITE / 'data/arts-council/investment-programme/_data/downloaded.yml')
 
 
 
@@ -93,8 +91,20 @@ def charity_commission_lists():
 
 
 def download_360_giving():
-    url = 'https://grantnav.threesixtygiving.org/search.csv?min_date=01%2F2020&recipientRegionName=North+East&recipientTSGType=Organisation&bestCountyName=Newcastle+upon+Tyne'
-    download_to_file(url, RAW_DATA / '360-giving.csv')
+    logging.info('Downloading 360 Giving data')
+
+    params = {
+        'min_date': '01/2020',
+        'recipientRegionName': 'North East',
+        'recipientTSGType': 'Organisation',
+        'bestCountyName': 'Newcastle upon Tyne',
+    }
+
+    url = 'https://grantnav.threesixtygiving.org/search.csv?' + urlencode(params)
+    logging.debug(' REQUEST: %s', url)
+
+    download_to_file(url, RAW_DATA / '360-giving.csv', force=True)
+    save_datestamp(SITE / 'data/360-giving/_data/metadata/downloaded.yml')
     
 
 if __name__ == "__main__":
