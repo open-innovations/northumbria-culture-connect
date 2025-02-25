@@ -20,6 +20,13 @@
     };
 
     const investmentProgramme = search.data('data/arts-council/investment-programme').investment_by_lad.find(x => x.LAD24CD === 'E08000021' );
+
+    const threeSixtyGiving = search.data('data/360-giving').by_programme.reduce((a, c) => {
+        return {
+            funding: a.funding + c.Funding,
+            number: a.number + c.Grants
+        }
+    }, { funding: 0, number: 0 });
 }}
 
 {{ comp AutoGrid }}
@@ -46,4 +53,17 @@
             £{{ project_grants.funding |> toLocaleString }} were awarded to Newcastle organisations.
         </p>
     {{ /comp }}
+
+    {{ comp FundingLink {
+            funding: (threeSixtyGiving.funding / 1e6).toPrecision(2),
+            suffix: ' million',
+            title: "Funding recorded via 360 Giving",
+            url: '/data/360-giving/',
+        } }}
+        <p>
+            Organisations have registered {{ threeSixtyGiving.number }} awards totalling 
+            £{{ threeSixtyGiving.funding |> toLocaleString }} with 360 Giving.
+        </p>
+    {{ /comp }}
+
 {{ /comp }}
