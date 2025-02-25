@@ -1,5 +1,5 @@
 ID,Question,Response Breakdown ,Change between 2022/23 and 2023/24,Percentage of respondents 2023/24,Percentage of respondents 2022/23
-response_1,Engaged with the arts physically (attended an event or participated in an activity in person) in the last 12 months,Any event in rows 18 to 30 or activity in rows 34 to 44,Increase,90,89
+response_1,Engaged with the arts physically (attended an event or participated in an activity in person) in the last 12 months [r] [Note 31],Any event in rows 18 to 30 or activity in rows 34 to 44,Increase,90,89
 response_2,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],At least once a week,Decrease,59,70
 response_3,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],Less often than once a week but at least once a month,Increase,15,12
 response_4,The most frequent level at which adults attended any arts event or participated in any arts activity in person [Note 3],Less often than once a month but at least 3 or 4 times a year,Increase,14,9
@@ -43,7 +43,7 @@ response_41,Engaged with performing arts at least once in the last 12 months,"A 
 response_42,Been part of a creative activity or consumed content in the last 12 months,Created content,Increase,46,24
 response_43,Been part of a creative activity or consumed content in the last 12 months,Consumed content,Increase,96,75
 response_44,Been part of a creative activity or consumed content in the last 12 months,Other,Decrease,1,4
-response_45,Been part of a creative activity or consumed content in the last 12 months,None of these,Increase,21,19
+response_45,Been part of a creative activity or consumed content in the last 12 months,None of these [r] [Note 30],Decrease,4,19
 response_46,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],Mainstream Hollywood Films,,81,0
 response_47,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],British films with mainly a British cast or locations,,27,0
 response_48,Watched a film at a cinema in the last 12 months [Note 5] [Note 6],"Independent films, not backed by a major film studio",,12,0
@@ -84,5 +84,5 @@ response_82,Barriers to engaging with the arts in the last 12 months,The opening
 response_83,Barriers to engaging with the arts in the last 12 months,Due to COVID-19 restrictions or concerns,Decrease,3,12
 response_84,Barriers to engaging with the arts in the last 12 months,Some other reason,Decrease,0,1
 response_85,Barriers to engaging with the arts in the last 12 months,No reason in particular,No Change,28,26
-response_86,Engaged with the arts physically and digitally in the last 12 months,Total,Increase,35,27
-response_87,Engaged with the arts physically or digitally in the last 12 months,Total,Increase,91,90
+response_86,Engaged with the arts physically and digitally in the last 12 months [r] [Note 30],Total,Increase,35,27
+response_87,Engaged with the arts physically or digitally in the last 12 months [r] [Note 30],Total,Increase,91,90
