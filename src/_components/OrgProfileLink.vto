@@ -5,11 +5,6 @@ css: |
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    font-size: 1.1875rem;
-    font-weight: bold;
-    & .title {
-        font-size: 2em;
-    }
     & .org-info {
         display: flex;
         flex-direction: row;
@@ -21,7 +16,7 @@ css: |
     }
   }
 ---
-<{{ tag || 'div' }} data-comp="OrgProfileLink" class="{{ style || page.colour_style || 'bg-offwhite' }}">
+<{{ tag || 'div' }} data-comp="OrgProfileLink" class="{{ style || page.colour_style || 'bg-offwhite' }} link-block">
     <div>
     <p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
     </div>

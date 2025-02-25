@@ -1,10 +1,6 @@
 ---
 css: |
   [data-comp=case-study-link] {
-    font-size: 1.1875em;
-    & h3 {
-      font-size: 2em;
-    }
     & .columns {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -19,10 +15,10 @@ css: |
     }
   }
 ---
-<div data-comp="case-study-link" class="bg-orange-100" style="--cta-text: var(--off-white); --cta-bg: var(--col-primary-black);">
+<div data-comp="case-study-link" class="bg-orange-100 link-block increased-contrast" style="--cta-text: var(--off-white); --cta-bg: var(--col-primary-black);">
   <div class="holder padded columns">
     <div class="flow">
-      <h3>{{ page.title }}</h3>
+      <{{ headingLevel || "h2" }} class="title">{{ page.title }}</{{ headingLevel || "h2" }}>
       <img src="{{ page.logo }}" inline>
       {{ page.description |> md }}
       {{ comp.CallToAction({

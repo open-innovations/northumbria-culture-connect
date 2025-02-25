@@ -4,12 +4,7 @@ css: |
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    font-size: 1.1875rem;
-    font-weight: bold;
     gap: 1em;
-    & .title {
-        font-size: 2em;
-    }
     & a {
         color: currentColor;
     }
@@ -21,7 +16,7 @@ css: |
   .block.case-study > * { margin-top: 1rem; }
   .block.case-study > *:first-child { margin-top: 0; }
 ---
-<{{ tag || 'div' }} data-comp="page-link" class="{{ style || page.colour_style || 'bg-offwhite' }}">
+<{{ tag || 'div' }} data-comp="page-link" class="link-block {{ style || page.colour_style || 'bg-offwhite' }}">
     <div class="expand">
     <p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
     {{ page.description |> md }}
