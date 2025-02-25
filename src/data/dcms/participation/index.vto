@@ -10,11 +10,11 @@ tags:
 
 metadata:
     sources:
-        - title: National Lottery Project Grants
-          url: https://nationallottery.dcms.gov.uk/data
-        - title: Total Income of DCMS-funded cultural organisations
-          url: https://www.gov.uk/government/collections/charitable-giving-indicators
-        - title: Participation Survey 2023–24 annual publication
+        #- title: National Lottery Project Grants
+        #  url: https://nationallottery.dcms.gov.uk/data
+        #- title: Total Income of DCMS-funded cultural organisations
+        #  url: https://www.gov.uk/government/collections/charitable-giving-indicators
+        - title: Participation Survey 2023—24 annual publication
           url: https://www.gov.uk/government/statistics/participation-survey-2023-24-annual-publication
 ---
 
@@ -35,10 +35,21 @@ metadata:
 
 
 {{ comp Section }}
-	<h2>National Response</h2> 
-
-	<h3>Physical attendance of arts events</h3>
+	<h2>Adults who engaged with the arts in person</h2>
 	<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
+	{{ comp Dashboard { className:'centred' } }}
+		{{ comp DashboardTile { colour: 'orange' } }}
+			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
+			<p>Nationally</p>
+		{{ /comp }}
+		{{ comp DashboardTile { colour: 'blue'} }}
+			<p class="bang">{{ engagement_participation_survey_23_24_newcastle.find(x => x.Description == 'Adults who engaged with arts in person')['Percentage of respondents 2023/24'] }}%</p>
+			<p>In Newcastle</p>
+		{{ /comp }}
+	{{ /comp }}
+	
+	<h2>Annual change in engagement</h2>
+	<p>National physical engagement with the arts has seen a 1% increase since last year. Local Authority level data only became available in 2023/24 and is therefore not presented here.</p>
 	{{ set physical_attendance_data = headlines.filter(x => x.ID == 'response_1') }}
 	{{ comp.oi.table({ 
 		config: {
@@ -53,8 +64,8 @@ metadata:
 			}
 		})}}
 	
-	<h3>Frequency of attendance of arts events</h3>
-	<p>The most frequent level at which adults attended any arts activity in person.</p>
+	<h2>Frequency of attendance of arts events</h2>
+	<p>The most frequent level at which adults attended any arts activity in person. A breakdown of the different frequencies is not available at Local Authority level.</p>
 
 	{{ set freq_data = headlines.filter(x => x.ID == 'response_2' || x.ID == 'response_3' || x.ID == 'response_4' || x.ID == 'response_5' || x.ID == 'response_6') }}
 	{{ set freq_data = freq_data.map(({ ["Response Breakdown "]: Frequency, ...rest }) => ({...rest, Frequency})) }}
@@ -70,145 +81,74 @@ metadata:
 			width: '100%'
 			}
 		})}}
-	{{# {{ comp Dashboard { className:'centred'} }}
-		{{ comp DashboardTile {} }}
-			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
-			<p>Physically attended an arts event in the last 12 months</p>
-		{{ /comp }}
-		{{ comp DashboardTile {colour:'blue'} }}
-			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Change between 2022/23 and 2023/24'] }}</p>
-			<p>Change between 2022/23 and 2023/24</p>
-		{{ /comp }}
-		{{ comp DashboardTile {colour:'blue'} }}
-			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2022/23'] }}%</p>
-			<p>Response in 2022/23</p>
-		{{ /comp }}
-	{{ /comp }} #}}
-
-	{{# <h3>Frequency of attendance of arts events</h3>
-	<p>The most frequent level at which adults attended any arts activity in person.</p>
-
-
-	{{ comp Dashboard { className:'centred'} }}
-		{{ comp DashboardTile {} }}
-			<p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Percentage of respondents 2023/24'] }}%</p>
-			<p>Attended arts events at least once a week</p>
-		{{ /comp }}
-		{{ comp DashboardTile {colour:'blue'} }}
-			<p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Change between 2022/23 and 2023/24'] }}</p>
-			<p>Change between 2022/23 and 2023/24</p>
-		{{ /comp }}
-		{{ comp DashboardTile {colour:'blue'} }}
-			<p class="bang">{{ headlines.find(x => x.ID == 'response_2')['Percentage of respondents 2022/23'] }}%</p>
-			<p>Response in 2022/23</p>
-		{{ /comp }}
-	{{ /comp }} #}}
-
 {{ /comp }}
 
 {{ comp Section }}
-	<h2>Responses by Local Authority - Newcastle</h2>
-
-
-	<h3>Attendance by event type - Percentage of responses (%)</h3>
-
-	{{ comp.oi.chart.bar({
-		config: {
-			data: attendance_participation_survey_23_24_newcastle,
-			category: "Description",
-			width: 1000,
-			height: 400,
-			series: [
-				{ title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
-			],
-			axis: {
-				x: {
-					max: 60,
-					ticks: [{
-						value: 0,
-						label: '0%'},
-						{
-						value: 20,
-						label: '20%'},
-						{
-						value: 40,
-						label: '40%'},
-						{
-						value: 60,
-						label: '60%'}] 
+	<h2>Newcastle arts engagement data</h2>
+	<figure>
+		{{ comp.oi.chart.bar({
+			config: {
+				data: attendance_participation_survey_23_24_newcastle,
+				category: "Description",
+				width: 1000,
+				height: 400,
+				series: [
+					{ title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
+					],
+				axis: {
+					x: {
+						max: 60,
+						ticks: [{
+							value: 0,
+							label: '0%'},
+							{
+							value: 20,
+							label: '20%'},
+							{
+							value: 40,
+							label: '40%'},
+							{
+							value: 60,
+							label: '60%'}]
+						}
+					}
 				}
-			}
-		}
-	}) }}
+			}) 
+		}}
+		<figcaption class='barchart'>Attendance by event type - Percentage of responses (%)</figcaption>
+	</figure>
 
-
-	<h3>Engagement with arts events - Percentage of responses (%)</h3>
-
-	{{ comp.oi.chart.bar({
-		config: {
-			data: engagement_participation_survey_23_24_newcastle,
-			category: "Description",
-			width: 1000,
-			height: 200,
-			series: [
-				{ title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
-			],
-			axis: {
-				x: {
-					max: 100,
-					ticks: [{
-						value: 0,
-						label: '0%'},
-						{
-						value: 20,
-						label: '20%'},
-						{
-						value: 40,
-						label: '40%'},
-						{
-						value: 60,
-						label: '60%'},
-						{
-						value: 80,
-						label: '80%'},
-						{
-						value: 100,
-						label: '100%'}]
+	<figure>
+		{{ comp.oi.chart.bar({
+			config: {
+				data: participation_survey_23_24_newcastle,
+				width: 1000,
+				height: 400,
+				category: "Description",
+				series: [
+					{ title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
+				],
+				axis: {
+					x: {
+						max: 60,
+						ticks: [{
+							value: 0,
+							label: '0%'},
+							{
+							value: 20,
+							label: '20%'},
+							{
+							value: 40,
+							label: '40%'},
+							{
+							value: 60,
+							label: '60%'}],
+						}
+					}
 				}
-			}
-		}
-	}) }}
-
-
-
-	<h3>Participation in arts activities - Percentage of responses (%)</h3>
-
-	{{ comp.oi.chart.bar({
-		config: {
-			data: participation_survey_23_24_newcastle,
-			width: 1000,
-			height: 400,
-			category: "Description",
-			series: [
-				{ title: "Percentage of respondents 2023/24", value: "Percentage of respondents 2023/24", tooltip: "<strong>{{ Description }}</strong><br />Percentage of respondents: {{ Percentage of respondents 2023/24 }}%" }
-			],
-			axis: {
-				x: {
-					max: 60,
-					ticks: [{
-						value: 0,
-						label: '0%'},
-						{
-						value: 20,
-						label: '20%'},
-						{
-						value: 40,
-						label: '40%'},
-						{
-						value: 60,
-						label: '60%'}],
-				}
-			}
-		}
-	}) }}
+			}) 
+		}}
+		<figcaption class='barchart'>Participation in arts activities - Percentage of responses (%)</figcaption>
+	</figure>
+	
 {{ /comp }}
