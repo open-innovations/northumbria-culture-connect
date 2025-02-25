@@ -20,6 +20,7 @@ duckdb = "*"
 dvc = "*"
 papermill = "*"
 nbconvert = "*"
+odfpy = "*"
 
 [dev-packages]
 
