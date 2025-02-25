@@ -6,5 +6,5 @@ breadcrumbs:
  - title: Tools
    url: /tools/
 
-colour_scale: bg-teal-100
+colour_style: bg-teal-100
 hideTags: true

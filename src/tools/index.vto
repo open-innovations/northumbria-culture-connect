@@ -9,7 +9,7 @@ colour_style: bg-grey
 <section class="padded holder">
 {{ comp AutoGrid }}
 {{ for p of search.pages('tools !index', 'title') }}
-    {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+    {{ comp.PageLink({ page: p, config: { withTags: false } }) }}
 {{ /for }}
 {{ /comp }}
 </section>
