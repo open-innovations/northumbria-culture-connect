@@ -141,4 +141,6 @@ site.process(['.html'], (pages) => {
     site.copy(target);
 });
 
+site.copy(['.csv'])
+
 export default site;

@@ -97,7 +97,9 @@ def download_360_giving():
         'min_date': '01/2020',
         'recipientRegionName': 'North East',
         'recipientTSGType': 'Organisation',
-        'bestCountyName': 'Newcastle upon Tyne',
+        'recipientOrgRegionName': 'North East',
+        'recipientOrgCountyName': 'Newcastle upon Tyne',
+        'sort': 'awardDate asc',
     }
 
     url = 'https://grantnav.threesixtygiving.org/search.csv?' + urlencode(params)

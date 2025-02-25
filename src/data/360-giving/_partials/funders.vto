@@ -1,0 +1,22 @@
+<h2>Funders</h2>
+
+<div class="holder">
+<table style="margin-inline: auto;">
+    <thead>
+        <tr>
+            <th scope="col">Funding Organisation</th>
+            <th scope="col">Number of awards</th>
+            <th scope="col">Value of awards</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ for name, details of Object.entries(funders).toSorted((a, b) => b[1].funding - a[1].funding) }}
+        <tr>
+            <th scope="row">{{ details[0] }}</th>
+            <td class="centred">{{ details[1].grants }}</td>
+            <td class="centred">{{ details[1].funding |> displayCurrency }}</td>
+        </div>
+        {{ /for }}
+    </tbody>
+</table>
+</div>

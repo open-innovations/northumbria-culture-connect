@@ -1,0 +1,24 @@
+<h2>Recipients</h2>
+
+<p>
+    This table shows funding for organisations where the level of funding is greater than £{{ funding_clip |> toLocaleString }}.
+</p>
+
+<table style="margin-inline: auto;">
+    <thead>
+        <tr>
+            <th scope="col">Organisation name</th>
+            <th scope="col">Number of awards</td>
+            <th scope="col">Total amount</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{ for o of by_recipient.toSorted((a, b) => b['Amount Awarded'] - a['Amount Awarded']).filter(x => x['Amount Awarded'] > funding_clip) }}
+        <tr>
+            <th scope="row">{{ o['Recipient Org:Name'] }}</th>
+            <td class="centred">{{ o.Number }}</td>
+            <td class="centred">£{{ o['Amount Awarded'] |> Math.round |> toLocaleString }}</td>
+        </tr>
+        {{ /for }}
+    </tbody>
+</table>

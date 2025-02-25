@@ -1,0 +1,36 @@
+<h2>Large funds</h2>
+
+<p>
+	This table shows grant programmes or funders (where grant programme not specified)
+	with a fund size greater or equal to {{ funding_clip |> displayCurrency }},
+	sorted by most recent.
+</p>
+
+<table>
+<thead>
+<tr>
+	<th>Funding Organisation</th>
+	<th>Grant Programme</th>
+	<th>Grants</th>
+	<th>Total Funding</th>
+	<th>Average Award</th>
+	<th>Date Range</th>
+</tr>
+</thead>
+
+<tbody>
+{{ for r of by_programme
+	.filter(x => x.Funding >= funding_clip)
+	.toSorted((a, b) => b['Funding'] - a['Funding'])
+}}
+	<tr>
+		<td>{{ r['Funding Org:Name'] }}</td>
+		<td>{{ r['Grant Programme:Title'] }}</td>
+		<td class="centred">{{ r['Grants'] }}</td>
+		<td class="centred">{{ r['Funding'] |> displayCurrency }}</td>
+		<td class="centred">{{ r['Average Grant'] |> displayCurrency }}</td>
+		<td class="centred">{{ r['Earliest Award Date'] |> date('HUMAN_DATE') }} to {{ r['Latest Award Date'] |> date('HUMAN_DATE') }}</td>
+	</tr>
+{{ /for }}
+</tbody>
+</table>

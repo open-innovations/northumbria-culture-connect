@@ -1,0 +1,58 @@
+<h2>Total Funding</h2>
+
+<div style="display:flex;flex-wrap:wrap;gap:1rem;">
+
+    <div style="flex-basis: 30rem; flex-shrink: 0; flex-grow: 1;">
+    {{ comp.oi.chart.line({
+        config: {
+            data: summary_by_month,
+            columns: [{
+                name: 'nice_date',
+                template:  "{{Award Date | strptime('%Y-%m-%d') | strftime('%e %B %Y')}}"
+                },
+                {
+                name: 'decimal_date',
+                template:  "{{Award Date | strptime('%Y-%m-%d') | decimalYear() }}"
+                }],
+            series: [
+                { title: 'Funding by month', x: 'decimal_date', y: 'Amount Awarded', tooltip: "<strong>Funding by month</strong><br /> {{ nice_date }}: £{{ Amount Awarded | toLocaleString() }}" }
+            ],
+            axis: {
+                x: {
+                    grid: { show: true },
+                    tick: { spacing: 1 }
+                },
+                y: {
+                    min: 0,
+                    grid: { show: true },
+                    ticks: [{
+                        label: '£5M',
+                        value: 5000000},
+                        {
+                        label: '£10M',
+                        value: 10000000},
+                        {
+                        label: '£15M',
+                        value: 15000000},
+                        {
+                        label: '£20M',
+                        value: 20000000},
+                        {
+                        label: '£25M',
+                        value: 25000000 }]
+                },
+            }
+        }
+    }) }}
+    </div>
+
+    <div style="flex-basis: 30rem;flex-shrink:1;flex-grow:1;">
+        <p>
+            The chart shows funding per month since January 2020.
+        </p>
+        <p>
+            FORMATTING TO BE FIXED.
+        </p>
+    </div>
+
+</div>
