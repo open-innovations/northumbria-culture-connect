@@ -15,7 +15,10 @@ css: |
             &:hover {
                 color: inherit;
             }
-            img { height: 4.25rem; width: 22.8125rem; }
+            img, svg {
+                height: 4.25rem;
+                width: min(22.8125rem, 70vw);
+            }
         }
     }
     @media only screen and (max-width: 1484px) {
