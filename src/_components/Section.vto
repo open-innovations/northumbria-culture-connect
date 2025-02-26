@@ -1,6 +1,13 @@
 ---
+css: |
+    [data-comp=section]{
+        border-bottom: 1px solid var(--col-darkgrey);
+    }
+    [data-comp=section]:last-child{
+        border-bottom: 0;
+    }
 ---
 
-<section class="padded holder"{{ if style }} style="{{ style }}"{{ /if }}>
+<section data-comp="section" class="padded holder"{{ if style }} style="{{ style }}"{{ /if }}>
 {{ content }}
 </section>
