@@ -14,6 +14,7 @@ import svgo from 'lume/plugins/svgo.ts';
 import transformImages from 'lume/plugins/transform_images.ts';
 import inline from "lume/plugins/inline.ts";
 import redirects from "lume/plugins/redirects.ts"
+import getFiles, { exists, fileExt, trimPath, fmtFileSize } from "https://deno.land/x/getfiles/mod.ts";
 
 // import mermaid from "jsr:@ooker777/lume-mermaid-plugin/";
 
@@ -141,6 +142,19 @@ site.process(['.html'], (pages) => {
     site.copy(target);
 });
 
-site.copy(['.csv'])
+// Copy over any "_data/*.csv" files
+const files = getFiles({
+	root:site.src(),
+	exclude: ['.git'],
+	ignore: ['**/*.md', '**/*.ts', '**/*.yml', '**/*.yaml', '**/*.vto', '**/*.css', '**/*.js', '**/*.json', '**/*.geojson']
+});
+files.forEach(file => {
+	var path = file.path.replace(site.src(),'').replace(/^\//,'');
+	var include = "/_data/release/";
+	if(file.ext == "csv"){
+		let i = path.lastIndexOf(include);
+		if(i > 0) site.copy(path,path.substr(0,i)+path.substr(i+include.length-1));
+	}
+});
 
 export default site;

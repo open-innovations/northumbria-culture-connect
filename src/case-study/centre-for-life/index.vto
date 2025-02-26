@@ -20,670 +20,692 @@ order: 10
 ---
 
 {{ comp Section }}
-<h1>Understanding our Visitors' Experience</h1>
+	<h1>Understanding our Visitors' Experience</h1>
 
-<p>
-The Centre for Life is a thriving science hub and part of the cultural fabric of the North East. 
-</p>
+	<p>
+	The Centre for Life is a thriving science hub and part of the cultural fabric of the North East. 
+	</p>
 
-<p>
-While the centre remains a popular attraction, like many venues, it has experienced lower visitor numbers in recent years following the Covid-19 pandemic. 
-</p>
+	<p>
+	While the centre remains a popular attraction, like many venues, it has experienced lower visitor numbers in recent years following the Covid-19 pandemic. 
+	</p>
 
-<p>
-The Centre for Life took part in the data observatory pilot to:
-</p>
+	<p>
+	The Centre for Life took part in the data observatory pilot to:
+	</p>
 
-<ul>
-	<li>Make more of the data they already collect.</li>
-	<li>Gain a better understanding of their visitors’ experience and their impact.</li>
-	<li>Promote transparency and enable others to learn from their findings.</li>
-</ul>
+	<ul>
+		<li>Make more of the data they already collect.</li>
+		<li>Gain a better understanding of their visitors’ experience and their impact.</li>
+		<li>Promote transparency and enable others to learn from their findings.</li>
+	</ul>
 {{ /comp }}
 
 {{ comp Section }}
 
-<h2>Aims</h2>
+	<h2>Aims</h2>
 
-<p>The Centre for Life regularly collects data on visitors and their experience of coming to the venue.</p>
+	<p>The Centre for Life regularly collects data on visitors and their experience of coming to the venue.</p>
 
-<p>They use a combination of:</p>
+	<p>They use a combination of:</p>
 
-<ul>
-	<li>Online surveys</li>
-	<li>Face-to-face popup surveys</li>
-	<li>A ‘mystery visit’ scheme</li>
-	<li>Regular focus groups</li>
-</ul>
+	<ul>
+		<li>Online surveys</li>
+		<li>Face-to-face popup surveys</li>
+		<li>A ‘mystery visit’ scheme</li>
+		<li>Regular focus groups</li>
+	</ul>
 
-<p>However, as a small organisation, they have limited capacity to analyse and act on these findings.</p>
+	<p>However, as a small organisation, they have limited capacity to analyse and act on these findings.</p>
 
-<p><strong>By using the data observatory, the Centre for Life hoped to:</strong></p>
+	<p><strong>By using the data observatory, the Centre for Life hoped to:</strong></p>
 
-<ul>
-	<li>improve visitors’ experience</li>
-	<li>increase visitor numbers and annual memberships</li>
-	<li>better understand access needs to deliver their ambition of being ‘the country’s most accessible science centre’</li>
-	<li>evidence impact on visitors to help secure future funding</li>
-</ul>
+	<ul>
+		<li>improve visitors’ experience</li>
+		<li>increase visitor numbers and annual memberships</li>
+		<li>better understand access needs to deliver their ambition of being ‘the country’s most accessible science centre’</li>
+		<li>evidence impact on visitors to help secure future funding</li>
+	</ul>
 
-<p>They also hoped to demonstrate the value of collecting and sharing data and to encourage wider data sharing across the cultural sector.</p>
-{{ /comp }}
-
-
-{{ comp Section }}
-
-<h2>Data Collection</h2>
-
-<p>The data observatory brought data to life from a sample of 1,296 visitors, including:</p>
-
-<ul>
-	<li>594 face to face surveys during visits</li>
-	<li>626 post-visit online surveys</li>
-	<li>76 unmoderated responses from interactive tablets based around the venue</li>
-</ul>
-
-<p>
-These methods gathered visitor demographic data as well as feedback on visitors’ experience at the centre, what they enjoyed, reflections on the accessibility of the venue and areas for improvement.
-</p>
+	<p>They also hoped to demonstrate the value of collecting and sharing data and to encourage wider data sharing across the cultural sector.</p>
 {{ /comp }}
 
 
 {{ comp Section }}
 
-<h2>Data Analysis</h2>
+	<h2>Data Collection</h2>
 
-<h3>Demographics</h3>
+	<p>The data observatory brought data to life from a sample of 1,296 visitors, including:</p>
 
-<h3>Visitor Age Range</h3>
-{{ comp.oi.chart.bar({
-	config: {
-		data: demographics.demographics,
-		category: "Survey Type",
-		width: 1000, 
-		height: 300,
-		stacked: true,
-		percent: true, 
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-			{ title: "Adults aged 18 - 29", value: "Adults aged 18 - 29", tooltip: "Adults aged 18 - 29<br>{{ Survey Type }}: {{ Adults aged 18 - 29 }}%" },
-			{ title: "Adults aged 30 - 44", value: "Adults aged 30 - 44", tooltip: "Adults aged 30 - 44<br>{{ Survey Type }}: {{ Adults aged 30 - 44 }}%" },
-			{ title: "Adults aged 45 - 59", value: "Adults aged 45 - 59", tooltip: "Adults aged 45 - 59<br>{{ Survey Type }}: {{ Adults aged 45 - 59 }}%" },
-			{ title: "Adults aged 60+", value: "Adults aged 60+", tooltip: "Adults aged 60+<br>{{ Survey Type }}: {{ Adults aged 60+ }}%" },
-			{ title: "Children aged 14 - 17", value: "Children aged 14 - 17", tooltip: "Children aged 14 - 17<br>{{ Survey Type }}: {{ Children aged 14 - 17 }}%" },
-			{ title: "Children aged 2 or under", value: "Children aged 2 or under", tooltip: "Children aged 2 or under<br>{{ Survey Type }}: {{ Children aged 2 or under }}%" },
-			{ title: "Children aged 3 - 7", value: "Children aged 3 - 7", tooltip: "Children aged 3 - 7<br>{{ Survey Type }}: {{ Children aged 3 - 7 }}%" },
-			{ title: "Children aged 8 - 13", value: "Children aged 8 - 13", tooltip: "Children aged 8 - 13<br>{{ Survey Type }}: {{ Children aged 8 - 13 }}%" }
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }}
+	<ul>
+		<li>594 face to face surveys during visits</li>
+		<li>626 post-visit online surveys</li>
+		<li>76 unmoderated responses from interactive tablets based around the venue</li>
+	</ul>
 
-<p>
-The Centre for Life found that the majority of their visitors were family groups with young children. Children aged 3 to 7 years and 8 to 13 years were the largest share of visitors.
-</p>
-
-<p>
-The data shows that younger families were more likely to complete the face-to-face survey, while families with older children were more likely to fill in the online survey. This understanding could help Centre for Life to cater for different demographics in future.
-</p>
-
-<h3>Disability</h3>
-{{ comp.oi.chart.bar({
-	config: {
-		data: demographics.demographics,
-		category: "Survey Type",
-		width: 1000, 
-		height: 300,
-		stacked: true,
-		percent: true, 
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-			{ title: "Yes", value: "Yes", tooltip: "Yes<br>{{ Survey Type }}: {{ Yes }}%" },
-			{ title: "No (or not given)", value: "No (or not given)", tooltip: "No (or not given)<br>{{ Survey Type }}: {{ No (or not given) }}%" },
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }}
-
-<p>
-17% of online respondents disclosed they had a disability compared with 11% of face to face respondents. This could suggest that the survey method influenced reporting, or that people with disabilities were more likely to respond online.
-</p>
-
-<p>
-Unmoderated surveys could be a better method for understanding their visitors’ accessibility needs. This would need to be balanced against potentially excluding those with low digital literacy.
-</p>
-
-<h3>Visitor experience</h3>
-
-<p>
-Data gathered on visitor experience included the duration of visits, satisfaction scores for different areas of the centre, and a range of feedback questions.
-</p>
-
-<h3>Duration of Visit</h3>
-{{ comp.oi.chart.bar({
-	config: {
-		data: visit_duration.duration,
-		category: "Survey Type",
-		width: 1000, 
-		height: 300,
-		stacked: true,
-		percent: true, 
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-			{ title: "Under 1 hour", value: "Under 1 hour", tooltip: "Under 1 hour<br>{{ Survey Type }}: {{ Under 1 hour }}%" },
-			{ title: "1-1.5 hours", value: "1-1.5 hours", tooltip: "1-1.5 hours<br>{{ Survey Type }}: {{ 1-1.5 hours }}%" },
-			{ title: "1.5-2 hours", value: "1.5-2 hours", tooltip: "1.5-2 hours<br>{{ Survey Type }}: {{ 1.5-2 hours }}%" },
-			{ title: "2-3 hours", value: "2-3 hours", tooltip: "2-3 hours<br>{{ Survey Type }}: {{ 2-3 hours }}%" },
-			{ title: "Over 3 hours", value: "Over 3 hours", tooltip: "Over 3 hours<br>{{ Survey Type }}: {{ Over 3 hours }}%" },
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }}
-
-<p>
-The data showed that most visitors spent more than 2 hours in the centre, with those responding online tending to have longer visit times.
-</p>
-
-<h3>Online Surveys</h3>
-<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>626 people</strong> completed the survey online.
-</p>
-
-{{ comp.oi.chart.bar({
-	config: {
-		data: satisfaction_scores.online_percentage_score
-            .sort((a, b) => b['Very satisfied'] - a['Very satisfied']),
-		category: "exhibit",
-		width: 1000, 
-		height: 300,
-		stacked: true,
-		percent: true,
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-            { title: "Very satisfied", value: "Very satisfied", tooltip: "Very satisfied<br>{{ exhibit }}: {{ Very satisfied }}%" },
-            { title: "Somewhat satisfied", value: "Somewhat satisfied", tooltip: "Somewhat satisfied<br>{{ exhibit }}: {{ Somewhat satisfied }}%" },
-            { title: "Neither satisfied nor dissatisfied", value: "Neither satisfied nor dissatisfied", tooltip: "Neither satisfied nor dissatisfied<br>{{ exhibit }}: {{ Neither satisfied nor dissatisfied }}%" },
-            { title: "Somewhat dissatisfied", value: "Somewhat dissatisfied", tooltip: "Somewhat dissatisfied<br>{{ exhibit }}: {{ Somewhat dissatisfied }}%" },
-            { title: "Very dissatisfied", value: "Very dissatisfied", tooltip: "Very dissatisfied<br>{{ exhibit }}: {{ Very dissatisfied }}%" },
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }}
-
-
-<h3>Satisfaction Scores by Exhibit: Face to Face Survey Responses</h3>
-<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>594 people</strong> completed the survey in person at the centre.
-</p>
-
-{{ comp.oi.chart.bar({
-	config: {
-		data: satisfaction_scores.f2f_percentage_total
-            .sort((a, b) => b['Very satisfied'] - a['Very satisfied']),
-		category: "exhibit",
-		width: 1000, 
-		height: 300,
-		stacked: true,
-		percent: true,
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-            { title: "Very satisfied", value: "Very satisfied", tooltip: "Very satisfied<br>{{ exhibit }}: {{ Very satisfied }}%" },
-            { title: "Somewhat satisfied", value: "Somewhat satisfied", tooltip: "Somewhat satisfied<br>{{ exhibit }}: {{ Somewhat satisfied }}%" },
-            { title: "Neither satisfied nor dissatisfied", value: "Neither satisfied nor dissatisfied", tooltip: "Neither satisfied nor dissatisfied<br>{{ exhibit }}: {{ Neither satisfied nor dissatisfied }}%" },
-            { title: "Somewhat dissatisfied", value: "Somewhat dissatisfied", tooltip: "Somewhat dissatisfied<br>{{ exhibit }}: {{ Somewhat dissatisfied }}%" },
-            { title: "Very dissatisfied", value: "Very dissatisfied", tooltip: "Very dissatisfied<br>{{ exhibit }}: {{ Very dissatisfied }}%" },
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }}
-
-
-{{# 
-<h3>Satisfaction Scores by Exhibit - Tablet Survey Responses</h3>
-<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>77 people</strong> completed the survey using a tablet in the centre.
-</p>
-{{ comp.oi.chart.bar({
-	config: {
-		data: satisfaction_scores.tablet_percentage_total
-            .sort((a, b) => b['Very satisfied'] - a['Very satisfied']),
-		category: "exhibit",
-		width: 1000, 
-		height: 100,
-		stacked: true,
-		percent: true,
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-            { title: "Very satisfied", value: "Very satisfied", tooltip: "Very satisfied<br>{{ exhibit }}: {{ Very satisfied }}%" },
-            { title: "Somewhat satisfied", value: "Somewhat satisfied", tooltip: "Somewhat satisfied<br>{{ exhibit }}: {{ Somewhat satisfied }}%" },
-            { title: "Neither satisfied nor dissatisfied", value: "Neither satisfied nor dissatisfied", tooltip: "Neither satisfied nor dissatisfied<br>{{ exhibit }}: {{ Neither satisfied nor dissatisfied }}%" },
-            { title: "Somewhat dissatisfied", value: "Somewhat dissatisfied", tooltip: "Somewhat dissatisfied<br>{{ exhibit }}: {{ Somewhat dissatisfied }}%" },
-            { title: "Very dissatisfied", value: "Very dissatisfied", tooltip: "Very dissatisfied<br>{{ exhibit }}: {{ Very dissatisfied }}%" },
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }} #}}
-
-<p>
-Visitors rated all exhibitions and zones consistently highly. However, there was some difference between online and face-to-face respondents’ satisfaction scores. Online responses showed a preference for more interactive exhibits and live shows.
-</p>
-
-<p>
-[QUOTE BOX]: “The experiments for older children were fantastic. By far the best experience we’ve ever had at a science museum.”
-</p>
-
-<p>
-A small number of online respondents (3%) were ‘very dissatisfied’ with two of the zones, which could suggest these are less popular with specific groups.
-</p>
-
-<p>
-Qualitative data showed that those with older children enjoyed the more interactive areas.
-</p>
-
-<p>
-The lower satisfaction ratings likely reflect the experiences of families with younger children who were unable to participate in these activities. The Experiment Zone has an age restriction for those over the age of 7 years.
-</p>
-
-<h3>Impact of the Centre</h3>
-
-<p>
-Overall, they found that visitors consistently had a positive experience at the Centre, enjoyed the variety of activities and found it good value for money.
-</p>
-
-<p>
-The qualitative feedback questions showed that generally visitors:
-</p>
-
-<ul>
-	<li>enjoyed how interactive and hands-on the exhibits are</li>
-	<li>found staff friendly and helpful</li>
-	<li>thought the centre was inclusive and accessible, with a safe and spacious layout</li>
-</ul>
-
-
-<h3>Online Survey Responses</h3>
-{{ comp.oi.chart.bar({
-	config: {
-		data: statements.online_statements,
-		category: "Question",
-		width: 1250, 
-		height: 500,
-		percent: true,
-		stacked: true,
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-            { title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
-            { title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
-            { title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
-            { title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
-            { title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
-            { title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }}
-
-<h3>Face to Face & Tablet Survey Responses</h3>
-{{ comp.oi.chart.bar({
-	config: {
-		data: statements.f2f_tablet_statements,
-		category: "Question",
-		width: 1250, 
-		height: 500,
-		percent: true,
-		stacked: true,
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-            { title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
-            { title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
-            { title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
-            { title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
-            { title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
-            { title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
-        ],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
-				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
-				}
-			}
-		}
-	}
-}) }}
-
-<p>
-The data analysis team identified key positive themes about the impact on visitors based on qualitative feedback from open-ended text responses:
-</p>
-
-<ul>
-<li>fun and engagement: children had hours of fun at the Centre.</li>
-<li>learning, education and skills development: visitors commonly used terms like ‘educational’, ‘informative’ and ‘interesting’.</li>
-<li>interest in science:  visitors mentioned science being made fun, interactive and accessible.</li>
-<li>family bonding and memories: the greatest value some visitors got was having a wonderful ‘family day out’.</li>
-</ul>
-
-<p>[QUOTE BOX] “We were all equally captivated by the experience, making it a perfect outing for our family.”</p>
-
-<h3>Areas for Improvement</h3>
-
-<p>
-They also identified common themes for improvement:
-</p>
-
-<ul>
-	<li>quality of exhibits and shows: some exhibits were not fully functional or open and some children were not engaged in shows.</li>
-	<li>value for money: some visitors felt the tickets were too expensive and would’ve liked family discounts.</li>
-	<li>inclusion and accessibility: some families with neurodivergent members suggested introducing a quiet area, and the Centre could be more accessible for wheelchair users. Some younger children also felt excluded by age restrictions in certain interactive zones.</li>
-</ul>
-
-<p>
-The accessibility findings were particularly relevant for Life’s aim to become the most accessible science centre. While positive feedback showed that families with neurodivergent children and people with disabilities felt welcomed and included, the Centre could create more practical spaces to cater to different needs.
-</p>
-
-<p>[QUOTE BOX] “Felt included and supported as a neurodiverse family. The staff were helpful and friendly.”</p>
-
-<p>Some also suggested that Life could include more content to interest older learners.</p>
-
-<p>[QUOTE BOX] “I would have liked to have seen an area that was more adult orientated. It seemed like a missed ‘target market’ opportunity.”</p>
-{{ /comp }}
-
-{{ comp Section }}
-
-<h2>Key Learnings</h2>
-
-<h3>Data Collection Methods</h3> 
-
-<p>
-The data analysis team observed some differences in the nature of responses collected online vs face-to-face. 
-</p>
-
-<p>
-For example, face-to-face popup surveys in the Centre tended to have far less detailed responses, and skewed more positive.
-</p>
-
-<p>
-Online responses were more detailed and critical, but this method may risk excluding people with lower digital literacy and limits the ability to ask clarifying questions. It also tends to attract a more self-selecting audience, rather than the random sampling of face-to-face methods.
-</p>
-
-<p>
-This helps the Centre for Life to reconsider the best research methodologies to use when collecting different kinds of data in future.
-</p>
-
-<h3>Measuring longer term impact</h3>
-
-<p>
-The current approach to short term evaluation in data collection makes it difficult to assess longer term impact on visitors. For example, whether children have a sustained increased interest in science.
-</p>
-
-<p>
-The Centre for Life could consider a mixed methods approach to gather this data, such as gathering data about impact in the months and years following a visit.
-</p>
+	<p>
+	These methods gathered visitor demographic data as well as feedback on visitors’ experience at the centre, what they enjoyed, reflections on the accessibility of the venue and areas for improvement.
+	</p>
 {{ /comp }}
 
 
 {{ comp Section }}
-<h2>Next Steps</h2>
 
-<p>
-The pilot study has given the Centre for Life a better way to represent, understand and communicate their impact, to develop their offer and inform future delivery.
-</p>
+	<h2>Data Analysis</h2>
 
-<p>
-The study has laid the foundation for a more comprehensive impact assessment, strengthening Centre for Life’s ability to articulate its effectiveness to stakeholders and funders. As competition for external funding increases, the ability to clearly demonstrate impact is not only beneficial but essential.
-</p>
+	<h3>Demographics</h3>
 
-<p>
-The insights gathered during this pilot are helping shape programme development, ensuring that visitor needs are fully integrated into planning.
-</p>
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Visitor Age Range</h4>
 
-<p>
-As a direct outcome of the pilot, Centre for Life is now reviewing all its data to inform its evaluation and feedback strategy for the years 2025 and 2026. 
-</p>
+		{{ comp SaveableVisualisation {id: 'age-range', file: "demographics.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.demographics,
+					category: "Survey Type",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Adults aged 18 - 29", value: "Adults aged 18 - 29", tooltip: "Adults aged 18 - 29<br>{{ Survey Type }}: {{ Adults aged 18 - 29 }}%" },
+						{ title: "Adults aged 30 - 44", value: "Adults aged 30 - 44", tooltip: "Adults aged 30 - 44<br>{{ Survey Type }}: {{ Adults aged 30 - 44 }}%" },
+						{ title: "Adults aged 45 - 59", value: "Adults aged 45 - 59", tooltip: "Adults aged 45 - 59<br>{{ Survey Type }}: {{ Adults aged 45 - 59 }}%" },
+						{ title: "Adults aged 60+", value: "Adults aged 60+", tooltip: "Adults aged 60+<br>{{ Survey Type }}: {{ Adults aged 60+ }}%" },
+						{ title: "Children aged 14 - 17", value: "Children aged 14 - 17", tooltip: "Children aged 14 - 17<br>{{ Survey Type }}: {{ Children aged 14 - 17 }}%" },
+						{ title: "Children aged 2 or under", value: "Children aged 2 or under", tooltip: "Children aged 2 or under<br>{{ Survey Type }}: {{ Children aged 2 or under }}%" },
+						{ title: "Children aged 3 - 7", value: "Children aged 3 - 7", tooltip: "Children aged 3 - 7<br>{{ Survey Type }}: {{ Children aged 3 - 7 }}%" },
+						{ title: "Children aged 8 - 13", value: "Children aged 8 - 13", tooltip: "Children aged 8 - 13<br>{{ Survey Type }}: {{ Children aged 8 - 13 }}%" }
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+	<p>
+	The Centre for Life found that the majority of their visitors were family groups with young children. Children aged 3 to 7 years and 8 to 13 years were the largest share of visitors.
+	</p>
 
-<p>
-The Centre for Life hopes to encourage similar organisations to collect and share data on the data observatory so they can set benchmarks and compare activities.
-</p>
+	<p>
+	The data shows that younger families were more likely to complete the face-to-face survey, while families with older children were more likely to fill in the online survey. This understanding could help Centre for Life to cater for different demographics in future.
+	</p>
 
-<p>[QUOTE BOX] “Many organisations like ours are still trying to understand the change in visitor expectations and behaviour post COVID. We operate with limited resources, and in sharing case studies, data and methodologies, we can help build a case for our collective impact.” - Bethan Ross, Head of Experience and Audience Research.</p>
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h3>Disability</h3>
+
+		{{ comp SaveableVisualisation {id: 'disability', file: "demographics.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.demographics,
+					category: "Survey Type",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Yes", value: "Yes", tooltip: "Yes<br>{{ Survey Type }}: {{ Yes }}%" },
+						{ title: "No (or not given)", value: "No (or not given)", tooltip: "No (or not given)<br>{{ Survey Type }}: {{ No (or not given) }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+	<p>
+	17% of online respondents disclosed they had a disability compared with 11% of face to face respondents. This could suggest that the survey method influenced reporting, or that people with disabilities were more likely to respond online.
+	</p>
+
+	<p>
+	Unmoderated surveys could be a better method for understanding their visitors’ accessibility needs. This would need to be balanced against potentially excluding those with low digital literacy.
+	</p>
+
+	<h3>Visitor experience</h3>
+
+	<p>
+	Data gathered on visitor experience included the duration of visits, satisfaction scores for different areas of the centre, and a range of feedback questions.
+	</p>
+
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+
+		<h3>Duration of Visit</h3>
+
+		{{ comp SaveableVisualisation {id: 'duration-of-visit', file: "duration.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.duration,
+					category: "Survey Type",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Under 1 hour", value: "Under 1 hour", tooltip: "Under 1 hour<br>{{ Survey Type }}: {{ Under 1 hour }}%" },
+						{ title: "1-1.5 hours", value: "1-1.5 hours", tooltip: "1-1.5 hours<br>{{ Survey Type }}: {{ 1-1.5 hours }}%" },
+						{ title: "1.5-2 hours", value: "1.5-2 hours", tooltip: "1.5-2 hours<br>{{ Survey Type }}: {{ 1.5-2 hours }}%" },
+						{ title: "2-3 hours", value: "2-3 hours", tooltip: "2-3 hours<br>{{ Survey Type }}: {{ 2-3 hours }}%" },
+						{ title: "Over 3 hours", value: "Over 3 hours", tooltip: "Over 3 hours<br>{{ Survey Type }}: {{ Over 3 hours }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+	<p>
+	The data showed that most visitors spent more than 2 hours in the centre, with those responding online tending to have longer visit times.
+	</p>
+
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+
+		<h3>Online Surveys</h3>
+		<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>626 people</strong> completed the survey online.
+		</p>
+
+		{{ comp SaveableVisualisation {id: 'online-survey', file: "online_percentage_score.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.online_percentage_score
+						.sort((a, b) => b['Very satisfied'] - a['Very satisfied']),
+					category: "exhibit",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Very satisfied", value: "Very satisfied", tooltip: "Very satisfied<br>{{ exhibit }}: {{ Very satisfied }}%" },
+						{ title: "Somewhat satisfied", value: "Somewhat satisfied", tooltip: "Somewhat satisfied<br>{{ exhibit }}: {{ Somewhat satisfied }}%" },
+						{ title: "Neither satisfied nor dissatisfied", value: "Neither satisfied nor dissatisfied", tooltip: "Neither satisfied nor dissatisfied<br>{{ exhibit }}: {{ Neither satisfied nor dissatisfied }}%" },
+						{ title: "Somewhat dissatisfied", value: "Somewhat dissatisfied", tooltip: "Somewhat dissatisfied<br>{{ exhibit }}: {{ Somewhat dissatisfied }}%" },
+						{ title: "Very dissatisfied", value: "Very dissatisfied", tooltip: "Very dissatisfied<br>{{ exhibit }}: {{ Very dissatisfied }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h3>Satisfaction Scores by Exhibit: Face to Face Survey Responses</h3>
+		<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>594 people</strong> completed the survey in person at the centre.</p>
+
+		{{ comp SaveableVisualisation {id: 'satisfaction-scores', file: "f2f_percentage_total.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.f2f_percentage_total
+						.sort((a, b) => b['Very satisfied'] - a['Very satisfied']),
+					category: "exhibit",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Very satisfied", value: "Very satisfied", tooltip: "Very satisfied<br>{{ exhibit }}: {{ Very satisfied }}%" },
+						{ title: "Somewhat satisfied", value: "Somewhat satisfied", tooltip: "Somewhat satisfied<br>{{ exhibit }}: {{ Somewhat satisfied }}%" },
+						{ title: "Neither satisfied nor dissatisfied", value: "Neither satisfied nor dissatisfied", tooltip: "Neither satisfied nor dissatisfied<br>{{ exhibit }}: {{ Neither satisfied nor dissatisfied }}%" },
+						{ title: "Somewhat dissatisfied", value: "Somewhat dissatisfied", tooltip: "Somewhat dissatisfied<br>{{ exhibit }}: {{ Somewhat dissatisfied }}%" },
+						{ title: "Very dissatisfied", value: "Very dissatisfied", tooltip: "Very dissatisfied<br>{{ exhibit }}: {{ Very dissatisfied }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+
+	{{# 
+	<h3>Satisfaction Scores by Exhibit - Tablet Survey Responses</h3>
+	<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>77 people</strong> completed the survey using a tablet in the centre.
+	</p>
+	{{ comp.oi.chart.bar({
+		config: {
+			data: release.tablet_percentage_total
+				.sort((a, b) => b['Very satisfied'] - a['Very satisfied']),
+			category: "exhibit",
+			width: 1000, 
+			height: 100,
+			stacked: true,
+			percent: true,
+			legend: {
+				show: true,
+				position: "top"
+			},
+			series: [
+				{ title: "Very satisfied", value: "Very satisfied", tooltip: "Very satisfied<br>{{ exhibit }}: {{ Very satisfied }}%" },
+				{ title: "Somewhat satisfied", value: "Somewhat satisfied", tooltip: "Somewhat satisfied<br>{{ exhibit }}: {{ Somewhat satisfied }}%" },
+				{ title: "Neither satisfied nor dissatisfied", value: "Neither satisfied nor dissatisfied", tooltip: "Neither satisfied nor dissatisfied<br>{{ exhibit }}: {{ Neither satisfied nor dissatisfied }}%" },
+				{ title: "Somewhat dissatisfied", value: "Somewhat dissatisfied", tooltip: "Somewhat dissatisfied<br>{{ exhibit }}: {{ Somewhat dissatisfied }}%" },
+				{ title: "Very dissatisfied", value: "Very dissatisfied", tooltip: "Very dissatisfied<br>{{ exhibit }}: {{ Very dissatisfied }}%" },
+			],
+			axis: {
+				x: {
+					grid: {
+						"stroke-dasharray": "6 2",
+						"stroke-width": 1
+					},
+					ticks: [{
+							"value": 20,
+							"label": "20%"
+						},{
+							"value": 40,
+							"label": "40%"
+						},{
+							"value": 60,
+							"label": "60%"
+						},{
+							"value": 80,
+							"label": "80%"
+						},{
+							"value": 100,
+							"label": "100%"
+						}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
+					}
+				}
+			}
+		}
+	}) }} #}}
+
+	<p>
+	Visitors rated all exhibitions and zones consistently highly. However, there was some difference between online and face-to-face respondents’ satisfaction scores. Online responses showed a preference for more interactive exhibits and live shows.
+	</p>
+
+	<p>
+	[QUOTE BOX]: “The experiments for older children were fantastic. By far the best experience we’ve ever had at a science museum.”
+	</p>
+
+	<p>
+	A small number of online respondents (3%) were ‘very dissatisfied’ with two of the zones, which could suggest these are less popular with specific groups.
+	</p>
+
+	<p>
+	Qualitative data showed that those with older children enjoyed the more interactive areas.
+	</p>
+
+	<p>
+	The lower satisfaction ratings likely reflect the experiences of families with younger children who were unable to participate in these activities. The Experiment Zone has an age restriction for those over the age of 7 years.
+	</p>
+
+	<h3>Impact of the Centre</h3>
+
+	<p>
+	Overall, they found that visitors consistently had a positive experience at the Centre, enjoyed the variety of activities and found it good value for money.
+	</p>
+
+	<p>
+	The qualitative feedback questions showed that generally visitors:
+	</p>
+
+	<ul>
+		<li>enjoyed how interactive and hands-on the exhibits are</li>
+		<li>found staff friendly and helpful</li>
+		<li>thought the centre was inclusive and accessible, with a safe and spacious layout</li>
+	</ul>
+
+
+	<h3>Online Survey Responses</h3>
+	{{ comp.oi.chart.bar({
+		config: {
+			data: release.online_statements,
+			category: "Question",
+			width: 1250, 
+			height: 500,
+			percent: true,
+			stacked: true,
+			legend: {
+				show: true,
+				position: "top"
+			},
+			series: [
+				{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+				{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+				{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
+				{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+				{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+				{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
+			],
+			axis: {
+				x: {
+					grid: {
+						"stroke-dasharray": "6 2",
+						"stroke-width": 1
+					},
+					ticks: [{
+							"value": 20,
+							"label": "20%"
+						},{
+							"value": 40,
+							"label": "40%"
+						},{
+							"value": 60,
+							"label": "60%"
+						},{
+							"value": 80,
+							"label": "80%"
+						},{
+							"value": 100,
+							"label": "100%"
+						}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
+					}
+				}
+			}
+		}
+	}) }}
+
+	<h3>Face to Face & Tablet Survey Responses</h3>
+	{{ comp.oi.chart.bar({
+		config: {
+			data: release.f2f_tablet_statements,
+			category: "Question",
+			width: 1250, 
+			height: 500,
+			percent: true,
+			stacked: true,
+			legend: {
+				show: true,
+				position: "top"
+			},
+			series: [
+				{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+				{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+				{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
+				{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+				{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+				{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
+			],
+			axis: {
+				x: {
+					grid: {
+						"stroke-dasharray": "6 2",
+						"stroke-width": 1
+					},
+					ticks: [{
+							"value": 20,
+							"label": "20%"
+						},{
+							"value": 40,
+							"label": "40%"
+						},{
+							"value": 60,
+							"label": "60%"
+						},{
+							"value": 80,
+							"label": "80%"
+						},{
+							"value": 100,
+							"label": "100%"
+						}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
+					}
+				}
+			}
+		}
+	}) }}
+
+	<p>
+	The data analysis team identified key positive themes about the impact on visitors based on qualitative feedback from open-ended text responses:
+	</p>
+
+	<ul>
+	<li>fun and engagement: children had hours of fun at the Centre.</li>
+	<li>learning, education and skills development: visitors commonly used terms like ‘educational’, ‘informative’ and ‘interesting’.</li>
+	<li>interest in science:  visitors mentioned science being made fun, interactive and accessible.</li>
+	<li>family bonding and memories: the greatest value some visitors got was having a wonderful ‘family day out’.</li>
+	</ul>
+
+	<p>[QUOTE BOX] “We were all equally captivated by the experience, making it a perfect outing for our family.”</p>
+
+	<h3>Areas for Improvement</h3>
+
+	<p>
+	They also identified common themes for improvement:
+	</p>
+
+	<ul>
+		<li>quality of exhibits and shows: some exhibits were not fully functional or open and some children were not engaged in shows.</li>
+		<li>value for money: some visitors felt the tickets were too expensive and would’ve liked family discounts.</li>
+		<li>inclusion and accessibility: some families with neurodivergent members suggested introducing a quiet area, and the Centre could be more accessible for wheelchair users. Some younger children also felt excluded by age restrictions in certain interactive zones.</li>
+	</ul>
+
+	<p>
+	The accessibility findings were particularly relevant for Life’s aim to become the most accessible science centre. While positive feedback showed that families with neurodivergent children and people with disabilities felt welcomed and included, the Centre could create more practical spaces to cater to different needs.
+	</p>
+
+	<p>[QUOTE BOX] “Felt included and supported as a neurodiverse family. The staff were helpful and friendly.”</p>
+
+	<p>Some also suggested that Life could include more content to interest older learners.</p>
+
+	<p>[QUOTE BOX] “I would have liked to have seen an area that was more adult orientated. It seemed like a missed ‘target market’ opportunity.”</p>
+{{ /comp }}
+
+{{ comp Section }}
+
+	<h2>Key Learnings</h2>
+
+	<h3>Data Collection Methods</h3> 
+
+	<p>
+	The data analysis team observed some differences in the nature of responses collected online vs face-to-face. 
+	</p>
+
+	<p>
+	For example, face-to-face popup surveys in the Centre tended to have far less detailed responses, and skewed more positive.
+	</p>
+
+	<p>
+	Online responses were more detailed and critical, but this method may risk excluding people with lower digital literacy and limits the ability to ask clarifying questions. It also tends to attract a more self-selecting audience, rather than the random sampling of face-to-face methods.
+	</p>
+
+	<p>
+	This helps the Centre for Life to reconsider the best research methodologies to use when collecting different kinds of data in future.
+	</p>
+
+	<h3>Measuring longer term impact</h3>
+
+	<p>
+	The current approach to short term evaluation in data collection makes it difficult to assess longer term impact on visitors. For example, whether children have a sustained increased interest in science.
+	</p>
+
+	<p>
+	The Centre for Life could consider a mixed methods approach to gather this data, such as gathering data about impact in the months and years following a visit.
+	</p>
+{{ /comp }}
+
+
+{{ comp Section }}
+	<h2>Next Steps</h2>
+
+	<p>
+	The pilot study has given the Centre for Life a better way to represent, understand and communicate their impact, to develop their offer and inform future delivery.
+	</p>
+
+	<p>
+	The study has laid the foundation for a more comprehensive impact assessment, strengthening Centre for Life’s ability to articulate its effectiveness to stakeholders and funders. As competition for external funding increases, the ability to clearly demonstrate impact is not only beneficial but essential.
+	</p>
+
+	<p>
+	The insights gathered during this pilot are helping shape programme development, ensuring that visitor needs are fully integrated into planning.
+	</p>
+
+	<p>
+	As a direct outcome of the pilot, Centre for Life is now reviewing all its data to inform its evaluation and feedback strategy for the years 2025 and 2026. 
+	</p>
+
+	<p>
+	The Centre for Life hopes to encourage similar organisations to collect and share data on the data observatory so they can set benchmarks and compare activities.
+	</p>
+
+	<p>[QUOTE BOX] “Many organisations like ours are still trying to understand the change in visitor expectations and behaviour post COVID. We operate with limited resources, and in sharing case studies, data and methodologies, we can help build a case for our collective impact.” - Bethan Ross, Head of Experience and Audience Research.</p>
 
 {{ /comp }}
 

@@ -21,25 +21,15 @@ OI.ready(function(){
 		if(!opt) opt = {};
 		if(!opt.file) opt.file = "figure.png";
 		if(opt.hide) opt.hiddenElements = el.querySelectorAll(opt.hide);
-		//console.log('save',opt,el,window.getComputedStyle(el));
-		//var t = el;
-		// Find the background colour of the element
-		//var color = window.getComputedStyle(t).getPropertyValue('background-color');
-		/*
-		while(color=="rgba(0, 0, 0, 0)"){
-			// If it is transparent then we step up
-			t = t.parentNode;
-			color = window.getComputedStyle(t).getPropertyValue('background-color')
-			if(!t) color = "white";
-		}
-		*/
 		if(typeof opt.filter!=="function"){
 			opt.filter = function(node) {
 				var ok = true;
-				for(var i = 0; i < opt.hiddenElements.length; i++){
-					if(opt.hiddenElements[i] == node){
-						ok = false;
-						continue;
+				if(opt.hiddenElements){
+					for(var i = 0; i < opt.hiddenElements.length; i++){
+						if(opt.hiddenElements[i] == node){
+							ok = false;
+							continue;
+						}
 					}
 				}
 				return ok;
