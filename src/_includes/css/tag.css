@@ -1,6 +1,7 @@
 .tag-cloud {
     list-style: none !important;
     padding-inline: 0 !important;
+	margin-inline: 0;
     display: flex;
     gap: 0.25rem 0.5rem;
 	+ * { margin-top: 1rem; }

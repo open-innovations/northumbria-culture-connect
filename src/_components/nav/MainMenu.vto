@@ -79,6 +79,8 @@ css: |
     }
     [data-comp="nav-main-menu"] > ul > li > ul {
         position: absolute;
+        list-style: none;
+        margin-left: 0;
         top: 100%;
         background: var(--menu-bg);
         width: 240px;
@@ -86,6 +88,7 @@ css: |
     }
     [data-comp="nav-main-menu"] > ul > li > a:hover > ul, [data-comp="nav-main-menu"] .has-submenu button[aria-expanded=true] + ul {
         display: block;
+        margin-left: 0;
     }
     [data-comp="nav-main-menu"] > ul > li > ul a {
         display: block;
