@@ -505,7 +505,7 @@ order: 10
 
 
 	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
-		<h3>Online Survey Responses</h3>
+		<h4>Online Survey Responses</h4>
 
 		{{ comp SaveableVisualisation {id: 'impact-online-survey', file: "online_statements.csv" } }}
 			{{ comp.oi.chart.bar({
@@ -521,12 +521,12 @@ order: 10
 						position: "top"
 					},
 					series: [
-						{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
-						{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
-						{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
-						{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
-						{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
-						{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
+						{ title: "Strongly agree", colour: "StrongAgree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", colour: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neither agree nor disagree", colour: "Neither", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
+						{ title: "Disagree", colour: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", colour: "StrongDisagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+						{ title: "Dont know", colour: "DontKnow", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
 					],
 					axis: {
 						x: {
@@ -563,7 +563,7 @@ order: 10
 	{{ /comp }}
 
 	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
-		<h3>Face to Face & Tablet Survey Responses</h3>
+		<h4>Face to Face & Tablet Survey Responses</h4>
 		{{ comp SaveableVisualisation {id: 'impact-face-to-face', file: "f2f_tablet_statements" } }}
 			{{ comp.oi.chart.bar({
 				config: {
@@ -578,12 +578,12 @@ order: 10
 						position: "top"
 					},
 					series: [
-						{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
-						{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
-						{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
-						{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
-						{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
-						{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
+						{ title: "Strongly agree", colour: "StrongAgree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", colour: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neither agree nor disagree", colour: "Neither", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
+						{ title: "Disagree", colour: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", colour: "StrongDisagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+						{ title: "Dont know", colour: "DontKnow", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
 					],
 					axis: {
 						x: {
