@@ -47,3 +47,5 @@ p { max-width: 80em; }
 	width: 1px;
 	white-space: nowrap;
 }
+ul { list-style: square; margin-left: 2rem; }
+ol { list-style: decimal; margin-left: 2rem; }
