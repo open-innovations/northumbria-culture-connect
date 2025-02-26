@@ -129,3 +129,8 @@ a[href="about:blank"] {
   font-size: 1.1875rem;
   font-weight: bold;
 }
+
+blockquote { font-style: normal; margin-inline: 3rem; font-size: 24px; }
+blockquote p { font-style: italic; }
+blockquote cite { font-weight: bold; }
+blockquote cite:before { content: "— "; }

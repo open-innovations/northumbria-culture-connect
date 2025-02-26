@@ -473,9 +473,7 @@ order: 10
 	Visitors rated all exhibitions and zones consistently highly. However, there was some difference between online and face-to-face respondents’ satisfaction scores. Online responses showed a preference for more interactive exhibits and live shows.
 	</p>
 
-	<p>
-	[QUOTE BOX]: “The experiments for older children were fantastic. By far the best experience we’ve ever had at a science museum.”
-	</p>
+	{{ comp Quote {cite:'Visitor'} }}The experiments for older children were fantastic. By far the best experience we’ve ever had at a science museum.{{ /comp }}
 
 	<p>
 	A small number of online respondents (3%) were ‘very dissatisfied’ with two of the zones, which could suggest these are less popular with specific groups.
@@ -506,111 +504,120 @@ order: 10
 	</ul>
 
 
-	<h3>Online Survey Responses</h3>
-	{{ comp.oi.chart.bar({
-		config: {
-			data: release.online_statements,
-			category: "Question",
-			width: 1250, 
-			height: 500,
-			percent: true,
-			stacked: true,
-			legend: {
-				show: true,
-				position: "top"
-			},
-			series: [
-				{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
-				{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
-				{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
-				{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
-				{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
-				{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
-			],
-			axis: {
-				x: {
-					grid: {
-						"stroke-dasharray": "6 2",
-						"stroke-width": 1
-					},
-					ticks: [{
-							"value": 20,
-							"label": "20%"
-						},{
-							"value": 40,
-							"label": "40%"
-						},{
-							"value": 60,
-							"label": "60%"
-						},{
-							"value": 80,
-							"label": "80%"
-						},{
-							"value": 100,
-							"label": "100%"
-						}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) }}
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h3>Online Survey Responses</h3>
 
-	<h3>Face to Face & Tablet Survey Responses</h3>
-	{{ comp.oi.chart.bar({
-		config: {
-			data: release.f2f_tablet_statements,
-			category: "Question",
-			width: 1250, 
-			height: 500,
-			percent: true,
-			stacked: true,
-			legend: {
-				show: true,
-				position: "top"
-			},
-			series: [
-				{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
-				{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
-				{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
-				{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
-				{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
-				{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
-			],
-			axis: {
-				x: {
-					grid: {
-						"stroke-dasharray": "6 2",
-						"stroke-width": 1
+		{{ comp SaveableVisualisation {id: 'impact-online-survey', file: "online_statements.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.online_statements,
+					category: "Question",
+					width: 1250, 
+					height: 500,
+					percent: true,
+					stacked: true,
+					legend: {
+						show: true,
+						position: "top"
 					},
-					ticks: [{
-							"value": 20,
-							"label": "20%"
-						},{
-							"value": 40,
-							"label": "40%"
-						},{
-							"value": 60,
-							"label": "60%"
-						},{
-							"value": 80,
-							"label": "80%"
-						},{
-							"value": 100,
-							"label": "100%"
-						}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
+					series: [
+						{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
+						{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+						{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
 					}
 				}
-			}
-		}
-	}) }}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h3>Face to Face & Tablet Survey Responses</h3>
+		{{ comp SaveableVisualisation {id: 'impact-face-to-face', file: "f2f_tablet_statements" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.f2f_tablet_statements,
+					category: "Question",
+					width: 1250, 
+					height: 500,
+					percent: true,
+					stacked: true,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Strongly agree", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neither agree nor disagree", value: "Neither agree nor disagree", tooltip: "Neither agree nor disagree<br>{{ Question }}: {{ Neither agree nor disagree }}%" },
+						{ title: "Disagree", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+						{ title: "Dont know", value: "Dont know", tooltip: "Dont know<br>{{ Question }}: {{ Dont know }}%" }
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
 	<p>
 	The data analysis team identified key positive themes about the impact on visitors based on qualitative feedback from open-ended text responses:
@@ -623,7 +630,7 @@ order: 10
 	<li>family bonding and memories: the greatest value some visitors got was having a wonderful ‘family day out’.</li>
 	</ul>
 
-	<p>[QUOTE BOX] “We were all equally captivated by the experience, making it a perfect outing for our family.”</p>
+	{{ comp Quote {cite:'Visitor'} }}We were all equally captivated by the experience, making it a perfect outing for our family.{{ /comp }}
 
 	<h3>Areas for Improvement</h3>
 
@@ -641,11 +648,11 @@ order: 10
 	The accessibility findings were particularly relevant for Life’s aim to become the most accessible science centre. While positive feedback showed that families with neurodivergent children and people with disabilities felt welcomed and included, the Centre could create more practical spaces to cater to different needs.
 	</p>
 
-	<p>[QUOTE BOX] “Felt included and supported as a neurodiverse family. The staff were helpful and friendly.”</p>
+	{{ comp Quote {cite:'Visitor'} }}Felt included and supported as a neurodiverse family. The staff were helpful and friendly.{{ /comp }}
 
 	<p>Some also suggested that Life could include more content to interest older learners.</p>
 
-	<p>[QUOTE BOX] “I would have liked to have seen an area that was more adult orientated. It seemed like a missed ‘target market’ opportunity.”</p>
+	{{ comp Quote {cite:'Visitor'} }}I would have liked to have seen an area that was more adult orientated. It seemed like a missed ‘target market’ opportunity.{{ /comp }}
 {{ /comp }}
 
 {{ comp Section }}
@@ -705,7 +712,9 @@ order: 10
 	The Centre for Life hopes to encourage similar organisations to collect and share data on the data observatory so they can set benchmarks and compare activities.
 	</p>
 
-	<p>[QUOTE BOX] “Many organisations like ours are still trying to understand the change in visitor expectations and behaviour post COVID. We operate with limited resources, and in sharing case studies, data and methodologies, we can help build a case for our collective impact.” - Bethan Ross, Head of Experience and Audience Research.</p>
+	{{ comp Quote { cite: 'Bethan Ross, Head of Experience and Audience Research'} }}
+		Many organisations like ours are still trying to understand the change in visitor expectations and behaviour post COVID. We operate with limited resources, and in sharing case studies, data and methodologies, we can help build a case for our collective impact.
+	{{ /comp }}
 
 {{ /comp }}
 
