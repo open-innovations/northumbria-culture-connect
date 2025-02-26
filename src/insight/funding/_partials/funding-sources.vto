@@ -27,6 +27,8 @@
             number: a.number + c.Grants
         }
     }, { funding: 0, number: 0 });
+
+    const neca = search.data('data/neca').funding_by_area.find(x => x.Area === "Newcastle upon Tyne");
 }}
 
 {{ comp AutoGrid }}
@@ -63,6 +65,20 @@
         <p>
             Organisations have registered {{ threeSixtyGiving.number }} awards totalling 
             £{{ threeSixtyGiving.funding |> toLocaleString }} with 360 Giving.
+        </p>
+    {{ /comp }}
+
+    {{ comp FundingLink {
+            funding: (neca.Total / 1e6).toPrecision(2),
+            suffix: " million",
+            title: "North East Combined Authority Funding",
+            url: "/data/neca/",
+        } }}
+        <p>
+            Up to October 2024 the North East Combined Authority
+            made {{ neca.Number }} awards 
+            totalling £{{ neca.Total |> toLocaleString }}
+            to organisations based in Newcastle.
         </p>
     {{ /comp }}
 

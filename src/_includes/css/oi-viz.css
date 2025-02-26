@@ -83,7 +83,7 @@
     text-align: center;
 }
 
-figcaption.barchart {
+figcaption, figcaption.barchart {
   text-align: center;
   font-weight: 700;
   font-size: larger;

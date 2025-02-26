@@ -6,21 +6,49 @@ extended_description: |
     The data highlights investment in the region’s cultural sector, supporting events, local community, employment, and businesses. By funding cultural programmes, NECA contributes to the local economy, provides opportunities for artists and creative organisations, and promotes access to arts and creative activities for Newcastle residents.
 tags:
     - funding
+
+tableGroups:
+    Events:
+        - Numbers of attendees participating in a cultural tourism event
+        - Number of cultural / tourism events taking place
+    Support:
+        - Total participants supported
+        - Disabled or deaf participants receiving support or an intervention
+        - Participants over 50 years of age receiving support or an intervention
+        - Participants (below 25 years of age) who are unemployed or inactive receiving support or an intervention
+        - Unemployed (including long term unemployed) participants receiving support or an intervention
+    Employment:
+        - Direct Jobs Created
+        - Indirect Jobs Created
+        - Number of apprenticeship/ traineeship opportunities achieved
+        - Participants gaining their first level 3 and above qualification
+        - Economically inactive participants not in education or training receiving support or an intervention
+        - Economically Inactive participants engaged in job-searching upon leaving
+        - Employed, including self-employed receiving support or an intervention
+    Business Support:
+        - Number of enterprises receiving support
+        - Number of enterprises receiving financial support other than grants
 ---
+{{>
+	const newcastle = funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')
+}}
 
 {{ comp Section }}
-	<h3>Funding within Newcastle-upon-Tyne</h3>
+	<h2>Newcastle-upon-Tyne headlines</h2>
+	<p>
+		This section shows the North East Combined Authority funding for Newcastle-based organisations.
+	</p>
 	<ul class="grid centred">
-		<li class="block">
-			<p class="bang">{{ (funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Number']).toLocaleString() }}</p>
+		<li class="block bg-green-75 increased-contrast">
+			<p class="bang">{{ newcastle.Number |> toLocaleString }}</p>
 			<p>Number of grants awarded</p>
 		</li>
-		<li class="block">
-			<p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Total'] |> displayCurrency  }}</p>
+		<li class="block bg-green-75 increased-contrast">
+			<p class="bang">{{ newcastle.Total |> displayCurrency  }}</p>
 			<p>Total funding amount</p>
 		</li>
-		<li class="block">
-			<p class="bang">{{ funding_by_area.find(x => x.Area == 'Newcastle upon Tyne')['Average'] |> displayCurrency  }}</p>
+		<li class="block bg-green-75 increased-contrast">
+			<p class="bang">{{ newcastle.Average |> displayCurrency  }}</p>
 			<p>Average award amount</p>
 		</li>
 	</ul>
@@ -28,10 +56,11 @@ tags:
 
 
 {{ comp Section }}
-	<h2>Number of grants awarded by area</h2>
+	<h2>Cross regional figures</h2>
 
 	{{> const max_funding_num = Math.ceil(Math.max(...funding_by_area.map(x => x.Number)) ) }}
 
+	<figure>
 	{{ comp.oi.chart.bar({
 		config: {
 			data: funding_by_area,
@@ -48,13 +77,12 @@ tags:
 			}
 		}
 	}) }}
-{{ /comp }}
-
-{{ comp Section }}
-	<h2>Total funding awarded by area</h2>
+	<figcaption>Grants awarded by area</figcaption>
+	</figure>
 
 	{{> const max_funding_total = Math.ceil(Math.max(...funding_by_area.map(x => x.Total)) / 1e5) * 1e5 }}
 
+	<figure>
 	{{ comp.oi.chart.bar({
 		config: {
 			data: funding_by_area,
@@ -84,13 +112,12 @@ tags:
 			}
 		}
 	}) }}
-{{ /comp }}
-
-{{ comp Section }}
-	<h2>Average award amount by area</h2>
+	<figcaption>Total funding awarded by area</figcaption>
+	</figure>
 
 	{{> const max_funding_ave = Math.ceil(Math.max(...funding_by_area.map(x => x.Average)) / 1e5) * 1e5 }}
 
+	<figure>
 	{{ comp.oi.chart.bar({
 		config: {
 			data: funding_by_area,
@@ -115,106 +142,44 @@ tags:
 						{
 						value: 800000,
 						label: '£800k'}
-						] 
+						]
 				}
 			}
 		}
 	}) }}
+	<figcaption>Average award amount by area</figcaption>
+	</figure>
 {{ /comp }}
 
 {{ comp Section }}
-	<h2>Funded Project Outputs</h2>
+	<h2>Funded project outputs</h2>
+
 	<p>Outputs of projects that were funded by NECA.</p>
 
-	<h3>Events</h3>
+	{{>
+		const rows = project_outputs.reduce((a, c) => ({ ...a, [c.category]: c.actual }), {})
+		console.log(rows)
+	}}
 
-	<ul class="grid centred">
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Numbers of attendees participating in a cultural tourism event')['actual']).toLocaleString() }}</p>
-			<p>Numbers of attendees at a cultural tourism event</p>
-		</li>
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of cultural / tourism events taking place')['actual']).toLocaleString() }}</p>
-			<p>Number of cultural / tourism events taking place</p>
-		</li>
-	</ul>
-
-	<h3>Support</h3>
-
-	<ul class="grid centred">
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Total participants supported')['actual']).toLocaleString() }}</p>
-			<p>Total participants supported</p>
-		</li>
-	</ul>
-
-	<ul class="grid centred">
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Disabled or deaf participants receiving support or an intervention')['actual']).toLocaleString() }}</p>
-			<p>Disabled participants receiving support</p>
-		</li>
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Participants over 50 years of age receiving support or an intervention')['actual']).toLocaleString() }}</p>
-			<p>Participants over 50 years of age receiving support</p>
-		</li>
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Participants (below 25 years of age) who are unemployed or inactive receiving support or an intervention')['actual']).toLocaleString() }}</p>
-			<p>Participants under 25 years of age who are unemployed receiving support</p>
-		</li>
-			<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Unemployed (including long term unemployed) participants receiving support or an intervention')['actual']).toLocaleString() }}</p>
-			<p>Unemployed participants receiving support or an intervention</p>
-		</li>
-	</ul>
-
-	<h3>Employment</h3>
-	<ul class="grid centred">
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Direct Jobs Created')['actual']).toLocaleString() }}</p>
-			<p>Direct Jobs Created</p>
-		</li>
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Indirect Jobs Created')['actual']).toLocaleString() }}</p>
-			<p>Indirect Jobs Created</p>
-		</li>
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of apprenticeship/ traineeship opportunities achieved')['actual']).toLocaleString() }}</p>
-			<p>Apprenticeship/ traineeship opportunities</p>
-		</li>
-	</ul>
-
-	<ul class="grid centred">
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Participants gaining their first level 3 and above qualification')['actual']).toLocaleString() }}</p>
-			<p>Participants gaining their first Level 3 Qualification</p>
-		</li>
-	</ul>
-
-	<ul class="grid centred">
-			<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Economically inactive participants not in education or training receiving support or an intervention')['actual']).toLocaleString() }}</p>
-			<p>Economically inactive participants receiving support</p>
-		</li>
-			<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Economically Inactive participants engaged in job-searching upon leaving')['actual']).toLocaleString() }}</p>
-			<p>Economically inactive participants now engaging in job-searching</p>
-		</li>
-				<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Employed, including self-employed receiving support or an intervention')['actual']).toLocaleString() }}</p>
-			<p>Employed, including self-employed receiving support or an intervention</p>
-		</li>
-	</ul>
-
-	<h3>Business Support</h3>
-
-	<ul class="grid centred">
-		<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of enterprises receiving support')['actual']).toLocaleString() }}</p>
-			<p>Number of enterprises receiving support</p>
-		</li>
-			<li class="block">
-			<p class="bang">{{ (project_outputs.find(x => x.category == 'Number of enterprises receiving financial support other than grants')['actual']).toLocaleString() }}</p>
-			<p>Number of enterprises receiving financial support other than grants</p>
-		</li>
-	</ul>
+	<table style="margin-inline: auto;">
+	<thead>
+		<tr>
+			<th scope="col" style="position:sticky;top:0;">Measure</th>
+			<th scope="col" style="position:sticky;top:0;">Output</th>
+		</tr>
+	</thead>
+	{{ for group of Object.keys(tableGroups) }}
+	<tbody>
+		<tr>
+			<th scope="rowgroup" colspan=2 class="bg-green-75">{{ group }}</th>
+		</tr>
+		{{ for r of tableGroups[group] }}
+		<tr>
+			<th scope="row" class="bg-grey">{{ r }}</th>
+			<td class="centred">{{ rows[r] |> toLocaleString }}</td>
+		</tr>
+		{{ /for }}
+	</tbody>
+	{{ /for }}
+	</table>
 {{ /comp }}
