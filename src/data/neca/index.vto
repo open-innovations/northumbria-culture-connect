@@ -60,6 +60,7 @@ tableGroups:
 
 	{{> const max_funding_num = Math.ceil(Math.max(...funding_by_area.map(x => x.Number)) ) }}
 
+	{{ comp WidthLimit }}
 	<figure>
 	{{ comp.oi.chart.bar({
 		config: {
@@ -79,9 +80,11 @@ tableGroups:
 	}) }}
 	<figcaption>Grants awarded by area</figcaption>
 	</figure>
+	{{ /comp }}
 
 	{{> const max_funding_total = Math.ceil(Math.max(...funding_by_area.map(x => x.Total)) / 1e5) * 1e5 }}
 
+	{{ comp WidthLimit }}
 	<figure>
 	{{ comp.oi.chart.bar({
 		config: {
@@ -114,9 +117,11 @@ tableGroups:
 	}) }}
 	<figcaption>Total funding awarded by area</figcaption>
 	</figure>
+	{{ /comp }}
 
 	{{> const max_funding_ave = Math.ceil(Math.max(...funding_by_area.map(x => x.Average)) / 1e5) * 1e5 }}
 
+	{{ comp WidthLimit }}
 	<figure>
 	{{ comp.oi.chart.bar({
 		config: {
@@ -149,6 +154,7 @@ tableGroups:
 	}) }}
 	<figcaption>Average award amount by area</figcaption>
 	</figure>
+	{{ /comp }}
 {{ /comp }}
 
 {{ comp Section }}
