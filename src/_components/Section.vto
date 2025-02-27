@@ -6,8 +6,13 @@ css: |
     [data-comp=section]:last-child{
         border-bottom: 0;
     }
+    [data-comp=section] > .holder {
+        padding: 60px 32px;
+    }
 ---
 
-<section data-comp="section" class="padded holder"{{ if style }} style="{{ style }}"{{ /if }}>
+<section data-comp="section" {{ if style }} style="{{ style }}"{{ /if }}>
+	<div class="holder">
 {{ content }}
+	</div>
 </section>
