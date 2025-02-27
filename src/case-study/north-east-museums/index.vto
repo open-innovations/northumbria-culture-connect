@@ -108,9 +108,75 @@ This evaluation is limited to a small sample of 6 healthcare professionals from 
 Most had engaged with multiple components of the Heritage Programme across different ward settings, with experience predominantly in mixed-sex, rehabilitation and male acute environments rather than female units.
 </p>
 
-<p>[VISUALISATION: ROLE TYPES AND MANAGEMENT RESPONSIBILITY]</p>
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Role Types & Responsibilities</h4>
+		{{ comp SaveableVisualisation {id: 'roles', file: "roles.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.roles,
+					category: "Role",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "With management responsibilities", value: "Manager (Yes)", tooltip: "Manager (Yes)<br>{{ Role }}: {{ Manager (Yes) }}%" },
+						{ title: "Without management responsibilities", value: "Manager (No)", tooltip: "Manager (No)<br>{{ Role }}: {{ Manager (No) }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
-<p>[VISUALISATION: PATIENT GROUPS]</p>
+{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+<h4>Patient Groups</h4>
+{{ comp SaveableVisualisation { id: 'patient-groups', file: "patient_groups.csv" } }}
+{{ comp.oi.chart.waffle({
+    config: {
+        "data": release.patient_groups,
+        "series": [
+            { title: "Mixed sex, Rehab", value: "Mixed sex, Rehab", colour: "Likert1", tooltip: "Mixed sex, Rehab: {{ Mixed sex, Rehab }}%" },
+            { title: "Male, Acute", value: "Male, Acute", colour: "Likert5", tooltip: "Male, Acute: {{ Male, Acute }}%"   },
+            { title: "Female, Male, Acute", value: "Female, Male, Acute", colour: "Likert4", tooltip: "Female, Male, Acute: {{ Female, Male, Acute }}%"   }
+        ]
+    }
+}) }}
+{{ /comp }}
+{{ /comp }}
+
 {{ /comp }}
 
 
@@ -123,7 +189,61 @@ The themes presented for each of the 5 steps to mental wellbeing are derived fro
 
 <h3>1. Connect with other people</h3>
 
-<p>[VISUALISATION: AGREEMENT BY STATEMENT - CONNECT]</p>
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Connect</h4>
+		{{ comp SaveableVisualisation {id: 'connect', file: "connect.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.connect,
+					category: "Question",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Strongly agree", colour: "Likert5", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", colour: "Likert4", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neutral", colour: "Likert3", value: "Neutral", tooltip: "Neutral<br>{{ Question }}: {{ Neutral }}%" },
+						{ title: "Disagree", colour: "Likert2", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", colour: "Likert1", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
 <p>
 The data shows that the Heritage Programme helped create many different relationships in the process:
@@ -134,7 +254,7 @@ Between healthcare professionals and patients.
 Healthcare professionals felt that patients talking about their heritage and experiences helped to break down barriers between themselves and patients. This also increased trust so therapeutic interventions might be more effective in future.
 </p>
 
-<p>[QUOTE BOX] "Having patients feel confident to tell me what they know about local history, geography, slang and things to see and do has been helpful in them feeling like an expert too, which I hope has contributed to reducing that felt-sense of power imbalance.” - Clinical psychologist.</p>
+	{{ comp Quote {cite:'Clinical Psychologist'} }}Having patients feel confident to tell me what they know about local history, geography, slang and things to see and do has been helpful in them feeling like an expert too, which I hope has contributed to reducing that felt-sense of power imbalance.{{ /comp }}
 
 <h4>Between patients</h4>
 
@@ -142,8 +262,7 @@ Healthcare professionals felt that patients talking about their heritage and exp
 The programme created space for conversations about differing backgrounds, skills, knowledge and interests. This strengthened relationships and created a sense of community.
 </p>
 
-<p>[QUOTE BOX] “We have been surprised about the knowledge displayed by some of the patients and this has given them confidence and inspired them to speak more about their interest to other patients outside the group.” - Occupational therapist.
-</p>
+	{{ comp Quote {cite:'Occupational Therapist'} }}We have been surprised about the knowledge displayed by some of the patients and this has given them confidence and inspired them to speak more about their interest to other patients outside the group.{{ /comp }}
 
 <h4>With the local community</h4>
 
@@ -151,7 +270,7 @@ The programme created space for conversations about differing backgrounds, skill
 Patients were able to share memories from their lives, work and childhoods, and expressed pride in where they came from.
 </p>
 
-<p>[QUOTE BOX] “I believe this programme has supported our patients to gain a sense of belonging from their community and promoted social inclusivity.” - Occupational therapist.</p>
+	{{ comp Quote {cite:'Occupational Therapist'} }}I believe this programme has supported our patients to gain a sense of belonging from their community and promoted social inclusivity.{{ /comp }}
 
 <h4>Between facilitators and patients</h4>
 
@@ -168,7 +287,66 @@ Patients benefited physically and mentally from leaving the ward and walking aro
 Patients commented that touching, seeing or smelling objects connected them to positive memories and experiences, creating a sense of calm and focus.
 </p>
 
-<p>[QUOTE BOX] “The group all commented that getting out of the ward and visiting these spaces was a highlight of the programme and made a change to their week.” - Heritage Programme facilitator.</p>
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Be Active</h4>
+		{{ comp SaveableVisualisation {id: 'be-active', file: "be_active.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.be_active,
+					category: "Question",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Strongly agree", colour: "Likert5", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", colour: "Likert4", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neutral", colour: "Likert3", value: "Neutral", tooltip: "Neutral<br>{{ Question }}: {{ Neutral }}%" },
+						{ title: "Disagree", colour: "Likert2", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", colour: "Likert1", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+	{{ comp Quote {cite:'Heritage Programme facilitator'} }}
+    The group all commented that getting out of the ward and visiting these spaces was a highlight of the programme and made a change to their week.
+    {{ /comp }}
+
 
 <h4>Learn new skills</h4>
 
@@ -188,7 +366,67 @@ Both patients and staff described learning new information about local history, 
 Healthcare professionals got new perspectives on how culture can be used in therapeutic practice, as well as learning more about their patients and how they could tailor their care approaches.
 </p>
 
-<p>[QUOTE BOX] “We have been surprised about the knowledge displayed by some of the patients and this has given them confidence and inspired them to speak more about their interest to other patients outside the group.” - Occupational therapist.</p>
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Keep Learning</h4>
+		{{ comp SaveableVisualisation {id: 'keep-learning', file: "keep_learning.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.keep_learning,
+					category: "Question",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Strongly agree", colour: "Likert5", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", colour: "Likert4", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neutral", colour: "Likert3", value: "Neutral", tooltip: "Neutral<br>{{ Question }}: {{ Neutral }}%" },
+						{ title: "Disagree", colour: "Likert2", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", colour: "Likert1", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+
+	{{ comp Quote {cite:'Occupational Therapist'} }}
+    We have been surprised about the knowledge displayed by some of the patients and this has given them confidence and inspired them to speak more about their interest to other patients outside the group.
+    {{ /comp }}
+
 
 <h4>Give to others</h4>
 
@@ -200,7 +438,9 @@ Facilitators observed patients supporting each other to feel safe to participate
 Patients also supported facilitators to plan and deliver sessions, helping decide which museum to visit and objects to explore.
 </p>
 
-<p>[QUOTE BOX] “The group were very attentive to each other during the sessions and visits. [Patients] encouraged their peers to share stories and gave them space to talk.” - Heritage Programme facilitator.</p>
+{{ comp Quote {cite:'Heritage Programme facilitator'} }}
+    The group were very attentive to each other during the sessions and visits. [Patients] encouraged their peers to share stories and gave them space to talk.
+    {{ /comp }}
 
 <p>
 Healthcare professionals also felt they would apply programme learnings to support patient recovery. They reflected on the role culture and heritage could play in mental health recovery and in their own practice.
@@ -215,7 +455,66 @@ Healthcare professionals also felt they would apply programme learnings to suppo
     <li>signposting patients to cultural venues or information</li>
 </ul>
 
-<p>[QUOTE BOX] “For me, it has shown me the importance of informal therapeutic engagement and how culture or cultural enrichment in itself can be a tool for recovery, rather than it being an adaptation or add-on to typical therapy.” - Clinical psychologist.</p>
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Give to Others</h4>
+		{{ comp SaveableVisualisation {id: 'give', file: "give.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.give,
+					category: "Question",
+					width: 1000, 
+					height: 300,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Strongly agree", colour: "Likert5", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", colour: "Likert4", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neutral", colour: "Likert3", value: "Neutral", tooltip: "Neutral<br>{{ Question }}: {{ Neutral }}%" },
+						{ title: "Disagree", colour: "Likert2", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", colour: "Likert1", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+    {{ comp Quote {cite:'Clinical Psychologist'} }}
+    For me, it has shown me the importance of informal therapeutic engagement and how culture or cultural enrichment in itself can be a tool for recovery, rather than it being an adaptation or add-on to typical therapy.
+    {{ /comp }}
+
 
 <h4>Pay attention to the present moment</h4>
 
@@ -227,7 +526,67 @@ The data suggests that the Heritage Programme unlocked participation and encoura
 Healthcare professionals found that engaging with objects was an effective mindfulness activity for the patients. They also noted the positive impact on their own wellbeing.
 </p>
 
-<p>[QUOTE BOX] “I work in psychosis rehab and some of my patients can be dissociative, disorientated and overwhelmed. Holding those objects in their hands has brought moments of clarity and connection that I didn't expect.” - Clinical Psychologist.</p> 
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Take Notice</h4>
+		{{ comp SaveableVisualisation {id: 'take-notice', file: "take-notice.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.take_notice,
+					category: "Question",
+					width: 1000, 
+					height: 500,
+					stacked: true,
+					percent: true, 
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Strongly agree", colour: "Likert5", value: "Strongly agree", tooltip: "Strongly agree<br>{{ Question }}: {{ Strongly agree }}%" },
+						{ title: "Agree", colour: "Likert4", value: "Agree", tooltip: "Agree<br>{{ Question }}: {{ Agree }}%" },
+						{ title: "Neutral", colour: "Likert3", value: "Neutral", tooltip: "Neutral<br>{{ Question }}: {{ Neutral }}%" },
+						{ title: "Disagree", colour: "Likert2", value: "Disagree", tooltip: "Disagree<br>{{ Question }}: {{ Disagree }}%" },
+						{ title: "Strongly disagree", colour: "Likert1", value: "Strongly disagree", tooltip: "Strongly disagree<br>{{ Question }}: {{ Strongly disagree }}%" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20%"
+								},{
+									"value": 40,
+									"label": "40%"
+								},{
+									"value": 60,
+									"label": "60%"
+								},{
+									"value": 80,
+									"label": "80%"
+								},{
+									"value": 100,
+									"label": "100%"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+
+    {{ comp Quote {cite:'Clinical Psychologist'} }}
+    I work in psychosis rehab and some of my patients can be dissociative, disorientated and overwhelmed. Holding those objects in their hands has brought moments of clarity and connection that I didn't expect.
+    {{ /comp }}
+
+
 {{ /comp }}
 
 
@@ -255,8 +614,11 @@ The communities team at North East Museum are now thinking about how they could 
 They hope their data observatory study will inspire others in the cultural sector to apply similar approaches, and encourage future collaboration and partnerships through contributing open access data on creative health and wellbeing.
 </p>
 
-<p>[QUOTE BOX] “Working with the North East Culture Connect team on the case study for the Data Observatory has presented a refreshing opportunity for North East Museums to consider how we build data maturity in our organisation. Going forward we will be developing our evaluation techniques using this framework to visualise data on the Observatory site for more of our community programmes.
-"Having our case studies on Data Observatory will help us to present data in meaningful and relevant ways for a variety of stakeholders, commissioners and potential funders. We hope it will enable us to collaborate with more researchers, commissioners and policy makers to address regional priorities.” - Keith Merrin, Director.</p>
+{{ comp Quote {cite:'Keith Merrin, Director'} }}
+    Working with the North East Culture Connect team on the case study for the Data Observatory has presented a refreshing opportunity for North East Museums to consider how we build data maturity in our organisation. Going forward we will be developing our evaluation techniques using this framework to visualise data on the Observatory site for more of our community programmes. Having our case studies on Data Observatory will help us to present data in meaningful and relevant ways for a variety of stakeholders, commissioners and potential funders. We hope it will enable us to collaborate with more researchers, commissioners and policy makers to address regional priorities.
+    {{ /comp }}
+
+
 {{ /comp }}
 
 
@@ -269,7 +631,7 @@ They hope their data observatory study will inspire others in the cultural secto
 
 
 {{# {{ comp.LineChart( {
-    data: community_groups_participation,
+    data: release.community_groups_participation,
     series: [
             { title: 'Participants', x: 'date_decimal', y: 'participants_over_19', line: { curvature: 0.5 } },
     ],

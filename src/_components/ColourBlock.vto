@@ -1,9 +1,13 @@
 ---
 css: |
     [data-comp=colour-block] {
-        padding: 1.25rem;
+        padding: 1.5rem;
         border-radius: 1rem;
+
+        > h4 {
+        padding-bottom: 1em; }
     }
+
 ---
 <div data-comp="colour-block" class="{{ classes }}">
 {{ content }}
