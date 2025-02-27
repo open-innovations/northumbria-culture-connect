@@ -11,5 +11,9 @@
 
 <p>
     The extracted data is further filtered to include only the following culture-related grant awards, and to exclude any COVID related grants.
-    This inclusion / exclusion is managed in a <a href="./funders.csv">Funders CSV file</a>.
+    This inclusion / exclusion is managed in a CSV file comprising the Funding Organisation, Grant Programme, and columns to specify a cultural
+    fund and to identify COVID-related funds. The longlist is derived from any organisations that have funded any organisation based in Newcastle.
 </p>
+<div>
+    Review the control file: {{ comp.CSVOptions({ file: './funders.csv' }) }}
+</div>
