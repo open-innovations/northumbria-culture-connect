@@ -10,7 +10,7 @@ css: |
     }
 ---
 <div data-comp="FundingLink" class="block centred bg-green-75 link-block increased-contrast">
-    <h3 class="title"><a href="{{ url }}">{{ title }}</a></h3>
+    <h3 class="title"><a href="{{ url }}">{{ title }}{{ comp.Chevron() }}</a></h3>
     <div class="bignum">£{{ funding |> toLocaleString }}{{ suffix || '' }}</div>
     {{ content }}
 </div>
