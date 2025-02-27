@@ -36,11 +36,15 @@ aside.warning { text-align: center; position: relative; z-index: 1; }
   margin: auto;
   max-width: 100%;
 }
-.holder > * {
-	margin-bottom: 1rem;
-}
-.holder > *:last-child {
-	margin-bottom: 0;
+.holder h1 + *,
+.holder h2 + *,
+.holder h3 + *,
+.holder h4 + *,
+.holder p + *,
+.holder ul + *,
+.holder ol + *,
+.holder blockquote + * {
+	margin-top: 2rem;
 }
 
 .padded {

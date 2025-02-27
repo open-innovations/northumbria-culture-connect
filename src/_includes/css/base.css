@@ -30,8 +30,6 @@ hr {
 section > * + * {
 	margin-top: 1rem;
 }
-h1 + *, h2 + *, p + * { margin-top: 1rem; }
-p + p { margin-top: 1.5rem; }
 * > *:last-child { margin-bottom: 0; }
 p { max-width: 80em; }
 .visuallyhidden {

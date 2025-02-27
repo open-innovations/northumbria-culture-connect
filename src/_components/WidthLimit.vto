@@ -5,6 +5,9 @@ css: |
         max-width: var(--max-width);
         margin-inline: auto;
     }
+    .holder * + [data-comp=width-limit] {
+        margin-top: 1.875rem; 
+    }
 ---
 
 <div {{ if id }}id="{{ id }}" {{ /if }}data-comp="width-limit"
