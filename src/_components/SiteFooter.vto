@@ -17,10 +17,10 @@ css: |
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 0;
-      padding: 2rem;
     }
     & .footer-about-content {
       background: var(--col-offwhite);
+      margin: 2rem 0 2rem 2rem;
     }
     & .footer-row {
       border-top: 1px solid var(--col-primary-black);
@@ -28,6 +28,7 @@ css: |
     & .footer-image {
       line-height: 0;
       background: var(--col-offwhite);
+      margin: 2rem 2rem 2rem 0;
       & img { width: 100%; }
     }
     & .logo-list {
@@ -64,6 +65,9 @@ css: |
   @media only screen and (max-width: 945px) {
     footer .footer-about {
       display: block;
+    }
+    footer .footer-about-content,footer .footer-image {
+      margin: 0;
     }
   }
   @media only screen and (max-width: 640px) {
