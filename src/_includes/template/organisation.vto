@@ -20,17 +20,17 @@ layout: template/base.vto
 
 	{{ set caseStudies = search.pages(`case-study organisation_profile="${url}"`) }}
 	{{ if caseStudies.length > 0 }}
-	<section class="padded holder">
+	{{ comp Section }}
 		<p>
 		Case studies:
 		{{ for cs of caseStudies }}
 			<a href="{{ cs.url }}">{{ cs.title }}</a>
 		{{ /for }}
 		</p>
-	</section>
+	{{ /comp }}
 	{{ /if }}
 
-	<section class="padded holder">
+	{{ comp Section }}
 		<h2>Data profile</h2>
 
 		{{ comp ColourBlock { classes: 'bg-green-100' } }}
@@ -73,12 +73,9 @@ layout: template/base.vto
 			{{ /comp }}
 
 		{{ /comp }}
-	</section>
+	{{ /comp }}
 
-	<hr>
-
-	<section class="padded holder">
+	{{ comp Section }}
 		<h2>Location</h2>
-
-	</section>
+	{{ /comp }}
 </main>
