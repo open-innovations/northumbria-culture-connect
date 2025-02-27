@@ -1,10 +1,10 @@
 /**
-	Open Innovations tool for editing CSV files in the browser
-	Version 0.2.2
+	Open Innovations tool for editing CSV files
  */
 /*jshint esversion: 6 */
 (function(root){
-
+	var name = "OI CSVEditor";
+	var version = "0.2.2";
 	var OI = root.OI || {};
 	if(!OI.ready){
 		OI.ready = function(fn){
@@ -16,10 +16,8 @@
 
 	OI.CSVEditor = function(lnk,opts){
 		if(!opts) opts = {};
-		var n,v,raw,msg,_url,el,loading,table,menu,holder,wrapper,rows,_obj,_open = false,memory = [],_memory = 0;
-		n = "OI CSVEditor";
-		v = "0.2.2";
-		msg = new OI.logger(n+' v'+v,{});
+		var raw,msg,_url,el,loading,table,menu,holder,wrapper,rows,_obj,_open = false,memory = [],_memory = 0;
+		msg = new OI.logger(name+' v'+version);
 		msg.info('Init',lnk);
 		_obj = this;
 
@@ -503,7 +501,7 @@
 	${mb} button svg { width: 1em; height: 1em; vertical-align: -.125em; }
 	${t} { border-collapse: separate; }
 	${t} [scope=row] { text-align: right; }
-	${t} td, ${t} th { border-right: 0; border-top: 0; border-color: var(--border); }
+	${t} td, ${t} th { border-right: 0; border-top: 0; border-color: var(--border); white-space: nowrap; padding: 0.25em 0.5em; }
 	${t} thead { position: sticky; top: 0; }
 	${t} th, ${t} td { border-color: var(--border); }
 	${t} tr:hover { background: var(--hover); }
@@ -708,9 +706,7 @@
 	}
 
 	if(!OI.logger){
-		// Console version 1.5
-		OI.logger = function(title,attr){
-			if(!attr) attr = {};
+		OI.logger = function(title){
 			title = title||"OI Logger";
 			this.logging = (location.search.indexOf('debug=true') >= 0);
 			if(console && typeof console.log==="function"){
@@ -720,11 +716,12 @@
 				this.error = function(){ console.error.apply(null,getParam(arguments)); };
 			}
 			function getParam(){
-				var a = Array.prototype.slice.call(arguments[0], 0);
-				var str = (typeof a[0]==="string" ? a[0] : "");
+				var a,str,ext,n;
+				a = Array.prototype.slice.call(arguments[0], 0);
+				str = (typeof a[0]==="string" ? a[0] : "");
 				// Build basic result
-				var ext = ['%c'+title+'%c: '+str.replace(/<[^\>]*>/g,""),'font-weight:bold;',''];
-				var n = (str ? 1 : 0);
+				ext = ['%c'+title+'%c: '+str.replace(/<[^\>]*>/g,""),'font-weight:bold;',''];
+				n = (str ? 1 : 0);
 				// If there are extra parameters passed we add them
 				return (a.length > n) ? ext.concat(a.splice(n)) : ext;
 			}
