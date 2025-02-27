@@ -14,6 +14,8 @@ import svgo from 'lume/plugins/svgo.ts';
 import transformImages from 'lume/plugins/transform_images.ts';
 import inline from "lume/plugins/inline.ts";
 import redirects from "lume/plugins/redirects.ts"
+import prism from "lume/plugins/prism.ts";
+import "npm:prismjs@1.29.0/components/prism-python.js";
 import getFiles, { exists, fileExt, trimPath, fmtFileSize } from "https://deno.land/x/getfiles/mod.ts";
 
 // import mermaid from "jsr:@ooker777/lume-mermaid-plugin/";
@@ -86,7 +88,12 @@ site.use(esbuild({
     // }
 }));
 // site.use(mermaid());
-
+site.use(prism({
+  theme: {
+    name: "coy",
+    path: "/_includes/css/code_theme.css",
+  },
+}));
 site.loadData(['.geojson'], jsonLoader);
 site.loadData(['.text', '.txt', '.md'], textLoader);
 
