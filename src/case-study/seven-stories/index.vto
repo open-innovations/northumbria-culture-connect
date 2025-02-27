@@ -2,7 +2,6 @@
 title: Seven Stories
 
 tags:
-    - work-in-progress
     - pilot-organisation
     - case-study
 
@@ -70,28 +69,95 @@ The data observatory brought data to life from a sample of 103 visitors, includi
 </p>
 
 <ul>
-<li>77 paper survey responses</li>
-<li>9 online survey responses</li>
-<li>4 face-to-face interviews with caregivers</li>
-<li>13 face-to-face interviews with children</li>
+    <li>77 paper survey responses</li>
+    <li>9 online survey responses</li>
+    <li>4 face-to-face interviews with caregivers</li>
+    <li>13 face-to-face interviews with children</li>
 </ul>
 {{ /comp }}
 
 {{ comp Section }}
 <h2>Limitations of the study</h2>
 
-<ul>
-    <li><strong>Evaluating impact through short term feedback:</strong> It's challenging to evaluate and evidence the impact of culture through this type of short term data collection, as the feedback is gathered during or very shortly after the visit.</li>
-    <li><strong>Research with young children:</strong> Children’s responses were often limited in detail and clarity, as they were between 2 and 8 years old and interacting with unfamiliar adult researchers.</li>
-    <li><strong>Gaps in data due to non-mandatory questions:</strong> Some survey questions were optional to encourage participation and reduce completion time, resulting in gaps where respondents chose to skip them.</li>
-</ul>
+<h3>Evaluating impact through short term feedback</h3>
 
+<p>
+It's challenging to evaluate and evidence the impact of culture through this type of short term data collection, as the feedback is gathered during or very shortly after the visit. 
+</p>
+
+<h3>Research with young children</h3>
+
+<p>
+Children’s responses were often limited in detail and clarity, as they were between 2 and 8 years old and interacting with unfamiliar adult researchers.
+</p>
+
+<h3>Gaps in data due to non-mandatory questions</h3>
+
+<p>
+Some survey questions were optional to encourage participation and reduce completion time, resulting in gaps where respondents chose to skip them.
+</p>
 {{ /comp }}
 
 {{ comp Section }}
 <h2>Data analysis</h2>
 
 <h3>Demographics</h3>
+
+{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+    <h4>Visitor Age Range</h4>
+
+    {{ comp SaveableVisualisation {id: 'age-range', file: "demographics.csv" } }}
+        {{ comp.oi.chart.bar({
+            config: {
+                data: release.demographics,
+                category: "Survey Type",
+                width: 900, 
+                height: 450,
+                legend: {
+                    show: true,
+                    position: "top"
+                },
+                series: [
+                    { title: "Children aged 12 months or younger", value: "Age 12 months or younger", tooltip: "Children aged 12 months or younger<br>{{ Survey Type }}: {{ Age 12 months or younger }}" },
+                    { title: "Children aged 1-2 years", value: "Age 1-2 years old", tooltip: "Children aged 1-2 years<br>{{ Survey Type }}: {{ Age 1-2 years old }}" },
+                    { title: "Children aged 3-4 years", value: "Age 3-4 years old", tooltip: "Children aged 3-4 years<br>{{ Survey Type }}: {{ Age 3-4 years old }}" },
+                    { title: "Children aged 5-7 years", value: "Age 5-7 years old", tooltip: "Children aged 5-7 years<br>{{ Survey Type }}: {{ Age 5-7 years old }}" },
+                    { title: "Children aged 8+ years", value: "Age 8+ years old", tooltip: "Children aged 8+ years<br>{{ Survey Type }}: {{ Age 8+ years old }}" },
+                    { title: "Unknown age", value: "Age Unknown", tooltip: "Unknown age<br>{{ Survey Type }}: {{ Age Unknown }}" }
+                ],
+                axis: {
+                    x: {
+                        grid: {
+                            "stroke-dasharray": "6 2",
+                            "stroke-width": 1
+                        },
+                        ticks: [{
+                                "value": 5,
+                                "label": "5"
+                            },{
+                                "value": 10,
+                                "label": "10"
+                            },{
+                                "value": 15,
+                                "label": "15"
+                            },{
+                                "value": 20,
+                                "label": "20"
+                            },{
+                                "value": 25,
+                                "label": "25"
+                            }]
+                    },
+                    y: {
+                        grid: {
+                            "stroke-width": 0.5
+                        }
+                    }
+                }
+            }
+        }) }}
+    {{ /comp }}
+{{ /comp }}
 
 <p>
 The most common audiences were families with children aged 3 to 4 years old and children aged 5 to 7 years old.
@@ -108,6 +174,61 @@ It’s important to note the high number of unknown responses in paper surveys, 
 <p>
 Online data also had a low response rate of only 9 visitors, making it hard to identify overall trends.
 </p>
+
+{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+    <h4>Visitor Ethnic Group</h4>
+
+    {{ comp SaveableVisualisation {id: 'ethnic-group', file: "ethnic_group.csv" } }}
+        {{ comp.oi.chart.bar({
+            config: {
+                data: release.demographics,
+                category: "Survey Type",
+                width: 900, 
+                height: 450,
+                legend: {
+                    show: true,
+                    position: "top"
+                },
+                series: [
+                    { title: "White or White British", value: "Ethnicity White or White British", tooltip: "White or White British<br>{{ Survey Type }}: {{ Ethnicity White or White British }}" },
+                    { title: "Asian or Asian British", value: "Ethnicity Asian or Asian British", tooltip: "Asian or Asian British<br>{{ Survey Type }}: {{ Ethnicity Asian or Asian British }}" },
+                    { title: "Mixed or multiple ethnic groups", value: "Ethnicity Mixed or multiple ethnic groups", tooltip: "Mixed or multiple ethnic groups<br>{{ Survey Type }}: {{ Ethnicity Mixed or multiple ethnic groups }}" },
+                    { title: "Other ethnic group", value: "Ethnicity Other (please specify)", tooltip: "Other ethnic group<br>{{ Survey Type }}: {{ Ethnicity Other (please specify) }}" },
+                    { title: "Unknown", value: "Ethnicity Unknown", tooltip: "Unknown<br>{{ Survey Type }}: {{ Ethnicity Unknown }}" }
+                ],
+                axis: {
+                    x: {
+                        grid: {
+                            "stroke-dasharray": "6 2",
+                            "stroke-width": 1
+                        },
+                        ticks: [{
+                                "value": 10,
+                                "label": "10"
+                            },{
+                                "value": 20,
+                                "label": "20"
+                            },{
+                                "value": 30,
+                                "label": "30"
+                            },{
+                                "value": 40,
+                                "label": "40"
+                            },{
+                                "value": 50,
+                                "label": "50"
+                            }]
+                    },
+                    y: {
+                        grid: {
+                            "stroke-width": 0.5
+                        }
+                    }
+                }
+            }
+        }) }}
+    {{ /comp }}
+{{ /comp }}
 
 <p>
 The majority of Storytime visitors identified as White or White British.
@@ -157,6 +278,7 @@ Participants said that they appreciate how storycatchers adapt to the needs and 
 
 {{ comp Quote {cite:'Visitor'} }}Staff accommodated a group of children with additional needs. We were made to feel welcome and the children were allowed to explore without adults being made to feel like a hindrance.{{ /comp }}
 
+
 <h3>It’s affordable</h3>
 
 <p>
@@ -174,10 +296,119 @@ Satisfaction ratings data suggests that Storytime is well-received amongst visit
 <p>
 When asked if they would return, visitors showed strong loyalty, with 94% of children and adults surveyed saying they'd come back.
 </p>
+
+	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+		<h4>Would you return to Storytime?</h4>
+		{{ comp SaveableVisualisation {id: 'return', file: "return.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.return,
+					category: "Survey Type",
+					width: 1000, 
+					height: 300,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Yes", value: "Yes", tooltip: "Yes<br>{{ Survey Type }}: {{ Yes }}" },
+						{ title: "No", value: "No", tooltip: "No<br>{{ Survey Type }}: {{ No }}" },
+						{ title: "Did not answer", value: "Did not answer", tooltip: "Did not answer<br>{{ Survey Type }}: {{ Did not answer }}" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 20,
+									"label": "20"
+								},{
+									"value": 40,
+									"label": "40"
+								},{
+									"value": 60,
+									"label": "60"
+								},{
+									"value": 80,
+									"label": "80"
+								},{
+									"value": 100,
+									"label": "100"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 {{ /comp }}
 
 {{ comp Section }}
 <h2>Impact</h2>
+
+{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+    <h4>Impact Themes</h4>
+    {{ comp SaveableVisualisation {id: 'impact-themes', file: "impact_themes.csv" } }}
+        {{ comp.oi.chart.bar({
+            config: {
+                data: release.impact_themes,
+                category: "Category",
+                width: 1000, 
+                height: 300,
+                legend: {
+                    show: true,
+                    position: "top"
+                },
+                series: [
+                    { title: "Fun/enjoyment", value: "Fun/enjoyment", tooltip: "Fun/enjoyment<br>{{ Category }}: {{ Fun/enjoyment }}" },
+                    { title: "Love of reading / stories", value: "Love of reading / stories", tooltip: "Love of reading / stories<br>{{ Category }}: {{ Love of reading / stories }}" },
+                    { title: "Concentration skills", value: "Concentration skills", tooltip: "Concentration skills<br>{{ Category }}: {{ Concentration skills }}" },
+                    { title: "Social skills", value: "Social skills", tooltip: "Social skills<br>{{ Category }}: {{ Social skills }}" },
+                    { title: "Literacy skills", value: "Literacy skills", tooltip: "Literacy skills<br>{{ Category }}: {{ Literacy skills }}" },
+                    { title: "Relaxation", value: "Relaxation", tooltip: "Relaxation<br>{{ Category }}: {{ Relaxation }}" },
+                    { title: "Imagination / creativity", value: "Imagination / creativity", tooltip: "Imagination / creativity<br>{{ Category }}: {{ Imagination / creativity }}" },
+                    { title: "Confidence", value: "Confidence", tooltip: "Confidence<br>{{ Category }}: {{ Confidence }}" }
+                ],
+                axis: {
+                    x: {
+                        grid: {
+                            "stroke-dasharray": "6 2",
+                            "stroke-width": 1
+                        },
+                        ticks: [{
+                                "value": 2,
+                                "label": "2"
+                            },{
+                                "value": 4,
+                                "label": "4"
+                            },{
+                                "value": 6,
+                                "label": "6"
+                            },{
+                                "value": 8,
+                                "label": "8"
+                            },{
+                                "value": 10,
+                                "label": "10"
+                            }]
+                    },
+                    y: {
+                        grid: {
+                            "stroke-width": 0.5
+                        }
+                    }
+                }
+            }
+        }) }}
+    {{ /comp }}
+{{ /comp }}
 
 <p>
 29 respondents mentioned how Storytime promoted a love of reading and stories, a key part of promoting early literacy for children and enthusiasm for literature.
