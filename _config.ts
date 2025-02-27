@@ -110,6 +110,7 @@ site.copy('assets/fonts/webfonts/');
 site.copy('assets/vendor/');
 site.copy('assets/js/');
 site.copy('assets/images/favicon.png');
+site.copy('assets/images/about.jpg');
 
 site.process(['.html'], (pages) => {
     for (const page of pages) {

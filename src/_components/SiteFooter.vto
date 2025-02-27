@@ -1,8 +1,7 @@
 ---
 css: |
   footer {
-    padding: 3rem 0 1rem 0;
-    margin-top: 3rem;
+    padding: 0;
     border-top: 1px solid var(--col-primary-black);
     & > * {
       display: flex;
@@ -14,34 +13,26 @@ css: |
     }
     h1,h2,h3 { margin-top: 0; }
     & .footer-about {
+      padding-bottom: 60px;
+    }
+    & .footer-about-content {
       background: var(--col-offwhite);
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 1rem;
+    }
+    & .footer-row {
+      border-top: 1px solid var(--col-primary-black);
     }
     & .footer-image {
       background: var(--col-placeholder);
-      min-height: 272px;
-    }
-    & .footer-row {
-      display: flex;
-      column-gap: 2rem;
-      row-gap: 1rem;
-      & > * {
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: unset;
-      }
-      & > *:last-child {
-        text-align: right;
-        flex-grow: 1;
-      }
+      line-height: 0;
     }
     & .logo-list {
       display: flex;
-      gap: 1rem;
+      gap: 60px;
+      margin-bottom: 2rem;
       & img {
-        width: 200px;
+        height: 60px;
       }
     }
     & .credit {
@@ -61,6 +52,7 @@ css: |
       & .logo-list {
         width: 100%;
         display: grid;
+        gap: 32px;
         grid-template-columns: repeat(4,1fr);
         & img { height: auto; }
       }
@@ -83,18 +75,20 @@ css: |
   }
 ---
 <footer>
-	<div class="holder padded">
-		{{ if !hideAbout }}
-		<div class="footer-about">
+	{{ if !hideAbout }}
+	<div class="footer-about holder padded">
+		<div class="footer-about-content">
 			<div class="padded undo-reset">
 				<h2>About Culture Connect</h2>
 				{{ search.data('about').extended_description |> md }}
 				<p><a href="/about/">Find out more</a></p>
 			</div>
-			<div class="footer-image"></div>
+			<div class="footer-image"><img src="/assets/images/about.jpg" /></div>
 		</div>
-		{{ /if }}
-		<div class="footer-row">
+	</div>
+	{{ /if }}
+	<div class="footer-row">
+		<div class="holder padded">
 			<div class="logo-list">
 				<a href="https://www.northeast-ca.gov.uk/"><img src="/assets/images/logo-neca.svg" alt="North East Combined Authority"></a>
 				<a href="https://www.northumbria.ac.uk/"><img src="/assets/images/logo-nu.svg" alt="Northumbria University"></a>
