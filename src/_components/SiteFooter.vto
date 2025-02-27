@@ -14,18 +14,21 @@ css: |
     h1,h2,h3 { margin-top: 0; }
     & .footer-about {
       padding-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0;
+      padding: 2rem;
     }
     & .footer-about-content {
       background: var(--col-offwhite);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
     }
     & .footer-row {
       border-top: 1px solid var(--col-primary-black);
     }
     & .footer-image {
-      background: var(--col-placeholder);
       line-height: 0;
+      background: var(--col-offwhite);
+      & img { width: 100%; }
     }
     & .logo-list {
       display: flex;
@@ -58,7 +61,7 @@ css: |
       }
     }
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 945px) {
     footer .footer-about {
       display: block;
     }
@@ -76,15 +79,13 @@ css: |
 ---
 <footer>
 	{{ if !hideAbout }}
-	<div class="footer-about holder padded">
-		<div class="footer-about-content">
-			<div class="padded undo-reset">
-				<h2>About Culture Connect</h2>
-				{{ search.data('about').extended_description |> md }}
-				<p><a href="/about/">Find out more</a></p>
-			</div>
-			<div class="footer-image"><img src="/assets/images/about.jpg" /></div>
+	<div class="footer-about holder columns">
+		<div class="footer-about-content padded">
+			<h2>About Culture Connect</h2>
+			{{ search.data('about').extended_description |> md }}
+			<p><a href="/about/">Find out more</a></p>
 		</div>
+		<div class="footer-image"><img src="/assets/images/about.jpg" /></div>
 	</div>
 	{{ /if }}
 	<div class="footer-row">
