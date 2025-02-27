@@ -30,6 +30,7 @@ oldUrl:
 
 	{{ include './_partials/FundedOrganisationTable.vto' }}
 
+	{{ comp.CSVOptions({file:"data/culture_landscape.csv"}) }}
+
 {{ /comp }}
 
-{{ comp.CSVOptions({file:"data/culture_landscape.csv"}) }}
