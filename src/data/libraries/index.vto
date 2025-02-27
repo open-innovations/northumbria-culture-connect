@@ -27,7 +27,8 @@ metadata:
 
 
 {{ comp Section }}
-
+<h2>Monthly visits to Newcastle Libraries</h2>
+<p>Total number of visits across all 19 libraries from April 2008 to present.</p>
 	{{ comp.oi.chart.line({
 		config: {
 			data: monthly_visits,
@@ -62,7 +63,8 @@ metadata:
 			}
 		}
 	}) }}
-
+<h2>Monthly issues by Newcastle Libraries</h2>
+<p>Monthly loan figures (number of items issued) across all 19 libraries from April 2008 to present.</p>
 	{{ comp.oi.chart.line({
 		config: {
 			data: monthly_issues_by_branch,
@@ -79,7 +81,7 @@ metadata:
 				title: "Total",
 				x: "decimal_year",
 				y: "Total",
-				tooltip: 'Visits<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
+				tooltip: 'Issues<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
 			}],
 			axis: {
 				x: {
