@@ -18,7 +18,7 @@ css: |
 {{ comp ColourBlock { classes: (style || page.colour_style || 'bg-offwhite') } }}
 <{{ tag || 'div' }} data-comp="page-link" class="link-block {{ style || page.colour_style || 'bg-offwhite' }}">
     <div class="expand">
-    <p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
+    <p class="title"><a href="{{ page.url }}">{{ page.title }}{{ comp.Chevron() }}</a></p>
     {{ page.description |> md }}
     </div>
     {{ if config?.withTags }}

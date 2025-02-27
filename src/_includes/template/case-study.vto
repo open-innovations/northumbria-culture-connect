@@ -11,9 +11,9 @@ layout: template/base.vto
 			{{ content_block.about |> md }}
 			{{ /if }}
 			<p>
-			{{ comp.CallToAction({ link, text: `Visit ${ title } website &rarr;` }) }}
+			{{ comp.CallToAction({ link, text: `Visit ${ title } website`, ne:true }) }}
 			{{ if organisation_profile }}
-				{{ comp.CallToAction({ link: organisation_profile, text: 'Organisation profile' })}}
+				{{ comp.CallToAction({ link: organisation_profile, text: 'Organisation profile', ne:true })}}
 			{{ /if }}		
 			</p>
 

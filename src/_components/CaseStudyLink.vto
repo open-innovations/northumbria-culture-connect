@@ -32,7 +32,8 @@ css: |
       {{ page.description |> md }}
       {{ comp.CallToAction({
         link: page.url,
-        text: `Read ${ page.title } case study`
+        text: `Read ${ page.title } case study`,
+        ne: true
       })}}
     </div>
     <div class="image padded">
@@ -41,7 +42,8 @@ css: |
 	<div class="extra-call padded">
       {{ comp.CallToAction({
         link: page.url,
-        text: `Read ${ page.title } case study`
+        text: `Read ${ page.title } case study`,
+        ne: true
       })}}
 	</div>
   </div>

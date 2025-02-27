@@ -14,7 +14,8 @@ css: |
         &:hover {
             color: var(--cta-bg, white);
             background: var(--cta-text, black);
+            border-color: var(--cta-text, black);
         }
     }
 ---
-<a class="tag" href="{{ search.page(`tag="${tag}"`).url }}">{{ tag }}</a>
+<a class="tag" href="{{ search.page(`tag="${tag}"`).url }}">{{ tag }}{{ comp.Chevron() }}</a>

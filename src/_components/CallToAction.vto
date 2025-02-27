@@ -18,4 +18,4 @@ css: |
         }
     }
 ---
-<a class="call-to-action" href="{{ link }}">{{ text }}</a>
+<a class="call-to-action" href="{{ link }}">{{ text }}{{ if ne }}{{ comp.Chevron() }}{{ /if }}</a>
