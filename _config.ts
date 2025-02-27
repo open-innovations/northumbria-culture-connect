@@ -142,7 +142,7 @@ site.process(['.html'], (pages) => {
     site.copy(target);
 });
 
-// Copy over any "_data/*.csv" files
+// Copy over any "_data/release/*.csv" files
 const files = getFiles({
 	root:site.src(),
 	exclude: ['.git'],

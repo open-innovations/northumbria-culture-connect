@@ -10,6 +10,7 @@
 	padding-inline: 0;
 	gap: 1rem;
 	flex-wrap: wrap;
+	margin: 0;
 }
 .dashboard > * {
 	flex-basis: 20rem;
