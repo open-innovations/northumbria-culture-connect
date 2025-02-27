@@ -1,12 +1,48 @@
-<h2>Funding by organisation account category</h2>
+<h2>Organisation turnover by size of business</h2>
 
-<p>Accounts categories offer an indication of the size and type of organisation. They refer to the type of account filed by an organisation with Companies House. For definitions of account types, <a href="https://find-and-update.company-information.service.gov.uk/guides/accounts/chooser">see the Companies House definitions</a>.</p>
+{{>
+	const toTitleCase = (str) => str.replace(
+			/\w\S*/g,
+			(txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+		)
 
-{{> const max_funding = Math.ceil(Math.max(...grant_by_org_size.map(x => x.total_funding)) / 1e5) * 1e5 }}
+	const unmatched = grant_by_org_size
+		.find(x => x.accounts_category === 'UNMATCHED').total_funding;
+
+	const chartData = grant_by_org_size
+		.filter(x => x.accounts_category !== 'UNMATCHED')
+		.map(x => ({ ...x, accounts_category: toTitleCase(x.accounts_category) }));
+
+	const chartMax = +Math.max(...chartData.map(x => x.total_funding)).toLocaleString(undefined, {
+		maximumSignificantDigits: 1,
+		roundingMode: 'ceil',
+		useGrouping: false,
+	});
+}}
+
+<p>
+	The derived <a href="/regional/culture-sector/">Culture Sector</a> dataset has allowed further analysis of the funding data.
+	This analysis includes Arts Council England (Project Grants and Investment Programme) and data from 360 Giving and attempts to
+	match to companies house data either by company number or by name if company number is not available. The latter approach may be unreliable.
+	The data is then aggregated by the declared accounts category, as defined in
+	<a href="https://find-and-update.company-information.service.gov.uk/guides/accounts/chooser">Companies House accounts definitions</a>.
+</p>
+
+{{# https://www.gov.uk/government/publications/life-of-a-company-annual-requirements/life-of-a-company-part-1-accounts #}}
+
+<p>
+	After this matching, there are still a number of unmatched entities, probably charitable or public sector organisations.
+	The unmatched funding totals {{ (unmatched / 1e6).toLocaleString(undefined, {
+		style: 'currency',
+		currency: 'GBP',
+		maximumSignificantDigits: 3,
+	}) }}M.
+</p>
+
 {{ comp WidthLimit }}
 {{ comp.oi.chart.bar({
 	config: {
-		data: grant_by_org_size,
+		data: chartData,
 		category: "accounts_category",
 		columns: [{
 			name: "Tooltip",
@@ -17,16 +53,19 @@
 		],
 		axis: {
 			x: {
-				max: max_funding,					
+				max: chartMax,					
 				ticks: [{
-					value: 1500000,
-					label: "£1.5M"
+					value: 10e6,
+					label: "£10M"
 				},{
-					value: 1000000,
-					label: "£1M"
+					value: 7.5e6,
+					label: "£7.5M"
 				},{
-					value: 500000,
-					label: "£500k"
+					value: 5e6,
+					label: "£5M"
+				},{
+					value: 2.5e6,
+					label: "£2.5M"
 				},{
 					value: 0,
 					label: "0"
@@ -36,6 +75,11 @@
 	}
 }) }}
 {{ /comp }}
-<p>Please note, in the charts above, Arts Council funding covers funding awarded through the Investment Programme 2023-26, and National Lottery Project Grants data covers grants awarded over the period of 2018-2024.</p>
+
+{{# <p>
+	Please note, in the charts above, Arts Council funding covers funding awarded through
+	the Investment Programme 2023-26,
+	and National Lottery Project Grants data covers grants awarded over the period of 2018-2024.
+</p> #}}
 
 

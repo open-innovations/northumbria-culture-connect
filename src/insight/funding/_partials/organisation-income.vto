@@ -1,6 +1,40 @@
-<h2>Funding by Source of Income</h2>
+<h2>Sources of organisational income</h2>
 
-<p>The chart below shows the normalised percentage of income from each source, across all 3 pilot organisations.</p>
+<p>
+	We requested baseline data from the Data Observatory pilot organisations, including information about sources of their income.
+	{{ percentage_income.length }} organisations provided this data. The categories of income data we asked for were:
+</p>
+
+<dl>
+<dt>Earned income</dt>
+<dd>Income from sales of tickets, etc</dd>
+
+<dt>Individual donations</dt>
+<dd>Donations from private individuals</dd>
+
+<dt>Corporate sponsorships</dt>
+<dd>Donations from companies or other corporate bodies</dd>
+
+<dt>Trusts and foundations</dt>
+<dd>Income received from trusts or foundations, including legacies and private funding programmes.</dd>
+
+<dt>Public funding</dt>
+<dd>Funding received from public bodies including Arts Council England and DCMS.</dd>
+</dl>
+
+<p>
+	Comparing this directly would be skewed by the large organisations,
+	so the data is presented as a proportion of the total income. This enables a comparison of dependence on different types of funding.
+	The organisations are ordered in decreasing proportion of <b>earned income</b>.
+</p>
+
+<p>
+	Even with a small set of data, it is possible to see a wide variance in funding models of the different organisations,
+	with Centre for Life being almost 100% funded by earned income, whilst Seven Stories received in excess of 90% of its
+	income from donations, grants and public funding. With more data, it might be possible to cluster and analyse the groupings
+	of organisations by reliance on certain types of funding source.
+</p>
+
 {{ comp WidthLimit }}
 {{ comp.oi.chart.bar({
 	config: {

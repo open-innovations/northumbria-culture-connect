@@ -47,3 +47,15 @@ p { max-width: 80em; }
 }
 ul { list-style: square; margin-left: 2rem; }
 ol { list-style: decimal; margin-left: 2rem; }
+
+dl {
+	& dt {
+		font-weight: 700;
+		&:not(:first-of-type) {
+			margin-top: 1em;
+		}
+	}
+	& dd {
+		margin-left: 3rem;
+	}
+}
