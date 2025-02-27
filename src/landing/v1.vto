@@ -38,7 +38,7 @@ url: /
     #}}
     
 	{{# This section is created manually so that the case study backgrounds can take up the full width #}}
-    <section style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+    <section style="display:flex;flex-direction:column;gap:1rem;padding-bottom:120px;border-bottom:1px solid var(--col-darkgrey)">
         <h2 class="holder padded" style="padding-bottom:0">Case studies</h2>
 
         {{ comp.CaseStudyLinkList({ headingLevel: 'h3' }) }}
@@ -48,7 +48,7 @@ url: /
 	{{ comp Section }}
         <h2>Data Insights</h2>
     
-        {{ search.data('/insight/').description }}
+        <p>{{ search.data('/insight/').description }}</p>
     
         {{ comp AutoGrid }}
         {{ for p of search.pages('insight !index', 'title') }}

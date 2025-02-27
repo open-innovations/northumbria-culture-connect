@@ -3,8 +3,7 @@ css: |
   [data-comp=page-link] {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    gap: 1em;
+    gap: 1.25rem;
     & a {
         color: currentColor;
     }
@@ -16,6 +15,7 @@ css: |
   .block.case-study > * { margin-top: 1rem; }
   .block.case-study > *:first-child { margin-top: 0; }
 ---
+{{ comp ColourBlock { classes: (style || page.colour_style || 'bg-offwhite') } }}
 <{{ tag || 'div' }} data-comp="page-link" class="link-block {{ style || page.colour_style || 'bg-offwhite' }}">
     <div class="expand">
     <p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
@@ -27,3 +27,4 @@ css: |
     </div>
     {{ /if }}
 </{{ tag || 'div' }}>
+{{ /comp }}

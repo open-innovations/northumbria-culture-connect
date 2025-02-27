@@ -134,5 +134,5 @@ a[href="about:blank"] {
 
 blockquote { font-style: normal; margin-inline: 3rem; font-size: 24px; }
 blockquote p { font-style: italic; }
-blockquote cite { font-weight: bold; margin-top: 0.25rem; display: block; }
+blockquote p + cite, .holder blockquote p + cite { font-weight: bold; margin-top: 0.5rem; display: block; }
 blockquote cite:before { content: "— "; }
