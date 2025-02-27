@@ -5,6 +5,10 @@ css: |
         gap: 1em;
         grid-template-columns: repeat(auto-fill, minmax(var(--grid-size, 20rem), 1fr));
     }
+    [data-comp="UniformGrid"] [data-comp="colour-block"] {
+        margin-top: 0;
+        padding-bottom: 60px;
+     }
 ---
 {{# https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ #}}
 <{{ tag || 'div' }} data-comp="UniformGrid">
