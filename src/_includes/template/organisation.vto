@@ -20,14 +20,14 @@ layout: template/base.vto
 
 	{{ set caseStudies = search.pages(`case-study organisation_profile="${url}"`) }}
 	{{ if caseStudies.length > 0 }}
-	{{ comp Section }}
+	<section class="holder padded">
 		<p>
 		Case studies:
 		{{ for cs of caseStudies }}
 			<a href="{{ cs.url }}">{{ cs.title }}</a>
 		{{ /for }}
 		</p>
-	{{ /comp }}
+	</section>
 	{{ /if }}
 
 	{{ comp Section }}
