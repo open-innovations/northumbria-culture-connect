@@ -16,7 +16,7 @@ import inline from "lume/plugins/inline.ts";
 import redirects from "lume/plugins/redirects.ts"
 import prism from "lume/plugins/prism.ts";
 import "npm:prismjs@1.29.0/components/prism-python.js";
-import getFiles, { exists, fileExt, trimPath, fmtFileSize } from "https://deno.land/x/getfiles/mod.ts";
+import { expandGlobSync } from "lume/deps/fs.ts";
 
 // import mermaid from "jsr:@ooker777/lume-mermaid-plugin/";
 
@@ -150,18 +150,13 @@ site.process(['.html'], (pages) => {
 });
 
 // Copy over any "_data/release/*.csv" files
-const files = getFiles({
-	root:site.src(),
-	exclude: ['.git'],
-	ignore: ['**/*.md', '**/*.ts', '**/*.yml', '**/*.yaml', '**/*.vto', '**/*.css', '**/*.js', '**/*.json', '**/*.geojson']
-});
-files.forEach(file => {
-	var path = file.path.replace(site.src(),'').replace(/^\//,'');
-	var include = "/_data/release/";
-	if(file.ext == "csv"){
-		let i = path.lastIndexOf(include);
-		if(i > 0) site.copy(path,path.substr(0,i)+path.substr(i+include.length-1));
-	}
-});
+const csvFiles = expandGlobSync('src/**/_data/release/**/*.csv').map(f => f.path);
+csvFiles.forEach((file: string) => {
+    const remote = import.meta.resolve(file);
+    const local = file.replace(site.src() + '/', '').replace('_data/release/', '');
+    // console.debug({ local, remote });
+    site.remoteFile(local, remote);
+})
+site.copy(['.csv']);
 
 export default site;
