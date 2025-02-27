@@ -969,6 +969,7 @@
   "redirects": {
     "https://cdn.skypack.dev/-/d3@v7.8.2-xzCqOnvGzQkNaPfc30G2/dist=es2019,mode=types/index": "https://cdn.skypack.dev/-/d3@v7.8.2-xzCqOnvGzQkNaPfc30G2/dist=es2019,mode=types/index.d.ts",
     "https://deno.land/x/deno_dom/deno-dom-wasm.ts": "https://deno.land/x/deno_dom@v0.1.36-alpha/deno-dom-wasm.ts",
+    "https://deno.land/x/getfiles/mod.ts": "https://deno.land/x/getfiles@v1.0.0/mod.ts",
     "https://deno.land/x/lume@v2.3.0/": "https://deno.land/x/lume@v2.3.0"
   },
   "remote": {
@@ -1178,6 +1179,10 @@
     "https://deno.land/x/denoflate@1.2.1/pkg/denoflate.js": "b9f9ad9457d3f12f28b1fb35c555f57443427f74decb403113d67364e4f2caf4",
     "https://deno.land/x/denoflate@1.2.1/pkg/denoflate_bg.wasm.js": "d581956245407a2115a3d7e8d85a9641c032940a8e810acbd59ca86afd34d44d",
     "https://deno.land/x/esbuild@v0.23.1/mod.js": "f8a2bf4a1e4dcffd32690fc4562dae780405ce52ee815a094eb8b5f6e591da53",
+    "https://deno.land/x/getfiles@v1.0.0/fs.ts": "b387902cfdc4e0ffba125343c68f6f886da5ac906882124a3ed908a3d68da053",
+    "https://deno.land/x/getfiles@v1.0.0/mod.ts": "59810c6574a4be76c0115db6477ca07b04206bbfa7a6dcf907c111ae073b4c7e",
+    "https://deno.land/x/getfiles@v1.0.0/types.ts": "8f09fb5b57e02dfddd1f375c4b97b88a38068a0ac3b9ac78501dc4d5a0b582f9",
+    "https://deno.land/x/getfiles@v1.0.0/utils.ts": "01c4dc7f8057c41a8eefa587726938adb2958c470b58a2676224299e10245118",
     "https://deno.land/x/lume@v2.3.0/cli.ts": "71f6e24caf5eb661fb1b903ed6a914718a08ee6711daa689dc61fa5e5a37c54c",
     "https://deno.land/x/lume@v2.3.0/cli/build.ts": "122f3e3bc431f952b8139199f588441efcf8ecfe844d9ab454f46f3b1c3fc15d",
     "https://deno.land/x/lume@v2.3.0/cli/build_worker.ts": "37a454e5dbedabe151293f2419888a16151861d7008f4b94083b3c9c78702d20",

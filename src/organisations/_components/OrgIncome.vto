@@ -44,7 +44,15 @@
 	{{ /comp #}}
 
 	{{ comp PanelSelector.panel { id: "funding-table", title: "Table", icon: 'table', classes: "doublepadded" } }}
-		{{ comp Warning }}Content needed here{{ /comp }}
+		{{ comp.oi.table({ 
+            config: {
+                data: income,
+                width: '100%',
+                columns: [{name: 'Source', template: '{{ source }}'}, {name: 'Percentage of total income', template: '{{ percentage | toFixed(2) }}'}],
+                sort: 'Percentage of total income',
+                reverse: true
+            } 
+        }) }}
 	{{ /comp }}
 {{ /comp }}
 
