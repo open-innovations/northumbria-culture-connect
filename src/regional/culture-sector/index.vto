@@ -13,7 +13,6 @@ oldUrl:
 ---
 
 {{ comp Section }}
-
 	<h2>Sector Map</h2>
 
 	{{
@@ -30,10 +29,33 @@ oldUrl:
 
 	{{ include './_partials/FundedOrganisationTable.vto' }}
 
-	{{ comp.CSVOptions({file:"data/culture_landscape.csv"}) }}
-
 {{ /comp }}
 
 {{ comp Section }}
+	<h2>Processing pipelines</h2>
 	{{ include './_partials/process.md' |> md }}
 {{ /comp }}
+
+{{ comp Section }}
+	<h2>Data</h2>
+
+	<p>
+		The result of the processing pipelines is a large CSV file containing the funding data matched
+		to Companies House, Charity Commission and ONS reference data.
+	</p>
+	<p>
+		You can either download this directly or view and amend the CSV in your browser.
+		If you choose to view the CSV you will be able to save the amended version of the CSV.
+		No changes that you make will be applied to the source data.
+	</p>
+
+	{{ comp.CSVOptions({
+		file: url + "data/culture_landscape.csv",
+		hideDownload: false,
+		downloadText: 'Download',
+		viewText: 'View',
+		closeText: 'Close editor'
+	}) }}
+
+{{ /comp }}
+
