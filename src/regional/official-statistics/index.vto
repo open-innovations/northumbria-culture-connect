@@ -16,12 +16,9 @@ notes: |
     - Potentially break down to ward level
     - Maybe add IMD
 ---
-
-{{ comp Section }}
-
-	{{ comp documentation }}
-		{{ notes |> md }}
-	{{ /comp }}
+{{ comp documentation }}
+	{{ notes |> md }}
+{{ /comp }}
 
 {{ comp Section }}
 
@@ -265,7 +262,7 @@ notes: |
 		}
 	}) }}
 
-	<p>Gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence.</p>
+	<h2>Gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence.</h2>
 
 	{{ comp.oi.chart.line({
 		config: {
@@ -309,7 +306,7 @@ notes: |
 		}
 	}) }}
 
-	<p>Percentage growth in gross annual earnings.</p>
+	<h2>Percentage growth in gross annual earnings</h2>
 	{{ comp.oi.chart.line({
 		config: {
 			data: AHSE,
