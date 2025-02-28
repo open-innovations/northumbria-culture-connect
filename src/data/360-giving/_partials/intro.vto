@@ -14,6 +14,8 @@
     This inclusion / exclusion is managed in a CSV file comprising the Funding Organisation, Grant Programme, and columns to specify a cultural
     fund and to identify COVID-related funds. The longlist is derived from any organisations that have funded any organisation based in Newcastle.
 </p>
-<div>
-    Review the control file: {{ comp.CSVOptions({ file: './funders.csv' }) }}
-</div>
+<p>
+    You can review this list of included funders below. Once opened, you can make changes to the content of the file, and download your changes.
+    NB No alterations you make will be applied to the data stored in the site.
+</p>
+{{ comp.CSVOptions({ file: './funders.csv', hideDownload: true, downloadText: 'Download', viewText: 'View funders list', closeText: 'Close editor' }) }}
