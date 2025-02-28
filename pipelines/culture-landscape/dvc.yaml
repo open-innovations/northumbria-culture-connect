@@ -8,7 +8,7 @@ vars:
 stages:
   stage-1:
     desc: Build longlist of organisations that appear in funding data
-    cmd: papermill stage-1.ipynb | jupyter nbconvert --stdin --to markdown --output stage-1 --output-dir ${LUME_DIR}
+    cmd: papermill stage-1.ipynb | jupyter nbconvert --stdin --to markdown --output index --output-dir ${LUME_DIR}/stage-1
     deps:
       - stage-1.ipynb
       - config.py
@@ -21,7 +21,7 @@ stages:
 
   stage-2:
     desc: Attempt to match companies to Companies House and Charity Commission data
-    cmd: papermill stage-2.ipynb | jupyter nbconvert --stdin --to markdown --output stage-2 --output-dir ${LUME_DIR}
+    cmd: papermill stage-2.ipynb | jupyter nbconvert --stdin --to markdown --output index --output-dir ${LUME_DIR}/stage-2
     deps:
       - stage-2.ipynb
       - ${WORKING}/funded-organisations.csv
@@ -45,7 +45,7 @@ stages:
 
   stage-3:
     desc: Create combined version of data from matches and SIC codes
-    cmd: papermill stage-3.ipynb | jupyter nbconvert --stdin --to markdown --output stage-3 --output-dir ${LUME_DIR}
+    cmd: papermill stage-3.ipynb | jupyter nbconvert --stdin --to markdown --output index --output-dir ${LUME_DIR}/stage-3
     deps:
       - stage-3.ipynb
       - ${WORKING}/funded-organisations.csv
@@ -61,7 +61,7 @@ stages:
 
   prepare:
     desc: Prepare the data for visualisation
-    cmd: papermill stage-4-prepare.ipynb | jupyter nbconvert --stdin --to markdown --output stage-4-prepare --output-dir ${LUME_DIR}
+    cmd: jupyter execute stage-4-prepare.ipynb
     deps:
       - ${DATA}/culture_landscape.csv
     outs:

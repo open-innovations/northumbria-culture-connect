@@ -1,5 +1,3 @@
-# Landscape map - stage 3
-
 This stage merges the raw longlist with the candidate data from the reference sources to create the new list.
 
 It round-trips the data from the existing landscape list to ensure that any manual overrides are included.

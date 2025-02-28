@@ -33,7 +33,18 @@ oldUrl:
 
 {{ comp Section }}
 	<h2>Processing pipelines</h2>
-	{{ include './_partials/process.md' |> md }}
+
+	<p>Preparing this data requires a series of steps:</p>
+
+
+	<ol>
+	{{ for stage of search.pages(`pipeline url^="${url}"`) }}
+		<li>
+			<a href="{{ stage.url }}">{{ stage.title }}</a>
+			{{ stage.description |> md }}
+		</li>
+	{{ /for }}
+	</ol>
 {{ /comp }}
 
 {{ comp Section }}

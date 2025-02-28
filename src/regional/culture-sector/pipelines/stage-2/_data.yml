@@ -1,0 +1,9 @@
+title: Culture Sector pipeline, stage 2
+description: |
+  Stage 2 of the pipeline performs various matches, including simple matches,
+  and fuzzy matches to both Companies House and Charity Commission data.
+  It also attempts to correct any typographical errors in the names.
+extended_description: |
+  The result of this stage is a series of files containing direct and
+  fuzzy matches to the various references, and other files with lists
+  of matched SIC codes and company name corrections.

@@ -1,5 +1,3 @@
-# Culture Landscape map, stage 1
-
 The purpose of this stage is to process raw funding data into a candidate longlist broken down by local authority and source.
 
 Dependencies:

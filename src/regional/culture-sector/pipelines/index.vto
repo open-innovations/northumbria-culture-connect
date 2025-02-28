@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 {{ for stage of search.pages(`url^=${url}stage`, 'url') }}
     {{ stage.url }}
 {{ /for }}

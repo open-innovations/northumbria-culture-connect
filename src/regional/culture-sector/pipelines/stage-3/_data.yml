@@ -1,0 +1,6 @@
+title: Culture Sector pipeline, stage 3
+description: |
+  Stage 3 combines the candidate organisations and the matches from the prior stage
+  to produce the culture sector dataset. This is augmented with data from the Companies House
+  and Charity Commission references, and adds in other companies that do not appear in the
+  funding data sources, but which share SIC codes with the matched companies.

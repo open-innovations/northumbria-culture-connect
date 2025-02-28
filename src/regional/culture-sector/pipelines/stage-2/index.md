@@ -1,5 +1,3 @@
-# Landscape Map - Stage 2
-
 This stage attempts to cleanse the data, match to other sources of data and tag with categories (such as Individuals).
 
 
