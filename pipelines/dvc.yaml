@@ -17,9 +17,61 @@ stages:
       - ${ROOT}/raw/company-data.zip:
           persist: true
           cache: false
+      - ${ROOT}/raw/charity-data.zip:
+          persist: true
+          cache: false
+      - ${ROOT}/raw/charity-area-data.zip:
+          persist: true
+          cache: false
+      - ${ROOT}/raw/360-giving.csv:
+          persist: true
+          cache: false
+      - ${ROOT}/raw/onspd.zip:
+          persist: true
+          cache: false
+
+  prepare-geo:
+    cmd: jupyter execute prepare-geo.ipynb
+    deps:
+      - prepare-geo.ipynb
+      - ${ROOT}/raw/onspd.zip
+    outs:
+      - ${ROOT}/data/reference/onspd_extract.csv:
+          persist: false
+          cache: false
+
+  geo:
+    cmd: jupyter execute geo.ipynb
+    deps:
+      - geo.ipynb
+    outs:
+      - ${ROOT}/src/_data/geojson/lad/all.geojson:
+          persist: false
+          cache: false
+      - ${ROOT}/src/_data/geojson/lad/E06000047.geojson:
+          persist: false
+          cache: false
+      - ${ROOT}/src/_data/geojson/lad/E06000057.geojson:
+          persist: false
+          cache: false
+      - ${ROOT}/src/_data/geojson/lad/E08000021.geojson:
+          persist: false
+          cache: false
+      - ${ROOT}/src/_data/geojson/lad/E08000022.geojson:
+          persist: false
+          cache: false
+      - ${ROOT}/src/_data/geojson/lad/E08000023.geojson:
+          persist: false
+          cache: false
+      - ${ROOT}/src/_data/geojson/lad/E08000024.geojson:
+          persist: false
+          cache: false
+      - ${ROOT}/src/_data/geojson/lad/E08000037.geojson:
+          persist: false
+          cache: false
 
   load-data:
-    cmd: papermill load-data.ipynb - | jupyter nbconvert --stdin --stdout --to markdown
+    cmd: jupyter execute load-data.ipynb
     deps:
       - load-data.ipynb
       - ${ROOT}/raw/company-data.zip

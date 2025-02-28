@@ -8,6 +8,10 @@ stages:
       md5: 4e7d944e82a445a529cfa5bd2ed52c42
       size: 3961
     outs:
+    - path: ../raw/360-giving.csv
+      hash: md5
+      md5: cf9e6c9f97cdc28c80b2e76b4c146641
+      size: 5295710
     - path: ../raw/arts-council-investment-programme.csv
       hash: md5
       md5: 94029bd4c4fac2b2a140244d32312e22
@@ -16,10 +20,22 @@ stages:
       hash: md5
       md5: 7d8cf76255dfd096ae1d1e4b9938c458
       size: 3127400
+    - path: ../raw/charity-area-data.zip
+      hash: md5
+      md5: f6693e334bd247868502cd30e967147a
+      size: 4232474
+    - path: ../raw/charity-data.zip
+      hash: md5
+      md5: bfc9793ab66de3750a20e416c6604225
+      size: 42793919
     - path: ../raw/company-data.zip
       hash: md5
       md5: 473006274c4f91111062161b68ff4aee
       size: 486510044
+    - path: ../raw/onspd.zip
+      hash: md5
+      md5: 99ed91d2bda1292f6f5eb274aa056f93
+      size: 240637353
   load-data:
     cmd: papermill load-data.ipynb - | jupyter nbconvert --stdin --stdout --to markdown
     deps:
@@ -86,3 +102,59 @@ stages:
       hash: md5
       md5: 75ea9774f16214d304d3a6b4325c516e
       size: 565
+  geo:
+    cmd: jupyter execute geo.ipynb
+    deps:
+    - path: geo.ipynb
+      hash: md5
+      md5: bf1cbd77e049f15545067fdc78728e67
+      size: 34667
+    outs:
+    - path: ../src/_data/geojson/lad/E06000047.geojson
+      hash: md5
+      md5: 080fbf35dd2ad3113b652979e755f5a1
+      size: 34353
+    - path: ../src/_data/geojson/lad/E06000057.geojson
+      hash: md5
+      md5: 6f6d56819c458f41be9b390f63fbf3bc
+      size: 78232
+    - path: ../src/_data/geojson/lad/E08000021.geojson
+      hash: md5
+      md5: d4613029601d81bf380ba6c14e87ab51
+      size: 6037
+    - path: ../src/_data/geojson/lad/E08000022.geojson
+      hash: md5
+      md5: a05651de5b9b5701ec2a1b24f1749c3d
+      size: 7543
+    - path: ../src/_data/geojson/lad/E08000023.geojson
+      hash: md5
+      md5: b1cb4a40a6cd4883e5a217f3172282a2
+      size: 7782
+    - path: ../src/_data/geojson/lad/E08000024.geojson
+      hash: md5
+      md5: 8c4f4cb6b8cdf41ec83817f9a8c75692
+      size: 12900
+    - path: ../src/_data/geojson/lad/E08000037.geojson
+      hash: md5
+      md5: d34c547259691111e6692fd29a0e0278
+      size: 12417
+    - path: ../src/_data/geojson/lad/all.geojson
+      hash: md5
+      md5: e4d63abdb126658ee4a18e8cb1a292a2
+      size: 158844
+  prepare-geo:
+    cmd: jupyter execute prepare-geo.ipynb
+    deps:
+    - path: ../raw/onspd.zip
+      hash: md5
+      md5: 99ed91d2bda1292f6f5eb274aa056f93
+      size: 240637353
+    - path: prepare-geo.ipynb
+      hash: md5
+      md5: 8894fce689849e997c4058e36f424ae3
+      size: 1469
+    outs:
+    - path: ../data/reference/onspd_extract.csv
+      hash: md5
+      md5: fc2a06f1b678de44945b7f3fdc608e44
+      size: 3451865
