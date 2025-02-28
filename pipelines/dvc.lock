@@ -5,8 +5,8 @@ stages:
     deps:
     - path: get-data.py
       hash: md5
-      md5: 60740174173c931ce80a3e909d0d7bf3
-      size: 3783
+      md5: 4e7d944e82a445a529cfa5bd2ed52c42
+      size: 3961
     outs:
     - path: ../raw/arts-council-investment-programme.csv
       hash: md5

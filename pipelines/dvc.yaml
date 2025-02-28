@@ -4,6 +4,7 @@ vars:
 stages:
   get-data:
     cmd: python get-data.py
+    always_changed: true
     deps:
       - get-data.py
     outs:

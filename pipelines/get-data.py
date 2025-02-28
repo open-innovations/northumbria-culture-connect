@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 RAW_DATA = (Path(__file__).parent / '../raw').resolve()
 logging.info('Downloading to %s', RAW_DATA)
 
-def download_to_file(url, local_file, force = False):
+def download_to_file(url, local_file, force=False):
     if not Path(local_file).exists() or force:
         logging.info(
             'Downloading %s to %s', url, local_file)
@@ -35,6 +35,7 @@ def main():
     companies_house_company_lists()
     charity_commission_lists()
     download_360_giving()
+    onspd()
 
 
 def arts_council_project_grants():
@@ -107,7 +108,13 @@ def download_360_giving():
 
     download_to_file(url, RAW_DATA / '360-giving.csv', force=True)
     save_datestamp(SITE / 'data/360-giving/_data/metadata/downloaded.yml')
-    
+
+def onspd():
+    download_to_file(
+        'https://www.arcgis.com/sharing/rest/content/items/6fb8941d58e54d949f521c92dfb92f2a/data',
+        RAW_DATA / 'onspd.zip'
+    )
+
 
 if __name__ == "__main__":
     main()
