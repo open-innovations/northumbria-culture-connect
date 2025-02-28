@@ -17,20 +17,20 @@ OI.ready(function(){
 	// Add default CSS
 	var styles = document.createElement('style');
 	styles.innerHTML = `
-		panelSelector { display: block; }
-		panelSelector + *, * + panelSelector { margin-top: 1em; }
-		panelSelector [role="tablist"] {
+		panel-selector { display: block; }
+		panel-selector + *, * + panel-selector { margin-top: 1em; }
+		panel-selector [role="tablist"] {
 			display: inline-block;
 			margin: 0;
 			padding: 0;
 			list-style: none;
 		}
-		panelSelector [role="tablist"] > * {
+		panel-selector [role="tablist"] > * {
 			display: inline-block;
 			margin-right: 0.5rem;
 			margin-bottom: 0.5rem;
 		}
-		panelSelector [role="tab"] {
+		panel-selector [role="tab"] {
 			position: relative;
 			display: inline-block;
 			text-align:center;
@@ -43,24 +43,24 @@ OI.ready(function(){
 			background: var(--col-white);
 			color: var(--col-black);
 		}
-		panelSelector [role="tab"][aria-selected="true"] {
+		panel-selector [role="tab"][aria-selected="true"] {
 			background: transparent;
 			color: var(--col-white);
 		}
-		panelSelector [role="tabpanel"] {
+		panel-selector [role="tabpanel"] {
 			display: block;
 		}
-		panelSelector [role="tabpanel"][hidden=true] {
+		panel-selector [role="tabpanel"][hidden=true] {
 			display: none;
 		}
-		panelSelector [role=tab] .icon {
+		panel-selector [role=tab] .icon {
 			float: right;
 			margin-left: 0.25rem;
 			margin-top: 0.125em;
 		}`;
 	document.head.prepend(styles);
 	
-	var panelSelectors = document.querySelectorAll('panelSelector');
+	var panelSelectors = document.querySelectorAll('panel-selector');
 	var p;
 	var icons = {
 		'line': '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-graph-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg>',

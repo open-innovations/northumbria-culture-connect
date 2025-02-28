@@ -1,4 +1,4 @@
-panelSelector [role=tab] {
+panel-selector [role=tab] {
     & svg {
         pointer-events: none;
     }
