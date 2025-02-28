@@ -7,3 +7,8 @@ panelSelector [role=tab] {
 .leaflet-popup {
     bottom: 24px!important;
   }
+
+div.oi-viz.oi-chart.oi-chart-line + h1, div.oi-viz.oi-chart.oi-chart-line + h2, div.oi-viz.oi-chart.oi-chart-line + h3 {
+    margin-top: 1.5rem; 
+    /* Adding some spacing to a h2 or h3 after a line chart. Feel free to change amount. */
+}
