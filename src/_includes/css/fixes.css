@@ -3,3 +3,7 @@ panelSelector [role=tab] {
         pointer-events: none;
     }
 }
+
+.leaflet-popup {
+    bottom: 24px!important;
+  }
