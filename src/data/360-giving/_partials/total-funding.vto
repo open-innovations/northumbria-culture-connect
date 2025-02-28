@@ -1,11 +1,10 @@
 <h2>Total Funding</h2>
-
-<div style="display:flex;flex-wrap:wrap;gap:1rem;">
-
-    <div style="flex-basis: 30rem; flex-shrink: 0; flex-grow: 1;">
+<p>The chart shows funding per month since January 2020.</p>
+{{ comp WidthLimit }}
     {{ comp.oi.chart.line({
         config: {
             data: summary_by_month,
+            height: 400,
             columns: [{
                 name: 'nice_date',
                 template:  "{{Award Date | strptime('%Y-%m-%d') | strftime('%e %B %Y')}}"
@@ -44,15 +43,4 @@
             }
         }
     }) }}
-    </div>
-
-    <div style="flex-basis: 30rem;flex-shrink:1;flex-grow:1;">
-        <p>
-            The chart shows funding per month since January 2020.
-        </p>
-        <p>
-            FORMATTING TO BE FIXED.
-        </p>
-    </div>
-
-</div>
+{{ /comp }}
