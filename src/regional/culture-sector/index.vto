@@ -52,7 +52,7 @@ oldUrl:
 
 
     <ol>
-    {{ for stage of search.pages(`pipeline url^="${url}"`) }}
+    {{ for stage of search.pages(`pipeline url^="${url}"`, 'url') }}
         <li>
             <a href="{{ stage.url }}">{{ stage.title }}</a>
             {{ stage.description |> md }}
