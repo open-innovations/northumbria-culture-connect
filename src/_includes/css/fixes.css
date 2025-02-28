@@ -4,7 +4,7 @@ panelSelector [role=tab] {
     }
 }
 
-.leaflet-popup {
+.oi-zoomable-map .leaflet-popup {
     bottom: 24px!important;
   }
 
