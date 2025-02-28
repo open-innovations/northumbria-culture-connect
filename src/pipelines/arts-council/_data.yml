@@ -1,4 +1,9 @@
 title: Arts Council Processing pipeline
 
+description: |
+  The Arts Council pipeline is a single stage which processes both the
+  Investment Programme and National Lottery Project Grants data into
+  appropriate summaries.
+
 tags:
   - pipeline
