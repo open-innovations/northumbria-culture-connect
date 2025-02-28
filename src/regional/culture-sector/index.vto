@@ -1,9 +1,12 @@
 ---
 title: Culture sector
 description: |
-    A derived dataset detailing the cultural organisations operating across the Newcastle City Council region. 
+    The culture sector dataset has been created by Northumbria Culture Connect Data Observatory pilot
+    project to provide a view of the organisations operating across the culture sector in Newcastle. 
 extended_description: |
-   The organisation list has been extracted from various sources of funding data which are published with an open license.
+    The dataset has been derived from taking organisations that appear in funding datasets published by
+    Arts Council England and matching these to data from Companies House and the Charity Commission.
+    The matched companies are then used as a seed to find similar companies in the Companies House data.
 tags:
     - derived
     - data
@@ -13,60 +16,71 @@ oldUrl:
 ---
 
 {{ comp Section }}
-	<h2>Sector Map</h2>
+    <h2>Sector Map</h2>
 
-	{{
-		comp.CultureSectorMap({
-			centre: [54.980, -1.613],
-			data: list,
-			boundaries: geojson.lad.E08000021,
-		})
-	}}
+    <p>
+        The map below shows the location of the organisations in the culture sector dataset for which
+        a postcode is available. These are mapped as
+        <strong>funded</strong> organisations (organisations appearing in the funder data) and
+        <strong>matched</strong> organisations (organisations having similar Companies House coding).
+    </p>
+
+    {{
+        comp.CultureSectorMap({
+            centre: [54.980, -1.613],
+            data: list,
+            boundaries: geojson.lad.E08000021,
+        })
+    }}
 {{ /comp }}
 
 {{ comp Section }}
-	<h2>Funded Organisations</h2>
+    <h2>Funded Organisations</h2>
 
-	{{ include './_partials/FundedOrganisationTable.vto' }}
+    <p>
+        The funded organisations are listed in the table below, showing the funding source.
+    </p>
+
+    {{ include './_partials/FundedOrganisationTable.vto' }}
 
 {{ /comp }}
 
 {{ comp Section }}
-	<h2>Processing pipelines</h2>
+    <h2>Processing pipelines</h2>
 
-	<p>Preparing this data requires a series of steps:</p>
+    <p>Preparing this data requires a series of steps:</p>
 
 
-	<ol>
-	{{ for stage of search.pages(`pipeline url^="${url}"`) }}
-		<li>
-			<a href="{{ stage.url }}">{{ stage.title }}</a>
-			{{ stage.description |> md }}
-		</li>
-	{{ /for }}
-	</ol>
+    <ol>
+    {{ for stage of search.pages(`pipeline url^="${url}"`) }}
+        <li>
+            <a href="{{ stage.url }}">{{ stage.title }}</a>
+            {{ stage.description |> md }}
+        </li>
+    {{ /for }}
+    </ol>
 {{ /comp }}
 
 {{ comp Section }}
-	<h2>Data</h2>
+    <h2>Data</h2>
 
-	<p>
-		The result of the processing pipelines is a large CSV file containing the funding data matched
-		to Companies House, Charity Commission and ONS reference data.
-	</p>
-	<p>
-		You can either download this directly or view and amend the CSV in your browser.
-		If you choose to view the CSV you will be able to save the amended version of the CSV.
-		No changes that you make will be applied to the source data.
-	</p>
+    <p>
+        The result of the processing pipelines is a large CSV file containing the funding data matched
+        to Companies House, Charity Commission and ONS reference data.
+    </p>
+    <p>
+        You can either download this directly or view and amend the CSV in your browser.
+        If you choose to view the CSV you will be able to save the amended version of the CSV.
+        No changes that you make will be applied to the source data.
+    </p>
 
-	{{ comp.CSVOptions({
-		file: url + "data/culture_landscape.csv",
-		hideDownload: false,
-		downloadText: 'Download',
-		viewText: 'View',
-		closeText: 'Close editor'
-	}) }}
+    {{ comp.CSVOptions({
+        file: url + "data/culture_landscape.csv",
+        hideDownload: false,
+        downloadText: 'Download',
+        viewText: 'View',
+        closeText: 'Close editor'
+    }) }}
 
 {{ /comp }}
 

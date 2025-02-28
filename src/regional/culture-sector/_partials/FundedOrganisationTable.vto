@@ -7,8 +7,8 @@
 			<th>Charity number</th>
 			<th style="writing-mode: vertical-lr;">Arts Council NPO</th>
 			<th style="writing-mode: vertical-lr;">Arts Council IPSO</th>
-			<th style="writing-mode: vertical-lr;">NECA</th>
 			<th style="writing-mode: vertical-lr;"><a href="{{ "~/data/arts-council/project-grants/index.vto" |> url }}">National Lottery Project Grant</a></th>
+			{{# <th style="writing-mode: vertical-lr;">NECA</th> #}}
 		</tr>
 	</thead>
 	<tbody>
@@ -19,8 +19,8 @@
 			<td>{{ r.registered_charity_number }}</td>
 			<td>{{ comp.Tick({ value: r.NPO }) }}</td>
 			<td>{{ comp.Tick({ value: r.IPSO }) }}</td>
-			<td>{{ comp.Tick({ value: r.NECA }) }}</td>
 			<td>{{ comp.Tick({ value: r['Project Grant'] }) }}</td>
+			{{# <td>{{ comp.Tick({ value: r.NECA }) }}</td> #}}
 		</tr>
 		{{ /for }}
 	</tbody>
