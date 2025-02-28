@@ -114,12 +114,12 @@ site.copy('assets/images/about.jpg');
 
 site.process(['.html'], (pages) => {
     for (const page of pages) {
-        const svgs = page.document?.querySelectorAll<SVGElement>('.oi-waffle-chart svg');
+        const svgs = page.document?.querySelectorAll<SVGElement>('.oi-chart svg');
         for (const svg of svgs) {
             // Remove all inline styles!
             svg.removeAttribute('style');
-//             svg.removeAttribute('width');
-//             svg.removeAttribute('height');
+            svg.removeAttribute('width');
+            svg.removeAttribute('height');
         }
         page.content;
     }

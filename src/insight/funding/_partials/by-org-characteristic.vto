@@ -9,9 +9,22 @@
 	const unmatched = grant_by_org_size
 		.find(x => x.accounts_category === 'UNMATCHED').total_funding;
 
-	const chartData = grant_by_org_size
+	const matched = grant_by_org_size
 		.filter(x => x.accounts_category !== 'UNMATCHED')
+
+	const fundingClip = 5e5;
+
+	const chartData = matched
+		.filter(x => x.total_funding >= fundingClip)
 		.map(x => ({ ...x, accounts_category: toTitleCase(x.accounts_category) }));
+
+	const smallFunding = matched
+		.filter(x => x.total_funding < fundingClip)
+		.reduce((a, c) => {
+			a.accounts_categories.push(toTitleCase(c.accounts_category));
+			a.total_funding += c.total_funding;
+			return a;
+		}, { accounts_categories: [], total_funding: 0 })
 
 	const chartMax = +Math.max(...chartData.map(x => x.total_funding)).toLocaleString(undefined, {
 		maximumSignificantDigits: 1,
@@ -24,7 +37,7 @@
 	The derived <a href="/regional/culture-sector/">Culture Sector</a> dataset has allowed further analysis of the funding data.
 	This analysis includes Arts Council England (Project Grants and Investment Programme) and data from 360 Giving and attempts to
 	match to companies house data either by company number or by name if company number is not available. The latter approach may be unreliable.
-	The data is then aggregated by the declared accounts category, as defined in
+	The data is the aggregated by the declared accounts category, as defined in
 	<a href="https://find-and-update.company-information.service.gov.uk/guides/accounts/chooser">Companies House accounts definitions</a>.
 </p>
 
@@ -37,9 +50,19 @@
 		currency: 'GBP',
 		maximumSignificantDigits: 3,
 	}) }}M.
+	The graph below also suppresses figures below {{ fundingClip.toLocaleString(undefined, {
+		style: 'currency',
+		currency: 'GBP',
+		maximumSignificantDigits: 3,
+	}) }}, resulting in organisations in {{ smallFunding.accounts_categories.join(', ') }} account categories being excluded from the chart.
+	This totals {{ smallFunding.total_funding.toLocaleString(undefined, {
+		style: 'currency',
+		currency: 'GBP',
+		maximumSignificantDigits: 3,
+	}) }} of funding which is not included.
 </p>
 
-{{ comp WidthLimit }}
+{{ comp WidthLimit { maxWidth: 'min(80vw, 800px)' } }}
 {{ comp.oi.chart.bar({
 	config: {
 		data: chartData,
@@ -48,6 +71,8 @@
 			name: "Tooltip",
 			template: "Funding<br />{{ accounts_category }}: £{{ total_funding | toLocaleString() }}"
 		}],
+		width: 800,
+		height: 200,
 		series: [
 			{ title: "Total funding", value: "total_funding", tooltip: "Tooltip" }
 		],

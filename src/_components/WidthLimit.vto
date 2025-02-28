@@ -11,7 +11,7 @@ css: |
 ---
 
 <div {{ if id }}id="{{ id }}" {{ /if }}data-comp="width-limit"
-    {{- if maxWidth }} style="max-width: {{ maxWidth }}"{{ /if -}}
+    {{- if maxWidth }} style="--max-width: {{ maxWidth }};"{{ /if -}}
 >
 {{ content }}
 </div>
