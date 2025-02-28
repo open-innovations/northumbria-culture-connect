@@ -37,7 +37,7 @@ stages:
       md5: 99ed91d2bda1292f6f5eb274aa056f93
       size: 240637353
   load-data:
-    cmd: papermill load-data.ipynb - | jupyter nbconvert --stdin --stdout --to markdown
+    cmd: jupyter execute load-data.ipynb
     deps:
     - path: ../raw/charity-area-data.zip
       hash: md5
@@ -53,13 +53,13 @@ stages:
       size: 486510044
     - path: load-data.ipynb
       hash: md5
-      md5: 22837e498633ff1763ad3c7eeb680f1d
-      size: 5648
+      md5: 7348f4a0c5a92f7a4f14cf9cdd27048c
+      size: 4100
     outs:
-    - path: ../raw/company-data.db
+    - path: ../raw/data-lake.db
       hash: md5
-      md5: 1f58d39677e60037f346095708e8a058
-      size: 615264256
+      md5: 325b4797fbde92d396526054b2641169
+      size: 1115697152
   arts-council:
     cmd: "papermill arts-council.ipynb - | jupyter nbconvert --stdin --to markdown
       --output index --output-dir ../src//pipelines/arts-council\n"
@@ -74,8 +74,8 @@ stages:
       size: 3127400
     - path: arts-council.ipynb
       hash: md5
-      md5: cf4cc872cd6be5af619a0f625bf31fe0
-      size: 7178
+      md5: 8bfdfa2cca2f172a5e5ce44f318b6b8e
+      size: 7179
     outs:
     - path: ../src//data/arts-council/investment-programme/_data/funding_by_organisation.csv
       hash: md5

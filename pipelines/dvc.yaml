@@ -78,7 +78,7 @@ stages:
       - ${ROOT}/raw/charity-data.zip
       - ${ROOT}/raw/charity-area-data.zip
     outs:
-      - ${ROOT}/raw/company-data.db:
+      - ${ROOT}/raw/data-lake.db:
           persist: true
           cache: false
 

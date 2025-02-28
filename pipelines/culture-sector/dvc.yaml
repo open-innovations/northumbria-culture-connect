@@ -25,7 +25,7 @@ stages:
     deps:
       - stage-2.ipynb
       - ${WORKING}/funded-organisations.csv
-      - ${ROOT}/raw/company-data.db
+      - ${ROOT}/raw/data-lake.db
     outs:
       - ${WORKING}/2-charity-match-direct.csv:
           persist: true
@@ -53,7 +53,7 @@ stages:
       - ${WORKING}/2-company-corrections.csv
       - ${WORKING}/2-company-match-direct.csv
       - ${WORKING}/2-company-match-fuzzy.csv
-      - ${ROOT}/raw/company-data.db
+      - ${ROOT}/raw/data-lake.db
     outs:
       - ${DATA}/culture_landscape.csv:
           persist: true
