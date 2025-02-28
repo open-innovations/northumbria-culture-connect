@@ -78,3 +78,77 @@ Key concepts to understand are:
 - [**Components**](https://lume.land/docs/core/components/): Reusable and
   self-contained chunks of code which render as part of a page. Unlike
   _partials_ these don't have access to the page content.
+
+## Running the pipelines
+
+The data pipelines are defined in the `pipelines` folder, and are a mixture of
+Python scripts and Jupyter notebooks. These make broad use of Python libraries
+such as PETL and Pandas to process the data.
+
+### Pre-requisites
+
+You will need a working version of [Python](https://python.org/) installed. We
+have used Python 3.12 in the development. Dependencies (including Python
+version) are managed via [Pipenv](https://pipenv.pypa.io/en/latest/). Install
+this by following the instructions in the Pipenv documentation.
+
+Once installed, set install the dependencies by running:
+
+```sh
+pipenv install
+```
+
+If for some reason the dependencies change, you can make sure you're up to date
+by running
+
+```sh
+pipenv sync
+```
+
+To ensure the scripts run properly you will also need to set the
+[PYTHONPATH](https://docs.python.org/3/library/sys_path_init.html) to point to
+the `pipelines` folder of this repository. This can be added to a `.env` file in
+this directory (which is set to be ignored by Git). On a macOS/Linux/WSL
+environment the following command will do this, assuming run from the project
+root:
+
+```sh
+echo PYTHONPATH=${PWD}/pipelines > .env
+```
+
+You can now start an environment with all required python modules by running:
+
+```sh
+pipenv shell
+```
+
+### Running the pipelines
+
+Having run the `pipenv shell` command and started a shell, change directory into
+the `piplines` directory.
+
+Run a python script such as `get-data.py` as follows:
+
+```
+python get-data.py
+```
+
+Run Jupyter notebooks such as `arts-council.ipynb` as follows:
+
+```sh
+jupyter execute arts-council.ipynb
+```
+
+Some of the pipelines have been configured as [DVC](https://dvc.org) pipelines.
+An example of this is the Culture sector dataset. These can be run with the
+following command:
+
+```sh
+dvc repro pipelines/culture-sector/dvc.yaml
+```
+
+### IDE integration
+
+It is possible to integrate Jupyter notebook execution with IDEs such as Visual
+Studio Code. Configuration of this integration is beyond the scope of this
+guide.
