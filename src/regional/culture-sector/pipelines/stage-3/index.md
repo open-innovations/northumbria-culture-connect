@@ -4,11 +4,11 @@ It round-trips the data from the existing landscape list to ensure that any manu
 
 
 ```python
-import duckdb
 import petl as etl
 from pipeline_utils.reference.geo import la_code_lookup
 from pipeline_utils.reference.onspd import normalise_postcode, postcode_lookup
 from pipeline_utils.filesystem.paths import RAW_DATA, DATA
+import pipeline_utils.db as database
 from config import WORKING
 ```
 
@@ -203,7 +203,7 @@ Direct and fuzzy data is loaded from the database.
 
 
 ```python
-db = duckdb.connect(RAW_DATA / 'company-data.db', read_only=True)
+db = database.connect(read_only=True)
 db.query(f'''
          CREATE OR REPLACE TEMP TABLE tCompanies AS
               SELECT match as organisation, CompanyNumber as company_number, type, score

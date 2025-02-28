@@ -2,9 +2,10 @@ This stage attempts to cleanse the data, match to other sources of data and tag 
 
 
 ```python
-import duckdb
 import pandas as pd
 from thefuzz.process import extractOne, extractBests
+
+import pipeline_utils.db as database
 
 from config import RAW, WORKING, FUNDED_ORGS_LIST
 ```
@@ -15,7 +16,7 @@ First, lets load the company data database.
 
 
 ```python
-db = duckdb.connect(RAW / 'company-data.db', read_only=True)
+db = database.connect(read_only=True)
 ```
 
 Then we'll load our raw longlist into a temporary table.
@@ -191,7 +192,7 @@ drop_list = pd.concat([direct_matches, corrections.reset_index()]).organisation
 
 
 ```python
-db = duckdb.connect(RAW / 'company-data.db', read_only=True)
+db = database.connect(read_only=True)
 ```
 
 
@@ -244,7 +245,7 @@ Direct match charities
 
 
 ```python
-db = duckdb.connect(RAW / 'company-data.db', read_only=True)
+db = database.connect(read_only=True)
 ```
 
 
@@ -280,7 +281,7 @@ db.close()
 
 
 ```python
-db = duckdb.connect(RAW / 'company-data.db', read_only=True)
+db = database.connect(read_only=True)
 ```
 
 Get all matched company numbers and store in a temp table.

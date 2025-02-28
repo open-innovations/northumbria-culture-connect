@@ -1,5 +1,6 @@
 *.zip
 /company-data.db
+/data-lake.db*
 
 
 /NECA/
