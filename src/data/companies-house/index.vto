@@ -4,6 +4,10 @@ description: Newcastle-based culture sector companies extracted from Companies H
 tags:
     - open
     - infrastructure
+metadata:
+    sources:
+        - url: "https://download.companieshouse.gov.uk/en_output.html"
+          title: "Companies House monthly data extract"
 ---
 
 <div class="padded holder">
@@ -83,12 +87,6 @@ tags:
     {{ /for }}
       </code>
     </pre> #}}
-    
-    <h2>Source</h2>
-    
-    <ul>
-        <li><a href="https://download.companieshouse.gov.uk/en_output.html">Companies House monthly data extract</a></li>
-    </ul>
     
     {{ include './_partials/process.md' |> md }}
 </div>
