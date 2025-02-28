@@ -1,5 +1,4 @@
 panelSelector [role=tab] {
-    outline: 1px solid red;
     & svg {
         pointer-events: none;
     }
