@@ -60,7 +60,8 @@ metadata:
 			}
 		}
 	}) }}
-
+{{ /comp }}
+{{ comp Section }}
 	<h3>Arts Council England & National Portfolio Organisations</h3>
 
 	{{> const max_funding_ace = Math.ceil(Math.max(...ace_funding.map(x => x['total_income'])) / 1e9) * 1e9 }}
