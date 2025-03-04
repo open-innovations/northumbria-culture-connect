@@ -20,6 +20,11 @@ OI.ready(function(){
 	function saveDOMImage(el, opt) {
 		if(!opt) opt = {};
 		if(!opt.file) opt.file = "figure.png";
+		var credit = document.createElement('div');
+		credit.classList.add('credit');
+		credit.innerHTML = "Credit: Culture Connect (CC-BY 4.0)";
+		el.appendChild(credit);
+
 		if(opt.hide) opt.hiddenElements = el.querySelectorAll(opt.hide);
 		if(typeof opt.filter!=="function"){
 			opt.filter = function(node) {
@@ -36,14 +41,14 @@ OI.ready(function(){
 			};
 		}
 		el.classList.add("capture");
-		//el.style['background-color'] = color;
 
 		domtoimage.toPng(el, opt).then(function (dataUrl) {
+			el.classList.remove("capture");
+			if(credit) credit.remove();
 			var link = document.createElement("a");
 			link.download = opt.file;
 			link.href = dataUrl;
 			link.click();
-			el.classList.remove("capture");
 			//el.style['background-color'] = '';
 			if(typeof opt.callback === "function") opt.callback.call();
 		}).catch(function (error) {

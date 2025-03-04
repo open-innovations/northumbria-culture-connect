@@ -25,8 +25,14 @@
 
 [data-comp="colour-block"] .oi-chart {
   background: white;
+  color: black;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
+}
+
+[data-comp="colour-block"] .oi-chart .credit {
+  padding-top: 0.5rem;
+  text-align:right;
 }
 
 .oi-legend-inner {
