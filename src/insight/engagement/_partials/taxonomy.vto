@@ -1,9 +1,17 @@
 
+{{ comp Section }}
+
 {{ include "./taxonomy-overview.md" |> md}}
 
-<h2>Introducing a Standardised Framework for Cultural Engagement</h2>
+{{ /comp }}
 
+{{ comp Section }}
+
+<h2>A Taxonomy for Cultural Engagement</h2>
+
+<p>
 As part of the pilot, we have developed a simple taxonomy to categorise both engagement activities and audience types. Desk research has highlighted that a shared taxonomy for cultural engagement is lacking across the sector. Our project seeks to address this by mapping the data held by our pilot organisations into a common taxonomy, which will be refined and validated through user research.
+</p>
 
 The taxonomy has two dimensions:
 <ul>
@@ -53,8 +61,12 @@ This approach will help provide consistent and comparable data, regardless of an
     {{ /for }}
 </ul>
 
+{{ /comp }}
 
-<h3>Category Mapping</h3>
+
+{{ comp Section }}
+
+<h2>Category Mapping</h2>
 
 <p>
     We are in the process of mapping the data collected through these case studies into a shared taxonomy of cultural engagement. This mapping will allow for meaningful comparisons and analysis across the sector, enhancing our understanding of trends and patterns in participation and engagement. Explore the current mapping below: this is a proof-of-concept generated in a pilot study, and will be developed and validated in future to ensure the taxonomy accurately represents the sector's offering.
@@ -67,7 +79,7 @@ This approach will help provide consistent and comparable data, regardless of an
 </style>
 
 
-<div style="display: flex; justify-content:center;">
+<div style="display: flex; justify-content:center; padding-top: 2em;">
 
 {{> function markInvalid(valid) {
     return (value) => valid.includes(value) ? value : `<span class="invalid">${value}</span>`
@@ -112,6 +124,9 @@ This approach will help provide consistent and comparable data, regardless of an
     }
 }) }} 
 </div>
+
+{{ /comp }}
+
 
 
 {{# {{> console.log(

@@ -1,13 +1,15 @@
 
-<h2>Aggregate Engagement across Pilot Organisations</h2>
+{{ comp Section }}
 
-<p>Using the data collected during this pilot, we have applied the shared taxonomy and aggregated engagement figures to provide an overview of the types of activities taking place across the sector, as well as the groups they are engaging with..</p>
+<h2>Aggregated Engagement across Pilot Organisations</h2>
+
+<p>Using the data collected during this pilot, we have applied the shared taxonomy and aggregated engagement figures to provide an overview of the types of activities taking place across the sector, as well as the groups they are engaging with.</p>
 
 <p>This model is still in the process of validation and refinement. For now, it serves as a demonstration of what can be achieved when data collection is standardised between different organisations, even when their activities and services vary significantly.</p>
 
-</p>By presenting the data in this format, we aim to enable sector-wide analysis, which can contribute to more informed policy-making, evaluation activities, and the production of higher-quality data to support investment in the sector..</p>
+<p>By presenting the data in this format, we aim to enable sector-wide analysis, which can contribute to more informed policy-making, evaluation activities, and the production of higher-quality data to support investment in the sector.</p>
 
-<h3 style="text-align:center;">Activity Type</h3>
+<h4 style="text-align:center; padding-top:2em;">Activity Type</h4>
 {{ comp.oi.chart.bar({
 	config: {
 		data: agg_activity_category,
@@ -28,19 +30,19 @@
 						"label": "0"
 					},{
 						"value": 100000,
-						"label": "100000"
+						"label": "100,000"
 					},{
 						"value": 200000,
-						"label": "200000"
+						"label": "200,000"
 					},{
 						"value": 300000,
-						"label": "300000"
+						"label": "300,000"
 					},{
 						"value": 400000,
-						"label": "400000"
+						"label": "400,000"
                     },{
 						"value": 500000,
-						"label": "500000"
+						"label": "500,000"
 					}]
 			},
 			y: {
@@ -53,13 +55,13 @@
 }) }}
 
 
-<h3 style="text-align:center;">Audiences</h3>
+<h4 style="text-align:center;padding-top: 2em;">Audiences</h4>
 {{ comp.oi.chart.bar({
 	config: {
 		data: agg_audience,
 		category: "Audience",
-		width: 1000, 
-		height: 300,
+		width: 1200, 
+		height: 200,
 		series: [
             { title: "Count", value: "Count" },
         ],
@@ -74,19 +76,19 @@
 						"label": "0"
 					},{
 						"value": 100000,
-						"label": "100000"
+						"label": "100,000"
 					},{
 						"value": 200000,
-						"label": "200000"
+						"label": "200,000"
 					},{
 						"value": 300000,
-						"label": "300000"
+						"label": "300,000"
 					},{
 						"value": 400000,
-						"label": "400000"
+						"label": "400,000"
                     },{
 						"value": 500000,
-						"label": "500000"
+						"label": "500,000"
 					}]
 			},
 			y: {
@@ -97,5 +99,8 @@
 		}
 	}
 }) }}
+
+{{ /comp }}
+
 
 {{# TODO: Aggregate by month #}}
