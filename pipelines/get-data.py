@@ -96,7 +96,6 @@ def download_360_giving():
 
     params = {
         'min_date': '01/2020',
-        'recipientRegionName': 'North East',
         'recipientTSGType': 'Organisation',
         'recipientOrgRegionName': 'North East',
         'recipientOrgCountyName': 'Newcastle upon Tyne',

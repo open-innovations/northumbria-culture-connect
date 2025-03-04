@@ -5,13 +5,13 @@ stages:
     deps:
     - path: get-data.py
       hash: md5
-      md5: 4e7d944e82a445a529cfa5bd2ed52c42
-      size: 3961
+      md5: 41d7b71c507fce2cf3e0d22100cd8326
+      size: 3916
     outs:
     - path: ../raw/360-giving.csv
       hash: md5
-      md5: cf9e6c9f97cdc28c80b2e76b4c146641
-      size: 5295710
+      md5: 67ebe75cc8486e0ef1e6fdbc4cff0e95
+      size: 5300700
     - path: ../raw/arts-council-investment-programme.csv
       hash: md5
       md5: 94029bd4c4fac2b2a140244d32312e22
@@ -107,8 +107,8 @@ stages:
     deps:
     - path: geo.ipynb
       hash: md5
-      md5: bf1cbd77e049f15545067fdc78728e67
-      size: 34667
+      md5: 44b2fb3e7c7c5605f57b1af3dfe7559e
+      size: 34668
     outs:
     - path: ../src/_data/geojson/lad/E06000047.geojson
       hash: md5

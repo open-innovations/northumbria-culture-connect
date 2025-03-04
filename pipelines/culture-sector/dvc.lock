@@ -53,14 +53,14 @@ stages:
     cmd: papermill stage-2.ipynb | jupyter nbconvert --stdin --to markdown --output
       index --output-dir ../../src/regional/culture-sector/pipelines/stage-2
     deps:
-    - path: ../../raw/company-data.db
-      hash: md5
-      md5: 1f58d39677e60037f346095708e8a058
-      size: 615264256
     - path: ../../raw/culture-landscape/funded-organisations.csv
       hash: md5
       md5: 5a2cb7c8a9037c4e5e9bac074e2215ed
       size: 27940
+    - path: ../../raw/data-lake.db
+      hash: md5
+      md5: 325b4797fbde92d396526054b2641169
+      size: 1115697152
     - path: stage-2.ipynb
       hash: md5
       md5: 03ae99cb628c55bb8ec919d8a3dd8791
@@ -90,10 +90,6 @@ stages:
     cmd: papermill stage-3.ipynb | jupyter nbconvert --stdin --to markdown --output
       index --output-dir ../../src/regional/culture-sector/pipelines/stage-3
     deps:
-    - path: ../../raw/company-data.db
-      hash: md5
-      md5: 1f58d39677e60037f346095708e8a058
-      size: 615264256
     - path: ../../raw/culture-landscape/2-charity-match-direct.csv
       hash: md5
       md5: 93393c000e76bc4c8e51d69af1954399
@@ -114,6 +110,10 @@ stages:
       hash: md5
       md5: 5a2cb7c8a9037c4e5e9bac074e2215ed
       size: 27940
+    - path: ../../raw/data-lake.db
+      hash: md5
+      md5: 325b4797fbde92d396526054b2641169
+      size: 1115697152
     - path: stage-3.ipynb
       hash: md5
       md5: a471601b0bdfbdcaec1b2a957dbcf3b0
