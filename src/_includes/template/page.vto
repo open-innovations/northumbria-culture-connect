@@ -3,9 +3,9 @@ layout: ./base.vto
 ---
 
 <main>
-{{ comp Hero {compact: false, style: `undo-reset ${ colour_style || "" }` } }}
-    {{ comp.PageTop({ ...page.data }) }}
-{{ /comp }}
+	{{ comp Banner {compact: false, style: `undo-reset ${ colour_style || "" }` } }}
+		{{ comp.PageTop({ ...page.data }) }}
+	{{ /comp }}
 
-{{ content }}
+	{{ content }}
 </main>

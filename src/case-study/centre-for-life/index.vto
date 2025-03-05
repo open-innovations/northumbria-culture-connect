@@ -15,6 +15,7 @@ order: 10
 ---
 
 {{ comp Section }}
+
 	<h1>Centre for Life: understanding our visitors' experience</h1>
 
 	<p>
@@ -34,6 +35,7 @@ order: 10
 		<li>gain a better understanding of their visitors’ experience and their impact</li>
 		<li>promote transparency and enable others to learn from their findings</li>
 	</ul>
+
 {{ /comp }}
 
 {{ comp Section }}
@@ -63,6 +65,7 @@ order: 10
 	</ul>
 
 	<p>They also hoped to demonstrate the value of collecting and sharing data and to encourage wider data sharing across the culture sector.</p>
+
 {{ /comp }}
 
 
@@ -81,6 +84,7 @@ order: 10
 	<p>
 	These methods gathered visitor demographic data as well as feedback on visitors’ experience at the centre, what they enjoyed, reflections on the accessibility of the venue and areas for improvement.
 	</p>
+
 {{ /comp }}
 
 
@@ -90,7 +94,7 @@ order: 10
 
 	<h3>Demographics</h3>
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 		<h4>Visitor age range</h4>
 
 		{{ comp SaveableVisualisation {id: 'age-range', file: "demographics.csv" } }}
@@ -157,7 +161,7 @@ order: 10
 	The data shows that younger families were more likely to complete the face-to-face survey, while families with older children were more likely to fill in the online survey. This understanding could help Centre for Life to cater for different demographics in future.
 	</p>
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 		<h4>Disability</h4>
 
 		{{ comp SaveableVisualisation {id: 'disability', file: "demographics.csv" } }}
@@ -218,17 +222,15 @@ order: 10
 	<p>
 	Unmoderated surveys could be a better method for understanding their visitors’ accessibility needs. This would need to be balanced against potentially excluding those with low digital literacy.
 	</p>
-{{ /comp }}
 
 
-{{ comp Section }}
 	<h3>Visitor experience</h3>
 
 	<p>
 	Data gathered on visitor experience included the duration of visits, satisfaction scores for different areas of the centre, and a range of feedback questions.
 	</p>
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 
 		<h4>Duration of visit</h4>
 
@@ -289,7 +291,7 @@ order: 10
 	The data showed that most visitors spent more than 2 hours in the centre, with those responding online tending to have longer visit times.
 	</p>
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 
 		<h4>Online surveys</h4>
 		<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>626 people</strong> completed the survey online.
@@ -351,7 +353,7 @@ order: 10
 	{{ /comp }}
 
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 		<h4>Satisfaction scores by exhibit: face-to-face survey responses</h4>
 		<p>The chart below present audience satisfaction scores across all exhibitions at the Centre for Life between April and August 2024. <strong>594 people</strong> completed the survey in person at the centre.</p>
 
@@ -484,10 +486,8 @@ order: 10
 	<p>
 	The lower satisfaction ratings likely reflect the experiences of families with younger children who were unable to participate in these activities. The Experiment Zone has an age restriction for those over the age of 7 years.
 	</p>
-{{ /comp }}
 
 
-{{ comp Section }}
 	<h3>Impact of the Centre</h3>
 
 	<p>
@@ -505,7 +505,7 @@ order: 10
 	</ul>
 
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 		<h4>Online survey responses</h4>
 
 		{{ comp SaveableVisualisation {id: 'impact-online-survey', file: "online_statements.csv" } }}
@@ -563,7 +563,7 @@ order: 10
 		{{ /comp }}
 	{{ /comp }}
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 		<h4>Face-to-face & tablet survey responses</h4>
 		{{ comp SaveableVisualisation {id: 'impact-face-to-face', file: "f2f_tablet_statements" } }}
 			{{ comp.oi.chart.bar({
@@ -632,10 +632,8 @@ order: 10
 	</ul>
 
 	{{ comp Quote {cite:'Visitor'} }}We were all equally captivated by the experience, making it a perfect outing for our family.{{ /comp }}
-{{ /comp }}
 
 
-{{ comp Section }}
 	<h3>Areas for improvement</h3>
 
 	<p>
@@ -657,6 +655,7 @@ order: 10
 	<p>Some also suggested that Life could include more content to interest older learners.</p>
 
 	{{ comp Quote {cite:'Visitor'} }}I would have liked to have seen an area that was more adult orientated. It seemed like a missed ‘target market’ opportunity.{{ /comp }}
+
 {{ /comp }}
 
 {{ comp Section }}

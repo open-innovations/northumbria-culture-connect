@@ -99,7 +99,7 @@ Some survey questions were optional to encourage participation and reduce comple
 
 <h3>Demographics</h3>
 
-{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+{{ comp Card { classes: 'bg-blue-100' } }}
     <h4>Visitor age range</h4>
 
     {{ comp SaveableVisualisation {id: 'age-range', file: "demographics.csv" } }}
@@ -171,7 +171,7 @@ It’s important to note the high number of unknown responses in paper surveys, 
 Online data also had a low response rate of only 9 visitors, making it hard to identify overall trends.
 </p>
 
-{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+{{ comp Card { classes: 'bg-blue-100' } }}
     <h4>Visitor ethnic group</h4>
 
     {{ comp SaveableVisualisation {id: 'ethnic-group', file: "ethnic_group.csv" } }}
@@ -293,7 +293,7 @@ Satisfaction ratings data suggests that Storytime is well-received by visitors.
 When asked if they would return, visitors showed strong loyalty, with 94% of children and adults surveyed saying they'd come back.
 </p>
 
-	{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
 		<h4>Would you return to Storytime?</h4>
 		{{ comp SaveableVisualisation {id: 'return', file: "return.csv" } }}
 			{{ comp.oi.chart.bar({
@@ -349,7 +349,7 @@ When asked if they would return, visitors showed strong loyalty, with 94% of chi
 {{ comp Section }}
 <h2>Impact</h2>
 
-{{ comp ColourBlock { classes: 'bg-blue-100' } }}
+{{ comp Card { classes: 'bg-blue-100' } }}
     <h4>Impact themes</h4>
     {{ comp SaveableVisualisation {id: 'impact-themes', file: "impact_themes.csv" } }}
         {{ comp.oi.chart.bar({
