@@ -5,17 +5,19 @@ description:
 ---
 
 {{ comp Section }}
-{{ comp VerticalMasonry }}
-{{ for resource of
-        Object.values(resources)
-        .toSorted((a, b) => {
-            if (a.priority === b.priority) {
-                return a.title < b.title ? -1 : 1
-            }
-            return (b.priority || 0) - (a.priority || 0);
-        })
-    }}
-    {{ comp.PageLink({ page: resource }) }}
-{{ /for }}
-{{ /comp }}
+	{{ comp VerticalMasonry }}
+		{{ for resource of
+				Object.values(resources)
+				.toSorted((a, b) => {
+					if (a.priority === b.priority) {
+						return a.title < b.title ? -1 : 1
+					}
+					return (b.priority || 0) - (a.priority || 0);
+				})
+			}}
+			{{ if !resource.draft }}
+				{{ comp.PageLink({ page: resource }) }}
+			{{ /if }}
+		{{ /for }}
+	{{ /comp }}
 {{ /comp }}

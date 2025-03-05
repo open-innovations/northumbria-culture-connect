@@ -1,5 +1,5 @@
 ---
-title: Official statistics
+title: National statistics
 description: |
    This page presents government statistics covering a number of key economic indicators for Newcastle.
 extended_description: |
@@ -31,7 +31,7 @@ metadata:
           url: "https://www.nomisweb.co.uk/query/construct/summary.asp?reset=yes&mode=construct&dataset=17&version=0&anal=5"
         - title: "NOMIS CSV"
           url: "https://www.nomisweb.co.uk/api/v01/dataset/NM_17_5.data.csv?geography=1811939339&date=2010-12,2011-12,2012-12,2013-12,2014-12,2015-12,2016-12,2017-12,2018-12,2019-12,2020-12,2021-12,2022-12,2023-12&variable=18,45,248,249,84,83,111,1487,1488,1815...1823,594,820,841,1902,2010...2012,1938,1947&measures=20599,21001,21002,21003&select=DATE,GEOGRAPHY_CODE,VARIABLE_NAME,MEASURES_NAME,OBS_VALUE,OBS_STATUS,OBS_CONF"
-        - title: "CC01 Regional labour market: Claimant Count by unitary and local authority (official statistics in development)"
+        - title: "CC01 Regional labour market: Claimant Count by unitary and local authority (national statistics in development)"
           url: "https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/datasets/claimantcountbyunitaryandlocalauthorityexperimental/current"
         - title: "Claimant Counts"
           url: "https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/outofworkbenefits/methodologies/claimantcount"
@@ -45,7 +45,7 @@ metadata:
 	<h2>Population distribution</h2>
 
 	{{ comp documentation }}
-	This uses data extracted from <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/wardlevelmidyearpopulationestimatesexperimental">Ward-level population estimates (official statistics in development)</a> with only the wards for <code>E08000021</code> saved to <code>population_by_ward_2022.csv</code>. 
+	This uses data extracted from <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/wardlevelmidyearpopulationestimatesexperimental">Ward-level population estimates (national statistics in development)</a> with only the wards for <code>E08000021</code> saved to <code>population_by_ward_2022.csv</code>. 
 	The age bands are defined in the page.
 	The ward totals for each age band are calculated in the page.
 	The Newcastle total is the sum of the ward totals.
@@ -365,7 +365,7 @@ metadata:
 {{ comp Section }}
 
 
-	<h2>Economic Activity</h2>
+	<h2>Economic activity</h2>
 	<p>Proportion of people who are Employed, Unemployed, or Economically inactive.</p>
 	{{ set economicActivity = Object.values(NM_17_5.reduce((o, row) => {
 		const date = row['DATE'].toISOString().substr(0,10);
@@ -435,7 +435,7 @@ metadata:
 
 {{ comp Section }}
 
-	<h2>Benefit Claimants</h2>
+	<h2>Benefit claimants</h2>
 
 	<p>Proportion of people who are claiming benefits.</p>
 
