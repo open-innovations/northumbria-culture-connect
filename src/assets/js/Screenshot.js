@@ -59,6 +59,7 @@ OI.ready(function(){
 		var breadcrumb = headingsTo(el);
 		var img = document.querySelector('.site-header a');
 		var head = document.createElement('div');
+		head.style['text-align'] = 'left';
 		head.innerHTML = img.innerHTML + '<p style="padding-top:16px;padding-bottom:32px;font-weight:bold;">' + breadcrumb.titles.join("&nbsp;&nbsp;\\&nbsp;&nbsp;") + '</p>';
 		el.prepend(head);
 		el.style.padding = '48px';
