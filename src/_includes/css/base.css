@@ -16,10 +16,11 @@ body {
 }
 
 h1, h2, h3, h4 { font-weight: bold; margin-top: 0; line-height: 1em; }
-h1 { font-size: 1.75rem; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.45rem; }
-h4 { font-size: 1.25rem; }
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 32px; }
+h4 { font-size: 24px; }
+p { max-width: 80em; }
 hr {
 	border: 0;
 	border-top: 1px solid var(--col-primary-black);
@@ -31,7 +32,6 @@ section > * + * {
 	margin-top: 1rem;
 }
 * > *:last-child { margin-bottom: 0; }
-p { max-width: 80em; }
 .visuallyhidden {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -58,4 +58,8 @@ dl {
 	& dd {
 		margin-left: 3rem;
 	}
+}
+
+@media only screen and (max-width: 1024px) {
+	body { font-size: 19px; }
 }
