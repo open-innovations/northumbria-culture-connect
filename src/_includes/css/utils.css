@@ -121,12 +121,6 @@ a[href="about:blank"] {
   }
 }
 
-.link-block {
-  & .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-}
 .increased-contrast {
   font-size: 1.1875rem;
   font-weight: bold;
