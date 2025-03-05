@@ -163,10 +163,11 @@ order: 30
 			{{ comp.oi.chart.waffle({
 				config: {
 					"data": release.patient_groups,
+					"legend": { "show": true, "position": "top" },
 					"series": [
-						{ title: "Mixed sex, Rehab", value: "Mixed sex, Rehab", colour: "Likert1", tooltip: "Mixed sex, Rehab: {{ Mixed sex, Rehab }}%" },
-						{ title: "Male, Acute", value: "Male, Acute", colour: "Likert5", tooltip: "Male, Acute: {{ Male, Acute }}%"   },
-						{ title: "Female, Male, Acute", value: "Female, Male, Acute", colour: "Likert4", tooltip: "Female, Male, Acute: {{ Female, Male, Acute }}%"   }
+						{ title: "Mixed sex, Rehab", value: "Mixed sex, Rehab", colour: "#8f3e8d", tooltip: "Mixed sex, Rehab: {{ Mixed sex, Rehab }}%" },
+						{ title: "Male, Acute", value: "Male, Acute", colour: "#005837", tooltip: "Male, Acute: {{ Male, Acute }}%"   },
+						{ title: "Female, Male, Acute", value: "Female, Male, Acute", colour: "#33A38C", tooltip: "Female, Male, Acute: {{ Female, Male, Acute }}%"   }
 					]
 				}
 			}) }}
