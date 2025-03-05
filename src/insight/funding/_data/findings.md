@@ -1,7 +1,7 @@
 ## Findings and recommendations
 
 The page is a prototype, showing the potential for a Data Observatory which
-hosts a rich set of validated information about organisations in the cultural
+hosts a rich set of validated information about organisations in the culture
 sector. There are limitations, not least of which is the limited number of
 organisations in the pilot, and the limited amount of data that they are
 providing.
@@ -12,7 +12,7 @@ data via 360 Giving have either stopped or are delayed submitting information.
 
 Recommendations for future work include:
 
-- developing the service design to enable more cultural organisations to
+- developing the service design to enable more culture organisations to
   contribute income profiles and other funding-related data in a common format
 - validation and exploration of data around funding, including detailed cross
   referencing different sources of information from e.g. 360 Giving, DCMS, Arts

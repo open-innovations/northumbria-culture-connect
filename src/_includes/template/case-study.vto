@@ -5,7 +5,7 @@ layout: template/base.vto
 {{ comp Hero {style: "case-study"} }}
     <div class="grid" style="align-items: top;">
         <div{{ if content_block?.about }} class="emphasise-first-para"{{ /if }}>
-			<h1>{{ title }}</h1>
+			<h2>{{ title }}</h2>
 			{{ description |> md }}
 			{{ if content_block?.about }}
 			{{ content_block.about |> md }}
