@@ -17,6 +17,37 @@
 
 OI.ready(function(){
 
+	function isBefore(a,b){
+		var pos = b.compareDocumentPosition(a);
+		if (pos & 0x02) return true;
+		return false;
+	}
+	function headingsTo(el){
+		var headings = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+		// Find where the element is in the heading list
+		var idx = -1;
+		for(var i = 0; i < headings.length; i++){
+			if(isBefore(el,headings[i])){
+				idx = i-1;
+				i = headings.length;
+			}
+		}
+		var breadcrumb = [];
+		var startdepth;
+		var depth = 10;
+		var d;
+		// Work backwards building up the headings
+		for(var i = idx; i >= 0; i--){
+			d = parseInt(headings[i].tagName.substr(1));
+			if(typeof startdepth!=="number") startdepth = d;
+			if(d < depth){
+				breadcrumb.unshift(headings[i].innerHTML);
+				depth = d;
+			}
+		}
+		return {'titles':breadcrumb,'depth':startdepth};
+	}
+
 	function saveDOMImage(el, opt) {
 		if(!opt) opt = {};
 		if(!opt.file) opt.file = "figure.png";
@@ -24,7 +55,14 @@ OI.ready(function(){
 		credit.classList.add('credit');
 		credit.innerHTML = "Credit: Culture Connect (CC-BY 4.0)";
 		el.appendChild(credit);
-
+		
+		var breadcrumb = headingsTo(el);
+		var img = document.querySelector('.site-header a');
+		var head = document.createElement('div');
+		head.innerHTML = img.innerHTML + '<p style="padding-top:16px;padding-bottom:32px;font-weight:bold;">' + breadcrumb.titles.join("&nbsp;&nbsp;\\&nbsp;&nbsp;") + '</p>';
+		el.prepend(head);
+		el.style.padding = '48px';
+		
 		if(opt.hide) opt.hiddenElements = el.querySelectorAll(opt.hide);
 		if(typeof opt.filter!=="function"){
 			opt.filter = function(node) {
@@ -44,12 +82,13 @@ OI.ready(function(){
 
 		domtoimage.toPng(el, opt).then(function (dataUrl) {
 			el.classList.remove("capture");
+			el.style.padding = '';
 			if(credit) credit.remove();
+			if(head) head.remove();
 			var link = document.createElement("a");
 			link.download = opt.file;
 			link.href = dataUrl;
 			link.click();
-			//el.style['background-color'] = '';
 			if(typeof opt.callback === "function") opt.callback.call();
 		}).catch(function (error) {
 			console.error('oops, something went wrong!', error);
