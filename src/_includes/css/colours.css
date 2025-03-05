@@ -46,10 +46,10 @@
 .bg-green-75 { background: var(--colour-green-75); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-green-75); }
 .bg-green-50 { background: var(--colour-green-50); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-green-50); }
 .bg-green-25 { background: var(--colour-green-25); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-green-25); }
-.bg-orange-100, .case-study { background: var(--colour-orange-100); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-orange-100); }
+.bg-orange-100 { background: var(--colour-orange-100); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-orange-100); }
 .bg-orange-75 { background: var(--colour-orange-75); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-orange-75); }
 .bg-orange-50 { background: var(--colour-orange-50); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-orange-50); }
-.bg-orange-25 { background: var(--colour-orange-25); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-orange-25); }
+.bg-orange-25, .case-study { background: var(--colour-orange-25); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-orange-25); }
 .bg-pink-100 { background: var(--colour-pink-100); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-pink-100); }
 .bg-pink-75 { background: var(--colour-pink-75); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-pink-75); }
 .bg-pink-50 { background: var(--colour-pink-50); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-pink-50); }
