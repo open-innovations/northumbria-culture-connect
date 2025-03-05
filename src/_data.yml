@@ -7,3 +7,5 @@ metas:
 mergedKeys:
   tags: array
   breadcrumbs: array
+
+colour_style: bg-teal-25

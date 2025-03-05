@@ -38,9 +38,9 @@
 	--colour-blue-50: #7fa3c4;
 	--colour-blue-25: #bfd1e2;
 }
-.bg-teal-100 { background: var(--colour-teal-100); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-teal-100); }
-.bg-teal-75 { background: var(--colour-teal-75); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-teal-75); }
-.bg-teal-50 { background: var(--colour-teal-50); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-teal-50); }
+.bg-teal-100 { background: var(--colour-teal-100); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-teal-100); }
+.bg-teal-75 { background: var(--colour-teal-75); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-teal-75); }
+.bg-teal-50 { background: var(--colour-teal-50); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-teal-50); }
 .bg-teal-25 { background: var(--colour-teal-25); color: #000000; --cta-text: #000000; --cta-bg: var(--colour-teal-25); }
 .bg-green-100, .funding { background: var(--colour-green-100); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-green-100); }
 .bg-green-75 { background: var(--colour-green-75); color: #ffffff; --cta-text: #ffffff; --cta-bg: var(--colour-green-75); }

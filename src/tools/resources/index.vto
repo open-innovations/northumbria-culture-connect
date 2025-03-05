@@ -2,6 +2,7 @@
 title: Resources
 description: 
     Useful resources for organisations trying to use the Culture Data Observatory.
+colour_style: bg-teal-25
 ---
 
 {{ comp Section }}
@@ -16,7 +17,7 @@ description:
 				})
 			}}
 			{{ if !resource.draft }}
-				{{ comp.PageLink({ page: resource }) }}
+				{{ comp.PageLink({ page: resource, colour_style: 'bg-teal-100' }) }}
 			{{ /if }}
 		{{ /for }}
 	{{ /comp }}

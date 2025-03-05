@@ -2,10 +2,9 @@ tags:
   - data
 priority: 0
 
-colour_style: bg-offwhite
-
 breadcrumbs:
   - url: /
     title: Home
   - url: /data/
     title: Data sources
+colour_style: bg-green-25

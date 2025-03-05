@@ -2,7 +2,19 @@
 url: /
 ---
 
-{{ comp Banner {style: "comp-hero-front bg-teal-25"} }}{{ include "./_partials/hero.md" |> md }}{{ /comp }}
+<div class="holder padded">
+	<h1 style="padding-block: 1rem;">Connecting culture data across the North East</h1>
+</div>
+
+{{ comp Banner {style: "comp-banner-front bg-teal-25"} }}
+
+	<p>Culture Connect brings together culture data from a variety of national and regional sources in an open access data observatory.</p>
+
+	<p>It provides real time insights into the value of culture and it aims to give everyone better access to data and to the region.</p>
+
+	<p>Learn more <a href="/about/">about the project</a>.</p>
+
+{{ /comp }}
 
 <main>
     {{#
@@ -40,8 +52,7 @@ url: /
 	{{# This section is created manually so that the case study backgrounds can take up the full width #}}
     <section style="display:flex;flex-direction:column;gap:1rem;padding-bottom:120px;border-bottom:1px solid var(--col-darkgrey)">
         <h2 class="holder padded" style="padding-bottom:0">Case studies</h2>
-
-        {{ comp.CaseStudyLinkList({ headingLevel: 'h3' }) }}
+{{ comp.CaseStudyLinkList({ headingLevel: 'h3' }) }}
     </section>
 
 
@@ -52,7 +63,7 @@ url: /
     
         {{ comp AutoGrid }}
         {{ for p of search.pages('insight !index', 'title') }}
-            {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+            {{ comp.PageLink({ page: p, colour_style: p.colour_style, config: { withTags: true } }) }}
         {{ /for }}
         {{ /comp }}
     

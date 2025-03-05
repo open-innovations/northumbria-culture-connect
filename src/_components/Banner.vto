@@ -1,21 +1,24 @@
 ---
 css: |
-    .comp-hero {
+    [data-comp=banner] {
         display: block;
         color: black;
         .small {
           font-size: 1rem;
           line-height: 1.3125em;
         }
-        > div > * + * { margin-block-end: 1.5rem; }
-        > div > h1 + * { padding-top: 0; }
+        .banner-inner { padding-bottom: 60px; }
+        .banner-inner > *:last-child { margin-bottom: 0; }
+        .banner-inner > * + * { margin-block-end: 1.5rem; }
+        .banner-inner > h1 + * { padding-top: 0; }
         p a { color: inherit; }
         & svg {
             max-width: calc(100vw - 4rem);
         }
     }
-    .comp-hero-front {
-        .padded {
+    .comp-banner-front {
+        font-size: 1.5rem;
+        /*.padded {
           padding-block: 0;
         }
         > div > * {
@@ -60,11 +63,11 @@ css: |
         > div > *:last-child { padding-bottom: var(--padding); }
         & ul { display: flex; }
         & ul li { display: inline-block; line-height: 0; }
-        & ul li + li { margin-left: 1rem; padding-left: 1rem; border-left: 1px solid var(--col-darkgrey); }
+        & ul li + li { margin-left: 1rem; padding-left: 1rem; border-left: 1px solid var(--col-darkgrey); }*/
     }
 ---
-<section class="comp-hero{{ if style }} {{ style }}{{ /if }}">
-	<div class="holder {{ if compact }}padded-inline{{ else }}padded{{ /if }}">
+<section data-comp="banner" class="{{ if style }}{{ style }}{{ /if }}">
+	<div class="banner-inner holder {{ if compact }}padded-inline{{ else }}padded{{ /if }}">
 	{{ content }}
 	</div>
 </section>

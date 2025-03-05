@@ -12,9 +12,10 @@ css: |
       display: block;
       max-width: 100%;
     }
-    margin-top: 38px;
+    margin-top: 0px;
+    .extra-call { display: none; }
+    .padded { padding-bottom: 60px; }
   }
-  [data-comp="case-study-link"] .extra-call { display: none; }
   @media only screen and (max-width: 1100px) {
     [data-comp=case-study-link] .columns { display: block; }
     [data-comp="case-study-link"] .holder > * { margin-bottom: 0; }
@@ -24,7 +25,7 @@ css: |
     [data-comp="case-study-link"] .extra-call { display: block; }
   }
 ---
-<div data-comp="case-study-link" class="bg-orange-100 link-block increased-contrast" style="--cta-text: var(--off-white); --cta-bg: var(--col-primary-black);">
+<div data-comp="case-study-link" class="bg-orange-100 link-block" style="--cta-text: var(--off-white); --cta-bg: var(--col-primary-black);">
   <div class="holder columns">
     <div class="flow padded">
       <{{ headingLevel || "h2" }} class="title">{{ page.title }}</{{ headingLevel || "h2" }}>

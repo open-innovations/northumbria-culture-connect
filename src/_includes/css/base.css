@@ -15,10 +15,10 @@ body {
 	font-size: 16px;
 }
 
-h1, h2, h3, h4 { font-weight: bold; margin-top: 0; line-height: 1em; }
+h1, h2, h3, h4, .title { font-weight: bold; margin-top: 0; line-height: 1em; }
 h1 { font-size: 48px; }
 h2 { font-size: 40px; }
-h3 { font-size: 32px; }
+h3, .title { font-size: 32px; }
 h4 { font-size: 24px; }
 p { max-width: 80em; }
 hr {

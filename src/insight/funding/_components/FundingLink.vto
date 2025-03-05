@@ -1,16 +1,18 @@
 ---
 css: |
-    [data-comp=FundingLink] {
+    .funding-link {
         display: flex;
         flex-direction: column;
         gap: 1em;
         & .bignum {
             flex-grow: 1;
+            margin-top: 0;
         }
+        a:visited { color: inherit; }
     }
 ---
-<div data-comp="FundingLink" class="block centred bg-green-75 link-block increased-contrast">
-    <h3 class="title"><a href="{{ url }}">{{ title }}{{ comp.Chevron() }}</a></h3>
+{{ comp Card { classes: 'centred bg-green-75 funding-link' } }}
+    <p class="title"><a href="{{ url }}">{{ title }}{{ comp.Chevron() }}</a></p>
     <div class="bignum">£{{ funding |> toLocaleString }}{{ suffix || '' }}</div>
     {{ content }}
-</div>
+{{ /comp }}
