@@ -1,0 +1,19 @@
+.columns {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-gap: 32px;
+	& .flow * + * {
+		margin-block-start: 1.25rem;
+	}
+}
+.columns {
+	& img, svg {
+		display: block;
+		max-width: 100%;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.columns { grid-template-columns: 100%; }
+	.columns .holder > * { margin-bottom: 0; }
+	.columns img { width: 100%; max-width: 100%; }    
+}

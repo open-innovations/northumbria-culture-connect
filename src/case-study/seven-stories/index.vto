@@ -16,282 +16,298 @@ order: 20
 
 {{ comp Section }}
 
-<h1>Seven Stories: uncovering Storytime's value</h1>
+	<h1>Seven Stories: uncovering Storytime's value</h1>
+	<div class="columns">
+		<div class="flow">
+			<p>
+			Seven Stories is a national charity, free entry visitor centre and museum dedicated to collecting, preserving and celebrating children’s books.
+			</p>
 
-<p>
-Seven Stories is a national charity, free entry visitor centre and museum dedicated to collecting, preserving and celebrating children’s books.
-</p>
+			<p>
+			They took part in the Culture Connect pilot to better understand their audience's needs and preferences.
+			</p>
 
-<p>
-They took part in the Culture Connect pilot to better understand their audience's needs and preferences.
-</p>
-
-<p>
-The Seven Stories case study focused on their regular Storytime sessions delivered by the Storycatcher team. These are interactive storytelling sessions that introduce children to the world of books and stories.
-</p>
+			<p>
+			The Seven Stories case study focused on their regular Storytime sessions delivered by the Storycatcher team. These are interactive storytelling sessions that introduce children to the world of books and stories.
+			</p>
+		</div>
+		<div class="image">
+			<img src="{{ featured_image }}" aria-title="{{ title }}">
+		</div>
+	</div>
 
 {{ /comp }}
 
 
 {{ comp Section }}
 
-<h2>Aims</h2>
+	<h2>Aims</h2>
 
-<p>
-Seven Stories took part in the data observatory pilot with the aim of better understanding:
-</p>
+	<p>
+	Seven Stories took part in the data observatory pilot with the aim of better understanding:
+	</p>
 
-<ul>
-<li>how children and caregivers experience Storytime sessions</li>
-<li>audience demographics and culture engagement trends</li>
-<li>the value and impacts of Storytime for children and their carers</li>
-</ul>
+	<ul>
+	<li>how children and caregivers experience Storytime sessions</li>
+	<li>audience demographics and culture engagement trends</li>
+	<li>the value and impacts of Storytime for children and their carers</li>
+	</ul>
 
-<p>
-They hoped to:
-</p>
-<ul>
-    <li>create new visual representations of their data</li>
-    <li>evidence impact on visitors to help secure future funding</li>
-    <li>expand data analysis from Storytime to better inform other programmes</li>
-</ul>
+	<p>
+	They hoped to:
+	</p>
+	<ul>
+		<li>create new visual representations of their data</li>
+		<li>evidence impact on visitors to help secure future funding</li>
+		<li>expand data analysis from Storytime to better inform other programmes</li>
+	</ul>
+
 {{ /comp }}
 
 {{ comp Section }}
-<h2>Data collection</h2>
 
-<p>
-The data observatory brought data to life from a sample of 103 visitors, including:
-</p>
+	<h2>Data collection</h2>
 
-<ul>
-    <li>77 paper survey responses</li>
-    <li>9 online survey responses</li>
-    <li>4 face-to-face interviews with caregivers</li>
-    <li>13 face-to-face interviews with children</li>
-</ul>
+	<p>
+	The data observatory brought data to life from a sample of 103 visitors, including:
+	</p>
+
+	<ul>
+		<li>77 paper survey responses</li>
+		<li>9 online survey responses</li>
+		<li>4 face-to-face interviews with caregivers</li>
+		<li>13 face-to-face interviews with children</li>
+	</ul>
+
 {{ /comp }}
 
 {{ comp Section }}
-<h2>Limitations of the study</h2>
 
-<h3>Evaluating impact through short term feedback</h3>
+	<h2>Limitations of the study</h2>
 
-<p>
-It's challenging to evaluate and evidence the impact of culture through this type of short term data collection, as the feedback is gathered during or very shortly after the visit. 
-</p>
+	<h3>Evaluating impact through short term feedback</h3>
 
-<h3>Research with young children</h3>
+	<p>
+	It's challenging to evaluate and evidence the impact of culture through this type of short term data collection, as the feedback is gathered during or very shortly after the visit. 
+	</p>
 
-<p>
-Children’s responses were often limited in detail and clarity, as they were between 2 and 8 years old and interacting with unfamiliar adult researchers.
-</p>
+	<h3>Research with young children</h3>
 
-<h3>Gaps in data due to non-mandatory questions</h3>
+	<p>
+	Children’s responses were often limited in detail and clarity, as they were between 2 and 8 years old and interacting with unfamiliar adult researchers.
+	</p>
 
-<p>
-Some survey questions were optional to encourage participation and reduce completion time, resulting in gaps where respondents chose to skip them.
-</p>
+	<h3>Gaps in data due to non-mandatory questions</h3>
+
+	<p>
+	Some survey questions were optional to encourage participation and reduce completion time, resulting in gaps where respondents chose to skip them.
+	</p>
+
 {{ /comp }}
 
 {{ comp Section }}
-<h2>Data analysis</h2>
 
-<h3>Demographics</h3>
+	<h2>Data analysis</h2>
 
-{{ comp Card { classes: 'bg-blue-100' } }}
-    <h4>Visitor age range</h4>
+	<h3>Demographics</h3>
 
-    {{ comp SaveableVisualisation {id: 'age-range', file: "demographics.csv" } }}
-        {{ comp.oi.chart.bar({
-            config: {
-                data: release.demographics,
-                category: "Survey Type",
-                width: 900, 
-                height: 450,
-                legend: {
-                    show: true,
-                    position: "top"
-                },
-                series: [
-                    { title: "Children aged 12 months or younger", value: "Age 12 months or younger", tooltip: "Children aged 12 months or younger<br>{{ Survey Type }}: {{ Age 12 months or younger }}" },
-                    { title: "Children aged 1-2 years", value: "Age 1-2 years old", tooltip: "Children aged 1-2 years<br>{{ Survey Type }}: {{ Age 1-2 years old }}" },
-                    { title: "Children aged 3-4 years", value: "Age 3-4 years old", tooltip: "Children aged 3-4 years<br>{{ Survey Type }}: {{ Age 3-4 years old }}" },
-                    { title: "Children aged 5-7 years", value: "Age 5-7 years old", tooltip: "Children aged 5-7 years<br>{{ Survey Type }}: {{ Age 5-7 years old }}" },
-                    { title: "Children aged 8+ years", value: "Age 8+ years old", tooltip: "Children aged 8+ years<br>{{ Survey Type }}: {{ Age 8+ years old }}" },
-                    { title: "Unknown age", value: "Age Unknown", tooltip: "Unknown age<br>{{ Survey Type }}: {{ Age Unknown }}" }
-                ],
-                axis: {
-                    x: {
-                        grid: {
-                            "stroke-dasharray": "6 2",
-                            "stroke-width": 1
-                        },
-                        ticks: [{
-                                "value": 5,
-                                "label": "5"
-                            },{
-                                "value": 10,
-                                "label": "10"
-                            },{
-                                "value": 15,
-                                "label": "15"
-                            },{
-                                "value": 20,
-                                "label": "20"
-                            },{
-                                "value": 25,
-                                "label": "25"
-                            }]
-                    },
-                    y: {
-                        grid: {
-                            "stroke-width": 0.5
-                        }
-                    }
-                }
-            }
-        }) }}
-    {{ /comp }}
-{{ /comp }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		<h4>Visitor age range</h4>
 
-<p>
-The most common audiences were families with children aged 3 to 4 years old and children aged 5 to 7 years old.
-</p>
+		{{ comp SaveableVisualisation {id: 'age-range', file: "demographics.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.demographics,
+					category: "Survey Type",
+					width: 900, 
+					height: 450,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Children aged 12 months or younger", value: "Age 12 months or younger", tooltip: "Children aged 12 months or younger<br>{{ Survey Type }}: {{ Age 12 months or younger }}" },
+						{ title: "Children aged 1-2 years", value: "Age 1-2 years old", tooltip: "Children aged 1-2 years<br>{{ Survey Type }}: {{ Age 1-2 years old }}" },
+						{ title: "Children aged 3-4 years", value: "Age 3-4 years old", tooltip: "Children aged 3-4 years<br>{{ Survey Type }}: {{ Age 3-4 years old }}" },
+						{ title: "Children aged 5-7 years", value: "Age 5-7 years old", tooltip: "Children aged 5-7 years<br>{{ Survey Type }}: {{ Age 5-7 years old }}" },
+						{ title: "Children aged 8+ years", value: "Age 8+ years old", tooltip: "Children aged 8+ years<br>{{ Survey Type }}: {{ Age 8+ years old }}" },
+						{ title: "Unknown age", value: "Age Unknown", tooltip: "Unknown age<br>{{ Survey Type }}: {{ Age Unknown }}" }
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 5,
+									"label": "5"
+								},{
+									"value": 10,
+									"label": "10"
+								},{
+									"value": 15,
+									"label": "15"
+								},{
+									"value": 20,
+									"label": "20"
+								},{
+									"value": 25,
+									"label": "25"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
-<p>
-This trend was common across all survey methods, highlighting that Storytime was particularly popular for these age groups.
-</p>
+	<p>
+	The most common audiences were families with children aged 3 to 4 years old and children aged 5 to 7 years old.
+	</p>
 
-<p>
-It’s important to note the high number of unknown responses in paper surveys, with 10 visitors choosing not to answer this question. This could be useful to consider in the future when collecting visitor data this way. 
-</p>
+	<p>
+	This trend was common across all survey methods, highlighting that Storytime was particularly popular for these age groups.
+	</p>
 
-<p>
-Online data also had a low response rate of only 9 visitors, making it hard to identify overall trends.
-</p>
+	<p>
+	It’s important to note the high number of unknown responses in paper surveys, with 10 visitors choosing not to answer this question. This could be useful to consider in the future when collecting visitor data this way. 
+	</p>
 
-{{ comp Card { classes: 'bg-blue-100' } }}
-    <h4>Visitor ethnic group</h4>
+	<p>
+	Online data also had a low response rate of only 9 visitors, making it hard to identify overall trends.
+	</p>
 
-    {{ comp SaveableVisualisation {id: 'ethnic-group', file: "ethnic_group.csv" } }}
-        {{ comp.oi.chart.bar({
-            config: {
-                data: release.demographics,
-                category: "Survey Type",
-                width: 900, 
-                height: 450,
-                legend: {
-                    show: true,
-                    position: "top"
-                },
-                series: [
-                    { title: "White or White British", value: "Ethnicity White or White British", tooltip: "White or White British<br>{{ Survey Type }}: {{ Ethnicity White or White British }}" },
-                    { title: "Asian or Asian British", value: "Ethnicity Asian or Asian British", tooltip: "Asian or Asian British<br>{{ Survey Type }}: {{ Ethnicity Asian or Asian British }}" },
-                    { title: "Mixed or multiple ethnic groups", value: "Ethnicity Mixed or multiple ethnic groups", tooltip: "Mixed or multiple ethnic groups<br>{{ Survey Type }}: {{ Ethnicity Mixed or multiple ethnic groups }}" },
-                    { title: "Other ethnic group", value: "Ethnicity Other (please specify)", tooltip: "Other ethnic group<br>{{ Survey Type }}: {{ Ethnicity Other (please specify) }}" },
-                    { title: "Unknown", value: "Ethnicity Unknown", tooltip: "Unknown<br>{{ Survey Type }}: {{ Ethnicity Unknown }}" }
-                ],
-                axis: {
-                    x: {
-                        grid: {
-                            "stroke-dasharray": "6 2",
-                            "stroke-width": 1
-                        },
-                        ticks: [{
-                                "value": 10,
-                                "label": "10"
-                            },{
-                                "value": 20,
-                                "label": "20"
-                            },{
-                                "value": 30,
-                                "label": "30"
-                            },{
-                                "value": 40,
-                                "label": "40"
-                            },{
-                                "value": 50,
-                                "label": "50"
-                            }]
-                    },
-                    y: {
-                        grid: {
-                            "stroke-width": 0.5
-                        }
-                    }
-                }
-            }
-        }) }}
-    {{ /comp }}
-{{ /comp }}
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		<h4>Visitor ethnic group</h4>
 
-<p>
-The majority of Storytime visitors identified as White or White British.
-</p>
+		{{ comp SaveableVisualisation {id: 'ethnic-group', file: "ethnic_group.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.demographics,
+					category: "Survey Type",
+					width: 900, 
+					height: 450,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "White or White British", value: "Ethnicity White or White British", tooltip: "White or White British<br>{{ Survey Type }}: {{ Ethnicity White or White British }}" },
+						{ title: "Asian or Asian British", value: "Ethnicity Asian or Asian British", tooltip: "Asian or Asian British<br>{{ Survey Type }}: {{ Ethnicity Asian or Asian British }}" },
+						{ title: "Mixed or multiple ethnic groups", value: "Ethnicity Mixed or multiple ethnic groups", tooltip: "Mixed or multiple ethnic groups<br>{{ Survey Type }}: {{ Ethnicity Mixed or multiple ethnic groups }}" },
+						{ title: "Other ethnic group", value: "Ethnicity Other (please specify)", tooltip: "Other ethnic group<br>{{ Survey Type }}: {{ Ethnicity Other (please specify) }}" },
+						{ title: "Unknown", value: "Ethnicity Unknown", tooltip: "Unknown<br>{{ Survey Type }}: {{ Ethnicity Unknown }}" }
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 10,
+									"label": "10"
+								},{
+									"value": 20,
+									"label": "20"
+								},{
+									"value": 30,
+									"label": "30"
+								},{
+									"value": 40,
+									"label": "40"
+								},{
+									"value": 50,
+									"label": "50"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
-<p>
-A small but notable number of paper survey respondents identified as Asian or Asian British and Mixed or multiple ethnic groups, showing that Storytime events are attracting some diversity.
-</p>
+	<p>
+	The majority of Storytime visitors identified as White or White British.
+	</p>
 
-<p>
-However, these groups are underrepresented compared to the White or White British audience.
-</p>
+	<p>
+	A small but notable number of paper survey respondents identified as Asian or Asian British and Mixed or multiple ethnic groups, showing that Storytime events are attracting some diversity.
+	</p>
 
-<p>
-There are also 13 ‘Unknown’ responses in the paper surveys, suggesting that many visitors chose not to state their ethnic group. The high proportion of ‘Unknown’ responses means the full diversity of Storytime’s audiences might not be captured.
-</p>
+	<p>
+	However, these groups are underrepresented compared to the White or White British audience.
+	</p>
 
-<p>
-This highlights the need to develop targeted outreach for underrepresented groups and revise data collection methods.
-</p>
-{{ /comp }}
+	<p>
+	There are also 13 ‘Unknown’ responses in the paper surveys, suggesting that many visitors chose not to state their ethnic group. The high proportion of ‘Unknown’ responses means the full diversity of Storytime’s audiences might not be captured.
+	</p>
 
-{{ comp Section }}
-<h2>Visitor experience</h2>
+	<p>
+	This highlights the need to develop targeted outreach for underrepresented groups and revise data collection methods.
+	</p>
 
-<p>
-Almost every visitor reported having a rewarding experience at Storytime, from those with babies under 12 months to those with children aged 8 or over. A few reasons why:
-</p>
-
-<h3>Engaging</h3>
-
-<p>
-Many visitors highlighted how much the storycatchers do to ensure that children have a great time. 
-</p>
-
-<p>
-People called out their warmth, enthusiasm and how they brought the stories to life through voices, actions, singing and humour, making it engaging for children and adults alike.
-</p>
-
-{{ comp Quote {cite:'Visitor'} }}The readers are always amazing, enthusiastic, engaging and very accommodating to toddlers moving around.{{ /comp }}
-
-<h3>Inclusive</h3>
-
-<p>
-Participants said that they appreciate how storycatchers adapt to the needs and ages of the children in the audience and ensure it is comfortable and enjoyable for them.
-</p>
-
-{{ comp Quote {cite:'Visitor'} }}Staff accommodated a group of children with additional needs. We were made to feel welcome and the children were allowed to explore without adults being made to feel like a hindrance.{{ /comp }}
-
-
-<h3>Affordable</h3>
-
-<p>
-Participants said that Storytime sessions were reasonably priced and offer good value for money.
-</p>
 {{ /comp }}
 
 {{ comp Section }}
-<h2>Visitor satisfaction</h2>
 
-<p>
-Satisfaction ratings data suggests that Storytime is well-received by visitors.
-</p>
+	<h2>Visitor experience</h2>
 
-<p>
-When asked if they would return, visitors showed strong loyalty, with 94% of children and adults surveyed saying they'd come back.
-</p>
+	<p>
+	Almost every visitor reported having a rewarding experience at Storytime, from those with babies under 12 months to those with children aged 8 or over. A few reasons why:
+	</p>
+
+	<h3>Engaging</h3>
+
+	<p>
+	Many visitors highlighted how much the storycatchers do to ensure that children have a great time. 
+	</p>
+
+	<p>
+	People called out their warmth, enthusiasm and how they brought the stories to life through voices, actions, singing and humour, making it engaging for children and adults alike.
+	</p>
+
+	{{ comp Quote {cite:'Visitor'} }}The readers are always amazing, enthusiastic, engaging and very accommodating to toddlers moving around.{{ /comp }}
+
+	<h3>Inclusive</h3>
+
+	<p>
+	Participants said that they appreciate how storycatchers adapt to the needs and ages of the children in the audience and ensure it is comfortable and enjoyable for them.
+	</p>
+
+	{{ comp Quote {cite:'Visitor'} }}Staff accommodated a group of children with additional needs. We were made to feel welcome and the children were allowed to explore without adults being made to feel like a hindrance.{{ /comp }}
+
+
+	<h3>Affordable</h3>
+
+	<p>
+	Participants said that Storytime sessions were reasonably priced and offer good value for money.
+	</p>
+
+{{ /comp }}
+
+{{ comp Section }}
+
+	<h2>Visitor satisfaction</h2>
+
+	<p>
+	Satisfaction ratings data suggests that Storytime is well-received by visitors.
+	</p>
+
+	<p>
+	When asked if they would return, visitors showed strong loyalty, with 94% of children and adults surveyed saying they'd come back.
+	</p>
 
 	{{ comp Card { classes: 'bg-blue-100' } }}
 		<h4>Would you return to Storytime?</h4>
@@ -344,129 +360,137 @@ When asked if they would return, visitors showed strong loyalty, with 94% of chi
 			}) }}
 		{{ /comp }}
 	{{ /comp }}
+
 {{ /comp }}
 
 {{ comp Section }}
-<h2>Impact</h2>
 
-{{ comp Card { classes: 'bg-blue-100' } }}
-    <h4>Impact themes</h4>
-    {{ comp SaveableVisualisation {id: 'impact-themes', file: "impact_themes.csv" } }}
-        {{ comp.oi.chart.bar({
-            config: {
-                data: release.impact_themes,
-                category: "Category",
-                width: 1000, 
-                height: 300,
-                legend: {
-                    show: true,
-                    position: "top"
-                },
-                series: [
-                    { title: "Fun/enjoyment", value: "Fun/enjoyment", tooltip: "Fun/enjoyment<br>{{ Category }}: {{ Fun/enjoyment }}" },
-                    { title: "Love of reading / stories", value: "Love of reading / stories", tooltip: "Love of reading / stories<br>{{ Category }}: {{ Love of reading / stories }}" },
-                    { title: "Concentration skills", value: "Concentration skills", tooltip: "Concentration skills<br>{{ Category }}: {{ Concentration skills }}" },
-                    { title: "Social skills", value: "Social skills", tooltip: "Social skills<br>{{ Category }}: {{ Social skills }}" },
-                    { title: "Literacy skills", value: "Literacy skills", tooltip: "Literacy skills<br>{{ Category }}: {{ Literacy skills }}" },
-                    { title: "Relaxation", value: "Relaxation", tooltip: "Relaxation<br>{{ Category }}: {{ Relaxation }}" },
-                    { title: "Imagination / creativity", value: "Imagination / creativity", tooltip: "Imagination / creativity<br>{{ Category }}: {{ Imagination / creativity }}" },
-                    { title: "Confidence", value: "Confidence", tooltip: "Confidence<br>{{ Category }}: {{ Confidence }}" }
-                ],
-                axis: {
-                    x: {
-                        grid: {
-                            "stroke-dasharray": "6 2",
-                            "stroke-width": 1
-                        },
-                        ticks: [{
-                                "value": 2,
-                                "label": "2"
-                            },{
-                                "value": 4,
-                                "label": "4"
-                            },{
-                                "value": 6,
-                                "label": "6"
-                            },{
-                                "value": 8,
-                                "label": "8"
-                            },{
-                                "value": 10,
-                                "label": "10"
-                            }]
-                    },
-                    y: {
-                        grid: {
-                            "stroke-width": 0.5
-                        }
-                    }
-                }
-            }
-        }) }}
-    {{ /comp }}
-{{ /comp }}
+	<h2>Impact</h2>
 
-<p>
-29 respondents mentioned how Storytime promoted a love of reading and stories, a key part of promoting early literacy for children and enthusiasm for literature.
-</p>
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		<h4>Impact themes</h4>
+		{{ comp SaveableVisualisation {id: 'impact-themes', file: "impact_themes.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.impact_themes,
+					category: "Category",
+					width: 1000, 
+					height: 300,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					series: [
+						{ title: "Fun/enjoyment", value: "Fun/enjoyment", tooltip: "Fun/enjoyment<br>{{ Category }}: {{ Fun/enjoyment }}" },
+						{ title: "Love of reading / stories", value: "Love of reading / stories", tooltip: "Love of reading / stories<br>{{ Category }}: {{ Love of reading / stories }}" },
+						{ title: "Concentration skills", value: "Concentration skills", tooltip: "Concentration skills<br>{{ Category }}: {{ Concentration skills }}" },
+						{ title: "Social skills", value: "Social skills", tooltip: "Social skills<br>{{ Category }}: {{ Social skills }}" },
+						{ title: "Literacy skills", value: "Literacy skills", tooltip: "Literacy skills<br>{{ Category }}: {{ Literacy skills }}" },
+						{ title: "Relaxation", value: "Relaxation", tooltip: "Relaxation<br>{{ Category }}: {{ Relaxation }}" },
+						{ title: "Imagination / creativity", value: "Imagination / creativity", tooltip: "Imagination / creativity<br>{{ Category }}: {{ Imagination / creativity }}" },
+						{ title: "Confidence", value: "Confidence", tooltip: "Confidence<br>{{ Category }}: {{ Confidence }}" }
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 2,
+									"label": "2"
+								},{
+									"value": 4,
+									"label": "4"
+								},{
+									"value": 6,
+									"label": "6"
+								},{
+									"value": 8,
+									"label": "8"
+								},{
+									"value": 10,
+									"label": "10"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
+					}
+				}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
-<p>
-Most participants mentioned that Storytime creates a fun, enjoyable and engaging experience for children, with 46 respondents noting this as a key takeaway.
-</p>
+	<p>
+	29 respondents mentioned how Storytime promoted a love of reading and stories, a key part of promoting early literacy for children and enthusiasm for literature.
+	</p>
 
-<p>
-This suggests that Storytime is successfully delivering an experience that children find entertaining, which is crucial for engagement and encouraging repeat visits.
-</p>
+	<p>
+	Most participants mentioned that Storytime creates a fun, enjoyable and engaging experience for children, with 46 respondents noting this as a key takeaway.
+	</p>
 
-<p>
-Beyond enjoyment, Storytime also supports key developmental skills.
-</p>
+	<p>
+	This suggests that Storytime is successfully delivering an experience that children find entertaining, which is crucial for engagement and encouraging repeat visits.
+	</p>
 
-<p>
-Concentration or social skills were frequently highlighted, indicating that the sessions help children learn to focus and interact with others in a social setting.
-</p>
+	<p>
+	Beyond enjoyment, Storytime also supports key developmental skills.
+	</p>
 
-<p>
-A smaller number of respondents also mentioned benefits related to imagination, creativity, confidence and relaxation.
-</p>
+	<p>
+	Concentration or social skills were frequently highlighted, indicating that the sessions help children learn to focus and interact with others in a social setting.
+	</p>
 
-<p>
-Literacy skills were only directly mentioned three times. While Storytime encourages a general love of stories, there may be opportunities to strengthen its language and framing to signal its direct impact on early reading and language development.
-</p>
-{{ /comp }}
+	<p>
+	A smaller number of respondents also mentioned benefits related to imagination, creativity, confidence and relaxation.
+	</p>
 
-{{ comp Section }}
-<h2>Areas for improvement</h2>
+	<p>
+	Literacy skills were only directly mentioned three times. While Storytime encourages a general love of stories, there may be opportunities to strengthen its language and framing to signal its direct impact on early reading and language development.
+	</p>
 
-<p>
-There were a few areas for improvement highlighted by children or their caregivers.
-</p>
-
-<h3>More stories per session</h3>
-
-<p>
-Some caregivers and children felt the Storytime sessions were too short and would benefit from an additional story. This feedback was particularly noted on the day of the in-person research, when the storycatcher read two stories per session.
-</p>
-
-<h3>Improved seating</h3>
-
-<p>
-One respondent felt that “more and better seating” was required to make the environment comfortable for visitors.
-</p>
 {{ /comp }}
 
 {{ comp Section }}
-<h2>Next steps</h2>
 
-<p>
-Currently, Seven Stories struggle to present the full scope of their impact to potential funders, but this case study has demonstrated how a "full 360° explanation" of their programming can be used for their benefit.
-</p>
+	<h2>Areas for improvement</h2>
 
-<p>
-Moving forward, Seven Stories intend to apply this model to other initiatives, particularly our learning programmes.
-</p>
+	<p>
+	There were a few areas for improvement highlighted by children or their caregivers.
+	</p>
 
-<p>
-Seven Stories plan to implement regular surveys to gather qualitative data and develop presentations that encourage more data-driven decision making throughout the organisation.
-</p>
+	<h3>More stories per session</h3>
+
+	<p>
+	Some caregivers and children felt the Storytime sessions were too short and would benefit from an additional story. This feedback was particularly noted on the day of the in-person research, when the storycatcher read two stories per session.
+	</p>
+
+	<h3>Improved seating</h3>
+
+	<p>
+	One respondent felt that “more and better seating” was required to make the environment comfortable for visitors.
+	</p>
+
+{{ /comp }}
+
+
+{{ comp Section }}
+
+	<h2>Next steps</h2>
+
+	<p>
+	Currently, Seven Stories struggle to present the full scope of their impact to potential funders, but this case study has demonstrated how a "full 360° explanation" of their programming can be used for their benefit.
+	</p>
+
+	<p>
+	Moving forward, Seven Stories intend to apply this model to other initiatives, particularly our learning programmes.
+	</p>
+
+	<p>
+	Seven Stories plan to implement regular surveys to gather qualitative data and develop presentations that encourage more data-driven decision making throughout the organisation.
+	</p>
+
 {{ /comp }}

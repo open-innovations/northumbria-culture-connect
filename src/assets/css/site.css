@@ -16,6 +16,7 @@
 @import 'css/table.css';
 @import 'css/grid.css';
 @import 'css/block.css';
+@import 'css/columns.css';
 
 @import 'css/note.css';
 
@@ -24,3 +25,4 @@
 @import 'css/code_theme.css';
 
 @import 'css/fixes.css';
+
