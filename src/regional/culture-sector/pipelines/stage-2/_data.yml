@@ -1,4 +1,4 @@
-title: Culture Sector pipeline, stage 2
+title: Culture sector pipeline, stage 2
 description: |
   Stage 2 of the pipeline performs various matches, including simple matches,
   and fuzzy matches to both Companies House and Charity Commission data.
