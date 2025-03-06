@@ -10,8 +10,8 @@ stages:
     outs:
     - path: ../raw/360-giving.csv
       hash: md5
-      md5: 67ebe75cc8486e0ef1e6fdbc4cff0e95
-      size: 5300700
+      md5: c7c6a123f0b667dd9d443b73646d38f6
+      size: 5295936
     - path: ../raw/arts-council-investment-programme.csv
       hash: md5
       md5: 94029bd4c4fac2b2a140244d32312e22
@@ -107,8 +107,8 @@ stages:
     deps:
     - path: geo.ipynb
       hash: md5
-      md5: 44b2fb3e7c7c5605f57b1af3dfe7559e
-      size: 34668
+      md5: bf1cbd77e049f15545067fdc78728e67
+      size: 34667
     outs:
     - path: ../src/_data/geojson/lad/E06000047.geojson
       hash: md5
