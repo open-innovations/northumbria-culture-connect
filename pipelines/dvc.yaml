@@ -108,3 +108,16 @@ stages:
       - ${SRC}/data/arts-council/project-grants/_data/grants_average_award_by_lad_by_year.csv:
           persist: true
           cache: false
+
+  charity-commission:
+    always_changed: true
+    cmd: jupyter execute charity_commission.ipynb
+    deps:
+      - charity_commission.ipynb
+    outs:
+      - ${SRC}/data/charity-commission/_data/charity_geo.csv:
+          persist: true
+          cache: false
+      - ${SRC}/data/charity-commission/_data/headlines.json:
+          persist: true
+          cache: false

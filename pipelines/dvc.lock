@@ -158,3 +158,19 @@ stages:
       hash: md5
       md5: fc2a06f1b678de44945b7f3fdc608e44
       size: 3451865
+  charity-commission:
+    cmd: jupyter execute charity_commission.ipynb
+    deps:
+    - path: charity_commission.ipynb
+      hash: md5
+      md5: 5f7c39e98bb959ae657c84023c53b37f
+      size: 3285
+    outs:
+    - path: ../src//data/charity-commission/_data/charity_geo.csv
+      hash: md5
+      md5: 1550841c6c58c1816682eeaa14916a08
+      size: 9688
+    - path: ../src//data/charity-commission/_data/headlines.json
+      hash: md5
+      md5: f78e1ee38c30e4466b828e79160e048c
+      size: 23
