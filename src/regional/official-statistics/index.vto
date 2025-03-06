@@ -283,105 +283,103 @@ metadata:
 		}
 	}) }}
 
+	<h2>Gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence</h2>
 
 	{{ comp Card { classes: 'bg-pink-100' } }}
 		{{ comp SaveableVisualisation {id: 'gross-annual-pay', file: "NM_30_1.csv" } }}
-
-			<h3>Gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence</h3>
-
-			{{ comp.oi.chart.line({
-				config: {
-					data: AHSE,
-					height: 400,
-					legend: {
-						show: true,
-						position: "top"
+		{{ comp.oi.chart.line({
+			config: {
+				data: AHSE,
+				height: 400,
+				legend: {
+					show: true,
+					position: "top"
+				},
+				series: [{
+					title: "Median",
+					x: "year",
+					y: "Pay",
+					colour: '#000000',
+					tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay | toLocaleString() }}"
+				},{
+					title: "Full time",
+					x: "year",
+					y: "Pay FT",
+					colour: '#8F3E8D',
+					tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay FT | toLocaleString() }}"
+				},{
+					title: "Part time",
+					x: "year",
+					y: "Pay PT",
+					colour: '#ed1163',
+					tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay PT | toLocaleString() }}"
+				}],
+				axis: {
+					x: {
+						grid: { show: true },
+						tick: { spacing: 2 }
 					},
-					series: [{
-						title: "Median",
-						x: "year",
-						y: "Pay",
-						colour: '#000000',
-						tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay | toLocaleString() }}"
-					},{
-						title: "Full time",
-						x: "year",
-						y: "Pay FT",
-						colour: '#8F3E8D',
-						tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay FT | toLocaleString() }}"
-					},{
-						title: "Part time",
-						x: "year",
-						y: "Pay PT",
-						colour: '#ed1163',
-						tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay PT | toLocaleString() }}"
-					}],
-					axis: {
-						x: {
-							grid: { show: true },
-							tick: { spacing: 2 }
-						},
-						y: {
-							title: { label: "Pay (£)" },
-							min: 0,
-							grid: { show: true },
-							tick: { spacing: 5000 }
-						}
+					y: {
+						title: { label: "Pay (£)" },
+						min: 0,
+						grid: { show: true },
+						tick: { spacing: 5000 }
 					}
 				}
-			}) }}
-		{{ /comp }}
-	{{ /comp }}
+			}
+		}) }}
+{{ /comp }}
+{{ /comp }}
 
+
+	<h2>Percentage growth in gross annual earnings</h2>
 
 	{{ comp Card { classes: 'bg-pink-100' } }}
 		{{ comp SaveableVisualisation {id: 'gross-annual-earnings', file: "NM_30_1.csv" } }}
-			<h3>Percentage growth in gross annual earnings</h3>
-
-			{{ comp.oi.chart.line({
-				config: {
-					data: AHSE,
-					height: 400,
-					legend: {
-						show: true,
-						position: "top"
-					},
-					series: [{
-						title: "Median",
-						x: "year",
-						y: "Pay change",
-						colour: '#000000',
-						tooltip: "{{ _title }}<br />{{ year }}: {{ Pay change }}%"
-					},{
-						title: "Full time",
-						x: "year",
-						y: "Pay FT change",
-						colour: '#8F3E8D',
-						tooltip: "{{ _title }}<br />{{ year }}: {{ Pay FT change }}%"
-					},{
-						title: "Part time",
-						x: "year",
-						y: "Pay PT change",
-						colour: '#ed1163',
-						tooltip: "{{ _title }}<br />{{ year }}: {{ Pay PT change }}%"
-					}],
-					axis: {
-						x: {
-							grid: { show: true },
-							tick: { spacing: 2 }
-						},
-						y: {
-							title: { label: "Growth in gross annual pay (%)" },
-							min: -10,
-							max: 25,
-							grid: { show: true }
-						}
-					}
+	{{ comp.oi.chart.line({
+		config: {
+			data: AHSE,
+			height: 400,
+			legend: {
+				show: true,
+				position: "top"
+			},
+			series: [{
+				title: "Median",
+				x: "year",
+				y: "Pay change",
+				colour: '#000000',
+				tooltip: "{{ _title }}<br />{{ year }}: {{ Pay change }}%"
+			},{
+				title: "Full time",
+				x: "year",
+				y: "Pay FT change",
+				colour: '#8F3E8D',
+				tooltip: "{{ _title }}<br />{{ year }}: {{ Pay FT change }}%"
+			},{
+				title: "Part time",
+				x: "year",
+				y: "Pay PT change",
+				colour: '#ed1163',
+				tooltip: "{{ _title }}<br />{{ year }}: {{ Pay PT change }}%"
+			}],
+			axis: {
+				x: {
+					grid: { show: true },
+					tick: { spacing: 2 }
+				},
+				y: {
+					title: { label: "Growth in gross annual pay (%)" },
+					min: -10,
+					max: 25,
+					grid: { show: true }
 				}
-			}) }}
+			}
+		}
+	}) }}
 
-		{{ /comp }}
-	{{ /comp }}
+{{ /comp }}
+{{ /comp }}
 {{ /comp }}
 
 
@@ -389,7 +387,7 @@ metadata:
 
 
 	<h2>Economic activity</h2>
-	
+	<p>Proportion of people who are Employed, Unemployed, or Economically inactive.</p>
 	{{ set economicActivity = Object.values(release.NM_17_5.reduce((o, row) => {
 		const date = row['DATE'].toISOString().substr(0,10);
 		const thisGroup = o[date] || { date };
@@ -413,60 +411,60 @@ metadata:
 	}, {})); }}
 
 	{{ comp Card { classes: 'bg-pink-100' } }}
-		{{ comp SaveableVisualisation {id: 'gross-annual-earnings', file: "NM_17_5.csv" } }}
-			<h3>Proportion of people who are Employed, Unemployed, or Economically inactive.</h3>
-			{{ comp.oi.chart.line({
-				config: {
-					data: economicActivity,
-					height: 400,
-					legend: {
-						show: true,
-						position: "top"
-					},
-					series: [{
-						title: "Employed (16-64)",
-						x: "year",
-						y: "Employment rate - aged 16-64",
-						tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%"
-					},{
-						title: "Unemployed (16+)",
-						x: "year",
-						y: "Unemployment rate - aged 16+",
-						tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%",
-						colour: '#ed1163'
-					},{
-						title: "Economically inactive (16-64)",
-						x: "year",
-						y: "% who are economically inactive - aged 16-64",
-						tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%",
-						colour: '#000000'
-					}],
-					axis: {
-						x: {
-							min: 2010,
-							max: 2024,
-							grid: { show: true },
-							tick: { spacing: 2 }
-						},
-						y: {
-							title: { label: "Proportion of population (%)" },
-							min: 0,
-							max: 100,
-							grid: { show: true },
-							tick: { spacing: 25 }
-						}
-					}
+	{{ comp SaveableVisualisation {id: 'gross-annual-earnings', file: "NM_17_5.csv" } }}
+	{{ comp.oi.chart.line({
+		config: {
+			data: economicActivity,
+			height: 400,
+			legend: {
+				show: true,
+				position: "top"
+			},
+			series: [{
+				title: "Employed (16-64)",
+				x: "year",
+				y: "Employment rate - aged 16-64",
+				tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%"
+			},{
+				title: "Unemployed (16+)",
+				x: "year",
+				y: "Unemployment rate - aged 16+",
+				tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%",
+				colour: '#ed1163'
+			},{
+				title: "Economically inactive (16-64)",
+				x: "year",
+				y: "% who are economically inactive - aged 16-64",
+				tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%",
+				colour: '#000000'
+			}],
+			axis: {
+				x: {
+					min: 2010,
+					max: 2024,
+					grid: { show: true },
+					tick: { spacing: 2 }
+				},
+				y: {
+					title: { label: "Proportion of population (%)" },
+					min: 0,
+					max: 100,
+					grid: { show: true },
+					tick: { spacing: 25 }
 				}
-			}) }}
+			}
+		}
+	}) }}
 
-			{{ /comp }}
-		{{ /comp }}
-	{{ /comp }}
+{{ /comp }}
+{{ /comp }}
+{{ /comp }}
 
 {{ comp Section }}
 
 	<h2>Benefit claimants</h2>
 
+	<p>Proportion of people who are claiming benefits.</p>
 
 	{{#
 
@@ -510,40 +508,38 @@ metadata:
 	}, {})); }}
 
 	{{ comp Card { classes: 'bg-pink-100' } }}
-		{{ comp SaveableVisualisation {id: 'benefit-claimants', file: "NM_162_1.csv" } }}
-
-			<h3>Proportion of people who are claiming benefits.</h3>
-			{{ comp.oi.chart.line({
-				config: {
-					data: benefitsTimeseries,
-					height: 400,
-					columns: [{
-						name: "year",
-						template: "{{ date | strptime('%Y-%m-%d') | decimalYear() }}"
-					}],
-					series: [{
-						title: "Claimants",
-						x: "year",
-						y: "Age 16+",
-						colour: '#ed1163',
-						tooltip: "{{ _title }}<br />{{ date | strftime('%B %Y') }}: {{ Age 16+ | toLocaleString() }}%"
-					}],
-					axis: {
-						x: {
-							min: 2010,
-							grid: { show: true },
-							tick: { spacing: 2 }
-						},
-						y: {
-							title: { label: "Proportion of residents aged 16-64 (%)" },
-							min: 0,
-							grid: { show: true },
-							tick: { spacing: 2 }
-						}
-					}
+	{{ comp SaveableVisualisation {id: 'benefit-claimants', file: "NM_162_1.csv" } }}
+	{{ comp.oi.chart.line({
+		config: {
+			data: benefitsTimeseries,
+			height: 400,
+			columns: [{
+				name: "year",
+				template: "{{ date | strptime('%Y-%m-%d') | decimalYear() }}"
+			}],
+			series: [{
+				title: "Claimants",
+				x: "year",
+				y: "Age 16+",
+				colour: '#000000',
+				tooltip: "{{ _title }}<br />{{ date | strftime('%B %Y') }}: {{ Age 16+ | toLocaleString() }}%"
+			}],
+			axis: {
+				x: {
+					min: 2010,
+					grid: { show: true },
+					tick: { spacing: 2 }
+				},
+				y: {
+					title: { label: "Proportion of residents aged 16-64 (%)" },
+					min: 0,
+					grid: { show: true },
+					tick: { spacing: 2 }
 				}
-			}) }}
-		{{ /comp }}
-	{{ /comp }}
+			}
+		}
+	}) }}
 
 {{ /comp }}
+
+
