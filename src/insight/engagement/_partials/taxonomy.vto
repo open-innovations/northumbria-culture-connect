@@ -79,7 +79,6 @@
 	</style>
 
 
-	<div style="display: flex; justify-content:center; padding-top: 2em;">
 
 	{{> function markInvalid(valid) {
 		return (value) => valid.includes(value) ? value : `<span class="invalid">${value}</span>`
@@ -88,42 +87,49 @@
 		const validAudience = taxonomy.audience.map(c => ([c.name, ...((c.children || []).map(s => `${c.name} / ${s.name}`)) ])).flat();
 	}}
 
-	{{ comp.oi.table({
-		"config": {
-		"data": groupings.toSorted((a, b) => {
-					if (a.Organisation < b.Organisation) return -1;
-					if (a.Organisation > b.Organisation) return 1;
-					if (a.Activity < b.Activity ) return -1;
-					if (a.Activity > b.Activity ) return 1;
-					if (a['Activity category'] < b['Activity category'] ) return -1;
-					if (a['Activity category'] > b['Activity category'] ) return 1;
-					if (a.Audience < b.Audience ) return -1;
-					if (a.Audience > b.Audience ) return 1;
-					return 0;
-				})
-				.map(r => ({
-					...r,
-					['Activity category']: r['Activity category']
-						.split(/\s*,\s*/).map(markInvalid(validCategories)).join(', '),
-					Audience: r.Audience
-						.split(/\s*,\s*/).map(markInvalid(validAudience)).join(', '),
-				})),
-		"columns": [{
-				"name": "Organisation",
-				"mergerows": true
-			},{
-				"name": "Activity",
-				"mergerows": true
-			},{
-				"name": "Activity category",
-				"mergerows": false
-			},{
-				"name": "Audience",
-				"mergerows": false
-			}]
-		}
-	}) }} 
-	</div>
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		{{ comp SaveableVisualisation {id: 'category-mapping' } }}
+
+			<div style="display: flex; justify-content:center;">
+			
+			{{ comp.oi.table({
+				"config": {
+				"data": groupings.toSorted((a, b) => {
+							if (a.Organisation < b.Organisation) return -1;
+							if (a.Organisation > b.Organisation) return 1;
+							if (a.Activity < b.Activity ) return -1;
+							if (a.Activity > b.Activity ) return 1;
+							if (a['Activity category'] < b['Activity category'] ) return -1;
+							if (a['Activity category'] > b['Activity category'] ) return 1;
+							if (a.Audience < b.Audience ) return -1;
+							if (a.Audience > b.Audience ) return 1;
+							return 0;
+						})
+						.map(r => ({
+							...r,
+							['Activity category']: r['Activity category']
+								.split(/\s*,\s*/).map(markInvalid(validCategories)).join(', '),
+							Audience: r.Audience
+								.split(/\s*,\s*/).map(markInvalid(validAudience)).join(', '),
+						})),
+				"columns": [{
+						"name": "Organisation",
+						"mergerows": true
+					},{
+						"name": "Activity",
+						"mergerows": true
+					},{
+						"name": "Activity category",
+						"mergerows": false
+					},{
+						"name": "Audience",
+						"mergerows": false
+					}]
+				}
+			}) }}
+			</div>
+		{{ /comp }}
+	{{ /comp }}
 
 {{ /comp }}
 
