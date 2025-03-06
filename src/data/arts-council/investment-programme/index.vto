@@ -20,7 +20,7 @@ metadata:
 {{ comp Section }}
 	{{ set headlines = investment_by_lad |> find(x => x.LAD24CD == ons_codes.newcastle) }}
 	{{ set byDiscipline = Object.values(
-		funding_by_organisation
+		release.funding_by_organisation
 			.filter(x => x.LAD24CD == ons_codes.newcastle)
 			.reduce((result, org) => {
 				const discipline = org['Main Discipline'];
@@ -86,18 +86,25 @@ metadata:
 		}));
 	}}
 
-	{{ comp WidthLimit { maxWidth: '600px' }}}
-	{{ comp.oi.chart.waffle({
-		config: {
-			data: [waffleData],
-			series: waffleSeries,
-			size: [10, 10],
-			legend: {
-				show: true,
-				position: 'top',
-			}
-		}
-	})}}
+
+	{{ comp Card { classes: 'bg-green-100' } }}
+		{{ comp SaveableVisualisation {id: 'allocation-by-funding' } }}
+
+			{{ comp WidthLimit { }}}
+			{{ comp.oi.chart.waffle({
+				config: {
+					data: [waffleData],
+					series: waffleSeries,
+					size: [10, 10],
+					legend: {
+						show: true,
+						position: 'top',
+					}
+				}
+			})}}
+			{{ /comp }}
+
+		{{ /comp }}
 	{{ /comp }}
 
 
@@ -111,25 +118,31 @@ metadata:
 		Newcastle-based organisations funded through the Arts Council Investment Programme are listed below.
 	</p>
 
-	<table class="holder">
-	<thead>
-		<tr>
-			<th>Organisation</th>
-			<th>Discipline</th>
-			<th>NPO / IPSO</th>
-		</tr>
-	</thead>
-	{{ for o of (funding_by_organisation
-		.filter(x => x.LAD24CD == ons_codes.newcastle)
-		.toSorted((a, b) => (a.Recipient.toLowerCase() < b.Recipient.toLowerCase()) ? -1 : 1)
-	) }}
-		<tr>
-			<td>{{ o.Recipient }}</td>
-			<td>{{ o['Main Discipline'] }}</td>
-			<td>{{ o.Type }}</td>
-			{{# <p>{{ o.funding |> displayCurrency }}</p> #}}
-		</tr>
-	{{ /for }}
-	</table>
 
+	{{ comp Card { classes: 'bg-green-100' } }}
+		{{ comp SaveableVisualisation {id: 'funded-organisations', file: "funding_by_organisation.csv" } }}
+
+			<table class="holder">
+			<thead>
+				<tr>
+					<th>Organisation</th>
+					<th>Discipline</th>
+					<th>NPO / IPSO</th>
+				</tr>
+			</thead>
+			{{ for o of (release.funding_by_organisation
+				.filter(x => x.LAD24CD == ons_codes.newcastle)
+				.toSorted((a, b) => (a.Recipient.toLowerCase() < b.Recipient.toLowerCase()) ? -1 : 1)
+			) }}
+				<tr>
+					<td>{{ o.Recipient }}</td>
+					<td>{{ o['Main Discipline'] }}</td>
+					<td>{{ o.Type }}</td>
+					{{# <p>{{ o.funding |> displayCurrency }}</p> #}}
+				</tr>
+			{{ /for }}
+			</table>
+
+		{{ /comp }}
+	{{ /comp }}
 {{ /comp }}
