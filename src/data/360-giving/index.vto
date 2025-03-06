@@ -11,7 +11,7 @@ colour_style: bg-green-25
 funding_clip: 250000
 ---
 
-{{ set funders = by_programme
+{{ set funders = release.by_programme
     .map(({ "Funding Org:Name": name, Grants: grants, Funding: funding }) => ({ name, grants, funding }))
     .reduce((a, { name, grants, funding }) => {
         const current = a[name] || { grants: 0, funding: 0 };

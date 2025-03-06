@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        {{ for o of by_recipient.toSorted((a, b) => b['Amount Awarded'] - a['Amount Awarded']).filter(x => x['Amount Awarded'] > funding_clip) }}
+        {{ for o of release.by_recipient.toSorted((a, b) => b['Amount Awarded'] - a['Amount Awarded']).filter(x => x['Amount Awarded'] > funding_clip) }}
         <tr>
             <th scope="row">{{ o['Recipient Org:Name'] }}</th>
             <td class="centred">{{ o.Number }}</td>

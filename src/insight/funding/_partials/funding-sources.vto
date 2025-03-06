@@ -31,7 +31,7 @@ io<h2>Funding sources</h2>
 
     const investmentProgramme = search.data('data/arts-council/investment-programme').investment_by_lad.find(x => x.LAD24CD === 'E08000021' );
 
-    const threeSixtyGiving = search.data('data/360-giving').by_programme.reduce((a, c) => {
+    const threeSixtyGiving = search.data('data/360-giving').release.by_programme.reduce((a, c) => {
         return {
             funding: a.funding + c.Funding,
             number: a.number + c.Grants
