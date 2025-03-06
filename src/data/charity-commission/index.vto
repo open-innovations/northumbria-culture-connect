@@ -23,15 +23,19 @@ colour_style: bg-pink-25
 
 {{ comp Section }}
 	<p>
-		This page will present data extracted from the Charity Commission website. The data on this page is an extract from the <a href = "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download">Charity Commission Register</a>. It has been filtered by Local Area = 'Newcastle Upon Tyne City (1053)', and Classification = 'Arts/Culture/Heritage/Science (29977)'. Data is further filtered by lookup against the <a href="https://www.beta.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/listofpostcodesandcorrespondinglocalauthorities">ONS Postcode - Local Authority lookup</a>.
+		This page presents data extracted from the Charity Commission website.
+		The data on this page is an derived from the <a href = "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download">Charity Commission Register</a>.
+		It has been filtered by charities active in the <strong>Newcastle Upon Tyne City</strong> area,
+		and with the charity classification <strong>Arts/Culture/Heritage/Science</strong>.
 	</p>
 
 	<h3>Headlines</h3>
-	<p>Overview of charitable organisations in Newcastle upon Tyne.</p>
+	
+	<p>Overview of charitable organisations operating in Newcastle upon Tyne.</p>
 	<ul class="grid centred">
 		<li class="block">
-			<p class="bang">{{ headlines.find(x => x.headline == 'Total Newcastle LA')['count'] }}</p>
-			<p>Registered charities in Newcastle upon Tyne Local Authority</p>
+			<p class="bang">{{ headlines.find(x => x.headline == 'Total').count }}</p>
+			<p>Registered charities operating in Newcastle upon Tyne Local Authority</p>
 		</li>
 	</ul>
 {{ /comp }}

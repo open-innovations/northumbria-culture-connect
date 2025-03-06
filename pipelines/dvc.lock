@@ -5,12 +5,12 @@ stages:
     deps:
     - path: get-data.py
       hash: md5
-      md5: 41d7b71c507fce2cf3e0d22100cd8326
-      size: 3916
+      md5: a3f72e16bceee5d59d59e8b3c31013fc
+      size: 4090
     outs:
     - path: ../raw/360-giving.csv
       hash: md5
-      md5: c7c6a123f0b667dd9d443b73646d38f6
+      md5: bcf2d30780d717d0b23349cd17a0c0ab
       size: 5295936
     - path: ../raw/arts-council-investment-programme.csv
       hash: md5
@@ -22,12 +22,12 @@ stages:
       size: 3127400
     - path: ../raw/charity-area-data.zip
       hash: md5
-      md5: f6693e334bd247868502cd30e967147a
-      size: 4232474
+      md5: 1916198b4845b60ba665beac7ae148fa
+      size: 4260416
     - path: ../raw/charity-data.zip
       hash: md5
-      md5: bfc9793ab66de3750a20e416c6604225
-      size: 42793919
+      md5: 4f913ef58cbbc400fdacf2118bb4cd8c
+      size: 43074289
     - path: ../raw/company-data.zip
       hash: md5
       md5: 473006274c4f91111062161b68ff4aee
@@ -41,25 +41,25 @@ stages:
     deps:
     - path: ../raw/charity-area-data.zip
       hash: md5
-      md5: f6693e334bd247868502cd30e967147a
-      size: 4232474
+      md5: 1916198b4845b60ba665beac7ae148fa
+      size: 4260416
     - path: ../raw/charity-data.zip
       hash: md5
-      md5: bfc9793ab66de3750a20e416c6604225
-      size: 42793919
+      md5: 4f913ef58cbbc400fdacf2118bb4cd8c
+      size: 43074289
     - path: ../raw/company-data.zip
       hash: md5
       md5: 473006274c4f91111062161b68ff4aee
       size: 486510044
     - path: load-data.ipynb
       hash: md5
-      md5: 7348f4a0c5a92f7a4f14cf9cdd27048c
-      size: 4100
+      md5: 5db056c27ff1ec79f781efccb2c6bddb
+      size: 4923
     outs:
     - path: ../raw/data-lake.db
       hash: md5
-      md5: 325b4797fbde92d396526054b2641169
-      size: 1115697152
+      md5: 6a7e839c61c7861f099823c63cfbc626
+      size: 1112813568
   arts-council:
     cmd: "papermill arts-council.ipynb - | jupyter nbconvert --stdin --to markdown
       --output index --output-dir ../src//pipelines/arts-council\n"
