@@ -24,9 +24,9 @@
     const pg_raw = search.data('data/arts-council/project-grants');
 
     const project_grants = {
-        year: pg_raw.grants_value_by_lad_by_year.at(-1).Year,
-        funding: pg_raw.grants_value_by_lad_by_year.at(-1).E08000021,
-        number: pg_raw.grants_count_by_lad_by_year.at(-1).E08000021,
+        year: pg_raw.release.grants_value_by_lad_by_year.at(-1).Year,
+        funding: pg_raw.release.grants_value_by_lad_by_year.at(-1).E08000021,
+        number: pg_raw.release.grants_count_by_lad_by_year.at(-1).E08000021,
     };
 
     const investmentProgramme = search.data('data/arts-council/investment-programme').investment_by_lad.find(x => x.LAD24CD === 'E08000021' );
@@ -38,7 +38,7 @@
         }
     }, { funding: 0, number: 0 });
 
-    const neca = search.data('data/neca').funding_by_area.find(x => x.Area === "Newcastle upon Tyne");
+    const neca = search.data('data/neca').release.funding_by_area.find(x => x.Area === "Newcastle upon Tyne");
 }}
 
 {{ comp AutoGrid }}

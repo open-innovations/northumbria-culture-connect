@@ -28,7 +28,7 @@ The data below refers to organisations that receive Grant-in-Aid funding. None o
 {{ /comp }}
 
 
-{{> const max_funding_stacked = Math.ceil(Math.max(...income_vs_funding.map(x => x['total_income'])) / 1e9) * 1e9 }}
+{{> const max_funding_stacked = Math.ceil(Math.max(...release.income_vs_funding.map(x => x['total_income'])) / 1e9) * 1e9 }}
 
 {{ comp Section }}
 
@@ -46,40 +46,43 @@ The data below refers to organisations that receive Grant-in-Aid funding. None o
 
 	<p>This chart explores the value of Grant-in-Aid given to DCMS-funded organisations. Data covers the period 2022/23, which is the most recent publication.</p>
 
-
-	{{ comp.oi.chart.bar({
-		config: {
-			data: income_vs_funding,
-			category: 'organisation',
-			stacked: 'true', 
-			width: 1200,
-			height: 400,
-			legend: {
-				show: true, 
-				position: 'top'
-			},
-			series: [
-				{ title: "Grant-in-Aid Received 2022/23", value: "grant_in_aid", tooltip: "<strong>Grant-in-Aid Received 2022/23<br /></strong>{{ organisation }}: £{{ grant_in_aid | toLocaleString() }}" },
-			],
-			axis: {
-				x: {
-					max: 150000000,
-					ticks: [{
-						value: 50000000,
-						label: "£50M"
-						},
-						{
-						value: 100000000,
-						label: "£100M"
-						},
-						{
-						value: 150000000,
-						label: "£150M"
-						}]
+	{{ comp Card { classes: 'bg-green-100'} }}
+		{{ comp SaveableVisualisation {id: 'dcms-grant-aid-received', file: "income_vs_funding.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.income_vs_funding,
+					category: 'organisation',
+					stacked: 'true', 
+					width: 1200,
+					height: 400,
+					legend: {
+						show: true, 
+						position: 'top'
+					},
+					series: [
+						{ title: "Grant-in-Aid Received 2022/23", value: "grant_in_aid", tooltip: "<strong>Grant-in-Aid Received 2022/23<br /></strong>{{ organisation }}: £{{ grant_in_aid | toLocaleString() }}" },
+					],
+					axis: {
+						x: {
+							max: 150000000,
+							ticks: [{
+								value: 50000000,
+								label: "£50M"
+								},
+								{
+								value: 100000000,
+								label: "£100M"
+								},
+								{
+								value: 150000000,
+								label: "£150M"
+								}]
+						}
+					}
 				}
-			}
-		}
-	}) }}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 {{ /comp }}
 {{ comp Section }}
 	<h3>Arts Council England & National Portfolio Organisations</h3>
@@ -88,35 +91,38 @@ The data below refers to organisations that receive Grant-in-Aid funding. None o
 	DCMS provides Grant-in-Aid funding to Arts Council England, which then distributes funding to National Portfolio Organisations, museums, libraries, and various cultural venues. This funding helps sustain arts organisations and ensures public engagement with British culture and heritage.
 	</p>
 
-	{{> const max_funding_ace = Math.ceil(Math.max(...ace_funding.map(x => x['total_income'])) / 1e9) * 1e9 }}
-
-	{{ comp.oi.chart.bar({
-		config: {
-			data: ace_funding,
-			category: 'organisation',
-			stacked: 'true', 
-			width: 1200,
-			height:150,
-			legend: {
-				show: true, 
-				position: 'top'
-			},
-			series: [
-				{ title: "Grant-in-Aid Received 2022/23", value: "grant_in_aid", tooltip: "<strong>Grant-in-Aid Received 2022/23<br /></strong>{{ organisation }}: £{{ grant_in_aid | toLocaleString() }}" },
-			],
-			axis: {
-				x: {
-					max: 600000000,
-					ticks: [{
-						value: 250000000,
-						label: "£250M"
-						},
-						{
-						value: 500000000,
-						label: "£500M"
-						}]
+	{{> const max_funding_ace = Math.ceil(Math.max(...release.ace_funding.map(x => x['total_income'])) / 1e9) * 1e9 }}
+	{{ comp Card { classes: 'bg-green-100'} }}
+		{{ comp SaveableVisualisation {id: 'ace-npo-grant-aid', file: "ace_funding.csv" } }}
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.ace_funding,
+					category: 'organisation',
+					stacked: 'true', 
+					width: 1200,
+					height:150,
+					legend: {
+						show: true, 
+						position: 'top'
+					},
+					series: [
+						{ title: "Grant-in-Aid Received 2022/23", value: "grant_in_aid", tooltip: "<strong>Grant-in-Aid Received 2022/23<br /></strong>{{ organisation }}: £{{ grant_in_aid | toLocaleString() }}" },
+					],
+					axis: {
+						x: {
+							max: 600000000,
+							ticks: [{
+								value: 250000000,
+								label: "£250M"
+								},
+								{
+								value: 500000000,
+								label: "£500M"
+								}]
+						}
+					}
 				}
-			}
-		}
-	}) }}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 {{ /comp }}
