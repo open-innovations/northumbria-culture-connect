@@ -16,7 +16,7 @@ url: /regional/
 <section class="padded holder">
 {{ comp AutoGrid }}
 {{ for p of search.pages('regional !index !pipeline', 'title') }}
-    {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+    {{ comp.PageLink({ page: p, colour_style: 'bg-pink-100', config: { withTags: true } }) }}
 {{ /for }}
 {{ /comp }}
 </section>

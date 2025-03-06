@@ -14,7 +14,7 @@ hideTags: true
 <section class="padded holder">
 {{ comp AutoGrid }}
 {{ for p of search.pages('insight !index', 'title') }}
-    {{ comp.PageLink({ page: p, config: { withTags: true } }) }}
+    {{ comp.PageLink({ page: p, colour_style: p.colour_style, config: { withTags: true } }) }}
 {{ /for }}
 {{ /comp }}
 </section>
