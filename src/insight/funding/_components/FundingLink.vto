@@ -11,7 +11,7 @@ css: |
         & a,a:visited { color: inherit; }
     }
 ---
-{{ comp Card { classes: 'centred bg-green-75 funding-link' } }}
+{{ comp Card { classes: 'centred bg-green-100 funding-link' } }}
     <p class="title"><a href="{{ url }}">{{ title }}{{ comp.LinkIcon({url:url}) }}</a></p>
     <div class="bignum">£{{ funding |> toLocaleString }}{{ suffix || '' }}</div>
     {{ content }}

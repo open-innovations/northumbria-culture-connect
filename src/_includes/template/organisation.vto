@@ -58,7 +58,7 @@ layout: template/base.vto
 
 
 			{{ comp Headline }}
-				{{ participation
+				{{ release.participation
 					|> map(x => Object.values({ ...x, Date: undefined, 'Date label': undefined }))
 					|> flat
 					|> reduce((a, c) => a + (c || 0), 0)
@@ -67,10 +67,7 @@ layout: template/base.vto
 
 			<p>This data represents the total number of visitors to {{ title }}.</p>
 
-			{{ comp WidthLimit }}
-				{{ comp.OrgParticipation({ participation, series: series.participation }) }}
-
-			{{ /comp }}
+			{{ comp.OrgParticipation({ participation: release.participation, series: series.participation }) }}
 
 		{{ /comp }}
 	{{ /comp }}

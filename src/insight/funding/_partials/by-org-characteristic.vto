@@ -62,44 +62,45 @@
 	}) }} of funding which is not included.
 </p>
 
-{{ comp WidthLimit { maxWidth: 'min(80vw, 800px)' } }}
-{{ comp.oi.chart.bar({
-	config: {
-		data: chartData,
-		category: "accounts_category",
-		columns: [{
-			name: "Tooltip",
-			template: "Funding<br />{{ accounts_category }}: £{{ total_funding | toLocaleString() }}"
-		}],
-		width: 800,
-		height: 200,
-		series: [
-			{ title: "Total funding", value: "total_funding", tooltip: "Tooltip" }
-		],
-		axis: {
-			x: {
-				max: chartMax,					
-				ticks: [{
-					value: 10e6,
-					label: "£10M"
-				},{
-					value: 7.5e6,
-					label: "£7.5M"
-				},{
-					value: 5e6,
-					label: "£5M"
-				},{
-					value: 2.5e6,
-					label: "£2.5M"
-				},{
-					value: 0,
-					label: "0"
-				}]
+{{ comp Card { classes: 'bg-green-100' } }}
+	{{ comp SaveableVisualisation {id: 'turnover-by-size' } }}
+		{{ comp.oi.chart.bar({
+			config: {
+				data: chartData,
+				category: "accounts_category",
+				columns: [{
+					name: "Tooltip",
+					template: "Funding<br />{{ accounts_category }}: £{{ total_funding | toLocaleString() }}"
+				}],
+				width: 800,
+				height: 200,
+				series: [
+					{ colour: "#005837", title: "Total funding", value: "total_funding", tooltip: "Tooltip" }
+				],
+				axis: {
+					x: {
+						max: chartMax,					
+						ticks: [{
+							value: 10e6,
+							label: "£10M"
+						},{
+							value: 7.5e6,
+							label: "£7.5M"
+						},{
+							value: 5e6,
+							label: "£5M"
+						},{
+							value: 2.5e6,
+							label: "£2.5M"
+						},{
+							value: 0,
+							label: "0"
+						}]
+					}
+				}
 			}
-		}
-	}
-}) }}
-{{ /comp }}
+		}) }}
+		{{ /comp }}
 
 {{# <p>
 	Please note, in the charts above, Arts Council funding covers funding awarded through

@@ -1,6 +1,6 @@
 .block {
 	--spacing: 1rem;
-	padding: 1rem;
+	padding: 20px;
 	display: block;
 	border-radius: 16px;
 	/*box-shadow: 0 1px 24px var(--block-shadow-colour, rgba(35,31,32,.15));

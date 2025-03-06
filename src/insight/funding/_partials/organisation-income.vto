@@ -2,7 +2,7 @@
 
 <p>
 	We requested baseline data from the Data Observatory pilot organisations, including information about sources of their income.
-	{{ percentage_income.length }} organisations provided this data. The categories of income data we asked for were:
+	{{ release.percentage_income.length }} organisations provided this data. The categories of income data we asked for were:
 </p>
 
 <dl>
@@ -35,56 +35,58 @@
 	of organisations by reliance on certain types of funding source.
 </p>
 
-{{ comp WidthLimit }}
-{{ comp.oi.chart.bar({
-	config: {
-		data: percentage_income
-            .sort((a, b) => b['Earned income'] - a['Earned income']),
-		category: "Organisation",
-		width: 1000, 
-		height: 300,
-		stacked: true,
-		percent: true,
-		legend: {
-			show: true,
-			position: "top"
-		},
-		series: [
-		{ title: 'Earned income', value: 'Earned income'},
-		{ title: 'Individual donations', value: 'Individual donations'},
-		{ title: 'Corporate sponsorships', value: 'Corporate sponsorships'},
-		{ title: 'Trusts and foundations', value: 'Trusts and foundations'},
-		{ title: 'Public funding', value: 'Public funding'},
-		],
-		axis: {
-			x: {
-				grid: {
-					"stroke-dasharray": "6 2",
-					"stroke-width": 1
+{{ comp Card { classes: 'bg-green-100' } }}
+	{{ comp SaveableVisualisation {id: 'percentage_income', file: 'percentage_income.csv' } }}
+		{{ comp.oi.chart.bar({
+			config: {
+				data: release.percentage_income
+					.sort((a, b) => b['Earned income'] - a['Earned income']),
+				category: "Organisation",
+				width: 1000, 
+				height: 300,
+				stacked: true,
+				percent: true,
+				legend: {
+					show: true,
+					position: "top"
 				},
-				ticks: [{
-						"value": 20,
-						"label": "20%"
-					},{
-						"value": 40,
-						"label": "40%"
-					},{
-						"value": 60,
-						"label": "60%"
-					},{
-						"value": 80,
-						"label": "80%"
-					},{
-						"value": 100,
-						"label": "100%"
-					}]
-			},
-			y: {
-				grid: {
-					"stroke-width": 0.5
+				series: [
+				{ title: 'Earned income', value: 'Earned income'},
+				{ title: 'Individual donations', value: 'Individual donations'},
+				{ title: 'Corporate sponsorships', value: 'Corporate sponsorships'},
+				{ title: 'Trusts and foundations', value: 'Trusts and foundations'},
+				{ title: 'Public funding', value: 'Public funding'},
+				],
+				axis: {
+					x: {
+						grid: {
+							"stroke-dasharray": "6 2",
+							"stroke-width": 1
+						},
+						ticks: [{
+								"value": 20,
+								"label": "20%"
+							},{
+								"value": 40,
+								"label": "40%"
+							},{
+								"value": 60,
+								"label": "60%"
+							},{
+								"value": 80,
+								"label": "80%"
+							},{
+								"value": 100,
+								"label": "100%"
+							}]
+					},
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
+					}
 				}
 			}
-		}
-	}
-}) }}
+		}) }}
+	{{ /comp }}
 {{ /comp }}

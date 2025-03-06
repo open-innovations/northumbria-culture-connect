@@ -8,96 +8,106 @@
 
 	<p>By presenting the data in this format, we aim to enable sector-wide analysis, which can contribute to more informed policy-making, evaluation activities, and the production of higher-quality data to support investment in the sector.</p>
 
-	<h4 style="text-align:center; padding-top:2em;">Activity type</h4>
-	{{ comp.oi.chart.bar({
-		config: {
-			data: agg_activity_category,
-			category: "Activity Category",
-			width: 1000, 
-			height: 300,
-			series: [
-				{ title: "Count", value: "Count" },
-			],
-			axis: {
-				x: {
-					grid: {
-						"stroke-dasharray": "6 2",
-						"stroke-width": 1
-					},
-					ticks: [{
-							"value": 0,
-							"label": "0"
-						},{
-							"value": 100000,
-							"label": "100,000"
-						},{
-							"value": 200000,
-							"label": "200,000"
-						},{
-							"value": 300000,
-							"label": "300,000"
-						},{
-							"value": 400000,
-							"label": "400,000"
-						},{
-							"value": 500000,
-							"label": "500,000"
-						}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		<h4>Activity type</h4>
+		{{ comp SaveableVisualisation {id: 'activity-type', file: 'agg_activity_category.csv' } }}
+
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.agg_activity_category,
+					category: "Activity Category",
+					width: 1000, 
+					height: 300,
+					series: [
+						{ colour: "#00478a", title: "Count", value: "Count" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 0,
+									"label": "0"
+								},{
+									"value": 100000,
+									"label": "100,000"
+								},{
+									"value": 200000,
+									"label": "200,000"
+								},{
+									"value": 300000,
+									"label": "300,000"
+								},{
+									"value": 400000,
+									"label": "400,000"
+								},{
+									"value": 500000,
+									"label": "500,000"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
 					}
 				}
-			}
-		}
-	}) }}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
 
-	<h4 style="text-align:center;padding-top: 2em;">Audiences</h4>
-	{{ comp.oi.chart.bar({
-		config: {
-			data: agg_audience,
-			category: "Audience",
-			width: 1200, 
-			height: 200,
-			series: [
-				{ title: "Count", value: "Count" },
-			],
-			axis: {
-				x: {
-					grid: {
-						"stroke-dasharray": "6 2",
-						"stroke-width": 1
-					},
-					ticks: [{
-							"value": 0,
-							"label": "0"
-						},{
-							"value": 100000,
-							"label": "100,000"
-						},{
-							"value": 200000,
-							"label": "200,000"
-						},{
-							"value": 300000,
-							"label": "300,000"
-						},{
-							"value": 400000,
-							"label": "400,000"
-						},{
-							"value": 500000,
-							"label": "500,000"
-						}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		<h4>Audiences</h4>
+		{{ comp SaveableVisualisation {id: 'audiences', file: 'agg_audience.csv' } }}
+
+			{{ comp.oi.chart.bar({
+				config: {
+					data: release.agg_audience,
+					category: "Audience",
+					width: 1200, 
+					height: 200,
+					series: [
+						{ colour: "#00478a", title: "Count", value: "Count" },
+					],
+					axis: {
+						x: {
+							grid: {
+								"stroke-dasharray": "6 2",
+								"stroke-width": 1
+							},
+							ticks: [{
+									"value": 0,
+									"label": "0"
+								},{
+									"value": 100000,
+									"label": "100,000"
+								},{
+									"value": 200000,
+									"label": "200,000"
+								},{
+									"value": 300000,
+									"label": "300,000"
+								},{
+									"value": 400000,
+									"label": "400,000"
+								},{
+									"value": 500000,
+									"label": "500,000"
+								}]
+						},
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
+						}
 					}
 				}
-			}
-		}
-	}) }}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
 {{ /comp }}
 
