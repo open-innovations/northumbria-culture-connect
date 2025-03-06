@@ -1,15 +1,15 @@
 <h2>Headlines</h2>
 
 <ul class="grid centred">
-<li class="block bg-green-75">
+<li class="block bg-green-100">
     <p class="bang">{{ Object.keys(funders).length }}</p>
     <p>Distinct funders</p>
 </li>
-<li class="block bg-green-75">
+<li class="block bg-green-100">
     <p class="bang">{{ Object.values(funders) |> map(x => x.grants) |> reduce((a, c) => a + c, 0) }}</p>
     <p>Total grants awarded</p>
 </li>
-<li class="block bg-green-75">
+<li class="block bg-green-100">
     <p class="bang">{{ Object.values(funders) |> map(x => x.funding) |> reduce((a, c) => a + c, 0) |> displayCurrency }}</p>
     <p>Total funding awarded</p>
 </li>
