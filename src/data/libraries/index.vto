@@ -18,88 +18,102 @@ colour_style: bg-blue-25
 ---
 
 {{ comp Section }}
-	<p>
-		Libraries are a crucial part of cultural heritage. Newcastle Libraries publish a number of library usage datasets openly, which you find on the <a href="https://www.newcastle.gov.uk/local-government/access-information-and-data/open-data/libraries-data-sets">Newcastle City Council website</a>. Their ambition is to encourage other regions to collect and share library usage statistics, to inform analysis, policy-making and ultimately preserve and improve the service they provide. 
-	</p>
-	<p>
-		The sections below will explore some of this data, visualising trends in library usage in the Newcastle region.
-	</p>
+
+	<p>Libraries are a crucial part of cultural heritage. Newcastle Libraries publish a number of library usage datasets openly, which you find on the <a href="https://www.newcastle.gov.uk/local-government/access-information-and-data/open-data/libraries-data-sets">Newcastle City Council website</a>. Their ambition is to encourage other regions to collect and share library usage statistics, to inform analysis, policy-making and ultimately preserve and improve the service they provide.</p>
+	<p>The sections below will explore some of this data, visualising trends in library usage in the Newcastle region.</p>
+
 {{ /comp }}
 
 
 {{ comp Section }}
-<h2>Monthly visits to Newcastle Libraries</h2>
-<p>Total number of visits across all 19 libraries from April 2008 to present.</p>
-	{{ comp.oi.chart.line({
-		config: {
-			data: monthly_visits,
-			height: 400,
-			legend: {
-				show: true,
-				position: "top"
-			},
-			columns: [{
-				name: "decimal_year",
-				template: '{{ Date | strptime("%Y-%m") | decimalYear() }}'
-			}],
-			series: [{
-				title: "Total",
-				x: "decimal_year",
-				y: "Total",
-				tooltip: 'Visits<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
-			}],
-			axis: {
-				x: {
-					min: 2008,
-					max: 2025,
-					grid: { show: true },
-					tick: { spacing: 2 }
-				},
-				y: {
-					title: { label: "Total number of visits" },
-					min: 0,
-					grid: { show: true },
-					tick: { spacing: 25000 }
+
+	<h2>Monthly visits to Newcastle Libraries</h2>
+	<p>Total number of visits across all 19 libraries from April 2008 to present.</p>
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		{{ comp SaveableVisualisation {id: 'monthly-visits', file: 'monthly_visits.csv' } }}
+			{{ comp.oi.chart.line({
+				config: {
+					data: release.monthly_visits,
+					height: 400,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					columns: [{
+						name: "decimal_year",
+						template: '{{ Date | strptime("%Y-%m") | decimalYear() }}'
+					}],
+					series: [{
+						title: "Total",
+						x: "decimal_year",
+						y: "Total",
+						colour: '#00478a', 
+						tooltip: 'Visits<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
+					}],
+					axis: {
+						x: {
+							min: 2008,
+							max: 2025,
+							grid: { show: true },
+							tick: { spacing: 2 }
+						},
+						y: {
+							title: { label: "Total number of visits" },
+							min: 0,
+							grid: { show: true },
+							tick: { spacing: 25000 }
+						}
+					}
 				}
-			}
-		}
-	}) }}
-<h2>Monthly issues by Newcastle Libraries</h2>
-<p>Monthly loan figures (number of items issued) across all 19 libraries from April 2008 to present.</p>
-	{{ comp.oi.chart.line({
-		config: {
-			data: monthly_issues_by_branch,
-			height: 400,
-			legend: {
-				show: true,
-				position: "top"
-			},
-			columns: [{
-				name: "decimal_year",
-				template: '{{ Date | strptime("%Y-%m") | decimalYear() }}'
-			}],
-			series: [{
-				title: "Total",
-				x: "decimal_year",
-				y: "Total",
-				tooltip: 'Issues<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
-			}],
-			axis: {
-				x: {
-					min: 2008,
-					max: 2025,
-					grid: { show: true },
-					tick: { spacing: 2 }
-				},
-				y: {
-					title: { label: "Total number of issues" },
-					min: 0,
-					grid: { show: true },
-					tick: { spacing: 25000 }
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
+{{ /comp }}
+
+{{ comp Section }}
+
+	<h2>Monthly issues by Newcastle Libraries</h2>
+	<p>Monthly loan figures (number of items issued) across all 19 libraries from April 2008 to present.</p>
+
+	{{ comp Card { classes: 'bg-blue-100' } }}
+		{{ comp SaveableVisualisation {id: 'monthly-issues', file: 'monthly_issues_by_branch.csv' } }}
+			{{ comp.oi.chart.line({
+				config: {
+					data: release.monthly_issues_by_branch,
+					height: 400,
+					legend: {
+						show: true,
+						position: "top"
+					},
+					columns: [{
+						name: "decimal_year",
+						template: '{{ Date | strptime("%Y-%m") | decimalYear() }}'
+					}],
+					series: [{
+						title: "Total",
+						x: "decimal_year",
+						y: "Total",
+						colour: '#00478a', 
+						tooltip: 'Issues<br />{{ Date | strptime("%Y-%m") | strftime("%b %Y") }}: {{ _y | toLocaleString() }}'
+					}],
+					axis: {
+						x: {
+							min: 2008,
+							max: 2025,
+							grid: { show: true },
+							tick: { spacing: 2 }
+						},
+						y: {
+							title: { label: "Total number of issues" },
+							min: 0,
+							grid: { show: true },
+							tick: { spacing: 25000 }
+						}
+					}
 				}
-			}
-		}
-	}) }}
+			}) }}
+		{{ /comp }}
+	{{ /comp }}
 
 {{ /comp }}
 
@@ -141,7 +155,7 @@ colour_style: bg-blue-25
 		// Add some markers
 		markers: libraryMarkers,
 
-} }) }}
+	} }) }}
 {{ /comp }}
 
 
