@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon" type="image/png" href="/assets/images/favicon.png" />
 </head>
 <body>
-    {{ comp.SiteBanner() }}
+    {{# {{ comp.SiteBanner() }} #}}
     {{ comp.SiteHeader({ metas, title, url }) }}
     {{ comp.nav.Breadcrumb({ breadcrumbs, title, url }) }}
     {{ if (tags.includes('work-in-progress')) }}{{ comp.WorkInProgress() }}{{ /if }}
