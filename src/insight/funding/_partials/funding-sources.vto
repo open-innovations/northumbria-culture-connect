@@ -1,4 +1,4 @@
-<h2>Funding sources</h2>
+io<h2>Funding sources</h2>
 
 <p>
     Newcastle-based cultural organisations receive funding from a wide variety of sources.
@@ -8,9 +8,12 @@
 
 <p>
     The data presented includes a wide variety of date ranges, as different funders provide information with different periods.
-    The summaries are also based on significant assumptions around categorisation of data. There may also be data missing from
-    the sources, as (for example) the 360 Giving site aggregates data from third parties, and may not hold or be presenting a
-    complete set of data.
+    The summaries are also based on significant assumptions around categorisation of data.
+</p>
+
+<p>
+    Please note, <a href="/data/360-giving/">360 Giving data</a> is currently excluded from this page, as it has proved challenging to correctly identify the
+    grants or loans which relate to the scope of this data observatory.
 </p>
 
 {{#
@@ -63,6 +66,7 @@
         </p>
     {{ /comp }}
 
+    {{ if false }} {{# Excluding 360 Giving sources of funding #}}
     {{ comp FundingLink {
             funding: (threeSixtyGiving.funding / 1e6).toPrecision(2),
             suffix: ' million',
@@ -74,6 +78,7 @@
             £{{ threeSixtyGiving.funding |> toLocaleString }} with 360 Giving.
         </p>
     {{ /comp }}
+    {{ /if }}
 
     {{ comp FundingLink {
             funding: (neca.Total / 1e6).toPrecision(2),
