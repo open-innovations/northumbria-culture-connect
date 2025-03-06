@@ -23,7 +23,7 @@
   background-color: var(--colour-purple-25);
 }
 
-[data-comp="colour-block"] .oi-chart, [data-comp="colour-block"] .oi-table {
+[data-comp="colour-block"] .oi-viz, [data-comp="colour-block"] .inner {
   background: white;
   color: black;
   padding: 1rem 2rem;
@@ -89,8 +89,4 @@ figcaption, figcaption.barchart {
   text-align: center;
   font-weight: 700;
   font-size: larger;
-}
-
-figure {
-  margin-top: 2rem;
 }
