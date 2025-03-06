@@ -51,53 +51,59 @@ OI.ready(function(){
 	function saveDOMImage(el, opt) {
 		if(!opt) opt = {};
 		if(!opt.file) opt.file = "figure.png";
-		var credit = document.createElement('div');
-		credit.classList.add('credit');
-		credit.innerHTML = "Credit: Culture Connect (CC-BY 4.0)";
-		el.appendChild(credit);
-		
-		var breadcrumb = headingsTo(el);
-		var img = document.querySelector('.site-header a');
-		var head = document.createElement('div');
-		head.style['text-align'] = 'left';
-		head.innerHTML = img.innerHTML + '<p style="padding-top:16px;padding-bottom:32px;font-weight:bold;">' + breadcrumb.titles.join("&nbsp;&nbsp;\\&nbsp;&nbsp;") + '</p>';
-		el.prepend(head);
-		el.style.padding = '48px';
-		
-		if(opt.hide) opt.hiddenElements = el.querySelectorAll(opt.hide);
-		if(typeof opt.filter!=="function"){
-			opt.filter = function(node) {
-				var ok = true;
-				if(opt.hiddenElements){
-					for(var i = 0; i < opt.hiddenElements.length; i++){
-						if(opt.hiddenElements[i] == node){
-							ok = false;
-							continue;
+
+		if(el){
+			var credit = document.createElement('div');
+			credit.classList.add('credit');
+			credit.innerHTML = "Credit: Culture Connect (CC-BY 4.0)";
+			el.appendChild(credit);
+			
+			var breadcrumb = headingsTo(el);
+			var img = document.querySelector('.site-header a');
+			var head = document.createElement('div');
+			head.style['text-align'] = 'left';
+			head.innerHTML = img.innerHTML + '<p style="padding-top:16px;padding-bottom:32px;font-weight:bold;">' + breadcrumb.titles.join("&nbsp;&nbsp;\\&nbsp;&nbsp;") + '</p>';
+			el.prepend(head);
+			el.style.padding = '48px';
+
+			if(opt.hide) opt.hiddenElements = el.querySelectorAll(opt.hide);
+			if(typeof opt.filter!=="function"){
+				opt.filter = function(node) {
+					var ok = true;
+					if(opt.hiddenElements){
+						for(var i = 0; i < opt.hiddenElements.length; i++){
+							if(opt.hiddenElements[i] == node){
+								ok = false;
+								continue;
+							}
 						}
 					}
-				}
-				return ok;
-			};
-		}
-		el.classList.add("capture");
+					return ok;
+				};
+			}
+			el.classList.add("capture");
 
-		domtoimage.toPng(el, opt).then(function (dataUrl) {
-			el.classList.remove("capture");
-			el.style.padding = '';
-			if(credit) credit.remove();
-			if(head) head.remove();
-			var link = document.createElement("a");
-			link.download = opt.file;
-			link.href = dataUrl;
-			link.click();
-			if(typeof opt.callback === "function") opt.callback.call();
-		}).catch(function (error) {
-			console.error('oops, something went wrong!', error);
-		});
+			domtoimage.toPng(el, opt).then(function (dataUrl) {
+				el.classList.remove("capture");
+				el.style.padding = '';
+				if(credit) credit.remove();
+				if(head) head.remove();
+				var link = document.createElement("a");
+				link.download = opt.file;
+				link.href = dataUrl;
+				link.click();
+				if(typeof opt.callback === "function") opt.callback.call();
+			}).catch(function (error) {
+				console.error('oops, something went wrong!', error);
+			});
+		}else{
+			console.warn('No element provided',el);
+		}
 	}
 
 	function Screenshot(el){
 		this.el = el;
+		console.log('screenshot',el);
 		this.target = el.getAttribute('data-target');
 		this.hide = el.getAttribute('data-hide');
 		el.addEventListener('click',(e) => {

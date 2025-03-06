@@ -90,7 +90,6 @@ metadata:
 	{{ comp Card { classes: 'bg-green-100' } }}
 		{{ comp SaveableVisualisation {id: 'allocation-by-funding' } }}
 
-			{{ comp WidthLimit { }}}
 			{{ comp.oi.chart.waffle({
 				config: {
 					data: [waffleData],
@@ -102,7 +101,6 @@ metadata:
 					}
 				}
 			})}}
-			{{ /comp }}
 
 		{{ /comp }}
 	{{ /comp }}
