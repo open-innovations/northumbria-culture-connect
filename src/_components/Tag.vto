@@ -18,4 +18,4 @@ css: |
         }
     }
 ---
-<a class="tag" href="{{ search.page(`tag="${tag}"`).url }}">{{ tag }}{{ comp.LinkIcon() }}</a>
+<a class="tag" href="{{ search.page(`tag="${tag}"`).url }}">{{ tag }}{{ comp.LinkIcon({ url: search.page(`tag="${tag}"`).url }) }}</a>

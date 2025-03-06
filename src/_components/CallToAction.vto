@@ -18,4 +18,4 @@ css: |
         }
     }
 ---
-<a class="call-to-action" href="{{ link }}">{{ text }}{{ if ne }}{{ comp.LinkIcon() }}{{ /if }}</a>
+<a class="call-to-action" href="{{ link }}">{{ text }}{{ if ne }}{{ comp.LinkIcon({url:link}) }}{{ /if }}</a>

@@ -17,7 +17,7 @@ css: |
 {{ comp Card { classes: (style || colour_style || page.colour_style || 'bg-offwhite') } }}
 <{{ tag || 'div' }} data-comp="page-link" class="link-block">
     <div class="expand">
-		<p class="title"><a href="{{ page.url }}">{{ page.title }}{{ comp.LinkIcon({icon:icon}) }}</a></p>
+		<p class="title"><a href="{{ page.url }}">{{ page.title }}{{ comp.LinkIcon({url:page.url}) }}</a></p>
 		{{ page.description |> md }}
     </div>
     {{ if config?.withTags }}

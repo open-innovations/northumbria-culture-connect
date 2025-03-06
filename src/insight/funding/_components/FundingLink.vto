@@ -8,11 +8,11 @@ css: |
             flex-grow: 1;
             margin-top: 0;
         }
-        a:visited { color: inherit; }
+        & a,a:visited { color: inherit; }
     }
 ---
 {{ comp Card { classes: 'centred bg-green-75 funding-link' } }}
-    <p class="title"><a href="{{ url }}">{{ title }}{{ comp.LinkIcon() }}</a></p>
+    <p class="title"><a href="{{ url }}">{{ title }}{{ comp.LinkIcon({url:url}) }}</a></p>
     <div class="bignum">£{{ funding |> toLocaleString }}{{ suffix || '' }}</div>
     {{ content }}
 {{ /comp }}

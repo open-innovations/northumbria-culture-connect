@@ -26,7 +26,8 @@ layout: template/base.vto
 {{ /comp }}
 
 <main>
-	<div class="holder padded">
+	{{# An explicit request to set the space above and below end up being 60px because it "looks orphaned" #}}
+	<div class="holder padded" style="margin-top:28px;margin-bottom:0;">
 	{{ comp.PageTags({ tags }) }}
 	</div>
 	{{ content }}
