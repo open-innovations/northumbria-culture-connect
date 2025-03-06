@@ -7,7 +7,7 @@
 - url: /regional/
   subMenu:
     - url: /regional/culture-sector/
-    - url: /regional/official-statistics/
+    - url: /regional/national-statistics/
 - url: /data/
 - url: /tools/
   subMenu:
