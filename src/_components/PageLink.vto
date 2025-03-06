@@ -8,7 +8,6 @@ css: |
         color: currentColor;
     }
     & .expand {
-        flex-grow: 1;
     }
   }
   .block.case-study h2 + p { margin-top: 1rem; }
@@ -18,8 +17,8 @@ css: |
 {{ comp Card { classes: (style || colour_style || page.colour_style || 'bg-offwhite') } }}
 <{{ tag || 'div' }} data-comp="page-link" class="link-block">
     <div class="expand">
-    <p class="title"><a href="{{ page.url }}">{{ page.title }}{{ comp.Chevron() }}</a></p>
-    {{ page.description |> md }}
+		<p class="title"><a href="{{ page.url }}">{{ page.title }}{{ comp.LinkIcon({icon:icon}) }}</a></p>
+		{{ page.description |> md }}
     </div>
     {{ if config?.withTags }}
     <div> 

@@ -12,7 +12,7 @@ css: |
     }
 ---
 {{ comp Card { classes: 'centred bg-green-75 funding-link' } }}
-    <p class="title"><a href="{{ url }}">{{ title }}{{ comp.Chevron() }}</a></p>
+    <p class="title"><a href="{{ url }}">{{ title }}{{ comp.LinkIcon() }}</a></p>
     <div class="bignum">£{{ funding |> toLocaleString }}{{ suffix || '' }}</div>
     {{ content }}
 {{ /comp }}
