@@ -20,15 +20,14 @@ OI.ready(function(){
 		panel-selector { display: block; }
 		panel-selector + *, * + panel-selector { margin-top: 1em; }
 		panel-selector [role="tablist"] {
-			display: inline-block;
+			display: flex;
+			gap: 10px;
 			margin: 0;
 			padding: 0;
 			list-style: none;
 		}
 		panel-selector [role="tablist"] > * {
 			display: inline-block;
-			margin-right: 0.5rem;
-			margin-bottom: 0.5rem;
 		}
 		panel-selector [role="tab"] {
 			position: relative;
@@ -40,15 +39,16 @@ OI.ready(function(){
 			border: 1px solid var(--col-white);
 			font-weight: bold;
 			border-radius: 8px;
-			background: var(--col-white);
-			color: var(--col-black);
-		}
-		panel-selector [role="tab"][aria-selected="true"] {
 			background: transparent;
 			color: var(--col-white);
 		}
+		panel-selector [role="tab"][aria-selected="true"] {
+			background: var(--col-white);
+			color: var(--col-black);
+		}
 		panel-selector [role="tabpanel"] {
 			display: block;
+			margin-top: 10px!important;
 		}
 		panel-selector [role="tabpanel"][hidden=true] {
 			display: none;
