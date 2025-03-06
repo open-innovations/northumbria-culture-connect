@@ -28,8 +28,8 @@ export function initialiseMap({
     bounds.extend(boundaryLayer.getBounds());
 
 	const icons = {
-		'funded': {'class':'bg-green-100','icon':L.divIcon({'html':'<div class="sector-icon bg-green-100">£</div>'})},
-		'matched': {'class':'bg-green-25','icon':L.divIcon({'html':'<div class="sector-icon bg-green-25">+</div>'})}
+		'funded': {'class':'bg-pink-100','icon':L.divIcon({'html':'<div class="sector-icon bg-pink-100">£</div>'})},
+		'matched': {'class':'bg-pink-25','icon':L.divIcon({'html':'<div class="sector-icon bg-pink-25">+</div>'})}
 	}
 
     const orgs = data

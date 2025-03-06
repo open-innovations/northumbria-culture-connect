@@ -58,15 +58,15 @@ metadata:
 
 	{{
 		set ageBands = [
-			{title:'Under 18',value:'Under 18',min:0,max:17,colour:'#cde594',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ Under 18 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
-			{title:'18-24',value:'18-24',min:18,max:24,colour:'#80c6a3',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 18-24 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
-			{title:'25-64',value:'25-64',min:25,max:64,colour:'#1f9eb7',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 25-64 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
-			{title:'65+',value:'65+',min:65,max:200,colour:'#186290',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 65+ | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'}
+			{title:'Under 18',value:'Under 18',min:0,max:17,colour:'#f8c2d6',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ Under 18 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
+			{title:'18-24',value:'18-24',min:18,max:24,colour:'#f24d8a',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 18-24 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
+			{title:'25-64',value:'25-64',min:25,max:64,colour:'#8F3E8D',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 25-64 | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'},
+			{title:'65+',value:'65+',min:65,max:200,colour:'#000000',tooltip:'<strong>{{ name }}</strong><br/>{{ _title }}: {{ 65+ | toLocaleString() }} ({{ _percent | toFixed(1) }}%)'}
 		]
 	}}
 
 	{{ set populationByArea2022 = Object.values(
-		population_by_ward_2022.reduce((result, row) => {
+		release.population_by_ward_2022.reduce((result, row) => {
 			if(!result['E08000021']){ result['E08000021'] = {name:'Newcastle'}; }
 			const area = row['Ward 2023 Code'];
 			const thisGroup = result[area] || { area };
@@ -85,49 +85,55 @@ metadata:
 		}, {})
 	) }}
 
-	{{ comp.oi.chart.bar({
-		config: {
-			data: populationByArea2022,
-			category: "name",
-			height: 600,
-			stacked: true,
-			percent: true,
-			legend: {
-				show: true,
-				position: "top"
-			},
-			series: ageBands,
-			axis: {
-				x: {
-					grid: {
-						"stroke-dasharray": "6 2",
-						"stroke-width": 1
-					},
-					ticks: [{
-							"value": 20,
-							"label": "20%"
-						},{
-							"value": 40,
-							"label": "40%"
-						},{
-							"value": 60,
-							"label": "60%"
-						},{
-							"value": 80,
-							"label": "80%"
-						},{
-							"value": 100,
-							"label": "100%"
-						}]
+	{{ comp Card { classes: 'bg-pink-100' } }}
+		{{ comp SaveableVisualisation {id: 'population-by-area', file: "population_by_ward_2022.csv" } }}
+
+		{{ comp.oi.chart.bar({
+			config: {
+				data: populationByArea2022,
+				category: "name",
+				height: 600,
+				stacked: true,
+				percent: true,
+				legend: {
+					show: true,
+					position: "top"
 				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
+				series: ageBands,
+				axis: {
+					x: {
+						grid: {
+							"stroke-dasharray": "6 2",
+							"stroke-width": 1
+						},
+						ticks: [{
+								"value": 20,
+								"label": "20%"
+							},{
+								"value": 40,
+								"label": "40%"
+							},{
+								"value": 60,
+								"label": "60%"
+							},{
+								"value": 80,
+								"label": "80%"
+							},{
+								"value": 100,
+								"label": "100%"
+							}]
+					},
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
 					}
 				}
 			}
-		}
-	}) }}
+		}) }}
+		{{ /comp }}
+	{{ /comp }}
+
 
 {{ /comp }}
 
@@ -142,65 +148,69 @@ metadata:
 
 	<p>The English Indices of Deprivation 2019 use 39 separate indicators, organised across seven distinct domains of deprivation which can be combined, using appropriate weights, to calculate the Index of Multiple Deprivation 2019.</p>
 
-	{{ comp.oi.map.svg({
-		config: {
-			data: IMD_2019,
-			geojson: {
-				key: "lsoa11cd",
-				data: "geojson.IMD_2019"
-			},
-			key: "lsoa11cd",
-			value: "IMD Decile",
-			scale: "Viridis",
-			tooltip: "{{ lsoa11nm }}<table><tr><th>Aspect</th><th>Decile</th></tr><tr><td>Overall</td><td>{{ IMD Decile }}</td></tr><tr><td>Income</td><td>{{ Income Decile }}</td></tr><tr><td>Education</td><td>{{ Education Decile }}</td></tr><tr><td>Employment</td><td>{{ Employment Decile }}</td></tr><tr><td>Health Deprivation and Disability</td><td>{{ Health Deprivation and Disability Decile }}</td></tr><tr><td>Crime</td><td>{{ Crime Decile }}</td></tr><tr><td>Barriers to Housing and Services</td><td>{{ Barriers to Housing and Services Decile }}<tr><td>Living Environment</td><td>{{ Living Environment Decile }}</td></tr><tr><td>Income Deprivation Affecting Children Index</td><td>{{ Income Deprivation Affecting Children Index Decile }}</td></tr><tr><td>Income Deprivation Affecting Older People</td><td>{{ Income Deprivation Affecting Older People Decile }}</td></tr></table>",
-			height: 400,
-			min: 1,
-			max: 10,
-			legend: {
-				position: "top right",
-				items: [{
-					value: 10,
-					label: "10 (least deprived)"
-				},{
-					value: 9,
-					label: "9"
-				},{
-					value: 8,
-					label: "8"
-				},{
-					value: 7,
-					label: "7"
-				},{
-					value: 6,
-					label: "6"
-				},{
-					value: 5,
-					label: "5"
-				},{
-					value: 4,
-					label: "4"
-				},{
-					value: 3,
-					label: "3"
-				},{
-					value: 2,
-					label: "2"
-				},{
-					value: 1,
-					label: "1 (most deprived)"
-				}]
-			},
-			tools: {
-				filter: {
-					label: "lsoa11nm"
+	{{ comp Card { classes: 'bg-pink-100' } }}
+		{{ comp SaveableVisualisation {id: 'imd-map', file: "IMD_2019.csv" } }}
+		{{ comp.oi.map.svg({
+			config: {
+				data: release.IMD_2019,
+				geojson: {
+					key: "lsoa11cd",
+					data: "geojson.IMD_2019"
 				},
-				slider: {
-					columns: ["IMD Decile","Income Decile","Education Decile","Employment Decile","Health Deprivation and Disability Decile","Crime Decile","Barriers to Housing and Services Decile","Living Environment Decile","Income Deprivation Affecting Children Index Decile","Income Deprivation Affecting Older People Decile"]
-				}
-			},
-		}
-	}) }}
-{{ /comp }}
+				key: "lsoa11cd",
+				value: "IMD Decile",
+				scale: "Rocket",
+				tooltip: "{{ lsoa11nm }}<table><tr><th>Aspect</th><th>Decile</th></tr><tr><td>Overall</td><td>{{ IMD Decile }}</td></tr><tr><td>Income</td><td>{{ Income Decile }}</td></tr><tr><td>Education</td><td>{{ Education Decile }}</td></tr><tr><td>Employment</td><td>{{ Employment Decile }}</td></tr><tr><td>Health Deprivation and Disability</td><td>{{ Health Deprivation and Disability Decile }}</td></tr><tr><td>Crime</td><td>{{ Crime Decile }}</td></tr><tr><td>Barriers to Housing and Services</td><td>{{ Barriers to Housing and Services Decile }}<tr><td>Living Environment</td><td>{{ Living Environment Decile }}</td></tr><tr><td>Income Deprivation Affecting Children Index</td><td>{{ Income Deprivation Affecting Children Index Decile }}</td></tr><tr><td>Income Deprivation Affecting Older People</td><td>{{ Income Deprivation Affecting Older People Decile }}</td></tr></table>",
+				height: 400,
+				min: 1,
+				max: 10,
+				legend: {
+					position: "top right",
+					items: [{
+						value: 10,
+						label: "10 (least deprived)"
+					},{
+						value: 9,
+						label: "9"
+					},{
+						value: 8,
+						label: "8"
+					},{
+						value: 7,
+						label: "7"
+					},{
+						value: 6,
+						label: "6"
+					},{
+						value: 5,
+						label: "5"
+					},{
+						value: 4,
+						label: "4"
+					},{
+						value: 3,
+						label: "3"
+					},{
+						value: 2,
+						label: "2"
+					},{
+						value: 1,
+						label: "1 (most deprived)"
+					}]
+				},
+				tools: {
+					filter: {
+						label: "lsoa11nm"
+					},
+					slider: {
+						columns: ["IMD Decile","Income Decile","Education Decile","Employment Decile","Health Deprivation and Disability Decile","Crime Decile","Barriers to Housing and Services Decile","Living Environment Decile","Income Deprivation Affecting Children Index Decile","Income Deprivation Affecting Older People Decile"]
+					}
+				},
+			}
+		}) }}
+	{{ /comp }}
+	{{ /comp }}
+	{{ /comp }}
 
 
 {{ comp Section }}
@@ -210,7 +220,7 @@ metadata:
 	{{ /comp }}
 	<h2>Income</h2>
 
-	{{ set AHSE = Object.values(NM_30_1.reduce((o, row) => {
+	{{ set AHSE = Object.values(release.NM_30_1.reduce((o, row) => {
 		const year = row['DATE'];
 		const thisGroup = o[year] || { year };
 		if(row.GEOGRAPHY_CODE=="E08000021" && row.PAY_NAME=="Annual pay - gross" && row.MEASURES_NAME=="Value"){
@@ -275,49 +285,57 @@ metadata:
 
 	<h2>Gross annual pay (£) for residents of Newcastle who are on adult rates and whose pay for the survey pay-period was not affected by absence</h2>
 
-	{{ comp.oi.chart.line({
-		config: {
-			data: AHSE,
-			height: 400,
-			legend: {
-				show: true,
-				position: "top"
-			},
-			series: [{
-				title: "Median",
-				x: "year",
-				y: "Pay",
-				colour: '#000000',
-				tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay | toLocaleString() }}"
-			},{
-				title: "Full time",
-				x: "year",
-				y: "Pay FT",
-				colour: '#206095',
-				tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay FT | toLocaleString() }}"
-			},{
-				title: "Part time",
-				x: "year",
-				y: "Pay PT",
-				colour: '#27A0CC',
-				tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay PT | toLocaleString() }}"
-			}],
-			axis: {
-				x: {
-					grid: { show: true },
-					tick: { spacing: 2 }
+	{{ comp Card { classes: 'bg-pink-100' } }}
+		{{ comp SaveableVisualisation {id: 'gross-annual-pay', file: "NM_30_1.csv" } }}
+		{{ comp.oi.chart.line({
+			config: {
+				data: AHSE,
+				height: 400,
+				legend: {
+					show: true,
+					position: "top"
 				},
-				y: {
-					title: { label: "Pay (£)" },
-					min: 0,
-					grid: { show: true },
-					tick: { spacing: 5000 }
+				series: [{
+					title: "Median",
+					x: "year",
+					y: "Pay",
+					colour: '#000000',
+					tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay | toLocaleString() }}"
+				},{
+					title: "Full time",
+					x: "year",
+					y: "Pay FT",
+					colour: '#8F3E8D',
+					tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay FT | toLocaleString() }}"
+				},{
+					title: "Part time",
+					x: "year",
+					y: "Pay PT",
+					colour: '#ed1163',
+					tooltip: "{{ _title }}<br />{{ year }}: £{{ Pay PT | toLocaleString() }}"
+				}],
+				axis: {
+					x: {
+						grid: { show: true },
+						tick: { spacing: 2 }
+					},
+					y: {
+						title: { label: "Pay (£)" },
+						min: 0,
+						grid: { show: true },
+						tick: { spacing: 5000 }
+					}
 				}
 			}
-		}
-	}) }}
+		}) }}
+{{ /comp }}
+{{ /comp }}
+
 
 	<h2>Percentage growth in gross annual earnings</h2>
+
+	{{ comp Card { classes: 'bg-pink-100' } }}
+		{{ comp SaveableVisualisation {id: 'gross-annual-earnings', file: "NM_30_1.csv" } }}
 	{{ comp.oi.chart.line({
 		config: {
 			data: AHSE,
@@ -336,13 +354,13 @@ metadata:
 				title: "Full time",
 				x: "year",
 				y: "Pay FT change",
-				colour: '#206095',
+				colour: '#8F3E8D',
 				tooltip: "{{ _title }}<br />{{ year }}: {{ Pay FT change }}%"
 			},{
 				title: "Part time",
 				x: "year",
 				y: "Pay PT change",
-				colour: '#27A0CC',
+				colour: '#ed1163',
 				tooltip: "{{ _title }}<br />{{ year }}: {{ Pay PT change }}%"
 			}],
 			axis: {
@@ -361,6 +379,8 @@ metadata:
 	}) }}
 
 {{ /comp }}
+{{ /comp }}
+{{ /comp }}
 
 
 {{ comp Section }}
@@ -368,7 +388,7 @@ metadata:
 
 	<h2>Economic activity</h2>
 	<p>Proportion of people who are Employed, Unemployed, or Economically inactive.</p>
-	{{ set economicActivity = Object.values(NM_17_5.reduce((o, row) => {
+	{{ set economicActivity = Object.values(release.NM_17_5.reduce((o, row) => {
 		const date = row['DATE'].toISOString().substr(0,10);
 		const thisGroup = o[date] || { date };
 		thisGroup.month = row['DATE'].toISOString().substr(0,7);
@@ -390,6 +410,8 @@ metadata:
 		return { ...o, [date]: thisGroup };
 	}, {})); }}
 
+	{{ comp Card { classes: 'bg-pink-100' } }}
+	{{ comp SaveableVisualisation {id: 'gross-annual-earnings', file: "NM_17_5.csv" } }}
 	{{ comp.oi.chart.line({
 		config: {
 			data: economicActivity,
@@ -407,12 +429,14 @@ metadata:
 				title: "Unemployed (16+)",
 				x: "year",
 				y: "Unemployment rate - aged 16+",
-				tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%"
+				tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%",
+				colour: '#ed1163'
 			},{
 				title: "Economically inactive (16-64)",
 				x: "year",
 				y: "% who are economically inactive - aged 16-64",
-				tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%"
+				tooltip: "{{ _title }}<br />{{ _x }}: {{ _y }}%",
+				colour: '#000000'
 			}],
 			axis: {
 				x: {
@@ -432,6 +456,8 @@ metadata:
 		}
 	}) }}
 
+{{ /comp }}
+{{ /comp }}
 {{ /comp }}
 
 {{ comp Section }}
@@ -468,7 +494,7 @@ metadata:
 	#}}
 	<p class="warning padded">Note from ONS: Under certain circumstances, some people are able to claim both contribution-based Jobseeker’s Allowance and Universal Credit at the same time. We do not currently have timely enough information to identify these individuals prior to producing the Claimant Count. Consequently, there has been a small amount of double counting. Information from DWP suggests this double counting increased at the start of the pandemic and has stabilised at approximately 1.0 to 1.5% of the Claimant Count. We will monitor this rate and provide further updates if the rate shifts outside of these boundaries.</p>
 
-	{{ set benefitsTimeseries = Object.values(NM_162_1.reduce((o, row) => {
+	{{ set benefitsTimeseries = Object.values(release.NM_162_1.reduce((o, row) => {
 		// Lume sheets reads in "2020-08" as "2020-07-31T23:00:00.000Z" so we need to reconstruct the date string
 		let yy = row.DATE.getFullYear();
 		let mm = row.DATE.getMonth()+1;
@@ -481,6 +507,8 @@ metadata:
 		return { ...o, [date]: thisGroup };
 	}, {})); }}
 
+	{{ comp Card { classes: 'bg-pink-100' } }}
+	{{ comp SaveableVisualisation {id: 'benefit-claimants', file: "NM_162_1.csv" } }}
 	{{ comp.oi.chart.line({
 		config: {
 			data: benefitsTimeseries,
