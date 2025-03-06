@@ -64,7 +64,7 @@ OI.ready(function(){
 			head.style['text-align'] = 'left';
 			head.innerHTML = img.innerHTML + '<p style="padding-top:16px;padding-bottom:32px;font-weight:bold;">' + breadcrumb.titles.join("&nbsp;&nbsp;\\&nbsp;&nbsp;") + '</p>';
 			el.prepend(head);
-			el.style.padding = '48px';
+			el.classList.add("capture");
 
 			if(opt.hide) opt.hiddenElements = el.querySelectorAll(opt.hide);
 			if(typeof opt.filter!=="function"){
@@ -81,11 +81,9 @@ OI.ready(function(){
 					return ok;
 				};
 			}
-			el.classList.add("capture");
 
 			domtoimage.toPng(el, opt).then(function (dataUrl) {
 				el.classList.remove("capture");
-				el.style.padding = '';
 				if(credit) credit.remove();
 				if(head) head.remove();
 				var link = document.createElement("a");

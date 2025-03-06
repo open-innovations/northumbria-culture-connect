@@ -1,9 +1,17 @@
 ---
+css: |
+    .capture { background: white; color: black; padding: 48px; }
+    .capture .credit { padding-top: 0.5rem; text-align:right; }
 ---
-{{ set table = (content.indexOf('<table') > 0) }}
+{{ set table = (content.indexOf('<table') > 0 && content.indexOf('class="oi-viz') < 0) }}
+{{ if target }}
+	{{ set targetSelector = "#" + id + " " + target }}
+{{ else }}
+	{{ set targetSelector = "#" + id + " .oi-viz, #" + id + " .oi-table" }}
+{{ /if }}
 {{ comp WidthLimit { id: id } }}
 	{{ if table }}
-		<div class="padded oi-table">
+		<div class="oi-viz oi-table padded">
 	{{ /if }}
 	{{ content }}
 	{{ if table }}
@@ -11,7 +19,7 @@
 	{{ /if }}
 	{{ comp ControlBar }}
 	{{ if id }}
-		{{ comp Screenshot {target:"#" + id + " .oi-viz, #" + id + " .oi-table"} }}
+		{{ comp Screenshot {target:targetSelector} }}
 			Save screenshot (PNG)
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi-download" viewBox="0 0 16 16">
 			  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"></path>
