@@ -6,7 +6,7 @@ layout: template/organisation.vto
 breadcrumbs:
   - title: Home
     url: /
-  - title: Pilot organisations
+  - title: Culture organisations
     url: /organisations/
 
 series: 
