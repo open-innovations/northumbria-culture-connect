@@ -37,7 +37,7 @@ colour_style: bg-blue-25
 
 {{ comp Section }}
 	<h2>Adults who engaged with the arts in person</h2>
-	<p>Percentage of respondents who attended an in-person arts activity in the last 12 months.</p>
+	<p>The percentage of respondents who attended an event or participated in an activity in person in the last 12 months.</p>
 	{{ comp Dashboard { className:'centred' } }}
 		{{ comp DashboardTile { colour: 'blue' } }}
 			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
@@ -71,7 +71,7 @@ colour_style: bg-blue-25
 	{{ /comp }}
 
 	<h2>Frequency of attendance of arts events</h2>
-	<p>The most frequent level at which adults attended any arts activity in person. A breakdown of the different frequencies is not available at Local Authority level.</p>
+	<p>The percentage of respondents who attended an event or participated in an activity in person in the last 12 months. A breakdown of the different frequencies is not available at Local Authority level.</p>
 
 	{{ set freq_data = headlines.filter(x => x.ID == 'response_2' || x.ID == 'response_3' || x.ID == 'response_4' || x.ID == 'response_5' || x.ID == 'response_6') }}
 	{{ set freq_data = freq_data.map(({ ["Response Breakdown "]: Frequency, ...rest }) => ({...rest, Frequency})) }}
@@ -94,7 +94,7 @@ colour_style: bg-blue-25
 {{ /comp }}
 
 {{ comp Section }}
-	<h2>Newcastle arts engagement data</h2>
+	<h2>Newcastle arts engagement data (2023-2024)</h2>
 	{{ comp Card { classes: 'bg-blue-100' } }}
 		{{ comp SaveableVisualisation {id: 'newcastle-arts', target: 'figure' } }}
 			<figure>
