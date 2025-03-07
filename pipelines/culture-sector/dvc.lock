@@ -59,8 +59,8 @@ stages:
       size: 27940
     - path: ../../raw/data-lake.db
       hash: md5
-      md5: 325b4797fbde92d396526054b2641169
-      size: 1115697152
+      md5: 6a7e839c61c7861f099823c63cfbc626
+      size: 1112813568
     - path: stage-2.ipynb
       hash: md5
       md5: 03ae99cb628c55bb8ec919d8a3dd8791
@@ -68,8 +68,8 @@ stages:
     outs:
     - path: ../../raw/culture-landscape/2-charity-match-direct.csv
       hash: md5
-      md5: 93393c000e76bc4c8e51d69af1954399
-      size: 627
+      md5: 6491683d52719f1b921a46c5b24e24a4
+      size: 574
     - path: ../../raw/culture-landscape/2-company-corrections.csv
       hash: md5
       md5: dd7c0e9afa11890bf5c5303d9caf8ccf
@@ -92,8 +92,8 @@ stages:
     deps:
     - path: ../../raw/culture-landscape/2-charity-match-direct.csv
       hash: md5
-      md5: 93393c000e76bc4c8e51d69af1954399
-      size: 627
+      md5: 6491683d52719f1b921a46c5b24e24a4
+      size: 574
     - path: ../../raw/culture-landscape/2-company-corrections.csv
       hash: md5
       md5: dd7c0e9afa11890bf5c5303d9caf8ccf
@@ -112,8 +112,8 @@ stages:
       size: 27940
     - path: ../../raw/data-lake.db
       hash: md5
-      md5: 325b4797fbde92d396526054b2641169
-      size: 1115697152
+      md5: 6a7e839c61c7861f099823c63cfbc626
+      size: 1112813568
     - path: stage-3.ipynb
       hash: md5
       md5: a471601b0bdfbdcaec1b2a957dbcf3b0
@@ -121,20 +121,20 @@ stages:
     outs:
     - path: ../../data/culture_landscape.csv
       hash: md5
-      md5: dce4cf38fd77afa53296031ed01ce48c
-      size: 221235
+      md5: bfb51d3a7176c12b8eb39b098fa35aea
+      size: 221282
   prepare:
     cmd: jupyter execute stage-4-prepare.ipynb
     deps:
     - path: ../../data/culture_landscape.csv
       hash: md5
-      md5: dce4cf38fd77afa53296031ed01ce48c
-      size: 221235
+      md5: bfb51d3a7176c12b8eb39b098fa35aea
+      size: 221282
     outs:
     - path: ../../src/regional/culture-sector/_data/list.csv
       hash: md5
-      md5: 9f801798215176385bc0ab09103aff40
-      size: 133957
+      md5: 13b06fbfda46444bf5a0e2b1c60b63f4
+      size: 133929
     - path: ../../src/regional/culture-sector/_data/sic_code_count.json
       hash: md5
       md5: c37d4a4e57d2d6fe84042e9e6b91fb0e

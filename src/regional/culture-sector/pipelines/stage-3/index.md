@@ -289,7 +289,7 @@ db.query('''
     │ YMCA North Tyneside                 │ 02703063       │ direct  │   100 │
     │ tiny dragon Productions             │ 13816200       │ direct  │   100 │
     ├─────────────────────────────────────┴────────────────┴─────────┴───────┤
-    │ 126 rows (20 shown)                                          4 columns │
+    │ 125 rows (20 shown)                                          4 columns │
     └────────────────────────────────────────────────────────────────────────┘
 
 
@@ -688,8 +688,8 @@ landscape.selectnotnone('registered_charity_number').select(lambda r: r.company_
 <td>01124769</td>
 <td>NE34 0RG</td>
 <td>https://sanginiafriend.wordpress.com</td>
-<td>43660</td>
-<td>86708</td>
+<td>58142</td>
+<td>20577</td>
 <td>None</td>
 <td>None</td>
 </tr>
