@@ -28,7 +28,8 @@ date_parser = etl.dateparser('%Y-%m-%d 00:00:00', strict=True)
 
 ```python
 IPDATA = OUTDIR / 'investment-programme/_data'
-IPDATA.mkdir(exist_ok=True, parents=True)
+IPDATA_RELEASE = IPDATA / 'release'
+IPDATA_RELEASE.mkdir(exist_ok=True, parents=True)
 ```
 
 
@@ -70,7 +71,7 @@ investment_data = (
 
 
 ```python
-investment_data.tocsv(IPDATA / 'funding_by_organisation.csv')
+investment_data.tocsv(IPDATA_RELEASE / 'funding_by_organisation.csv')
 ```
 
 
@@ -99,7 +100,8 @@ with open(IPDATA / 'processed.yml', 'w') as f:
 
 ```python
 PGDATA = OUTDIR / 'project-grants/_data'
-PGDATA.mkdir(exist_ok=True, parents=True)
+PGDATA_RELEASE = PGDATA / 'release'
+PGDATA_RELEASE.mkdir(exist_ok=True, parents=True)
 ```
 
 
@@ -154,7 +156,7 @@ grants_model = grants_data.cut(
 grants_model.pivot(
     'Year', 'LAD24CD', 'value', sum
 ).tocsv(
-    PGDATA / 'grants_value_by_lad_by_year.csv'
+    PGDATA_RELEASE / 'grants_value_by_lad_by_year.csv'
 )
 ```
 
@@ -163,7 +165,7 @@ grants_model.pivot(
 grants_model.pivot(
     'Year', 'LAD24CD', 'number', sum
 ).tocsv(
-    PGDATA / 'grants_count_by_lad_by_year.csv'
+    PGDATA_RELEASE / 'grants_count_by_lad_by_year.csv'
 )
 ```
 
@@ -172,7 +174,7 @@ grants_model.pivot(
 grants_model.pivot(
     'Year', 'LAD24CD', 'Average award', sum
 ).tocsv(
-    PGDATA / 'grants_average_award_by_lad_by_year.csv'
+    PGDATA_RELEASE / 'grants_average_award_by_lad_by_year.csv'
 )
 ```
 

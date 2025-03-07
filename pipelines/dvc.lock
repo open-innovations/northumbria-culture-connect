@@ -74,31 +74,34 @@ stages:
       size: 3127400
     - path: arts-council.ipynb
       hash: md5
-      md5: 8bfdfa2cca2f172a5e5ce44f318b6b8e
-      size: 7179
+      md5: 8a22f2f8daee57a54f3308686d2b5067
+      size: 7332
     outs:
-    - path: ../src//data/arts-council/investment-programme/_data/funding_by_organisation.csv
-      hash: md5
-      md5: 6118a80cefbd6b21b5c101c37a4f5408
-      size: 2581
     - path: ../src//data/arts-council/investment-programme/_data/investment_by_lad.csv
       hash: md5
       md5: a6368ebcdaf2fb1428506f1275c797fb
       size: 236
     - path: 
-        ../src//data/arts-council/project-grants/_data/grants_average_award_by_lad_by_year.csv
+        ../src//data/arts-council/investment-programme/_data/release/funding_by_organisation.csv
       hash: md5
-      md5: bac54e3cb9d61e269d3ed413817d7aed
-      size: 414
+      md5: 6118a80cefbd6b21b5c101c37a4f5408
+      size: 2581
     - path: ../src//data/arts-council/project-grants/_data/grants_by_recipient.csv
       hash: md5
       md5: 7d8701a276a7680d4ba2b50f42d1a788
       size: 5983
-    - path: ../src//data/arts-council/project-grants/_data/grants_count_by_lad_by_year.csv
+    - path: 
+        ../src//data/arts-council/project-grants/_data/release/grants_average_award_by_lad_by_year.csv
+      hash: md5
+      md5: bac54e3cb9d61e269d3ed413817d7aed
+      size: 414
+    - path: 
+        ../src//data/arts-council/project-grants/_data/release/grants_count_by_lad_by_year.csv
       hash: md5
       md5: 3e2f31cee978fcef6652e5d105974f93
       size: 254
-    - path: ../src//data/arts-council/project-grants/_data/grants_value_by_lad_by_year.csv
+    - path: 
+        ../src//data/arts-council/project-grants/_data/release/grants_value_by_lad_by_year.csv
       hash: md5
       md5: 75ea9774f16214d304d3a6b4325c516e
       size: 565
