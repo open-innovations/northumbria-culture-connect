@@ -97,8 +97,7 @@ The data below refers to organisations that receive Grant-in-Aid funding. None o
 			{{ comp.oi.chart.bar({
 				config: {
 					data: release.ace_funding,
-					category: 'organisation',
-					stacked: 'true', 
+					category: 'Category',
 					width: 1200,
 					height:150,
 					legend: {
@@ -106,7 +105,8 @@ The data below refers to organisations that receive Grant-in-Aid funding. None o
 						position: 'top'
 					},
 					series: [
-						{ title: "Grant-in-Aid Received 2022/23", value: "grant_in_aid", tooltip: "<strong>Grant-in-Aid Received 2022/23<br /></strong>{{ organisation }}: £{{ grant_in_aid | toLocaleString() }}" },
+						{ title: "Total Grant-in-Aid to Arts Council", value: "Arts Council England", tooltip: "<strong>Arts Council England<br /></strong>{{ Category }}: £{{ Arts Council England | toLocaleString() }}" },
+						{ title: "Arts Council Grant-in-Aid to NPOs", value: "National Portfolio Organisations", tooltip: "<strong>National Portfolio Organisations<br /></strong>{{ Category }}: £{{ National Portfolio Organisations | toLocaleString() }}" },
 					],
 					axis: {
 						x: {
