@@ -45,19 +45,32 @@ colour_style: bg-blue-25
 	<h2>Adults who engaged with the arts in person</h2>
 	<p>The percentage of respondents who attended an event or participated in an activity in person in the last 12 months.</p>
 	{{ comp Dashboard { className:'centred' } }}
+		{{ set cellData = headlines.find(x => x.ID == 'response_1') }}
 		{{ comp DashboardTile { colour: 'blue' } }}
-			<p class="bang">{{ headlines.find(x => x.ID == 'response_1')['Percentage of respondents 2023/24'] }}%</p>
-			<p>Nationally</p>
+			<p class="bang">{{ cellData['Percentage of respondents 2023/24'] }}%</p>
+			<p>Nationally
+			&mdash; <em>Sample size {{ cellData['2023/24 Base'] |> toLocaleString }}</em>
+			</p>
 		{{ /comp }}
 		{{ comp DashboardTile { colour: 'blue'} }}
-			<p class="bang">{{ engagement_participation_survey_23_24_newcastle.find(x => x.Description == 'Adults who engaged with arts in person')['Percentage of respondents 2023/24'] }}%</p>
-			<p>In Newcastle</p>
+		{{ set cellData = engagement_participation_survey_23_24_newcastle.find(x => x.Description == 'Adults who engaged with arts in person') }}
+			<p class="bang">{{ cellData['Percentage of respondents 2023/24'] }}%</p>
+			<p>In Newcastle
+			&mdash; <em>Sample size {{ cellData['2023/24 Base'] |> toLocaleString }}</em>
+			</p>
 		{{ /comp }}
 	{{ /comp }}
 	
 	<h2>Annual change in engagement</h2>
-	<p>National physical engagement with the arts has seen a 1% increase since last year. Local Authority level data only became available in 2023/24 and is therefore not presented here.</p>
 	{{ set physical_attendance_data = headlines.filter(x => x.ID == 'response_1') }}
+	<p>
+		National physical engagement with the arts has seen a 1% increase since last year.
+	</p>
+	<p class="warning padded">
+		Local Authority level data only became available in 2023/24 and is therefore not presented here.
+		The sample size was {{ physical_attendance_data[0]['2023/24 Base'] |> toLocaleString }} respondents in the 2023/24 survey.
+		This compares with {{ physical_attendance_data[0]['2022/23 Base'] |> toLocaleString }} respondents for 2022/23.
+	</p>
 
 	{{ comp Card { classes: 'bg-blue-100' } }}
 		{{ comp SaveableVisualisation {id: 'physical_attendance' } }}
@@ -77,10 +90,16 @@ colour_style: bg-blue-25
 	{{ /comp }}
 
 	<h2>Frequency of attendance of arts events</h2>
-	<p>The percentage of respondents who attended an event or participated in an activity in person in the last 12 months. A breakdown of the different frequencies is not available at Local Authority level.</p>
-
+	<p>
+		The national percentage of respondents who attended an event or participated in an activity in person in the last 12 months.
+	</p>
 	{{ set freq_data = headlines.filter(x => x.ID == 'response_2' || x.ID == 'response_3' || x.ID == 'response_4' || x.ID == 'response_5' || x.ID == 'response_6') }}
 	{{ set freq_data = freq_data.map(({ ["Response Breakdown "]: Frequency, ...rest }) => ({...rest, Frequency})) }}
+	<p class="warning padded">
+		A breakdown of the different frequencies is not available at Local Authority level.
+		The sample size was {{ freq_data[0]['2023/24 Base'] |> toLocaleString }} respondents in the 2023/24 survey.
+		This compares with {{ freq_data[0]['2022/23 Base'] |> toLocaleString }} respondents for 2022/23.
+	</p>
 	{{ comp Card { classes: 'bg-blue-100' } }}
 		{{ comp SaveableVisualisation {id: 'frequency' } }}
 			{{ comp.oi.table({ 
@@ -101,6 +120,11 @@ colour_style: bg-blue-25
 
 {{ comp Section }}
 	<h2>Newcastle arts engagement data (2023-2024)</h2>
+	<p class="warning padded">
+		This presents a summary of survey respondents based in Newcastle upon Tyne.
+		The sample size was {{ attendance_participation_survey_23_24_newcastle[0]['2023/24 Base'] |> toLocaleString }} respondents.
+	</p>
+
 	{{ comp Card { classes: 'bg-blue-100' } }}
 		{{ comp SaveableVisualisation {id: 'newcastle-arts', target: 'figure' } }}
 			<figure>

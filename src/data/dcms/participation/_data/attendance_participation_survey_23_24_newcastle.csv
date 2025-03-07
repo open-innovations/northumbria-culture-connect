@@ -1,13 +1,13 @@
-Description,Percentage of respondents 2023/24,2023/24 No. of respondents
-Literature and poetry events,9,62
-A cinema screening,55,351
-A craft exhibition,9,56
-A live music event,37,247
-An arts festival,19,125
-A street art event,7,46
-A live dance event,6,35
-A fashion show,2,10
-A comedy event,12,77
-An in-person e-sports event,3,15
-Some other cultural event,2,11
-Not attended any events,25,160
+Description,Percentage of respondents 2023/24,2023/24 No. of respondents,2023/24 Base
+Literature and poetry events,9,62,643
+A cinema screening,55,351,643
+A craft exhibition,9,56,643
+A live music event,37,247,643
+An arts festival,19,125,643
+A street art event,7,46,643
+A live dance event,6,35,643
+A fashion show,2,10,643
+A comedy event,12,77,643
+An in-person e-sports event,3,15,643
+Some other cultural event,2,11,643
+Not attended any events,25,160,643

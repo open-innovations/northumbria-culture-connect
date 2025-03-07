@@ -1,11 +1,11 @@
-Description,Percentage of respondents 2023/24,2023/24 No. of respondents
-"Written stories, plays, or poetry",7,45
-Read books or graphic novels,58,398
-Written or performed music,9,61
-"Painting, drawing",19,119
-Crafts,14,98
-Performed a drama / dance routine,2,13
-Designed or programmed video games,2,10
-Made films or videos,3,18
-Photography,14,97
-Read news in a printed newspaper,34,241
+Description,Percentage of respondents 2023/24,2023/24 No. of respondents,2023/24 Base
+"Written stories, plays, or poetry",7,45,643
+Read books or graphic novels,58,398,643
+Written or performed music,9,61,643
+"Painting, drawing",19,119,643
+Crafts,14,98,643
+Performed a drama / dance routine,2,13,643
+Designed or programmed video games,2,10,643
+Made films or videos,3,18,643
+Photography,14,97,643
+Read news in a printed newspaper,34,241,643
