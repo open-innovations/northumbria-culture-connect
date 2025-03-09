@@ -2,13 +2,23 @@
 layout: ./base.vto
 ---
 
-<main class="holder padded">
-    {{ comp.PageSummary({ ...page.data })}}
+<main>
+    <header class="holder padded">
+    <h1>{{ title }}</h1>
+    {{ description |> md }}
+    {{ if related.length > 0 }}
+    <p>The tag cloud below shows tags related to <strong>{{ tag }}</strong>.</p>
     {{ comp.PageTags({ tags: related }) }}
-    
+    {{ else }}
+    <p>There are no tags in common with <strong>{{ tag }}</strong>.</p>
+    {{ /if }}
+    </header>
+
+    {{ comp Section }}
     {{ comp UniformGrid }}
     {{ for page of search.pages(`"${tag}"`, "title") }}
         {{ comp.PageLink({ page, config: { headingLevel: 2, withTags: true } })}}
     {{ /for }}
+    {{ /comp }}
     {{ /comp }}
 </main>

@@ -8,7 +8,7 @@ export default function*({ search }) {
             title: `Tag: ${tag}`,
             tag,
             related,
-            description: `This is the <b>${tag}</b> tag page. The tag cloud below shows related tags.`,
+            description: `This is the <b>${tag}</b> tag page.`,
         }
     }
 }
