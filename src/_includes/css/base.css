@@ -60,6 +60,25 @@ dl {
 	}
 }
 
+.call-to-action {
+	display: inline-block;
+	color: var(--cta-text, white);
+	background: var(--cta-bg, black);
+	border: 1px solid var(--cta-border, black);
+	border-radius: 8px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding-block: 0.8rem;
+	padding-inline: 1.5rem;
+	text-decoration: none;
+	line-height: 1;
+	box-shadow: 0 4px 4px 0 #00000080;
+	cursor: pointer;
+	&::hover {
+		text-decoration: underline;
+	}
+}
+
 @media only screen and (max-width: 1024px) {
 	body { font-size: 19px; }
 }

@@ -103,11 +103,22 @@ css: |
 			<div class="credit">
 				{{# <span>&copy; North East Combined Authority 2024</span> #}}
 				{{ comp.License() }}
-				<p><a href="https://github.com/open-innovations/northumbria-culture-connect">GitHub repository</a></p>
+				<p><a href="https://github.com/open-innovations/northumbria-culture-connect">GitHub repository</a> | <a href="/cookie-policy/">Cookie policy</a></p>
 			</div>
 		</div>
 	</div>
 </footer>
+
+
+<aside id="cookie-overlay" hidden="" class="padded">
+	<h3>Tracking how you use this website</h3>
+	<p>We'd like to collect information using Google Analytics to help us improve this website. We gather this data by running code, provided by Google, on your device which tracks how you have interacted with our site. By clicking the <em>I consent</em> button below, you agree to this use of data.</p>
+	<p>For more information, please see our cookie policy.</p>
+	<form>
+		<button id="cookie-accept" class="call-to-action">I consent</button>
+		<button id="cookie-reject" class="call-to-action">I do not consent</button>
+	</form>
+</aside>
 
 <script>
 /*
@@ -117,4 +128,14 @@ Version: 2022-01-25 https://open-innovations.org/resources/oi.log.js
 */
 !function(t){t.OI||(t.OI={});var e=location;function n(t){return 50*Math.round(t/50)}t.OI.log=new function(){var t,r,o,u,f,s;return r="https://open-innovations.org/log",o=document.referrer,u=new RegExp(e.origin,"g"),0==o.indexOf(e.origin)&&(o=o.replace(u,"")),f=n(window.innerWidth)+"x"+n(window.innerHeight),this.setup=function(e){return e||(e={}),e.dest&&(r=e.dest),e.id&&(t=e.id),e.target&&(s=e.target),s="string"==typeof s?[s]:s,this},this.add=function(n,u){if("file:"==e.protocol)return this;if(!function(t){if("object"!=typeof t||t.length<=0)return!0;for(i=0;i<t.length;i++)if(t[i]==e.host)return!0;return!1}(s))return this;var d=new XMLHttpRequest;return d.open("POST",r,!0),d.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8"),"function"==typeof u&&(d.onload=u),d.send((t?"oid="+t+"&":"")+"url="+e.href+"&"+(o?"ref="+o+"&":"")+(f?"size="+f+"&":"")+n),this},this}}(window||this);
 OI.log.setup({'id':'ncc','target':['northeast-culture-connect.uk','www.northeast-culture-connect.uk','dev.open-innovations.org']}).add('action=view');
+</script>
+<script src="/assets/js/GoogleAnalytics.js"></script>
+<script>
+OI.GoogleAnalytics.set({
+	'id': 'GTM-NNDZ2CSK',
+	'overlay': document.getElementById('cookie-overlay'),
+	'choose': function(state){
+		if(OI.log) OI.log.add('action=click&content='+(state ? 'Cookie accept':'Cookie refuse'));
+	}
+});
 </script>

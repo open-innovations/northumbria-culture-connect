@@ -1,0 +1,12 @@
+#cookie-overlay {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 90000;
+	background: var(--col-black);
+	color: var(--col-offwhite);
+}
+#cookie-overlay > * + * {
+	margin-top: 1rem;
+}
