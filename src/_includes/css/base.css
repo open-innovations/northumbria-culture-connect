@@ -59,7 +59,7 @@ dl {
 		margin-left: 3rem;
 	}
 }
-
+button { font-size: 1em; }
 .call-to-action {
 	display: inline-block;
 	color: var(--cta-text, white);

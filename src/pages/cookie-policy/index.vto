@@ -1,5 +1,7 @@
 ---
 title: Cookie policy
+description: |
+  We sometimes place small text files on your device (for example, your iPad or laptop) called cookies. Most big websites do this too. We set cookies to save your preference on allowing/denying Google Analytics. If you choose to accept Google Analytics, Google will place cookies on your device for analytical purposes only to help improve and administer the website. By using our website, you agree that we can place these types of cookies on your device.
 layout: template/page.vto
 url: /cookie-policy/
 breadcrumbs:
@@ -10,8 +12,6 @@ hideTags: true
 ---
 
 {{ comp Section }}
-
-	<p>We sometimes place small text files on your device (for example, your iPad or laptop) called cookies. Most big websites do this too. We set cookies to save your preference on allowing/denying Google Analytics. If you choose to accept Google Analytics, Google will place cookies on your device for analytical purposes only to help improve and administer the website. By using our website, you agree that we can place these types of cookies on your device.</p>
 
 	<h2>Turning off cookies</h2>
 	<p>You can stop cookies being downloaded on to your computer or other device by selecting the appropriate settings on your browser. If you do this, you may not be able to use the full functionality of this website. There is more information about how to delete or stop using cookies on <a href="https://www.AboutCookies.org">AboutCookies.org</a>.</p>
@@ -31,9 +31,9 @@ function addOpt(consent){
 	var el = document.getElementById('opt-out');
 	var str = '';
 	if(consent){
-		str = 'You are currently allowing us to use Google Analytics but you can <a href="#" onClick="OI.GoogleAnalytics.reject();return false;">opt out of Google Analytics</a> if you wish.';
+		str = 'You are allowing us to use Google Analytics but you can <button onClick="OI.GoogleAnalytics.reject();return false;">opt out of Google Analytics</button> if you wish.';
 	}else{
-		str = '<p>You are not currently allowing us to use Google Analytics but you can <a href="#" onClick="OI.GoogleAnalytics.accept();return false;">opt in to Google Analytics</a> if you wish.</p>';
+		str = '<p>You are not allowing us to use Google Analytics but you can <button onClick="OI.GoogleAnalytics.accept();return false;">opt in to Google Analytics</button> if you wish.</p>';
 	}
 	el.innerHTML = str;
 }
