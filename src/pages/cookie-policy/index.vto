@@ -33,7 +33,7 @@ function addOpt(consent){
 	if(consent){
 		str = 'You are currently allowing us to use Google Analytics but you can <a href="#" onClick="OI.GoogleAnalytics.reject();return false;">opt out of Google Analytics</a> if you wish.';
 	}else{
-		str = '<p>You are not currently allowing us to use Google Analytics but you can <a href="#" onClick="OI.GoogleAnalytics.accept();return false;">opt in to Google Analytics</a> if you wish</p>';
+		str = '<p>You are not currently allowing us to use Google Analytics but you can <a href="#" onClick="OI.GoogleAnalytics.accept();return false;">opt in to Google Analytics</a> if you wish.</p>';
 	}
 	el.innerHTML = str;
 }
