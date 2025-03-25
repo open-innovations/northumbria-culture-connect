@@ -10,3 +10,6 @@
 #cookie-overlay > * + * {
 	margin-top: 1rem;
 }
+#cookie-overlay a:visited { 
+	color: inherit;
+}
