@@ -135,7 +135,7 @@ OI.GoogleAnalytics.set({
 	'id': 'GTM-NNDZ2CSK',
 	'overlay': document.getElementById('cookie-overlay'),
 	'choose': function(state){
-		if(OI.log) OI.log.add('action=click&content='+(state ? 'Cookie accept':'Cookie refuse'));
+		if(OI.log) OI.log.add('action=click&content='+(state.consent ? 'Cookie accept':'Cookie refuse'));
 	}
 });
 </script>
